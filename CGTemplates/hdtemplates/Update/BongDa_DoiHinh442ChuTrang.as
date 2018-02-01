@@ -24,7 +24,7 @@
 	import flash.globalization.NumberFormatter;
 	import flash.globalization.LocaleID;
 		
-	public class BongDa_DoiHinh442 extends CasparTemplate{
+	public class BongDa_DoiHinh442ChuTrang extends CasparTemplate{
 		
 		public var myTotalBar:MovieClip = new bar();
 				
@@ -65,7 +65,7 @@
 		private var singleTween:Tween = null;
 		private var txtTween:Tween = null;
 				
-		public function BongDa_DoiHinh442() {
+		public function BongDa_DoiHinh442ChuTrang() {
 			// constructor code
 			super();
 			
