@@ -36,6 +36,7 @@
             this.cboFormat = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.barBtnManageTemplate = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnManageIcons = new DevExpress.XtraBars.BarButtonItem();
             this.mnuHelp = new DevExpress.XtraBars.BarSubItem();
             this.mnuAbout = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
@@ -99,6 +100,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.barBtnManageImage = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -152,9 +154,11 @@
             this.barStaticItem1,
             this.cboFormat,
             this.barSubItem1,
-            this.barBtnManageTemplate});
+            this.barBtnManageTemplate,
+            this.barBtnManageIcons,
+            this.barBtnManageImage});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 11;
+            this.barManager1.MaxItemId = 13;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1,
             this.repositoryItemComboBox1});
@@ -170,6 +174,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.cboFormat, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.barBtnManageTemplate),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnManageIcons),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnManageImage),
             new DevExpress.XtraBars.LinkPersistInfo(this.mnuHelp)});
             this.bar2.OptionsBar.DisableClose = true;
             this.bar2.OptionsBar.DisableCustomization = true;
@@ -205,10 +211,17 @@
             // 
             // barBtnManageTemplate
             // 
-            this.barBtnManageTemplate.Caption = "Quản lý templates";
+            this.barBtnManageTemplate.Caption = "Quản lý Templates";
             this.barBtnManageTemplate.Id = 10;
             this.barBtnManageTemplate.Name = "barBtnManageTemplate";
             this.barBtnManageTemplate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnManageTemplate_ItemClick);
+            // 
+            // barBtnManageIcons
+            // 
+            this.barBtnManageIcons.Caption = "Quản lý Icons";
+            this.barBtnManageIcons.Id = 11;
+            this.barBtnManageIcons.Name = "barBtnManageIcons";
+            this.barBtnManageIcons.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnManageIcons_ItemClick);
             // 
             // mnuHelp
             // 
@@ -1037,6 +1050,13 @@
             this.splitContainerControl1.TabIndex = 20;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
+            // barBtnManageImage
+            // 
+            this.barBtnManageImage.Caption = "Quản lý Images";
+            this.barBtnManageImage.Id = 12;
+            this.barBtnManageImage.Name = "barBtnManageImage";
+            this.barBtnManageImage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnManageImage_ItemClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1165,5 +1185,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraBars.BarButtonItem barBtnManageTemplate;
         private DevExpress.XtraEditors.ComboBoxEdit cboTemplateType;
+        private DevExpress.XtraBars.BarButtonItem barBtnManageIcons;
+        private DevExpress.XtraBars.BarButtonItem barBtnManageImage;
     }
 }

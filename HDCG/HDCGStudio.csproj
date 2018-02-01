@@ -80,6 +80,18 @@
     <Compile Include="EditForm.Designer.cs">
       <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageIconForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageIconForm.Designer.cs">
+      <DependentUpon>ManageIconForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageImageForm.Designer.cs">
+      <DependentUpon>ManageImageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageTemplateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageIconForm.resx">
+      <DependentUpon>ManageIconForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageImageForm.resx">
+      <DependentUpon>ManageImageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageTemplateForm.resx">
       <DependentUpon>ManageTemplateForm.cs</DependentUpon>
