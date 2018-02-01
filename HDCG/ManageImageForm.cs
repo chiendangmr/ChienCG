@@ -33,7 +33,7 @@ namespace HDCGStudio
                 {
                     var lstTemplate = Utils.GetObject<List<Object.Template>>(imageXmlPath);
                     foreach (var temp in lstTemplate)
-                        bsManageTemplate.Add(new View.Template()
+                        bsManageImage.Add(new View.Template()
                         {
                             TempObj = temp
                         });
@@ -58,7 +58,7 @@ namespace HDCGStudio
                 }
                 else
                 {
-                    bsManageTemplate.List.Add(new View.Template()
+                    bsManageImage.List.Add(new View.Template()
                     {
                         TempObj = new Object.Template()
                         {
@@ -67,7 +67,7 @@ namespace HDCGStudio
                         }
                     });
 
-                    (bsManageTemplate.List as BindingList<View.Template>).Select(v => v.TempObj).ToList().SaveObject(imageXmlPath);
+                    (bsManageImage.List as BindingList<View.Template>).Select(v => v.TempObj).ToList().SaveObject(imageXmlPath);
                 }
             }
             catch (Exception ex)
@@ -87,9 +87,9 @@ namespace HDCGStudio
                     var temp = gridView1.GetFocusedRow() as View.Template;
                     if (HDMessageBox.Show("Bạn chắc chắn xóa " + temp.TempObj.Name) == DialogResult.OK)
                     {
-                        bsManageTemplate.List.Remove(gridView1.GetFocusedRow());
+                        bsManageImage.List.Remove(gridView1.GetFocusedRow());
 
-                        (bsManageTemplate.List as BindingList<View.Template>).Select(v => v.TempObj).ToList().SaveObject(imageXmlPath);
+                        (bsManageImage.List as BindingList<View.Template>).Select(v => v.TempObj).ToList().SaveObject(imageXmlPath);
                     }
                 }
             }

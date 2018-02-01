@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageImageForm));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.bsManageTemplate = new System.Windows.Forms.BindingSource(this.components);
+            this.bsManageImage = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFileName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,7 +45,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsManageTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsManageImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFileName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
@@ -73,7 +73,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.bsManageTemplate;
+            this.gridControl1.DataSource = this.bsManageImage;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -83,9 +83,9 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // bsManageTemplate
+            // bsManageImage
             // 
-            this.bsManageTemplate.DataSource = typeof(HDCGStudio.View.Template);
+            this.bsManageImage.DataSource = typeof(HDCGStudio.View.Template);
             // 
             // gridView1
             // 
@@ -199,7 +199,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsManageTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsManageImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFileName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
@@ -218,7 +218,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtFileName;
         private DevExpress.XtraEditors.TextEdit txtName;
-        private System.Windows.Forms.BindingSource bsManageTemplate;
+        private System.Windows.Forms.BindingSource bsManageImage;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colFileName;
     }
