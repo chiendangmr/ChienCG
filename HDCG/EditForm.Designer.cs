@@ -41,8 +41,8 @@
             this.txtIcon2 = new DevExpress.XtraEditors.TextEdit();
             this.txtColor = new DevExpress.XtraEditors.TextEdit();
             this.btnChooseIcon1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnChooseIcon2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnChooseColor = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -73,8 +73,8 @@
             // groupControl1
             // 
             this.groupControl1.AutoSize = true;
-            this.groupControl1.Controls.Add(this.simpleButton2);
-            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.btnChooseColor);
+            this.groupControl1.Controls.Add(this.btnChooseIcon2);
             this.groupControl1.Controls.Add(this.btnChooseIcon1);
             this.groupControl1.Controls.Add(this.txtColor);
             this.groupControl1.Controls.Add(this.txtIcon2);
@@ -208,26 +208,29 @@
             this.btnChooseIcon1.Size = new System.Drawing.Size(81, 33);
             this.btnChooseIcon1.TabIndex = 11;
             this.btnChooseIcon1.Text = "Chọn...";
+            this.btnChooseIcon1.Click += new System.EventHandler(this.btnChooseIcon1_Click);
             // 
-            // simpleButton1
+            // btnChooseIcon2
             // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton1.Location = new System.Drawing.Point(685, 21);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(81, 30);
-            this.simpleButton1.TabIndex = 12;
-            this.simpleButton1.Text = "Chọn...";
+            this.btnChooseIcon2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnChooseIcon2.Location = new System.Drawing.Point(685, 21);
+            this.btnChooseIcon2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChooseIcon2.Name = "btnChooseIcon2";
+            this.btnChooseIcon2.Size = new System.Drawing.Size(81, 30);
+            this.btnChooseIcon2.TabIndex = 12;
+            this.btnChooseIcon2.Text = "Chọn...";
+            this.btnChooseIcon2.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // simpleButton2
+            // btnChooseColor
             // 
-            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton2.Location = new System.Drawing.Point(1167, 23);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(81, 26);
-            this.simpleButton2.TabIndex = 13;
-            this.simpleButton2.Text = "Chọn...";
+            this.btnChooseColor.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnChooseColor.Location = new System.Drawing.Point(1167, 23);
+            this.btnChooseColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChooseColor.Name = "btnChooseColor";
+            this.btnChooseColor.Size = new System.Drawing.Size(81, 26);
+            this.btnChooseColor.TabIndex = 13;
+            this.btnChooseColor.Text = "Chọn...";
+            this.btnChooseColor.Click += new System.EventHandler(this.btnChooseColor_Click);
             // 
             // EditForm
             // 
@@ -272,7 +275,7 @@
         private DevExpress.XtraEditors.SimpleButton btnChooseIcon1;
         private DevExpress.XtraEditors.TextEdit txtColor;
         private DevExpress.XtraEditors.TextEdit txtIcon2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnChooseColor;
+        private DevExpress.XtraEditors.SimpleButton btnChooseIcon2;
     }
 }

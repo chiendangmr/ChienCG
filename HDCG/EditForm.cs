@@ -123,5 +123,32 @@ namespace HDCGStudio
             this.WindowState = FormWindowState.Maximized;
 
         }
+
+        private void btnChooseIcon1_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = AppSetting.Default.IconFolder;
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtIcon1.Text = frm.FileName;
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = AppSetting.Default.IconFolder;
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtIcon2.Text = frm.FileName;
+        }
+
+        private void btnChooseColor_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = AppSetting.Default.ImageFolder;
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtColor.Text = frm.FileName;
+        }
     }
 }
