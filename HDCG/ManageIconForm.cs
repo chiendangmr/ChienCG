@@ -81,7 +81,7 @@ namespace HDCGStudio
             try
             {
                 if (gridView1.FocusedRowHandle < 0)
-                    HDMessageBox.Show("Chưa chọn template để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    HDMessageBox.Show("Chưa chọn icon để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
                     var temp = gridView1.GetFocusedRow() as View.Template;

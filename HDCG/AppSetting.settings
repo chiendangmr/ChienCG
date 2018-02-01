@@ -17,5 +17,11 @@
     <Setting Name="TemplateFolder" Type="System.String" Scope="Application">
       <Value Profile="(Default)">D:\2018\CG Nam Dong\Solution\CGTemplates</Value>
     </Setting>
+    <Setting Name="IconFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ImageFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

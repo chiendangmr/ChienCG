@@ -70,5 +70,23 @@ namespace HDCGStudio {
                 return ((string)(this["TemplateFolder"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string IconFolder {
+            get {
+                return ((string)(this["IconFolder"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ImageFolder {
+            get {
+                return ((string)(this["ImageFolder"]));
+            }
+        }
     }
 }
