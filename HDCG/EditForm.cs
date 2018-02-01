@@ -17,8 +17,8 @@ namespace HDCGStudio
         public EditForm(string path)
         {
             InitializeComponent();
-            tempPath = path;           
-        }        
+            tempPath = path;
+        }
         string tempPath = "";
         string TemplateHost = "";
         public bool Exit = false;
@@ -72,23 +72,25 @@ namespace HDCGStudio
                 player.Add(0, "HDTemplates/HDVietNam.ft", true);
             }
         }
-        
+
         string xml = "";
         string fieldName = "";
-
-        private string Add(string xmlStr, string str, string color)
+        string xmlAdd = "";
+        private string Add(string str, string val)
         {
-            xmlStr = "<" + str + " id=\"" + str + "\"><data value=\"" + color + "\"/></" + str + ">";
-            return xmlStr;
+            return "<" + str + " id=\"" + str + "\"><data value=\"" + val + "\"/></" + str + ">";
         }
-        
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
-            {                
+            {
+                xmlAdd += Add("icon1", Path.Combine(AppSetting.Default.IconFolder, txtIcon1.Text));
+                xmlAdd += Add("icon2", Path.Combine(AppSetting.Default.IconFolder, txtIcon2.Text));
+                xmlAdd += Add("image", Path.Combine(AppSetting.Default.ImageFolder, txtColor.Text));
                 xml = player.GetProperties();
-                fieldName = xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~","");
-                string xmlStr = "<Track_Property>" + fieldName.Replace("<Track_Property>", "");
+                fieldName = xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
+                string xmlStr = "<Track_Property>" + xmlAdd + fieldName.Replace("<Track_Property>", "");
 
                 this.Clear();
                 if (player.Add(1, tempPath))
@@ -100,7 +102,7 @@ namespace HDCGStudio
                 }
                 this.btnUpdate.Text = "Updated";
                 this.btnUpdate.Enabled = false;
-                
+
             }
             catch
             {
@@ -110,12 +112,12 @@ namespace HDCGStudio
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();            
+            this.Close();
         }
         public string getXml()
         {
             xml = player.GetProperties();
-            return "<Track_Property>" + xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("<Track_Property>", "").Replace("~","");
+            return "<Track_Property>"+ xmlAdd + xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("<Track_Property>", "").Replace("~", "");
         }
 
         private void EditForm_Shown(object sender, EventArgs e)
