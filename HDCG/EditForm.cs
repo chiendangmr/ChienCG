@@ -85,9 +85,12 @@ namespace HDCGStudio
         {
             try
             {
-                xmlAdd += Add("icon1", Path.Combine(AppSetting.Default.IconFolder, txtIcon1.Text));
-                xmlAdd += Add("icon2", Path.Combine(AppSetting.Default.IconFolder, txtIcon2.Text));
-                xmlAdd += Add("image", Path.Combine(AppSetting.Default.ImageFolder, txtColor.Text));
+                if (txtIcon1.Text.Length > 0)
+                    xmlAdd += Add("icon1", Path.Combine(AppSetting.Default.IconFolder, txtIcon1.Text));
+                if (txtIcon2.Text.Length > 0)
+                    xmlAdd += Add("icon2", Path.Combine(AppSetting.Default.IconFolder, txtIcon2.Text));
+                if (txtColor.Text.Length > 0)
+                    xmlAdd += Add("image", Path.Combine(AppSetting.Default.ImageFolder, txtColor.Text));
                 xml = player.GetProperties();
                 fieldName = xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
                 string xmlStr = "<Track_Property>" + xmlAdd + fieldName.Replace("<Track_Property>", "");
@@ -117,7 +120,7 @@ namespace HDCGStudio
         public string getXml()
         {
             xml = player.GetProperties();
-            return "<Track_Property>"+ xmlAdd + xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("<Track_Property>", "").Replace("~", "");
+            return "<Track_Property>" + xmlAdd + xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("<Track_Property>", "").Replace("~", "");
         }
 
         private void EditForm_Shown(object sender, EventArgs e)
