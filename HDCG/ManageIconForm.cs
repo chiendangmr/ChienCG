@@ -24,12 +24,9 @@ namespace HDCGStudio
         string iconXmlPath = "";
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
-            if (_templateType == "Bóng đá")
-            {
-                iconXmlPath = Path.Combine(Application.StartupPath, "BongdaTemplateList.xml");
-            }
-            else
-                iconXmlPath = Path.Combine(Application.StartupPath, "TemplateList.xml");
+            var xmlFileName = "icon_"+ Utils.ConvertToVietnameseNonSign(_templateType).Replace(" ","").ToLower() + "_list.xml";
+            iconXmlPath = Path.Combine(Application.StartupPath, xmlFileName);
+
             try
             {
                 if (File.Exists(iconXmlPath))

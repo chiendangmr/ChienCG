@@ -778,16 +778,11 @@ namespace HDCGStudio
         {
             dicTemplates.Clear();
             listBoxTemplates.Items.Clear();
-            if (cboTemplateType.Text == "Bóng đá")
-            {
-                _templateXmlPath = Path.Combine(Application.StartupPath, "BongDaTemplateList.xml");
-                _tempInfoXmlPath = Path.Combine(Application.StartupPath, "BongDaTempInfo.xml");
-            }
-            else
-            {
-                _templateXmlPath = Path.Combine(Application.StartupPath, "TemplateList.xml");
-                _tempInfoXmlPath = Path.Combine(Application.StartupPath, "tempInfo.xml");
-            }
+            var xmlTemplate = "template_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
+            var xmlPlaylist = "playlist_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
+            _templateXmlPath = Path.Combine(Application.StartupPath, xmlTemplate);
+            _tempInfoXmlPath = Path.Combine(Application.StartupPath, xmlPlaylist);
+            
             try
             {
                 if (File.Exists(_templateXmlPath))
@@ -798,7 +793,6 @@ namespace HDCGStudio
                         dicTemplates.Add(temp.Name, temp.FileName);
                         listBoxTemplates.Items.Add(temp.Name);
                     }
-
                 }
                 else
                 {

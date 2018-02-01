@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageTemplateForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageImageForm));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bsManageTemplate = new System.Windows.Forms.BindingSource(this.components);
@@ -117,7 +117,7 @@
             this.colFileName.AppearanceHeader.Options.UseTextOptions = true;
             this.colFileName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colFileName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colFileName.Caption = "Tên template";
+            this.colFileName.Caption = "Tên Image";
             this.colFileName.FieldName = "TempObj.FileName";
             this.colFileName.Name = "colFileName";
             this.colFileName.OptionsColumn.AllowEdit = false;
@@ -128,11 +128,11 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(25, 36);
+            this.labelControl2.Location = new System.Drawing.Point(50, 36);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(127, 24);
+            this.labelControl2.Size = new System.Drawing.Size(102, 24);
             this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "Tên template:";
+            this.labelControl2.Text = "Tên image:";
             // 
             // labelControl1
             // 
@@ -184,16 +184,16 @@
             this.btnAdd.ToolTip = "Thêm template";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // ManageTemplateForm
+            // ManageImageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 754);
             this.Controls.Add(this.splitContainerControl1);
             this.MaximizeBox = false;
-            this.Name = "ManageTemplateForm";
+            this.Name = "ManageImageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý templates";
+            this.Text = "Quản lý Images";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManageTemplateForm_FormClosing);
             this.Shown += new System.EventHandler(this.ManageTemplateForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();

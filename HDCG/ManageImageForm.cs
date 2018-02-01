@@ -21,20 +21,17 @@ namespace HDCGStudio
             InitializeComponent();
             _templateType = templateType;
         }
-        string templatesXmlPath = "";
+        string imageXmlPath = "";
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
-            if (_templateType == "Bóng đá")
-            {
-                templatesXmlPath = Path.Combine(Application.StartupPath, "BongdaTemplateList.xml");
-            }
-            else
-                templatesXmlPath = Path.Combine(Application.StartupPath, "TemplateList.xml");
+            var xmlFileName = "image_" + Utils.ConvertToVietnameseNonSign(_templateType).Replace(" ", "").ToLower() + "_list.xml";
+            imageXmlPath = Path.Combine(Application.StartupPath, xmlFileName);
+
             try
             {
-                if (File.Exists(templatesXmlPath))
+                if (File.Exists(imageXmlPath))
                 {
-                    var lstTemplate = Utils.GetObject<List<Object.Template>>(templatesXmlPath);
+                    var lstTemplate = Utils.GetObject<List<Object.Template>>(imageXmlPath);
                     foreach (var temp in lstTemplate)
                         bsManageTemplate.Add(new View.Template()
                         {
@@ -43,7 +40,7 @@ namespace HDCGStudio
                 }
                 else
                 {
-                    File.Create(templatesXmlPath).Dispose();
+                    File.Create(imageXmlPath).Dispose();
                 }
             }
             catch (Exception ex)
@@ -70,7 +67,7 @@ namespace HDCGStudio
                         }
                     });
 
-                    (bsManageTemplate.List as BindingList<View.Template>).Select(v => v.TempObj).ToList().SaveObject(templatesXmlPath);
+                    (bsManageTemplate.List as BindingList<View.Template>).Select(v => v.TempObj).ToList().SaveObject(imageXmlPath);
                 }
             }
             catch (Exception ex)
@@ -92,7 +89,7 @@ namespace HDCGStudio
                     {
                         bsManageTemplate.List.Remove(gridView1.GetFocusedRow());
 
-                        (bsManageTemplate.List as BindingList<View.Template>).Select(v => v.TempObj).ToList().SaveObject(templatesXmlPath);
+                        (bsManageTemplate.List as BindingList<View.Template>).Select(v => v.TempObj).ToList().SaveObject(imageXmlPath);
                     }
                 }
             }
