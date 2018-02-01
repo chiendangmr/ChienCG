@@ -825,19 +825,6 @@ namespace HDCGStudio
                 HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        private void barBtnManageIcons_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ManageIconForm mTemp = new ManageIconForm(cboTemplateType.Text);
-            mTemp.Show();
-            mTemp.Activate();
-        }
-
-        private void barBtnManageImage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ManageImageForm mTemp = new ManageImageForm(cboTemplateType.Text);
-            mTemp.Show();
-            mTemp.Activate();
-        }
+        
     }
 }

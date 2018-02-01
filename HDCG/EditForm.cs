@@ -121,6 +121,7 @@ namespace HDCGStudio
         private void EditForm_Shown(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+
         }
     }
 }
