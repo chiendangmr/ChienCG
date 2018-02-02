@@ -31,6 +31,9 @@
 		public var title1:TextField = new TextField();
 		public var title2:TextField = new TextField();
 		public var title3:TextField = new TextField();
+		public var icon1:UILoader = null;
+		public var icon2:UILoader = null;
+		private var request:URLRequest = null;
 		
 		public function BongDa_ThongKeNho() {
 			// constructor code
@@ -38,6 +41,8 @@
 			this.txtGroup.addChild(title1);	
 			this.txtGroup.addChild(title2);
 			this.txtGroup.addChild(title3);
+			this.txtGroup.addChild(icon1);
+			this.txtGroup.addChild(icon2);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -81,7 +86,15 @@
 						break;
 					case "title3".toLowerCase():
 						this.title3.text = data.toUpperCase();
-						break;												
+						break;		
+					case "icon1".toLowerCase():						
+						request = new URLRequest(data);
+						this.icon1.load(request);
+						break;
+					case "icon2".toLowerCase():						
+						request = new URLRequest(data);
+						this.icon2.load(request);
+						break;
 				}
 			}
 		}

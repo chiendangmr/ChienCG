@@ -207,7 +207,7 @@ namespace HDCGStudio
         string updateStr = "";
         public string UpdateTemplate(string templateFileName, int fadeUpDuration = 0)
         {
-            string templateFile = "HDTemplates\\" + templateFileName;
+            string templateFile = "HDTemplates\\Update\\" + templateFileName;
 
             try
             {
@@ -478,14 +478,15 @@ namespace HDCGStudio
         private void btnEditTemplate_Click(object sender, EventArgs e)
         {
             try
-            {                
-                frmInput = new EditForm("HDTemplates\\" + tempName);
+            {
+                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
+                frmInput = new EditForm("HDTemplates\\" + getTemplateName(tempInfoView.tempObj.TemplateName.ToString()));
 
                 frmInput.LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
 
                 isUpdated = true;
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-                tempName = "Update_" + getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
+                
+                tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
 
                 UpdateTemplate(tempName, tempInfoView.tempObj.Layer);
 
