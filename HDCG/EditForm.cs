@@ -17,10 +17,10 @@ namespace HDCGStudio
         public EditForm(string path)
         {
             InitializeComponent();
-            tempPath = path;
+            _tempPath = path;
         }
-        string tempPath = "";
-        string TemplateHost = "";
+        string _tempPath = "";
+        string _TemplateHost = "";
         public bool Exit = false;
         private void InputForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -54,21 +54,21 @@ namespace HDCGStudio
                 player.TemplateHost = path;
                 player.Add(0, "HDTemplates/HDVietNam.ft", true);
 
-                TemplateHost = path;
+                _TemplateHost = path;
             }
         }
         public void Clear()
         {
-            if (TemplateHost != "")
+            if (_TemplateHost != "")
             {
                 player.Clear();
 
-                if (TemplateHost.Contains("43"))
+                if (_TemplateHost.Contains("43"))
                     player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect43;
                 else
                     player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
 
-                player.TemplateHost = TemplateHost;
+                player.TemplateHost = _TemplateHost;
                 player.Add(0, "HDTemplates/HDVietNam.ft", true);
             }
         }
@@ -86,17 +86,17 @@ namespace HDCGStudio
             try
             {
                 if (txtIcon1.Text.Length > 0)
-                    xmlAdd += Add("icon1", Path.Combine(AppSetting.Default.IconFolder, txtIcon1.Text));
+                    xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.ImageFolder, "Icons"), txtIcon1.Text));
                 if (txtIcon2.Text.Length > 0)
-                    xmlAdd += Add("icon2", Path.Combine(AppSetting.Default.IconFolder, txtIcon2.Text));
+                    xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.ImageFolder, "Icons"), txtIcon2.Text));
                 if (txtColor.Text.Length > 0)
                     xmlAdd += Add("image", Path.Combine(AppSetting.Default.ImageFolder, txtColor.Text));
                 xml = player.GetProperties();
                 fieldName = xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
                 string xmlStr = "<Track_Property>" + xmlAdd + fieldName.Replace("<Track_Property>", "");
-
+                UpdateDataFile(xmlStr);
                 this.Clear();
-                if (player.Add(1, tempPath))
+                if (player.Add(1, _tempPath))
                 {
                     player.Update(1, xmlStr);
                     player.Refresh();
@@ -112,7 +112,52 @@ namespace HDCGStudio
                 HDMessageBox.Show("Data not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void UpdateDataFile(string data)
+        {
+            try
+            {
+                if (bsUpdateData.List.Count > 0)
+                {
+                    int dataCount = 0;
+                    foreach (var temp in bsUpdateData.List as BindingList<Object.tempUpdating>)
+                    {
+                        if (temp.Name == _tempPath)
+                        {
+                            dataCount++;
+                            temp.Data = data;
+                            (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXmlPath);
+                        }
+                    }
+                    if (dataCount == 0)
+                    {
+                        bsUpdateData.List.Add(new Object.tempUpdating()
+                        {
+                            Name = _tempPath,
+                            Data = data
 
+                        });
+
+                        (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXmlPath);
+                    }
+                }
+                else
+                {
+                    bsUpdateData.List.Add(new Object.tempUpdating()
+                    {
+                        Name = _tempPath,
+                        Data = data
+
+                    });
+
+                    (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXmlPath);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show("UpdateDataFile lỗi: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -122,9 +167,28 @@ namespace HDCGStudio
             xml = player.GetProperties();
             return "<Track_Property>" + xmlAdd + xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("<Track_Property>", "").Replace("~", "");
         }
-
+        string _updateDataXmlPath = "";
         private void EditForm_Shown(object sender, EventArgs e)
         {
+            _updateDataXmlPath = Path.Combine(Application.StartupPath, "UpdateData.xml");
+            try
+            {
+                if (File.Exists(_updateDataXmlPath))
+                {
+                    var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXmlPath);
+                    foreach (var data in lstData)
+                        bsUpdateData.List.Add(new Object.tempUpdating()
+                        {
+                            Name = data.Name,
+                            Data = data.Data
+                        });
+                }
+                else
+                {
+                    File.Create(_updateDataXmlPath).Dispose();
+                }
+            }
+            catch { }
             this.WindowState = FormWindowState.Maximized;
 
         }
@@ -132,7 +196,7 @@ namespace HDCGStudio
         private void btnChooseIcon1_Click(object sender, EventArgs e)
         {
             OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = AppSetting.Default.IconFolder;
+            frm.RootFolder = Path.Combine(AppSetting.Default.ImageFolder, "Icons");
             frm.FilterString = "*.tga;*.png;*.jpg";
             if (frm.ShowDialog() == DialogResult.OK)
                 txtIcon1.Text = frm.FileName;
@@ -141,7 +205,7 @@ namespace HDCGStudio
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = AppSetting.Default.IconFolder;
+            frm.RootFolder = Path.Combine(AppSetting.Default.ImageFolder, "Icons");
             frm.FilterString = "*.tga;*.png;*.jpg";
             if (frm.ShowDialog() == DialogResult.OK)
                 txtIcon2.Text = frm.FileName;

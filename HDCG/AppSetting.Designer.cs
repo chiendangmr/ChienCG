@@ -73,16 +73,7 @@ namespace HDCGStudio {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\2018\\CG Nam Dong\\Solution\\Icons\\officialIcons")]
-        public string IconFolder {
-            get {
-                return ((string)(this["IconFolder"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\2018\\CG Nam Dong\\Solution\\Icons")]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\2018\\CG Nam Dong\\Solution\\Images")]
         public string ImageFolder {
             get {
                 return ((string)(this["ImageFolder"]));

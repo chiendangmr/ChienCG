@@ -34,9 +34,12 @@ namespace HDCGStudio
         string _videoXmlPath = "";
         string _tempInfoXmlPath = "";
         string _templateXmlPath = "";
-        Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
+        string _updateDataXml = "";
 
-        EditForm frmInput = null;
+
+        Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
+        Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
+        //EditForm frmInput = null;
 
         HDCGControler.CasparCG cgServer = null;
         bool isRunning = false;
@@ -65,6 +68,26 @@ namespace HDCGStudio
                             {
                                 VideoObj = video
                             });
+                    }
+                    else
+                    {
+                        File.Create(_videoXmlPath).Dispose();
+                    }
+                }
+                catch { }
+
+                _updateDataXml = Path.Combine(Application.StartupPath, "UpdateData.xml");
+                try
+                {
+                    if (File.Exists(_updateDataXml))
+                    {
+                        var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXml);
+                        foreach (var data in lstData)
+                            dicTemplateData.Add(data.Name, data.Data);
+                    }
+                    else
+                    {
+                        File.Create(_updateDataXml).Dispose();
                     }
                 }
                 catch { }
@@ -185,12 +208,7 @@ namespace HDCGStudio
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             isRunning = false;
-
-            if (frmInput != null)
-            {
-                frmInput.Exit = true;
-                frmInput.Close();
-            }
+            Application.Exit();
         }
 
         private void gvVideo_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -204,11 +222,14 @@ namespace HDCGStudio
                 ckVideoLoop.Checked = videoView.VideoObj.Loop;
             }
         }
-        string updateStr = "";
-        public string UpdateTemplate(string templateFileName, int fadeUpDuration = 0)
+        
+        public string UpdateTemplate(EditForm frmInput, string templateFileName, int fadeUpDuration = 0)
         {
             string templateFile = "HDTemplates\\Update\\" + templateFileName;
-
+            var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXml);
+            dicTemplateData.Clear();
+            foreach (var data in lstData)
+                dicTemplateData.Add(data.Name, data.Data);
             try
             {
                 int nTry = 0;
@@ -217,6 +238,9 @@ namespace HDCGStudio
 
                 if (frmInput.player.Add(1, templateFile))
                 {
+                    if (dicTemplateData.ContainsKey("HDTemplates\\" + templateFileName))
+                        frmInput.player.Update(1, dicTemplateData["HDTemplates\\" + templateFileName]);
+                    frmInput.player.Refresh();
                     frmInput.player.InvokeMethod(1, "fadeUp");
 
                     frmInput.Show();
@@ -291,10 +315,15 @@ namespace HDCGStudio
                 {
                     try
                     {
-                        var strUpdate = frmInput.getXml();
-                        if (strUpdate != null)
+                        //Đảm bảo data được update mới nhất
+                        var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXml);
+                        dicTemplateData.Clear();
+                        foreach (var data in lstData)
+                            dicTemplateData.Add(data.Name, data.Data);                       
+
+                        if (dicTemplateData.ContainsKey(templateFile))
                         {
-                            upOK = cgServer.FadeUp(layer, fadeUpDuration, strUpdate);
+                            upOK = cgServer.FadeUp(layer, fadeUpDuration, dicTemplateData[templateFile]);
                         }
                         else
                             upOK = cgServer.CutUp(layer);
@@ -480,15 +509,16 @@ namespace HDCGStudio
             try
             {
                 var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-                frmInput = new EditForm("HDTemplates\\" + getTemplateName(tempInfoView.tempObj.TemplateName.ToString()));
+                var templateName = "HDTemplates\\" + getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
+                var frmInput = new EditForm(templateName);
 
                 frmInput.LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
 
                 isUpdated = true;
-                
+
                 tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
 
-                UpdateTemplate(tempName, tempInfoView.tempObj.Layer);
+                UpdateTemplate(frmInput, tempName, tempInfoView.tempObj.Layer);
 
             }
             catch
@@ -639,84 +669,7 @@ namespace HDCGStudio
             gvTempInfo.RefreshData();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-
-                if (!isPlaying)
-                {
-                    tempInfoView.tempObj.Status = "Waiting";
-                    gvTempInfo.RefreshData();
-                }
-                if (isUpdated)
-                {
-
-                    frmInput.Invoke((Action)(() =>
-                    {
-                        frmInput.player.Update(1, updateStr);
-
-                    }));
-
-                    string templateFile = "HDTemplates\\" + tempName;
-                    if (!cgServer.Connect())
-                    {
-                        //HDMessageBox.Show("Not connect to cg server!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else
-                    {
-                        if (!cgServer.LoadCG(templateFile, tempInfoView.tempObj.Layer))
-                        {
-                            HDMessageBox.Show("Can't load cg template", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
-
-                        if (cgParameter != "")
-                        {
-                            if (!cgServer.SetParameters(tempInfoView.tempObj.Layer, cgParameter))
-                            {
-                                HDMessageBox.Show("Can't send parameter to cg server", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                return;
-                            }
-                        }
-                    }
-
-                    bool ok = false;
-                    ok = cgServer.UpdateTemplate(tempInfoView.tempObj.Layer, updateStr, 1);
-
-                }
-
-                if (autoPlay)
-                {
-                    if (tempInfoView.tempObj.Status == "Stopped")
-                    {
-                        gvTempInfo.MoveNext();
-                        tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-                        tempInfoView.tempObj.Status = "Playing";
-                        gvTempInfo.RefreshData();
-                        CasparCGDataCollection cgData = new CasparCGDataCollection();
-                        List<Object.Property> runtimeProperties = new List<Object.Property>();
-                        tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
-                        System.Threading.Timer timer = null;
-                        timer = new System.Threading.Timer((obj) =>
-                        {
-                            OnTemplate(tempInfoView.tempObj.Layer, tempName, 1, null, runtimeProperties);
-                            timer.Dispose();
-                        },
-                        null, tempInfoView.tempObj.Delay, System.Threading.Timeout.Infinite);
-                        if (gvTempInfo.GetFocusedDataSourceRowIndex() == (gvTempInfo.DataRowCount - 1))
-                        {
-                            autoPlay = false;
-                        }
-                    }
-
-                }
-            }
-            catch { }
-
-        }
-        public bool getIsRunning()
+        public bool GetIsRunning()
         {
             return isRunning;
         }
@@ -783,7 +736,7 @@ namespace HDCGStudio
             var xmlPlaylist = "playlist_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
             _templateXmlPath = Path.Combine(Application.StartupPath, xmlTemplate);
             _tempInfoXmlPath = Path.Combine(Application.StartupPath, xmlPlaylist);
-            
+
             try
             {
                 if (File.Exists(_templateXmlPath))
@@ -826,6 +779,6 @@ namespace HDCGStudio
                 HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        
+
     }
 }

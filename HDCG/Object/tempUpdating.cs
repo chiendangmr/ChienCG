@@ -8,9 +8,9 @@ namespace HDCGStudio.Object
     public class tempUpdating
     {        
         
-        public string Field { get; set; }
+        public string Name { get; set; }
         
-        public string Colour { get; set; }
+        public string Data { get; set; }
         
     }
 }

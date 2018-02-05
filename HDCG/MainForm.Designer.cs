@@ -36,8 +36,6 @@
             this.cboFormat = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.barBtnManageTemplate = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtnManageIcons = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtnManageImage = new DevExpress.XtraBars.BarButtonItem();
             this.mnuHelp = new DevExpress.XtraBars.BarSubItem();
             this.mnuAbout = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
@@ -49,6 +47,8 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.barBtnManageIcons = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnManageImage = new DevExpress.XtraBars.BarButtonItem();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.tServer = new System.Windows.Forms.Timer(this.components);
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -99,7 +99,6 @@
             this.btnEditTemplate = new DevExpress.XtraEditors.SimpleButton();
             this.cboTempLayer = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
@@ -158,7 +157,7 @@
             this.barBtnManageIcons,
             this.barBtnManageImage});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 13;
+            this.barManager1.MaxItemId = 15;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1,
             this.repositoryItemComboBox1});
@@ -212,7 +211,7 @@
             this.barBtnManageTemplate.Caption = "Quản lý Templates";
             this.barBtnManageTemplate.Id = 10;
             this.barBtnManageTemplate.Name = "barBtnManageTemplate";
-            this.barBtnManageTemplate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnManageTemplate_ItemClick);            
+            this.barBtnManageTemplate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnManageTemplate_ItemClick);
             // 
             // mnuHelp
             // 
@@ -305,6 +304,16 @@
             this.barSubItem1.Caption = "barSubItem1";
             this.barSubItem1.Id = 7;
             this.barSubItem1.Name = "barSubItem1";
+            // 
+            // barBtnManageIcons
+            // 
+            this.barBtnManageIcons.Id = 13;
+            this.barBtnManageIcons.Name = "barBtnManageIcons";
+            // 
+            // barBtnManageImage
+            // 
+            this.barBtnManageImage.Id = 14;
+            this.barBtnManageImage.Name = "barBtnManageImage";
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -1020,12 +1029,6 @@
             this.labelControl2.TabIndex = 46;
             this.labelControl2.Text = "Layer:";
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1161,7 +1164,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private DevExpress.XtraEditors.SimpleButton btnStart;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;

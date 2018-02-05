@@ -17,11 +17,8 @@
     <Setting Name="TemplateFolder" Type="System.String" Scope="Application">
       <Value Profile="(Default)">D:\2018\CG Nam Dong\Solution\CGTemplates</Value>
     </Setting>
-    <Setting Name="IconFolder" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">D:\2018\CG Nam Dong\Solution\Icons\officialIcons</Value>
-    </Setting>
     <Setting Name="ImageFolder" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">D:\2018\CG Nam Dong\Solution\Icons</Value>
+      <Value Profile="(Default)">D:\2018\CG Nam Dong\Solution\Images</Value>
     </Setting>
   </Settings>
 </SettingsFile>
