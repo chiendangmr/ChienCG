@@ -651,6 +651,8 @@
             // 
             // listBoxTemplates
             // 
+            this.listBoxTemplates.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.listBoxTemplates.Appearance.Options.UseFont = true;
             this.listBoxTemplates.Cursor = System.Windows.Forms.Cursors.Default;
             this.listBoxTemplates.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxTemplates.Location = new System.Drawing.Point(2, 2);
@@ -689,6 +691,7 @@
             this.gridTempInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTempInfo});
             this.gridTempInfo.FocusedViewChanged += new DevExpress.XtraGrid.ViewFocusEventHandler(this.gridTempInfo_FocusedViewChanged);
+            this.gridTempInfo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridTempInfo_KeyDown);
             // 
             // tempInfoBindingSource
             // 
@@ -1012,6 +1015,7 @@
             this.Text = "HDCGStudio";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();

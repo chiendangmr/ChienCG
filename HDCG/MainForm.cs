@@ -40,14 +40,12 @@ namespace HDCGStudio
 
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
-        
-        HDCGControler.CasparCG cgServer = null;
-        bool isRunning = false;
+
+        HDCGControler.CasparCG cgServer = null;        
         private void MainForm_Shown(object sender, EventArgs e)
         {
             try
-            {
-                isRunning = true;                
+            {                
                 cboFormat.EditValue = AppSetting.Default.Format;
                 cboFormat.Caption = AppSetting.Default.Format;
 
@@ -93,7 +91,7 @@ namespace HDCGStudio
                 cgServer = new HDCGControler.CasparCG();
                 cgServer.Connect(AppSetting.Default.CGServerIP, AppSetting.Default.CGServerPort);
 
-                this.WindowState = FormWindowState.Maximized;                
+                this.WindowState = FormWindowState.Maximized;
             }
             catch (Exception ex)
             {
@@ -198,8 +196,7 @@ namespace HDCGStudio
 
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            isRunning = false;
+        {            
             Application.Exit();
         }
 
@@ -301,7 +298,7 @@ namespace HDCGStudio
                     }
                 }
                 bool upOK = false;
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;                
+                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
 
                 try
                 {
@@ -440,8 +437,8 @@ namespace HDCGStudio
                 if (!cgServer.Connect())
                     HDMessageBox.Show("Not connect to cg server!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
-                {                    
-                    var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;                   
+                {
+                    var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
 
                     List<Object.Property> runtimeProperties = new List<Object.Property>();
                     runtimeProperties.Add(new Object.Property()
@@ -519,7 +516,7 @@ namespace HDCGStudio
                             Layer = int.Parse(cboTempLayer.Text),
                             TemplateName = listBoxTemplates.SelectedValue.ToString(),
                             Duration = int.Parse(numericUpDown1.Text),
-                            Delay = int.Parse(numericUpDown2.Text)                            
+                            Delay = int.Parse(numericUpDown2.Text)
                         }
                     });
 
@@ -562,7 +559,7 @@ namespace HDCGStudio
                 tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
 
             }
-        }    
+        }
 
         private void gridTempInfo_FocusedViewChanged(object sender, DevExpress.XtraGrid.ViewFocusEventArgs e)
         {
@@ -573,7 +570,7 @@ namespace HDCGStudio
 
                 tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
             }
-        }  
+        }
 
         private string Add(string xmlStr, string id, string val)
         {
@@ -688,6 +685,54 @@ namespace HDCGStudio
             {
                 e.Appearance.BackColor = Color.Green;
                 e.Appearance.ForeColor = Color.White;
+            }
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                btnEditTemplate.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Space)
+            {
+                btnPlay.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                btnStop.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Add)
+            {
+                btnAddTemplate.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Subtract)
+            {
+                btnRemoveTemplate.PerformClick();
+            }
+        }
+
+        private void gridTempInfo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                btnEditTemplate.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Space)
+            {
+                btnPlay.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                btnStop.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Add)
+            {
+                btnAddTemplate.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Subtract)
+            {
+                btnRemoveTemplate.PerformClick();
             }
         }
     }
