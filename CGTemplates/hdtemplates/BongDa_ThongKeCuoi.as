@@ -27,6 +27,9 @@
 	public class BongDa_ThongKeCuoi extends CasparTemplate{
 		
 		private var txtGroup:MovieClip = new MovieClip();
+		public var icon1:UILoader = null;
+		public var icon2:UILoader = null;
+		private var request:URLRequest = null;
 					
 		public var title1:TextField = new TextField();
 		public var title2:TextField = new TextField();
@@ -72,6 +75,8 @@
 			this.txtGroup.addChild(title18);			
 			this.txtGroup.addChild(title19);
 			this.txtGroup.addChild(title20);
+			this.txtGroup.addChild(icon1);
+			this.txtGroup.addChild(icon2);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -183,6 +188,14 @@
 					case "title20".toLowerCase():
 						this.title20.text = data.toUpperCase();
 						break;	
+					case "icon1".toLowerCase():						
+						request = new URLRequest(data);
+						this.icon1.load(request);
+						break;
+					case "icon2".toLowerCase():						
+						request = new URLRequest(data);
+						this.icon2.load(request);
+						break;
 				}
 			}
 		}

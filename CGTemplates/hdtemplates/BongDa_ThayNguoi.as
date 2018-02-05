@@ -27,6 +27,8 @@
 	public class BongDa_ThayNguoi extends CasparTemplate{
 		
 		private var txtGroup:MovieClip = new MovieClip();
+		public var icon1:UILoader = null;
+		private var request:URLRequest = null;
 					
 		public var title1:TextField = new TextField();
 		public var title2:TextField = new TextField();
@@ -42,6 +44,7 @@
 			this.txtGroup.addChild(title3);
 			this.txtGroup.addChild(title4);
 			this.txtGroup.addChild(title5);
+			this.txtGroup.addChild(icon1);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -94,6 +97,10 @@
 					case "title5".toLowerCase():
 						this.title5.text = data.toUpperCase();
 						break;	
+					case "icon1".toLowerCase():						
+						request = new URLRequest(data);
+						this.icon1.load(request);
+						break;
 				}
 			}
 		}

@@ -27,6 +27,8 @@
 	public class BongDa_DanhSachDuBi extends CasparTemplate{
 		
 		private var txtGroup:MovieClip = new MovieClip();
+		public var icon1:UILoader = null;
+		private var request:URLRequest = null;
 					
 		public var title1:TextField = new TextField();
 		public var title2:TextField = new TextField();
@@ -74,6 +76,7 @@
 			this.txtGroup.addChild(title19);	
 			this.txtGroup.addChild(title20);
 			this.txtGroup.addChild(title21);
+			this.txtGroup.addChild(icon1);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -187,7 +190,11 @@
 						break;
 					case "title21".toLowerCase():
 						this.title21.text = data.toUpperCase();
-						break;					
+						break;		
+					case "icon1".toLowerCase():						
+						request = new URLRequest(data);
+						this.icon1.load(request);
+						break;
 				}
 			}
 		}

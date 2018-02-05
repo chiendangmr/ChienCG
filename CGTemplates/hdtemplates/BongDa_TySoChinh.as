@@ -27,6 +27,9 @@
 	public class BongDa_TySoChinh extends CasparTemplate{
 		
 		private var txtGroup:MovieClip = new MovieClip();
+		public var icon1:UILoader = null;
+		public var icon2:UILoader = null;
+		private var request:URLRequest = null;
 					
 		public var title1:TextField = new TextField();
 		public var title2:TextField = new TextField();
@@ -64,6 +67,8 @@
 			this.txtGroup.addChild(title14);			
 			this.txtGroup.addChild(title15);
 			this.txtGroup.addChild(title16);
+			this.txtGroup.addChild(icon1);
+			this.txtGroup.addChild(icon2);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -158,7 +163,15 @@
 						break;
 					case "title16".toLowerCase():
 						this.title16.text = data.toUpperCase();
-						break;			
+						break;	
+					case "icon1".toLowerCase():						
+						request = new URLRequest(data);
+						this.icon1.load(request);
+						break;
+					case "icon2".toLowerCase():						
+						request = new URLRequest(data);
+						this.icon2.load(request);
+						break;
 				}
 			}
 		}
