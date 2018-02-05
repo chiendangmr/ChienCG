@@ -82,14 +82,11 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.btnStart = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.cbAutoMode = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnRemoveTemplate = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddTemplate = new DevExpress.XtraEditors.SimpleButton();
@@ -128,7 +125,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbAutoMode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTempLayer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -606,12 +602,10 @@
             this.groupControl3.Controls.Add(this.cboTemplateType);
             this.groupControl3.Controls.Add(this.panelControl2);
             this.groupControl3.Controls.Add(this.panelControl1);
-            this.groupControl3.Controls.Add(this.btnStart);
             this.groupControl3.Controls.Add(this.labelControl4);
             this.groupControl3.Controls.Add(this.numericUpDown2);
             this.groupControl3.Controls.Add(this.numericUpDown1);
             this.groupControl3.Controls.Add(this.labelControl3);
-            this.groupControl3.Controls.Add(this.cbAutoMode);
             this.groupControl3.Controls.Add(this.labelControl1);
             this.groupControl3.Controls.Add(this.btnRemoveTemplate);
             this.groupControl3.Controls.Add(this.btnAddTemplate);
@@ -672,9 +666,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.gridTempInfo);
-            this.panelControl1.Location = new System.Drawing.Point(520, 97);
+            this.panelControl1.Location = new System.Drawing.Point(520, 58);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(726, 294);
+            this.panelControl1.Size = new System.Drawing.Size(726, 333);
             this.panelControl1.TabIndex = 83;
             // 
             // gridTempInfo
@@ -690,7 +684,7 @@
             this.gridTempInfo.Name = "gridTempInfo";
             this.gridTempInfo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2});
-            this.gridTempInfo.Size = new System.Drawing.Size(722, 290);
+            this.gridTempInfo.Size = new System.Drawing.Size(722, 329);
             this.gridTempInfo.TabIndex = 19;
             this.gridTempInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTempInfo});
@@ -706,8 +700,7 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn5});
+            this.gridColumn2});
             this.gvTempInfo.GridControl = this.gridTempInfo;
             this.gvTempInfo.Name = "gvTempInfo";
             this.gvTempInfo.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -724,6 +717,7 @@
             this.gvTempInfo.OptionsView.EnableAppearanceOddRow = true;
             this.gvTempInfo.OptionsView.ShowGroupPanel = false;
             this.gvTempInfo.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvTempInfo_RowClick);
+            this.gvTempInfo.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvTempInfo_RowCellStyle);
             // 
             // gridColumn3
             // 
@@ -751,7 +745,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
-            this.gridColumn4.Width = 285;
+            this.gridColumn4.Width = 400;
             // 
             // gridColumn1
             // 
@@ -767,7 +761,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 94;
+            this.gridColumn1.Width = 111;
             // 
             // gridColumn2
             // 
@@ -780,40 +774,13 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic);
-            this.gridColumn5.AppearanceCell.Options.UseFont = true;
-            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.gridColumn5.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn5.Caption = "Status";
-            this.gridColumn5.FieldName = "tempObj.Status";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn2.Width = 99;
             // 
             // repositoryItemCheckEdit2
             // 
             this.repositoryItemCheckEdit2.AutoHeight = false;
             this.repositoryItemCheckEdit2.Caption = "Check";
             this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
-            // 
-            // btnStart
-            // 
-            this.btnStart.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnStart.Appearance.Options.UseFont = true;
-            this.btnStart.Location = new System.Drawing.Point(700, 41);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(392, 42);
-            this.btnStart.TabIndex = 82;
-            this.btnStart.Text = "Start Auto Play Mode";
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // labelControl4
             // 
@@ -873,23 +840,6 @@
             this.labelControl3.TabIndex = 78;
             this.labelControl3.Text = "Duration(ms): ";
             // 
-            // cbAutoMode
-            // 
-            this.cbAutoMode.Location = new System.Drawing.Point(516, 34);
-            this.cbAutoMode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbAutoMode.MenuManager = this.barManager1;
-            this.cbAutoMode.Name = "cbAutoMode";
-            this.cbAutoMode.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.cbAutoMode.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cbAutoMode.Properties.Appearance.Options.UseFont = true;
-            this.cbAutoMode.Properties.Appearance.Options.UseForeColor = true;
-            this.cbAutoMode.Properties.Caption = "Auto Mode:  ";
-            this.cbAutoMode.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Style1;
-            this.cbAutoMode.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.cbAutoMode.Size = new System.Drawing.Size(103, 22);
-            this.cbAutoMode.TabIndex = 76;
-            this.cbAutoMode.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
-            // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -933,7 +883,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(518, 69);
+            this.labelControl5.Location = new System.Drawing.Point(522, 34);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(52, 17);
@@ -1092,7 +1042,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbAutoMode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTempLayer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
@@ -1155,15 +1104,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
-        private DevExpress.XtraEditors.CheckEdit cbAutoMode;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private DevExpress.XtraEditors.SimpleButton btnStart;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;

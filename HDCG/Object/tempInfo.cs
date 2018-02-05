@@ -10,8 +10,6 @@ namespace HDCGStudio.Object
         public int Layer { get; set; }
         public string TemplateName { get; set; }
         public int Duration { get; set; }
-        public int Delay { get; set; }
-        public string Status { get; set; }
-        
+        public int Delay { get; set; }          
     }
 }

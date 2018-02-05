@@ -14,6 +14,7 @@ using Svt.Caspar;
 using System.Net;
 using System.Xml;
 using System.Threading;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace HDCGStudio
 {
@@ -39,17 +40,14 @@ namespace HDCGStudio
 
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
-        //EditForm frmInput = null;
-
+        
         HDCGControler.CasparCG cgServer = null;
         bool isRunning = false;
         private void MainForm_Shown(object sender, EventArgs e)
         {
             try
             {
-                isRunning = true;
-
-                this.btnStart.Enabled = false;
+                isRunning = true;                
                 cboFormat.EditValue = AppSetting.Default.Format;
                 cboFormat.Caption = AppSetting.Default.Format;
 
@@ -95,13 +93,7 @@ namespace HDCGStudio
                 cgServer = new HDCGControler.CasparCG();
                 cgServer.Connect(AppSetting.Default.CGServerIP, AppSetting.Default.CGServerPort);
 
-                this.WindowState = FormWindowState.Maximized;
-                for (int i = 0; i < gvTempInfo.DataRowCount; i++)
-                {
-                    var tempOther = gvTempInfo.GetRow(i) as View.tempInfo;
-                    tempOther.tempObj.Status = "Waiting";
-                    gvTempInfo.RefreshData();
-                }
+                this.WindowState = FormWindowState.Maximized;                
             }
             catch (Exception ex)
             {
@@ -309,8 +301,7 @@ namespace HDCGStudio
                     }
                 }
                 bool upOK = false;
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-                isPlaying = true;
+                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;                
 
                 try
                 {
@@ -398,10 +389,6 @@ namespace HDCGStudio
                     MessageBox.Show("Disconnect to cg serer", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-                    tempInfoView.tempObj.Status = "Stopped";
-                    gvTempInfo.RefreshData();
-
                     if (!cgServer.UnLoadCG(layer))
                         MessageBox.Show("Can't off cg", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -453,17 +440,8 @@ namespace HDCGStudio
                 if (!cgServer.Connect())
                     HDMessageBox.Show("Not connect to cg server!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
-                {
-                    for (int i = 0; i < gvTempInfo.DataRowCount; i++)
-                    {
-                        var tempOther = gvTempInfo.GetRow(i) as View.tempInfo;
-                        if (tempOther.tempObj.Status == "Playing")
-                            tempOther.tempObj.Status = "Waiting";
-
-                    }
-                    var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-                    tempInfoView.tempObj.Status = "Playing";
-                    gvTempInfo.RefreshData();
+                {                    
+                    var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;                   
 
                     List<Object.Property> runtimeProperties = new List<Object.Property>();
                     runtimeProperties.Add(new Object.Property()
@@ -541,8 +519,7 @@ namespace HDCGStudio
                             Layer = int.Parse(cboTempLayer.Text),
                             TemplateName = listBoxTemplates.SelectedValue.ToString(),
                             Duration = int.Parse(numericUpDown1.Text),
-                            Delay = int.Parse(numericUpDown2.Text),
-                            Status = "Waiting"
+                            Delay = int.Parse(numericUpDown2.Text)                            
                         }
                     });
 
@@ -585,70 +562,7 @@ namespace HDCGStudio
                 tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
 
             }
-        }
-        bool autoPlay = false;
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!cgServer.Connect())
-                    HDMessageBox.Show("Not connect to cg server!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                else
-                {
-                    isUpdated = true;
-                    isPlaying = true;
-                    for (int i = 0; i < gvTempInfo.DataRowCount; i++)
-                    {
-                        var tempOther = gvTempInfo.GetRow(i) as View.tempInfo;
-                        if (tempOther.tempObj.Status == "Playing")
-                            tempOther.tempObj.Status = "Waiting";
-
-                    }
-                    var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-                    tempInfoView.tempObj.Status = "Playing";
-                    gvTempInfo.RefreshData();
-                    CasparCGDataCollection cgData = new CasparCGDataCollection();
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
-                    System.Threading.Timer timer = null;
-                    timer = new System.Threading.Timer((obj) =>
-                    {
-                        OnTemplate(tempInfoView.tempObj.Layer, tempName, 1, null, runtimeProperties);
-                    },
-                    null, tempInfoView.tempObj.Delay, System.Threading.Timeout.Infinite);
-                }
-            }
-            catch
-            {
-                HDMessageBox.Show("404 - Not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void checkEdit1_CheckedChanged(object sender, EventArgs e)
-        {
-            for (int i = 0; i < gvTempInfo.DataRowCount; i++)
-            {
-                var tempOther = gvTempInfo.GetRow(i) as View.tempInfo;
-                tempOther.tempObj.Status = "Waiting";
-                gvTempInfo.RefreshData();
-            }
-            if (this.cbAutoMode.Checked)
-            {
-                this.btnStart.Enabled = true;
-                autoPlay = true;
-                this.btnEditTemplate.Enabled = false;
-                this.btnPlay.Enabled = false;
-                this.btnStop.Enabled = false;
-            }
-            else
-            {
-                this.btnStart.Enabled = false;
-                autoPlay = false;
-                this.btnEditTemplate.Enabled = true;
-                this.btnPlay.Enabled = true;
-                this.btnStop.Enabled = true;
-            }
-        }
+        }    
 
         private void gridTempInfo_FocusedViewChanged(object sender, DevExpress.XtraGrid.ViewFocusEventArgs e)
         {
@@ -659,19 +573,7 @@ namespace HDCGStudio
 
                 tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
             }
-        }
-        bool isPlaying = false;
-        private void setStatus(string status)
-        {
-            var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-            tempInfoView.tempObj.Status = status;
-            gvTempInfo.RefreshData();
-        }
-
-        public bool GetIsRunning()
-        {
-            return isRunning;
-        }
+        }  
 
         private string Add(string xmlStr, string id, string val)
         {
@@ -779,5 +681,14 @@ namespace HDCGStudio
             }
         }
 
+        private void gvTempInfo_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.Green;
+                e.Appearance.ForeColor = Color.White;
+            }
+        }
     }
 }
