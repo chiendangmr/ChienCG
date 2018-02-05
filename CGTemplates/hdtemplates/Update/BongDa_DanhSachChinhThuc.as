@@ -54,6 +54,7 @@
 		public var title22:TextField = new TextField();
 		public var title23:TextField = new TextField();
 		public var title24:TextField = new TextField();
+		public var icon1:TextField = new TextField();
 		
 		private var maskBar:Shape = new Shape();
 		private var rectWidth:Number = 900;
@@ -94,6 +95,7 @@
 			this.txtGroup.addChild(title22);	
 			this.txtGroup.addChild(title23);
 			this.txtGroup.addChild(title24);
+			this.txtGroup.addChild(icon1);
 			
 			this.addChild(txtGroup);
 			
