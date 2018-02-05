@@ -15,6 +15,7 @@ using System.Net;
 using System.Xml;
 using System.Threading;
 using DevExpress.XtraGrid.Views.Grid;
+using System.Management;
 
 namespace HDCGStudio
 {
@@ -28,7 +29,7 @@ namespace HDCGStudio
         private void mnuAbout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             AboutFormEnglish frm = new AboutFormEnglish();
-            frm.lbSoftware.Text = "HDCGStudio";
+            frm.lbSoftware.Text = "HDCG Studio 3.2.0";
             frm.ShowDialog();
         }
 
@@ -734,6 +735,6 @@ namespace HDCGStudio
             {
                 btnRemoveTemplate.PerformClick();
             }
-        }
+        }        
     }
 }
