@@ -222,7 +222,7 @@ namespace HDCGStudio
                 ckVideoLoop.Checked = videoView.VideoObj.Loop;
             }
         }
-        
+
         public string UpdateTemplate(EditForm frmInput, string templateFileName, int fadeUpDuration = 0)
         {
             string templateFile = "HDTemplates\\Update\\" + templateFileName;
@@ -311,28 +311,27 @@ namespace HDCGStudio
                 bool upOK = false;
                 var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
                 isPlaying = true;
-                if (isUpdated)
-                {
-                    try
-                    {
-                        //Đảm bảo data được update mới nhất
-                        var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXml);
-                        dicTemplateData.Clear();
-                        foreach (var data in lstData)
-                            dicTemplateData.Add(data.Name, data.Data);                       
 
-                        if (dicTemplateData.ContainsKey(templateFile))
-                        {
-                            upOK = cgServer.FadeUp(layer, fadeUpDuration, dicTemplateData[templateFile]);
-                        }
-                        else
-                            upOK = cgServer.CutUp(layer);
-                    }
-                    catch (Exception ex)
+                try
+                {
+                    //Đảm bảo data được update mới nhất
+                    var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXml);
+                    dicTemplateData.Clear();
+                    foreach (var data in lstData)
+                        dicTemplateData.Add(data.Name, data.Data);
+
+                    if (dicTemplateData.ContainsKey(templateFile))
                     {
-                        HDMessageBox.Show("Không thể lấy thông tin update! - " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        upOK = cgServer.FadeUp(layer, fadeUpDuration, dicTemplateData[templateFile].Replace("\\", "\\\\"));
                     }
+                    else
+                        upOK = cgServer.CutUp(layer);
                 }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show("Không thể lấy thông tin update! - " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
                 System.Threading.Timer timer = null;
                 if (tempInfoView.tempObj.Duration > 0)
                 {
