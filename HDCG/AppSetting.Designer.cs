@@ -55,10 +55,10 @@ namespace HDCGStudio {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("E:\\Videos")]
-        public string VideoFolder {
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\2018\\CG Nam Dong\\Solution\\Images")]
+        public string MediaFolder {
             get {
-                return ((string)(this["VideoFolder"]));
+                return ((string)(this["MediaFolder"]));
             }
         }
         
@@ -68,15 +68,6 @@ namespace HDCGStudio {
         public string TemplateFolder {
             get {
                 return ((string)(this["TemplateFolder"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\2018\\CG Nam Dong\\Solution\\Images")]
-        public string ImageFolder {
-            get {
-                return ((string)(this["ImageFolder"]));
             }
         }
     }

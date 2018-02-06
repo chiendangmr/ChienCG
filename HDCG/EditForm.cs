@@ -86,11 +86,11 @@ namespace HDCGStudio
             try
             {
                 if (txtIcon1.Text.Length > 0)
-                    xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.ImageFolder, "Icons"), txtIcon1.Text));
+                    xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
                 if (txtIcon2.Text.Length > 0)
-                    xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.ImageFolder, "Icons"), txtIcon2.Text));
+                    xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
                 if (txtColor.Text.Length > 0)
-                    xmlAdd += Add("image", Path.Combine(AppSetting.Default.ImageFolder, txtColor.Text));
+                    xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
                 xml = player.GetProperties();
                 fieldName = xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
                 string xmlStr = "<Track_Property>" + xmlAdd + fieldName.Replace("<Track_Property>", "");
@@ -196,7 +196,7 @@ namespace HDCGStudio
         private void btnChooseIcon1_Click(object sender, EventArgs e)
         {
             OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = Path.Combine(AppSetting.Default.ImageFolder, "Icons");
+            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons");
             frm.FilterString = "*.tga;*.png;*.jpg";
             if (frm.ShowDialog() == DialogResult.OK)
                 txtIcon1.Text = frm.FileName;
@@ -205,7 +205,7 @@ namespace HDCGStudio
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = Path.Combine(AppSetting.Default.ImageFolder, "Icons");
+            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons");
             frm.FilterString = "*.tga;*.png;*.jpg";
             if (frm.ShowDialog() == DialogResult.OK)
                 txtIcon2.Text = frm.FileName;
@@ -214,7 +214,7 @@ namespace HDCGStudio
         private void btnChooseColor_Click(object sender, EventArgs e)
         {
             OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = AppSetting.Default.ImageFolder;
+            frm.RootFolder = AppSetting.Default.MediaFolder;
             frm.FilterString = "*.tga;*.png;*.jpg";
             if (frm.ShowDialog() == DialogResult.OK)
                 txtColor.Text = frm.FileName;

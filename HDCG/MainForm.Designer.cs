@@ -405,6 +405,7 @@
             this.gvVideo.OptionsView.EnableAppearanceOddRow = true;
             this.gvVideo.OptionsView.ShowGroupPanel = false;
             this.gvVideo.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvVideo_RowClick);
+            this.gvVideo.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvVideo_RowCellStyle);
             // 
             // gridColumn14
             // 
@@ -1014,6 +1015,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HDCG Studio 3.2.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

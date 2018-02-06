@@ -16,6 +16,7 @@ using System.Xml;
 using System.Threading;
 using DevExpress.XtraGrid.Views.Grid;
 using System.Management;
+using System.Diagnostics;
 
 namespace HDCGStudio
 {
@@ -42,11 +43,11 @@ namespace HDCGStudio
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
 
-        HDCGControler.CasparCG cgServer = null;        
+        HDCGControler.CasparCG cgServer = null;
         private void MainForm_Shown(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 cboFormat.EditValue = AppSetting.Default.Format;
                 cboFormat.Caption = AppSetting.Default.Format;
 
@@ -133,7 +134,7 @@ namespace HDCGStudio
         private void btnBrowseVideo_Click(object sender, EventArgs e)
         {
             OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = AppSetting.Default.VideoFolder;
+            frm.RootFolder = AppSetting.Default.MediaFolder;
             frm.FilterString = "*.mov;*.flv;*.avi;*.mp4;*.wmv;*.mpg;*.tga;*.png;*.jpg";
             if (frm.ShowDialog() == DialogResult.OK)
                 txtVideo.Text = frm.FileName;
@@ -197,7 +198,7 @@ namespace HDCGStudio
 
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {            
+        {
             Application.Exit();
         }
 
@@ -679,7 +680,7 @@ namespace HDCGStudio
             }
         }
 
-        private void gvTempInfo_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        private void gvTempInfo_RowCellStyle(object sender, RowCellStyleEventArgs e)
         {
             GridView view = sender as GridView;
             if (e.RowHandle == view.FocusedRowHandle)
@@ -735,6 +736,79 @@ namespace HDCGStudio
             {
                 btnRemoveTemplate.PerformClick();
             }
-        }        
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            if (!Debugger.IsAttached)
+            {
+                LogProcess.AddLog("Kích hoạt phần mềm");
+
+                Process currentProcess = Process.GetCurrentProcess();
+                string currentProcessName = currentProcess.ProcessName;
+
+                string cpuId = CryptorEngine.GetCPUID() + "_" + currentProcessName;
+                string keyId = CryptorEngine.GetMD5String(CryptorEngine.GetMD5String(cpuId));
+
+                string licenseFile = Path.Combine(Application.StartupPath, "license.hd");
+
+                CheckActive:
+                string license = "";
+                if (File.Exists(licenseFile))
+                {
+                    try
+                    {
+                        StreamReader read = new StreamReader(licenseFile);
+                        license = read.ReadLine();
+                        read.Close();
+                    }
+                    catch { }
+                }
+                else
+                {
+                    File.Create(licenseFile).Dispose();
+                }
+
+                if (keyId != license)
+                {
+                    LogProcess.AddLog("Chưa kích hoạt");
+
+                    if (XtraMessageBox.Show("Phần mềm chưa được kích hoạt!\nBạn có muốn kích hoạt ngay bây giờ?",
+                        "Kích hoạt phần mềm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) != DialogResult.Yes)
+                    {
+                        LogProcess.AddLog("Không kích hoạt");
+                        Process.GetCurrentProcess().Kill();
+                        Application.Exit();
+                        return;
+                    }
+                    else
+                    {
+                        if (new ActivateForm().ShowDialog() == DialogResult.OK)
+                        {
+                            goto CheckActive;
+                        }
+                        else
+                        {
+                            LogProcess.AddLog("Không kích hoạt");
+                            Process.GetCurrentProcess().Kill();
+                            Application.Exit();
+                            return;
+                        }
+                    }
+                }
+                else
+                    LogProcess.AddLog("Đã kích hoạt");
+            }
+        }
+
+        private void gvVideo_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.Green;
+                e.Appearance.ForeColor = Color.White;
+            }
+        }
     }
 }

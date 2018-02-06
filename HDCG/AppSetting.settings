@@ -11,14 +11,11 @@
     <Setting Name="Format" Type="System.String" Scope="User">
       <Value Profile="(Default)">1080i5000</Value>
     </Setting>
-    <Setting Name="VideoFolder" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">E:\Videos</Value>
+    <Setting Name="MediaFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\2018\CG Nam Dong\Solution\Images</Value>
     </Setting>
     <Setting Name="TemplateFolder" Type="System.String" Scope="Application">
       <Value Profile="(Default)">D:\2018\CG Nam Dong\Solution\CGTemplates</Value>
-    </Setting>
-    <Setting Name="ImageFolder" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">D:\2018\CG Nam Dong\Solution\Images</Value>
     </Setting>
   </Settings>
 </SettingsFile>
