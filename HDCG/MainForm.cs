@@ -502,9 +502,9 @@ namespace HDCGStudio
                 UpdateTemplate(frmInput, tempName, tempInfoView.tempObj.Layer);
 
             }
-            catch
+            catch (Exception ex)
             {
-                HDMessageBox.Show("404 NOT FOUND", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                HDMessageBox.Show("404 NOT FOUND: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
