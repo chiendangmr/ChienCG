@@ -634,7 +634,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboTemplateType.Properties.Items.AddRange(new object[] {
             "Bóng đá",
-            "Tennis"});
+            "Tennis",
+            "Thông báo"});
             this.cboTemplateType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboTemplateType.Size = new System.Drawing.Size(97, 22);
             this.cboTemplateType.TabIndex = 85;

@@ -48,8 +48,8 @@
 			super();
 			
 			this.addChild(myBar);			
-			this.addChild(Player2);					
-			this.addChild(Player1);				
+			this.Player2.multiline = true;
+			this.Player2.wordWrap = true;		
 						
 			this.txtGroup.addChild(Player2);
 			this.txtGroup.addChild(Player1);
@@ -65,9 +65,10 @@
 			this.rectWidth = 1700;
 			this.drawShapes(maskBar, alphas, ratios, rcolor, toRad(-90, -95), rectWidth, rectHeight);
 			
-			this.myBar.mask = this.maskBar;
+			//this.myBar.mask = this.maskBar;
 			this.txtGroup.visible = false;
-			this.myBar.visible = false;			
+			this.myBar.visible = false;	
+			this.maskBar.visible = false;	
 			
 			ExternalInterface.addCallback("UpdateData", UpdateData);
 			ExternalInterface.addCallback("GetProperties", GetProperties);			

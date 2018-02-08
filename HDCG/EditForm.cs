@@ -98,7 +98,7 @@ namespace HDCGStudio
                 this.Clear();
                 if (player.Add(1, _tempPath))
                 {
-                    player.Update(1, xmlStr);
+                    player.Update(1, xmlStr.Replace("\\n", "\n"));
                     player.Refresh();
                     this.Show();
                     this.Activate();

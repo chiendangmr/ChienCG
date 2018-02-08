@@ -230,7 +230,7 @@ namespace HDCGStudio
                 if (frmInput.player.Add(1, templateFile))
                 {
                     if (dicTemplateData.ContainsKey("HDTemplates\\" + templateFileName))
-                        frmInput.player.Update(1, dicTemplateData["HDTemplates\\" + templateFileName]);
+                        frmInput.player.Update(1, dicTemplateData["HDTemplates\\" + templateFileName].Replace("\\n", "\n"));
                     frmInput.player.Refresh();
                     frmInput.player.InvokeMethod(1, "fadeUp");
 
@@ -312,7 +312,12 @@ namespace HDCGStudio
 
                     if (dicTemplateData.ContainsKey(templateFile))
                     {
-                        upOK = cgServer.FadeUp(layer, fadeUpDuration, dicTemplateData[templateFile].Replace("\\", "\\\\"));
+                        if (templateFile == "HDTemplates\\ThongBao_ThongBaoChung.ft")
+                        {
+                            upOK = cgServer.FadeUp(layer, fadeUpDuration, dicTemplateData[templateFile].Replace("\\n", "\n"));
+                        }
+                        else
+                            upOK = cgServer.FadeUp(layer, fadeUpDuration, dicTemplateData[templateFile].Replace("\\", "\\\\"));
                     }
                     else
                         upOK = cgServer.CutUp(layer);
