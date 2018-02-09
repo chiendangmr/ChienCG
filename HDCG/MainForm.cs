@@ -444,23 +444,20 @@ namespace HDCGStudio
                 if (!cgServer.Connect())
                     HDMessageBox.Show("Not connect to cg server!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
-                {
-                    var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-
+                {                    
                     List<Object.Property> runtimeProperties = new List<Object.Property>();
                     runtimeProperties.Add(new Object.Property()
                     {
                         Name = "Loops",
                         Value = "false"
                     });
-                    tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
                     System.Threading.Timer timer = null;
                     timer = new System.Threading.Timer((obj) =>
                         {
-                            OnTemplate(tempInfoView.tempObj.Layer, tempName, 1, null, runtimeProperties);
+                            OnTemplate(_layer, _tempName, 1, null, runtimeProperties);
                             timer.Dispose();
                         },
-                    null, tempInfoView.tempObj.Delay, Timeout.Infinite);
+                    null, _delay, Timeout.Infinite);
                 }
             }
             catch
@@ -484,20 +481,20 @@ namespace HDCGStudio
             }
         }
 
-        string tempName = "";
+        string _tempName = "";
+        int _layer = 0;
+        int _delay = 0;
+        int _duration = 0;
         private void btnEditTemplate_Click(object sender, EventArgs e)
         {
             try
-            {
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-                var templateName = "HDTemplates\\" + getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
+            {                
+                var templateName = "HDTemplates\\" + getTemplateName(_tempName);
                 var frmInput = new EditForm(templateName);
 
                 frmInput.LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
-
-                tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
-
-                UpdateTemplate(frmInput, tempName, tempInfoView.tempObj.Layer);
+                                
+                UpdateTemplate(frmInput, _tempName, _layer);
 
             }
             catch (Exception ex)
@@ -556,27 +553,21 @@ namespace HDCGStudio
             }
             catch { return ""; }
         }
-        private void gvTempInfo_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        private void gvTempInfo_RowClick(object sender, RowClickEventArgs e)
+        {
+
+        }
+        private void gvTempInfo_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (gvTempInfo.FocusedRowHandle >= 0)
             {
                 var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-                tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
-
+                _tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
+                _layer = tempInfoView.tempObj.Layer;
+                _delay = tempInfoView.tempObj.Delay;
+                _duration = tempInfoView.tempObj.Duration;
             }
-        }
-
-        private void gridTempInfo_FocusedViewChanged(object sender, DevExpress.XtraGrid.ViewFocusEventArgs e)
-        {
-            if (gvTempInfo.FocusedRowHandle >= 0)
-            {
-
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-
-                tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
-            }
-        }
-
+        }        
         private string Add(string xmlStr, string id, string val)
         {
             xmlStr = "<" + id + " id=\"" + id + "\"><data value=\"" + val + "\"/></" + id + ">";
@@ -818,5 +809,6 @@ namespace HDCGStudio
         {
 
         }
+
     }
 }

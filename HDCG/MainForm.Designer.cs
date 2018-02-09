@@ -72,9 +72,9 @@
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtValue = new DevExpress.XtraEditors.TextEdit();
+            this.cboTextField = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.btnUpdateRealTime = new DevExpress.XtraEditors.SimpleButton();
             this.cboTemplateType = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -120,8 +120,8 @@
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTextField.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -638,50 +638,54 @@
             // 
             this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl2.Controls.Add(this.comboBoxEdit1);
+            this.groupControl2.Controls.Add(this.txtValue);
+            this.groupControl2.Controls.Add(this.cboTextField);
             this.groupControl2.Controls.Add(this.labelControl6);
-            this.groupControl2.Controls.Add(this.numericUpDown3);
             this.groupControl2.Controls.Add(this.labelControl5);
             this.groupControl2.Location = new System.Drawing.Point(520, 29);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(726, 65);
             this.groupControl2.TabIndex = 90;
-            this.groupControl2.Text = "Real-time update";
+            this.groupControl2.Text = "Quick update (Real-time)";
             // 
-            // comboBoxEdit1
+            // txtValue
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(98, 36);
-            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxEdit1.MenuManager = this.barManager1;
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtValue.Location = new System.Drawing.Point(488, 33);
+            this.txtValue.MenuManager = this.barManager1;
+            this.txtValue.Name = "txtValue";
+            this.txtValue.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtValue.Properties.Appearance.Options.UseFont = true;
+            this.txtValue.Size = new System.Drawing.Size(206, 24);
+            this.txtValue.TabIndex = 89;
+            // 
+            // cboTextField
+            // 
+            this.cboTextField.Location = new System.Drawing.Point(98, 33);
+            this.cboTextField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboTextField.MenuManager = this.barManager1;
+            this.cboTextField.Name = "cboTextField";
+            this.cboTextField.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.cboTextField.Properties.Appearance.Options.UseFont = true;
+            this.cboTextField.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            this.cboTextField.Properties.Items.AddRange(new object[] {
             "Bóng đá",
             "Tennis",
             "Thông báo"});
-            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(262, 22);
-            this.comboBoxEdit1.TabIndex = 87;
+            this.cboTextField.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboTextField.Size = new System.Drawing.Size(262, 24);
+            this.cboTextField.TabIndex = 87;
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(521, 38);
+            this.labelControl6.Location = new System.Drawing.Point(439, 38);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(43, 17);
             this.labelControl6.TabIndex = 88;
             this.labelControl6.Text = "Value:";
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(570, 34);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(124, 23);
-            this.numericUpDown3.TabIndex = 89;
             // 
             // labelControl5
             // 
@@ -776,7 +780,6 @@
             this.gridTempInfo.TabIndex = 19;
             this.gridTempInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTempInfo});
-            this.gridTempInfo.FocusedViewChanged += new DevExpress.XtraGrid.ViewFocusEventHandler(this.gridTempInfo_FocusedViewChanged);
             this.gridTempInfo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridTempInfo_KeyDown);
             // 
             // tempInfoBindingSource
@@ -807,6 +810,7 @@
             this.gvTempInfo.OptionsView.ShowGroupPanel = false;
             this.gvTempInfo.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvTempInfo_RowClick);
             this.gvTempInfo.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvTempInfo_RowCellStyle);
+            this.gvTempInfo.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvTempInfo_FocusedRowChanged);
             // 
             // gridColumn3
             // 
@@ -1113,8 +1117,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTextField.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
@@ -1205,9 +1209,9 @@
         private DevExpress.XtraBars.BarButtonItem barBtnManageIcons;
         private DevExpress.XtraBars.BarButtonItem barBtnManageImage;
         private DevExpress.XtraEditors.SimpleButton btnUpdateRealTime;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTextField;
         private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.TextEdit txtValue;
     }
 }
