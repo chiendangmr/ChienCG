@@ -104,7 +104,7 @@ namespace HDCGStudio
                     this.Activate();
                 }
                 this.btnUpdate.Text = "Updated";
-                this.btnUpdate.Enabled = false;
+                //this.btnUpdate.Enabled = false;
 
             }
             catch

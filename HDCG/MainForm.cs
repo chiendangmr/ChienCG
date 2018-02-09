@@ -340,7 +340,7 @@ namespace HDCGStudio
                 }
             }
         }
-        bool isUpdated = false;
+
         private void UpdateTemplate(int layer, string cgParameter)
         {
             try
@@ -494,8 +494,6 @@ namespace HDCGStudio
                 var frmInput = new EditForm(templateName);
 
                 frmInput.LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
-
-                isUpdated = true;
 
                 tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
 
@@ -814,6 +812,11 @@ namespace HDCGStudio
                 e.Appearance.BackColor = Color.Green;
                 e.Appearance.ForeColor = Color.White;
             }
+        }
+
+        private void btnUpdateRealTime_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
