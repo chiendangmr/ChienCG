@@ -102,6 +102,7 @@
             this.cboTempLayer = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.barBtnManagePlayer = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -160,9 +161,10 @@
             this.barSubItem1,
             this.barBtnManageTemplate,
             this.barBtnManageIcons,
-            this.barBtnManageImage});
+            this.barBtnManageImage,
+            this.barBtnManagePlayer});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 15;
+            this.barManager1.MaxItemId = 16;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1,
             this.repositoryItemComboBox1});
@@ -178,6 +180,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.cboFormat, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.barBtnManageTemplate),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnManagePlayer),
             new DevExpress.XtraBars.LinkPersistInfo(this.mnuHelp)});
             this.bar2.OptionsBar.DisableClose = true;
             this.bar2.OptionsBar.DisableCustomization = true;
@@ -1076,6 +1079,13 @@
             this.splitContainerControl1.TabIndex = 20;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
+            // barBtnManagePlayer
+            // 
+            this.barBtnManagePlayer.Caption = "Manage Players";
+            this.barBtnManagePlayer.Id = 15;
+            this.barBtnManagePlayer.Name = "barBtnManagePlayer";
+            this.barBtnManagePlayer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnManagePlayer_ItemClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1213,5 +1223,6 @@
         private DevExpress.XtraEditors.ComboBoxEdit cboTextField;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.TextEdit txtValue;
+        private DevExpress.XtraBars.BarButtonItem barBtnManagePlayer;
     }
 }

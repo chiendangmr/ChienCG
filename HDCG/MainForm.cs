@@ -810,5 +810,9 @@ namespace HDCGStudio
 
         }
 
+        private void barBtnManagePlayer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

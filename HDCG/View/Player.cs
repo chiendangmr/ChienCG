@@ -6,9 +6,9 @@ using System.Text;
 
 namespace HDCGStudio.View
 {
-    public class MeetingsInfo
+    public class Player
     {
-        public Object.MeetingsInfo mObj { get; set; }
+        public Object.Player mObj { get; set; }
                 
     }
 }

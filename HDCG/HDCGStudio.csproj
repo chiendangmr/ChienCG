@@ -105,14 +105,14 @@
     <Compile Include="ManageTemplateForm.Designer.cs">
       <DependentUpon>ManageTemplateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Object\MeetingsInfo.cs" />
+    <Compile Include="Object\Player.cs" />
     <Compile Include="Object\tempUpdating.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="View\MeetingsInfo.cs" />
+    <Compile Include="View\Player.cs" />
     <Compile Include="View\Template.cs" />
     <Compile Include="View\tempUpdating.cs" />
     <Compile Include="MainForm.cs">
