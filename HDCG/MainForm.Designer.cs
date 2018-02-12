@@ -36,6 +36,7 @@
             this.cboFormat = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.barBtnManageTemplate = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnManagePlayer = new DevExpress.XtraBars.BarButtonItem();
             this.mnuHelp = new DevExpress.XtraBars.BarSubItem();
             this.mnuAbout = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
@@ -101,8 +102,9 @@
             this.btnEditTemplate = new DevExpress.XtraEditors.SimpleButton();
             this.cboTempLayer = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.barBtnManagePlayer = new DevExpress.XtraBars.BarButtonItem();
+            this.xTab = new DevExpress.XtraTab.XtraTabControl();
+            this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
+            this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -136,8 +138,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTempLayer.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
-            this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xTab)).BeginInit();
+            this.xTab.SuspendLayout();
+            this.xTabVideo.SuspendLayout();
+            this.xTabTemplate.SuspendLayout();
             this.SuspendLayout();
             // 
             // barManager1
@@ -220,6 +224,13 @@
             this.barBtnManageTemplate.Id = 10;
             this.barBtnManageTemplate.Name = "barBtnManageTemplate";
             this.barBtnManageTemplate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnManageTemplate_ItemClick);
+            // 
+            // barBtnManagePlayer
+            // 
+            this.barBtnManagePlayer.Caption = "Manage Players";
+            this.barBtnManagePlayer.Id = 15;
+            this.barBtnManagePlayer.Name = "barBtnManagePlayer";
+            this.barBtnManagePlayer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnManagePlayer_ItemClick);
             // 
             // mnuHelp
             // 
@@ -358,7 +369,7 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1262, 172);
+            this.groupControl1.Size = new System.Drawing.Size(1326, 580);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Videos, Images";
             // 
@@ -371,7 +382,7 @@
             this.panelControl11.Location = new System.Drawing.Point(518, 30);
             this.panelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl11.Name = "panelControl11";
-            this.panelControl11.Size = new System.Drawing.Size(730, 135);
+            this.panelControl11.Size = new System.Drawing.Size(794, 543);
             this.panelControl11.TabIndex = 46;
             // 
             // grdVideo
@@ -386,7 +397,7 @@
             this.grdVideo.Name = "grdVideo";
             this.grdVideo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.grdVideo.Size = new System.Drawing.Size(726, 131);
+            this.grdVideo.Size = new System.Drawing.Size(790, 539);
             this.grdVideo.TabIndex = 18;
             this.grdVideo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVideo});
@@ -633,7 +644,7 @@
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1262, 436);
+            this.groupControl3.Size = new System.Drawing.Size(1255, 580);
             this.groupControl3.TabIndex = 15;
             this.groupControl3.Text = "Templates";
             // 
@@ -647,7 +658,7 @@
             this.groupControl2.Controls.Add(this.labelControl5);
             this.groupControl2.Location = new System.Drawing.Point(520, 29);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(726, 65);
+            this.groupControl2.Size = new System.Drawing.Size(719, 65);
             this.groupControl2.TabIndex = 90;
             this.groupControl2.Text = "Quick update (Real-time)";
             // 
@@ -739,7 +750,7 @@
             this.panelControl2.Controls.Add(this.listBoxTemplates);
             this.panelControl2.Location = new System.Drawing.Point(12, 99);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(424, 328);
+            this.panelControl2.Size = new System.Drawing.Size(424, 472);
             this.panelControl2.TabIndex = 84;
             // 
             // listBoxTemplates
@@ -752,7 +763,7 @@
             this.listBoxTemplates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBoxTemplates.MultiColumn = true;
             this.listBoxTemplates.Name = "listBoxTemplates";
-            this.listBoxTemplates.Size = new System.Drawing.Size(420, 324);
+            this.listBoxTemplates.Size = new System.Drawing.Size(420, 468);
             this.listBoxTemplates.TabIndex = 69;
             // 
             // panelControl1
@@ -763,7 +774,7 @@
             this.panelControl1.Controls.Add(this.gridTempInfo);
             this.panelControl1.Location = new System.Drawing.Point(520, 99);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(726, 328);
+            this.panelControl1.Size = new System.Drawing.Size(719, 472);
             this.panelControl1.TabIndex = 83;
             // 
             // gridTempInfo
@@ -779,7 +790,7 @@
             this.gridTempInfo.Name = "gridTempInfo";
             this.gridTempInfo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2});
-            this.gridTempInfo.Size = new System.Drawing.Size(722, 324);
+            this.gridTempInfo.Size = new System.Drawing.Size(715, 468);
             this.gridTempInfo.TabIndex = 19;
             this.gridTempInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTempInfo});
@@ -1064,27 +1075,31 @@
             this.labelControl2.TabIndex = 46;
             this.labelControl2.Text = "Layer:";
             // 
-            // splitContainerControl1
+            // xTab
             // 
-            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 25);
-            this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Panel1.Controls.Add(this.groupControl1);
-            this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Panel2.Controls.Add(this.groupControl3);
-            this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1262, 614);
-            this.splitContainerControl1.SplitterPosition = 172;
-            this.splitContainerControl1.TabIndex = 20;
-            this.splitContainerControl1.Text = "splitContainerControl1";
+            this.xTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xTab.Location = new System.Drawing.Point(0, 25);
+            this.xTab.Name = "xTab";
+            this.xTab.SelectedTabPage = this.xTabVideo;
+            this.xTab.Size = new System.Drawing.Size(1262, 614);
+            this.xTab.TabIndex = 16;
+            this.xTab.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xTabVideo,
+            this.xTabTemplate});
             // 
-            // barBtnManagePlayer
+            // xTabVideo
             // 
-            this.barBtnManagePlayer.Caption = "Manage Players";
-            this.barBtnManagePlayer.Id = 15;
-            this.barBtnManagePlayer.Name = "barBtnManagePlayer";
-            this.barBtnManagePlayer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnManagePlayer_ItemClick);
+            this.xTabVideo.Controls.Add(this.groupControl1);
+            this.xTabVideo.Name = "xTabVideo";
+            this.xTabVideo.Size = new System.Drawing.Size(1326, 580);
+            this.xTabVideo.Text = "Videos/Images";
+            // 
+            // xTabTemplate
+            // 
+            this.xTabTemplate.Controls.Add(this.groupControl3);
+            this.xTabTemplate.Name = "xTabTemplate";
+            this.xTabTemplate.Size = new System.Drawing.Size(1255, 580);
+            this.xTabTemplate.Text = "Templates";
             // 
             // MainForm
             // 
@@ -1092,7 +1107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.splitContainerControl1);
+            this.Controls.Add(this.xTab);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -1142,8 +1157,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTempLayer.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
-            this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xTab)).EndInit();
+            this.xTab.ResumeLayout(false);
+            this.xTabVideo.ResumeLayout(false);
+            this.xTabTemplate.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1211,7 +1228,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraBars.BarButtonItem barBtnManageTemplate;
@@ -1224,5 +1240,8 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.TextEdit txtValue;
         private DevExpress.XtraBars.BarButtonItem barBtnManagePlayer;
+        private DevExpress.XtraTab.XtraTabControl xTab;
+        private DevExpress.XtraTab.XtraTabPage xTabVideo;
+        private DevExpress.XtraTab.XtraTabPage xTabTemplate;
     }
 }
