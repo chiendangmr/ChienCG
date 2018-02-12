@@ -369,7 +369,7 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1326, 580);
+            this.groupControl1.Size = new System.Drawing.Size(1255, 580);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Videos, Images";
             // 
@@ -382,7 +382,7 @@
             this.panelControl11.Location = new System.Drawing.Point(518, 30);
             this.panelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl11.Name = "panelControl11";
-            this.panelControl11.Size = new System.Drawing.Size(794, 543);
+            this.panelControl11.Size = new System.Drawing.Size(723, 543);
             this.panelControl11.TabIndex = 46;
             // 
             // grdVideo
@@ -397,7 +397,7 @@
             this.grdVideo.Name = "grdVideo";
             this.grdVideo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.grdVideo.Size = new System.Drawing.Size(790, 539);
+            this.grdVideo.Size = new System.Drawing.Size(719, 539);
             this.grdVideo.TabIndex = 18;
             this.grdVideo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVideo});
@@ -1091,7 +1091,7 @@
             // 
             this.xTabVideo.Controls.Add(this.groupControl1);
             this.xTabVideo.Name = "xTabVideo";
-            this.xTabVideo.Size = new System.Drawing.Size(1326, 580);
+            this.xTabVideo.Size = new System.Drawing.Size(1255, 580);
             this.xTabVideo.Text = "Videos/Images";
             // 
             // xTabTemplate
