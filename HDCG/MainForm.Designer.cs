@@ -84,23 +84,28 @@
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.btnRemoveTemplate = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddTemplate = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.btnChooseColor = new DevExpress.XtraEditors.SimpleButton();
+            this.btnChooseIcon2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnChooseIcon1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdateRealTime = new DevExpress.XtraEditors.SimpleButton();
+            this.txtColor = new DevExpress.XtraEditors.TextEdit();
+            this.txtIcon2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtIcon1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.btnPreviewTemplate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPlay = new DevExpress.XtraEditors.SimpleButton();
+            this.btnStop = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.player = new CGPreviewControl.FlashTemplateHostControl();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.txtValue = new DevExpress.XtraEditors.TextEdit();
-            this.cboTextField = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.btnUpdateRealTime = new DevExpress.XtraEditors.SimpleButton();
             this.cboTemplateType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnStop = new DevExpress.XtraEditors.SimpleButton();
-            this.btnPlay = new DevExpress.XtraEditors.SimpleButton();
-            this.btnEditTemplate = new DevExpress.XtraEditors.SimpleButton();
             this.cboTempLayer = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.xTab = new DevExpress.XtraTab.XtraTabControl();
@@ -129,12 +134,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.tempInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTempInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
-            this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboTextField.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIcon2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -291,7 +297,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 639);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 687);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlBottom.Size = new System.Drawing.Size(1262, 34);
@@ -303,7 +309,7 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 614);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 662);
             // 
             // barDockControlRight
             // 
@@ -312,7 +318,7 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1262, 25);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 614);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 662);
             // 
             // barButtonItem1
             // 
@@ -370,7 +376,8 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1255, 580);
+            this.groupControl1.ShowCaption = false;
+            this.groupControl1.Size = new System.Drawing.Size(1255, 628);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Videos, Images";
             // 
@@ -380,10 +387,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl11.Controls.Add(this.grdVideo);
-            this.panelControl11.Location = new System.Drawing.Point(518, 30);
+            this.panelControl11.Location = new System.Drawing.Point(518, 6);
             this.panelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl11.Name = "panelControl11";
-            this.panelControl11.Size = new System.Drawing.Size(723, 543);
+            this.panelControl11.Size = new System.Drawing.Size(723, 615);
             this.panelControl11.TabIndex = 46;
             // 
             // grdVideo
@@ -398,7 +405,7 @@
             this.grdVideo.Name = "grdVideo";
             this.grdVideo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.grdVideo.Size = new System.Drawing.Size(719, 539);
+            this.grdVideo.Size = new System.Drawing.Size(719, 611);
             this.grdVideo.TabIndex = 18;
             this.grdVideo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVideo});
@@ -565,7 +572,7 @@
             // 
             this.labelControl22.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl22.Appearance.Options.UseFont = true;
-            this.labelControl22.Location = new System.Drawing.Point(41, 91);
+            this.labelControl22.Location = new System.Drawing.Point(41, 67);
             this.labelControl22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(27, 17);
@@ -610,7 +617,7 @@
             // 
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl21.Appearance.Options.UseFont = true;
-            this.labelControl21.Location = new System.Drawing.Point(27, 64);
+            this.labelControl21.Location = new System.Drawing.Point(27, 40);
             this.labelControl21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(43, 17);
@@ -625,25 +632,22 @@
             this.groupControl3.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.groupControl3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupControl3.Controls.Add(this.splitContainerControl1);
-            this.groupControl3.Controls.Add(this.panelControl3);
             this.groupControl3.Controls.Add(this.groupControl2);
-            this.groupControl3.Controls.Add(this.btnUpdateRealTime);
+            this.groupControl3.Controls.Add(this.panelControl3);
             this.groupControl3.Controls.Add(this.cboTemplateType);
             this.groupControl3.Controls.Add(this.labelControl4);
             this.groupControl3.Controls.Add(this.numericUpDown2);
             this.groupControl3.Controls.Add(this.numericUpDown1);
             this.groupControl3.Controls.Add(this.labelControl3);
             this.groupControl3.Controls.Add(this.labelControl1);
-            this.groupControl3.Controls.Add(this.btnStop);
-            this.groupControl3.Controls.Add(this.btnPlay);
-            this.groupControl3.Controls.Add(this.btnEditTemplate);
             this.groupControl3.Controls.Add(this.cboTempLayer);
             this.groupControl3.Controls.Add(this.labelControl2);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1255, 580);
+            this.groupControl3.ShowCaption = false;
+            this.groupControl3.Size = new System.Drawing.Size(1255, 628);
             this.groupControl3.TabIndex = 15;
             this.groupControl3.Text = "Templates";
             // 
@@ -652,7 +656,7 @@
             this.splitContainerControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 106);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 82);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.listBoxTemplates);
             this.splitContainerControl1.Panel1.Text = "Panel1";
@@ -660,7 +664,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.btnRemoveTemplate);
             this.splitContainerControl1.Panel2.Controls.Add(this.btnAddTemplate);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(436, 474);
+            this.splitContainerControl1.Size = new System.Drawing.Size(436, 546);
             this.splitContainerControl1.SplitterPosition = 173;
             this.splitContainerControl1.TabIndex = 92;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -693,7 +697,7 @@
             this.gridTempInfo.Name = "gridTempInfo";
             this.gridTempInfo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2});
-            this.gridTempInfo.Size = new System.Drawing.Size(436, 223);
+            this.gridTempInfo.Size = new System.Drawing.Size(436, 295);
             this.gridTempInfo.TabIndex = 19;
             this.gridTempInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTempInfo});
@@ -755,7 +759,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
-            this.gridColumn4.Width = 226;
+            this.gridColumn4.Width = 191;
             // 
             // gridColumn1
             // 
@@ -771,7 +775,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 50;
+            this.gridColumn1.Width = 45;
             // 
             // gridColumn2
             // 
@@ -784,7 +788,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
-            this.gridColumn2.Width = 50;
+            this.gridColumn2.Width = 44;
             // 
             // repositoryItemCheckEdit2
             // 
@@ -820,15 +824,189 @@
             this.btnAddTemplate.ToolTip = "Add to Playlist";
             this.btnAddTemplate.Click += new System.EventHandler(this.btnAddTemplate_Click);
             // 
+            // groupControl2
+            // 
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl2.Controls.Add(this.btnChooseColor);
+            this.groupControl2.Controls.Add(this.btnChooseIcon2);
+            this.groupControl2.Controls.Add(this.btnChooseIcon1);
+            this.groupControl2.Controls.Add(this.btnUpdateRealTime);
+            this.groupControl2.Controls.Add(this.txtColor);
+            this.groupControl2.Controls.Add(this.txtIcon2);
+            this.groupControl2.Controls.Add(this.txtIcon1);
+            this.groupControl2.Controls.Add(this.labelControl5);
+            this.groupControl2.Controls.Add(this.labelControl6);
+            this.groupControl2.Controls.Add(this.btnPreviewTemplate);
+            this.groupControl2.Controls.Add(this.btnPlay);
+            this.groupControl2.Controls.Add(this.btnStop);
+            this.groupControl2.Controls.Add(this.labelControl7);
+            this.groupControl2.Location = new System.Drawing.Point(444, 451);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(811, 174);
+            this.groupControl2.TabIndex = 90;
+            this.groupControl2.Text = "Quick update (Real-time)";
+            // 
+            // btnChooseColor
+            // 
+            this.btnChooseColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnChooseColor.Location = new System.Drawing.Point(373, 123);
+            this.btnChooseColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChooseColor.Name = "btnChooseColor";
+            this.btnChooseColor.Size = new System.Drawing.Size(81, 30);
+            this.btnChooseColor.TabIndex = 22;
+            this.btnChooseColor.Text = "Chọn...";
+            this.btnChooseColor.Click += new System.EventHandler(this.btnChooseColor_Click);
+            // 
+            // btnChooseIcon2
+            // 
+            this.btnChooseIcon2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnChooseIcon2.Location = new System.Drawing.Point(374, 84);
+            this.btnChooseIcon2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChooseIcon2.Name = "btnChooseIcon2";
+            this.btnChooseIcon2.Size = new System.Drawing.Size(81, 30);
+            this.btnChooseIcon2.TabIndex = 21;
+            this.btnChooseIcon2.Text = "Chọn...";
+            this.btnChooseIcon2.Click += new System.EventHandler(this.btnChooseIcon2_Click);
+            // 
+            // btnChooseIcon1
+            // 
+            this.btnChooseIcon1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnChooseIcon1.Location = new System.Drawing.Point(373, 45);
+            this.btnChooseIcon1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChooseIcon1.Name = "btnChooseIcon1";
+            this.btnChooseIcon1.Size = new System.Drawing.Size(81, 30);
+            this.btnChooseIcon1.TabIndex = 20;
+            this.btnChooseIcon1.Text = "Chọn...";
+            this.btnChooseIcon1.Click += new System.EventHandler(this.btnChooseIcon1_Click);
+            // 
+            // btnUpdateRealTime
+            // 
+            this.btnUpdateRealTime.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnUpdateRealTime.Appearance.Options.UseFont = true;
+            this.btnUpdateRealTime.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateRealTime.ImageOptions.Image")));
+            this.btnUpdateRealTime.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnUpdateRealTime.Location = new System.Drawing.Point(480, 101);
+            this.btnUpdateRealTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdateRealTime.Name = "btnUpdateRealTime";
+            this.btnUpdateRealTime.Size = new System.Drawing.Size(110, 52);
+            this.btnUpdateRealTime.TabIndex = 86;
+            this.btnUpdateRealTime.ToolTip = "Update real-time data for template";
+            this.btnUpdateRealTime.Click += new System.EventHandler(this.btnUpdateRealTime_Click);
+            // 
+            // txtColor
+            // 
+            this.txtColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtColor.Enabled = false;
+            this.txtColor.Location = new System.Drawing.Point(157, 125);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(210, 22);
+            this.txtColor.TabIndex = 19;
+            // 
+            // txtIcon2
+            // 
+            this.txtIcon2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtIcon2.Enabled = false;
+            this.txtIcon2.Location = new System.Drawing.Point(158, 88);
+            this.txtIcon2.Name = "txtIcon2";
+            this.txtIcon2.Size = new System.Drawing.Size(209, 22);
+            this.txtIcon2.TabIndex = 18;
+            // 
+            // txtIcon1
+            // 
+            this.txtIcon1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtIcon1.Enabled = false;
+            this.txtIcon1.Location = new System.Drawing.Point(157, 51);
+            this.txtIcon1.Name = "txtIcon1";
+            this.txtIcon1.Size = new System.Drawing.Size(209, 22);
+            this.txtIcon1.TabIndex = 17;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(101, 88);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(51, 19);
+            this.labelControl5.TabIndex = 16;
+            this.labelControl5.Text = "Icon 2:";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(12, 125);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(139, 21);
+            this.labelControl6.TabIndex = 15;
+            this.labelControl6.Text = "Chọn ảnh đội hình:";
+            // 
+            // btnPreviewTemplate
+            // 
+            this.btnPreviewTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnPreviewTemplate.Appearance.Options.UseFont = true;
+            this.btnPreviewTemplate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreviewTemplate.ImageOptions.Image")));
+            this.btnPreviewTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnPreviewTemplate.Location = new System.Drawing.Point(480, 45);
+            this.btnPreviewTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPreviewTemplate.Name = "btnPreviewTemplate";
+            this.btnPreviewTemplate.Size = new System.Drawing.Size(68, 50);
+            this.btnPreviewTemplate.TabIndex = 50;
+            this.btnPreviewTemplate.ToolTip = "Preview Template";
+            this.btnPreviewTemplate.Click += new System.EventHandler(this.btnEditTemplate_Click);
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnPlay.Appearance.Options.UseFont = true;
+            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPlay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.ImageOptions.Image")));
+            this.btnPlay.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnPlay.Location = new System.Drawing.Point(554, 45);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(68, 50);
+            this.btnPlay.TabIndex = 60;
+            this.btnPlay.ToolTip = "Play Template";
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // btnStop
+            // 
+            this.btnStop.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnStop.Appearance.Options.UseFont = true;
+            this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnStop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStop.ImageOptions.Image")));
+            this.btnStop.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnStop.Location = new System.Drawing.Point(628, 45);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(68, 50);
+            this.btnStop.TabIndex = 61;
+            this.btnStop.ToolTip = "Stop Template";
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(100, 54);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(51, 19);
+            this.labelControl7.TabIndex = 14;
+            this.labelControl7.Text = "Icon 1:";
+            // 
             // panelControl3
             // 
             this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl3.Controls.Add(this.player);
-            this.panelControl3.Location = new System.Drawing.Point(520, 101);
+            this.panelControl3.Location = new System.Drawing.Point(442, 5);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(735, 479);
+            this.panelControl3.Size = new System.Drawing.Size(810, 438);
             this.panelControl3.TabIndex = 91;
             // 
             // player
@@ -840,94 +1018,16 @@
             this.player.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.player.Name = "player";
             this.player.ScaleMode = CGPreviewControl.FlashTemplateHostControl.ScaleModes.FullScreen;
-            this.player.Size = new System.Drawing.Size(731, 475);
+            this.player.Size = new System.Drawing.Size(806, 434);
             this.player.TabIndex = 3;
             this.player.TemplateFolder = "";
             this.player.TemplateHost = "";
             this.player.Valid = false;
             this.player.Version = CGPreviewControl.FlashTemplateHostControl.Versions.Version20;
             // 
-            // groupControl2
-            // 
-            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl2.Controls.Add(this.txtValue);
-            this.groupControl2.Controls.Add(this.cboTextField);
-            this.groupControl2.Controls.Add(this.labelControl6);
-            this.groupControl2.Controls.Add(this.labelControl5);
-            this.groupControl2.Location = new System.Drawing.Point(520, 29);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(719, 65);
-            this.groupControl2.TabIndex = 90;
-            this.groupControl2.Text = "Quick update (Real-time)";
-            // 
-            // txtValue
-            // 
-            this.txtValue.Location = new System.Drawing.Point(488, 33);
-            this.txtValue.MenuManager = this.barManager1;
-            this.txtValue.Name = "txtValue";
-            this.txtValue.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.txtValue.Properties.Appearance.Options.UseFont = true;
-            this.txtValue.Size = new System.Drawing.Size(206, 24);
-            this.txtValue.TabIndex = 89;
-            // 
-            // cboTextField
-            // 
-            this.cboTextField.Location = new System.Drawing.Point(98, 33);
-            this.cboTextField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cboTextField.MenuManager = this.barManager1;
-            this.cboTextField.Name = "cboTextField";
-            this.cboTextField.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.cboTextField.Properties.Appearance.Options.UseFont = true;
-            this.cboTextField.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboTextField.Properties.Items.AddRange(new object[] {
-            "Bóng đá",
-            "Tennis",
-            "Thông báo"});
-            this.cboTextField.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboTextField.Size = new System.Drawing.Size(262, 24);
-            this.cboTextField.TabIndex = 87;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(439, 38);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(43, 17);
-            this.labelControl6.TabIndex = 88;
-            this.labelControl6.Text = "Value:";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(24, 37);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(68, 17);
-            this.labelControl5.TabIndex = 67;
-            this.labelControl5.Text = "Text field:";
-            // 
-            // btnUpdateRealTime
-            // 
-            this.btnUpdateRealTime.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnUpdateRealTime.Appearance.Options.UseFont = true;
-            this.btnUpdateRealTime.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateRealTime.ImageOptions.Image")));
-            this.btnUpdateRealTime.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnUpdateRealTime.Location = new System.Drawing.Point(443, 316);
-            this.btnUpdateRealTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUpdateRealTime.Name = "btnUpdateRealTime";
-            this.btnUpdateRealTime.Size = new System.Drawing.Size(68, 50);
-            this.btnUpdateRealTime.TabIndex = 86;
-            this.btnUpdateRealTime.ToolTip = "Update real-time data for template";
-            this.btnUpdateRealTime.Click += new System.EventHandler(this.btnUpdateRealTime_Click);
-            // 
             // cboTemplateType
             // 
-            this.cboTemplateType.Location = new System.Drawing.Point(116, 67);
+            this.cboTemplateType.Location = new System.Drawing.Point(121, 43);
             this.cboTemplateType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTemplateType.MenuManager = this.barManager1;
             this.cboTemplateType.Name = "cboTemplateType";
@@ -946,7 +1046,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(271, 69);
+            this.labelControl4.Location = new System.Drawing.Point(271, 45);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(78, 17);
@@ -960,7 +1060,7 @@
             0,
             0,
             0});
-            this.numericUpDown2.Location = new System.Drawing.Point(353, 66);
+            this.numericUpDown2.Location = new System.Drawing.Point(353, 45);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             1000000,
@@ -978,7 +1078,7 @@
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(353, 31);
+            this.numericUpDown1.Location = new System.Drawing.Point(354, 9);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1000000,
@@ -993,7 +1093,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(251, 34);
+            this.labelControl3.Location = new System.Drawing.Point(251, 10);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(101, 17);
@@ -1004,60 +1104,16 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(12, 69);
+            this.labelControl1.Location = new System.Drawing.Point(11, 45);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(98, 17);
+            this.labelControl1.Size = new System.Drawing.Size(104, 17);
             this.labelControl1.TabIndex = 74;
-            this.labelControl1.Text = "Loại template:";
-            // 
-            // btnStop
-            // 
-            this.btnStop.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnStop.Appearance.Options.UseFont = true;
-            this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnStop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStop.ImageOptions.Image")));
-            this.btnStop.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnStop.Location = new System.Drawing.Point(443, 374);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(68, 50);
-            this.btnStop.TabIndex = 61;
-            this.btnStop.ToolTip = "Stop Template";
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
-            // 
-            // btnPlay
-            // 
-            this.btnPlay.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnPlay.Appearance.Options.UseFont = true;
-            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPlay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.ImageOptions.Image")));
-            this.btnPlay.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPlay.Location = new System.Drawing.Point(443, 258);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(68, 50);
-            this.btnPlay.TabIndex = 60;
-            this.btnPlay.ToolTip = "Play Template";
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
-            // 
-            // btnEditTemplate
-            // 
-            this.btnEditTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnEditTemplate.Appearance.Options.UseFont = true;
-            this.btnEditTemplate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEditTemplate.ImageOptions.Image")));
-            this.btnEditTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnEditTemplate.Location = new System.Drawing.Point(443, 200);
-            this.btnEditTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEditTemplate.Name = "btnEditTemplate";
-            this.btnEditTemplate.Size = new System.Drawing.Size(68, 50);
-            this.btnEditTemplate.TabIndex = 50;
-            this.btnEditTemplate.ToolTip = "Edit and Preview Template";
-            this.btnEditTemplate.Click += new System.EventHandler(this.btnEditTemplate_Click);
+            this.labelControl1.Text = "Template type:";
             // 
             // cboTempLayer
             // 
-            this.cboTempLayer.Location = new System.Drawing.Point(116, 34);
+            this.cboTempLayer.Location = new System.Drawing.Point(121, 8);
             this.cboTempLayer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTempLayer.MenuManager = this.barManager1;
             this.cboTempLayer.Name = "cboTempLayer";
@@ -1093,7 +1149,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(67, 34);
+            this.labelControl2.Location = new System.Drawing.Point(72, 10);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(43, 17);
@@ -1106,7 +1162,7 @@
             this.xTab.Location = new System.Drawing.Point(0, 25);
             this.xTab.Name = "xTab";
             this.xTab.SelectedTabPage = this.xTabVideo;
-            this.xTab.Size = new System.Drawing.Size(1262, 614);
+            this.xTab.Size = new System.Drawing.Size(1262, 662);
             this.xTab.TabIndex = 16;
             this.xTab.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabVideo,
@@ -1116,14 +1172,14 @@
             // 
             this.xTabVideo.Controls.Add(this.groupControl1);
             this.xTabVideo.Name = "xTabVideo";
-            this.xTabVideo.Size = new System.Drawing.Size(1255, 580);
+            this.xTabVideo.Size = new System.Drawing.Size(1255, 628);
             this.xTabVideo.Text = "Videos/Images";
             // 
             // xTabTemplate
             // 
             this.xTabTemplate.Controls.Add(this.groupControl3);
             this.xTabTemplate.Name = "xTabTemplate";
-            this.xTabTemplate.Size = new System.Drawing.Size(1255, 580);
+            this.xTabTemplate.Size = new System.Drawing.Size(1255, 628);
             this.xTabTemplate.Text = "Templates";
             // 
             // MainForm
@@ -1131,7 +1187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1262, 721);
             this.Controls.Add(this.xTab);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -1171,13 +1227,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.tempInfoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTempInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
-            this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboTextField.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIcon2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -1229,13 +1286,12 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private System.Windows.Forms.BindingSource videoBindingSource;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraEditors.SimpleButton btnEditTemplate;
+        private DevExpress.XtraEditors.SimpleButton btnPreviewTemplate;
         private DevExpress.XtraEditors.ComboBoxEdit cboTempLayer;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btnStop;
         private DevExpress.XtraEditors.SimpleButton btnPlay;
         private System.Windows.Forms.BindingSource tempInfoBindingSource;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.SimpleButton btnRemoveTemplate;
         private DevExpress.XtraEditors.SimpleButton btnAddTemplate;
         private DevExpress.XtraEditors.ListBoxControl listBoxTemplates;
@@ -1258,10 +1314,7 @@
         private DevExpress.XtraBars.BarButtonItem barBtnManageIcons;
         private DevExpress.XtraBars.BarButtonItem barBtnManageImage;
         private DevExpress.XtraEditors.SimpleButton btnUpdateRealTime;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.ComboBoxEdit cboTextField;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.TextEdit txtValue;
         private DevExpress.XtraBars.BarButtonItem barBtnManagePlayer;
         private DevExpress.XtraTab.XtraTabControl xTab;
         private DevExpress.XtraTab.XtraTabPage xTabVideo;
@@ -1269,5 +1322,14 @@
         private DevExpress.XtraEditors.PanelControl panelControl3;
         public CGPreviewControl.FlashTemplateHostControl player;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
+        private DevExpress.XtraEditors.SimpleButton btnChooseColor;
+        private DevExpress.XtraEditors.SimpleButton btnChooseIcon2;
+        private DevExpress.XtraEditors.SimpleButton btnChooseIcon1;
+        private DevExpress.XtraEditors.TextEdit txtColor;
+        private DevExpress.XtraEditors.TextEdit txtIcon2;
+        private DevExpress.XtraEditors.TextEdit txtIcon1;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }

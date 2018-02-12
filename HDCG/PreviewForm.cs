@@ -12,9 +12,9 @@ using HDCore;
 
 namespace HDCGStudio
 {
-    public partial class EditForm : HDForm
+    public partial class PreviewForm : HDForm
     {
-        public EditForm(string path)
+        public PreviewForm(string path)
         {
             InitializeComponent();
             _tempPath = path;
@@ -73,8 +73,7 @@ namespace HDCGStudio
             }
         }
 
-        string xml = "";
-        string fieldName = "";
+        string xml = "";        
         string xmlAdd = "";
         private string Add(string str, string val)
         {
@@ -85,25 +84,25 @@ namespace HDCGStudio
         {
             try
             {
-                if (txtIcon1.Text.Length > 0)
-                    xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
-                if (txtIcon2.Text.Length > 0)
-                    xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
-                if (txtColor.Text.Length > 0)
-                    xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
-                xml = player.GetProperties();
-                fieldName = xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
-                string xmlStr = "<Track_Property>" + xmlAdd + fieldName.Replace("<Track_Property>", "");
-                UpdateDataFile(xmlStr);
-                this.Clear();
-                if (player.Add(1, _tempPath))
-                {
-                    player.Update(1, xmlStr.Replace("\\n", "\n"));
-                    player.Refresh();
-                    this.Show();
-                    this.Activate();
-                }
-                this.btnUpdate.Text = "Updated";
+                //if (txtIcon1.Text.Length > 0)
+                //    xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
+                //if (txtIcon2.Text.Length > 0)
+                //    xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
+                //if (txtColor.Text.Length > 0)
+                //    xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
+                //xml = player.GetProperties();
+                //fieldName = xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
+                //string xmlStr = "<Track_Property>" + xmlAdd + fieldName.Replace("<Track_Property>", "");
+                //UpdateDataFile(xmlStr);
+                //this.Clear();
+                //if (player.Add(1, _tempPath))
+                //{
+                //    player.Update(1, xmlStr.Replace("\\n", "\n"));
+                //    player.Refresh();
+                //    this.Show();
+                //    this.Activate();
+                //}
+                //this.btnUpdate.Text = "Updated";
                 //this.btnUpdate.Enabled = false;
 
             }
@@ -188,36 +187,37 @@ namespace HDCGStudio
                     File.Create(_updateDataXmlPath).Dispose();
                 }
             }
-            catch { }
-            this.WindowState = FormWindowState.Maximized;
+            catch { }           
+
+        }
+        private void txtIcon1_EditValueChanged(object sender, EventArgs e)
+        {
 
         }
 
-        private void btnChooseIcon1_Click(object sender, EventArgs e)
+        private void labelControl1_Click(object sender, EventArgs e)
         {
-            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons");
-            frm.FilterString = "*.tga;*.png;*.jpg";
-            if (frm.ShowDialog() == DialogResult.OK)
-                txtIcon1.Text = frm.FileName;
+
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void labelControl3_Click(object sender, EventArgs e)
         {
-            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons");
-            frm.FilterString = "*.tga;*.png;*.jpg";
-            if (frm.ShowDialog() == DialogResult.OK)
-                txtIcon2.Text = frm.FileName;
+
         }
 
-        private void btnChooseColor_Click(object sender, EventArgs e)
+        private void txtIcon2_EditValueChanged(object sender, EventArgs e)
         {
-            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = AppSetting.Default.MediaFolder;
-            frm.FilterString = "*.tga;*.png;*.jpg";
-            if (frm.ShowDialog() == DialogResult.OK)
-                txtColor.Text = frm.FileName;
+
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtColor_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

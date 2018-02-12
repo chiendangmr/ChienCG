@@ -252,9 +252,9 @@ namespace HDCGStudio
             }
             return templateFile;
         }
-        public string UpdateTemplate(EditForm frmInput, string templateFileName, int fadeUpDuration = 0)
+        public string UpdateTemplate(PreviewForm frmInput, string templateFileName, int fadeUpDuration = 0)
         {
-            string templateFile = "HDTemplates\\Update\\" + templateFileName;
+            string templateFile = "HDTemplates\\" + templateFileName;
             var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXml);
             dicTemplateData.Clear();
             foreach (var data in lstData)
@@ -528,7 +528,7 @@ namespace HDCGStudio
             try
             {                
                 var templateName = "HDTemplates\\" + getTemplateName(_tempName);
-                var frmInput = new EditForm(templateName);
+                var frmInput = new PreviewForm(templateName);
 
                 frmInput.LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
                                 
@@ -726,7 +726,7 @@ namespace HDCGStudio
         {
             if (e.KeyCode == Keys.F2)
             {
-                btnEditTemplate.PerformClick();
+                btnPreviewTemplate.PerformClick();
             }
             else if (e.KeyCode == Keys.Space)
             {
@@ -750,7 +750,7 @@ namespace HDCGStudio
         {
             if (e.KeyCode == Keys.F2)
             {
-                btnEditTemplate.PerformClick();
+                btnPreviewTemplate.PerformClick();
             }
             else if (e.KeyCode == Keys.Space)
             {
@@ -893,6 +893,33 @@ namespace HDCGStudio
                 player.TemplateHost = _TemplateHost;
                 player.Add(0, "HDTemplates/HDVietNam.ft", true);
             }
+        }
+
+        private void btnChooseIcon1_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons");
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtIcon1.Text = frm.FileName;
+        }
+
+        private void btnChooseIcon2_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons");
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtIcon2.Text = frm.FileName;
+        }
+
+        private void btnChooseColor_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = AppSetting.Default.MediaFolder;
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtColor.Text = frm.FileName;
         }
     }
 }
