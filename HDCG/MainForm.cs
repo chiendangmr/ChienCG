@@ -38,7 +38,7 @@ namespace HDCGStudio
         string _tempInfoXmlPath = "";
         string _templateXmlPath = "";
         string _updateDataXml = "";
-
+        string _TemplateHost = "";
 
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
@@ -94,6 +94,7 @@ namespace HDCGStudio
                 cgServer.Connect(AppSetting.Default.CGServerIP, AppSetting.Default.CGServerPort);
 
                 this.WindowState = FormWindowState.Maximized;
+                LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
             }
             catch (Exception ex)
             {
@@ -213,7 +214,44 @@ namespace HDCGStudio
                 ckVideoLoop.Checked = videoView.VideoObj.Loop;
             }
         }
+        public string ViewTemplate(string templateFileName, int fadeUpDuration = 0)
+        {
+            string templateFile = "HDTemplates\\Update\\" + templateFileName;
+            var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXml);
+            dicTemplateData.Clear();
+            foreach (var data in lstData)
+                dicTemplateData.Add(data.Name, data.Data);
+            try
+            {
+                int nTry = 0;
 
+                TryHere:
+
+                if (player.Add(1, templateFile))
+                {
+                    if (dicTemplateData.ContainsKey("HDTemplates\\" + templateFileName))
+                        player.Update(1, dicTemplateData["HDTemplates\\" + templateFileName].Replace("\\n", "\n"));
+                    player.Refresh();
+                    player.InvokeMethod(1, "fadeUp");                    
+                }
+                else
+                {
+                    nTry++;
+                    if (nTry < 1)
+                    {
+                        Clear();
+                        goto TryHere;
+                    }
+                    throw new Exception("Can not cue graphics!");
+                }
+
+            }
+            catch
+            {
+                HDMessageBox.Show("Can't edit this template!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return templateFile;
+        }
         public string UpdateTemplate(EditForm frmInput, string templateFileName, int fadeUpDuration = 0)
         {
             string templateFile = "HDTemplates\\Update\\" + templateFileName;
@@ -494,7 +532,7 @@ namespace HDCGStudio
 
                 frmInput.LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
                                 
-                UpdateTemplate(frmInput, _tempName, _layer);
+                UpdateTemplate(frmInput, _tempName);
 
             }
             catch (Exception ex)
@@ -555,7 +593,7 @@ namespace HDCGStudio
         }
         private void gvTempInfo_RowClick(object sender, RowClickEventArgs e)
         {
-
+            ViewTemplate(_tempName);
         }
         private void gvTempInfo_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
@@ -813,6 +851,48 @@ namespace HDCGStudio
         private void barBtnManagePlayer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
+        }
+        public void LoadTemplateHost(string path)
+        {
+            if (!Directory.Exists(Path.GetDirectoryName(path)))
+            {
+                HDMessageBox.Show("Template folder does not exists!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (!File.Exists(path))
+            {
+                HDMessageBox.Show("Template host file does not exists!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                player.Clear();
+
+                if (path.Contains("43"))
+                    player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect43;
+                else
+                    player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
+
+                player.TemplateHost = path;
+                player.Add(0, "HDTemplates/HDVietNam.ft", true);
+
+                _TemplateHost = path;
+            }
+        }
+        public void Clear()
+        {
+            if (_TemplateHost != "")
+            {
+                player.Clear();
+
+                if (_TemplateHost.Contains("43"))
+                    player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect43;
+                else
+                    player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
+
+                player.TemplateHost = _TemplateHost;
+                player.Add(0, "HDTemplates/HDVietNam.ft", true);
+            }
         }
     }
 }
