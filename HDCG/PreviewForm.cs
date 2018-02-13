@@ -78,85 +78,8 @@ namespace HDCGStudio
         private string Add(string str, string val)
         {
             return "<" + str + " id=\"" + str + "\"><data value=\"" + val + "\"/></" + str + ">";
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //if (txtIcon1.Text.Length > 0)
-                //    xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
-                //if (txtIcon2.Text.Length > 0)
-                //    xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
-                //if (txtColor.Text.Length > 0)
-                //    xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
-                //xml = player.GetProperties();
-                //fieldName = xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
-                //string xmlStr = "<Track_Property>" + xmlAdd + fieldName.Replace("<Track_Property>", "");
-                //UpdateDataFile(xmlStr);
-                //this.Clear();
-                //if (player.Add(1, _tempPath))
-                //{
-                //    player.Update(1, xmlStr.Replace("\\n", "\n"));
-                //    player.Refresh();
-                //    this.Show();
-                //    this.Activate();
-                //}
-                //this.btnUpdate.Text = "Updated";
-                //this.btnUpdate.Enabled = false;
-
-            }
-            catch
-            {
-                HDMessageBox.Show("Data not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void UpdateDataFile(string data)
-        {
-            try
-            {
-                if (bsUpdateData.List.Count > 0)
-                {
-                    int dataCount = 0;
-                    foreach (var temp in bsUpdateData.List as BindingList<Object.tempUpdating>)
-                    {
-                        if (temp.Name == _tempPath)
-                        {
-                            dataCount++;
-                            temp.Data = data;
-                            (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXmlPath);
-                        }
-                    }
-                    if (dataCount == 0)
-                    {
-                        bsUpdateData.List.Add(new Object.tempUpdating()
-                        {
-                            Name = _tempPath,
-                            Data = data
-
-                        });
-
-                        (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXmlPath);
-                    }
-                }
-                else
-                {
-                    bsUpdateData.List.Add(new Object.tempUpdating()
-                    {
-                        Name = _tempPath,
-                        Data = data
-
-                    });
-
-                    (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXmlPath);
-
-                }
-            }
-            catch (Exception ex)
-            {
-                HDMessageBox.Show("UpdateDataFile lỗi: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        }       
+        
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -189,35 +112,6 @@ namespace HDCGStudio
             }
             catch { }           
 
-        }
-        private void txtIcon1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtIcon2_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtColor_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
+        }        
     }
 }

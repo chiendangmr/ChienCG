@@ -842,12 +842,85 @@ namespace HDCGStudio
                 e.Appearance.ForeColor = Color.White;
             }
         }
-
+        string _xml = "";
+        string _xmlAdd = "";
+        private string Add(string str, string val)
+        {
+            return "<" + str + " id=\"" + str + "\"><data value=\"" + val + "\"/></" + str + ">";
+        }
         private void btnUpdateRealTime_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                var templateName = "HDTemplates\\" + _tempName;
+                if (txtIcon1.Text.Length > 0)
+                    _xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
+                if (txtIcon2.Text.Length > 0)
+                    _xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
+                if (txtColor.Text.Length > 0)
+                    _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
+                _xml = player.GetProperties();
+                var fieldName = _xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
+                string xmlStr = "<Track_Property>" + _xmlAdd + fieldName.Replace("<Track_Property>", "");
+                UpdateDataFile(xmlStr);
+                this.Clear();
+                if (player.Add(1, templateName))
+                {
+                    player.Update(1, xmlStr.Replace("\\n", "\n"));
+                    player.Refresh();                    
+                }
+            }
+            catch
+            {
+                HDMessageBox.Show("Data not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+        private void UpdateDataFile(string data)
+        {
+            try
+            {
+                if (bsUpdateData.List.Count > 0)
+                {
+                    int dataCount = 0;
+                    foreach (var temp in bsUpdateData.List as BindingList<Object.tempUpdating>)
+                    {
+                        if (temp.Name == _tempName)
+                        {
+                            dataCount++;
+                            temp.Data = data;
+                            (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXml);
+                        }
+                    }
+                    if (dataCount == 0)
+                    {
+                        bsUpdateData.List.Add(new Object.tempUpdating()
+                        {
+                            Name = _tempName,
+                            Data = data
 
+                        });
+
+                        (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXml);
+                    }
+                }
+                else
+                {
+                    bsUpdateData.List.Add(new Object.tempUpdating()
+                    {
+                        Name = _tempName,
+                        Data = data
+
+                    });
+
+                    (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXml);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show("UpdateDataFile lỗi: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void barBtnManagePlayer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 

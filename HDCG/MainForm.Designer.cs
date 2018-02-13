@@ -111,6 +111,7 @@
             this.xTab = new DevExpress.XtraTab.XtraTabControl();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
+            this.bsUpdateData = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -149,6 +150,7 @@
             this.xTab.SuspendLayout();
             this.xTabVideo.SuspendLayout();
             this.xTabTemplate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -1182,6 +1184,10 @@
             this.xTabTemplate.Size = new System.Drawing.Size(1255, 628);
             this.xTabTemplate.Text = "Templates";
             // 
+            // bsUpdateData
+            // 
+            this.bsUpdateData.DataSource = typeof(HDCGStudio.Object.tempUpdating);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1243,6 +1249,7 @@
             this.xTab.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
             this.xTabTemplate.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1331,5 +1338,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl7;
+        private System.Windows.Forms.BindingSource bsUpdateData;
     }
 }
