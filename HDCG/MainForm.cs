@@ -852,7 +852,7 @@ namespace HDCGStudio
         {
             try
             {
-                var templateName = "HDTemplates\\" + _tempName;
+                var templateName = "HDTemplates\\Update\\" + _tempName;
                 if (txtIcon1.Text.Length > 0)
                     _xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
                 if (txtIcon2.Text.Length > 0)

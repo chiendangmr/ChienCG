@@ -78,40 +78,11 @@ namespace HDCGStudio
         private string Add(string str, string val)
         {
             return "<" + str + " id=\"" + str + "\"><data value=\"" + val + "\"/></" + str + ">";
-        }       
-        
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        }         
         public string getXml()
         {
             xml = player.GetProperties();
             return "<Track_Property>" + xmlAdd + xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("<Track_Property>", "").Replace("~", "");
-        }
-        string _updateDataXmlPath = "";
-        private void EditForm_Shown(object sender, EventArgs e)
-        {
-            _updateDataXmlPath = Path.Combine(Application.StartupPath, "UpdateData.xml");
-            try
-            {
-                if (File.Exists(_updateDataXmlPath))
-                {
-                    var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXmlPath);
-                    foreach (var data in lstData)
-                        bsUpdateData.List.Add(new Object.tempUpdating()
-                        {
-                            Name = data.Name,
-                            Data = data.Data
-                        });
-                }
-                else
-                {
-                    File.Create(_updateDataXmlPath).Dispose();
-                }
-            }
-            catch { }           
-
-        }        
+        }           
     }
 }

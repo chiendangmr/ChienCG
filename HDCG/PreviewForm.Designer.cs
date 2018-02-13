@@ -77,8 +77,7 @@
             this.Controls.Add(this.panelControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "PreviewForm";
-            this.Text = "Preview Template";
-            this.Shown += new System.EventHandler(this.EditForm_Shown);
+            this.Text = "Preview Template";            
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
