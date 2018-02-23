@@ -35,12 +35,15 @@ namespace HDCGStudio
         }
 
         string _videoXmlPath = "";
-        string _tempInfoXmlPath = "";
-        string _templateXmlPath = "";
+        string _tempBongdaInfoXmlPath = "";
+        string _templateBongDaXmlPath = "";
+        string _tempTennisInfoXmlPath = "";
+        string _templateTennisXmlPath = "";
         string _updateDataXml = "";
         string _TemplateHost = "";
 
-        Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
+        Dictionary<string, string> dicFootballTemplates = new Dictionary<string, string>();
+        Dictionary<string, string> dicTennisTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
 
         HDCGControler.CasparCG cgServer = null;
@@ -52,8 +55,102 @@ namespace HDCGStudio
                 cboFormat.Caption = AppSetting.Default.Format;
 
                 cboVideoLayer.SelectedIndex = 0;
-                cboTempLayer.SelectedIndex = 5;
-                cboTemplateType.SelectedIndex = 0;
+                cboFootballLayer.SelectedIndex = 5;
+                cboTennisLayer.SelectedIndex = 5;
+
+                #region Load tab Bongda
+                _templateBongDaXmlPath = Path.Combine(Application.StartupPath, "template_bongda_list.xml");
+                _tempBongdaInfoXmlPath = Path.Combine(Application.StartupPath, "playlist_bongda_list.xml");
+
+                try
+                {
+                    if (File.Exists(_templateBongDaXmlPath))
+                    {
+                        var lstTemplate = Utils.GetObject<List<Object.Template>>(_templateBongDaXmlPath).OrderBy(a => a.Name);
+                        foreach (var temp in lstTemplate)
+                        {
+                            dicFootballTemplates.Add(temp.Name, temp.FileName);
+                            lbFootballTemplates.Items.Add(temp.Name);
+                        }
+                    }
+                    else
+                    {
+                        File.Create(_templateBongDaXmlPath).Dispose();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+                try
+                {
+                    if (File.Exists(_tempBongdaInfoXmlPath))
+                    {
+                        var lstBarMC = Utils.GetObject<List<Object.tempInfo>>(_tempBongdaInfoXmlPath);
+                        foreach (var barMC in lstBarMC)
+                            bsBongdaTemplates.List.Add(new View.tempInfo()
+                            {
+                                tempObj = barMC
+                            });
+                    }
+                    else
+                    {
+                        File.Create(_tempBongdaInfoXmlPath).Dispose();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                #endregion
+
+                #region Load tab Tennis
+                _templateTennisXmlPath = Path.Combine(Application.StartupPath, "template_tennis_list.xml");
+                _tempTennisInfoXmlPath = Path.Combine(Application.StartupPath, "playlist_tennis_list.xml");
+
+                try
+                {
+                    if (File.Exists(_templateTennisXmlPath))
+                    {
+                        var lstTemplate = Utils.GetObject<List<Object.Template>>(_templateTennisXmlPath).OrderBy(a => a.Name);
+                        foreach (var temp in lstTemplate)
+                        {
+                            dicTennisTemplates.Add(temp.Name, temp.FileName);
+                            lbTennisTemplates.Items.Add(temp.Name);
+                        }
+                    }
+                    else
+                    {
+                        File.Create(_templateTennisXmlPath).Dispose();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                try
+                {
+                    if (File.Exists(_tempTennisInfoXmlPath))
+                    {
+                        var lstBarMC = Utils.GetObject<List<Object.tempInfo>>(_tempTennisInfoXmlPath);
+                        foreach (var barMC in lstBarMC)
+                            bsTennisTemplates.List.Add(new View.tempInfo()
+                            {
+                                tempObj = barMC
+                            });
+                    }
+                    else
+                    {
+                        File.Create(_tempTennisInfoXmlPath).Dispose();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                #endregion
 
                 _videoXmlPath = Path.Combine(Application.StartupPath, "Video.xml");
                 try
@@ -227,12 +324,12 @@ namespace HDCGStudio
 
                 TryHere:
 
-                if (player.Add(1, templateFile))
+                if (footballPlayer.Add(1, templateFile))
                 {
                     if (dicTemplateData.ContainsKey("HDTemplates\\" + templateFileName))
-                        player.Update(1, dicTemplateData["HDTemplates\\" + templateFileName].Replace("\\n", "\n"));
-                    player.Refresh();
-                    player.InvokeMethod(1, "fadeUp");                    
+                        footballPlayer.Update(1, dicTemplateData["HDTemplates\\" + templateFileName].Replace("\\n", "\n"));
+                    footballPlayer.Refresh();
+                    footballPlayer.InvokeMethod(1, "fadeUp");                    
                 }
                 else
                 {
@@ -338,7 +435,7 @@ namespace HDCGStudio
                     }
                 }
                 bool upOK = false;
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
+                var tempInfoView = gvFootballPlaylist.GetFocusedRow() as View.tempInfo;
 
                 try
                 {
@@ -510,7 +607,7 @@ namespace HDCGStudio
         {
             try
             {
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
+                var tempInfoView = gvFootballPlaylist.GetFocusedRow() as View.tempInfo;
                 OffTemplate(tempInfoView.tempObj.Layer);
             }
             catch
@@ -545,22 +642,22 @@ namespace HDCGStudio
         {
             try
             {
-                if (cboTempLayer.SelectedIndex < 0)
+                if (cboFootballLayer.SelectedIndex < 0)
                     HDMessageBox.Show("Please selected one layer!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
-                    tempInfoBindingSource.List.Add(new View.tempInfo()
+                    bsBongdaTemplates.List.Add(new View.tempInfo()
                     {
                         tempObj = new Object.tempInfo()
                         {
-                            Layer = int.Parse(cboTempLayer.Text),
-                            TemplateName = listBoxTemplates.SelectedValue.ToString(),
-                            Duration = int.Parse(numericUpDown1.Text),
-                            Delay = int.Parse(numericUpDown2.Text)
+                            Layer = int.Parse(cboFootballLayer.Text),
+                            TemplateName = lbFootballTemplates.SelectedValue.ToString(),
+                            Duration = int.Parse(nFootballDuration.Text),
+                            Delay = int.Parse(nFootballDelay.Text)
                         }
                     });
 
-                    (tempInfoBindingSource.List as BindingList<View.tempInfo>).Select(v => v.tempObj).ToList().SaveObject(_tempInfoXmlPath);
+                    (bsBongdaTemplates.List as BindingList<View.tempInfo>).Select(v => v.tempObj).ToList().SaveObject(_tempBongdaInfoXmlPath);
                 }
             }
             catch
@@ -572,22 +669,70 @@ namespace HDCGStudio
         {
             try
             {
-                if (gvTempInfo.FocusedRowHandle < 0)
+                if (gvFootballPlaylist.FocusedRowHandle < 0)
                     HDMessageBox.Show("404 - Not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
-                    tempInfoBindingSource.List.Remove(gvTempInfo.GetFocusedRow());
+                    bsBongdaTemplates.List.Remove(gvFootballPlaylist.GetFocusedRow());
 
-                    (tempInfoBindingSource.List as BindingList<View.tempInfo>).Select(v => v.tempObj).ToList().SaveObject(_tempInfoXmlPath);
+                    (bsBongdaTemplates.List as BindingList<View.tempInfo>).Select(v => v.tempObj).ToList().SaveObject(_tempBongdaInfoXmlPath);
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void btnAddTennisTemplate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cboTennisLayer.SelectedIndex < 0)
+                    HDMessageBox.Show("Please selected one layer!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    bsTennisTemplates.List.Add(new View.tempInfo()
+                    {
+                        tempObj = new Object.tempInfo()
+                        {
+                            Layer = int.Parse(cboTennisLayer.Text),
+                            TemplateName = lbTennisTemplates.SelectedValue.ToString(),
+                            Duration = int.Parse(nTennisDuration.Text),
+                            Delay = int.Parse(nTennisDelay.Text)
+                        }
+                    });
+
+                    (bsTennisTemplates.List as BindingList<View.tempInfo>).Select(v => v.tempObj).ToList().SaveObject(_tempTennisInfoXmlPath);
+                }
+            }
+            catch
+            {
+                HDMessageBox.Show("Please select a Template!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnRemoveTennisTemplates_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gvTennisPlaylist.FocusedRowHandle < 0)
+                    HDMessageBox.Show("404 - Not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    bsTennisTemplates.List.Remove(gvTennisPlaylist.GetFocusedRow());
+
+                    (bsTennisTemplates.List as BindingList<View.tempInfo>).Select(v => v.tempObj).ToList().SaveObject(_tempTennisInfoXmlPath);
+                }
+            }
+            catch(Exception ex) {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         private string getTemplateName(string templateName)
         {
             try
             {
-                return dicTemplates[templateName];
+                return dicFootballTemplates[templateName];
             }
             catch { return ""; }
         }
@@ -597,9 +742,9 @@ namespace HDCGStudio
         }
         private void gvTempInfo_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            if (gvTempInfo.FocusedRowHandle >= 0)
+            if (gvFootballPlaylist.FocusedRowHandle >= 0)
             {
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
+                var tempInfoView = gvFootballPlaylist.GetFocusedRow() as View.tempInfo;
                 _tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
                 _layer = tempInfoView.tempObj.Layer;
                 _delay = tempInfoView.tempObj.Delay;
@@ -610,106 +755,12 @@ namespace HDCGStudio
         {
             xmlStr = "<" + id + " id=\"" + id + "\"><data value=\"" + val + "\"/></" + id + ">";
             return xmlStr;
-        }
-        private String PrintXML(String XML)
-        {
-            String Result = "";
-
-            MemoryStream mStream = new MemoryStream();
-            XmlTextWriter writer = new XmlTextWriter(mStream, Encoding.Unicode);
-            XmlDocument document = new XmlDocument();
-
-            try
-            {
-                // Load the XmlDocument with the XML.
-                document.LoadXml(XML);
-
-                writer.Formatting = Formatting.Indented;
-
-                // Write the XML into a formatting XmlTextWriter
-                document.WriteContentTo(writer);
-                writer.Flush();
-                mStream.Flush();
-
-                // Have to rewind the MemoryStream in order to read
-                // its contents.
-                mStream.Position = 0;
-
-                // Read MemoryStream contents into a StreamReader.
-                StreamReader sReader = new StreamReader(mStream);
-
-                // Extract the text from the StreamReader.
-                String FormattedXML = sReader.ReadToEnd();
-
-                Result = FormattedXML;
-            }
-            catch (XmlException)
-            {
-            }
-
-            mStream.Close();
-            writer.Close();
-
-            return Result;
-        }
-
+        }        
         private void barBtnManageTemplate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ManageTemplateForm mTemp = new ManageTemplateForm(cboTemplateType.Text);
+            ManageTemplateForm mTemp = new ManageTemplateForm();
             mTemp.Show();
             mTemp.Activate();
-        }
-
-        private void cboTemplateType_SelectedValueChanged(object sender, EventArgs e)
-        {
-            dicTemplates.Clear();
-            listBoxTemplates.Items.Clear();
-            var xmlTemplate = "template_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
-            var xmlPlaylist = "playlist_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
-            _templateXmlPath = Path.Combine(Application.StartupPath, xmlTemplate);
-            _tempInfoXmlPath = Path.Combine(Application.StartupPath, xmlPlaylist);
-
-            try
-            {
-                if (File.Exists(_templateXmlPath))
-                {
-                    var lstTemplate = Utils.GetObject<List<Object.Template>>(_templateXmlPath).OrderBy(a => a.Name);
-                    foreach (var temp in lstTemplate)
-                    {
-                        dicTemplates.Add(temp.Name, temp.FileName);
-                        listBoxTemplates.Items.Add(temp.Name);
-                    }
-                }
-                else
-                {
-                    File.Create(_templateXmlPath).Dispose();
-                }
-            }
-            catch (Exception ex)
-            {
-                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            tempInfoBindingSource.List.Clear();
-            try
-            {
-                if (File.Exists(_tempInfoXmlPath))
-                {
-                    var lstBarMC = Utils.GetObject<List<Object.tempInfo>>(_tempInfoXmlPath);
-                    foreach (var barMC in lstBarMC)
-                        tempInfoBindingSource.List.Add(new View.tempInfo()
-                        {
-                            tempObj = barMC
-                        });
-                }
-                else
-                {
-                    File.Create(_tempInfoXmlPath).Dispose();
-                }
-            }
-            catch (Exception ex)
-            {
-                HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void gvTempInfo_RowCellStyle(object sender, RowCellStyleEventArgs e)
@@ -738,11 +789,11 @@ namespace HDCGStudio
             }
             else if (e.KeyCode == Keys.Add)
             {
-                btnAddTemplate.PerformClick();
+                btnAddFootballTemplate.PerformClick();
             }
             else if (e.KeyCode == Keys.Subtract)
             {
-                btnRemoveTemplate.PerformClick();
+                btnRemoveFootballTemplate.PerformClick();
             }
         }
 
@@ -762,11 +813,11 @@ namespace HDCGStudio
             }
             else if (e.KeyCode == Keys.Add)
             {
-                btnAddTemplate.PerformClick();
+                btnAddFootballTemplate.PerformClick();
             }
             else if (e.KeyCode == Keys.Subtract)
             {
-                btnRemoveTemplate.PerformClick();
+                btnRemoveFootballTemplate.PerformClick();
             }
         }
 
@@ -831,6 +882,7 @@ namespace HDCGStudio
                 else
                     LogProcess.AddLog("Đã kích hoạt");
             }
+
         }
 
         private void gvVideo_RowCellStyle(object sender, RowCellStyleEventArgs e)
@@ -859,15 +911,15 @@ namespace HDCGStudio
                     _xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
                 if (txtColor.Text.Length > 0)
                     _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
-                _xml = player.GetProperties();
+                _xml = footballPlayer.GetProperties();
                 var fieldName = _xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
                 string xmlStr = "<Track_Property>" + _xmlAdd + fieldName.Replace("<Track_Property>", "");
                 UpdateDataFile(xmlStr);
                 this.Clear();
-                if (player.Add(1, templateName))
+                if (footballPlayer.Add(1, templateName))
                 {
-                    player.Update(1, xmlStr.Replace("\\n", "\n"));
-                    player.Refresh();                    
+                    footballPlayer.Update(1, xmlStr.Replace("\\n", "\n"));
+                    footballPlayer.Refresh();                    
                 }
             }
             catch
@@ -939,15 +991,15 @@ namespace HDCGStudio
             }
             else
             {
-                player.Clear();
+                footballPlayer.Clear();
 
                 if (path.Contains("43"))
-                    player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect43;
+                    footballPlayer.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect43;
                 else
-                    player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
+                    footballPlayer.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
 
-                player.TemplateHost = path;
-                player.Add(0, "HDTemplates/HDVietNam.ft", true);
+                footballPlayer.TemplateHost = path;
+                footballPlayer.Add(0, "HDTemplates/HDVietNam.ft", true);
 
                 _TemplateHost = path;
             }
@@ -956,15 +1008,15 @@ namespace HDCGStudio
         {
             if (_TemplateHost != "")
             {
-                player.Clear();
+                footballPlayer.Clear();
 
                 if (_TemplateHost.Contains("43"))
-                    player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect43;
+                    footballPlayer.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect43;
                 else
-                    player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
+                    footballPlayer.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
 
-                player.TemplateHost = _TemplateHost;
-                player.Add(0, "HDTemplates/HDVietNam.ft", true);
+                footballPlayer.TemplateHost = _TemplateHost;
+                footballPlayer.Add(0, "HDTemplates/HDVietNam.ft", true);
             }
         }
 
@@ -994,5 +1046,16 @@ namespace HDCGStudio
             if (frm.ShowDialog() == DialogResult.OK)
                 txtColor.Text = frm.FileName;
         }
+
+        private void gvTennisPlaylist_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.Green;
+                e.Appearance.ForeColor = Color.White;
+            }
+        }
+
     }
 }

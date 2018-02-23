@@ -10,42 +10,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HDCore;
 using HDControl;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace HDCGStudio
 {
     public partial class ManageTemplateForm : Form
-    {
-        string _templateType = "";
-        public ManageTemplateForm(string templateType)
+    {        
+        public ManageTemplateForm()
         {
-            InitializeComponent();
-            _templateType = templateType;
+            InitializeComponent();            
         }
         string templatesXmlPath = "";
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
-            var xmlFileName = "template_" + Utils.ConvertToVietnameseNonSign(_templateType).Replace(" ", "").ToLower() + "_list.xml";
-            templatesXmlPath = Path.Combine(Application.StartupPath, xmlFileName);
-            try
-            {
-                if (File.Exists(templatesXmlPath))
-                {
-                    var lstTemplate = Utils.GetObject<List<Object.Template>>(templatesXmlPath);
-                    foreach (var temp in lstTemplate)
-                        bsManageTemplate.Add(new View.Template()
-                        {
-                            TempObj = temp
-                        });
-                }
-                else
-                {
-                    File.Create(templatesXmlPath).Dispose();
-                }
-            }
-            catch (Exception ex)
-            {
-                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            cboTemplateType.SelectedIndex = 0;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -101,6 +79,42 @@ namespace HDCGStudio
         private void ManageTemplateForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             HDMessageBox.Show("Bạn phải load lại danh sách template để lấy được các templates mới!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void cboTemplateType_SelectedValueChanged(object sender, EventArgs e)
+        {
+            var xmlFileName = "template_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
+            templatesXmlPath = Path.Combine(Application.StartupPath, xmlFileName);
+            try
+            {
+                if (File.Exists(templatesXmlPath))
+                {
+                    var lstTemplate = Utils.GetObject<List<Object.Template>>(templatesXmlPath);
+                    foreach (var temp in lstTemplate)
+                        bsManageTemplate.Add(new View.Template()
+                        {
+                            TempObj = temp
+                        });
+                }
+                else
+                {
+                    File.Create(templatesXmlPath).Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.Green;
+                e.Appearance.ForeColor = Color.White;
+            }
         }
     }
 }

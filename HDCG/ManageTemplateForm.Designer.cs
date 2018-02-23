@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageTemplateForm));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.cboTemplateType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bsManageTemplate = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -44,6 +46,7 @@
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsManageTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -57,6 +60,8 @@
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.cboTemplateType);
+            this.splitContainerControl1.Panel1.Controls.Add(this.labelControl3);
             this.splitContainerControl1.Panel1.Controls.Add(this.gridControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.labelControl2);
@@ -71,14 +76,39 @@
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
+            // cboTemplateType
+            // 
+            this.cboTemplateType.Location = new System.Drawing.Point(203, 15);
+            this.cboTemplateType.Name = "cboTemplateType";
+            this.cboTemplateType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cboTemplateType.Properties.Appearance.Options.UseFont = true;
+            this.cboTemplateType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboTemplateType.Properties.Items.AddRange(new object[] {
+            "Bóng đá",
+            "Tennis"});
+            this.cboTemplateType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboTemplateType.Size = new System.Drawing.Size(414, 30);
+            this.cboTemplateType.TabIndex = 7;
+            this.cboTemplateType.SelectedValueChanged += new System.EventHandler(this.cboTemplateType_SelectedValueChanged);
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(25, 18);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(157, 24);
+            this.labelControl3.TabIndex = 6;
+            this.labelControl3.Text = "Chọn loại đồ họa:";
+            // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bsManageTemplate;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.Location = new System.Drawing.Point(0, 73);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(629, 591);
+            this.gridControl1.Size = new System.Drawing.Size(629, 518);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -94,7 +124,10 @@
             this.colFileName});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.EnableAppearanceOddRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle);
             // 
             // colName
             // 
@@ -188,8 +221,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(629, 754);
             this.Controls.Add(this.splitContainerControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ManageTemplateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -198,6 +233,7 @@
             this.Shown += new System.EventHandler(this.ManageTemplateForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsManageTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -221,5 +257,7 @@
         private System.Windows.Forms.BindingSource bsManageTemplate;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colFileName;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTemplateType;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

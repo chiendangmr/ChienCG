@@ -73,18 +73,19 @@
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.listBoxTemplates = new DevExpress.XtraEditors.ListBoxControl();
-            this.gridTempInfo = new DevExpress.XtraGrid.GridControl();
-            this.tempInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gvTempInfo = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lbFootballTemplates = new DevExpress.XtraEditors.ListBoxControl();
+            this.gridFootballPlaylist = new DevExpress.XtraGrid.GridControl();
+            this.bsBongdaTemplates = new System.Windows.Forms.BindingSource(this.components);
+            this.gvFootballPlaylist = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.btnRemoveTemplate = new DevExpress.XtraEditors.SimpleButton();
-            this.btnAddTemplate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRemoveFootballTemplate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAddFootballTemplate = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnChooseColor = new DevExpress.XtraEditors.SimpleButton();
             this.btnChooseIcon2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnChooseIcon1 = new DevExpress.XtraEditors.SimpleButton();
@@ -99,20 +100,54 @@
             this.btnStop = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.player = new CGPreviewControl.FlashTemplateHostControl();
-            this.cboTemplateType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.footballPlayer = new CGPreviewControl.FlashTemplateHostControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nFootballDelay = new System.Windows.Forms.NumericUpDown();
+            this.nFootballDuration = new System.Windows.Forms.NumericUpDown();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.cboTempLayer = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cboFootballLayer = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.xTab = new DevExpress.XtraTab.XtraTabControl();
+            this.xTabFootball = new DevExpress.XtraTab.XtraTabPage();
+            this.xTabTennis = new DevExpress.XtraTab.XtraTabPage();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.lbTennisTemplates = new DevExpress.XtraEditors.ListBoxControl();
+            this.gridTennisPlaylist = new DevExpress.XtraGrid.GridControl();
+            this.bsTennisTemplates = new System.Windows.Forms.BindingSource(this.components);
+            this.gvTennisPlaylist = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.btnRemoveTennisTemplates = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAddTennisTemplate = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.btnUpdateTennisLive = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdateTennis = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.btnPreviewTennis = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPlayTennis = new DevExpress.XtraEditors.SimpleButton();
+            this.btnStopTennis = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.tennisPlayer = new CGPreviewControl.FlashTemplateHostControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.nTennisDelay = new System.Windows.Forms.NumericUpDown();
+            this.nTennisDuration = new System.Windows.Forms.NumericUpDown();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.cboTennisLayer = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
-            this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.bsUpdateData = new System.Windows.Forms.BindingSource(this.components);
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -131,10 +166,10 @@
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxTemplates)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTempInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tempInfoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvTempInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbFootballTemplates)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridFootballPlaylist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsBongdaTemplates)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvFootballPlaylist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -143,14 +178,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboTempLayer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nFootballDelay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nFootballDuration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboFootballLayer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xTab)).BeginInit();
             this.xTab.SuspendLayout();
+            this.xTabFootball.SuspendLayout();
+            this.xTabTennis.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
+            this.splitContainerControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lbTennisTemplates)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTennisPlaylist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTennisTemplates)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvTennisPlaylist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+            this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nTennisDelay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTennisDuration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTennisLayer.Properties)).BeginInit();
             this.xTabVideo.SuspendLayout();
-            this.xTabTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -539,7 +593,7 @@
             // 
             // ckVideoLoop
             // 
-            this.ckVideoLoop.Location = new System.Drawing.Point(239, 58);
+            this.ckVideoLoop.Location = new System.Drawing.Point(239, 39);
             this.ckVideoLoop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ckVideoLoop.MenuManager = this.barManager1;
             this.ckVideoLoop.Name = "ckVideoLoop";
@@ -553,7 +607,7 @@
             // 
             // btnBrowseVideo
             // 
-            this.btnBrowseVideo.Location = new System.Drawing.Point(316, 89);
+            this.btnBrowseVideo.Location = new System.Drawing.Point(318, 62);
             this.btnBrowseVideo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBrowseVideo.Name = "btnBrowseVideo";
             this.btnBrowseVideo.Size = new System.Drawing.Size(87, 28);
@@ -563,7 +617,7 @@
             // 
             // txtVideo
             // 
-            this.txtVideo.Location = new System.Drawing.Point(73, 91);
+            this.txtVideo.Location = new System.Drawing.Point(76, 66);
             this.txtVideo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtVideo.MenuManager = this.barManager1;
             this.txtVideo.Name = "txtVideo";
@@ -584,7 +638,7 @@
             // 
             // cboVideoLayer
             // 
-            this.cboVideoLayer.Location = new System.Drawing.Point(75, 61);
+            this.cboVideoLayer.Location = new System.Drawing.Point(76, 38);
             this.cboVideoLayer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboVideoLayer.MenuManager = this.barManager1;
             this.cboVideoLayer.Name = "cboVideoLayer";
@@ -637,13 +691,11 @@
             this.groupControl3.Controls.Add(this.splitContainerControl1);
             this.groupControl3.Controls.Add(this.groupControl2);
             this.groupControl3.Controls.Add(this.panelControl3);
-            this.groupControl3.Controls.Add(this.cboTemplateType);
             this.groupControl3.Controls.Add(this.labelControl4);
-            this.groupControl3.Controls.Add(this.numericUpDown2);
-            this.groupControl3.Controls.Add(this.numericUpDown1);
+            this.groupControl3.Controls.Add(this.nFootballDelay);
+            this.groupControl3.Controls.Add(this.nFootballDuration);
             this.groupControl3.Controls.Add(this.labelControl3);
-            this.groupControl3.Controls.Add(this.labelControl1);
-            this.groupControl3.Controls.Add(this.cboTempLayer);
+            this.groupControl3.Controls.Add(this.cboFootballLayer);
             this.groupControl3.Controls.Add(this.labelControl2);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
@@ -661,80 +713,80 @@
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 82);
             this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Panel1.Controls.Add(this.listBoxTemplates);
+            this.splitContainerControl1.Panel1.Controls.Add(this.lbFootballTemplates);
             this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Panel2.Controls.Add(this.gridTempInfo);
-            this.splitContainerControl1.Panel2.Controls.Add(this.btnRemoveTemplate);
-            this.splitContainerControl1.Panel2.Controls.Add(this.btnAddTemplate);
+            this.splitContainerControl1.Panel2.Controls.Add(this.gridFootballPlaylist);
+            this.splitContainerControl1.Panel2.Controls.Add(this.btnRemoveFootballTemplate);
+            this.splitContainerControl1.Panel2.Controls.Add(this.btnAddFootballTemplate);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(436, 546);
             this.splitContainerControl1.SplitterPosition = 173;
             this.splitContainerControl1.TabIndex = 92;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
-            // listBoxTemplates
+            // lbFootballTemplates
             // 
-            this.listBoxTemplates.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.listBoxTemplates.Appearance.Options.UseFont = true;
-            this.listBoxTemplates.Cursor = System.Windows.Forms.Cursors.Default;
-            this.listBoxTemplates.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxTemplates.Location = new System.Drawing.Point(0, 0);
-            this.listBoxTemplates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listBoxTemplates.MultiColumn = true;
-            this.listBoxTemplates.Name = "listBoxTemplates";
-            this.listBoxTemplates.Size = new System.Drawing.Size(436, 173);
-            this.listBoxTemplates.TabIndex = 69;
+            this.lbFootballTemplates.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lbFootballTemplates.Appearance.Options.UseFont = true;
+            this.lbFootballTemplates.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbFootballTemplates.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbFootballTemplates.Location = new System.Drawing.Point(0, 0);
+            this.lbFootballTemplates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbFootballTemplates.MultiColumn = true;
+            this.lbFootballTemplates.Name = "lbFootballTemplates";
+            this.lbFootballTemplates.Size = new System.Drawing.Size(436, 173);
+            this.lbFootballTemplates.TabIndex = 69;
             // 
-            // gridTempInfo
+            // gridFootballPlaylist
             // 
-            this.gridTempInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridFootballPlaylist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridTempInfo.DataSource = this.tempInfoBindingSource;
-            this.gridTempInfo.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridTempInfo.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.gridTempInfo.Location = new System.Drawing.Point(0, 72);
-            this.gridTempInfo.MainView = this.gvTempInfo;
-            this.gridTempInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridTempInfo.MenuManager = this.barManager1;
-            this.gridTempInfo.Name = "gridTempInfo";
-            this.gridTempInfo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridFootballPlaylist.DataSource = this.bsBongdaTemplates;
+            this.gridFootballPlaylist.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridFootballPlaylist.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.gridFootballPlaylist.Location = new System.Drawing.Point(0, 72);
+            this.gridFootballPlaylist.MainView = this.gvFootballPlaylist;
+            this.gridFootballPlaylist.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridFootballPlaylist.MenuManager = this.barManager1;
+            this.gridFootballPlaylist.Name = "gridFootballPlaylist";
+            this.gridFootballPlaylist.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2});
-            this.gridTempInfo.Size = new System.Drawing.Size(436, 295);
-            this.gridTempInfo.TabIndex = 19;
-            this.gridTempInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvTempInfo});
-            this.gridTempInfo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridTempInfo_KeyDown);
+            this.gridFootballPlaylist.Size = new System.Drawing.Size(436, 295);
+            this.gridFootballPlaylist.TabIndex = 19;
+            this.gridFootballPlaylist.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvFootballPlaylist});
+            this.gridFootballPlaylist.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridTempInfo_KeyDown);
             // 
-            // tempInfoBindingSource
+            // bsBongdaTemplates
             // 
-            this.tempInfoBindingSource.DataSource = typeof(HDCGStudio.View.tempInfo);
+            this.bsBongdaTemplates.DataSource = typeof(HDCGStudio.View.tempInfo);
             // 
-            // gvTempInfo
+            // gvFootballPlaylist
             // 
-            this.gvTempInfo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvFootballPlaylist.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn1,
             this.gridColumn2});
-            this.gvTempInfo.GridControl = this.gridTempInfo;
-            this.gvTempInfo.Name = "gvTempInfo";
-            this.gvTempInfo.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
-            this.gvTempInfo.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
-            this.gvTempInfo.OptionsBehavior.Editable = false;
-            this.gvTempInfo.OptionsCustomization.AllowFilter = false;
-            this.gvTempInfo.OptionsCustomization.AllowGroup = false;
-            this.gvTempInfo.OptionsMenu.EnableColumnMenu = false;
-            this.gvTempInfo.OptionsMenu.EnableFooterMenu = false;
-            this.gvTempInfo.OptionsMenu.EnableGroupPanelMenu = false;
-            this.gvTempInfo.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gvTempInfo.OptionsView.ColumnAutoWidth = false;
-            this.gvTempInfo.OptionsView.EnableAppearanceEvenRow = true;
-            this.gvTempInfo.OptionsView.EnableAppearanceOddRow = true;
-            this.gvTempInfo.OptionsView.ShowGroupPanel = false;
-            this.gvTempInfo.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvTempInfo_RowClick);
-            this.gvTempInfo.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvTempInfo_RowCellStyle);
-            this.gvTempInfo.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvTempInfo_FocusedRowChanged);
+            this.gvFootballPlaylist.GridControl = this.gridFootballPlaylist;
+            this.gvFootballPlaylist.Name = "gvFootballPlaylist";
+            this.gvFootballPlaylist.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvFootballPlaylist.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvFootballPlaylist.OptionsBehavior.Editable = false;
+            this.gvFootballPlaylist.OptionsCustomization.AllowFilter = false;
+            this.gvFootballPlaylist.OptionsCustomization.AllowGroup = false;
+            this.gvFootballPlaylist.OptionsMenu.EnableColumnMenu = false;
+            this.gvFootballPlaylist.OptionsMenu.EnableFooterMenu = false;
+            this.gvFootballPlaylist.OptionsMenu.EnableGroupPanelMenu = false;
+            this.gvFootballPlaylist.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvFootballPlaylist.OptionsView.ColumnAutoWidth = false;
+            this.gvFootballPlaylist.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvFootballPlaylist.OptionsView.EnableAppearanceOddRow = true;
+            this.gvFootballPlaylist.OptionsView.ShowGroupPanel = false;
+            this.gvFootballPlaylist.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvTempInfo_RowClick);
+            this.gvFootballPlaylist.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvTempInfo_RowCellStyle);
+            this.gvFootballPlaylist.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvTempInfo_FocusedRowChanged);
             // 
             // gridColumn3
             // 
@@ -799,33 +851,33 @@
             this.repositoryItemCheckEdit2.Caption = "Check";
             this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
             // 
-            // btnRemoveTemplate
+            // btnRemoveFootballTemplate
             // 
-            this.btnRemoveTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnRemoveTemplate.Appearance.Options.UseFont = true;
-            this.btnRemoveTemplate.ImageOptions.Image = global::HDCGStudio.Properties.Resources.navigate_down21;
-            this.btnRemoveTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRemoveTemplate.Location = new System.Drawing.Point(271, 2);
-            this.btnRemoveTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnRemoveTemplate.Name = "btnRemoveTemplate";
-            this.btnRemoveTemplate.Size = new System.Drawing.Size(48, 62);
-            this.btnRemoveTemplate.TabIndex = 73;
-            this.btnRemoveTemplate.ToolTip = "Remove from Playlist";
-            this.btnRemoveTemplate.Click += new System.EventHandler(this.btnRemoveTemplate_Click);
+            this.btnRemoveFootballTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnRemoveFootballTemplate.Appearance.Options.UseFont = true;
+            this.btnRemoveFootballTemplate.ImageOptions.Image = global::HDCGStudio.Properties.Resources.navigate_down21;
+            this.btnRemoveFootballTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnRemoveFootballTemplate.Location = new System.Drawing.Point(271, 2);
+            this.btnRemoveFootballTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRemoveFootballTemplate.Name = "btnRemoveFootballTemplate";
+            this.btnRemoveFootballTemplate.Size = new System.Drawing.Size(48, 62);
+            this.btnRemoveFootballTemplate.TabIndex = 73;
+            this.btnRemoveFootballTemplate.ToolTip = "Remove from Playlist";
+            this.btnRemoveFootballTemplate.Click += new System.EventHandler(this.btnRemoveTemplate_Click);
             // 
-            // btnAddTemplate
+            // btnAddFootballTemplate
             // 
-            this.btnAddTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnAddTemplate.Appearance.Options.UseFont = true;
-            this.btnAddTemplate.ImageOptions.Image = global::HDCGStudio.Properties.Resources.navigate_down2;
-            this.btnAddTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnAddTemplate.Location = new System.Drawing.Point(137, 2);
-            this.btnAddTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAddTemplate.Name = "btnAddTemplate";
-            this.btnAddTemplate.Size = new System.Drawing.Size(47, 62);
-            this.btnAddTemplate.TabIndex = 71;
-            this.btnAddTemplate.ToolTip = "Add to Playlist";
-            this.btnAddTemplate.Click += new System.EventHandler(this.btnAddTemplate_Click);
+            this.btnAddFootballTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnAddFootballTemplate.Appearance.Options.UseFont = true;
+            this.btnAddFootballTemplate.ImageOptions.Image = global::HDCGStudio.Properties.Resources.navigate_down2;
+            this.btnAddFootballTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnAddFootballTemplate.Location = new System.Drawing.Point(137, 2);
+            this.btnAddFootballTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddFootballTemplate.Name = "btnAddFootballTemplate";
+            this.btnAddFootballTemplate.Size = new System.Drawing.Size(47, 62);
+            this.btnAddFootballTemplate.TabIndex = 71;
+            this.btnAddFootballTemplate.ToolTip = "Add to Playlist";
+            this.btnAddFootballTemplate.Click += new System.EventHandler(this.btnAddTemplate_Click);
             // 
             // groupControl2
             // 
@@ -850,6 +902,19 @@
             this.groupControl2.Size = new System.Drawing.Size(811, 174);
             this.groupControl2.TabIndex = 90;
             this.groupControl2.Text = "Quick update (Real-time)";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(596, 103);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(110, 52);
+            this.simpleButton1.TabIndex = 87;
+            this.simpleButton1.ToolTip = "Update real-time data for template";
             // 
             // btnChooseColor
             // 
@@ -1007,44 +1072,27 @@
             this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl3.Controls.Add(this.player);
+            this.panelControl3.Controls.Add(this.footballPlayer);
             this.panelControl3.Location = new System.Drawing.Point(442, 5);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(810, 438);
             this.panelControl3.TabIndex = 91;
             // 
-            // player
+            // footballPlayer
             // 
-            this.player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
-            this.player.BackgroundColor = System.Drawing.Color.Empty;
-            this.player.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.player.Location = new System.Drawing.Point(2, 2);
-            this.player.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.player.Name = "player";
-            this.player.ScaleMode = CGPreviewControl.FlashTemplateHostControl.ScaleModes.FullScreen;
-            this.player.Size = new System.Drawing.Size(806, 434);
-            this.player.TabIndex = 3;
-            this.player.TemplateFolder = "";
-            this.player.TemplateHost = "";
-            this.player.Valid = false;
-            this.player.Version = CGPreviewControl.FlashTemplateHostControl.Versions.Version20;
-            // 
-            // cboTemplateType
-            // 
-            this.cboTemplateType.Location = new System.Drawing.Point(121, 43);
-            this.cboTemplateType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cboTemplateType.MenuManager = this.barManager1;
-            this.cboTemplateType.Name = "cboTemplateType";
-            this.cboTemplateType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboTemplateType.Properties.Items.AddRange(new object[] {
-            "Bóng đá",
-            "Tennis",
-            "Thông báo"});
-            this.cboTemplateType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboTemplateType.Size = new System.Drawing.Size(97, 22);
-            this.cboTemplateType.TabIndex = 85;
-            this.cboTemplateType.SelectedValueChanged += new System.EventHandler(this.cboTemplateType_SelectedValueChanged);
+            this.footballPlayer.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
+            this.footballPlayer.BackgroundColor = System.Drawing.Color.Empty;
+            this.footballPlayer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.footballPlayer.Location = new System.Drawing.Point(2, 2);
+            this.footballPlayer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.footballPlayer.Name = "footballPlayer";
+            this.footballPlayer.ScaleMode = CGPreviewControl.FlashTemplateHostControl.ScaleModes.FullScreen;
+            this.footballPlayer.Size = new System.Drawing.Size(806, 434);
+            this.footballPlayer.TabIndex = 3;
+            this.footballPlayer.TemplateFolder = "";
+            this.footballPlayer.TemplateHost = "";
+            this.footballPlayer.Valid = false;
+            this.footballPlayer.Version = CGPreviewControl.FlashTemplateHostControl.Versions.Version20;
             // 
             // labelControl4
             // 
@@ -1057,73 +1105,62 @@
             this.labelControl4.TabIndex = 81;
             this.labelControl4.Text = "Delay(ms): ";
             // 
-            // numericUpDown2
+            // nFootballDelay
             // 
-            this.numericUpDown2.Increment = new decimal(new int[] {
+            this.nFootballDelay.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown2.Location = new System.Drawing.Point(353, 45);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.nFootballDelay.Location = new System.Drawing.Point(353, 45);
+            this.nFootballDelay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nFootballDelay.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(83, 23);
-            this.numericUpDown2.TabIndex = 80;
+            this.nFootballDelay.Name = "nFootballDelay";
+            this.nFootballDelay.Size = new System.Drawing.Size(83, 23);
+            this.nFootballDelay.TabIndex = 80;
             // 
-            // numericUpDown1
+            // nFootballDuration
             // 
-            this.numericUpDown1.Increment = new decimal(new int[] {
+            this.nFootballDuration.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(354, 9);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nFootballDuration.Location = new System.Drawing.Point(124, 45);
+            this.nFootballDuration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nFootballDuration.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(83, 23);
-            this.numericUpDown1.TabIndex = 79;
+            this.nFootballDuration.Name = "nFootballDuration";
+            this.nFootballDuration.Size = new System.Drawing.Size(97, 23);
+            this.nFootballDuration.TabIndex = 79;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(251, 10);
+            this.labelControl3.Location = new System.Drawing.Point(21, 46);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(101, 17);
             this.labelControl3.TabIndex = 78;
             this.labelControl3.Text = "Duration(ms): ";
             // 
-            // labelControl1
+            // cboFootballLayer
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(11, 45);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(104, 17);
-            this.labelControl1.TabIndex = 74;
-            this.labelControl1.Text = "Template type:";
-            // 
-            // cboTempLayer
-            // 
-            this.cboTempLayer.Location = new System.Drawing.Point(121, 8);
-            this.cboTempLayer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cboTempLayer.MenuManager = this.barManager1;
-            this.cboTempLayer.Name = "cboTempLayer";
-            this.cboTempLayer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cboFootballLayer.Location = new System.Drawing.Point(124, 9);
+            this.cboFootballLayer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboFootballLayer.MenuManager = this.barManager1;
+            this.cboFootballLayer.Name = "cboFootballLayer";
+            this.cboFootballLayer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboTempLayer.Properties.Items.AddRange(new object[] {
+            this.cboFootballLayer.Properties.Items.AddRange(new object[] {
             "100",
             "101",
             "102",
@@ -1145,15 +1182,15 @@
             "118",
             "119",
             "120"});
-            this.cboTempLayer.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboTempLayer.Size = new System.Drawing.Size(97, 22);
-            this.cboTempLayer.TabIndex = 47;
+            this.cboFootballLayer.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboFootballLayer.Size = new System.Drawing.Size(97, 22);
+            this.cboFootballLayer.TabIndex = 47;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(72, 10);
+            this.labelControl2.Location = new System.Drawing.Point(75, 12);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(43, 17);
@@ -1165,12 +1202,533 @@
             this.xTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xTab.Location = new System.Drawing.Point(0, 25);
             this.xTab.Name = "xTab";
-            this.xTab.SelectedTabPage = this.xTabVideo;
+            this.xTab.SelectedTabPage = this.xTabFootball;
             this.xTab.Size = new System.Drawing.Size(1262, 662);
             this.xTab.TabIndex = 16;
             this.xTab.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xTabVideo,
-            this.xTabTemplate});
+            this.xTabFootball,
+            this.xTabTennis,
+            this.xTabVideo});
+            // 
+            // xTabFootball
+            // 
+            this.xTabFootball.Controls.Add(this.groupControl3);
+            this.xTabFootball.Name = "xTabFootball";
+            this.xTabFootball.Size = new System.Drawing.Size(1255, 628);
+            this.xTabFootball.Text = "Football Templates";
+            // 
+            // xTabTennis
+            // 
+            this.xTabTennis.Controls.Add(this.groupControl4);
+            this.xTabTennis.Name = "xTabTennis";
+            this.xTabTennis.Size = new System.Drawing.Size(1255, 628);
+            this.xTabTennis.Text = "Tennis Templates";
+            // 
+            // groupControl4
+            // 
+            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl4.AppearanceCaption.Options.UseFont = true;
+            this.groupControl4.AppearanceCaption.Options.UseTextOptions = true;
+            this.groupControl4.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.groupControl4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupControl4.Controls.Add(this.splitContainerControl2);
+            this.groupControl4.Controls.Add(this.groupControl5);
+            this.groupControl4.Controls.Add(this.panelControl1);
+            this.groupControl4.Controls.Add(this.labelControl11);
+            this.groupControl4.Controls.Add(this.nTennisDelay);
+            this.groupControl4.Controls.Add(this.nTennisDuration);
+            this.groupControl4.Controls.Add(this.labelControl12);
+            this.groupControl4.Controls.Add(this.cboTennisLayer);
+            this.groupControl4.Controls.Add(this.labelControl14);
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl4.Location = new System.Drawing.Point(0, 0);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.ShowCaption = false;
+            this.groupControl4.Size = new System.Drawing.Size(1255, 628);
+            this.groupControl4.TabIndex = 16;
+            this.groupControl4.Text = "Templates";
+            // 
+            // splitContainerControl2
+            // 
+            this.splitContainerControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.splitContainerControl2.Horizontal = false;
+            this.splitContainerControl2.Location = new System.Drawing.Point(0, 82);
+            this.splitContainerControl2.Name = "splitContainerControl2";
+            this.splitContainerControl2.Panel1.Controls.Add(this.lbTennisTemplates);
+            this.splitContainerControl2.Panel1.Text = "Panel1";
+            this.splitContainerControl2.Panel2.Controls.Add(this.gridTennisPlaylist);
+            this.splitContainerControl2.Panel2.Controls.Add(this.btnRemoveTennisTemplates);
+            this.splitContainerControl2.Panel2.Controls.Add(this.btnAddTennisTemplate);
+            this.splitContainerControl2.Panel2.Text = "Panel2";
+            this.splitContainerControl2.Size = new System.Drawing.Size(436, 546);
+            this.splitContainerControl2.SplitterPosition = 173;
+            this.splitContainerControl2.TabIndex = 92;
+            this.splitContainerControl2.Text = "splitContainerControl2";
+            // 
+            // lbTennisTemplates
+            // 
+            this.lbTennisTemplates.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lbTennisTemplates.Appearance.Options.UseFont = true;
+            this.lbTennisTemplates.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbTennisTemplates.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbTennisTemplates.Location = new System.Drawing.Point(0, 0);
+            this.lbTennisTemplates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbTennisTemplates.MultiColumn = true;
+            this.lbTennisTemplates.Name = "lbTennisTemplates";
+            this.lbTennisTemplates.Size = new System.Drawing.Size(436, 173);
+            this.lbTennisTemplates.TabIndex = 69;
+            // 
+            // gridTennisPlaylist
+            // 
+            this.gridTennisPlaylist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridTennisPlaylist.DataSource = this.bsTennisTemplates;
+            this.gridTennisPlaylist.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridTennisPlaylist.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.gridTennisPlaylist.Location = new System.Drawing.Point(0, 72);
+            this.gridTennisPlaylist.MainView = this.gvTennisPlaylist;
+            this.gridTennisPlaylist.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridTennisPlaylist.MenuManager = this.barManager1;
+            this.gridTennisPlaylist.Name = "gridTennisPlaylist";
+            this.gridTennisPlaylist.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit3});
+            this.gridTennisPlaylist.Size = new System.Drawing.Size(436, 295);
+            this.gridTennisPlaylist.TabIndex = 19;
+            this.gridTennisPlaylist.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvTennisPlaylist});
+            // 
+            // bsTennisTemplates
+            // 
+            this.bsTennisTemplates.DataSource = typeof(HDCGStudio.View.tempInfo);
+            // 
+            // gvTennisPlaylist
+            // 
+            this.gvTennisPlaylist.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7,
+            this.gridColumn8});
+            this.gvTennisPlaylist.GridControl = this.gridTennisPlaylist;
+            this.gvTennisPlaylist.Name = "gvTennisPlaylist";
+            this.gvTennisPlaylist.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvTennisPlaylist.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvTennisPlaylist.OptionsBehavior.Editable = false;
+            this.gvTennisPlaylist.OptionsCustomization.AllowFilter = false;
+            this.gvTennisPlaylist.OptionsCustomization.AllowGroup = false;
+            this.gvTennisPlaylist.OptionsMenu.EnableColumnMenu = false;
+            this.gvTennisPlaylist.OptionsMenu.EnableFooterMenu = false;
+            this.gvTennisPlaylist.OptionsMenu.EnableGroupPanelMenu = false;
+            this.gvTennisPlaylist.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvTennisPlaylist.OptionsView.ColumnAutoWidth = false;
+            this.gvTennisPlaylist.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvTennisPlaylist.OptionsView.EnableAppearanceOddRow = true;
+            this.gvTennisPlaylist.OptionsView.ShowGroupPanel = false;
+            this.gvTennisPlaylist.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvTennisPlaylist_RowCellStyle);
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn5.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn5.Caption = "Layer";
+            this.gridColumn5.FieldName = "tempObj.Layer";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 0;
+            this.gridColumn5.Width = 50;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn6.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn6.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn6.Caption = "Template";
+            this.gridColumn6.FieldName = "tempObj.TemplateName";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 1;
+            this.gridColumn6.Width = 191;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn7.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn7.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn7.Caption = "Delay(ms)";
+            this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn7.FieldName = "tempObj.Delay";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 2;
+            this.gridColumn7.Width = 45;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn8.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn8.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn8.Caption = "Duration(ms)";
+            this.gridColumn8.FieldName = "tempObj.Duration";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 3;
+            this.gridColumn8.Width = 44;
+            // 
+            // repositoryItemCheckEdit3
+            // 
+            this.repositoryItemCheckEdit3.AutoHeight = false;
+            this.repositoryItemCheckEdit3.Caption = "Check";
+            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
+            // 
+            // btnRemoveTennisTemplates
+            // 
+            this.btnRemoveTennisTemplates.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnRemoveTennisTemplates.Appearance.Options.UseFont = true;
+            this.btnRemoveTennisTemplates.ImageOptions.Image = global::HDCGStudio.Properties.Resources.navigate_down21;
+            this.btnRemoveTennisTemplates.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnRemoveTennisTemplates.Location = new System.Drawing.Point(271, 2);
+            this.btnRemoveTennisTemplates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRemoveTennisTemplates.Name = "btnRemoveTennisTemplates";
+            this.btnRemoveTennisTemplates.Size = new System.Drawing.Size(48, 62);
+            this.btnRemoveTennisTemplates.TabIndex = 73;
+            this.btnRemoveTennisTemplates.ToolTip = "Remove from Playlist";
+            this.btnRemoveTennisTemplates.Click += new System.EventHandler(this.btnRemoveTennisTemplates_Click);
+            // 
+            // btnAddTennisTemplate
+            // 
+            this.btnAddTennisTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnAddTennisTemplate.Appearance.Options.UseFont = true;
+            this.btnAddTennisTemplate.ImageOptions.Image = global::HDCGStudio.Properties.Resources.navigate_down2;
+            this.btnAddTennisTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnAddTennisTemplate.Location = new System.Drawing.Point(137, 2);
+            this.btnAddTennisTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddTennisTemplate.Name = "btnAddTennisTemplate";
+            this.btnAddTennisTemplate.Size = new System.Drawing.Size(47, 62);
+            this.btnAddTennisTemplate.TabIndex = 71;
+            this.btnAddTennisTemplate.ToolTip = "Add to Playlist";
+            this.btnAddTennisTemplate.Click += new System.EventHandler(this.btnAddTennisTemplate_Click);
+            // 
+            // groupControl5
+            // 
+            this.groupControl5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl5.Controls.Add(this.btnUpdateTennisLive);
+            this.groupControl5.Controls.Add(this.simpleButton5);
+            this.groupControl5.Controls.Add(this.simpleButton6);
+            this.groupControl5.Controls.Add(this.simpleButton7);
+            this.groupControl5.Controls.Add(this.btnUpdateTennis);
+            this.groupControl5.Controls.Add(this.textEdit1);
+            this.groupControl5.Controls.Add(this.textEdit2);
+            this.groupControl5.Controls.Add(this.textEdit3);
+            this.groupControl5.Controls.Add(this.labelControl8);
+            this.groupControl5.Controls.Add(this.labelControl9);
+            this.groupControl5.Controls.Add(this.btnPreviewTennis);
+            this.groupControl5.Controls.Add(this.btnPlayTennis);
+            this.groupControl5.Controls.Add(this.btnStopTennis);
+            this.groupControl5.Controls.Add(this.labelControl10);
+            this.groupControl5.Location = new System.Drawing.Point(444, 451);
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.Size = new System.Drawing.Size(811, 174);
+            this.groupControl5.TabIndex = 90;
+            this.groupControl5.Text = "Quick update (Real-time)";
+            // 
+            // btnUpdateTennisLive
+            // 
+            this.btnUpdateTennisLive.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnUpdateTennisLive.Appearance.Options.UseFont = true;
+            this.btnUpdateTennisLive.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateTennisLive.ImageOptions.Image")));
+            this.btnUpdateTennisLive.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnUpdateTennisLive.Location = new System.Drawing.Point(596, 103);
+            this.btnUpdateTennisLive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdateTennisLive.Name = "btnUpdateTennisLive";
+            this.btnUpdateTennisLive.Size = new System.Drawing.Size(110, 52);
+            this.btnUpdateTennisLive.TabIndex = 87;
+            this.btnUpdateTennisLive.ToolTip = "Update real-time data for template";
+            // 
+            // simpleButton5
+            // 
+            this.simpleButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton5.Location = new System.Drawing.Point(373, 123);
+            this.simpleButton5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(81, 30);
+            this.simpleButton5.TabIndex = 22;
+            this.simpleButton5.Text = "Chọn...";
+            // 
+            // simpleButton6
+            // 
+            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton6.Location = new System.Drawing.Point(374, 84);
+            this.simpleButton6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(81, 30);
+            this.simpleButton6.TabIndex = 21;
+            this.simpleButton6.Text = "Chọn...";
+            // 
+            // simpleButton7
+            // 
+            this.simpleButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton7.Location = new System.Drawing.Point(373, 45);
+            this.simpleButton7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton7.Name = "simpleButton7";
+            this.simpleButton7.Size = new System.Drawing.Size(81, 30);
+            this.simpleButton7.TabIndex = 20;
+            this.simpleButton7.Text = "Chọn...";
+            // 
+            // btnUpdateTennis
+            // 
+            this.btnUpdateTennis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnUpdateTennis.Appearance.Options.UseFont = true;
+            this.btnUpdateTennis.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateTennis.ImageOptions.Image")));
+            this.btnUpdateTennis.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnUpdateTennis.Location = new System.Drawing.Point(480, 101);
+            this.btnUpdateTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdateTennis.Name = "btnUpdateTennis";
+            this.btnUpdateTennis.Size = new System.Drawing.Size(110, 52);
+            this.btnUpdateTennis.TabIndex = 86;
+            this.btnUpdateTennis.ToolTip = "Update real-time data for template";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textEdit1.Enabled = false;
+            this.textEdit1.Location = new System.Drawing.Point(157, 125);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(210, 22);
+            this.textEdit1.TabIndex = 19;
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textEdit2.Enabled = false;
+            this.textEdit2.Location = new System.Drawing.Point(158, 88);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Size = new System.Drawing.Size(209, 22);
+            this.textEdit2.TabIndex = 18;
+            // 
+            // textEdit3
+            // 
+            this.textEdit3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textEdit3.Enabled = false;
+            this.textEdit3.Location = new System.Drawing.Point(157, 51);
+            this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Size = new System.Drawing.Size(209, 22);
+            this.textEdit3.TabIndex = 17;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(101, 88);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(51, 19);
+            this.labelControl8.TabIndex = 16;
+            this.labelControl8.Text = "Icon 2:";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(12, 125);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(139, 21);
+            this.labelControl9.TabIndex = 15;
+            this.labelControl9.Text = "Chọn ảnh đội hình:";
+            // 
+            // btnPreviewTennis
+            // 
+            this.btnPreviewTennis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnPreviewTennis.Appearance.Options.UseFont = true;
+            this.btnPreviewTennis.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreviewTennis.ImageOptions.Image")));
+            this.btnPreviewTennis.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnPreviewTennis.Location = new System.Drawing.Point(480, 45);
+            this.btnPreviewTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPreviewTennis.Name = "btnPreviewTennis";
+            this.btnPreviewTennis.Size = new System.Drawing.Size(68, 50);
+            this.btnPreviewTennis.TabIndex = 50;
+            this.btnPreviewTennis.ToolTip = "Preview Template";
+            // 
+            // btnPlayTennis
+            // 
+            this.btnPlayTennis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnPlayTennis.Appearance.Options.UseFont = true;
+            this.btnPlayTennis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPlayTennis.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlayTennis.ImageOptions.Image")));
+            this.btnPlayTennis.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnPlayTennis.Location = new System.Drawing.Point(554, 45);
+            this.btnPlayTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPlayTennis.Name = "btnPlayTennis";
+            this.btnPlayTennis.Size = new System.Drawing.Size(68, 50);
+            this.btnPlayTennis.TabIndex = 60;
+            this.btnPlayTennis.ToolTip = "Play Template";
+            // 
+            // btnStopTennis
+            // 
+            this.btnStopTennis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnStopTennis.Appearance.Options.UseFont = true;
+            this.btnStopTennis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnStopTennis.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStopTennis.ImageOptions.Image")));
+            this.btnStopTennis.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnStopTennis.Location = new System.Drawing.Point(628, 45);
+            this.btnStopTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnStopTennis.Name = "btnStopTennis";
+            this.btnStopTennis.Size = new System.Drawing.Size(68, 50);
+            this.btnStopTennis.TabIndex = 61;
+            this.btnStopTennis.ToolTip = "Stop Template";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(100, 54);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(51, 19);
+            this.labelControl10.TabIndex = 14;
+            this.labelControl10.Text = "Icon 1:";
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.tennisPlayer);
+            this.panelControl1.Location = new System.Drawing.Point(442, 5);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(810, 438);
+            this.panelControl1.TabIndex = 91;
+            // 
+            // tennisPlayer
+            // 
+            this.tennisPlayer.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
+            this.tennisPlayer.BackgroundColor = System.Drawing.Color.Empty;
+            this.tennisPlayer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tennisPlayer.Location = new System.Drawing.Point(2, 2);
+            this.tennisPlayer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tennisPlayer.Name = "tennisPlayer";
+            this.tennisPlayer.ScaleMode = CGPreviewControl.FlashTemplateHostControl.ScaleModes.FullScreen;
+            this.tennisPlayer.Size = new System.Drawing.Size(806, 434);
+            this.tennisPlayer.TabIndex = 3;
+            this.tennisPlayer.TemplateFolder = "";
+            this.tennisPlayer.TemplateHost = "";
+            this.tennisPlayer.Valid = false;
+            this.tennisPlayer.Version = CGPreviewControl.FlashTemplateHostControl.Versions.Version20;
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Location = new System.Drawing.Point(271, 45);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(78, 17);
+            this.labelControl11.TabIndex = 81;
+            this.labelControl11.Text = "Delay(ms): ";
+            // 
+            // nTennisDelay
+            // 
+            this.nTennisDelay.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nTennisDelay.Location = new System.Drawing.Point(353, 45);
+            this.nTennisDelay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nTennisDelay.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nTennisDelay.Name = "nTennisDelay";
+            this.nTennisDelay.Size = new System.Drawing.Size(83, 23);
+            this.nTennisDelay.TabIndex = 80;
+            // 
+            // nTennisDuration
+            // 
+            this.nTennisDuration.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nTennisDuration.Location = new System.Drawing.Point(115, 45);
+            this.nTennisDuration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nTennisDuration.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nTennisDuration.Name = "nTennisDuration";
+            this.nTennisDuration.Size = new System.Drawing.Size(97, 23);
+            this.nTennisDuration.TabIndex = 79;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Location = new System.Drawing.Point(12, 46);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(101, 17);
+            this.labelControl12.TabIndex = 78;
+            this.labelControl12.Text = "Duration(ms): ";
+            // 
+            // cboTennisLayer
+            // 
+            this.cboTennisLayer.Location = new System.Drawing.Point(115, 15);
+            this.cboTennisLayer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboTennisLayer.MenuManager = this.barManager1;
+            this.cboTennisLayer.Name = "cboTennisLayer";
+            this.cboTennisLayer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboTennisLayer.Properties.Items.AddRange(new object[] {
+            "100",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107",
+            "108",
+            "109",
+            "110",
+            "111",
+            "112",
+            "113",
+            "114",
+            "115",
+            "116",
+            "117",
+            "118",
+            "119",
+            "120"});
+            this.cboTennisLayer.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboTennisLayer.Size = new System.Drawing.Size(97, 22);
+            this.cboTennisLayer.TabIndex = 47;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl14.Appearance.Options.UseFont = true;
+            this.labelControl14.Location = new System.Drawing.Point(66, 17);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(43, 17);
+            this.labelControl14.TabIndex = 46;
+            this.labelControl14.Text = "Layer:";
             // 
             // xTabVideo
             // 
@@ -1179,29 +1737,9 @@
             this.xTabVideo.Size = new System.Drawing.Size(1255, 628);
             this.xTabVideo.Text = "Videos/Images";
             // 
-            // xTabTemplate
-            // 
-            this.xTabTemplate.Controls.Add(this.groupControl3);
-            this.xTabTemplate.Name = "xTabTemplate";
-            this.xTabTemplate.Size = new System.Drawing.Size(1255, 628);
-            this.xTabTemplate.Text = "Templates";
-            // 
             // bsUpdateData
             // 
             this.bsUpdateData.DataSource = typeof(HDCGStudio.Object.tempUpdating);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(596, 103);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(110, 52);
-            this.simpleButton1.TabIndex = 87;
-            this.simpleButton1.ToolTip = "Update real-time data for template";
             // 
             // MainForm
             // 
@@ -1243,10 +1781,10 @@
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxTemplates)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTempInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tempInfoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvTempInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbFootballTemplates)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridFootballPlaylist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsBongdaTemplates)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvFootballPlaylist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
@@ -1256,14 +1794,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboTempLayer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nFootballDelay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nFootballDuration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboFootballLayer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xTab)).EndInit();
             this.xTab.ResumeLayout(false);
+            this.xTabFootball.ResumeLayout(false);
+            this.xTabTennis.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
+            this.splitContainerControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lbTennisTemplates)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTennisPlaylist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTennisTemplates)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvTennisPlaylist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+            this.groupControl5.ResumeLayout(false);
+            this.groupControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nTennisDelay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTennisDuration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTennisLayer.Properties)).EndInit();
             this.xTabVideo.ResumeLayout(false);
-            this.xTabTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1309,30 +1868,28 @@
         private System.Windows.Forms.BindingSource videoBindingSource;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.SimpleButton btnPreviewTemplate;
-        private DevExpress.XtraEditors.ComboBoxEdit cboTempLayer;
+        private DevExpress.XtraEditors.ComboBoxEdit cboFootballLayer;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btnStop;
         private DevExpress.XtraEditors.SimpleButton btnPlay;
-        private System.Windows.Forms.BindingSource tempInfoBindingSource;
-        private DevExpress.XtraEditors.SimpleButton btnRemoveTemplate;
-        private DevExpress.XtraEditors.SimpleButton btnAddTemplate;
-        private DevExpress.XtraEditors.ListBoxControl listBoxTemplates;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraGrid.GridControl gridTempInfo;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvTempInfo;
+        private System.Windows.Forms.BindingSource bsBongdaTemplates;
+        private DevExpress.XtraEditors.SimpleButton btnRemoveFootballTemplate;
+        private DevExpress.XtraEditors.SimpleButton btnAddFootballTemplate;
+        private DevExpress.XtraEditors.ListBoxControl lbFootballTemplates;
+        private DevExpress.XtraGrid.GridControl gridFootballPlaylist;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvFootballPlaylist;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nFootballDuration;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown nFootballDelay;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarButtonItem barBtnManageTemplate;
-        private DevExpress.XtraEditors.ComboBoxEdit cboTemplateType;
         private DevExpress.XtraBars.BarButtonItem barBtnManageIcons;
         private DevExpress.XtraBars.BarButtonItem barBtnManageImage;
         private DevExpress.XtraEditors.SimpleButton btnUpdateRealTime;
@@ -1340,9 +1897,9 @@
         private DevExpress.XtraBars.BarButtonItem barBtnManagePlayer;
         private DevExpress.XtraTab.XtraTabControl xTab;
         private DevExpress.XtraTab.XtraTabPage xTabVideo;
-        private DevExpress.XtraTab.XtraTabPage xTabTemplate;
+        private DevExpress.XtraTab.XtraTabPage xTabFootball;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        public CGPreviewControl.FlashTemplateHostControl player;
+        public CGPreviewControl.FlashTemplateHostControl footballPlayer;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraEditors.SimpleButton btnChooseColor;
         private DevExpress.XtraEditors.SimpleButton btnChooseIcon2;
@@ -1355,5 +1912,42 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private System.Windows.Forms.BindingSource bsUpdateData;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraTab.XtraTabPage xTabTennis;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
+        private DevExpress.XtraEditors.ListBoxControl lbTennisTemplates;
+        private DevExpress.XtraGrid.GridControl gridTennisPlaylist;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvTennisPlaylist;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
+        private DevExpress.XtraEditors.SimpleButton btnRemoveTennisTemplates;
+        private DevExpress.XtraEditors.SimpleButton btnAddTennisTemplate;
+        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private DevExpress.XtraEditors.SimpleButton btnUpdateTennisLive;
+        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton7;
+        private DevExpress.XtraEditors.SimpleButton btnUpdateTennis;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.SimpleButton btnPreviewTennis;
+        private DevExpress.XtraEditors.SimpleButton btnPlayTennis;
+        private DevExpress.XtraEditors.SimpleButton btnStopTennis;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        public CGPreviewControl.FlashTemplateHostControl tennisPlayer;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private System.Windows.Forms.NumericUpDown nTennisDelay;
+        private System.Windows.Forms.NumericUpDown nTennisDuration;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTennisLayer;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private System.Windows.Forms.BindingSource bsTennisTemplates;
     }
 }
