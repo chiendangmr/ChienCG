@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HDCore;
 using HDControl;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace HDCGStudio
 {
@@ -101,6 +102,16 @@ namespace HDCGStudio
         private void ManageTemplateForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             HDMessageBox.Show("Bạn phải load lại danh sách template để lấy được các templates mới!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.Green;
+                e.Appearance.ForeColor = Color.White;
+            }
         }
     }
 }
