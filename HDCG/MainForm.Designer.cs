@@ -637,17 +637,22 @@
             this.groupControl3.AppearanceCaption.Options.UseTextOptions = true;
             this.groupControl3.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.groupControl3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupControl3.Controls.Add(this.simpleButton1);
             this.groupControl3.Controls.Add(this.xtraTabControl1);
             this.groupControl3.Controls.Add(this.splitContainerControl1);
             this.groupControl3.Controls.Add(this.panelControl3);
             this.groupControl3.Controls.Add(this.cboTemplateType);
+            this.groupControl3.Controls.Add(this.btnUpdateRealTime);
             this.groupControl3.Controls.Add(this.labelControl1);
             this.groupControl3.Controls.Add(this.labelControl4);
             this.groupControl3.Controls.Add(this.numericUpDown2);
             this.groupControl3.Controls.Add(this.numericUpDown1);
             this.groupControl3.Controls.Add(this.labelControl3);
             this.groupControl3.Controls.Add(this.cboTempLayer);
+            this.groupControl3.Controls.Add(this.btnPreviewTemplate);
             this.groupControl3.Controls.Add(this.labelControl2);
+            this.groupControl3.Controls.Add(this.btnPlay);
+            this.groupControl3.Controls.Add(this.btnStop);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -664,7 +669,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(444, 449);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xTabPageBongda;
-            this.xtraTabControl1.Size = new System.Drawing.Size(808, 179);
+            this.xtraTabControl1.Size = new System.Drawing.Size(808, 130);
             this.xtraTabControl1.TabIndex = 93;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabPageBongda,
@@ -672,22 +677,17 @@
             // 
             // xTabPageBongda
             // 
-            this.xTabPageBongda.Controls.Add(this.simpleButton1);
             this.xTabPageBongda.Controls.Add(this.btnChooseColor);
             this.xTabPageBongda.Controls.Add(this.btnChooseIcon2);
             this.xTabPageBongda.Controls.Add(this.btnChooseIcon1);
-            this.xTabPageBongda.Controls.Add(this.btnUpdateRealTime);
             this.xTabPageBongda.Controls.Add(this.txtColor);
             this.xTabPageBongda.Controls.Add(this.txtIcon2);
             this.xTabPageBongda.Controls.Add(this.txtIcon1);
             this.xTabPageBongda.Controls.Add(this.labelControl5);
             this.xTabPageBongda.Controls.Add(this.labelControl6);
-            this.xTabPageBongda.Controls.Add(this.btnPreviewTemplate);
-            this.xTabPageBongda.Controls.Add(this.btnPlay);
-            this.xTabPageBongda.Controls.Add(this.btnStop);
             this.xTabPageBongda.Controls.Add(this.labelControl7);
             this.xTabPageBongda.Name = "xTabPageBongda";
-            this.xTabPageBongda.Size = new System.Drawing.Size(801, 145);
+            this.xTabPageBongda.Size = new System.Drawing.Size(801, 96);
             this.xTabPageBongda.Text = "Bóng đá";
             // 
             // simpleButton1
@@ -696,40 +696,40 @@
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(637, 75);
+            this.simpleButton1.Location = new System.Drawing.Point(750, 580);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(110, 52);
+            this.simpleButton1.Size = new System.Drawing.Size(66, 42);
             this.simpleButton1.TabIndex = 101;
             this.simpleButton1.ToolTip = "Update real-time data for template";
             // 
             // btnChooseColor
             // 
             this.btnChooseColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChooseColor.Location = new System.Drawing.Point(414, 95);
+            this.btnChooseColor.Location = new System.Drawing.Point(629, 8);
             this.btnChooseColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChooseColor.Name = "btnChooseColor";
-            this.btnChooseColor.Size = new System.Drawing.Size(81, 30);
+            this.btnChooseColor.Size = new System.Drawing.Size(81, 25);
             this.btnChooseColor.TabIndex = 96;
             this.btnChooseColor.Text = "Chọn...";
             // 
             // btnChooseIcon2
             // 
             this.btnChooseIcon2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChooseIcon2.Location = new System.Drawing.Point(415, 56);
+            this.btnChooseIcon2.Location = new System.Drawing.Point(221, 37);
             this.btnChooseIcon2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChooseIcon2.Name = "btnChooseIcon2";
-            this.btnChooseIcon2.Size = new System.Drawing.Size(81, 30);
+            this.btnChooseIcon2.Size = new System.Drawing.Size(81, 31);
             this.btnChooseIcon2.TabIndex = 95;
             this.btnChooseIcon2.Text = "Chọn...";
             // 
             // btnChooseIcon1
             // 
             this.btnChooseIcon1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChooseIcon1.Location = new System.Drawing.Point(414, 17);
+            this.btnChooseIcon1.Location = new System.Drawing.Point(221, 4);
             this.btnChooseIcon1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChooseIcon1.Name = "btnChooseIcon1";
-            this.btnChooseIcon1.Size = new System.Drawing.Size(81, 30);
+            this.btnChooseIcon1.Size = new System.Drawing.Size(81, 26);
             this.btnChooseIcon1.TabIndex = 94;
             this.btnChooseIcon1.Text = "Chọn...";
             // 
@@ -739,10 +739,10 @@
             this.btnUpdateRealTime.Appearance.Options.UseFont = true;
             this.btnUpdateRealTime.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateRealTime.ImageOptions.Image")));
             this.btnUpdateRealTime.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnUpdateRealTime.Location = new System.Drawing.Point(521, 73);
+            this.btnUpdateRealTime.Location = new System.Drawing.Point(674, 580);
             this.btnUpdateRealTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdateRealTime.Name = "btnUpdateRealTime";
-            this.btnUpdateRealTime.Size = new System.Drawing.Size(110, 52);
+            this.btnUpdateRealTime.Size = new System.Drawing.Size(70, 42);
             this.btnUpdateRealTime.TabIndex = 100;
             this.btnUpdateRealTime.ToolTip = "Update real-time data for template";
             // 
@@ -750,27 +750,27 @@
             // 
             this.txtColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtColor.Enabled = false;
-            this.txtColor.Location = new System.Drawing.Point(198, 97);
+            this.txtColor.Location = new System.Drawing.Point(488, 11);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(210, 22);
+            this.txtColor.Size = new System.Drawing.Size(135, 22);
             this.txtColor.TabIndex = 93;
             // 
             // txtIcon2
             // 
             this.txtIcon2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtIcon2.Enabled = false;
-            this.txtIcon2.Location = new System.Drawing.Point(199, 60);
+            this.txtIcon2.Location = new System.Drawing.Point(81, 39);
             this.txtIcon2.Name = "txtIcon2";
-            this.txtIcon2.Size = new System.Drawing.Size(209, 22);
+            this.txtIcon2.Size = new System.Drawing.Size(134, 22);
             this.txtIcon2.TabIndex = 92;
             // 
             // txtIcon1
             // 
             this.txtIcon1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtIcon1.Enabled = false;
-            this.txtIcon1.Location = new System.Drawing.Point(198, 23);
+            this.txtIcon1.Location = new System.Drawing.Point(81, 8);
             this.txtIcon1.Name = "txtIcon1";
-            this.txtIcon1.Size = new System.Drawing.Size(209, 22);
+            this.txtIcon1.Size = new System.Drawing.Size(134, 22);
             this.txtIcon1.TabIndex = 91;
             // 
             // labelControl5
@@ -778,7 +778,7 @@
             this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(142, 60);
+            this.labelControl5.Location = new System.Drawing.Point(24, 37);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(51, 19);
             this.labelControl5.TabIndex = 90;
@@ -789,7 +789,7 @@
             this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(53, 97);
+            this.labelControl6.Location = new System.Drawing.Point(343, 11);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(139, 21);
             this.labelControl6.TabIndex = 89;
@@ -801,10 +801,10 @@
             this.btnPreviewTemplate.Appearance.Options.UseFont = true;
             this.btnPreviewTemplate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreviewTemplate.ImageOptions.Image")));
             this.btnPreviewTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPreviewTemplate.Location = new System.Drawing.Point(521, 17);
+            this.btnPreviewTemplate.Location = new System.Drawing.Point(452, 580);
             this.btnPreviewTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPreviewTemplate.Name = "btnPreviewTemplate";
-            this.btnPreviewTemplate.Size = new System.Drawing.Size(68, 50);
+            this.btnPreviewTemplate.Size = new System.Drawing.Size(68, 42);
             this.btnPreviewTemplate.TabIndex = 97;
             this.btnPreviewTemplate.ToolTip = "Preview Template";
             // 
@@ -815,10 +815,10 @@
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPlay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.ImageOptions.Image")));
             this.btnPlay.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPlay.Location = new System.Drawing.Point(595, 17);
+            this.btnPlay.Location = new System.Drawing.Point(526, 580);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(68, 50);
+            this.btnPlay.Size = new System.Drawing.Size(68, 42);
             this.btnPlay.TabIndex = 98;
             this.btnPlay.ToolTip = "Play Template";
             // 
@@ -829,10 +829,10 @@
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnStop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStop.ImageOptions.Image")));
             this.btnStop.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnStop.Location = new System.Drawing.Point(669, 17);
+            this.btnStop.Location = new System.Drawing.Point(600, 580);
             this.btnStop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(68, 50);
+            this.btnStop.Size = new System.Drawing.Size(68, 42);
             this.btnStop.TabIndex = 99;
             this.btnStop.ToolTip = "Stop Template";
             // 
@@ -841,7 +841,7 @@
             this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(141, 26);
+            this.labelControl7.Location = new System.Drawing.Point(24, 8);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(51, 19);
             this.labelControl7.TabIndex = 88;
@@ -850,7 +850,7 @@
             // xTabPageTennis
             // 
             this.xTabPageTennis.Name = "xTabPageTennis";
-            this.xTabPageTennis.Size = new System.Drawing.Size(801, 145);
+            this.xTabPageTennis.Size = new System.Drawing.Size(801, 96);
             this.xTabPageTennis.Text = "Tennis";
             // 
             // splitContainerControl1
