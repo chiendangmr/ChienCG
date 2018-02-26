@@ -121,6 +121,21 @@
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnQuanlycauthu = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -143,6 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).BeginInit();
+            this.xTabPageTennis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxTemplates)).BeginInit();
@@ -164,6 +180,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -206,7 +228,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.cboFormat, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.barBtnManageTemplate),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnManagePlayer),
             new DevExpress.XtraBars.LinkPersistInfo(this.mnuHelp)});
             this.bar2.OptionsBar.DisableClose = true;
             this.bar2.OptionsBar.DisableCustomization = true;
@@ -686,6 +707,7 @@
             // 
             // xTabPageBongda
             // 
+            this.xTabPageBongda.Controls.Add(this.btnQuanlycauthu);
             this.xTabPageBongda.Controls.Add(this.comboBoxEdit1);
             this.xTabPageBongda.Controls.Add(this.labelControl10);
             this.xTabPageBongda.Controls.Add(this.labelControl9);
@@ -868,8 +890,22 @@
             // 
             // xTabPageTennis
             // 
+            this.xTabPageTennis.Controls.Add(this.simpleButton2);
+            this.xTabPageTennis.Controls.Add(this.textEdit4);
+            this.xTabPageTennis.Controls.Add(this.labelControl16);
+            this.xTabPageTennis.Controls.Add(this.simpleButton1);
+            this.xTabPageTennis.Controls.Add(this.textEdit3);
+            this.xTabPageTennis.Controls.Add(this.labelControl15);
+            this.xTabPageTennis.Controls.Add(this.labelControl13);
+            this.xTabPageTennis.Controls.Add(this.numericUpDown6);
+            this.xTabPageTennis.Controls.Add(this.textEdit2);
+            this.xTabPageTennis.Controls.Add(this.labelControl14);
+            this.xTabPageTennis.Controls.Add(this.labelControl12);
+            this.xTabPageTennis.Controls.Add(this.numericUpDown5);
+            this.xTabPageTennis.Controls.Add(this.textEdit1);
+            this.xTabPageTennis.Controls.Add(this.labelControl11);
             this.xTabPageTennis.Name = "xTabPageTennis";
-            this.xTabPageTennis.Size = new System.Drawing.Size(801, 96);
+            this.xTabPageTennis.Size = new System.Drawing.Size(801, 113);
             this.xTabPageTennis.Text = "Tennis";
             // 
             // splitContainerControl1
@@ -1300,6 +1336,175 @@
             this.comboBoxEdit1.Size = new System.Drawing.Size(303, 26);
             this.comboBoxEdit1.TabIndex = 102;
             // 
+            // btnQuanlycauthu
+            // 
+            this.btnQuanlycauthu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnQuanlycauthu.Location = new System.Drawing.Point(566, 74);
+            this.btnQuanlycauthu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnQuanlycauthu.Name = "btnQuanlycauthu";
+            this.btnQuanlycauthu.Size = new System.Drawing.Size(133, 26);
+            this.btnQuanlycauthu.TabIndex = 103;
+            this.btnQuanlycauthu.Text = "Quản lý cầu thủ";
+            this.btnQuanlycauthu.Click += new System.EventHandler(this.btnQuanlycauthu_Click);
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textEdit1.Enabled = false;
+            this.textEdit1.Location = new System.Drawing.Point(78, 12);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.textEdit1.Properties.Appearance.Options.UseFont = true;
+            this.textEdit1.Size = new System.Drawing.Size(199, 26);
+            this.textEdit1.TabIndex = 93;
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Location = new System.Drawing.Point(9, 15);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(63, 19);
+            this.labelControl11.TabIndex = 92;
+            this.labelControl11.Text = "Player 1:";
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.numericUpDown5.Location = new System.Drawing.Point(383, 13);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(58, 27);
+            this.numericUpDown5.TabIndex = 99;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Location = new System.Drawing.Point(300, 15);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(77, 21);
+            this.labelControl12.TabIndex = 100;
+            this.labelControl12.Text = "Hạt giống:";
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl13.Appearance.Options.UseFont = true;
+            this.labelControl13.Location = new System.Drawing.Point(300, 47);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(77, 21);
+            this.labelControl13.TabIndex = 104;
+            this.labelControl13.Text = "Hạt giống:";
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.numericUpDown6.Location = new System.Drawing.Point(383, 45);
+            this.numericUpDown6.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(58, 27);
+            this.numericUpDown6.TabIndex = 103;
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textEdit2.Enabled = false;
+            this.textEdit2.Location = new System.Drawing.Point(78, 44);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.textEdit2.Properties.Appearance.Options.UseFont = true;
+            this.textEdit2.Size = new System.Drawing.Size(199, 26);
+            this.textEdit2.TabIndex = 102;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl14.Appearance.Options.UseFont = true;
+            this.labelControl14.Location = new System.Drawing.Point(9, 47);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(63, 19);
+            this.labelControl14.TabIndex = 101;
+            this.labelControl14.Text = "Player 2:";
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl15.Appearance.Options.UseFont = true;
+            this.labelControl15.Location = new System.Drawing.Point(481, 17);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(45, 21);
+            this.labelControl15.TabIndex = 105;
+            this.labelControl15.Text = "Điểm:";
+            // 
+            // textEdit3
+            // 
+            this.textEdit3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textEdit3.Enabled = false;
+            this.textEdit3.Location = new System.Drawing.Point(532, 14);
+            this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.textEdit3.Properties.Appearance.Options.UseFont = true;
+            this.textEdit3.Size = new System.Drawing.Size(81, 26);
+            this.textEdit3.TabIndex = 106;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image1")));
+            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(619, 14);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(39, 26);
+            this.simpleButton1.TabIndex = 107;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton2.Location = new System.Drawing.Point(619, 46);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(39, 26);
+            this.simpleButton2.TabIndex = 110;
+            // 
+            // textEdit4
+            // 
+            this.textEdit4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textEdit4.Enabled = false;
+            this.textEdit4.Location = new System.Drawing.Point(532, 46);
+            this.textEdit4.Name = "textEdit4";
+            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.textEdit4.Properties.Appearance.Options.UseFont = true;
+            this.textEdit4.Size = new System.Drawing.Size(81, 26);
+            this.textEdit4.TabIndex = 109;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl16.Appearance.Options.UseFont = true;
+            this.labelControl16.Location = new System.Drawing.Point(481, 49);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(45, 21);
+            this.labelControl16.TabIndex = 108;
+            this.labelControl16.Text = "Điểm:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1345,6 +1550,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).EndInit();
+            this.xTabPageTennis.ResumeLayout(false);
+            this.xTabPageTennis.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.listBoxTemplates)).EndInit();
@@ -1366,6 +1573,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1464,5 +1677,20 @@
         private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.SimpleButton btnQuanlycauthu;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
     }
 }

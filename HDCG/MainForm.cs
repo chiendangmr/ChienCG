@@ -994,5 +994,10 @@ namespace HDCGStudio
             if (frm.ShowDialog() == DialogResult.OK)
                 txtColor.Text = frm.FileName;
         }
+
+        private void btnQuanlycauthu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
