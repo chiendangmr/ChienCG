@@ -39,9 +39,11 @@ namespace HDCGStudio
         string _templateXmlPath = "";
         string _updateDataXml = "";
         string _TemplateHost = "";
+        string _danhsachcauthuXml = "";
 
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
+        Dictionary<string, string> dicDanhsachcauthu = new Dictionary<string, string>();
 
         HDCGControler.CasparCG cgServer = null;
         private void MainForm_Shown(object sender, EventArgs e)
@@ -86,6 +88,26 @@ namespace HDCGStudio
                     else
                     {
                         File.Create(_updateDataXml).Dispose();
+                    }
+                }
+                catch { }
+
+                _danhsachcauthuXml = Path.Combine(Application.StartupPath, "Danhsachcauthu.xml");
+                try
+                {
+                    if (File.Exists(_danhsachcauthuXml))
+                    {
+                        var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuXml);
+                        foreach (var data in lstData)
+                            dicDanhsachcauthu.Add(data.Number, data.Name);
+                        foreach (var temp in dicDanhsachcauthu)
+                        {
+                            cboDanhsachcauthu.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
+                        }
+                    }
+                    else
+                    {
+                        File.Create(_danhsachcauthuXml).Dispose();
                     }
                 }
                 catch { }
@@ -232,7 +254,7 @@ namespace HDCGStudio
                     if (dicTemplateData.ContainsKey("HDTemplates\\" + templateFileName))
                         player.Update(1, dicTemplateData["HDTemplates\\" + templateFileName].Replace("\\n", "\n"));
                     player.Refresh();
-                    player.InvokeMethod(1, "fadeUp");                    
+                    player.InvokeMethod(1, "fadeUp");
                 }
                 else
                 {
@@ -482,7 +504,7 @@ namespace HDCGStudio
                 if (!cgServer.Connect())
                     HDMessageBox.Show("Not connect to cg server!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
-                {                    
+                {
                     List<Object.Property> runtimeProperties = new List<Object.Property>();
                     runtimeProperties.Add(new Object.Property()
                     {
@@ -523,15 +545,15 @@ namespace HDCGStudio
         int _layer = 0;
         int _delay = 0;
         int _duration = 0;
-        private void btnEditTemplate_Click(object sender, EventArgs e)
+        private void btnPreviewTemplate_Click(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 var templateName = "HDTemplates\\" + getTemplateName(_tempName);
                 var frmInput = new PreviewForm(templateName);
 
                 frmInput.LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
-                                
+
                 UpdateTemplate(frmInput, _tempName);
 
             }
@@ -605,7 +627,7 @@ namespace HDCGStudio
                 _delay = tempInfoView.tempObj.Delay;
                 _duration = tempInfoView.tempObj.Duration;
             }
-        }        
+        }
         private string Add(string xmlStr, string id, string val)
         {
             xmlStr = "<" + id + " id=\"" + id + "\"><data value=\"" + val + "\"/></" + id + ">";
@@ -848,7 +870,7 @@ namespace HDCGStudio
         {
             return "<" + str + " id=\"" + str + "\"><data value=\"" + val + "\"/></" + str + ">";
         }
-        private void btnUpdateRealTime_Click(object sender, EventArgs e)
+        private void btnUpdateAll_Click(object sender, EventArgs e)
         {
             try
             {
@@ -867,7 +889,7 @@ namespace HDCGStudio
                 if (player.Add(1, templateName))
                 {
                     player.Update(1, xmlStr.Replace("\\n", "\n"));
-                    player.Refresh();                    
+                    player.Refresh();
                 }
             }
             catch
@@ -920,10 +942,6 @@ namespace HDCGStudio
             {
                 HDMessageBox.Show("UpdateDataFile lỗi: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        private void barBtnManagePlayer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
         }
         public void LoadTemplateHost(string path)
         {
@@ -997,7 +1015,35 @@ namespace HDCGStudio
 
         private void btnQuanlycauthu_Click(object sender, EventArgs e)
         {
+            ManagePlayersForm frmPlayer = new ManagePlayersForm();
+            frmPlayer.Show();
+            frmPlayer.Activate();
+        }
 
+        private void cboDanhsachcauthu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (File.Exists(_danhsachcauthuXml))
+                {
+                    cboDanhsachcauthu.Properties.Items.Clear();
+                    var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuXml);
+                    foreach (var data in lstData)
+                        dicDanhsachcauthu.Add(data.Number, data.Name);
+                    foreach (var temp in dicDanhsachcauthu)
+                    {
+                        cboDanhsachcauthu.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
+                    }
+                }
+                else
+                {
+                    File.Create(_danhsachcauthuXml).Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

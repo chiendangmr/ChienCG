@@ -93,6 +93,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>AppSetting.settings</DependentUpon>
     </Compile>
+    <Compile Include="ManagePlayersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagePlayersForm.Designer.cs">
+      <DependentUpon>ManagePlayersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PreviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\tempInfo.cs" />
     <Compile Include="View\Video.cs" />
+    <EmbeddedResource Include="ManagePlayersForm.resx">
+      <DependentUpon>ManagePlayersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PreviewForm.resx">
       <DependentUpon>PreviewForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +163,7 @@
     <None Include="Properties\DataSources\HDCG.View.Crawler.datasource" />
     <None Include="Properties\DataSources\HDCG.View.Video.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.Object.tempUpdating.datasource" />
+    <None Include="Properties\DataSources\HDCGStudio.View.Player.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.View.Template.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
