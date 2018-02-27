@@ -874,6 +874,7 @@ namespace HDCGStudio
         {
             try
             {
+                _xmlAdd = "";
                 var templateName = "HDTemplates\\Update\\" + _tempName;
                 if (txtIcon1.Text.Length > 0)
                     _xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
@@ -1043,6 +1044,31 @@ namespace HDCGStudio
             catch (Exception ex)
             {
                 HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnLiveUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _xmlAdd = "";                
+                if (txtIcon1.Text.Length > 0)
+                    _xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
+                if (txtIcon2.Text.Length > 0)
+                    _xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
+                if (txtColor.Text.Length > 0)
+                    _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
+                _xml = player.GetProperties();
+                var fieldName = _xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
+                string xmlStr = "<Track_Property>" + _xmlAdd + fieldName.Replace("<Track_Property>", "");
+                UpdateDataFile(xmlStr);                
+                player.Update(1, xmlStr.Replace("\\n", "\n"));
+                player.Refresh();
+
+            }
+            catch
+            {
+                HDMessageBox.Show("Data not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

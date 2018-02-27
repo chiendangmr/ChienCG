@@ -721,6 +721,7 @@
             this.btnLiveUpdate.TabIndex = 101;
             this.btnLiveUpdate.Text = "Live Update";
             this.btnLiveUpdate.ToolTip = "Update real-time data for template";
+            this.btnLiveUpdate.Click += new System.EventHandler(this.btnLiveUpdate_Click);
             // 
             // xtraTabControl1
             // 
