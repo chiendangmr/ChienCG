@@ -726,7 +726,7 @@
             this.btnLiveUpdate.Appearance.Options.UseFont = true;
             this.btnLiveUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLiveUpdate.ImageOptions.Image")));
             this.btnLiveUpdate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnLiveUpdate.Location = new System.Drawing.Point(859, 664);
+            this.btnLiveUpdate.Location = new System.Drawing.Point(882, 662);
             this.btnLiveUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLiveUpdate.Name = "btnLiveUpdate";
             this.btnLiveUpdate.Size = new System.Drawing.Size(132, 42);
@@ -1539,10 +1539,10 @@
             this.btnUpdateAll.Location = new System.Drawing.Point(567, 662);
             this.btnUpdateAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdateAll.Name = "btnUpdateAll";
-            this.btnUpdateAll.Size = new System.Drawing.Size(132, 42);
+            this.btnUpdateAll.Size = new System.Drawing.Size(172, 42);
             this.btnUpdateAll.TabIndex = 100;
-            this.btnUpdateAll.Text = "Update All";
-            this.btnUpdateAll.ToolTip = "Update real-time data for template";
+            this.btnUpdateAll.Text = "Manual Update";
+            this.btnUpdateAll.ToolTip = "Manual Update data for template";
             this.btnUpdateAll.Click += new System.EventHandler(this.btnUpdateAll_Click);
             // 
             // labelControl1
@@ -1683,7 +1683,7 @@
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPlay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.ImageOptions.Image")));
             this.btnPlay.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnPlay.Location = new System.Drawing.Point(727, 662);
+            this.btnPlay.Location = new System.Drawing.Point(763, 662);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(90, 42);

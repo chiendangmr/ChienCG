@@ -1104,7 +1104,7 @@ namespace HDCGStudio
                 UpdateDataFile(xmlStr);
                 player.Update(1, xmlStr.Replace("\\n", "\n"));
                 player.Refresh();
-
+                cgServer.UpdateTemplate(_layer, xmlStr, 0);
             }
             catch
             {
