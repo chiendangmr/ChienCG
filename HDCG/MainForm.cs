@@ -39,11 +39,13 @@ namespace HDCGStudio
         string _templateXmlPath = "";
         string _updateDataXml = "";
         string _TemplateHost = "";
-        string _danhsachcauthuXml = "";
+        string _danhsachcauthuHomeXml = "";
+        string _danhsachcauthuAwayXml = "";
 
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
-        Dictionary<string, string> dicDanhsachcauthu = new Dictionary<string, string>();
+        Dictionary<string, string> dicDanhsachcauthuHome = new Dictionary<string, string>();
+        Dictionary<string, string> dicDanhsachcauthuAway = new Dictionary<string, string>();
 
         HDCGControler.CasparCG cgServer = null;
         private void MainForm_Shown(object sender, EventArgs e)
@@ -92,22 +94,42 @@ namespace HDCGStudio
                 }
                 catch { }
 
-                _danhsachcauthuXml = Path.Combine(Application.StartupPath, "Danhsachcauthu.xml");
+                _danhsachcauthuHomeXml = Path.Combine(Application.StartupPath, "DanhsachcauthuHome.xml");
                 try
                 {
-                    if (File.Exists(_danhsachcauthuXml))
+                    if (File.Exists(_danhsachcauthuHomeXml))
                     {
-                        var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuXml);
+                        var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuHomeXml);
                         foreach (var data in lstData)
-                            dicDanhsachcauthu.Add(data.Number, data.Name);
-                        foreach (var temp in dicDanhsachcauthu)
+                            dicDanhsachcauthuHome.Add(data.Number, data.Name);
+                        foreach (var temp in dicDanhsachcauthuHome)
                         {
-                            cboDanhsachcauthu.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
+                            cboDanhsachcauthuHome.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
                         }
                     }
                     else
                     {
-                        File.Create(_danhsachcauthuXml).Dispose();
+                        File.Create(_danhsachcauthuHomeXml).Dispose();
+                    }
+                }
+                catch { }
+
+                _danhsachcauthuAwayXml = Path.Combine(Application.StartupPath, "DanhsachcauthuAway.xml");
+                try
+                {
+                    if (File.Exists(_danhsachcauthuAwayXml))
+                    {
+                        var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuAwayXml);
+                        foreach (var data in lstData)
+                            dicDanhsachcauthuAway.Add(data.Number, data.Name);
+                        foreach (var temp in dicDanhsachcauthuAway)
+                        {
+                            cboDanhsachcauthuAway.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
+                        }
+                    }
+                    else
+                    {
+                        File.Create(_danhsachcauthuAwayXml).Dispose();
                     }
                 }
                 catch { }
@@ -1016,7 +1038,7 @@ namespace HDCGStudio
 
         private void btnQuanlycauthu_Click(object sender, EventArgs e)
         {
-            ManagePlayersForm frmPlayer = new ManagePlayersForm();
+            ManagePlayersForm frmPlayer = new ManagePlayersForm("Home");
             frmPlayer.Show();
             frmPlayer.Activate();
         }
@@ -1025,21 +1047,21 @@ namespace HDCGStudio
         {
             try
             {
-                if (File.Exists(_danhsachcauthuXml))
+                if (File.Exists(_danhsachcauthuHomeXml))
                 {
-                    cboDanhsachcauthu.Properties.Items.Clear();
-                    dicDanhsachcauthu.Clear();
-                    var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuXml);
+                    cboDanhsachcauthuHome.Properties.Items.Clear();
+                    dicDanhsachcauthuHome.Clear();
+                    var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuHomeXml);
                     foreach (var data in lstData)
-                        dicDanhsachcauthu.Add(data.Number, data.Name);
-                    foreach (var temp in dicDanhsachcauthu)
+                        dicDanhsachcauthuHome.Add(data.Number, data.Name);
+                    foreach (var temp in dicDanhsachcauthuHome)
                     {
-                        cboDanhsachcauthu.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
+                        cboDanhsachcauthuHome.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
                     }
                 }
                 else
                 {
-                    File.Create(_danhsachcauthuXml).Dispose();
+                    File.Create(_danhsachcauthuHomeXml).Dispose();
                 }
             }
             catch (Exception ex)
@@ -1059,13 +1081,25 @@ namespace HDCGStudio
                     _xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
                 if (txtColor.Text.Length > 0)
                     _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
-                if (cboDanhsachcauthu.Text.Length > 0)
+                if (ckCauthuChu.Checked)
                 {
-                    _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthu.Text));
-                    _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthu.Text));
+                    if (cboDanhsachcauthuHome.Text.Length > 0)
+                    {
+                        _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuHome.Text));
+                        _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuHome.Text));
+                    }
                 }
-                _xmlAdd += Add("goalHome", nBongDaChuNha.Value.ToString());
-                _xmlAdd += Add("goalAway", nBongDaKhach.Value.ToString());
+                else if (ckCauthuKhach.Checked)
+                {
+                    if (cboDanhsachcauthuAway.Text.Length > 0)
+                    {
+                        _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuAway.Text));
+                        _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuAway.Text));
+                    }
+                }
+                _xmlAdd += Add("teamHome", txtHomeTeam.Text);
+                _xmlAdd += Add("teamAway", txtAwayTeam.Text);
+                _xmlAdd += Add("tyso", nBongDaChuNha.Value.ToString() + " - " + nBongDaKhach.Value.ToString());
                 string xmlStr = "<Track_Property>" + _xmlAdd + "</Track_Property>";
                 UpdateDataFile(xmlStr);
                 player.Update(1, xmlStr.Replace("\\n", "\n"));
@@ -1084,6 +1118,56 @@ namespace HDCGStudio
         private string GetPlayerNumber(string playerString)
         {
             return playerString.Substring(playerString.IndexOf('-') + 4).Trim();
+        }
+
+        private void btnQuanlycauthuAway_Click(object sender, EventArgs e)
+        {
+            ManagePlayersForm frmPlayer = new ManagePlayersForm("Away");
+            frmPlayer.Show();
+            frmPlayer.Activate();
+        }
+
+        private void cboDanhsachcauthuAway_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (File.Exists(_danhsachcauthuAwayXml))
+                {
+                    cboDanhsachcauthuAway.Properties.Items.Clear();
+                    dicDanhsachcauthuAway.Clear();
+                    var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuAwayXml);
+                    foreach (var data in lstData)
+                        dicDanhsachcauthuAway.Add(data.Number, data.Name);
+                    foreach (var temp in dicDanhsachcauthuAway)
+                    {
+                        cboDanhsachcauthuAway.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
+                    }
+                }
+                else
+                {
+                    File.Create(_danhsachcauthuAwayXml).Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void ckCauthuChu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckCauthuChu.Checked)
+            {
+                ckCauthuKhach.Checked = false;
+            }
+        }
+
+        private void ckCauthuKhach_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckCauthuKhach.Checked)
+            {
+                ckCauthuChu.Checked = false;
+            }
         }
     }
 }

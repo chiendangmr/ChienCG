@@ -75,8 +75,15 @@
             this.btnLiveUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xTabPageBongda = new DevExpress.XtraTab.XtraTabPage();
-            this.btnQuanlycauthu = new DevExpress.XtraEditors.SimpleButton();
-            this.cboDanhsachcauthu = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.ckCauthuChu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckCauthuKhach = new DevExpress.XtraEditors.CheckEdit();
+            this.cboDanhsachcauthuAway = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnQuanlycauthuAway = new DevExpress.XtraEditors.SimpleButton();
+            this.txtHomeTeam = new DevExpress.XtraEditors.TextEdit();
+            this.txtAwayTeam = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
+            this.btnQuanlycauthuHome = new DevExpress.XtraEditors.SimpleButton();
+            this.cboDanhsachcauthuHome = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.nBongDaKhach = new System.Windows.Forms.NumericUpDown();
@@ -147,11 +154,6 @@
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.bsUpdateData = new System.Windows.Forms.BindingSource(this.components);
-            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAwayTeam = new DevExpress.XtraEditors.TextEdit();
-            this.txtHomeTeam = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -171,7 +173,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xTabPageBongda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckCauthuChu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckCauthuKhach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuAway.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHomeTeam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAwayTeam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuHome.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBongDaKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBongDaChuNha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).BeginInit();
@@ -208,8 +215,6 @@
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAwayTeam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHomeTeam.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -435,7 +440,7 @@
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(1255, 660);
+            this.groupControl1.Size = new System.Drawing.Size(1255, 710);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Videos, Images";
             // 
@@ -448,7 +453,7 @@
             this.panelControl11.Location = new System.Drawing.Point(518, 6);
             this.panelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl11.Name = "panelControl11";
-            this.panelControl11.Size = new System.Drawing.Size(723, 647);
+            this.panelControl11.Size = new System.Drawing.Size(723, 697);
             this.panelControl11.TabIndex = 46;
             // 
             // grdVideo
@@ -463,7 +468,7 @@
             this.grdVideo.Name = "grdVideo";
             this.grdVideo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.grdVideo.Size = new System.Drawing.Size(719, 643);
+            this.grdVideo.Size = new System.Drawing.Size(719, 693);
             this.grdVideo.TabIndex = 18;
             this.grdVideo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVideo});
@@ -745,13 +750,15 @@
             // 
             // xTabPageBongda
             // 
+            this.xTabPageBongda.Controls.Add(this.ckCauthuChu);
+            this.xTabPageBongda.Controls.Add(this.ckCauthuKhach);
+            this.xTabPageBongda.Controls.Add(this.cboDanhsachcauthuAway);
+            this.xTabPageBongda.Controls.Add(this.btnQuanlycauthuAway);
             this.xTabPageBongda.Controls.Add(this.txtHomeTeam);
             this.xTabPageBongda.Controls.Add(this.txtAwayTeam);
-            this.xTabPageBongda.Controls.Add(this.labelControl26);
-            this.xTabPageBongda.Controls.Add(this.labelControl25);
             this.xTabPageBongda.Controls.Add(this.labelControl24);
-            this.xTabPageBongda.Controls.Add(this.btnQuanlycauthu);
-            this.xTabPageBongda.Controls.Add(this.cboDanhsachcauthu);
+            this.xTabPageBongda.Controls.Add(this.btnQuanlycauthuHome);
+            this.xTabPageBongda.Controls.Add(this.cboDanhsachcauthuHome);
             this.xTabPageBongda.Controls.Add(this.labelControl10);
             this.xTabPageBongda.Controls.Add(this.labelControl9);
             this.xTabPageBongda.Controls.Add(this.nBongDaKhach);
@@ -770,38 +777,113 @@
             this.xTabPageBongda.Size = new System.Drawing.Size(801, 160);
             this.xTabPageBongda.Text = "Bóng đá";
             // 
-            // btnQuanlycauthu
+            // ckCauthuChu
             // 
-            this.btnQuanlycauthu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnQuanlycauthu.Location = new System.Drawing.Point(449, 119);
-            this.btnQuanlycauthu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnQuanlycauthu.Name = "btnQuanlycauthu";
-            this.btnQuanlycauthu.Size = new System.Drawing.Size(133, 26);
-            this.btnQuanlycauthu.TabIndex = 103;
-            this.btnQuanlycauthu.Text = "Quản lý cầu thủ";
-            this.btnQuanlycauthu.Click += new System.EventHandler(this.btnQuanlycauthu_Click);
+            this.ckCauthuChu.Location = new System.Drawing.Point(337, 84);
+            this.ckCauthuChu.MenuManager = this.barManager1;
+            this.ckCauthuChu.Name = "ckCauthuChu";
+            this.ckCauthuChu.Properties.Caption = "";
+            this.ckCauthuChu.Size = new System.Drawing.Size(30, 19);
+            this.ckCauthuChu.TabIndex = 112;
+            this.ckCauthuChu.CheckedChanged += new System.EventHandler(this.ckCauthuChu_CheckedChanged);
             // 
-            // cboDanhsachcauthu
+            // ckCauthuKhach
             // 
-            this.cboDanhsachcauthu.Location = new System.Drawing.Point(136, 121);
-            this.cboDanhsachcauthu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cboDanhsachcauthu.MenuManager = this.barManager1;
-            this.cboDanhsachcauthu.Name = "cboDanhsachcauthu";
-            this.cboDanhsachcauthu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.cboDanhsachcauthu.Properties.Appearance.Options.UseFont = true;
-            this.cboDanhsachcauthu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.ckCauthuKhach.Location = new System.Drawing.Point(736, 81);
+            this.ckCauthuKhach.MenuManager = this.barManager1;
+            this.ckCauthuKhach.Name = "ckCauthuKhach";
+            this.ckCauthuKhach.Properties.Caption = "";
+            this.ckCauthuKhach.Size = new System.Drawing.Size(30, 19);
+            this.ckCauthuKhach.TabIndex = 111;
+            this.ckCauthuKhach.CheckedChanged += new System.EventHandler(this.ckCauthuKhach_CheckedChanged);
+            // 
+            // cboDanhsachcauthuAway
+            // 
+            this.cboDanhsachcauthuAway.Location = new System.Drawing.Point(511, 79);
+            this.cboDanhsachcauthuAway.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboDanhsachcauthuAway.MenuManager = this.barManager1;
+            this.cboDanhsachcauthuAway.Name = "cboDanhsachcauthuAway";
+            this.cboDanhsachcauthuAway.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.cboDanhsachcauthuAway.Properties.Appearance.Options.UseFont = true;
+            this.cboDanhsachcauthuAway.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboDanhsachcauthu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboDanhsachcauthu.Size = new System.Drawing.Size(303, 26);
-            this.cboDanhsachcauthu.TabIndex = 102;
-            this.cboDanhsachcauthu.SelectedIndexChanged += new System.EventHandler(this.cboDanhsachcauthu_SelectedIndexChanged);
+            this.cboDanhsachcauthuAway.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboDanhsachcauthuAway.Size = new System.Drawing.Size(219, 26);
+            this.cboDanhsachcauthuAway.TabIndex = 110;
+            this.cboDanhsachcauthuAway.SelectedIndexChanged += new System.EventHandler(this.cboDanhsachcauthuAway_SelectedIndexChanged);
+            // 
+            // btnQuanlycauthuAway
+            // 
+            this.btnQuanlycauthuAway.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnQuanlycauthuAway.Location = new System.Drawing.Point(736, 15);
+            this.btnQuanlycauthuAway.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnQuanlycauthuAway.Name = "btnQuanlycauthuAway";
+            this.btnQuanlycauthuAway.Size = new System.Drawing.Size(37, 26);
+            this.btnQuanlycauthuAway.TabIndex = 109;
+            this.btnQuanlycauthuAway.Text = "...";
+            this.btnQuanlycauthuAway.ToolTip = "Quản lý danh sách cầu thủ đội khách";
+            this.btnQuanlycauthuAway.Click += new System.EventHandler(this.btnQuanlycauthuAway_Click);
+            // 
+            // txtHomeTeam
+            // 
+            this.txtHomeTeam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtHomeTeam.Location = new System.Drawing.Point(129, 16);
+            this.txtHomeTeam.Name = "txtHomeTeam";
+            this.txtHomeTeam.Size = new System.Drawing.Size(202, 22);
+            this.txtHomeTeam.TabIndex = 107;
+            // 
+            // txtAwayTeam
+            // 
+            this.txtAwayTeam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtAwayTeam.Location = new System.Drawing.Point(511, 17);
+            this.txtAwayTeam.Name = "txtAwayTeam";
+            this.txtAwayTeam.Size = new System.Drawing.Size(219, 22);
+            this.txtAwayTeam.TabIndex = 108;
+            // 
+            // labelControl24
+            // 
+            this.labelControl24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl24.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl24.Appearance.Options.UseFont = true;
+            this.labelControl24.Location = new System.Drawing.Point(15, 14);
+            this.labelControl24.Name = "labelControl24";
+            this.labelControl24.Size = new System.Drawing.Size(31, 21);
+            this.labelControl24.TabIndex = 104;
+            this.labelControl24.Text = "Đội:";
+            // 
+            // btnQuanlycauthuHome
+            // 
+            this.btnQuanlycauthuHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnQuanlycauthuHome.Location = new System.Drawing.Point(84, 15);
+            this.btnQuanlycauthuHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnQuanlycauthuHome.Name = "btnQuanlycauthuHome";
+            this.btnQuanlycauthuHome.Size = new System.Drawing.Size(37, 26);
+            this.btnQuanlycauthuHome.TabIndex = 103;
+            this.btnQuanlycauthuHome.Text = "...";
+            this.btnQuanlycauthuHome.ToolTip = "Quản lý danh sách cầu thủ chủ nhà";
+            this.btnQuanlycauthuHome.Click += new System.EventHandler(this.btnQuanlycauthu_Click);
+            // 
+            // cboDanhsachcauthuHome
+            // 
+            this.cboDanhsachcauthuHome.Location = new System.Drawing.Point(129, 82);
+            this.cboDanhsachcauthuHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboDanhsachcauthuHome.MenuManager = this.barManager1;
+            this.cboDanhsachcauthuHome.Name = "cboDanhsachcauthuHome";
+            this.cboDanhsachcauthuHome.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.cboDanhsachcauthuHome.Properties.Appearance.Options.UseFont = true;
+            this.cboDanhsachcauthuHome.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboDanhsachcauthuHome.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboDanhsachcauthuHome.Size = new System.Drawing.Size(202, 26);
+            this.cboDanhsachcauthuHome.TabIndex = 102;
+            this.cboDanhsachcauthuHome.SelectedIndexChanged += new System.EventHandler(this.cboDanhsachcauthu_SelectedIndexChanged);
             // 
             // labelControl10
             // 
             this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(24, 124);
+            this.labelControl10.Location = new System.Drawing.Point(15, 85);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(106, 21);
             this.labelControl10.TabIndex = 101;
@@ -812,7 +894,7 @@
             this.labelControl9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold);
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(570, 26);
+            this.labelControl9.Location = new System.Drawing.Point(414, 27);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(14, 40);
             this.labelControl9.TabIndex = 100;
@@ -821,7 +903,7 @@
             // nBongDaKhach
             // 
             this.nBongDaKhach.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nBongDaKhach.Location = new System.Drawing.Point(672, 75);
+            this.nBongDaKhach.Location = new System.Drawing.Point(511, 45);
             this.nBongDaKhach.Name = "nBongDaKhach";
             this.nBongDaKhach.Size = new System.Drawing.Size(58, 27);
             this.nBongDaKhach.TabIndex = 99;
@@ -829,7 +911,7 @@
             // nBongDaChuNha
             // 
             this.nBongDaChuNha.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nBongDaChuNha.Location = new System.Drawing.Point(435, 73);
+            this.nBongDaChuNha.Location = new System.Drawing.Point(273, 44);
             this.nBongDaChuNha.Name = "nBongDaChuNha";
             this.nBongDaChuNha.Size = new System.Drawing.Size(58, 27);
             this.nBongDaChuNha.TabIndex = 98;
@@ -839,7 +921,7 @@
             this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(353, 76);
+            this.labelControl8.Location = new System.Drawing.Point(15, 46);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(46, 21);
             this.labelControl8.TabIndex = 97;
@@ -848,41 +930,41 @@
             // btnChooseColor
             // 
             this.btnChooseColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChooseColor.Location = new System.Drawing.Point(238, 76);
+            this.btnChooseColor.Location = new System.Drawing.Point(229, 116);
             this.btnChooseColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChooseColor.Name = "btnChooseColor";
-            this.btnChooseColor.Size = new System.Drawing.Size(70, 26);
+            this.btnChooseColor.Size = new System.Drawing.Size(35, 26);
             this.btnChooseColor.TabIndex = 96;
-            this.btnChooseColor.Text = "Chọn...";
+            this.btnChooseColor.Text = "...";
             this.btnChooseColor.Click += new System.EventHandler(this.btnChooseColor_Click);
             // 
             // btnChooseIcon2
             // 
             this.btnChooseIcon2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChooseIcon2.Location = new System.Drawing.Point(238, 42);
+            this.btnChooseIcon2.Location = new System.Drawing.Point(736, 116);
             this.btnChooseIcon2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChooseIcon2.Name = "btnChooseIcon2";
-            this.btnChooseIcon2.Size = new System.Drawing.Size(70, 26);
+            this.btnChooseIcon2.Size = new System.Drawing.Size(35, 26);
             this.btnChooseIcon2.TabIndex = 95;
-            this.btnChooseIcon2.Text = "Chọn...";
+            this.btnChooseIcon2.Text = "...";
             this.btnChooseIcon2.Click += new System.EventHandler(this.btnChooseIcon2_Click);
             // 
             // btnChooseIcon1
             // 
             this.btnChooseIcon1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChooseIcon1.Location = new System.Drawing.Point(238, 11);
+            this.btnChooseIcon1.Location = new System.Drawing.Point(477, 116);
             this.btnChooseIcon1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChooseIcon1.Name = "btnChooseIcon1";
-            this.btnChooseIcon1.Size = new System.Drawing.Size(70, 26);
+            this.btnChooseIcon1.Size = new System.Drawing.Size(40, 26);
             this.btnChooseIcon1.TabIndex = 94;
-            this.btnChooseIcon1.Text = "Chọn...";
+            this.btnChooseIcon1.Text = "...";
             this.btnChooseIcon1.Click += new System.EventHandler(this.btnChooseIcon1_Click);
             // 
             // txtColor
             // 
             this.txtColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtColor.Enabled = false;
-            this.txtColor.Location = new System.Drawing.Point(97, 78);
+            this.txtColor.Location = new System.Drawing.Point(88, 120);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(135, 22);
             this.txtColor.TabIndex = 93;
@@ -891,7 +973,7 @@
             // 
             this.txtIcon2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtIcon2.Enabled = false;
-            this.txtIcon2.Location = new System.Drawing.Point(97, 44);
+            this.txtIcon2.Location = new System.Drawing.Point(596, 118);
             this.txtIcon2.Name = "txtIcon2";
             this.txtIcon2.Size = new System.Drawing.Size(134, 22);
             this.txtIcon2.TabIndex = 92;
@@ -900,7 +982,7 @@
             // 
             this.txtIcon1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtIcon1.Enabled = false;
-            this.txtIcon1.Location = new System.Drawing.Point(98, 13);
+            this.txtIcon1.Location = new System.Drawing.Point(337, 118);
             this.txtIcon1.Name = "txtIcon1";
             this.txtIcon1.Size = new System.Drawing.Size(134, 22);
             this.txtIcon1.TabIndex = 91;
@@ -910,7 +992,7 @@
             this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(24, 44);
+            this.labelControl5.Location = new System.Drawing.Point(539, 118);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(51, 19);
             this.labelControl5.TabIndex = 90;
@@ -921,7 +1003,7 @@
             this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(24, 79);
+            this.labelControl6.Location = new System.Drawing.Point(15, 121);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(67, 21);
             this.labelControl6.TabIndex = 89;
@@ -932,7 +1014,7 @@
             this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(24, 13);
+            this.labelControl7.Location = new System.Drawing.Point(280, 121);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(51, 19);
             this.labelControl7.TabIndex = 88;
@@ -966,7 +1048,7 @@
             this.xTabPageTennis.Controls.Add(this.textEdit1);
             this.xTabPageTennis.Controls.Add(this.labelControl11);
             this.xTabPageTennis.Name = "xTabPageTennis";
-            this.xTabPageTennis.Size = new System.Drawing.Size(801, 113);
+            this.xTabPageTennis.Size = new System.Drawing.Size(801, 160);
             this.xTabPageTennis.Text = "Tennis";
             // 
             // labelControl23
@@ -1650,59 +1732,12 @@
             // 
             this.xTabVideo.Controls.Add(this.groupControl1);
             this.xTabVideo.Name = "xTabVideo";
-            this.xTabVideo.Size = new System.Drawing.Size(1255, 660);
+            this.xTabVideo.Size = new System.Drawing.Size(1255, 710);
             this.xTabVideo.Text = "Videos/Images";
             // 
             // bsUpdateData
             // 
             this.bsUpdateData.DataSource = typeof(HDCGStudio.Object.tempUpdating);
-            // 
-            // labelControl24
-            // 
-            this.labelControl24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl24.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl24.Appearance.Options.UseFont = true;
-            this.labelControl24.Location = new System.Drawing.Point(353, 39);
-            this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(31, 21);
-            this.labelControl24.TabIndex = 104;
-            this.labelControl24.Text = "Đội:";
-            // 
-            // labelControl25
-            // 
-            this.labelControl25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl25.Location = new System.Drawing.Point(672, 11);
-            this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(39, 16);
-            this.labelControl25.TabIndex = 105;
-            this.labelControl25.Text = "KHÁCH";
-            // 
-            // labelControl26
-            // 
-            this.labelControl26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl26.Location = new System.Drawing.Point(449, 11);
-            this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(27, 17);
-            this.labelControl26.TabIndex = 106;
-            this.labelControl26.Text = "CHỦ";
-            // 
-            // txtAwayTeam
-            // 
-            this.txtAwayTeam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAwayTeam.Enabled = false;
-            this.txtAwayTeam.Location = new System.Drawing.Point(608, 38);
-            this.txtAwayTeam.Name = "txtAwayTeam";
-            this.txtAwayTeam.Size = new System.Drawing.Size(179, 22);
-            this.txtAwayTeam.TabIndex = 107;
-            // 
-            // txtHomeTeam
-            // 
-            this.txtHomeTeam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtHomeTeam.Enabled = false;
-            this.txtHomeTeam.Location = new System.Drawing.Point(390, 39);
-            this.txtHomeTeam.Name = "txtHomeTeam";
-            this.txtHomeTeam.Size = new System.Drawing.Size(159, 22);
-            this.txtHomeTeam.TabIndex = 108;
             // 
             // MainForm
             // 
@@ -1746,7 +1781,12 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xTabPageBongda.ResumeLayout(false);
             this.xTabPageBongda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckCauthuChu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckCauthuKhach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuAway.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHomeTeam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAwayTeam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuHome.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBongDaKhach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBongDaChuNha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).EndInit();
@@ -1784,8 +1824,6 @@
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAwayTeam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHomeTeam.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1878,13 +1916,13 @@
         private DevExpress.XtraEditors.SimpleButton btnStop;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraTab.XtraTabPage xTabPageTennis;
-        private DevExpress.XtraEditors.ComboBoxEdit cboDanhsachcauthu;
+        private DevExpress.XtraEditors.ComboBoxEdit cboDanhsachcauthuHome;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private System.Windows.Forms.NumericUpDown nBongDaKhach;
         private System.Windows.Forms.NumericUpDown nBongDaChuNha;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.SimpleButton btnQuanlycauthu;
+        private DevExpress.XtraEditors.SimpleButton btnQuanlycauthuHome;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.TextEdit textEdit4;
         private DevExpress.XtraEditors.LabelControl labelControl16;
@@ -1912,8 +1950,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.TextEdit txtHomeTeam;
         private DevExpress.XtraEditors.TextEdit txtAwayTeam;
-        private DevExpress.XtraEditors.LabelControl labelControl26;
-        private DevExpress.XtraEditors.LabelControl labelControl25;
         private DevExpress.XtraEditors.LabelControl labelControl24;
+        private DevExpress.XtraEditors.ComboBoxEdit cboDanhsachcauthuAway;
+        private DevExpress.XtraEditors.SimpleButton btnQuanlycauthuAway;
+        private DevExpress.XtraEditors.CheckEdit ckCauthuChu;
+        private DevExpress.XtraEditors.CheckEdit ckCauthuKhach;
     }
 }

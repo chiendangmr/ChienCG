@@ -15,15 +15,17 @@ using DevExpress.XtraGrid.Views.Grid;
 namespace HDCGStudio
 {
     public partial class ManagePlayersForm : Form
-    {        
-        public ManagePlayersForm()
+    {
+        string _teamType = "";
+        public ManagePlayersForm(string team)
         {
-            InitializeComponent();            
+            InitializeComponent();
+            _teamType = team;
         }
         string templatesXmlPath = "";
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
-        {            
-            templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu.xml");
+        {
+            templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu" + _teamType + ".xml");
             try
             {
                 if (File.Exists(templatesXmlPath))
@@ -62,7 +64,7 @@ namespace HDCGStudio
                             Number = txtNumber.Text,
                             Name = txtName.Text,
                             IsCaptain = ckIsCaptain.Checked,
-                            IsSubstitute= ckIsSubstitution.Checked
+                            IsSubstitute = ckIsSubstitution.Checked
                         }
                     });
 
