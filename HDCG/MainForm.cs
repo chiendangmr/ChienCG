@@ -1028,6 +1028,7 @@ namespace HDCGStudio
                 if (File.Exists(_danhsachcauthuXml))
                 {
                     cboDanhsachcauthu.Properties.Items.Clear();
+                    dicDanhsachcauthu.Clear();
                     var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuXml);
                     foreach (var data in lstData)
                         dicDanhsachcauthu.Add(data.Number, data.Name);
@@ -1051,17 +1052,21 @@ namespace HDCGStudio
         {
             try
             {
-                _xmlAdd = "";                
+                _xmlAdd = "";
                 if (txtIcon1.Text.Length > 0)
                     _xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
                 if (txtIcon2.Text.Length > 0)
                     _xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
                 if (txtColor.Text.Length > 0)
                     _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
-                _xml = player.GetProperties();
-                var fieldName = _xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
-                string xmlStr = "<Track_Property>" + _xmlAdd + fieldName.Replace("<Track_Property>", "");
-                UpdateDataFile(xmlStr);                
+                if (cboDanhsachcauthu.Text.Length > 0)
+                {
+                    _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthu.Text));
+                    _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthu.Text));
+                }
+
+                string xmlStr = "<Track_Property>" + _xmlAdd + "</Track_Property>";
+                UpdateDataFile(xmlStr);
                 player.Update(1, xmlStr.Replace("\\n", "\n"));
                 player.Refresh();
 
@@ -1070,6 +1075,14 @@ namespace HDCGStudio
             {
                 HDMessageBox.Show("Data not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private string GetPlayerName(string playerString)
+        {
+            return playerString.Substring(0, playerString.IndexOf('-')).Trim();
+        }
+        private string GetPlayerNumber(string playerString)
+        {
+            return playerString.Substring(playerString.IndexOf('-') + 4).Trim();
         }
     }
 }

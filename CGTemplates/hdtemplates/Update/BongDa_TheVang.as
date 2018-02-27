@@ -30,8 +30,8 @@
 				
 		private var txtGroup:MovieClip = new MovieClip();
 					
-		public var title1:TextField = new TextField();
-		public var title2:TextField = new TextField();
+		public var player1:TextField = new TextField();
+		public var playerNumber1:TextField = new TextField();
 		public var title3:TextField = new TextField();
 		public var icon1:TextField = new TextField();
 		
@@ -50,8 +50,8 @@
 			super();
 			
 			this.addChild(myTotalBar);
-			this.txtGroup.addChild(title1);	
-			this.txtGroup.addChild(title2);
+			this.txtGroup.addChild(player1);	
+			this.txtGroup.addChild(playerNumber1);
 			this.txtGroup.addChild(title3);
 			this.txtGroup.addChild(icon1);
 			
@@ -82,8 +82,8 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "title1", title1);
-			xmlStr +=Add(xmlStr, "title2", title2);
+			xmlStr +=Add(xmlStr, "player1", player1);
+			xmlStr +=Add(xmlStr, "playerNumber1", playerNumber1);
 			xmlStr +=Add(xmlStr, "title3", title3);
 				
 			xmlStr += "</Track_Property>";
@@ -104,11 +104,11 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "title1".toLowerCase():
-						this.title1.text = data.toUpperCase();
+					case "player1".toLowerCase():
+						this.player1.text = data.toUpperCase();
 						break;
-					case "title2".toLowerCase():
-						this.title2.text = data.toUpperCase();
+					case "playerNumber1".toLowerCase():
+						this.playerNumber1.text = data.toUpperCase();
 						break;
 					case "title3".toLowerCase():
 						this.title3.text = data.toUpperCase();
