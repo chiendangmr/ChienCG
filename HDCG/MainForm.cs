@@ -1064,7 +1064,8 @@ namespace HDCGStudio
                     _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthu.Text));
                     _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthu.Text));
                 }
-
+                _xmlAdd += Add("goalHome", nBongDaChuNha.Value.ToString());
+                _xmlAdd += Add("goalAway", nBongDaKhach.Value.ToString());
                 string xmlStr = "<Track_Property>" + _xmlAdd + "</Track_Property>";
                 UpdateDataFile(xmlStr);
                 player.Update(1, xmlStr.Replace("\\n", "\n"));

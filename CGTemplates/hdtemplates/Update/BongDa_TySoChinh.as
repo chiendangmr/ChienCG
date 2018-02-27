@@ -32,9 +32,9 @@
 					
 		public var title1:TextField = new TextField();
 		public var title2:TextField = new TextField();
-		public var title3:TextField = new TextField();
-		public var title4:TextField = new TextField();
-		public var title5:TextField = new TextField();
+		public var teamHome:TextField = new TextField();
+		public var tyso:TextField = new TextField();
+		public var teamAway:TextField = new TextField();
 		public var title6:TextField = new TextField();
 		public var title7:TextField = new TextField();
 		public var title8:TextField = new TextField();
@@ -66,9 +66,9 @@
 			this.addChild(myTotalBar);
 			this.txtGroup.addChild(title1);	
 			this.txtGroup.addChild(title2);
-			this.txtGroup.addChild(title3);
-			this.txtGroup.addChild(title4);	
-			this.txtGroup.addChild(title5);
+			this.txtGroup.addChild(teamHome);
+			this.txtGroup.addChild(tyso);	
+			this.txtGroup.addChild(teamAway);
 			this.txtGroup.addChild(title6);
 			this.txtGroup.addChild(title7);	
 			this.txtGroup.addChild(title8);
@@ -112,9 +112,9 @@
 			var xmlStr:String = "<Track_Property>";
 			xmlStr +=Add(xmlStr, "title1", title1);
 			xmlStr +=Add(xmlStr, "title2", title2);
-			xmlStr +=Add(xmlStr, "title3", title3);
-			xmlStr +=Add(xmlStr, "title4", title4);
-			xmlStr +=Add(xmlStr, "title5", title5);
+			xmlStr +=Add(xmlStr, "teamHome", teamHome);
+			xmlStr +=Add(xmlStr, "tyso", tyso);
+			xmlStr +=Add(xmlStr, "teamAway", teamAway);
 			xmlStr +=Add(xmlStr, "title6", title6);	
 			xmlStr +=Add(xmlStr, "title7", title7);
 			xmlStr +=Add(xmlStr, "title8", title8);
@@ -150,14 +150,14 @@
 					case "title2".toLowerCase():
 						this.title2.text = data;
 						break;
-					case "title3".toLowerCase():
-						this.title3.text = data.toUpperCase();
+					case "teamHome".toLowerCase():
+						this.teamHome.text = data.toUpperCase();
 						break;
-					case "title4".toLowerCase():
-						this.title4.text = data.toUpperCase();
+					case "tyso".toLowerCase():
+						this.tyso.text = data.toUpperCase();
 						break;
-					case "title5".toLowerCase():
-						this.title5.text = data.toUpperCase();
+					case "teamAway".toLowerCase():
+						this.teamAway.text = data.toUpperCase();
 						break;
 					case "title6".toLowerCase():
 						this.title6.text = data.toUpperCase();
