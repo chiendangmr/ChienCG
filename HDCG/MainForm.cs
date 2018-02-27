@@ -1072,43 +1072,79 @@ namespace HDCGStudio
 
         private void btnLiveUpdate_Click(object sender, EventArgs e)
         {
-            try
-            {
-                _xmlAdd = "";
-                if (txtIcon1.Text.Length > 0)
-                    _xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
-                if (txtIcon2.Text.Length > 0)
-                    _xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
-                if (txtColor.Text.Length > 0)
-                    _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
-                if (ckCauthuChu.Checked)
+            if (xTabMain.SelectedTabPage.Equals(xTabPageBongda)) { 
+                try
                 {
-                    if (cboDanhsachcauthuHome.Text.Length > 0)
+                    _xmlAdd = "";
+                    if (txtIcon1.Text.Length > 0)
+                        _xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
+                    if (txtIcon2.Text.Length > 0)
+                        _xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
+                    if (txtColor.Text.Length > 0)
+                        _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
+                    if (ckCauthuChu.Checked)
                     {
-                        _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuHome.Text));
-                        _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuHome.Text));
+                        if (cboDanhsachcauthuHome.Text.Length > 0)
+                        {
+                            _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuHome.Text));
+                            _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuHome.Text));
+                        }
                     }
+                    else if (ckCauthuKhach.Checked)
+                    {
+                        if (cboDanhsachcauthuAway.Text.Length > 0)
+                        {
+                            _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuAway.Text));
+                            _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuAway.Text));
+                        }
+                    }
+                    _xmlAdd += Add("teamHome", txtHomeTeam.Text);
+                    _xmlAdd += Add("teamAway", txtAwayTeam.Text);
+                    _xmlAdd += Add("tyso", nBongDaChuNha.Value.ToString() + " - " + nBongDaKhach.Value.ToString());
+                    string xmlStr = "<Track_Property>" + _xmlAdd + "</Track_Property>";
+                    UpdateDataFile(xmlStr);
+                    player.Update(1, xmlStr.Replace("\\n", "\n"));
+                    player.Refresh();
+                    cgServer.UpdateTemplate(_layer, xmlStr, 0);
                 }
-                else if (ckCauthuKhach.Checked)
+                catch
                 {
-                    if (cboDanhsachcauthuAway.Text.Length > 0)
-                    {
-                        _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuAway.Text));
-                        _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuAway.Text));
-                    }
+                    HDMessageBox.Show("Data not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                _xmlAdd += Add("teamHome", txtHomeTeam.Text);
-                _xmlAdd += Add("teamAway", txtAwayTeam.Text);
-                _xmlAdd += Add("tyso", nBongDaChuNha.Value.ToString() + " - " + nBongDaKhach.Value.ToString());
-                string xmlStr = "<Track_Property>" + _xmlAdd + "</Track_Property>";
-                UpdateDataFile(xmlStr);
-                player.Update(1, xmlStr.Replace("\\n", "\n"));
-                player.Refresh();
-                cgServer.UpdateTemplate(_layer, xmlStr, 0);
             }
-            catch
+            else
             {
-                HDMessageBox.Show("Data not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    _xmlAdd = "";
+                    if (txtPlayer1.Text.Length > 0)
+                        _xmlAdd += Add("player1", txtPlayer1.Text);
+                    if (txtPlayer2.Text.Length > 0)
+                        _xmlAdd += Add("player2", txtPlayer1.Text);
+                    if (txtPlayer3.Text.Length > 0)
+                        _xmlAdd += Add("player3", txtPlayer1.Text);
+                    if (txtPlayer4.Text.Length > 0)
+                        _xmlAdd += Add("player4", txtPlayer4.Text);
+                    _xmlAdd += Add("hatgiong1", nHatgiong1.Value.ToString());
+                    _xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
+                    _xmlAdd += Add("player1set1point", nDiemSet1Player1.Value.ToString());
+                    _xmlAdd += Add("player2set1point", nDiemSet1Player2.Value.ToString());
+                    _xmlAdd += Add("player1set2point", nDiemSet2Player1.Value.ToString());
+                    _xmlAdd += Add("player2set2point", nDiemSet2Player2.Value.ToString());
+                    _xmlAdd += Add("player1set3point", nDiemSet3Player1.Value.ToString());
+                    _xmlAdd += Add("player2set3point", nDiemSet3Player2.Value.ToString());
+                    _xmlAdd += Add("player1livePoint", txtDiemHientaiPlayer1.Text);
+                    _xmlAdd += Add("player2livePoint", txtDiemHientaiPlayer2.Text);
+                    string xmlStr = "<Track_Property>" + _xmlAdd + "</Track_Property>";
+                    UpdateDataFile(xmlStr);
+                    player.Update(1, xmlStr.Replace("\\n", "\n"));
+                    player.Refresh();
+                    cgServer.UpdateTemplate(_layer, xmlStr, 0);
+                }
+                catch(Exception ex)
+                {
+                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private string GetPlayerName(string playerString)

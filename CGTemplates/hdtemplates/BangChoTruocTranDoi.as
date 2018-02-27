@@ -32,10 +32,10 @@
 					
 		public var BigTitle:TextField = new TextField();
 		public var SmallTitle:TextField = new TextField();
-		public var Player1:TextField = new TextField();
-		public var Player2:TextField = new TextField();	
-		public var Player3:TextField = new TextField();
-		public var Player4:TextField = new TextField();	
+		public var player1:TextField = new TextField();
+		public var player3:TextField = new TextField();	
+		public var player2:TextField = new TextField();
+		public var player4:TextField = new TextField();	
 							
 		private var maskBar:Shape = new Shape();
 		private var rectWidth:Number = 900;
@@ -54,17 +54,17 @@
 			this.addChild(myBar);
 			this.addChild(BigTitle);
 			this.addChild(SmallTitle);					
-			this.addChild(Player1);
-			this.addChild(Player2);	
-			this.addChild(Player3);
-			this.addChild(Player4);
+			this.addChild(player1);
+			this.addChild(player3);	
+			this.addChild(player2);
+			this.addChild(player4);
 						
 			this.txtGroup.addChild(BigTitle);
 			this.txtGroup.addChild(SmallTitle);
-			this.txtGroup.addChild(Player1);
-			this.txtGroup.addChild(Player2);	
-			this.txtGroup.addChild(Player3);
-			this.txtGroup.addChild(Player4);
+			this.txtGroup.addChild(player1);
+			this.txtGroup.addChild(player3);	
+			this.txtGroup.addChild(player2);
+			this.txtGroup.addChild(player4);
 			this.addChild(txtGroup);
 			
 			this.addChild(maskBar);
@@ -94,10 +94,10 @@
 			var xmlStr:String = "<Track_Property>";
 			xmlStr +=Add(xmlStr, "BigTitle", BigTitle);
 			xmlStr +=Add(xmlStr, "SmallTitle", SmallTitle);
-			xmlStr +=Add(xmlStr, "Player1", Player1);
-			xmlStr +=Add(xmlStr, "Player2", Player2);
-			xmlStr +=Add(xmlStr, "Player3", Player3);
-			xmlStr +=Add(xmlStr, "Player4", Player4);
+			xmlStr +=Add(xmlStr, "player1", player1);
+			xmlStr +=Add(xmlStr, "player3", player3);
+			xmlStr +=Add(xmlStr, "player2", player2);
+			xmlStr +=Add(xmlStr, "player4", player4);
 			xmlStr += "</Track_Property>";
 			
 			ExternalInterface.call("Properties", xmlStr);
@@ -122,17 +122,17 @@
 					case "SmallTitle".toLowerCase():
 						this.SmallTitle.text = data.toUpperCase();
 						break;
-					case "Player1".toLowerCase():
-						this.Player1.text = data.toUpperCase();
+					case "player1".toLowerCase():
+						this.player1.text = data.toUpperCase();
 						break;
-					case "Player2".toLowerCase():
-						this.Player2.text = data.toUpperCase();
+					case "player3".toLowerCase():
+						this.player3.text = data.toUpperCase();
 						break;		
-					case "Player3".toLowerCase():
-						this.Player3.text = data.toUpperCase();
+					case "player2".toLowerCase():
+						this.player2.text = data.toUpperCase();
 						break;
-					case "Player4".toLowerCase():
-						this.Player4.text = data.toUpperCase();
+					case "player4".toLowerCase():
+						this.player4.text = data.toUpperCase();
 						break;	
 				}
 			}

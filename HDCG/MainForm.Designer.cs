@@ -73,7 +73,7 @@
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.btnLiveUpdate = new DevExpress.XtraEditors.SimpleButton();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xTabMain = new DevExpress.XtraTab.XtraTabControl();
             this.xTabPageBongda = new DevExpress.XtraTab.XtraTabPage();
             this.ckCauthuChu = new DevExpress.XtraEditors.CheckEdit();
             this.ckCauthuKhach = new DevExpress.XtraEditors.CheckEdit();
@@ -100,29 +100,29 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.xTabPageTennis = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
+            this.nDiemSet2Player1 = new System.Windows.Forms.NumericUpDown();
+            this.nDiemSet3Player1 = new System.Windows.Forms.NumericUpDown();
+            this.nDiemSet1Player2 = new System.Windows.Forms.NumericUpDown();
+            this.nDiemSet2Player2 = new System.Windows.Forms.NumericUpDown();
+            this.nDiemSet3Player2 = new System.Windows.Forms.NumericUpDown();
+            this.nDiemSet1Player1 = new System.Windows.Forms.NumericUpDown();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.btnDiemPlayer2 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtDiemHientaiPlayer2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.btnDiemPlayer1 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtDiemHientaiPlayer1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.nHatgiong2 = new System.Windows.Forms.NumericUpDown();
+            this.txtPlayer4 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.nHatgiong1 = new System.Windows.Forms.NumericUpDown();
+            this.txtPlayer1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.listBoxTemplates = new DevExpress.XtraEditors.ListBoxControl();
@@ -154,6 +154,10 @@
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.bsUpdateData = new System.Windows.Forms.BindingSource(this.components);
+            this.txtPlayer3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPlayer2 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -170,8 +174,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cboVideoLayer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xTabMain)).BeginInit();
+            this.xTabMain.SuspendLayout();
             this.xTabPageBongda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ckCauthuChu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckCauthuKhach.Properties)).BeginInit();
@@ -185,18 +189,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).BeginInit();
             this.xTabPageTennis.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHatgiong2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHatgiong1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxTemplates)).BeginInit();
@@ -215,6 +219,8 @@
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -695,7 +701,7 @@
             this.groupControl3.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.groupControl3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupControl3.Controls.Add(this.btnLiveUpdate);
-            this.groupControl3.Controls.Add(this.xtraTabControl1);
+            this.groupControl3.Controls.Add(this.xTabMain);
             this.groupControl3.Controls.Add(this.splitContainerControl1);
             this.groupControl3.Controls.Add(this.panelControl3);
             this.groupControl3.Controls.Add(this.cboTemplateType);
@@ -735,16 +741,16 @@
             this.btnLiveUpdate.ToolTip = "Update real-time data for template";
             this.btnLiveUpdate.Click += new System.EventHandler(this.btnLiveUpdate_Click);
             // 
-            // xtraTabControl1
+            // xTabMain
             // 
-            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.xTabMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtraTabControl1.Location = new System.Drawing.Point(444, 467);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xTabPageBongda;
-            this.xtraTabControl1.Size = new System.Drawing.Size(808, 194);
-            this.xtraTabControl1.TabIndex = 93;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xTabMain.Location = new System.Drawing.Point(444, 467);
+            this.xTabMain.Name = "xTabMain";
+            this.xTabMain.SelectedTabPage = this.xTabPageBongda;
+            this.xTabMain.Size = new System.Drawing.Size(808, 194);
+            this.xTabMain.TabIndex = 93;
+            this.xTabMain.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabPageBongda,
             this.xTabPageTennis});
             // 
@@ -1022,30 +1028,34 @@
             // 
             // xTabPageTennis
             // 
+            this.xTabPageTennis.Controls.Add(this.labelControl26);
+            this.xTabPageTennis.Controls.Add(this.labelControl25);
+            this.xTabPageTennis.Controls.Add(this.txtPlayer2);
+            this.xTabPageTennis.Controls.Add(this.txtPlayer3);
             this.xTabPageTennis.Controls.Add(this.labelControl23);
-            this.xTabPageTennis.Controls.Add(this.numericUpDown11);
-            this.xTabPageTennis.Controls.Add(this.numericUpDown10);
-            this.xTabPageTennis.Controls.Add(this.numericUpDown9);
-            this.xTabPageTennis.Controls.Add(this.numericUpDown8);
-            this.xTabPageTennis.Controls.Add(this.numericUpDown7);
-            this.xTabPageTennis.Controls.Add(this.numericUpDown12);
+            this.xTabPageTennis.Controls.Add(this.nDiemSet2Player1);
+            this.xTabPageTennis.Controls.Add(this.nDiemSet3Player1);
+            this.xTabPageTennis.Controls.Add(this.nDiemSet1Player2);
+            this.xTabPageTennis.Controls.Add(this.nDiemSet2Player2);
+            this.xTabPageTennis.Controls.Add(this.nDiemSet3Player2);
+            this.xTabPageTennis.Controls.Add(this.nDiemSet1Player1);
             this.xTabPageTennis.Controls.Add(this.labelControl20);
             this.xTabPageTennis.Controls.Add(this.labelControl19);
             this.xTabPageTennis.Controls.Add(this.labelControl18);
             this.xTabPageTennis.Controls.Add(this.labelControl17);
-            this.xTabPageTennis.Controls.Add(this.simpleButton2);
-            this.xTabPageTennis.Controls.Add(this.textEdit4);
+            this.xTabPageTennis.Controls.Add(this.btnDiemPlayer2);
+            this.xTabPageTennis.Controls.Add(this.txtDiemHientaiPlayer2);
             this.xTabPageTennis.Controls.Add(this.labelControl16);
-            this.xTabPageTennis.Controls.Add(this.simpleButton1);
-            this.xTabPageTennis.Controls.Add(this.textEdit3);
+            this.xTabPageTennis.Controls.Add(this.btnDiemPlayer1);
+            this.xTabPageTennis.Controls.Add(this.txtDiemHientaiPlayer1);
             this.xTabPageTennis.Controls.Add(this.labelControl15);
             this.xTabPageTennis.Controls.Add(this.labelControl13);
-            this.xTabPageTennis.Controls.Add(this.numericUpDown6);
-            this.xTabPageTennis.Controls.Add(this.textEdit2);
+            this.xTabPageTennis.Controls.Add(this.nHatgiong2);
+            this.xTabPageTennis.Controls.Add(this.txtPlayer4);
             this.xTabPageTennis.Controls.Add(this.labelControl14);
             this.xTabPageTennis.Controls.Add(this.labelControl12);
-            this.xTabPageTennis.Controls.Add(this.numericUpDown5);
-            this.xTabPageTennis.Controls.Add(this.textEdit1);
+            this.xTabPageTennis.Controls.Add(this.nHatgiong1);
+            this.xTabPageTennis.Controls.Add(this.txtPlayer1);
             this.xTabPageTennis.Controls.Add(this.labelControl11);
             this.xTabPageTennis.Name = "xTabPageTennis";
             this.xTabPageTennis.Size = new System.Drawing.Size(801, 160);
@@ -1056,66 +1066,66 @@
             this.labelControl23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl23.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl23.Appearance.Options.UseFont = true;
-            this.labelControl23.Location = new System.Drawing.Point(702, 10);
+            this.labelControl23.Location = new System.Drawing.Point(704, 7);
             this.labelControl23.Name = "labelControl23";
             this.labelControl23.Size = new System.Drawing.Size(28, 19);
             this.labelControl23.TabIndex = 126;
             this.labelControl23.Text = "Live";
             // 
-            // numericUpDown11
+            // nDiemSet2Player1
             // 
-            this.numericUpDown11.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.numericUpDown11.Location = new System.Drawing.Point(582, 31);
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(44, 27);
-            this.numericUpDown11.TabIndex = 125;
+            this.nDiemSet2Player1.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nDiemSet2Player1.Location = new System.Drawing.Point(584, 28);
+            this.nDiemSet2Player1.Name = "nDiemSet2Player1";
+            this.nDiemSet2Player1.Size = new System.Drawing.Size(44, 27);
+            this.nDiemSet2Player1.TabIndex = 125;
             // 
-            // numericUpDown10
+            // nDiemSet3Player1
             // 
-            this.numericUpDown10.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.numericUpDown10.Location = new System.Drawing.Point(632, 31);
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(44, 27);
-            this.numericUpDown10.TabIndex = 124;
+            this.nDiemSet3Player1.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nDiemSet3Player1.Location = new System.Drawing.Point(634, 28);
+            this.nDiemSet3Player1.Name = "nDiemSet3Player1";
+            this.nDiemSet3Player1.Size = new System.Drawing.Size(44, 27);
+            this.nDiemSet3Player1.TabIndex = 124;
             // 
-            // numericUpDown9
+            // nDiemSet1Player2
             // 
-            this.numericUpDown9.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.numericUpDown9.Location = new System.Drawing.Point(532, 63);
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(44, 27);
-            this.numericUpDown9.TabIndex = 123;
+            this.nDiemSet1Player2.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nDiemSet1Player2.Location = new System.Drawing.Point(534, 118);
+            this.nDiemSet1Player2.Name = "nDiemSet1Player2";
+            this.nDiemSet1Player2.Size = new System.Drawing.Size(44, 27);
+            this.nDiemSet1Player2.TabIndex = 123;
             // 
-            // numericUpDown8
+            // nDiemSet2Player2
             // 
-            this.numericUpDown8.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.numericUpDown8.Location = new System.Drawing.Point(582, 63);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(44, 27);
-            this.numericUpDown8.TabIndex = 122;
+            this.nDiemSet2Player2.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nDiemSet2Player2.Location = new System.Drawing.Point(584, 118);
+            this.nDiemSet2Player2.Name = "nDiemSet2Player2";
+            this.nDiemSet2Player2.Size = new System.Drawing.Size(44, 27);
+            this.nDiemSet2Player2.TabIndex = 122;
             // 
-            // numericUpDown7
+            // nDiemSet3Player2
             // 
-            this.numericUpDown7.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.numericUpDown7.Location = new System.Drawing.Point(632, 63);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(44, 27);
-            this.numericUpDown7.TabIndex = 121;
+            this.nDiemSet3Player2.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nDiemSet3Player2.Location = new System.Drawing.Point(634, 118);
+            this.nDiemSet3Player2.Name = "nDiemSet3Player2";
+            this.nDiemSet3Player2.Size = new System.Drawing.Size(44, 27);
+            this.nDiemSet3Player2.TabIndex = 121;
             // 
-            // numericUpDown12
+            // nDiemSet1Player1
             // 
-            this.numericUpDown12.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.numericUpDown12.Location = new System.Drawing.Point(532, 31);
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(44, 27);
-            this.numericUpDown12.TabIndex = 120;
+            this.nDiemSet1Player1.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nDiemSet1Player1.Location = new System.Drawing.Point(534, 28);
+            this.nDiemSet1Player1.Name = "nDiemSet1Player1";
+            this.nDiemSet1Player1.Size = new System.Drawing.Size(44, 27);
+            this.nDiemSet1Player1.TabIndex = 120;
             // 
             // labelControl20
             // 
             this.labelControl20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl20.Appearance.Options.UseFont = true;
-            this.labelControl20.Location = new System.Drawing.Point(541, 10);
+            this.labelControl20.Location = new System.Drawing.Point(543, 7);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(9, 19);
             this.labelControl20.TabIndex = 114;
@@ -1126,7 +1136,7 @@
             this.labelControl19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Location = new System.Drawing.Point(593, 10);
+            this.labelControl19.Location = new System.Drawing.Point(595, 7);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(9, 19);
             this.labelControl19.TabIndex = 113;
@@ -1137,7 +1147,7 @@
             this.labelControl18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl18.Appearance.Options.UseFont = true;
-            this.labelControl18.Location = new System.Drawing.Point(636, 10);
+            this.labelControl18.Location = new System.Drawing.Point(638, 7);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(9, 19);
             this.labelControl18.TabIndex = 112;
@@ -1148,73 +1158,75 @@
             this.labelControl17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl17.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl17.Appearance.Options.UseFont = true;
-            this.labelControl17.Location = new System.Drawing.Point(490, 10);
+            this.labelControl17.Location = new System.Drawing.Point(492, 7);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(28, 19);
             this.labelControl17.TabIndex = 111;
             this.labelControl17.Text = "SET";
             // 
-            // simpleButton2
+            // btnDiemPlayer2
             // 
-            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(751, 65);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(39, 26);
-            this.simpleButton2.TabIndex = 110;
+            this.btnDiemPlayer2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDiemPlayer2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDiemPlayer2.ImageOptions.Image")));
+            this.btnDiemPlayer2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnDiemPlayer2.Location = new System.Drawing.Point(753, 120);
+            this.btnDiemPlayer2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDiemPlayer2.Name = "btnDiemPlayer2";
+            this.btnDiemPlayer2.Size = new System.Drawing.Size(39, 26);
+            this.btnDiemPlayer2.TabIndex = 110;
             // 
-            // textEdit4
+            // txtDiemHientaiPlayer2
             // 
-            this.textEdit4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textEdit4.Enabled = false;
-            this.textEdit4.Location = new System.Drawing.Point(689, 64);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(56, 26);
-            this.textEdit4.TabIndex = 109;
+            this.txtDiemHientaiPlayer2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtDiemHientaiPlayer2.EditValue = "0";
+            this.txtDiemHientaiPlayer2.Enabled = false;
+            this.txtDiemHientaiPlayer2.Location = new System.Drawing.Point(691, 119);
+            this.txtDiemHientaiPlayer2.Name = "txtDiemHientaiPlayer2";
+            this.txtDiemHientaiPlayer2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtDiemHientaiPlayer2.Properties.Appearance.Options.UseFont = true;
+            this.txtDiemHientaiPlayer2.Size = new System.Drawing.Size(56, 26);
+            this.txtDiemHientaiPlayer2.TabIndex = 109;
             // 
             // labelControl16
             // 
             this.labelControl16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl16.Appearance.Options.UseFont = true;
-            this.labelControl16.Location = new System.Drawing.Point(481, 67);
+            this.labelControl16.Location = new System.Drawing.Point(483, 122);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(45, 21);
             this.labelControl16.TabIndex = 108;
             this.labelControl16.Text = "Điểm:";
             // 
-            // simpleButton1
+            // btnDiemPlayer1
             // 
-            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(751, 32);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(39, 26);
-            this.simpleButton1.TabIndex = 107;
+            this.btnDiemPlayer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDiemPlayer1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDiemPlayer1.ImageOptions.Image")));
+            this.btnDiemPlayer1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnDiemPlayer1.Location = new System.Drawing.Point(753, 29);
+            this.btnDiemPlayer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDiemPlayer1.Name = "btnDiemPlayer1";
+            this.btnDiemPlayer1.Size = new System.Drawing.Size(39, 26);
+            this.btnDiemPlayer1.TabIndex = 107;
             // 
-            // textEdit3
+            // txtDiemHientaiPlayer1
             // 
-            this.textEdit3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textEdit3.Enabled = false;
-            this.textEdit3.Location = new System.Drawing.Point(689, 32);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(56, 26);
-            this.textEdit3.TabIndex = 106;
+            this.txtDiemHientaiPlayer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtDiemHientaiPlayer1.EditValue = "0";
+            this.txtDiemHientaiPlayer1.Enabled = false;
+            this.txtDiemHientaiPlayer1.Location = new System.Drawing.Point(691, 29);
+            this.txtDiemHientaiPlayer1.Name = "txtDiemHientaiPlayer1";
+            this.txtDiemHientaiPlayer1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtDiemHientaiPlayer1.Properties.Appearance.Options.UseFont = true;
+            this.txtDiemHientaiPlayer1.Size = new System.Drawing.Size(56, 26);
+            this.txtDiemHientaiPlayer1.TabIndex = 106;
             // 
             // labelControl15
             // 
             this.labelControl15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.Location = new System.Drawing.Point(481, 35);
+            this.labelControl15.Location = new System.Drawing.Point(483, 32);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(45, 21);
             this.labelControl15.TabIndex = 105;
@@ -1225,42 +1237,41 @@
             this.labelControl13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(300, 65);
+            this.labelControl13.Location = new System.Drawing.Point(302, 120);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(77, 21);
             this.labelControl13.TabIndex = 104;
             this.labelControl13.Text = "Hạt giống:";
             // 
-            // numericUpDown6
+            // nHatgiong2
             // 
-            this.numericUpDown6.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.numericUpDown6.Location = new System.Drawing.Point(383, 63);
-            this.numericUpDown6.Maximum = new decimal(new int[] {
+            this.nHatgiong2.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nHatgiong2.Location = new System.Drawing.Point(385, 118);
+            this.nHatgiong2.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(58, 27);
-            this.numericUpDown6.TabIndex = 103;
+            this.nHatgiong2.Name = "nHatgiong2";
+            this.nHatgiong2.Size = new System.Drawing.Size(58, 27);
+            this.nHatgiong2.TabIndex = 103;
             // 
-            // textEdit2
+            // txtPlayer4
             // 
-            this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textEdit2.Enabled = false;
-            this.textEdit2.Location = new System.Drawing.Point(78, 62);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(199, 26);
-            this.textEdit2.TabIndex = 102;
+            this.txtPlayer4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPlayer4.Location = new System.Drawing.Point(80, 131);
+            this.txtPlayer4.Name = "txtPlayer4";
+            this.txtPlayer4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtPlayer4.Properties.Appearance.Options.UseFont = true;
+            this.txtPlayer4.Size = new System.Drawing.Size(184, 26);
+            this.txtPlayer4.TabIndex = 102;
             // 
             // labelControl14
             // 
             this.labelControl14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(9, 65);
+            this.labelControl14.Location = new System.Drawing.Point(11, 120);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(63, 19);
             this.labelControl14.TabIndex = 101;
@@ -1271,42 +1282,41 @@
             this.labelControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(300, 33);
+            this.labelControl12.Location = new System.Drawing.Point(302, 30);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(77, 21);
             this.labelControl12.TabIndex = 100;
             this.labelControl12.Text = "Hạt giống:";
             // 
-            // numericUpDown5
+            // nHatgiong1
             // 
-            this.numericUpDown5.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.numericUpDown5.Location = new System.Drawing.Point(383, 31);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
+            this.nHatgiong1.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nHatgiong1.Location = new System.Drawing.Point(385, 28);
+            this.nHatgiong1.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(58, 27);
-            this.numericUpDown5.TabIndex = 99;
+            this.nHatgiong1.Name = "nHatgiong1";
+            this.nHatgiong1.Size = new System.Drawing.Size(58, 27);
+            this.nHatgiong1.TabIndex = 99;
             // 
-            // textEdit1
+            // txtPlayer1
             // 
-            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textEdit1.Enabled = false;
-            this.textEdit1.Location = new System.Drawing.Point(78, 30);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(199, 26);
-            this.textEdit1.TabIndex = 93;
+            this.txtPlayer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPlayer1.Location = new System.Drawing.Point(80, 17);
+            this.txtPlayer1.Name = "txtPlayer1";
+            this.txtPlayer1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtPlayer1.Properties.Appearance.Options.UseFont = true;
+            this.txtPlayer1.Size = new System.Drawing.Size(184, 26);
+            this.txtPlayer1.TabIndex = 93;
             // 
             // labelControl11
             // 
             this.labelControl11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(9, 33);
+            this.labelControl11.Location = new System.Drawing.Point(11, 36);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(63, 19);
             this.labelControl11.TabIndex = 92;
@@ -1739,6 +1749,48 @@
             // 
             this.bsUpdateData.DataSource = typeof(HDCGStudio.Object.tempUpdating);
             // 
+            // txtPlayer3
+            // 
+            this.txtPlayer3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPlayer3.Location = new System.Drawing.Point(80, 49);
+            this.txtPlayer3.Name = "txtPlayer3";
+            this.txtPlayer3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtPlayer3.Properties.Appearance.Options.UseFont = true;
+            this.txtPlayer3.Size = new System.Drawing.Size(184, 26);
+            this.txtPlayer3.TabIndex = 127;
+            // 
+            // txtPlayer2
+            // 
+            this.txtPlayer2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPlayer2.Location = new System.Drawing.Point(80, 99);
+            this.txtPlayer2.Name = "txtPlayer2";
+            this.txtPlayer2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtPlayer2.Properties.Appearance.Options.UseFont = true;
+            this.txtPlayer2.Size = new System.Drawing.Size(184, 26);
+            this.txtPlayer2.TabIndex = 128;
+            // 
+            // labelControl25
+            // 
+            this.labelControl25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl25.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl25.Appearance.Options.UseFont = true;
+            this.labelControl25.Location = new System.Drawing.Point(270, 20);
+            this.labelControl25.Name = "labelControl25";
+            this.labelControl25.Size = new System.Drawing.Size(9, 19);
+            this.labelControl25.TabIndex = 129;
+            this.labelControl25.Text = "*";
+            // 
+            // labelControl26
+            // 
+            this.labelControl26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl26.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl26.Appearance.Options.UseFont = true;
+            this.labelControl26.Location = new System.Drawing.Point(270, 102);
+            this.labelControl26.Name = "labelControl26";
+            this.labelControl26.Size = new System.Drawing.Size(9, 19);
+            this.labelControl26.TabIndex = 130;
+            this.labelControl26.Text = "*";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1777,8 +1829,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xTabMain)).EndInit();
+            this.xTabMain.ResumeLayout(false);
             this.xTabPageBongda.ResumeLayout(false);
             this.xTabPageBongda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ckCauthuChu.Properties)).EndInit();
@@ -1794,18 +1846,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).EndInit();
             this.xTabPageTennis.ResumeLayout(false);
             this.xTabPageTennis.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHatgiong2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHatgiong1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.listBoxTemplates)).EndInit();
@@ -1824,6 +1876,8 @@
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1899,7 +1953,7 @@
         public CGPreviewControl.FlashTemplateHostControl player;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private System.Windows.Forms.BindingSource bsUpdateData;
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraTab.XtraTabControl xTabMain;
         private DevExpress.XtraTab.XtraTabPage xTabPageBongda;
         private DevExpress.XtraEditors.SimpleButton btnLiveUpdate;
         private DevExpress.XtraEditors.SimpleButton btnChooseColor;
@@ -1923,27 +1977,27 @@
         private System.Windows.Forms.NumericUpDown nBongDaChuNha;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.SimpleButton btnQuanlycauthuHome;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.SimpleButton btnDiemPlayer2;
+        private DevExpress.XtraEditors.TextEdit txtDiemHientaiPlayer2;
         private DevExpress.XtraEditors.LabelControl labelControl16;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.SimpleButton btnDiemPlayer1;
+        private DevExpress.XtraEditors.TextEdit txtDiemHientaiPlayer1;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private System.Windows.Forms.NumericUpDown nHatgiong2;
+        private DevExpress.XtraEditors.TextEdit txtPlayer4;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.LabelControl labelControl12;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private System.Windows.Forms.NumericUpDown nHatgiong1;
+        private DevExpress.XtraEditors.TextEdit txtPlayer1;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl23;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
+        private System.Windows.Forms.NumericUpDown nDiemSet2Player1;
+        private System.Windows.Forms.NumericUpDown nDiemSet3Player1;
+        private System.Windows.Forms.NumericUpDown nDiemSet1Player2;
+        private System.Windows.Forms.NumericUpDown nDiemSet2Player2;
+        private System.Windows.Forms.NumericUpDown nDiemSet3Player2;
+        private System.Windows.Forms.NumericUpDown nDiemSet1Player1;
         private DevExpress.XtraEditors.LabelControl labelControl20;
         private DevExpress.XtraEditors.LabelControl labelControl19;
         private DevExpress.XtraEditors.LabelControl labelControl18;
@@ -1955,5 +2009,9 @@
         private DevExpress.XtraEditors.SimpleButton btnQuanlycauthuAway;
         private DevExpress.XtraEditors.CheckEdit ckCauthuChu;
         private DevExpress.XtraEditors.CheckEdit ckCauthuKhach;
+        private DevExpress.XtraEditors.TextEdit txtPlayer2;
+        private DevExpress.XtraEditors.TextEdit txtPlayer3;
+        private DevExpress.XtraEditors.LabelControl labelControl26;
+        private DevExpress.XtraEditors.LabelControl labelControl25;
     }
 }
