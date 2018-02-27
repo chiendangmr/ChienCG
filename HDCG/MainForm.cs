@@ -583,50 +583,7 @@ namespace HDCGStudio
             {
                 HDMessageBox.Show("404 NOT FOUND: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void btnAddTemplate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cboTempLayer.SelectedIndex < 0)
-                    HDMessageBox.Show("Please selected one layer!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                else
-                {
-                    tempInfoBindingSource.List.Add(new View.tempInfo()
-                    {
-                        tempObj = new Object.tempInfo()
-                        {
-                            Layer = int.Parse(cboTempLayer.Text),
-                            TemplateName = listBoxTemplates.SelectedValue.ToString(),
-                            Duration = int.Parse(numericUpDown1.Text),
-                            Delay = int.Parse(numericUpDown2.Text)
-                        }
-                    });
-
-                    (tempInfoBindingSource.List as BindingList<View.tempInfo>).Select(v => v.tempObj).ToList().SaveObject(_tempInfoXmlPath);
-                }
-            }
-            catch
-            {
-                HDMessageBox.Show("Please select a Template!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-        private void btnRemoveTemplate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (gvTempInfo.FocusedRowHandle < 0)
-                    HDMessageBox.Show("404 - Not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                else
-                {
-                    tempInfoBindingSource.List.Remove(gvTempInfo.GetFocusedRow());
-
-                    (tempInfoBindingSource.List as BindingList<View.tempInfo>).Select(v => v.tempObj).ToList().SaveObject(_tempInfoXmlPath);
-                }
-            }
-            catch { }
-        }
+        }        
         private string getTemplateName(string templateName)
         {
             try
@@ -706,8 +663,7 @@ namespace HDCGStudio
 
         private void cboTemplateType_SelectedValueChanged(object sender, EventArgs e)
         {
-            dicTemplates.Clear();
-            listBoxTemplates.Items.Clear();
+            dicTemplates.Clear();            
             var xmlTemplate = "template_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
             var xmlPlaylist = "playlist_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
             _templateXmlPath = Path.Combine(Application.StartupPath, xmlTemplate);
@@ -720,8 +676,7 @@ namespace HDCGStudio
                     var lstTemplate = Utils.GetObject<List<Object.Template>>(_templateXmlPath).OrderBy(a => a.Name);
                     foreach (var temp in lstTemplate)
                     {
-                        dicTemplates.Add(temp.Name, temp.FileName);
-                        listBoxTemplates.Items.Add(temp.Name);
+                        dicTemplates.Add(temp.Name, temp.FileName);                        
                     }
                 }
                 else
@@ -779,15 +734,7 @@ namespace HDCGStudio
             else if (e.KeyCode == Keys.Escape)
             {
                 btnStop.PerformClick();
-            }
-            else if (e.KeyCode == Keys.Add)
-            {
-                btnAddTemplate.PerformClick();
-            }
-            else if (e.KeyCode == Keys.Subtract)
-            {
-                btnRemoveTemplate.PerformClick();
-            }
+            }            
         }
 
         private void gridTempInfo_KeyDown(object sender, KeyEventArgs e)
@@ -803,15 +750,7 @@ namespace HDCGStudio
             else if (e.KeyCode == Keys.Escape)
             {
                 btnStop.PerformClick();
-            }
-            else if (e.KeyCode == Keys.Add)
-            {
-                btnAddTemplate.PerformClick();
-            }
-            else if (e.KeyCode == Keys.Subtract)
-            {
-                btnRemoveTemplate.PerformClick();
-            }
+            }            
         }
 
         private void MainForm_Load(object sender, EventArgs e)
