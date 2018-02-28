@@ -77,29 +77,25 @@
             this.xTabPageBongda = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.txtHomeTeam = new DevExpress.XtraEditors.TextEdit();
-            this.ckCauthuChu = new DevExpress.XtraEditors.CheckEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.ckCauthuKhach = new DevExpress.XtraEditors.CheckEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.cboDanhsachcauthuAway = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.btnQuanlycauthuAway = new DevExpress.XtraEditors.SimpleButton();
-            this.txtIcon1 = new DevExpress.XtraEditors.TextEdit();
-            this.txtIcon2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtAwayTeam = new DevExpress.XtraEditors.TextEdit();
-            this.txtColor = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
-            this.btnChooseIcon1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnQuanlycauthuHome = new DevExpress.XtraEditors.SimpleButton();
-            this.btnChooseIcon2 = new DevExpress.XtraEditors.SimpleButton();
-            this.cboDanhsachcauthuHome = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.btnChooseColor = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
+            this.xTabDoiHinh = new DevExpress.XtraTab.XtraTabPage();
+            this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.nBongDaChuNha = new System.Windows.Forms.NumericUpDown();
+            this.txtHomeTeam = new DevExpress.XtraEditors.TextEdit();
             this.nBongDaKhach = new System.Windows.Forms.NumericUpDown();
+            this.ckCauthuChu = new DevExpress.XtraEditors.CheckEdit();
+            this.nBongDaChuNha = new System.Windows.Forms.NumericUpDown();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.ckCauthuKhach = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.cboDanhsachcauthuAway = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cboDanhsachcauthuHome = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnChooseIcon2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnQuanlycauthuAway = new DevExpress.XtraEditors.SimpleButton();
+            this.btnQuanlycauthuHome = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
+            this.txtAwayTeam = new DevExpress.XtraEditors.TextEdit();
+            this.xTabTyso = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.xTabPageTennis = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
@@ -158,6 +154,17 @@
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.bsUpdateData = new System.Windows.Forms.BindingSource(this.components);
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.btnChooseColor = new DevExpress.XtraEditors.SimpleButton();
+            this.txtColor = new DevExpress.XtraEditors.TextEdit();
+            this.txtIcon2 = new DevExpress.XtraEditors.TextEdit();
+            this.btnChooseIcon1 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtIcon1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.xTabTrongtai = new DevExpress.XtraTab.XtraTabPage();
+            this.xTabThe = new DevExpress.XtraTab.XtraTabPage();
+            this.xTabThoigian = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -182,17 +189,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
+            this.xtraTabControl2.SuspendLayout();
+            this.xTabDoiHinh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).BeginInit();
+            this.splitContainerControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtHomeTeam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBongDaKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckCauthuChu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBongDaChuNha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckCauthuKhach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuAway.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIcon2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAwayTeam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuHome.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBongDaChuNha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBongDaKhach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAwayTeam.Properties)).BeginInit();
+            this.xTabTyso.SuspendLayout();
             this.xTabPageTennis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer3.Properties)).BeginInit();
@@ -223,6 +233,9 @@
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIcon2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -761,89 +774,143 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.txtHomeTeam);
-            this.xtraTabPage1.Controls.Add(this.ckCauthuChu);
-            this.xtraTabPage1.Controls.Add(this.labelControl7);
-            this.xtraTabPage1.Controls.Add(this.ckCauthuKhach);
-            this.xtraTabPage1.Controls.Add(this.labelControl6);
-            this.xtraTabPage1.Controls.Add(this.cboDanhsachcauthuAway);
-            this.xtraTabPage1.Controls.Add(this.labelControl5);
-            this.xtraTabPage1.Controls.Add(this.btnQuanlycauthuAway);
-            this.xtraTabPage1.Controls.Add(this.txtIcon1);
-            this.xtraTabPage1.Controls.Add(this.txtIcon2);
-            this.xtraTabPage1.Controls.Add(this.txtAwayTeam);
-            this.xtraTabPage1.Controls.Add(this.txtColor);
-            this.xtraTabPage1.Controls.Add(this.labelControl24);
-            this.xtraTabPage1.Controls.Add(this.btnChooseIcon1);
-            this.xtraTabPage1.Controls.Add(this.btnQuanlycauthuHome);
-            this.xtraTabPage1.Controls.Add(this.btnChooseIcon2);
-            this.xtraTabPage1.Controls.Add(this.cboDanhsachcauthuHome);
-            this.xtraTabPage1.Controls.Add(this.btnChooseColor);
-            this.xtraTabPage1.Controls.Add(this.labelControl10);
-            this.xtraTabPage1.Controls.Add(this.labelControl8);
-            this.xtraTabPage1.Controls.Add(this.labelControl9);
-            this.xtraTabPage1.Controls.Add(this.nBongDaChuNha);
-            this.xtraTabPage1.Controls.Add(this.nBongDaKhach);
+            this.xtraTabPage1.Controls.Add(this.xtraTabControl2);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1096, 815);
             this.xtraTabPage1.Text = "xtraTabPage1";
             // 
+            // xtraTabControl2
+            // 
+            this.xtraTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl2.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl2.Name = "xtraTabControl2";
+            this.xtraTabControl2.SelectedTabPage = this.xTabDoiHinh;
+            this.xtraTabControl2.Size = new System.Drawing.Size(1096, 815);
+            this.xtraTabControl2.TabIndex = 113;
+            this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xTabDoiHinh,
+            this.xTabTyso,
+            this.xTabTrongtai,
+            this.xTabThe,
+            this.xTabThoigian});
+            // 
+            // xTabDoiHinh
+            // 
+            this.xTabDoiHinh.Controls.Add(this.splitContainerControl3);
+            this.xTabDoiHinh.Name = "xTabDoiHinh";
+            this.xTabDoiHinh.Size = new System.Drawing.Size(1089, 780);
+            this.xTabDoiHinh.Text = "Đội hình";
+            // 
+            // splitContainerControl3
+            // 
+            this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl3.Name = "splitContainerControl3";
+            this.splitContainerControl3.Panel1.Controls.Add(this.labelControl8);
+            this.splitContainerControl3.Panel1.Controls.Add(this.txtHomeTeam);
+            this.splitContainerControl3.Panel1.Controls.Add(this.ckCauthuChu);
+            this.splitContainerControl3.Panel1.Controls.Add(this.nBongDaChuNha);
+            this.splitContainerControl3.Panel1.Controls.Add(this.labelControl9);
+            this.splitContainerControl3.Panel1.Controls.Add(this.labelControl10);
+            this.splitContainerControl3.Panel1.Controls.Add(this.cboDanhsachcauthuHome);
+            this.splitContainerControl3.Panel1.Controls.Add(this.btnQuanlycauthuHome);
+            this.splitContainerControl3.Panel1.Controls.Add(this.labelControl24);
+            this.splitContainerControl3.Panel1.Text = "Panel1";
+            this.splitContainerControl3.Panel2.Controls.Add(this.txtAwayTeam);
+            this.splitContainerControl3.Panel2.Controls.Add(this.nBongDaKhach);
+            this.splitContainerControl3.Panel2.Controls.Add(this.ckCauthuKhach);
+            this.splitContainerControl3.Panel2.Controls.Add(this.cboDanhsachcauthuAway);
+            this.splitContainerControl3.Panel2.Controls.Add(this.btnQuanlycauthuAway);
+            this.splitContainerControl3.Panel2.Controls.Add(this.btnChooseIcon2);
+            this.splitContainerControl3.Panel2.Text = "Panel2";
+            this.splitContainerControl3.Size = new System.Drawing.Size(1089, 780);
+            this.splitContainerControl3.SplitterPosition = 615;
+            this.splitContainerControl3.TabIndex = 113;
+            this.splitContainerControl3.Text = "splitContainerControl3";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(44, 88);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(46, 21);
+            this.labelControl8.TabIndex = 122;
+            this.labelControl8.Text = "Tỷ số:";
+            // 
             // txtHomeTeam
             // 
             this.txtHomeTeam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtHomeTeam.Location = new System.Drawing.Point(134, 620);
+            this.txtHomeTeam.Location = new System.Drawing.Point(158, 58);
             this.txtHomeTeam.Name = "txtHomeTeam";
             this.txtHomeTeam.Size = new System.Drawing.Size(202, 22);
-            this.txtHomeTeam.TabIndex = 107;
+            this.txtHomeTeam.TabIndex = 130;
+            // 
+            // nBongDaKhach
+            // 
+            this.nBongDaKhach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.nBongDaKhach.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nBongDaKhach.Location = new System.Drawing.Point(176, 253);
+            this.nBongDaKhach.Name = "nBongDaKhach";
+            this.nBongDaKhach.Size = new System.Drawing.Size(58, 27);
+            this.nBongDaKhach.TabIndex = 124;
             // 
             // ckCauthuChu
             // 
             this.ckCauthuChu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ckCauthuChu.Location = new System.Drawing.Point(342, 691);
+            this.ckCauthuChu.Location = new System.Drawing.Point(366, 129);
             this.ckCauthuChu.MenuManager = this.barManager1;
             this.ckCauthuChu.Name = "ckCauthuChu";
             this.ckCauthuChu.Properties.Caption = "";
             this.ckCauthuChu.Size = new System.Drawing.Size(30, 19);
-            this.ckCauthuChu.TabIndex = 112;
-            this.ckCauthuChu.CheckedChanged += new System.EventHandler(this.ckCauthuChu_CheckedChanged);
+            this.ckCauthuChu.TabIndex = 135;
             // 
-            // labelControl7
+            // nBongDaChuNha
             // 
-            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(285, 725);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(51, 19);
-            this.labelControl7.TabIndex = 88;
-            this.labelControl7.Text = "Icon 1:";
+            this.nBongDaChuNha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.nBongDaChuNha.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nBongDaChuNha.Location = new System.Drawing.Point(302, 88);
+            this.nBongDaChuNha.Name = "nBongDaChuNha";
+            this.nBongDaChuNha.Size = new System.Drawing.Size(58, 27);
+            this.nBongDaChuNha.TabIndex = 123;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(573, 46);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(43, 40);
+            this.labelControl9.TabIndex = 125;
+            this.labelControl9.Text = "VS";
             // 
             // ckCauthuKhach
             // 
             this.ckCauthuKhach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ckCauthuKhach.Location = new System.Drawing.Point(741, 693);
+            this.ckCauthuKhach.Location = new System.Drawing.Point(373, 135);
             this.ckCauthuKhach.MenuManager = this.barManager1;
             this.ckCauthuKhach.Name = "ckCauthuKhach";
             this.ckCauthuKhach.Properties.Caption = "";
             this.ckCauthuKhach.Size = new System.Drawing.Size(30, 19);
-            this.ckCauthuKhach.TabIndex = 111;
-            this.ckCauthuKhach.CheckedChanged += new System.EventHandler(this.ckCauthuKhach_CheckedChanged);
+            this.ckCauthuKhach.TabIndex = 134;
             // 
-            // labelControl6
+            // labelControl10
             // 
-            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(20, 725);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(67, 21);
-            this.labelControl6.TabIndex = 89;
-            this.labelControl6.Text = "Đội hình:";
+            this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(44, 127);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(106, 21);
+            this.labelControl10.TabIndex = 126;
+            this.labelControl10.Text = "Cầu thủ (thẻ):";
             // 
             // cboDanhsachcauthuAway
             // 
             this.cboDanhsachcauthuAway.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cboDanhsachcauthuAway.Location = new System.Drawing.Point(516, 689);
+            this.cboDanhsachcauthuAway.Location = new System.Drawing.Point(176, 292);
             this.cboDanhsachcauthuAway.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboDanhsachcauthuAway.MenuManager = this.barManager1;
             this.cboDanhsachcauthuAway.Name = "cboDanhsachcauthuAway";
@@ -853,116 +920,12 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboDanhsachcauthuAway.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboDanhsachcauthuAway.Size = new System.Drawing.Size(219, 26);
-            this.cboDanhsachcauthuAway.TabIndex = 110;
-            this.cboDanhsachcauthuAway.SelectedIndexChanged += new System.EventHandler(this.cboDanhsachcauthuAway_SelectedIndexChanged);
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(544, 722);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(51, 19);
-            this.labelControl5.TabIndex = 90;
-            this.labelControl5.Text = "Icon 2:";
-            // 
-            // btnQuanlycauthuAway
-            // 
-            this.btnQuanlycauthuAway.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnQuanlycauthuAway.Location = new System.Drawing.Point(741, 619);
-            this.btnQuanlycauthuAway.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnQuanlycauthuAway.Name = "btnQuanlycauthuAway";
-            this.btnQuanlycauthuAway.Size = new System.Drawing.Size(37, 26);
-            this.btnQuanlycauthuAway.TabIndex = 109;
-            this.btnQuanlycauthuAway.Text = "...";
-            this.btnQuanlycauthuAway.ToolTip = "Quản lý danh sách cầu thủ đội khách";
-            this.btnQuanlycauthuAway.Click += new System.EventHandler(this.btnQuanlycauthuAway_Click);
-            // 
-            // txtIcon1
-            // 
-            this.txtIcon1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtIcon1.Enabled = false;
-            this.txtIcon1.Location = new System.Drawing.Point(342, 722);
-            this.txtIcon1.Name = "txtIcon1";
-            this.txtIcon1.Size = new System.Drawing.Size(134, 22);
-            this.txtIcon1.TabIndex = 91;
-            // 
-            // txtIcon2
-            // 
-            this.txtIcon2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtIcon2.Enabled = false;
-            this.txtIcon2.Location = new System.Drawing.Point(601, 722);
-            this.txtIcon2.Name = "txtIcon2";
-            this.txtIcon2.Size = new System.Drawing.Size(134, 22);
-            this.txtIcon2.TabIndex = 92;
-            // 
-            // txtAwayTeam
-            // 
-            this.txtAwayTeam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAwayTeam.Location = new System.Drawing.Point(516, 621);
-            this.txtAwayTeam.Name = "txtAwayTeam";
-            this.txtAwayTeam.Size = new System.Drawing.Size(219, 22);
-            this.txtAwayTeam.TabIndex = 108;
-            // 
-            // txtColor
-            // 
-            this.txtColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtColor.Enabled = false;
-            this.txtColor.Location = new System.Drawing.Point(93, 724);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(135, 22);
-            this.txtColor.TabIndex = 93;
-            // 
-            // labelControl24
-            // 
-            this.labelControl24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl24.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl24.Appearance.Options.UseFont = true;
-            this.labelControl24.Location = new System.Drawing.Point(20, 618);
-            this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(31, 21);
-            this.labelControl24.TabIndex = 104;
-            this.labelControl24.Text = "Đội:";
-            // 
-            // btnChooseIcon1
-            // 
-            this.btnChooseIcon1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChooseIcon1.Location = new System.Drawing.Point(482, 720);
-            this.btnChooseIcon1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnChooseIcon1.Name = "btnChooseIcon1";
-            this.btnChooseIcon1.Size = new System.Drawing.Size(40, 26);
-            this.btnChooseIcon1.TabIndex = 94;
-            this.btnChooseIcon1.Text = "...";
-            this.btnChooseIcon1.Click += new System.EventHandler(this.btnChooseIcon1_Click);
-            // 
-            // btnQuanlycauthuHome
-            // 
-            this.btnQuanlycauthuHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnQuanlycauthuHome.Location = new System.Drawing.Point(89, 619);
-            this.btnQuanlycauthuHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnQuanlycauthuHome.Name = "btnQuanlycauthuHome";
-            this.btnQuanlycauthuHome.Size = new System.Drawing.Size(37, 26);
-            this.btnQuanlycauthuHome.TabIndex = 103;
-            this.btnQuanlycauthuHome.Text = "...";
-            this.btnQuanlycauthuHome.ToolTip = "Quản lý danh sách cầu thủ chủ nhà";
-            this.btnQuanlycauthuHome.Click += new System.EventHandler(this.btnQuanlycauthu_Click);
-            // 
-            // btnChooseIcon2
-            // 
-            this.btnChooseIcon2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChooseIcon2.Location = new System.Drawing.Point(741, 720);
-            this.btnChooseIcon2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnChooseIcon2.Name = "btnChooseIcon2";
-            this.btnChooseIcon2.Size = new System.Drawing.Size(35, 26);
-            this.btnChooseIcon2.TabIndex = 95;
-            this.btnChooseIcon2.Text = "...";
-            this.btnChooseIcon2.Click += new System.EventHandler(this.btnChooseIcon2_Click);
+            this.cboDanhsachcauthuAway.TabIndex = 133;
             // 
             // cboDanhsachcauthuHome
             // 
             this.cboDanhsachcauthuHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cboDanhsachcauthuHome.Location = new System.Drawing.Point(134, 686);
+            this.cboDanhsachcauthuHome.Location = new System.Drawing.Point(158, 124);
             this.cboDanhsachcauthuHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboDanhsachcauthuHome.MenuManager = this.barManager1;
             this.cboDanhsachcauthuHome.Name = "cboDanhsachcauthuHome";
@@ -972,75 +935,77 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboDanhsachcauthuHome.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboDanhsachcauthuHome.Size = new System.Drawing.Size(202, 26);
-            this.cboDanhsachcauthuHome.TabIndex = 102;
-            this.cboDanhsachcauthuHome.SelectedIndexChanged += new System.EventHandler(this.cboDanhsachcauthu_SelectedIndexChanged);
+            this.cboDanhsachcauthuHome.TabIndex = 127;
             // 
-            // btnChooseColor
+            // btnChooseIcon2
             // 
-            this.btnChooseColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChooseColor.Location = new System.Drawing.Point(234, 720);
-            this.btnChooseColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnChooseColor.Name = "btnChooseColor";
-            this.btnChooseColor.Size = new System.Drawing.Size(35, 26);
-            this.btnChooseColor.TabIndex = 96;
-            this.btnChooseColor.Text = "...";
-            this.btnChooseColor.Click += new System.EventHandler(this.btnChooseColor_Click);
+            this.btnChooseIcon2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnChooseIcon2.Location = new System.Drawing.Point(373, 162);
+            this.btnChooseIcon2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChooseIcon2.Name = "btnChooseIcon2";
+            this.btnChooseIcon2.Size = new System.Drawing.Size(35, 26);
+            this.btnChooseIcon2.TabIndex = 120;
+            this.btnChooseIcon2.Text = "...";
             // 
-            // labelControl10
+            // btnQuanlycauthuAway
             // 
-            this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(20, 689);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(106, 21);
-            this.labelControl10.TabIndex = 101;
-            this.labelControl10.Text = "Cầu thủ (thẻ):";
+            this.btnQuanlycauthuAway.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnQuanlycauthuAway.Location = new System.Drawing.Point(373, 61);
+            this.btnQuanlycauthuAway.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnQuanlycauthuAway.Name = "btnQuanlycauthuAway";
+            this.btnQuanlycauthuAway.Size = new System.Drawing.Size(37, 26);
+            this.btnQuanlycauthuAway.TabIndex = 132;
+            this.btnQuanlycauthuAway.Text = "...";
+            this.btnQuanlycauthuAway.ToolTip = "Quản lý danh sách cầu thủ đội khách";
             // 
-            // labelControl8
+            // btnQuanlycauthuHome
             // 
-            this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(20, 650);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(46, 21);
-            this.labelControl8.TabIndex = 97;
-            this.labelControl8.Text = "Tỷ số:";
+            this.btnQuanlycauthuHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnQuanlycauthuHome.Location = new System.Drawing.Point(113, 57);
+            this.btnQuanlycauthuHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnQuanlycauthuHome.Name = "btnQuanlycauthuHome";
+            this.btnQuanlycauthuHome.Size = new System.Drawing.Size(37, 26);
+            this.btnQuanlycauthuHome.TabIndex = 128;
+            this.btnQuanlycauthuHome.Text = "...";
+            this.btnQuanlycauthuHome.ToolTip = "Quản lý danh sách cầu thủ chủ nhà";
             // 
-            // labelControl9
+            // labelControl24
             // 
-            this.labelControl9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(419, 631);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(14, 40);
-            this.labelControl9.TabIndex = 100;
-            this.labelControl9.Text = "-";
+            this.labelControl24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl24.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl24.Appearance.Options.UseFont = true;
+            this.labelControl24.Location = new System.Drawing.Point(44, 56);
+            this.labelControl24.Name = "labelControl24";
+            this.labelControl24.Size = new System.Drawing.Size(31, 21);
+            this.labelControl24.TabIndex = 129;
+            this.labelControl24.Text = "Đội:";
             // 
-            // nBongDaChuNha
+            // txtAwayTeam
             // 
-            this.nBongDaChuNha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.nBongDaChuNha.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nBongDaChuNha.Location = new System.Drawing.Point(278, 650);
-            this.nBongDaChuNha.Name = "nBongDaChuNha";
-            this.nBongDaChuNha.Size = new System.Drawing.Size(58, 27);
-            this.nBongDaChuNha.TabIndex = 98;
+            this.txtAwayTeam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtAwayTeam.Location = new System.Drawing.Point(176, 224);
+            this.txtAwayTeam.Name = "txtAwayTeam";
+            this.txtAwayTeam.Size = new System.Drawing.Size(219, 22);
+            this.txtAwayTeam.TabIndex = 131;
             // 
-            // nBongDaKhach
+            // xTabTyso
             // 
-            this.nBongDaKhach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.nBongDaKhach.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nBongDaKhach.Location = new System.Drawing.Point(516, 650);
-            this.nBongDaKhach.Name = "nBongDaKhach";
-            this.nBongDaKhach.Size = new System.Drawing.Size(58, 27);
-            this.nBongDaKhach.TabIndex = 99;
+            this.xTabTyso.Controls.Add(this.labelControl7);
+            this.xTabTyso.Controls.Add(this.labelControl6);
+            this.xTabTyso.Controls.Add(this.btnChooseColor);
+            this.xTabTyso.Controls.Add(this.txtColor);
+            this.xTabTyso.Controls.Add(this.txtIcon2);
+            this.xTabTyso.Controls.Add(this.btnChooseIcon1);
+            this.xTabTyso.Controls.Add(this.txtIcon1);
+            this.xTabTyso.Controls.Add(this.labelControl5);
+            this.xTabTyso.Name = "xTabTyso";
+            this.xTabTyso.Size = new System.Drawing.Size(1089, 781);
+            this.xTabTyso.Text = "Thông số/Tỷ số";
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1074, 815);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1096, 815);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // xTabPageTennis
@@ -1075,7 +1040,7 @@
             this.xTabPageTennis.Controls.Add(this.txtPlayer1);
             this.xTabPageTennis.Controls.Add(this.labelControl11);
             this.xTabPageTennis.Name = "xTabPageTennis";
-            this.xTabPageTennis.Size = new System.Drawing.Size(1081, 849);
+            this.xTabPageTennis.Size = new System.Drawing.Size(1103, 849);
             this.xTabPageTennis.Text = "Tennis";
             // 
             // labelControl26
@@ -1540,13 +1505,12 @@
             // 
             // btnStop
             // 
-            this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnStop.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnStop.Appearance.Options.UseFont = true;
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnStop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStop.ImageOptions.Image")));
             this.btnStop.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnStop.Location = new System.Drawing.Point(151, 305);
+            this.btnStop.Location = new System.Drawing.Point(479, 113);
             this.btnStop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(90, 42);
@@ -1559,7 +1523,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(193, 406);
+            this.labelControl3.Location = new System.Drawing.Point(355, 17);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(101, 17);
@@ -1568,12 +1532,11 @@
             // 
             // btnLiveUpdate
             // 
-            this.btnLiveUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLiveUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnLiveUpdate.Appearance.Options.UseFont = true;
             this.btnLiveUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLiveUpdate.ImageOptions.Image")));
             this.btnLiveUpdate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnLiveUpdate.Location = new System.Drawing.Point(268, 333);
+            this.btnLiveUpdate.Location = new System.Drawing.Point(479, 192);
             this.btnLiveUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLiveUpdate.Name = "btnLiveUpdate";
             this.btnLiveUpdate.Size = new System.Drawing.Size(132, 42);
@@ -1589,7 +1552,7 @@
             0,
             0,
             0});
-            this.numericUpDown2.Location = new System.Drawing.Point(280, 431);
+            this.numericUpDown2.Location = new System.Drawing.Point(442, 42);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             1000000,
@@ -1602,7 +1565,7 @@
             // 
             // cboTemplateType
             // 
-            this.cboTemplateType.Location = new System.Drawing.Point(209, 344);
+            this.cboTemplateType.Location = new System.Drawing.Point(514, 73);
             this.cboTemplateType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTemplateType.MenuManager = this.barManager1;
             this.cboTemplateType.Name = "cboTemplateType";
@@ -1621,7 +1584,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(196, 433);
+            this.labelControl4.Location = new System.Drawing.Point(358, 44);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(78, 17);
@@ -1632,7 +1595,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(99, 346);
+            this.labelControl1.Location = new System.Drawing.Point(404, 75);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(104, 17);
@@ -1646,7 +1609,7 @@
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(317, 406);
+            this.numericUpDown1.Location = new System.Drawing.Point(479, 17);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1000000,
@@ -1659,12 +1622,11 @@
             // 
             // btnPreviewTemplate
             // 
-            this.btnPreviewTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPreviewTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnPreviewTemplate.Appearance.Options.UseFont = true;
             this.btnPreviewTemplate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreviewTemplate.ImageOptions.Image")));
             this.btnPreviewTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnPreviewTemplate.Location = new System.Drawing.Point(59, 383);
+            this.btnPreviewTemplate.Location = new System.Drawing.Point(496, 261);
             this.btnPreviewTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPreviewTemplate.Name = "btnPreviewTemplate";
             this.btnPreviewTemplate.Size = new System.Drawing.Size(100, 42);
@@ -1675,13 +1637,12 @@
             // 
             // btnPlay
             // 
-            this.btnPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPlay.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnPlay.Appearance.Options.UseFont = true;
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPlay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.ImageOptions.Image")));
             this.btnPlay.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnPlay.Location = new System.Drawing.Point(388, 383);
+            this.btnPlay.Location = new System.Drawing.Point(521, 386);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(90, 42);
@@ -1692,7 +1653,7 @@
             // 
             // cboTempLayer
             // 
-            this.cboTempLayer.Location = new System.Drawing.Point(371, 344);
+            this.cboTempLayer.Location = new System.Drawing.Point(281, 18);
             this.cboTempLayer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTempLayer.MenuManager = this.barManager1;
             this.cboTempLayer.Name = "cboTempLayer";
@@ -1728,7 +1689,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(322, 347);
+            this.labelControl2.Location = new System.Drawing.Point(232, 21);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(43, 17);
@@ -1737,12 +1698,11 @@
             // 
             // btnUpdateAll
             // 
-            this.btnUpdateAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnUpdateAll.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnUpdateAll.Appearance.Options.UseFont = true;
             this.btnUpdateAll.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateAll.ImageOptions.Image")));
             this.btnUpdateAll.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnUpdateAll.Location = new System.Drawing.Point(193, 383);
+            this.btnUpdateAll.Location = new System.Drawing.Point(464, 324);
             this.btnUpdateAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdateAll.Name = "btnUpdateAll";
             this.btnUpdateAll.Size = new System.Drawing.Size(172, 42);
@@ -1780,6 +1740,104 @@
             // bsUpdateData
             // 
             this.bsUpdateData.DataSource = typeof(HDCGStudio.Object.tempUpdating);
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(291, 467);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(51, 19);
+            this.labelControl7.TabIndex = 122;
+            this.labelControl7.Text = "Icon 1:";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(21, 460);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(67, 21);
+            this.labelControl6.TabIndex = 123;
+            this.labelControl6.Text = "Đội hình:";
+            // 
+            // btnChooseColor
+            // 
+            this.btnChooseColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnChooseColor.Location = new System.Drawing.Point(235, 455);
+            this.btnChooseColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChooseColor.Name = "btnChooseColor";
+            this.btnChooseColor.Size = new System.Drawing.Size(35, 26);
+            this.btnChooseColor.TabIndex = 129;
+            this.btnChooseColor.Text = "...";
+            // 
+            // txtColor
+            // 
+            this.txtColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtColor.Enabled = false;
+            this.txtColor.Location = new System.Drawing.Point(94, 459);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(135, 22);
+            this.txtColor.TabIndex = 127;
+            // 
+            // txtIcon2
+            // 
+            this.txtIcon2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtIcon2.Enabled = false;
+            this.txtIcon2.Location = new System.Drawing.Point(607, 462);
+            this.txtIcon2.Name = "txtIcon2";
+            this.txtIcon2.Size = new System.Drawing.Size(134, 22);
+            this.txtIcon2.TabIndex = 126;
+            // 
+            // btnChooseIcon1
+            // 
+            this.btnChooseIcon1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnChooseIcon1.Location = new System.Drawing.Point(488, 460);
+            this.btnChooseIcon1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChooseIcon1.Name = "btnChooseIcon1";
+            this.btnChooseIcon1.Size = new System.Drawing.Size(40, 26);
+            this.btnChooseIcon1.TabIndex = 128;
+            this.btnChooseIcon1.Text = "...";
+            // 
+            // txtIcon1
+            // 
+            this.txtIcon1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtIcon1.Enabled = false;
+            this.txtIcon1.Location = new System.Drawing.Point(348, 462);
+            this.txtIcon1.Name = "txtIcon1";
+            this.txtIcon1.Size = new System.Drawing.Size(134, 22);
+            this.txtIcon1.TabIndex = 125;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(550, 462);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(51, 19);
+            this.labelControl5.TabIndex = 124;
+            this.labelControl5.Text = "Icon 2:";
+            // 
+            // xTabTrongtai
+            // 
+            this.xTabTrongtai.Name = "xTabTrongtai";
+            this.xTabTrongtai.Size = new System.Drawing.Size(0, 0);
+            this.xTabTrongtai.Text = "Trọng tài";
+            // 
+            // xTabThe
+            // 
+            this.xTabThe.Name = "xTabThe";
+            this.xTabThe.Size = new System.Drawing.Size(0, 0);
+            this.xTabThe.Text = "Thẻ";
+            // 
+            // xTabThoigian
+            // 
+            this.xTabThoigian.Name = "xTabThoigian";
+            this.xTabThoigian.Size = new System.Drawing.Size(0, 0);
+            this.xTabThoigian.Text = "Thời gian";
             // 
             // MainForm
             // 
@@ -1826,18 +1884,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
-            this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
+            this.xtraTabControl2.ResumeLayout(false);
+            this.xTabDoiHinh.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).EndInit();
+            this.splitContainerControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtHomeTeam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBongDaKhach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckCauthuChu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBongDaChuNha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckCauthuKhach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuAway.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIcon2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAwayTeam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuHome.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBongDaChuNha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBongDaKhach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAwayTeam.Properties)).EndInit();
+            this.xTabTyso.ResumeLayout(false);
+            this.xTabTyso.PerformLayout();
             this.xTabPageTennis.ResumeLayout(false);
             this.xTabPageTennis.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).EndInit();
@@ -1869,6 +1930,9 @@
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIcon2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1943,27 +2007,11 @@
         private DevExpress.XtraTab.XtraTabControl xTabMain;
         private DevExpress.XtraTab.XtraTabPage xTabPageBongda;
         private DevExpress.XtraEditors.SimpleButton btnLiveUpdate;
-        private DevExpress.XtraEditors.SimpleButton btnChooseColor;
-        private DevExpress.XtraEditors.SimpleButton btnChooseIcon2;
-        private DevExpress.XtraEditors.SimpleButton btnChooseIcon1;
         private DevExpress.XtraEditors.SimpleButton btnUpdateAll;
-        private DevExpress.XtraEditors.TextEdit txtColor;
-        private DevExpress.XtraEditors.TextEdit txtIcon2;
-        private DevExpress.XtraEditors.TextEdit txtIcon1;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.SimpleButton btnPreviewTemplate;
         private DevExpress.XtraEditors.SimpleButton btnPlay;
         private DevExpress.XtraEditors.SimpleButton btnStop;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraTab.XtraTabPage xTabPageTennis;
-        private DevExpress.XtraEditors.ComboBoxEdit cboDanhsachcauthuHome;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private System.Windows.Forms.NumericUpDown nBongDaKhach;
-        private System.Windows.Forms.NumericUpDown nBongDaChuNha;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.SimpleButton btnQuanlycauthuHome;
         private DevExpress.XtraEditors.SimpleButton btnDiemPlayer2;
         private DevExpress.XtraEditors.TextEdit txtDiemHientaiPlayer2;
         private DevExpress.XtraEditors.LabelControl labelControl16;
@@ -1989,13 +2037,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl19;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.LabelControl labelControl17;
-        private DevExpress.XtraEditors.TextEdit txtHomeTeam;
-        private DevExpress.XtraEditors.TextEdit txtAwayTeam;
-        private DevExpress.XtraEditors.LabelControl labelControl24;
-        private DevExpress.XtraEditors.ComboBoxEdit cboDanhsachcauthuAway;
-        private DevExpress.XtraEditors.SimpleButton btnQuanlycauthuAway;
-        private DevExpress.XtraEditors.CheckEdit ckCauthuChu;
-        private DevExpress.XtraEditors.CheckEdit ckCauthuKhach;
         private DevExpress.XtraEditors.TextEdit txtPlayer2;
         private DevExpress.XtraEditors.TextEdit txtPlayer3;
         private DevExpress.XtraEditors.LabelControl labelControl26;
@@ -2004,5 +2045,35 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
+        private DevExpress.XtraTab.XtraTabPage xTabDoiHinh;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.TextEdit txtHomeTeam;
+        private System.Windows.Forms.NumericUpDown nBongDaKhach;
+        private DevExpress.XtraEditors.CheckEdit ckCauthuChu;
+        private System.Windows.Forms.NumericUpDown nBongDaChuNha;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.CheckEdit ckCauthuKhach;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.ComboBoxEdit cboDanhsachcauthuAway;
+        private DevExpress.XtraEditors.ComboBoxEdit cboDanhsachcauthuHome;
+        private DevExpress.XtraEditors.SimpleButton btnChooseIcon2;
+        private DevExpress.XtraEditors.SimpleButton btnQuanlycauthuAway;
+        private DevExpress.XtraEditors.SimpleButton btnQuanlycauthuHome;
+        private DevExpress.XtraEditors.LabelControl labelControl24;
+        private DevExpress.XtraEditors.TextEdit txtAwayTeam;
+        private DevExpress.XtraTab.XtraTabPage xTabTyso;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.SimpleButton btnChooseColor;
+        private DevExpress.XtraEditors.TextEdit txtColor;
+        private DevExpress.XtraEditors.TextEdit txtIcon2;
+        private DevExpress.XtraEditors.SimpleButton btnChooseIcon1;
+        private DevExpress.XtraEditors.TextEdit txtIcon1;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraTab.XtraTabPage xTabTrongtai;
+        private DevExpress.XtraTab.XtraTabPage xTabThe;
+        private DevExpress.XtraTab.XtraTabPage xTabThoigian;
     }
 }

@@ -24,7 +24,7 @@
 	import flash.globalization.NumberFormatter;
 	import flash.globalization.LocaleID;
 		
-	public class BarTySoSet1 extends CasparTemplate{
+	public class BarTySoSet1_GiaoBong1 extends CasparTemplate{
 		
 		public var myTotalBar:MovieClip = new totalBar();
 				
@@ -47,7 +47,7 @@
 		private var singleTween:Tween = null;
 		private var txtTween:Tween = null;
 				
-		public function BarTySoSet1() {
+		public function BarTySoSet1_GiaoBong1() {
 			// constructor code
 			super();
 			
