@@ -43,6 +43,7 @@ namespace HDCGStudio
         string _danhsachcauthuAwayXml = "";
         string _danhsachgiaidauXmlPath = "";
         List<Object.League> _lstLeagues = new List<Object.League>();
+        List<Object.Team> _lstTeams = new List<Object.Team>();
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
         Dictionary<string, string> dicDanhsachcauthuHome = new Dictionary<string, string>();
@@ -59,6 +60,7 @@ namespace HDCGStudio
                 cboVideoLayer.SelectedIndex = 0;
                 cboTempLayer.SelectedIndex = 5;
                 cboTemplateType.SelectedIndex = 0;
+                cboGiaiDau.SelectedIndex = 0;
 
                 _videoXmlPath = Path.Combine(Application.StartupPath, "Video.xml");
                 try
@@ -996,13 +998,6 @@ namespace HDCGStudio
                 txtColor.Text = frm.FileName;
         }
 
-        private void btnQuanlycauthu_Click(object sender, EventArgs e)
-        {
-            ManagePlayersForm frmPlayer = new ManagePlayersForm("Home");
-            frmPlayer.Show();
-            frmPlayer.Activate();
-        }
-
         private void cboDanhsachcauthu_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -1116,14 +1111,6 @@ namespace HDCGStudio
         {
             return playerString.Substring(playerString.IndexOf('-') + 4).Trim();
         }
-
-        private void btnQuanlycauthuAway_Click(object sender, EventArgs e)
-        {
-            ManagePlayersForm frmPlayer = new ManagePlayersForm("Away");
-            frmPlayer.Show();
-            frmPlayer.Activate();
-        }
-
         private void cboDanhsachcauthuAway_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -1153,17 +1140,17 @@ namespace HDCGStudio
 
         private void ckCauthuChu_CheckedChanged(object sender, EventArgs e)
         {
-            if (ckCauthuChu.Checked)
+            if (ckChu.Checked)
             {
-                ckCauthuKhach.Checked = false;
+                ckKhach.Checked = false;
             }
         }
 
         private void ckCauthuKhach_CheckedChanged(object sender, EventArgs e)
         {
-            if (ckCauthuKhach.Checked)
+            if (ckKhach.Checked)
             {
-                ckCauthuChu.Checked = false;
+                ckChu.Checked = false;
             }
         }
 
@@ -1183,8 +1170,8 @@ namespace HDCGStudio
                 {
                     if (File.Exists(danhsachdoiPath))
                     {
-                        var lstData = Utils.GetObject<List<Object.Team>>(danhsachdoiPath);
-                        foreach (var data in lstData)
+                        _lstTeams = Utils.GetObject<List<Object.Team>>(danhsachdoiPath);
+                        foreach (var data in _lstTeams)
                         {
                             cboDoiChuNha.Properties.Items.Add(data.Name);
                             cboDoiKhach.Properties.Items.Add(data.Name);
@@ -1202,9 +1189,128 @@ namespace HDCGStudio
 
         private void btnQuanlycauthuHome_Click(object sender, EventArgs e)
         {
-            FormManageTeam formManageTeam = new FormManageTeam(cboGiaiDau.Text);
-            formManageTeam.Show();
-            formManageTeam.Activate();
+            if (cboGiaiDau.Text.Trim().Length == 0)
+            {
+                HDMessageBox.Show("Chọn giải đấu trước!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                FormManageTeam formManageTeam = new FormManageTeam(cboGiaiDau.Text);
+                formManageTeam.Show();
+                formManageTeam.Activate();
+            }
+        }
+
+        private void btnQuanlyDangky_Click(object sender, EventArgs e)
+        {
+            if (cboGiaiDau.Text.Trim().Length == 0 || cboDoiChuNha.Text.Trim().Length == 0)
+            {
+                HDMessageBox.Show("Chọn giải đấu và đội trước!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                ManagePlayersForm frmPlayer = new ManagePlayersForm(cboGiaiDau.Text, cboDoiChuNha.Text);
+                frmPlayer.Show();
+                frmPlayer.Activate();
+            }
+        }
+
+        private void cboDoiChuNha_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var temp in _lstTeams)
+            {
+                if (temp.Name == cboDoiChuNha.Text)
+                {
+                    txtHomeShortName.Text = temp.ShortName;
+                    txtHomeCoach.Text = temp.CoachName;
+                    break;
+                }
+            }
+            var templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboDoiChuNha.Text).Replace(" ", "_") + ".xml");
+            try
+            {
+                if (File.Exists(templatesXmlPath))
+                {
+                    bsHomePlayer.Clear();
+                    bsHomePlayerDuBi.Clear();
+                    var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
+                    foreach (var temp in lstTemplate)
+                        bsHomePlayer.Add(new View.Player()
+                        {
+                            mObj = temp
+                        });
+                    var lstDubi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
+                    foreach (var temp in lstDubi)
+                        bsHomePlayerDuBi.Add(new View.Player()
+                        {
+                            mObj = temp
+                        });
+                }
+                else
+                {
+                    File.Create(templatesXmlPath).Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cboDoiKhach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var temp in _lstTeams)
+            {
+                if (temp.Name == cboDoiKhach.Text)
+                {
+                    txtAwayShortName.Text = temp.ShortName;
+                    txtAwayCoach.Text = temp.CoachName;
+                    break;
+                }
+            }
+            var templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboDoiKhach.Text).Replace(" ", "_") + ".xml");
+            try
+            {
+                if (File.Exists(templatesXmlPath))
+                {
+                    bsAwayPlayer.Clear();
+                    bsAwayPlayerDuBi.Clear();
+                    var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
+                    foreach (var temp in lstTemplate)
+                        bsAwayPlayer.Add(new View.Player()
+                        {
+                            mObj = temp
+                        });
+                    var lstDuBi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
+                    foreach (var temp in lstDuBi)
+                        bsAwayPlayerDuBi.Add(new View.Player()
+                        {
+                            mObj = temp
+                        });
+                }
+                else
+                {
+                    File.Create(templatesXmlPath).Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnQuanlyDangkyAway_Click(object sender, EventArgs e)
+        {
+            if (cboGiaiDau.Text.Trim().Length == 0 || cboDoiKhach.Text.Trim().Length == 0)
+            {
+                HDMessageBox.Show("Chọn giải đấu và đội trước!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                ManagePlayersForm frmPlayer = new ManagePlayersForm(cboGiaiDau.Text, cboDoiKhach.Text);
+                frmPlayer.Show();
+                frmPlayer.Activate();
+            }
         }
     }
 }

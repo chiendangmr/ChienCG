@@ -16,44 +16,45 @@ namespace HDCGStudio
 {
     public partial class ManagePlayersForm : Form
     {
-        string _teamType = "";
-        public ManagePlayersForm(string team)
+        string _giaidau = "";
+        string _team = "";
+        public ManagePlayersForm(string GiaiDau, string team)
         {
             InitializeComponent();
-            _teamType = team;
+            _giaidau = GiaiDau;
+            _team = team;
         }
         string templatesXmlPath = "";
+        string _danhsachdoiXmlPath = "";
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
-            templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu" + _teamType + ".xml");
+            _danhsachdoiXmlPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + Utils.ConvertToVietnameseNonSign(_giaidau).Replace(" ", "_") + ".xml");
             try
             {
-                if (File.Exists(templatesXmlPath))
+                if (File.Exists(_danhsachdoiXmlPath))
                 {
-                    var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath);
+                    var lstTemplate = Utils.GetObject<List<Object.Team>>(_danhsachdoiXmlPath);
                     foreach (var temp in lstTemplate)
-                        bsManagePlayers.Add(new View.Player()
-                        {
-                            mObj = temp
-                        });
+                        cboTeams.Properties.Items.Add(temp.Name);
                 }
                 else
                 {
-                    File.Create(templatesXmlPath).Dispose();
+                    File.Create(_danhsachdoiXmlPath).Dispose();
                 }
             }
             catch (Exception ex)
             {
                 HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            cboTeams.Text = _team;            
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtNumber.Text.Trim().Length == 0 || txtNumber.Name.Trim().Length == 0)
+                if (txtNumber.Text.Trim().Length == 0 || txtNumber.Name.Trim().Length == 0 || cboTeams.Text.Trim().Length==0)
                 {
-                    HDMessageBox.Show("Tên và số áo không được để trống!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    HDMessageBox.Show("Đội, Tên và số áo không được để trống!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -64,7 +65,8 @@ namespace HDCGStudio
                             Number = txtNumber.Text,
                             Name = txtName.Text,
                             IsCaptain = ckIsCaptain.Checked,
-                            IsSubstitute = ckIsSubstitution.Checked
+                            IsNotSubstitution = ckIsNotSubstitution.Checked,
+                            IsGK = ckIsGK.Checked
                         }
                     });
 
@@ -120,6 +122,32 @@ namespace HDCGStudio
             if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
+            }
+        }
+
+        private void cboTeams_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboTeams.Text).Replace(" ", "_") + ".xml");
+            try
+            {
+                if (File.Exists(templatesXmlPath))
+                {
+                    bsManagePlayers.Clear();
+                    var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath);
+                    foreach (var temp in lstTemplate)
+                        bsManagePlayers.Add(new View.Player()
+                        {
+                            mObj = temp
+                        });
+                }
+                else
+                {
+                    File.Create(templatesXmlPath).Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
