@@ -37,6 +37,7 @@
             this.colNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsSubstitution = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnChooseLogo = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtLogoPath = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -45,7 +46,6 @@
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.btnRemove = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.btnChooseLogo = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLeagues)).BeginInit();
@@ -151,6 +151,16 @@
             this.colIsSubstitution.VisibleIndex = 2;
             this.colIsSubstitution.Width = 187;
             // 
+            // btnChooseLogo
+            // 
+            this.btnChooseLogo.Location = new System.Drawing.Point(678, 43);
+            this.btnChooseLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChooseLogo.Name = "btnChooseLogo";
+            this.btnChooseLogo.Size = new System.Drawing.Size(35, 26);
+            this.btnChooseLogo.TabIndex = 130;
+            this.btnChooseLogo.Text = "...";
+            this.btnChooseLogo.Click += new System.EventHandler(this.btnChooseLogo_Click);
+            // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -229,17 +239,6 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.ToolTip = "Thêm template";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnChooseLogo
-            // 
-            this.btnChooseLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChooseLogo.Location = new System.Drawing.Point(678, 43);
-            this.btnChooseLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnChooseLogo.Name = "btnChooseLogo";
-            this.btnChooseLogo.Size = new System.Drawing.Size(35, 26);
-            this.btnChooseLogo.TabIndex = 130;
-            this.btnChooseLogo.Text = "...";
-            this.btnChooseLogo.Click += new System.EventHandler(this.btnChooseLogo_Click);
             // 
             // FormManageLeague
             // 

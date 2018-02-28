@@ -41,7 +41,8 @@ namespace HDCGStudio
         string _TemplateHost = "";
         string _danhsachcauthuHomeXml = "";
         string _danhsachcauthuAwayXml = "";
-
+        string _danhsachgiaidauXmlPath = "";
+        List<Object.League> _lstLeagues = new List<Object.League>();
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
         Dictionary<string, string> dicDanhsachcauthuHome = new Dictionary<string, string>();
@@ -93,6 +94,26 @@ namespace HDCGStudio
                     }
                 }
                 catch { }
+
+                //Load danh sách giải đấu
+                _danhsachgiaidauXmlPath = Path.Combine(Application.StartupPath, "Danhsachgiaidau.xml");
+                try
+                {
+                    if (File.Exists(_danhsachgiaidauXmlPath))
+                    {
+                        _lstLeagues = Utils.GetObject<List<Object.League>>(_danhsachgiaidauXmlPath);
+                        foreach (var temp in _lstLeagues)
+                            cboGiaiDau.Properties.Items.Add(temp.Name);
+                    }
+                    else
+                    {
+                        File.Create(_danhsachgiaidauXmlPath).Dispose();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
                 _danhsachcauthuHomeXml = Path.Combine(Application.StartupPath, "DanhsachcauthuHome.xml");
                 try
@@ -583,7 +604,7 @@ namespace HDCGStudio
             {
                 HDMessageBox.Show("404 NOT FOUND: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }        
+        }
         private string getTemplateName(string templateName)
         {
             try
@@ -663,7 +684,7 @@ namespace HDCGStudio
 
         private void cboTemplateType_SelectedValueChanged(object sender, EventArgs e)
         {
-            dicTemplates.Clear();            
+            dicTemplates.Clear();
             var xmlTemplate = "template_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
             var xmlPlaylist = "playlist_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
             _templateXmlPath = Path.Combine(Application.StartupPath, xmlTemplate);
@@ -676,7 +697,7 @@ namespace HDCGStudio
                     var lstTemplate = Utils.GetObject<List<Object.Template>>(_templateXmlPath).OrderBy(a => a.Name);
                     foreach (var temp in lstTemplate)
                     {
-                        dicTemplates.Add(temp.Name, temp.FileName);                        
+                        dicTemplates.Add(temp.Name, temp.FileName);
                     }
                 }
                 else
@@ -734,7 +755,7 @@ namespace HDCGStudio
             else if (e.KeyCode == Keys.Escape)
             {
                 btnStop.PerformClick();
-            }            
+            }
         }
 
         private void gridTempInfo_KeyDown(object sender, KeyEventArgs e)
@@ -750,7 +771,7 @@ namespace HDCGStudio
             else if (e.KeyCode == Keys.Escape)
             {
                 btnStop.PerformClick();
-            }            
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -1011,7 +1032,8 @@ namespace HDCGStudio
 
         private void btnLiveUpdate_Click(object sender, EventArgs e)
         {
-            if (xTabMain.SelectedTabPage.Equals(xTabPageBongda)) { 
+            if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
+            {
                 try
                 {
                     _xmlAdd = "";
@@ -1037,8 +1059,8 @@ namespace HDCGStudio
                             _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuAway.Text));
                         }
                     }
-                    _xmlAdd += Add("teamHome", txtHomeTeam.Text);
-                    _xmlAdd += Add("teamAway", txtAwayTeam.Text);
+                    _xmlAdd += Add("teamHome", cboDoiChuNha.Text);
+                    _xmlAdd += Add("teamAway", cboDoiKhach.Text);
                     _xmlAdd += Add("tyso", nBongDaChuNha.Value.ToString() + " - " + nBongDaKhach.Value.ToString());
                     string xmlStr = "<Track_Property>" + _xmlAdd + "</Track_Property>";
                     UpdateDataFile(xmlStr);
@@ -1080,7 +1102,7 @@ namespace HDCGStudio
                     player.Refresh();
                     cgServer.UpdateTemplate(_layer, xmlStr, 0);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -1143,6 +1165,46 @@ namespace HDCGStudio
             {
                 ckCauthuChu.Checked = false;
             }
+        }
+
+        private void btnQuanlyGiaiDau_Click(object sender, EventArgs e)
+        {
+            FormManageLeague frmManageLeague = new FormManageLeague();
+            frmManageLeague.Show();
+            frmManageLeague.Activate();
+        }
+
+        private void cboGiaiDau_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var danhsachdoiPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + Utils.ConvertToVietnameseNonSign(cboGiaiDau.Text).Replace(" ", "_") + ".xml");
+                try
+                {
+                    if (File.Exists(danhsachdoiPath))
+                    {
+                        var lstData = Utils.GetObject<List<Object.Team>>(danhsachdoiPath);
+                        foreach (var data in lstData)
+                        {
+                            cboDoiChuNha.Properties.Items.Add(data.Name);
+                            cboDoiKhach.Properties.Items.Add(data.Name);
+                        }
+                    }
+                    else
+                    {
+                        File.Create(_danhsachcauthuHomeXml).Dispose();
+                    }
+                }
+                catch { }
+            }
+            catch { }
+        }
+
+        private void btnQuanlycauthuHome_Click(object sender, EventArgs e)
+        {
+            FormManageTeam formManageTeam = new FormManageTeam(cboGiaiDau.Text);
+            formManageTeam.Show();
+            formManageTeam.Activate();
         }
     }
 }

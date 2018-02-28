@@ -11,5 +11,6 @@ namespace HDCGStudio.Object
         public string ShortName { get; set; }
         public string LogoPath { get; set; }
         public string CoachName { get; set; }
+        public string League { get; set; }
     }
 }

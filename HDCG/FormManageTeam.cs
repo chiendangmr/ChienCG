@@ -16,30 +16,49 @@ namespace HDCGStudio
 {
     public partial class FormManageTeam : Form
     {
-        string _teamType = "";
-        public FormManageTeam(string team)
+        string _leagueName = "";
+        public FormManageTeam(string league)
         {
             InitializeComponent();
-            _teamType = team;
+            _leagueName = league;
         }
-        string templatesXmlPath = "";
+        string DanhsachdoiXmlPath = "";
+        string DanhsachgiaidauXmlPath = "";
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
-            templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu" + _teamType + ".xml");
+            DanhsachgiaidauXmlPath = Path.Combine(Application.StartupPath, "Danhsachgiaidau.xml");
             try
             {
-                if (File.Exists(templatesXmlPath))
+                if (File.Exists(DanhsachgiaidauXmlPath))
                 {
-                    var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath);
+                    var lstTemplate = Utils.GetObject<List<Object.League>>(DanhsachgiaidauXmlPath);
                     foreach (var temp in lstTemplate)
-                        bsManageTeam.Add(new View.Player()
+                        cboLeagues.Properties.Items.Add(temp.Name);
+                }
+                else
+                {
+                    File.Create(DanhsachgiaidauXmlPath).Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DanhsachdoiXmlPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + Utils.ConvertToVietnameseNonSign(_leagueName).Replace(" ", "_") + ".xml");
+            try
+            {
+                if (File.Exists(DanhsachdoiXmlPath))
+                {
+                    var lstTemplate = Utils.GetObject<List<Object.Team>>(DanhsachdoiXmlPath);
+                    foreach (var temp in lstTemplate)
+                        bsManageTeam.Add(new View.Team()
                         {
-                            mObj = temp
+                            tObj = temp
                         });
                 }
                 else
                 {
-                    File.Create(templatesXmlPath).Dispose();
+                    File.Create(DanhsachdoiXmlPath).Dispose();
                 }
             }
             catch (Exception ex)
@@ -51,22 +70,25 @@ namespace HDCGStudio
         {
             try
             {
-                if (txtName.Text.Trim().Length == 0 || txtName.Name.Trim().Length == 0)
+                if (txtName.Text.Trim().Length == 0 || txtCoach.Text.Trim().Length == 0 || txtShortName.Text.Trim().Length == 0 || cboLeagues.Text.Trim().Length == 0)
                 {
-                    HDMessageBox.Show("Tên và số áo không được để trống!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    HDMessageBox.Show("Phải chọn đủ Giải đấu, Tên, Tên viết tắt và HLV để khở tạo một đội bóng!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    bsManageTeam.List.Add(new View.Player()
+                    bsManageTeam.List.Add(new View.Team()
                     {
-                        mObj = new Object.Player()
+                        tObj = new Object.Team()
                         {
-                            Number = txtName.Text,
-                            Name = txtShortName.Text                            
+                            Name = txtName.Text,
+                            ShortName = txtShortName.Text,
+                            CoachName = txtCoach.Text,
+                            League = cboLeagues.Text,
+                            LogoPath = txtLogoPath.Text
                         }
                     });
 
-                    (bsManageTeam.List as BindingList<View.Player>).Select(v => v.mObj).ToList().SaveObject(templatesXmlPath);
+                    (bsManageTeam.List as BindingList<View.Team>).Select(v => v.tObj).ToList().SaveObject(DanhsachdoiXmlPath);
                 }
             }
             catch (Exception ex)
@@ -79,16 +101,16 @@ namespace HDCGStudio
         {
             try
             {
-                if (gvPlayers.FocusedRowHandle < 0)
-                    HDMessageBox.Show("Chưa chọn cầu thủ để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (gvTeams.FocusedRowHandle < 0)
+                    HDMessageBox.Show("Chưa chọn đội để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
-                    var temp = gvPlayers.GetFocusedRow() as View.Player;
-                    if (HDMessageBox.Show("Bạn chắc chắn xóa " + temp.mObj.Name) == DialogResult.OK)
+                    var temp = gvTeams.GetFocusedRow() as View.Team;
+                    if (HDMessageBox.Show("Bạn chắc chắn xóa " + temp.tObj.Name) == DialogResult.OK)
                     {
-                        bsManageTeam.List.Remove(gvPlayers.GetFocusedRow());
+                        bsManageTeam.List.Remove(gvTeams.GetFocusedRow());
 
-                        (bsManageTeam.List as BindingList<View.Player>).Select(v => v.mObj).ToList().SaveObject(templatesXmlPath);
+                        (bsManageTeam.List as BindingList<View.Team>).Select(v => v.tObj).ToList().SaveObject(DanhsachdoiXmlPath);
                     }
                 }
             }
@@ -100,7 +122,7 @@ namespace HDCGStudio
 
         private void ManageTemplateForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            HDMessageBox.Show("Bạn phải load lại danh sách cầu thủ để lấy được các cầu thủ mới!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            HDMessageBox.Show("Bạn phải load lại danh sách đội để lấy được các cầu thủ mới!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
@@ -119,6 +141,15 @@ namespace HDCGStudio
             {
                 this.Close();
             }
+        }
+
+        private void btnChooseLogo_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons");
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtLogoPath.Text = frm.FileName;
         }
     }
 }
