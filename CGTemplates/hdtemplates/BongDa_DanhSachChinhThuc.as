@@ -30,58 +30,58 @@
 		public var icon1:UILoader = null;
 		private var request:URLRequest = null;
 					
-		public var title1:TextField = new TextField();
-		public var title2:TextField = new TextField();
-		public var title3:TextField = new TextField();
-		public var title4:TextField = new TextField();
-		public var title5:TextField = new TextField();
-		public var title6:TextField = new TextField();
-		public var title7:TextField = new TextField();
-		public var title8:TextField = new TextField();
-		public var title9:TextField = new TextField();
-		public var title10:TextField = new TextField();
-		public var title11:TextField = new TextField();
-		public var title12:TextField = new TextField();
-		public var title13:TextField = new TextField();
-		public var title14:TextField = new TextField();
-		public var title15:TextField = new TextField();
-		public var title16:TextField = new TextField();
-		public var title17:TextField = new TextField();
-		public var title18:TextField = new TextField();
-		public var title19:TextField = new TextField();
-		public var title20:TextField = new TextField();
-		public var title21:TextField = new TextField();
-		public var title22:TextField = new TextField();
-		public var title23:TextField = new TextField();
-		public var title24:TextField = new TextField();
+		public var hlv:TextField = new TextField();
+		public var doibong:TextField = new TextField();
+		public var chinhthucNumber1:TextField = new TextField();
+		public var chinhthucNumber2:TextField = new TextField();
+		public var chinhthucNumber3:TextField = new TextField();
+		public var chinhthucNumber4:TextField = new TextField();
+		public var chinhthucNumber5:TextField = new TextField();
+		public var chinhthucNumber6:TextField = new TextField();
+		public var chinhthucNumber7:TextField = new TextField();
+		public var chinhthucNumber8:TextField = new TextField();
+		public var chinhthucNumber9:TextField = new TextField();
+		public var chinhthucNumber10:TextField = new TextField();
+		public var chinhthucNumber11:TextField = new TextField();
+		public var chinhthucName1:TextField = new TextField();
+		public var chinhthucName2:TextField = new TextField();
+		public var chinhthucName3:TextField = new TextField();
+		public var chinhthucName4:TextField = new TextField();
+		public var chinhthucName5:TextField = new TextField();
+		public var chinhthucName6:TextField = new TextField();
+		public var chinhthucName7:TextField = new TextField();
+		public var chinhthucName8:TextField = new TextField();
+		public var chinhthucName9:TextField = new TextField();
+		public var chinhthucName10:TextField = new TextField();
+		public var chinhthucName11:TextField = new TextField();
 		
 		public function BongDa_DanhSachChinhThuc() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(title1);	
-			this.txtGroup.addChild(title2);
-			this.txtGroup.addChild(title3);
-			this.txtGroup.addChild(title4);	
-			this.txtGroup.addChild(title5);
-			this.txtGroup.addChild(title6);
-			this.txtGroup.addChild(title7);	
-			this.txtGroup.addChild(title8);
-			this.txtGroup.addChild(title9);
-			this.txtGroup.addChild(title10);	
-			this.txtGroup.addChild(title11);
-			this.txtGroup.addChild(title12);
-			this.txtGroup.addChild(title13);	
-			this.txtGroup.addChild(title14);
-			this.txtGroup.addChild(title15);
-			this.txtGroup.addChild(title16);	
-			this.txtGroup.addChild(title17);
-			this.txtGroup.addChild(title18);
-			this.txtGroup.addChild(title19);	
-			this.txtGroup.addChild(title20);
-			this.txtGroup.addChild(title21);
-			this.txtGroup.addChild(title22);	
-			this.txtGroup.addChild(title23);
-			this.txtGroup.addChild(title24);
+			this.txtGroup.addChild(hlv);	
+			this.txtGroup.addChild(doibong);
+			this.txtGroup.addChild(chinhthucNumber1);
+			this.txtGroup.addChild(chinhthucNumber2);	
+			this.txtGroup.addChild(chinhthucNumber3);
+			this.txtGroup.addChild(chinhthucNumber4);
+			this.txtGroup.addChild(chinhthucNumber5);	
+			this.txtGroup.addChild(chinhthucNumber6);
+			this.txtGroup.addChild(chinhthucNumber7);
+			this.txtGroup.addChild(chinhthucNumber8);	
+			this.txtGroup.addChild(chinhthucNumber9);
+			this.txtGroup.addChild(chinhthucNumber10);
+			this.txtGroup.addChild(chinhthucNumber11);	
+			this.txtGroup.addChild(chinhthucName1);
+			this.txtGroup.addChild(chinhthucName2);
+			this.txtGroup.addChild(chinhthucName3);	
+			this.txtGroup.addChild(chinhthucName4);
+			this.txtGroup.addChild(chinhthucName5);
+			this.txtGroup.addChild(chinhthucName6);	
+			this.txtGroup.addChild(chinhthucName7);
+			this.txtGroup.addChild(chinhthucName8);
+			this.txtGroup.addChild(chinhthucName9);	
+			this.txtGroup.addChild(chinhthucName10);
+			this.txtGroup.addChild(chinhthucName11);
 			this.txtGroup.addChild(icon1);
 			
 			this.addChild(txtGroup);
@@ -96,30 +96,30 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "title1", title1);
-			xmlStr +=Add(xmlStr, "title2", title2);
-			xmlStr +=Add(xmlStr, "title3", title3);
-			xmlStr +=Add(xmlStr, "title4", title4);
-			xmlStr +=Add(xmlStr, "title5", title5);
-			xmlStr +=Add(xmlStr, "title6", title6);
-			xmlStr +=Add(xmlStr, "title7", title7);
-			xmlStr +=Add(xmlStr, "title8", title8);
-			xmlStr +=Add(xmlStr, "title9", title9);
-			xmlStr +=Add(xmlStr, "title10", title10);
-			xmlStr +=Add(xmlStr, "title11", title11);
-			xmlStr +=Add(xmlStr, "title12", title12);
-			xmlStr +=Add(xmlStr, "title13", title13);
-			xmlStr +=Add(xmlStr, "title14", title14);
-			xmlStr +=Add(xmlStr, "title15", title15);
-			xmlStr +=Add(xmlStr, "title16", title16);
-			xmlStr +=Add(xmlStr, "title17", title17);
-			xmlStr +=Add(xmlStr, "title18", title18);
-			xmlStr +=Add(xmlStr, "title19", title19);
-			xmlStr +=Add(xmlStr, "title20", title20);
-			xmlStr +=Add(xmlStr, "title21", title21);
-			xmlStr +=Add(xmlStr, "title22", title22);
-			xmlStr +=Add(xmlStr, "title23", title23);
-			xmlStr +=Add(xmlStr, "title24", title24);
+			xmlStr +=Add(xmlStr, "hlv", hlv);
+			xmlStr +=Add(xmlStr, "doibong", doibong);
+			xmlStr +=Add(xmlStr, "chinhthucNumber1", chinhthucNumber1);
+			xmlStr +=Add(xmlStr, "chinhthucNumber2", chinhthucNumber2);
+			xmlStr +=Add(xmlStr, "chinhthucNumber3", chinhthucNumber3);
+			xmlStr +=Add(xmlStr, "chinhthucNumber4", chinhthucNumber4);
+			xmlStr +=Add(xmlStr, "chinhthucNumber5", chinhthucNumber5);
+			xmlStr +=Add(xmlStr, "chinhthucNumber6", chinhthucNumber6);
+			xmlStr +=Add(xmlStr, "chinhthucNumber7", chinhthucNumber7);
+			xmlStr +=Add(xmlStr, "chinhthucNumber8", chinhthucNumber8);
+			xmlStr +=Add(xmlStr, "chinhthucNumber9", chinhthucNumber9);
+			xmlStr +=Add(xmlStr, "chinhthucNumber10", chinhthucNumber10);
+			xmlStr +=Add(xmlStr, "chinhthucNumber11", chinhthucNumber11);
+			xmlStr +=Add(xmlStr, "chinhthucName1", chinhthucName1);
+			xmlStr +=Add(xmlStr, "chinhthucName2", chinhthucName2);
+			xmlStr +=Add(xmlStr, "chinhthucName3", chinhthucName3);
+			xmlStr +=Add(xmlStr, "chinhthucName4", chinhthucName4);
+			xmlStr +=Add(xmlStr, "chinhthucName5", chinhthucName5);
+			xmlStr +=Add(xmlStr, "chinhthucName6", chinhthucName6);
+			xmlStr +=Add(xmlStr, "chinhthucName7", chinhthucName7);
+			xmlStr +=Add(xmlStr, "chinhthucName8", chinhthucName8);
+			xmlStr +=Add(xmlStr, "chinhthucName9", chinhthucName9);
+			xmlStr +=Add(xmlStr, "chinhthucName10", chinhthucName10);
+			xmlStr +=Add(xmlStr, "chinhthucName11", chinhthucName11);
 			xmlStr += "</Track_Property>";
 			
 			ExternalInterface.call("Properties", xmlStr);
@@ -138,76 +138,76 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "title1".toLowerCase():
-						this.title1.text = data.toUpperCase();
+					case "hlv".toLowerCase():
+						this.hlv.text = data.toUpperCase();
 						break;
-					case "title2".toLowerCase():
-						this.title2.text = data.toUpperCase();
+					case "doibong".toLowerCase():
+						this.doibong.text = data.toUpperCase();
 						break;
-					case "title3".toLowerCase():
-						this.title3.text = data.toUpperCase();
+					case "chinhthucNumber1".toLowerCase():
+						this.chinhthucNumber1.text = data.toUpperCase();
 						break;
-					case "title4".toLowerCase():
-						this.title4.text = data.toUpperCase();
+					case "chinhthucNumber2".toLowerCase():
+						this.chinhthucNumber2.text = data.toUpperCase();
 						break;
-					case "title5".toLowerCase():
-						this.title5.text = data.toUpperCase();
+					case "chinhthucNumber3".toLowerCase():
+						this.chinhthucNumber3.text = data.toUpperCase();
 						break;
-					case "title6".toLowerCase():
-						this.title6.text = data.toUpperCase();
+					case "chinhthucNumber4".toLowerCase():
+						this.chinhthucNumber4.text = data.toUpperCase();
 						break;
-					case "title7".toLowerCase():
-						this.title7.text = data.toUpperCase();
+					case "chinhthucNumber5".toLowerCase():
+						this.chinhthucNumber5.text = data.toUpperCase();
 						break;
-					case "title8".toLowerCase():
-						this.title8.text = data.toUpperCase();
+					case "chinhthucNumber6".toLowerCase():
+						this.chinhthucNumber6.text = data.toUpperCase();
 						break;
-					case "title9".toLowerCase():
-						this.title9.text = data.toUpperCase();
+					case "chinhthucNumber7".toLowerCase():
+						this.chinhthucNumber7.text = data.toUpperCase();
 						break;
-					case "title10".toLowerCase():
-						this.title10.text = data.toUpperCase();
+					case "chinhthucNumber8".toLowerCase():
+						this.chinhthucNumber8.text = data.toUpperCase();
 						break;
-					case "title11".toLowerCase():
-						this.title11.text = data.toUpperCase();
+					case "chinhthucNumber9".toLowerCase():
+						this.chinhthucNumber9.text = data.toUpperCase();
 						break;
-					case "title12".toLowerCase():
-						this.title12.text = data.toUpperCase();
+					case "chinhthucNumber10".toLowerCase():
+						this.chinhthucNumber10.text = data.toUpperCase();
 						break;
-					case "title13".toLowerCase():
-						this.title13.text = data.toUpperCase();
+					case "chinhthucNumber11".toLowerCase():
+						this.chinhthucNumber11.text = data.toUpperCase();
 						break;
-					case "title14".toLowerCase():
-						this.title14.text = data.toUpperCase();
+					case "chinhthucName1".toLowerCase():
+						this.chinhthucName1.text = data.toUpperCase();
 						break;
-					case "title15".toLowerCase():
-						this.title15
-					case "title16".toLowerCase():
-						this.title16.text = data.toUpperCase();
+					case "chinhthucName2".toLowerCase():
+						this.chinhthucName2
+					case "chinhthucName3".toLowerCase():
+						this.chinhthucName3.text = data.toUpperCase();
 						break;
-					case "title17".toLowerCase():
-						this.title17.text = data.toUpperCase();
+					case "chinhthucName4".toLowerCase():
+						this.chinhthucName4.text = data.toUpperCase();
 						break;
-					case "title18".toLowerCase():
-						this.title18.text = data.toUpperCase();
+					case "chinhthucName5".toLowerCase():
+						this.chinhthucName5.text = data.toUpperCase();
 						break;
-					case "title19".toLowerCase():
-						this.title19.text = data.toUpperCase();
+					case "chinhthucName6".toLowerCase():
+						this.chinhthucName6.text = data.toUpperCase();
 						break;
-					case "title20".toLowerCase():
-						this.title20.text = data.toUpperCase();
+					case "chinhthucName7".toLowerCase():
+						this.chinhthucName7.text = data.toUpperCase();
 						break;
-					case "title21".toLowerCase():
-						this.title21.text = data.toUpperCase();
+					case "chinhthucName8".toLowerCase():
+						this.chinhthucName8.text = data.toUpperCase();
 						break;
-					case "title22".toLowerCase():
-						this.title22.text = data.toUpperCase();
+					case "chinhthucName9".toLowerCase():
+						this.chinhthucName9.text = data.toUpperCase();
 						break;
-					case "title23".toLowerCase():
-						this.title23.text = data.toUpperCase();
+					case "chinhthucName10".toLowerCase():
+						this.chinhthucName10.text = data.toUpperCase();
 						break;
-					case "title24".toLowerCase():
-						this.title24.text = data.toUpperCase();
+					case "chinhthucName11".toLowerCase():
+						this.chinhthucName11.text = data.toUpperCase();
 						break;
 					case "icon1".toLowerCase():						
 						request = new URLRequest(data);
@@ -220,7 +220,7 @@
 			gotoAndPlay('start');
 		}
 		public override function Stop():void{
-			//this.stop();
+			gotoAndPlay('stop');
 		}
 	}
 	

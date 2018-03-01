@@ -30,52 +30,52 @@
 		public var icon1:UILoader = null;
 		private var request:URLRequest = null;
 					
-		public var title1:TextField = new TextField();
-		public var title2:TextField = new TextField();
-		public var title3:TextField = new TextField();
-		public var title4:TextField = new TextField();
-		public var title5:TextField = new TextField();
-		public var title6:TextField = new TextField();
-		public var title7:TextField = new TextField();
-		public var title8:TextField = new TextField();
-		public var title9:TextField = new TextField();
-		public var title10:TextField = new TextField();
-		public var title11:TextField = new TextField();
-		public var title12:TextField = new TextField();
-		public var title13:TextField = new TextField();
-		public var title14:TextField = new TextField();
-		public var title15:TextField = new TextField();
-		public var title16:TextField = new TextField();
-		public var title17:TextField = new TextField();
-		public var title18:TextField = new TextField();
-		public var title19:TextField = new TextField();
-		public var title20:TextField = new TextField();
-		public var title21:TextField = new TextField();
+		public var doibong:TextField = new TextField();
+		public var dubiNumber1:TextField = new TextField();
+		public var dubiNumber2:TextField = new TextField();
+		public var dubiNumber3:TextField = new TextField();
+		public var dubiNumber4:TextField = new TextField();
+		public var dubiNumber5:TextField = new TextField();
+		public var dubiNumber6:TextField = new TextField();
+		public var dubiNumber7:TextField = new TextField();
+		public var dubiNumber8:TextField = new TextField();
+		public var dubiNumber9:TextField = new TextField();
+		public var dubiNumber10:TextField = new TextField();
+		public var dubiName1:TextField = new TextField();
+		public var dubiName2:TextField = new TextField();
+		public var dubiName3:TextField = new TextField();
+		public var dubiName4:TextField = new TextField();
+		public var dubiName5:TextField = new TextField();
+		public var dubiName6:TextField = new TextField();
+		public var dubiName7:TextField = new TextField();
+		public var dubiName8:TextField = new TextField();
+		public var dubiName9:TextField = new TextField();
+		public var dubiName10:TextField = new TextField();
 				
 		public function BongDa_DanhSachDuBi() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(title1);	
-			this.txtGroup.addChild(title2);
-			this.txtGroup.addChild(title3);
-			this.txtGroup.addChild(title4);	
-			this.txtGroup.addChild(title5);
-			this.txtGroup.addChild(title6);
-			this.txtGroup.addChild(title7);	
-			this.txtGroup.addChild(title8);
-			this.txtGroup.addChild(title9);
-			this.txtGroup.addChild(title10);	
-			this.txtGroup.addChild(title11);
-			this.txtGroup.addChild(title12);
-			this.txtGroup.addChild(title13);	
-			this.txtGroup.addChild(title14);
-			this.txtGroup.addChild(title15);
-			this.txtGroup.addChild(title16);	
-			this.txtGroup.addChild(title17);
-			this.txtGroup.addChild(title18);
-			this.txtGroup.addChild(title19);	
-			this.txtGroup.addChild(title20);
-			this.txtGroup.addChild(title21);
+			this.txtGroup.addChild(doibong);	
+			this.txtGroup.addChild(dubiNumber1);
+			this.txtGroup.addChild(dubiNumber2);
+			this.txtGroup.addChild(dubiNumber3);	
+			this.txtGroup.addChild(dubiNumber4);
+			this.txtGroup.addChild(dubiNumber5);
+			this.txtGroup.addChild(dubiNumber6);	
+			this.txtGroup.addChild(dubiNumber7);
+			this.txtGroup.addChild(dubiNumber8);
+			this.txtGroup.addChild(dubiNumber9);	
+			this.txtGroup.addChild(dubiNumber10);
+			this.txtGroup.addChild(dubiName1);
+			this.txtGroup.addChild(dubiName2);	
+			this.txtGroup.addChild(dubiName3);
+			this.txtGroup.addChild(dubiName4);
+			this.txtGroup.addChild(dubiName5);	
+			this.txtGroup.addChild(dubiName6);
+			this.txtGroup.addChild(dubiName7);
+			this.txtGroup.addChild(dubiName8);	
+			this.txtGroup.addChild(dubiName9);
+			this.txtGroup.addChild(dubiName10);
 			this.txtGroup.addChild(icon1);
 			
 			this.addChild(txtGroup);
@@ -90,27 +90,27 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "title1", title1);
-			xmlStr +=Add(xmlStr, "title2", title2);
-			xmlStr +=Add(xmlStr, "title3", title3);
-			xmlStr +=Add(xmlStr, "title4", title4);
-			xmlStr +=Add(xmlStr, "title5", title5);
-			xmlStr +=Add(xmlStr, "title6", title6);
-			xmlStr +=Add(xmlStr, "title7", title7);
-			xmlStr +=Add(xmlStr, "title8", title8);
-			xmlStr +=Add(xmlStr, "title9", title9);
-			xmlStr +=Add(xmlStr, "title10", title10);
-			xmlStr +=Add(xmlStr, "title11", title11);
-			xmlStr +=Add(xmlStr, "title12", title12);
-			xmlStr +=Add(xmlStr, "title13", title13);
-			xmlStr +=Add(xmlStr, "title14", title14);
-			xmlStr +=Add(xmlStr, "title15", title15);
-			xmlStr +=Add(xmlStr, "title16", title16);
-			xmlStr +=Add(xmlStr, "title17", title17);
-			xmlStr +=Add(xmlStr, "title18", title18);
-			xmlStr +=Add(xmlStr, "title19", title19);
-			xmlStr +=Add(xmlStr, "title20", title20);
-			xmlStr +=Add(xmlStr, "title21", title21);
+			xmlStr +=Add(xmlStr, "doibong", doibong);
+			xmlStr +=Add(xmlStr, "dubiNumber1", dubiNumber1);
+			xmlStr +=Add(xmlStr, "dubiNumber2", dubiNumber2);
+			xmlStr +=Add(xmlStr, "dubiNumber3", dubiNumber3);
+			xmlStr +=Add(xmlStr, "dubiNumber4", dubiNumber4);
+			xmlStr +=Add(xmlStr, "dubiNumber5", dubiNumber5);
+			xmlStr +=Add(xmlStr, "dubiNumber6", dubiNumber6);
+			xmlStr +=Add(xmlStr, "dubiNumber7", dubiNumber7);
+			xmlStr +=Add(xmlStr, "dubiNumber8", dubiNumber8);
+			xmlStr +=Add(xmlStr, "dubiNumber9", dubiNumber9);
+			xmlStr +=Add(xmlStr, "dubiNumber10", dubiNumber10);
+			xmlStr +=Add(xmlStr, "dubiName1", dubiName1);
+			xmlStr +=Add(xmlStr, "dubiName2", dubiName2);
+			xmlStr +=Add(xmlStr, "dubiName3", dubiName3);
+			xmlStr +=Add(xmlStr, "dubiName4", dubiName4);
+			xmlStr +=Add(xmlStr, "dubiName5", dubiName5);
+			xmlStr +=Add(xmlStr, "dubiName6", dubiName6);
+			xmlStr +=Add(xmlStr, "dubiName7", dubiName7);
+			xmlStr +=Add(xmlStr, "dubiName8", dubiName8);
+			xmlStr +=Add(xmlStr, "dubiName9", dubiName9);
+			xmlStr +=Add(xmlStr, "dubiName10", dubiName10);
 			xmlStr += "</Track_Property>";
 			
 			ExternalInterface.call("Properties", xmlStr);
@@ -129,67 +129,67 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "title1".toLowerCase():
-						this.title1.text = data.toUpperCase();
+					case "doibong".toLowerCase():
+						this.doibong.text = data.toUpperCase();
 						break;
-					case "title2".toLowerCase():
-						this.title2.text = data.toUpperCase();
+					case "dubiNumber1".toLowerCase():
+						this.dubiNumber1.text = data.toUpperCase();
 						break;
-					case "title3".toLowerCase():
-						this.title3.text = data.toUpperCase();
+					case "dubiNumber2".toLowerCase():
+						this.dubiNumber2.text = data.toUpperCase();
 						break;
-					case "title4".toLowerCase():
-						this.title4.text = data.toUpperCase();
+					case "dubiNumber3".toLowerCase():
+						this.dubiNumber3.text = data.toUpperCase();
 						break;
-					case "title5".toLowerCase():
-						this.title5.text = data.toUpperCase();
+					case "dubiNumber4".toLowerCase():
+						this.dubiNumber4.text = data.toUpperCase();
 						break;
-					case "title6".toLowerCase():
-						this.title6.text = data.toUpperCase();
+					case "dubiNumber5".toLowerCase():
+						this.dubiNumber5.text = data.toUpperCase();
 						break;
-					case "title7".toLowerCase():
-						this.title7.text = data.toUpperCase();
+					case "dubiNumber6".toLowerCase():
+						this.dubiNumber6.text = data.toUpperCase();
 						break;
-					case "title8".toLowerCase():
-						this.title8.text = data.toUpperCase();
+					case "dubiNumber7".toLowerCase():
+						this.dubiNumber7.text = data.toUpperCase();
 						break;
-					case "title9".toLowerCase():
-						this.title9.text = data.toUpperCase();
+					case "dubiNumber8".toLowerCase():
+						this.dubiNumber8.text = data.toUpperCase();
 						break;
-					case "title10".toLowerCase():
-						this.title10.text = data.toUpperCase();
+					case "dubiNumber9".toLowerCase():
+						this.dubiNumber9.text = data.toUpperCase();
 						break;
-					case "title11".toLowerCase():
-						this.title11.text = data.toUpperCase();
+					case "dubiNumber10".toLowerCase():
+						this.dubiNumber10.text = data.toUpperCase();
 						break;
-					case "title12".toLowerCase():
-						this.title12.text = data.toUpperCase();
+					case "dubiName1".toLowerCase():
+						this.dubiName1.text = data.toUpperCase();
 						break;
-					case "title13".toLowerCase():
-						this.title13.text = data.toUpperCase();
+					case "dubiName2".toLowerCase():
+						this.dubiName2.text = data.toUpperCase();
 						break;
-					case "title14".toLowerCase():
-						this.title14.text = data.toUpperCase();
+					case "dubiName3".toLowerCase():
+						this.dubiName3.text = data.toUpperCase();
 						break;
-					case "title15".toLowerCase():
-						this.title15
-					case "title16".toLowerCase():
-						this.title16.text = data.toUpperCase();
+					case "dubiName4".toLowerCase():
+						this.dubiName4
+					case "dubiName5".toLowerCase():
+						this.dubiName5.text = data.toUpperCase();
 						break;
-					case "title17".toLowerCase():
-						this.title17.text = data.toUpperCase();
+					case "dubiName6".toLowerCase():
+						this.dubiName6.text = data.toUpperCase();
 						break;
-					case "title18".toLowerCase():
-						this.title18.text = data.toUpperCase();
+					case "dubiName7".toLowerCase():
+						this.dubiName7.text = data.toUpperCase();
 						break;
-					case "title19".toLowerCase():
-						this.title19.text = data.toUpperCase();
+					case "dubiName8".toLowerCase():
+						this.dubiName8.text = data.toUpperCase();
 						break;
-					case "title20".toLowerCase():
-						this.title20.text = data.toUpperCase();
+					case "dubiName9".toLowerCase():
+						this.dubiName9.text = data.toUpperCase();
 						break;
-					case "title21".toLowerCase():
-						this.title21.text = data.toUpperCase();
+					case "dubiName10".toLowerCase():
+						this.dubiName10.text = data.toUpperCase();
 						break;		
 					case "icon1".toLowerCase():						
 						request = new URLRequest(data);
@@ -202,7 +202,7 @@
 			gotoAndPlay('start');
 		}
 		public override function Stop():void{
-			//this.stop();
+			gotoAndPlay('stop');
 		}
 	}
 	

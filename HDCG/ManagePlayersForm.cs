@@ -62,7 +62,7 @@ namespace HDCGStudio
                     {
                         mObj = new Object.Player()
                         {
-                            Number = txtNumber.Text,
+                            Number = int.Parse(txtNumber.Text),
                             Name = txtName.Text,
                             IsCaptain = ckIsCaptain.Checked,
                             IsNotSubstitution = ckIsNotSubstitution.Checked,

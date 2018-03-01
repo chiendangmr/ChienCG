@@ -951,6 +951,19 @@ namespace HDCGStudio
             }
             return player;
         }
+        public string GetTeamName()
+        {
+            var teamName = "";
+            if (ckChu.Checked)
+            {
+                teamName = cboDoiChuNha.Text;
+            }
+            else if (ckKhach.Checked)
+            {
+                teamName = cboDoiKhach.Text;
+            }
+            return teamName;
+        }
         public string GetTeamLogo(string teamName)
         {
             string logoPath = "";
@@ -971,6 +984,24 @@ namespace HDCGStudio
                 return dicTemplates[templateName];
             }
             catch { return ""; }
+        }
+        public List<View.Player> GetTeamChinhThuc()
+        {
+            var lstChinhthuc = new List<View.Player>();
+            if (ckChu.Checked)
+                lstChinhthuc = (bsHomePlayer.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
+            else if (ckKhach.Checked)
+                lstChinhthuc = (bsAwayPlayer.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
+            return lstChinhthuc;
+        }
+        public List<View.Player> GetTeamDuBi()
+        {
+            var lstChinhthuc = new List<View.Player>();
+            if (ckChu.Checked)
+                lstChinhthuc = (bsHomePlayerDuBi.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
+            else if (ckKhach.Checked)
+                lstChinhthuc = (bsAwayPlayerDuBi.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
+            return lstChinhthuc;
         }
         #region Get cầu thủ vào sân, ra sân
         public View.Player GetPlayerOut()
@@ -1007,10 +1038,11 @@ namespace HDCGStudio
             {
                 try
                 {
+                    xmlAdd += Add("doibong", GetTeamName());
                     xmlAdd += Add("hiepdau", "Hiệp " + txtHiep.Text);
                     xmlAdd += Add("thongkehiepdau", "Thống kê hiệp " + txtHiep.Text);
                     xmlAdd += Add("player1", GetPlayingPlayer().mObj.Name);
-                    xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number);
+                    xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number.ToString());
 
                     xmlAdd += Add("trongtaichinh", txtTrongtaiChinh.Text);
                     xmlAdd += Add("troly1", txtTroly1.Text);
@@ -1019,8 +1051,8 @@ namespace HDCGStudio
 
                     xmlAdd += Add("playerin", GetPlayerIn().mObj.Name);
                     xmlAdd += Add("playerout", GetPlayerOut().mObj.Name);
-                    xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number);
-                    xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number);
+                    xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
+                    xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
 
                     if (txtColor.Text.Length > 0)
                         xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
@@ -1039,7 +1071,20 @@ namespace HDCGStudio
                     xmlAdd += Add("doiChu", cboDoiChuNha.Text);
                     xmlAdd += Add("doiKhach", cboDoiKhach.Text);
                     xmlAdd += Add("tyso", nTysoChu.Value.ToString() + " - " + nTysoKhach.Value.ToString());
-
+                    var lstChinhthuc = GetTeamChinhThuc();
+                    if (lstChinhthuc.Count > 0)
+                        for (var i = 0; i < lstChinhthuc.Count(); i++)
+                        {
+                            xmlAdd += Add("chinhthucName" + (i + 1).ToString(), lstChinhthuc[i].mObj.Name);
+                            xmlAdd += Add("chinhthucNumber" + (i + 1).ToString(), lstChinhthuc[i].mObj.Number.ToString());
+                        }
+                    var lstDuBi = GetTeamDuBi();
+                    if (lstDuBi.Count > 0)
+                        for (var i = 0; i < lstDuBi.Count(); i++)
+                        {
+                            xmlAdd += Add("dubiName" + (i + 1).ToString(), lstDuBi[i].mObj.Name);
+                            xmlAdd += Add("dubiNumber" + (i + 1).ToString(), lstDuBi[i].mObj.Number.ToString());
+                        }
                     //Danh sách ghi bàn
                     if (bsGhibanChu.List.Count > 0)
                     {
@@ -1057,6 +1102,7 @@ namespace HDCGStudio
                             xmlAdd += Add("ghibanKhach" + (i + 1).ToString(), temp.gObj.StrMin + "     " + temp.gObj.Name);
                         }
                     }
+
                     if (_tempName == "BongDa_ThongKeCuoi.ft")
                     {
                         xmlAdd += Add("dutdiemChu", nDutdiemChu.Text);
