@@ -32,7 +32,7 @@
 					
 		public var player1:TextField = new TextField();
 		public var playerNumber1:TextField = new TextField();
-		public var title3:TextField = new TextField();
+		public var thongsocauthu:TextField = new TextField();
 		
 		private var maskBar:Shape = new Shape();
 		private var rectWidth:Number = 900;
@@ -51,7 +51,7 @@
 			this.addChild(myTotalBar);
 			this.txtGroup.addChild(player1);	
 			this.txtGroup.addChild(playerNumber1);
-			this.txtGroup.addChild(title3);
+			this.txtGroup.addChild(thongsocauthu);
 			
 			this.addChild(txtGroup);
 			
@@ -82,7 +82,7 @@
 			var xmlStr:String = "<Track_Property>";
 			xmlStr +=Add(xmlStr, "player1", player1);
 			xmlStr +=Add(xmlStr, "playerNumber1", playerNumber1);
-			xmlStr +=Add(xmlStr, "title3", title3);
+			xmlStr +=Add(xmlStr, "thongsocauthu", thongsocauthu);
 				
 			xmlStr += "</Track_Property>";
 			
@@ -108,8 +108,8 @@
 					case "playerNumber1".toLowerCase():
 						this.playerNumber1.text = data.toUpperCase();
 						break;
-					case "title3".toLowerCase():
-						this.title3.text = data.toUpperCase();
+					case "thongsocauthu".toLowerCase():
+						this.thongsocauthu.text = data.toUpperCase();
 						break;												
 				}
 			}

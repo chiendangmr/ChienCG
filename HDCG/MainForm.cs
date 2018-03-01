@@ -998,56 +998,29 @@ namespace HDCGStudio
                 txtColor.Text = frm.FileName;
         }
 
-        private void cboDanhsachcauthu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (File.Exists(_danhsachcauthuHomeXml))
-                {
-                    cboDanhsachcauthuHome.Properties.Items.Clear();
-                    dicDanhsachcauthuHome.Clear();
-                    var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuHomeXml);
-                    foreach (var data in lstData)
-                        dicDanhsachcauthuHome.Add(data.Number, data.Name);
-                    foreach (var temp in dicDanhsachcauthuHome)
-                    {
-                        cboDanhsachcauthuHome.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
-                    }
-                }
-                else
-                {
-                    File.Create(_danhsachcauthuHomeXml).Dispose();
-                }
-            }
-            catch (Exception ex)
-            {
-                HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void btnLiveUpdate_Click(object sender, EventArgs e)
         {
             if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
             {
                 try
                 {
-                    _xmlAdd = "";
-                    if (txtIcon1.Text.Length > 0)
-                        _xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
-                    if (txtIcon2.Text.Length > 0)
-                        _xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
+                    _xmlAdd = "";                    
                     if (txtColor.Text.Length > 0)
                         _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
-                    if (ckCauthuChu.Checked)
+                    if (ckChu.Checked)
                     {
+                        _xmlAdd += Add("icon1", GetTeamLogo(cboDoiChuNha.Text));
+                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
                         if (cboDanhsachcauthuHome.Text.Length > 0)
                         {
                             _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuHome.Text));
                             _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuHome.Text));
-                        }
+                        }                        
                     }
-                    else if (ckCauthuKhach.Checked)
+                    else if (ckKhach.Checked)
                     {
+                        _xmlAdd += Add("icon1", GetTeamLogo(cboDoiKhach.Text));
+                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
                         if (cboDanhsachcauthuAway.Text.Length > 0)
                         {
                             _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuAway.Text));
@@ -1063,9 +1036,9 @@ namespace HDCGStudio
                     player.Refresh();
                     cgServer.UpdateTemplate(_layer, xmlStr, 0);
                 }
-                catch
+                catch (Exception ex)
                 {
-                    HDMessageBox.Show("Data not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -1103,13 +1076,25 @@ namespace HDCGStudio
                 }
             }
         }
-        private string GetPlayerName(string playerString)
-        {
-            return playerString.Substring(0, playerString.IndexOf('-')).Trim();
-        }
         private string GetPlayerNumber(string playerString)
         {
-            return playerString.Substring(playerString.IndexOf('-') + 4).Trim();
+            return playerString.Substring(3, playerString.IndexOf('-') - 3).Trim();
+        }
+        private string GetPlayerName(string playerString)
+        {
+            return playerString.Substring(playerString.IndexOf('-') + 1).Trim();
+        }
+        public string GetTeamLogo(string teamName)
+        {
+            string logoPath = "";
+            foreach(var temp in _lstTeams)
+            {
+                if (temp.Name == teamName) { 
+                    logoPath= temp.LogoPath;
+                }
+                break;
+            }
+            return logoPath;
         }
         private void cboDanhsachcauthuAway_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1233,12 +1218,16 @@ namespace HDCGStudio
                 {
                     bsHomePlayer.Clear();
                     bsHomePlayerDuBi.Clear();
+                    cboDanhsachcauthuHome.Properties.Items.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
+                    {
                         bsHomePlayer.Add(new View.Player()
                         {
                             mObj = temp
                         });
+                        cboDanhsachcauthuHome.Properties.Items.Add("Số " + temp.Number + " - " + temp.Name);
+                    }
                     var lstDubi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
                     foreach (var temp in lstDubi)
                         bsHomePlayerDuBi.Add(new View.Player()
@@ -1275,12 +1264,16 @@ namespace HDCGStudio
                 {
                     bsAwayPlayer.Clear();
                     bsAwayPlayerDuBi.Clear();
+                    cboDanhsachcauthuAway.Properties.Items.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
+                    {
                         bsAwayPlayer.Add(new View.Player()
                         {
                             mObj = temp
                         });
+                        cboDanhsachcauthuAway.Properties.Items.Add("Số " + temp.Number + " - " + temp.Name);
+                    }
                     var lstDuBi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
                     foreach (var temp in lstDuBi)
                         bsAwayPlayerDuBi.Add(new View.Player()

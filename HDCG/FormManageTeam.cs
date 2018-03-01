@@ -72,7 +72,7 @@ namespace HDCGStudio
             {
                 if (txtName.Text.Trim().Length == 0 || txtCoach.Text.Trim().Length == 0 || txtShortName.Text.Trim().Length == 0 || cboLeagues.Text.Trim().Length == 0)
                 {
-                    HDMessageBox.Show("Phải chọn đủ Giải đấu, Tên, Tên viết tắt và HLV để khở tạo một đội bóng!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    HDMessageBox.Show("Phải chọn đủ Giải đấu, Tên, Tên viết tắt và HLV để khởi tạo một đội bóng!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -84,7 +84,8 @@ namespace HDCGStudio
                             ShortName = txtShortName.Text,
                             CoachName = txtCoach.Text,
                             League = cboLeagues.Text,
-                            LogoPath = txtLogoPath.Text
+                            LogoPath = txtLogoPath.Text,
+                            Stadium = txtSanNha.Text
                         }
                     });
 

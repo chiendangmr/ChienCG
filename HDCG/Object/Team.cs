@@ -12,5 +12,6 @@ namespace HDCGStudio.Object
         public string LogoPath { get; set; }
         public string CoachName { get; set; }
         public string League { get; set; }
+        public string Stadium { get; set; }
     }
 }

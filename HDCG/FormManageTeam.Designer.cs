@@ -39,6 +39,8 @@
             this.colIsCaptain = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsSubstitution = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSanNha = new DevExpress.XtraEditors.TextEdit();
             this.btnChooseLogo = new DevExpress.XtraEditors.SimpleButton();
             this.cboLeagues = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -52,11 +54,13 @@
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.btnRemove = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeams)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsManageTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTeams)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSanNha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboLeagues.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLogoPath.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCoach.Properties)).BeginInit();
@@ -72,6 +76,8 @@
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.gridTeams);
             this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.labelControl6);
+            this.splitContainerControl1.Panel2.Controls.Add(this.txtSanNha);
             this.splitContainerControl1.Panel2.Controls.Add(this.btnChooseLogo);
             this.splitContainerControl1.Panel2.Controls.Add(this.cboLeagues);
             this.splitContainerControl1.Panel2.Controls.Add(this.labelControl5);
@@ -86,7 +92,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.btnRemove);
             this.splitContainerControl1.Panel2.Controls.Add(this.btnAdd);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(923, 772);
+            this.splitContainerControl1.Size = new System.Drawing.Size(955, 824);
             this.splitContainerControl1.SplitterPosition = 552;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -98,7 +104,7 @@
             this.gridTeams.Location = new System.Drawing.Point(0, 0);
             this.gridTeams.MainView = this.gvTeams;
             this.gridTeams.Name = "gridTeams";
-            this.gridTeams.Size = new System.Drawing.Size(923, 552);
+            this.gridTeams.Size = new System.Drawing.Size(955, 552);
             this.gridTeams.TabIndex = 0;
             this.gridTeams.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTeams});
@@ -114,7 +120,8 @@
             this.colName,
             this.colIsCaptain,
             this.colIsSubstitution,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.gridColumn2});
             this.gvTeams.GridControl = this.gridTeams;
             this.gvTeams.Name = "gvTeams";
             this.gvTeams.OptionsView.ShowGroupPanel = false;
@@ -194,6 +201,25 @@
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 4;
             this.gridColumn1.Width = 261;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(100, 127);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(79, 24);
+            this.labelControl6.TabIndex = 133;
+            this.labelControl6.Text = "Sân nhà:";
+            // 
+            // txtSanNha
+            // 
+            this.txtSanNha.Location = new System.Drawing.Point(224, 124);
+            this.txtSanNha.Name = "txtSanNha";
+            this.txtSanNha.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txtSanNha.Properties.Appearance.Options.UseFont = true;
+            this.txtSanNha.Size = new System.Drawing.Size(617, 30);
+            this.txtSanNha.TabIndex = 132;
             // 
             // btnChooseLogo
             // 
@@ -306,7 +332,7 @@
             // 
             this.btnRemove.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.ImageOptions.Image")));
             this.btnRemove.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRemove.Location = new System.Drawing.Point(514, 135);
+            this.btnRemove.Location = new System.Drawing.Point(514, 186);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(93, 57);
             this.btnRemove.TabIndex = 1;
@@ -317,19 +343,31 @@
             // 
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
             this.btnAdd.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnAdd.Location = new System.Drawing.Point(264, 135);
+            this.btnAdd.Location = new System.Drawing.Point(262, 186);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(98, 57);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.ToolTip = "Thêm template";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.Caption = "Sân nhà";
+            this.gridColumn2.FieldName = "tObj.Stadium";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 5;
+            // 
             // FormManageTeam
             // 
             this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 772);
+            this.ClientSize = new System.Drawing.Size(955, 824);
             this.Controls.Add(this.splitContainerControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -344,6 +382,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridTeams)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsManageTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTeams)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSanNha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboLeagues.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLogoPath.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCoach.Properties)).EndInit();
@@ -377,5 +416,8 @@
         private DevExpress.XtraEditors.ComboBoxEdit cboLeagues;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.SimpleButton btnChooseLogo;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.TextEdit txtSanNha;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }
