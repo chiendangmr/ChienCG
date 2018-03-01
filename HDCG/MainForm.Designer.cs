@@ -164,13 +164,13 @@
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTrongtaiban = new DevExpress.XtraEditors.TextEdit();
             this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTroly2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTroly1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTrongtaiChinh = new DevExpress.XtraEditors.TextEdit();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             this.xTabThoigian = new DevExpress.XtraTab.XtraTabPage();
             this.xTabPageTennis = new DevExpress.XtraTab.XtraTabPage();
@@ -309,10 +309,10 @@
             this.xTabTrongtai.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrongtaiban.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTroly2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTroly1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrongtaiChinh.Properties)).BeginInit();
             this.xTabPageTennis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer3.Properties)).BeginInit();
@@ -1864,13 +1864,13 @@
             this.xTabTrongtai.Controls.Add(this.labelControl37);
             this.xTabTrongtai.Controls.Add(this.textEdit5);
             this.xTabTrongtai.Controls.Add(this.labelControl36);
-            this.xTabTrongtai.Controls.Add(this.textEdit4);
+            this.xTabTrongtai.Controls.Add(this.txtTrongtaiban);
             this.xTabTrongtai.Controls.Add(this.labelControl35);
-            this.xTabTrongtai.Controls.Add(this.textEdit3);
+            this.xTabTrongtai.Controls.Add(this.txtTroly2);
             this.xTabTrongtai.Controls.Add(this.labelControl34);
-            this.xTabTrongtai.Controls.Add(this.textEdit2);
+            this.xTabTrongtai.Controls.Add(this.txtTroly1);
             this.xTabTrongtai.Controls.Add(this.labelControl33);
-            this.xTabTrongtai.Controls.Add(this.textEdit1);
+            this.xTabTrongtai.Controls.Add(this.txtTrongtaiChinh);
             this.xTabTrongtai.Controls.Add(this.labelControl32);
             this.xTabTrongtai.Name = "xTabTrongtai";
             this.xTabTrongtai.Size = new System.Drawing.Size(1212, 590);
@@ -1912,13 +1912,13 @@
             this.labelControl36.TabIndex = 158;
             this.labelControl36.Text = "Sân vận động:";
             // 
-            // textEdit4
+            // txtTrongtaiban
             // 
-            this.textEdit4.Location = new System.Drawing.Point(183, 168);
-            this.textEdit4.MenuManager = this.barManager1;
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(202, 22);
-            this.textEdit4.TabIndex = 157;
+            this.txtTrongtaiban.Location = new System.Drawing.Point(183, 168);
+            this.txtTrongtaiban.MenuManager = this.barManager1;
+            this.txtTrongtaiban.Name = "txtTrongtaiban";
+            this.txtTrongtaiban.Size = new System.Drawing.Size(202, 22);
+            this.txtTrongtaiban.TabIndex = 157;
             // 
             // labelControl35
             // 
@@ -1930,13 +1930,13 @@
             this.labelControl35.TabIndex = 156;
             this.labelControl35.Text = "Trọng tài bàn:";
             // 
-            // textEdit3
+            // txtTroly2
             // 
-            this.textEdit3.Location = new System.Drawing.Point(183, 131);
-            this.textEdit3.MenuManager = this.barManager1;
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(202, 22);
-            this.textEdit3.TabIndex = 155;
+            this.txtTroly2.Location = new System.Drawing.Point(183, 131);
+            this.txtTroly2.MenuManager = this.barManager1;
+            this.txtTroly2.Name = "txtTroly2";
+            this.txtTroly2.Size = new System.Drawing.Size(202, 22);
+            this.txtTroly2.TabIndex = 155;
             // 
             // labelControl34
             // 
@@ -1948,13 +1948,13 @@
             this.labelControl34.TabIndex = 154;
             this.labelControl34.Text = "Trọng tài biên 2:";
             // 
-            // textEdit2
+            // txtTroly1
             // 
-            this.textEdit2.Location = new System.Drawing.Point(183, 88);
-            this.textEdit2.MenuManager = this.barManager1;
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(202, 22);
-            this.textEdit2.TabIndex = 153;
+            this.txtTroly1.Location = new System.Drawing.Point(183, 88);
+            this.txtTroly1.MenuManager = this.barManager1;
+            this.txtTroly1.Name = "txtTroly1";
+            this.txtTroly1.Size = new System.Drawing.Size(202, 22);
+            this.txtTroly1.TabIndex = 153;
             // 
             // labelControl33
             // 
@@ -1966,13 +1966,13 @@
             this.labelControl33.TabIndex = 152;
             this.labelControl33.Text = "Trọng tài biên 1:";
             // 
-            // textEdit1
+            // txtTrongtaiChinh
             // 
-            this.textEdit1.Location = new System.Drawing.Point(183, 45);
-            this.textEdit1.MenuManager = this.barManager1;
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(202, 22);
-            this.textEdit1.TabIndex = 151;
+            this.txtTrongtaiChinh.Location = new System.Drawing.Point(183, 45);
+            this.txtTrongtaiChinh.MenuManager = this.barManager1;
+            this.txtTrongtaiChinh.Name = "txtTrongtaiChinh";
+            this.txtTrongtaiChinh.Size = new System.Drawing.Size(202, 22);
+            this.txtTrongtaiChinh.TabIndex = 151;
             // 
             // labelControl32
             // 
@@ -2826,10 +2826,10 @@
             this.xTabTrongtai.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrongtaiban.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTroly2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTroly1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrongtaiChinh.Properties)).EndInit();
             this.xTabPageTennis.ResumeLayout(false);
             this.xTabPageTennis.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).EndInit();
@@ -3057,13 +3057,13 @@
         private DevExpress.XtraEditors.LabelControl labelControl37;
         private DevExpress.XtraEditors.TextEdit textEdit5;
         private DevExpress.XtraEditors.LabelControl labelControl36;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit txtTrongtaiban;
         private DevExpress.XtraEditors.LabelControl labelControl35;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtTroly2;
         private DevExpress.XtraEditors.LabelControl labelControl34;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtTroly1;
         private DevExpress.XtraEditors.LabelControl labelControl33;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtTrongtaiChinh;
         private DevExpress.XtraEditors.LabelControl labelControl32;
         private DevExpress.XtraEditors.TextEdit txtThongsocauthuKhach;
         private DevExpress.XtraEditors.TextEdit txtThongsocauthuChu;

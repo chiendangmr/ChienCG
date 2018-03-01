@@ -28,18 +28,18 @@
 		
 		private var txtGroup:MovieClip = new MovieClip();
 					
-		public var title1:TextField = new TextField();
-		public var title2:TextField = new TextField();
-		public var title3:TextField = new TextField();
-		public var title4:TextField = new TextField();
+		public var trongtaichinh:TextField = new TextField();
+		public var troly1:TextField = new TextField();
+		public var troly2:TextField = new TextField();
+		public var trongtaiban:TextField = new TextField();
 		
 		public function BongDa_TrongTai() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(title1);	
-			this.txtGroup.addChild(title2);
-			this.txtGroup.addChild(title3);
-			this.txtGroup.addChild(title4);
+			this.txtGroup.addChild(trongtaichinh);	
+			this.txtGroup.addChild(troly1);
+			this.txtGroup.addChild(troly2);
+			this.txtGroup.addChild(trongtaiban);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -53,10 +53,10 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "title1", title1);
-			xmlStr +=Add(xmlStr, "title2", title2);
-			xmlStr +=Add(xmlStr, "title3", title3);
-			xmlStr +=Add(xmlStr, "title4", title4);				
+			xmlStr +=Add(xmlStr, "trongtaichinh", trongtaichinh);
+			xmlStr +=Add(xmlStr, "troly1", troly1);
+			xmlStr +=Add(xmlStr, "troly2", troly2);
+			xmlStr +=Add(xmlStr, "trongtaiban", trongtaiban);				
 			xmlStr += "</Track_Property>";
 			
 			ExternalInterface.call("Properties", xmlStr);
@@ -75,17 +75,17 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "title1".toLowerCase():
-						this.title1.text = data.toUpperCase();
+					case "trongtaichinh".toLowerCase():
+						this.trongtaichinh.text = data.toUpperCase();
 						break;
-					case "title2".toLowerCase():
-						this.title2.text = data.toUpperCase();
+					case "troly1".toLowerCase():
+						this.troly1.text = data.toUpperCase();
 						break;
-					case "title3".toLowerCase():
-						this.title3.text = data.toUpperCase();
+					case "troly2".toLowerCase():
+						this.troly2.text = data.toUpperCase();
 						break;		
-					case "title4".toLowerCase():
-						this.title4.text = data.toUpperCase();
+					case "trongtaiban".toLowerCase():
+						this.trongtaiban.text = data.toUpperCase();
 						break;						
 				}
 			}
@@ -94,7 +94,7 @@
 			gotoAndPlay('start');
 		}
 		public override function Stop():void{
-			//this.stop();
+			gotoAndPlay('stop');
 		}
 	}
 	

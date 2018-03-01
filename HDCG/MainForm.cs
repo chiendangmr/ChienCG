@@ -287,7 +287,11 @@ namespace HDCGStudio
             if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
             {
                 try
-                {                    
+                {
+                    xmlAdd += Add("trongtaichinh", txtTrongtaiChinh.Text);
+                    xmlAdd += Add("troly1", txtTroly1.Text);
+                    xmlAdd += Add("troly2", txtTroly2.Text);
+                    xmlAdd += Add("trongtaiban", txtTrongtaiban.Text);
                     if (txtColor.Text.Length > 0)
                         xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
                     if (ckChu.Checked)
