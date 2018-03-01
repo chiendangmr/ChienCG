@@ -28,9 +28,9 @@
 		
 		private var txtGroup:MovieClip = new MovieClip();
 					
-		public var title1:TextField = new TextField();
-		public var title2:TextField = new TextField();
-		public var title3:TextField = new TextField();
+		public var thongsonho:TextField = new TextField();
+		public var thongsonhoChu:TextField = new TextField();
+		public var thongsonhoKhach:TextField = new TextField();
 		public var icon1:UILoader = null;
 		public var icon2:UILoader = null;
 		private var request:URLRequest = null;
@@ -38,9 +38,9 @@
 		public function BongDa_ThongKeNho() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(title1);	
-			this.txtGroup.addChild(title2);
-			this.txtGroup.addChild(title3);
+			this.txtGroup.addChild(thongsonho);	
+			this.txtGroup.addChild(thongsonhoChu);
+			this.txtGroup.addChild(thongsonhoKhach);
 			this.txtGroup.addChild(icon1);
 			this.txtGroup.addChild(icon2);
 			
@@ -56,9 +56,9 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "title1", title1);
-			xmlStr +=Add(xmlStr, "title2", title2);
-			xmlStr +=Add(xmlStr, "title3", title3);
+			xmlStr +=Add(xmlStr, "thongsonho", thongsonho);
+			xmlStr +=Add(xmlStr, "thongsonhoChu", thongsonhoChu);
+			xmlStr +=Add(xmlStr, "thongsonhoKhach", thongsonhoKhach);
 				
 			xmlStr += "</Track_Property>";
 			
@@ -78,14 +78,14 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "title1".toLowerCase():
-						this.title1.text = data.toUpperCase();
+					case "thongsonho".toLowerCase():
+						this.thongsonho.text = data.toUpperCase();
 						break;
-					case "title2".toLowerCase():
-						this.title2.text = data.toUpperCase();
+					case "thongsonhoChu".toLowerCase():
+						this.thongsonhoChu.text = data.toUpperCase();
 						break;
-					case "title3".toLowerCase():
-						this.title3.text = data.toUpperCase();
+					case "thongsonhoKhach".toLowerCase():
+						this.thongsonhoKhach.text = data.toUpperCase();
 						break;		
 					case "icon1".toLowerCase():						
 						request = new URLRequest(data);
@@ -102,7 +102,7 @@
 			gotoAndPlay('start');
 		}
 		public override function Stop():void{
-			//this.stop();
+			gotoAndPlay('stop');
 		}
 	}
 	

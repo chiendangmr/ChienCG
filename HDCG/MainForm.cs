@@ -1061,7 +1061,51 @@ namespace HDCGStudio
                     {
                         if (ckDutdiem.Checked)
                         {
-                            //xmlAdd
+                            xmlAdd += Add("thongsonho", "Dứt điểm");
+                            xmlAdd += Add("thongsonhoChu", nDutdiemChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nDutdiemKhach.Text);
+                        }
+                        else if (ckTrungdich.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Trúng đích");
+                            xmlAdd += Add("thongsonhoChu", nTrungdichChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nTrungdichKhach.Text);
+                        }
+                        else if (ckPhamloi.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Phạm lỗi");
+                            xmlAdd += Add("thongsonhoChu", nPhamloiChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nPhamloiKhach.Text);
+                        }
+                        else if (ckThevang.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Thẻ vàng");
+                            xmlAdd += Add("thongsonhoChu", nThevangChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nThevangKhach.Text);
+                        }
+                        else if (ckThedo.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Thẻ đỏ");
+                            xmlAdd += Add("thongsonhoChu", nThedoChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nThedoKhach.Text);
+                        }
+                        else if (ckVietvi.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Việt vị");
+                            xmlAdd += Add("thongsonhoChu", nVietviChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nVietviKhach.Text);
+                        }
+                        else if (ckPhatgoc.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Phạt góc");
+                            xmlAdd += Add("thongsonhoChu", nPhatgocChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nPhatgocKhach.Text);
+                        }
+                        else if (ckKiemsoatbong.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Kiếm soát bóng");
+                            xmlAdd += Add("thongsonhoChu", nKiemsoatbongChu.Text + "%");
+                            xmlAdd += Add("thongsonhoKhach", nKiemsoatbongKhach.Text + "%");
                         }
                     }
                 }
