@@ -31,50 +31,50 @@
 		public var icon2:UILoader = null;
 		private var request:URLRequest = null;
 					
-		public var title1:TextField = new TextField();
-		public var title2:TextField = new TextField();
-		public var title3:TextField = new TextField();
-		public var title4:TextField = new TextField();
-		public var title5:TextField = new TextField();
-		public var title6:TextField = new TextField();
-		public var title7:TextField = new TextField();
-		public var title8:TextField = new TextField();
-		public var title9:TextField = new TextField();
-		public var title10:TextField = new TextField();
-		public var title11:TextField = new TextField();
-		public var title12:TextField = new TextField();
-		public var title13:TextField = new TextField();
-		public var title14:TextField = new TextField();
-		public var title15:TextField = new TextField();
-		public var title16:TextField = new TextField();	
-		public var title17:TextField = new TextField();
-		public var title18:TextField = new TextField();
-		public var title19:TextField = new TextField();
-		public var title20:TextField = new TextField();	
+		public var thongkehiepdau:TextField = new TextField();
+		public var tyso:TextField = new TextField();
+		public var dutdiemChu:TextField = new TextField();
+		public var dutdiemKhach:TextField = new TextField();
+		public var trungdichChu:TextField = new TextField();
+		public var trungdichKhach:TextField = new TextField();
+		public var phamloiChu:TextField = new TextField();
+		public var phamloiKhach:TextField = new TextField();
+		public var thevangChu:TextField = new TextField();
+		public var thevangKhach:TextField = new TextField();
+		public var thedoChu:TextField = new TextField();
+		public var thedoKhach:TextField = new TextField();
+		public var vietviChu:TextField = new TextField();
+		public var vietviKhach:TextField = new TextField();
+		public var phatgocChu:TextField = new TextField();
+		public var phatgocKhach:TextField = new TextField();	
+		public var kiemsoatbongChu:TextField = new TextField();
+		public var kiemsoatbongKhach:TextField = new TextField();
+		public var doiChu:TextField = new TextField();
+		public var doiKhach:TextField = new TextField();	
 						
 		public function BongDa_ThongKeCuoi() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(title1);	
-			this.txtGroup.addChild(title2);
-			this.txtGroup.addChild(title3);
-			this.txtGroup.addChild(title4);	
-			this.txtGroup.addChild(title5);
-			this.txtGroup.addChild(title6);
-			this.txtGroup.addChild(title7);	
-			this.txtGroup.addChild(title8);
-			this.txtGroup.addChild(title9);
-			this.txtGroup.addChild(title10);	
-			this.txtGroup.addChild(title11);
-			this.txtGroup.addChild(title12);
-			this.txtGroup.addChild(title13);	
-			this.txtGroup.addChild(title14);			
-			this.txtGroup.addChild(title15);
-			this.txtGroup.addChild(title16);
-			this.txtGroup.addChild(title17);	
-			this.txtGroup.addChild(title18);			
-			this.txtGroup.addChild(title19);
-			this.txtGroup.addChild(title20);
+			this.txtGroup.addChild(thongkehiepdau);	
+			this.txtGroup.addChild(tyso);
+			this.txtGroup.addChild(dutdiemChu);
+			this.txtGroup.addChild(dutdiemKhach);	
+			this.txtGroup.addChild(trungdichChu);
+			this.txtGroup.addChild(trungdichKhach);
+			this.txtGroup.addChild(phamloiChu);	
+			this.txtGroup.addChild(phamloiKhach);
+			this.txtGroup.addChild(thevangChu);
+			this.txtGroup.addChild(thevangKhach);	
+			this.txtGroup.addChild(thedoChu);
+			this.txtGroup.addChild(thedoKhach);
+			this.txtGroup.addChild(vietviChu);	
+			this.txtGroup.addChild(vietviKhach);			
+			this.txtGroup.addChild(phatgocChu);
+			this.txtGroup.addChild(phatgocKhach);
+			this.txtGroup.addChild(kiemsoatbongChu);	
+			this.txtGroup.addChild(kiemsoatbongKhach);			
+			this.txtGroup.addChild(doiChu);
+			this.txtGroup.addChild(doiKhach);
 			this.txtGroup.addChild(icon1);
 			this.txtGroup.addChild(icon2);
 			
@@ -90,26 +90,26 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "title1", title1);
-			xmlStr +=Add(xmlStr, "title2", title2);
-			xmlStr +=Add(xmlStr, "title3", title3);
-			xmlStr +=Add(xmlStr, "title4", title4);
-			xmlStr +=Add(xmlStr, "title5", title5);
-			xmlStr +=Add(xmlStr, "title6", title6);	
-			xmlStr +=Add(xmlStr, "title7", title7);
-			xmlStr +=Add(xmlStr, "title8", title8);
-			xmlStr +=Add(xmlStr, "title9", title9);
-			xmlStr +=Add(xmlStr, "title10", title10);
-			xmlStr +=Add(xmlStr, "title11", title11);
-			xmlStr +=Add(xmlStr, "title12", title12);	
-			xmlStr +=Add(xmlStr, "title13", title13);
-			xmlStr +=Add(xmlStr, "title14", title14);
-			xmlStr +=Add(xmlStr, "title15", title15);
-			xmlStr +=Add(xmlStr, "title16", title16);	
-			xmlStr +=Add(xmlStr, "title17", title17);
-			xmlStr +=Add(xmlStr, "title18", title18);
-			xmlStr +=Add(xmlStr, "title19", title19);
-			xmlStr +=Add(xmlStr, "title20", title20);
+			xmlStr +=Add(xmlStr, "thongkehiepdau", thongkehiepdau);
+			xmlStr +=Add(xmlStr, "tyso", tyso);
+			xmlStr +=Add(xmlStr, "dutdiemChu", dutdiemChu);
+			xmlStr +=Add(xmlStr, "dutdiemKhach", dutdiemKhach);
+			xmlStr +=Add(xmlStr, "trungdichChu", trungdichChu);
+			xmlStr +=Add(xmlStr, "trungdichKhach", trungdichKhach);	
+			xmlStr +=Add(xmlStr, "phamloiChu", phamloiChu);
+			xmlStr +=Add(xmlStr, "phamloiKhach", phamloiKhach);
+			xmlStr +=Add(xmlStr, "thevangChu", thevangChu);
+			xmlStr +=Add(xmlStr, "thevangKhach", thevangKhach);
+			xmlStr +=Add(xmlStr, "thedoChu", thedoChu);
+			xmlStr +=Add(xmlStr, "thedoKhach", thedoKhach);	
+			xmlStr +=Add(xmlStr, "vietviChu", vietviChu);
+			xmlStr +=Add(xmlStr, "vietviKhach", vietviKhach);
+			xmlStr +=Add(xmlStr, "phatgocChu", phatgocChu);
+			xmlStr +=Add(xmlStr, "phatgocKhach", phatgocKhach);	
+			xmlStr +=Add(xmlStr, "kiemsoatbongChu", kiemsoatbongChu);
+			xmlStr +=Add(xmlStr, "kiemsoatbongKhach", kiemsoatbongKhach);
+			xmlStr +=Add(xmlStr, "doiChu", doiChu);
+			xmlStr +=Add(xmlStr, "doiKhach", doiKhach);
 			xmlStr += "</Track_Property>";
 			
 			ExternalInterface.call("Properties", xmlStr);
@@ -128,65 +128,65 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "title1".toLowerCase():
-						this.title1.text = data.toUpperCase();
+					case "thongkehiepdau".toLowerCase():
+						this.thongkehiepdau.text = data.toUpperCase();
 						break;
-					case "title2".toLowerCase():
-						this.title2.text = data.toUpperCase();
+					case "tyso".toLowerCase():
+						this.tyso.text = data.toUpperCase();
 						break;
-					case "title3".toLowerCase():
-						this.title3.text = data.toUpperCase();
+					case "dutdiemChu".toLowerCase():
+						this.dutdiemChu.text = data.toUpperCase();
 						break;
-					case "title4".toLowerCase():
-						this.title4.text = data.toUpperCase();
+					case "dutdiemKhach".toLowerCase():
+						this.dutdiemKhach.text = data.toUpperCase();
 						break;
-					case "title5".toLowerCase():
-						this.title5.text = data.toUpperCase();
+					case "trungdichChu".toLowerCase():
+						this.trungdichChu.text = data.toUpperCase();
 						break;
-					case "title6".toLowerCase():
-						this.title6.text = data.toUpperCase();
+					case "trungdichKhach".toLowerCase():
+						this.trungdichKhach.text = data.toUpperCase();
 						break;	
-					case "title7".toLowerCase():
-						this.title7.text = data.toUpperCase();
+					case "phamloiChu".toLowerCase():
+						this.phamloiChu.text = data.toUpperCase();
 						break;
-					case "title8".toLowerCase():
-						this.title8.text = data.toUpperCase();
+					case "phamloiKhach".toLowerCase():
+						this.phamloiKhach.text = data.toUpperCase();
 						break;
-					case "title9".toLowerCase():
-						this.title9.text = data.toUpperCase();
+					case "thevangChu".toLowerCase():
+						this.thevangChu.text = data.toUpperCase();
 						break;
-					case "title10".toLowerCase():
-						this.title10.text = data.toUpperCase();
+					case "thevangKhach".toLowerCase():
+						this.thevangKhach.text = data.toUpperCase();
 						break;					
-					case "title11".toLowerCase():
-						this.title11.text = data.toUpperCase();
+					case "thedoChu".toLowerCase():
+						this.thedoChu.text = data.toUpperCase();
 						break;
-					case "title12".toLowerCase():
-						this.title12.text = data.toUpperCase();
+					case "thedoKhach".toLowerCase():
+						this.thedoKhach.text = data.toUpperCase();
 						break;
-					case "title13".toLowerCase():
-						this.title13.text = data.toUpperCase();
+					case "vietviChu".toLowerCase():
+						this.vietviChu.text = data.toUpperCase();
 						break;
-					case "title14".toLowerCase():
-						this.title14.text = data.toUpperCase();
+					case "vietviKhach".toLowerCase():
+						this.vietviKhach.text = data.toUpperCase();
 						break;
-					case "title15".toLowerCase():
-						this.title15.text = data.toUpperCase();
+					case "phatgocChu".toLowerCase():
+						this.phatgocChu.text = data.toUpperCase();
 						break;
-					case "title16".toLowerCase():
-						this.title16.text = data.toUpperCase();
+					case "phatgocKhach".toLowerCase():
+						this.phatgocKhach.text = data.toUpperCase();
 						break;	
-					case "title17".toLowerCase():
-						this.title17.text = data.toUpperCase();
+					case "kiemsoatbongChu".toLowerCase():
+						this.kiemsoatbongChu.text = data.toUpperCase();
 						break;
-					case "title18".toLowerCase():
-						this.title18.text = data.toUpperCase();
+					case "kiemsoatbongKhach".toLowerCase():
+						this.kiemsoatbongKhach.text = data.toUpperCase();
 						break;
-					case "title19".toLowerCase():
-						this.title19.text = data.toUpperCase();
+					case "doiChu".toLowerCase():
+						this.doiChu.text = data.toUpperCase();
 						break;
-					case "title20".toLowerCase():
-						this.title20.text = data.toUpperCase();
+					case "doiKhach".toLowerCase():
+						this.doiKhach.text = data.toUpperCase();
 						break;	
 					case "icon1".toLowerCase():						
 						request = new URLRequest(data);
@@ -203,7 +203,7 @@
 			gotoAndPlay('start');
 		}
 		public override function Stop():void{
-			//this.stop();
+			gotoAndPlay('stop');
 		}
 	}
 	

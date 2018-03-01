@@ -115,7 +115,7 @@ namespace HDCGStudio
                 catch (Exception ex)
                 {
                     HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }                 
+                }
 
                 cgServer = new HDCGControler.CasparCG();
                 cgServer.Connect(AppSetting.Default.CGServerIP, AppSetting.Default.CGServerPort);
@@ -241,7 +241,7 @@ namespace HDCGStudio
                 ckVideoLoop.Checked = videoView.VideoObj.Loop;
             }
         }
-        
+
         public string ViewTemplate(string templateFileName, int fadeUpDuration = 0)
         {
             string templateFile = "HDTemplates\\" + templateFileName;
@@ -567,7 +567,7 @@ namespace HDCGStudio
                 HDMessageBox.Show("404 NOT FOUND: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-       
+
         private void gvTempInfo_RowClick(object sender, RowClickEventArgs e)
         {
             ViewTemplate(_tempName);
@@ -587,7 +587,7 @@ namespace HDCGStudio
         {
             xmlStr = "<" + id + " id=\"" + id + "\"><data value=\"" + val + "\"/></" + id + ">";
             return xmlStr;
-        }       
+        }
 
         private void barBtnManageTemplate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -739,7 +739,7 @@ namespace HDCGStudio
                 else
                     LogProcess.AddLog("Đã kích hoạt");
             }
-        }        
+        }
         string _xml = "";
         string _xmlAdd = "";
         private string Add(string str, string val)
@@ -752,10 +752,6 @@ namespace HDCGStudio
             {
                 _xmlAdd = "";
                 var templateName = "HDTemplates\\Update\\" + _tempName;
-                if (txtIcon1.Text.Length > 0)
-                    _xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon1.Text));
-                if (txtIcon2.Text.Length > 0)
-                    _xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtIcon2.Text));
                 if (txtColor.Text.Length > 0)
                     _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
                 _xml = player.GetProperties();
@@ -863,24 +859,6 @@ namespace HDCGStudio
             }
         }
 
-        private void btnChooseIcon1_Click(object sender, EventArgs e)
-        {
-            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons");
-            frm.FilterString = "*.tga;*.png;*.jpg";
-            if (frm.ShowDialog() == DialogResult.OK)
-                txtIcon1.Text = frm.FileName;
-        }
-
-        private void btnChooseIcon2_Click(object sender, EventArgs e)
-        {
-            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons");
-            frm.FilterString = "*.tga;*.png;*.jpg";
-            if (frm.ShowDialog() == DialogResult.OK)
-                txtIcon2.Text = frm.FileName;
-        }
-
         private void btnChooseColor_Click(object sender, EventArgs e)
         {
             OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
@@ -902,16 +880,16 @@ namespace HDCGStudio
                     if (ckChu.Checked)
                     {
                         _xmlAdd += Add("icon1", GetTeamLogo(cboDoiChuNha.Text));
-                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);                        
+                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
                     }
                     else if (ckKhach.Checked)
                     {
                         _xmlAdd += Add("icon1", GetTeamLogo(cboDoiKhach.Text));
-                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);                        
+                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
                     }
                     _xmlAdd += Add("teamHome", cboDoiChuNha.Text);
                     _xmlAdd += Add("teamAway", cboDoiKhach.Text);
-                    _xmlAdd += Add("tyso", nBongDaChuNha.Value.ToString() + " - " + nBongDaKhach.Value.ToString());
+                    _xmlAdd += Add("tyso", nTysoChu.Value.ToString() + " - " + nTysoKhach.Value.ToString());
                     string xmlStr = "<Track_Property>" + _xmlAdd + "</Track_Property>";
                     UpdateDataFile(xmlStr);
                     player.Update(1, xmlStr.Replace("\\n", "\n"));
@@ -1029,6 +1007,7 @@ namespace HDCGStudio
             {
                 try
                 {
+                    xmlAdd += Add("thongkehiepdau", "Thống kê hiệp " + txtHiep.Text);
                     xmlAdd += Add("player1", GetPlayingPlayer().mObj.Name);
                     xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number);
 
@@ -1056,9 +1035,35 @@ namespace HDCGStudio
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
                     }
-                    xmlAdd += Add("teamHome", cboDoiChuNha.Text);
-                    xmlAdd += Add("teamAway", cboDoiKhach.Text);
-                    xmlAdd += Add("tyso", nBongDaChuNha.Value.ToString() + " - " + nBongDaKhach.Value.ToString());
+                    xmlAdd += Add("doiChu", cboDoiChuNha.Text);
+                    xmlAdd += Add("doiKhach", cboDoiKhach.Text);
+                    xmlAdd += Add("tyso", nTysoChu.Value.ToString() + " - " + nTysoKhach.Value.ToString());
+                    if (_tempName == "BongDa_ThongKeCuoi.ft")
+                    {
+                        xmlAdd += Add("dutdiemChu", nDutdiemChu.Text);
+                        xmlAdd += Add("dutdiemKhach", nDutdiemKhach.Text);
+                        xmlAdd += Add("trungdichChu", nTrungdichChu.Text);
+                        xmlAdd += Add("trungdichKhach", nTrungdichKhach.Text);
+                        xmlAdd += Add("phamloiChu", nPhamloiChu.Text);
+                        xmlAdd += Add("phamloiKhach", nPhamloiKhach.Text);
+                        xmlAdd += Add("thevangChu", nThevangChu.Text);
+                        xmlAdd += Add("thevangKhach", nThevangKhach.Text);
+                        xmlAdd += Add("thedoChu", nThedoChu.Text);
+                        xmlAdd += Add("thedoKhach", nThedoKhach.Text);
+                        xmlAdd += Add("vietviChu", nVietviChu.Text);
+                        xmlAdd += Add("vietviKhach", nVietviKhach.Text);
+                        xmlAdd += Add("phatgocChu", nPhatgocChu.Text);
+                        xmlAdd += Add("phatgocKhach", nPhatgocKhach.Text);
+                        xmlAdd += Add("kiemsoatbongChu", nKiemsoatbongChu.Text + "%");
+                        xmlAdd += Add("kiemsoatbongKhach", nKiemsoatbongKhach.Text + "%");
+                    }
+                    else
+                    {
+                        if (ckDutdiem.Checked)
+                        {
+                            //xmlAdd
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -1191,14 +1196,14 @@ namespace HDCGStudio
                 if (File.Exists(templatesXmlPath))
                 {
                     bsHomePlayer.Clear();
-                    bsHomePlayerDuBi.Clear();                    
+                    bsHomePlayerDuBi.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
                     {
                         bsHomePlayer.Add(new View.Player()
                         {
                             mObj = temp
-                        });                       
+                        });
                     }
                     var lstDubi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
                     foreach (var temp in lstDubi)
@@ -1235,14 +1240,14 @@ namespace HDCGStudio
                 if (File.Exists(templatesXmlPath))
                 {
                     bsAwayPlayer.Clear();
-                    bsAwayPlayerDuBi.Clear();                    
+                    bsAwayPlayerDuBi.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
                     {
                         bsAwayPlayer.Add(new View.Player()
                         {
                             mObj = temp
-                        });                        
+                        });
                     }
                     var lstDuBi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
                     foreach (var temp in lstDuBi)
