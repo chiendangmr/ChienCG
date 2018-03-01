@@ -31,42 +31,58 @@
 		public var icon2:UILoader = null;
 		private var request:URLRequest = null;
 					
-		public var title1:TextField = new TextField();
-		public var title2:TextField = new TextField();
-		public var teamHome:TextField = new TextField();
+		public var hiepdau:TextField = new TextField();
+		public var doiChu:TextField = new TextField();
+		public var doiKhach:TextField = new TextField();
 		public var tyso:TextField = new TextField();
-		public var teamAway:TextField = new TextField();
-		public var title6:TextField = new TextField();
-		public var title7:TextField = new TextField();
-		public var title8:TextField = new TextField();
-		public var title9:TextField = new TextField();
-		public var title10:TextField = new TextField();
-		public var title11:TextField = new TextField();
-		public var title12:TextField = new TextField();
-		public var title13:TextField = new TextField();
-		public var title14:TextField = new TextField();
-		public var title15:TextField = new TextField();
-		public var title16:TextField = new TextField();		
+		public var ghibanChu1:TextField = new TextField();
+		public var ghibanChu2:TextField = new TextField();
+		public var ghibanChu3:TextField = new TextField();
+		public var ghibanChu4:TextField = new TextField();
+		public var ghibanChu5:TextField = new TextField();
+		public var ghibanChu6:TextField = new TextField();
+		public var ghibanChu7:TextField = new TextField();
+		public var ghibanChu8:TextField = new TextField();
+		public var ghibanChu9:TextField = new TextField();
+		public var ghibanChu10:TextField = new TextField();
+		public var ghibanKhach1:TextField = new TextField();
+		public var ghibanKhach2:TextField = new TextField();
+		public var ghibanKhach3:TextField = new TextField();
+		public var ghibanKhach4:TextField = new TextField();
+		public var ghibanKhach5:TextField = new TextField();
+		public var ghibanKhach6:TextField = new TextField();
+		public var ghibanKhach7:TextField = new TextField();
+		public var ghibanKhach8:TextField = new TextField();
+		public var ghibanKhach9:TextField = new TextField();
+		public var ghibanKhach10:TextField = new TextField();
 						
 		public function BongDa_TySoChinh() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(title1);	
-			this.txtGroup.addChild(title2);
-			this.txtGroup.addChild(teamHome);
+			this.txtGroup.addChild(hiepdau);	
+			this.txtGroup.addChild(doiChu);
+			this.txtGroup.addChild(doiKhach);
 			this.txtGroup.addChild(tyso);	
-			this.txtGroup.addChild(teamAway);
-			this.txtGroup.addChild(title6);
-			this.txtGroup.addChild(title7);	
-			this.txtGroup.addChild(title8);
-			this.txtGroup.addChild(title9);
-			this.txtGroup.addChild(title10);	
-			this.txtGroup.addChild(title11);
-			this.txtGroup.addChild(title12);
-			this.txtGroup.addChild(title13);	
-			this.txtGroup.addChild(title14);			
-			this.txtGroup.addChild(title15);
-			this.txtGroup.addChild(title16);
+			this.txtGroup.addChild(ghibanChu1);
+			this.txtGroup.addChild(ghibanChu2);
+			this.txtGroup.addChild(ghibanChu3);	
+			this.txtGroup.addChild(ghibanChu4);
+			this.txtGroup.addChild(ghibanChu5);
+			this.txtGroup.addChild(ghibanChu6);	
+			this.txtGroup.addChild(ghibanChu7);	
+			this.txtGroup.addChild(ghibanChu8);
+			this.txtGroup.addChild(ghibanChu9);
+			this.txtGroup.addChild(ghibanChu10);	
+			this.txtGroup.addChild(ghibanKhach1);
+			this.txtGroup.addChild(ghibanKhach2);
+			this.txtGroup.addChild(ghibanKhach3);	
+			this.txtGroup.addChild(ghibanKhach4);			
+			this.txtGroup.addChild(ghibanKhach5);
+			this.txtGroup.addChild(ghibanKhach6);
+			this.txtGroup.addChild(ghibanKhach7);	
+			this.txtGroup.addChild(ghibanKhach8);			
+			this.txtGroup.addChild(ghibanKhach9);
+			this.txtGroup.addChild(ghibanKhach10);
 			this.txtGroup.addChild(icon1);
 			this.txtGroup.addChild(icon2);
 			
@@ -82,22 +98,30 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "title1", title1);
-			xmlStr +=Add(xmlStr, "title2", title2);
-			xmlStr +=Add(xmlStr, "teamHome", teamHome);
+			xmlStr +=Add(xmlStr, "hiepdau", hiepdau);
+			xmlStr +=Add(xmlStr, "doiChu", doiChu);
+			xmlStr +=Add(xmlStr, "doiKhach", doiKhach);
 			xmlStr +=Add(xmlStr, "tyso", tyso);
-			xmlStr +=Add(xmlStr, "teamAway", teamAway);
-			xmlStr +=Add(xmlStr, "title6", title6);	
-			xmlStr +=Add(xmlStr, "title7", title7);
-			xmlStr +=Add(xmlStr, "title8", title8);
-			xmlStr +=Add(xmlStr, "title9", title9);
-			xmlStr +=Add(xmlStr, "title10", title10);
-			xmlStr +=Add(xmlStr, "title11", title11);
-			xmlStr +=Add(xmlStr, "title12", title12);	
-			xmlStr +=Add(xmlStr, "title13", title13);
-			xmlStr +=Add(xmlStr, "title14", title14);
-			xmlStr +=Add(xmlStr, "title15", title15);
-			xmlStr +=Add(xmlStr, "title16", title16);	
+			xmlStr +=Add(xmlStr, "ghibanChu1", ghibanChu1);
+			xmlStr +=Add(xmlStr, "ghibanChu2", ghibanChu2);	
+			xmlStr +=Add(xmlStr, "ghibanChu3", ghibanChu3);
+			xmlStr +=Add(xmlStr, "ghibanChu4", ghibanChu4);
+			xmlStr +=Add(xmlStr, "ghibanChu5", ghibanChu5);
+			xmlStr +=Add(xmlStr, "ghibanChu6", ghibanChu6);
+			xmlStr +=Add(xmlStr, "ghibanChu7", ghibanChu7);
+			xmlStr +=Add(xmlStr, "ghibanChu8", ghibanChu8);
+			xmlStr +=Add(xmlStr, "ghibanChu9", ghibanChu9);
+			xmlStr +=Add(xmlStr, "ghibanChu10", ghibanChu10);
+			xmlStr +=Add(xmlStr, "ghibanKhach1", ghibanKhach1);
+			xmlStr +=Add(xmlStr, "ghibanKhach2", ghibanKhach2);	
+			xmlStr +=Add(xmlStr, "ghibanKhach3", ghibanKhach3);
+			xmlStr +=Add(xmlStr, "ghibanKhach4", ghibanKhach4);
+			xmlStr +=Add(xmlStr, "ghibanKhach5", ghibanKhach5);
+			xmlStr +=Add(xmlStr, "ghibanKhach6", ghibanKhach6);	
+			xmlStr +=Add(xmlStr, "ghibanKhach7", ghibanKhach7);
+			xmlStr +=Add(xmlStr, "ghibanKhach8", ghibanKhach8);
+			xmlStr +=Add(xmlStr, "ghibanKhach9", ghibanKhach9);
+			xmlStr +=Add(xmlStr, "ghibanKhach10", ghibanKhach10);
 			xmlStr += "</Track_Property>";
 			
 			ExternalInterface.call("Properties", xmlStr);
@@ -116,53 +140,77 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "title1".toLowerCase():
-						this.title1.text = data.toUpperCase();
+					case "hiepdau".toLowerCase():
+						this.hiepdau.text = data.toUpperCase();
 						break;
-					case "title2".toLowerCase():
-						this.title2.text = data.toUpperCase();
+					case "doiChu".toLowerCase():
+						this.doiChu.text = data.toUpperCase();
 						break;
-					case "teamHome".toLowerCase():
-						this.teamHome.text = data.toUpperCase();
+					case "doiKhach".toLowerCase():
+						this.doiKhach.text = data.toUpperCase();
 						break;
 					case "tyso".toLowerCase():
 						this.tyso.text = data.toUpperCase();
 						break;
-					case "teamAway".toLowerCase():
-						this.teamAway.text = data.toUpperCase();
+					case "ghibanChu1".toLowerCase():
+						this.ghibanChu1.text = data.toUpperCase();
 						break;
-					case "title6".toLowerCase():
-						this.title6.text = data.toUpperCase();
+					case "ghibanChu2".toLowerCase():
+						this.ghibanChu2.text = data.toUpperCase();
 						break;	
-					case "title7".toLowerCase():
-						this.title7.text = data.toUpperCase();
+					case "ghibanChu3".toLowerCase():
+						this.ghibanChu3.text = data.toUpperCase();
 						break;
-					case "title8".toLowerCase():
-						this.title8.text = data.toUpperCase();
+					case "ghibanChu4".toLowerCase():
+						this.ghibanChu4.text = data.toUpperCase();
 						break;
-					case "title9".toLowerCase():
-						this.title9.text = data.toUpperCase();
+					case "ghibanChu5".toLowerCase():
+						this.ghibanChu5.text = data.toUpperCase();
 						break;
-					case "title10".toLowerCase():
-						this.title10.text = data.toUpperCase();
-						break;					
-					case "title11".toLowerCase():
-						this.title11.text = data.toUpperCase();
+					case "ghibanChu6".toLowerCase():
+						this.ghibanChu6.text = data.toUpperCase();
+						break;		
+					case "ghibanChu7".toLowerCase():
+						this.ghibanChu7.text = data.toUpperCase();
 						break;
-					case "title12".toLowerCase():
-						this.title12.text = data.toUpperCase();
+					case "ghibanChu8".toLowerCase():
+						this.ghibanChu8.text = data.toUpperCase();
 						break;
-					case "title13".toLowerCase():
-						this.title13.text = data.toUpperCase();
+					case "ghibanChu9".toLowerCase():
+						this.ghibanChu9.text = data.toUpperCase();
 						break;
-					case "title14".toLowerCase():
-						this.title14.text = data.toUpperCase();
+					case "ghibanChu10".toLowerCase():
+						this.ghibanChu10.text = data.toUpperCase();
+						break;			
+					case "ghibanKhach1".toLowerCase():
+						this.ghibanKhach1.text = data.toUpperCase();
 						break;
-					case "title15".toLowerCase():
-						this.title15.text = data.toUpperCase();
+					case "ghibanKhach2".toLowerCase():
+						this.ghibanKhach2.text = data.toUpperCase();
 						break;
-					case "title16".toLowerCase():
-						this.title16.text = data.toUpperCase();
+					case "ghibanKhach3".toLowerCase():
+						this.ghibanKhach3.text = data.toUpperCase();
+						break;
+					case "ghibanKhach4".toLowerCase():
+						this.ghibanKhach4.text = data.toUpperCase();
+						break;
+					case "ghibanKhach5".toLowerCase():
+						this.ghibanKhach5.text = data.toUpperCase();
+						break;
+					case "ghibanKhach6".toLowerCase():
+						this.ghibanKhach6.text = data.toUpperCase();
+						break;	
+					case "ghibanKhach7".toLowerCase():
+						this.ghibanKhach7.text = data.toUpperCase();
+						break;
+					case "ghibanKhach8".toLowerCase():
+						this.ghibanKhach8.text = data.toUpperCase();
+						break;
+					case "ghibanKhach9".toLowerCase():
+						this.ghibanKhach9.text = data.toUpperCase();
+						break;
+					case "ghibanKhach10".toLowerCase():
+						this.ghibanKhach10.text = data.toUpperCase();
 						break;	
 					case "icon1".toLowerCase():						
 						request = new URLRequest(data);
@@ -179,7 +227,7 @@
 			gotoAndPlay('start');
 		}
 		public override function Stop():void{
-			//this.stop();
+			gotoAndPlay('stop');
 		}
 	}
 	

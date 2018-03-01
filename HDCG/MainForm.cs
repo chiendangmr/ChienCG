@@ -1007,6 +1007,7 @@ namespace HDCGStudio
             {
                 try
                 {
+                    xmlAdd += Add("hiepdau", "Hiệp " + txtHiep.Text);
                     xmlAdd += Add("thongkehiepdau", "Thống kê hiệp " + txtHiep.Text);
                     xmlAdd += Add("player1", GetPlayingPlayer().mObj.Name);
                     xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number);
@@ -1038,6 +1039,24 @@ namespace HDCGStudio
                     xmlAdd += Add("doiChu", cboDoiChuNha.Text);
                     xmlAdd += Add("doiKhach", cboDoiKhach.Text);
                     xmlAdd += Add("tyso", nTysoChu.Value.ToString() + " - " + nTysoKhach.Value.ToString());
+
+                    //Danh sách ghi bàn
+                    if (bsGhibanChu.List.Count > 0)
+                    {
+                        for (var i = 0; i < bsGhibanChu.List.Count; i++)
+                        {
+                            var temp = gvGhibanChu.GetRow(i) as View.Goal;
+                            xmlAdd += Add("ghibanChu" + (i + 1).ToString(), temp.gObj.Name + "     " + temp.gObj.StrMin);
+                        }
+                    }
+                    if (bsGhibanKhach.List.Count > 0)
+                    {
+                        for (var i = 0; i < bsGhibanKhach.List.Count; i++)
+                        {
+                            var temp = gvGhibanKhach.GetRow(i) as View.Goal;
+                            xmlAdd += Add("ghibanKhach" + (i + 1).ToString(), temp.gObj.StrMin + "     " + temp.gObj.Name);
+                        }
+                    }
                     if (_tempName == "BongDa_ThongKeCuoi.ft")
                     {
                         xmlAdd += Add("dutdiemChu", nDutdiemChu.Text);
@@ -1241,6 +1260,8 @@ namespace HDCGStudio
                 {
                     bsHomePlayer.Clear();
                     bsHomePlayerDuBi.Clear();
+                    cboCauthuChu.Properties.Items.Clear();
+                    bsGhibanChu.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
                     {
@@ -1248,13 +1269,17 @@ namespace HDCGStudio
                         {
                             mObj = temp
                         });
+                        cboCauthuChu.Properties.Items.Add(temp.Name);
                     }
                     var lstDubi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
                     foreach (var temp in lstDubi)
+                    {
                         bsHomePlayerDuBi.Add(new View.Player()
                         {
                             mObj = temp
                         });
+                        cboCauthuChu.Properties.Items.Add(temp.Name);
+                    }
                 }
                 else
                 {
@@ -1285,6 +1310,8 @@ namespace HDCGStudio
                 {
                     bsAwayPlayer.Clear();
                     bsAwayPlayerDuBi.Clear();
+                    cboCauthuKhach.Properties.Items.Clear();
+                    bsGhibanKhach.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
                     {
@@ -1292,13 +1319,17 @@ namespace HDCGStudio
                         {
                             mObj = temp
                         });
+                        cboCauthuKhach.Properties.Items.Add(temp.Name);
                     }
                     var lstDuBi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
                     foreach (var temp in lstDuBi)
+                    {
                         bsAwayPlayerDuBi.Add(new View.Player()
                         {
                             mObj = temp
                         });
+                        cboCauthuKhach.Properties.Items.Add(temp.Name);
+                    }
                 }
                 else
                 {
@@ -1382,6 +1413,114 @@ namespace HDCGStudio
             {
                 e.Appearance.BackColor = Color.DarkBlue;
                 e.Appearance.ForeColor = Color.White;
+            }
+        }
+        #endregion
+
+        #region Xử lý phần ghi bàn
+        private void btnThemGhibanChu_Click(object sender, EventArgs e)
+        {
+            if (cboCauthuChu.Text.Length > 0 && txtPhutGhibanChu.Text.Length > 0)
+            {
+                bsGhibanChu.List.Add(new View.Goal()
+                {
+                    gObj = new Object.Goal()
+                    {
+                        Name = cboCauthuChu.Text,
+                        StrMin = txtPhutGhibanChu.Text
+                    }
+                });
+
+            }
+            else
+            {
+                HDMessageBox.Show("Chọn cầu thủ và phút ghi bàn trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnThemGhibanKhach_Click(object sender, EventArgs e)
+        {
+            if (cboCauthuKhach.Text.Length > 0 && txtPhutGhibanKhach.Text.Length > 0)
+            {
+                bsGhibanKhach.List.Add(new View.Goal()
+                {
+                    gObj = new Object.Goal()
+                    {
+                        Name = cboCauthuKhach.Text,
+                        StrMin = txtPhutGhibanKhach.Text
+                    }
+                });
+            }
+            else
+            {
+                HDMessageBox.Show("Chọn cầu thủ và phút ghi bàn trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void gvGhibanChu_RowClick(object sender, RowClickEventArgs e)
+        {
+            var temp = gvGhibanChu.GetFocusedRow() as View.Goal;
+            cboCauthuChu.Text = temp.gObj.Name;
+            txtPhutGhibanChu.Text = temp.gObj.StrMin;
+        }
+
+        private void gvGhibanKhach_RowClick(object sender, RowClickEventArgs e)
+        {
+            var temp = gvGhibanKhach.GetFocusedRow() as View.Goal;
+            cboCauthuKhach.Text = temp.gObj.Name;
+            txtPhutGhibanKhach.Text = temp.gObj.StrMin;
+        }
+
+        private void btnLuuGhibanChu_Click(object sender, EventArgs e)
+        {
+            if (bsGhibanChu.List.Count == 0)
+            {
+                HDMessageBox.Show("Chưa chọn cầu thủ ghi bàn để lưu!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            if (cboCauthuChu.Text.Length > 0 && txtPhutGhibanChu.Text.Length > 0)
+            {
+                var temp = gvGhibanChu.GetFocusedRow() as View.Goal;
+
+                bsGhibanChu.List.Insert(bsGhibanChu.List.IndexOf(temp), new View.Goal()
+                {
+                    gObj = new Object.Goal()
+                    {
+                        Name = cboCauthuChu.Text,
+                        StrMin = txtPhutGhibanChu.Text
+                    }
+                });
+                bsGhibanChu.List.Remove(temp);
+            }
+            else
+            {
+                HDMessageBox.Show("Chọn cầu thủ và phút ghi bàn trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnLuuGhibanKhach_Click(object sender, EventArgs e)
+        {
+            if (bsGhibanKhach.List.Count == 0)
+            {
+                HDMessageBox.Show("Chưa chọn cầu thủ ghi bàn để lưu!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            if (cboCauthuKhach.Text.Length > 0 && txtPhutGhibanKhach.Text.Length > 0)
+            {
+                var temp = gvGhibanKhach.GetFocusedRow() as View.Goal;
+
+                bsGhibanKhach.List.Insert(bsGhibanKhach.List.IndexOf(temp), new View.Goal()
+                {
+                    gObj = new Object.Goal()
+                    {
+                        Name = cboCauthuKhach.Text,
+                        StrMin = txtPhutGhibanKhach.Text
+                    }
+                });
+                bsGhibanKhach.List.Remove(temp);
+            }
+            else
+            {
+                HDMessageBox.Show("Chọn cầu thủ và phút ghi bàn trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion

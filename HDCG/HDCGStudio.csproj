@@ -111,6 +111,7 @@
     <Compile Include="ManagePlayersForm.Designer.cs">
       <DependentUpon>ManagePlayersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Object\Goal.cs" />
     <Compile Include="Object\League.cs" />
     <Compile Include="Object\Team.cs" />
     <Compile Include="PreviewForm.cs">
@@ -132,6 +133,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="View\Goal.cs" />
     <Compile Include="View\League.cs" />
     <Compile Include="View\Team.cs" />
     <Compile Include="View\Player.cs" />
@@ -185,6 +187,7 @@
     <None Include="Properties\DataSources\HDCG.View.Crawler.datasource" />
     <None Include="Properties\DataSources\HDCG.View.Video.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.Object.tempUpdating.datasource" />
+    <None Include="Properties\DataSources\HDCGStudio.View.Goal.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.View.League.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.View.Player.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.View.Team.datasource" />
