@@ -281,23 +281,92 @@ namespace HDCGStudio
                 ckVideoLoop.Checked = videoView.VideoObj.Loop;
             }
         }
+        public string GetAddXmlString()
+        {
+            var xmlAdd = "";
+            if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
+            {
+                try
+                {                    
+                    if (txtColor.Text.Length > 0)
+                        xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
+                    if (ckChu.Checked)
+                    {
+                        xmlAdd += Add("hlv", txtHomeCoach.Text);
+                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
+                        xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
+                        if (cboDanhsachcauthuHome.Text.Length > 0)
+                        {
+                            xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuHome.Text));
+                            xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuHome.Text));
+                        }
+                    }
+                    else if (ckKhach.Checked)
+                    {
+                        xmlAdd += Add("hlv", txtAwayCoach.Text);
+                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
+                        xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
+                        if (cboDanhsachcauthuAway.Text.Length > 0)
+                        {
+                            xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuAway.Text));
+                            xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuAway.Text));
+                        }
+                    }
+                    xmlAdd += Add("teamHome", cboDoiChuNha.Text);
+                    xmlAdd += Add("teamAway", cboDoiKhach.Text);
+                    xmlAdd += Add("tyso", nBongDaChuNha.Value.ToString() + " - " + nBongDaKhach.Value.ToString());
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                try
+                {                   
+                    if (txtPlayer1.Text.Length > 0)
+                        xmlAdd += Add("player1", txtPlayer1.Text);
+                    if (txtPlayer2.Text.Length > 0)
+                        xmlAdd += Add("player2", txtPlayer1.Text);
+                    if (txtPlayer3.Text.Length > 0)
+                        xmlAdd += Add("player3", txtPlayer1.Text);
+                    if (txtPlayer4.Text.Length > 0)
+                        xmlAdd += Add("player4", txtPlayer4.Text);
+                    xmlAdd += Add("hatgiong1", nHatgiong1.Value.ToString());
+                    xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
+                    xmlAdd += Add("player1set1point", nDiemSet1Player1.Value.ToString());
+                    xmlAdd += Add("player2set1point", nDiemSet1Player2.Value.ToString());
+                    xmlAdd += Add("player1set2point", nDiemSet2Player1.Value.ToString());
+                    xmlAdd += Add("player2set2point", nDiemSet2Player2.Value.ToString());
+                    xmlAdd += Add("player1set3point", nDiemSet3Player1.Value.ToString());
+                    xmlAdd += Add("player2set3point", nDiemSet3Player2.Value.ToString());
+                    xmlAdd += Add("player1livePoint", txtDiemHientaiPlayer1.Text);
+                    xmlAdd += Add("player2livePoint", txtDiemHientaiPlayer2.Text);
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            return xmlAdd;
+        }
         public string ViewTemplate(string templateFileName, int fadeUpDuration = 0)
         {
             string templateFile = "HDTemplates\\" + templateFileName;
-            var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXml);
-            dicTemplateData.Clear();
-            foreach (var data in lstData)
-                dicTemplateData.Add(data.Name, data.Data);
+            
             try
             {
                 int nTry = 0;
 
                 TryHere:
-
+                Clear();
                 if (player.Add(1, templateFile))
                 {
-                    if (dicTemplateData.ContainsKey("HDTemplates\\" + templateFileName))
-                        player.Update(1, dicTemplateData["HDTemplates\\" + templateFileName].Replace("\\n", "\n"));
+                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    UpdateDataFile(xmlStr);
+
+                    player.Update(1, xmlStr.Replace("\\n", "\n"));
                     player.Refresh();
                     player.InvokeMethod(1, "fadeUp");
                 }
@@ -1004,7 +1073,7 @@ namespace HDCGStudio
             {
                 try
                 {
-                    _xmlAdd = "";                    
+                    _xmlAdd = "";
                     if (txtColor.Text.Length > 0)
                         _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
                     if (ckChu.Checked)
@@ -1015,7 +1084,7 @@ namespace HDCGStudio
                         {
                             _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuHome.Text));
                             _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuHome.Text));
-                        }                        
+                        }
                     }
                     else if (ckKhach.Checked)
                     {
@@ -1087,10 +1156,11 @@ namespace HDCGStudio
         public string GetTeamLogo(string teamName)
         {
             string logoPath = "";
-            foreach(var temp in _lstTeams)
+            foreach (var temp in _lstTeams)
             {
-                if (temp.Name == teamName) { 
-                    logoPath= temp.LogoPath;
+                if (temp.Name == teamName)
+                {
+                    logoPath = temp.LogoPath;
                 }
                 break;
             }

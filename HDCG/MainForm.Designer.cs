@@ -1000,7 +1000,7 @@
             // 
             // ckKhach
             // 
-            this.ckKhach.Location = new System.Drawing.Point(818, 48);
+            this.ckKhach.Location = new System.Drawing.Point(781, 48);
             this.ckKhach.MenuManager = this.barManager1;
             this.ckKhach.Name = "ckKhach";
             this.ckKhach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
@@ -1013,7 +1013,7 @@
             // ckChu
             // 
             this.ckChu.EditValue = true;
-            this.ckChu.Location = new System.Drawing.Point(285, 48);
+            this.ckChu.Location = new System.Drawing.Point(328, 48);
             this.ckChu.MenuManager = this.barManager1;
             this.ckChu.Name = "ckChu";
             this.ckChu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
@@ -1663,7 +1663,7 @@
             this.xTabTyso.Controls.Add(this.labelControl5);
             this.xTabTyso.Name = "xTabTyso";
             this.xTabTyso.Size = new System.Drawing.Size(1212, 590);
-            this.xTabTyso.Text = "Thông số/Tỷ số";
+            this.xTabTyso.Text = "Thông số/Tỷ số/Ghi bàn";
             // 
             // nBongDaKhach
             // 
@@ -1792,7 +1792,7 @@
             this.xTabThe.Controls.Add(this.labelControl10);
             this.xTabThe.Name = "xTabThe";
             this.xTabThe.Size = new System.Drawing.Size(1212, 590);
-            this.xTabThe.Text = "Thẻ/Cầu thủ/Ghi bàn";
+            this.xTabThe.Text = "Thẻ/Cầu thủ";
             // 
             // txtThongsocauthuKhach
             // 

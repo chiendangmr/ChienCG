@@ -30,14 +30,13 @@
 		public var icon1:UILoader = null;
 		private var request:URLRequest = null;
 					
-		public var title1:TextField = new TextField();
+		public var hlv:TextField = new TextField();
 		public var title2:TextField = new TextField();
-		public var title3:TextField = new TextField();
 		
 		public function BongDa_HLV() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(title1);	
+			this.txtGroup.addChild(hlv);	
 			this.txtGroup.addChild(title2);
 			this.txtGroup.addChild(icon1);
 			
@@ -53,7 +52,7 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "title1", title1);
+			xmlStr +=Add(xmlStr, "hlv", hlv);
 			xmlStr +=Add(xmlStr, "title2", title2);
 				
 			xmlStr += "</Track_Property>";
@@ -74,8 +73,8 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "title1".toLowerCase():
-						this.title1.text = data.toUpperCase();
+					case "hlv".toLowerCase():
+						this.hlv.text = data.toUpperCase();
 						break;
 					case "title2".toLowerCase():
 						this.title2.text = data.toUpperCase();
@@ -91,7 +90,7 @@
 			gotoAndPlay('start');
 		}
 		public override function Stop():void{
-			//this.stop();
+			gotoAndPlay('stop');
 		}
 	}
 	
