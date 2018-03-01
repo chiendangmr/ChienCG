@@ -30,20 +30,20 @@
 		public var icon1:UILoader = null;
 		private var request:URLRequest = null;
 					
-		public var title1:TextField = new TextField();
-		public var title2:TextField = new TextField();
-		public var title3:TextField = new TextField();
-		public var title4:TextField = new TextField();
-		public var title5:TextField = new TextField();
+		public var timeThayNguoi:TextField = new TextField();
+		public var playerout:TextField = new TextField();
+		public var playerOutNumber:TextField = new TextField();
+		public var playerin:TextField = new TextField();
+		public var playerInNumber:TextField = new TextField();
 		
 		public function BongDa_ThayNguoi() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(title1);	
-			this.txtGroup.addChild(title2);
-			this.txtGroup.addChild(title3);
-			this.txtGroup.addChild(title4);
-			this.txtGroup.addChild(title5);
+			this.txtGroup.addChild(timeThayNguoi);	
+			this.txtGroup.addChild(playerout);
+			this.txtGroup.addChild(playerOutNumber);
+			this.txtGroup.addChild(playerin);
+			this.txtGroup.addChild(playerInNumber);
 			this.txtGroup.addChild(icon1);
 			
 			this.addChild(txtGroup);
@@ -58,11 +58,11 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "title1", title1);
-			xmlStr +=Add(xmlStr, "title2", title2);
-			xmlStr +=Add(xmlStr, "title3", title3);
-			xmlStr +=Add(xmlStr, "title4", title4);
-			xmlStr +=Add(xmlStr, "title5", title5);
+			xmlStr +=Add(xmlStr, "timeThayNguoi", timeThayNguoi);
+			xmlStr +=Add(xmlStr, "playerout", playerout);
+			xmlStr +=Add(xmlStr, "playerOutNumber", playerOutNumber);
+			xmlStr +=Add(xmlStr, "playerin", playerin);
+			xmlStr +=Add(xmlStr, "playerInNumber", playerInNumber);
 				
 			xmlStr += "</Track_Property>";
 			
@@ -82,20 +82,20 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "title1".toLowerCase():
-						this.title1.text = data.toUpperCase();
+					case "timeThayNguoi".toLowerCase():
+						this.timeThayNguoi.text = data.toUpperCase();
 						break;
-					case "title2".toLowerCase():
-						this.title2.text = data.toUpperCase();
+					case "playerout".toLowerCase():
+						this.playerout.text = data.toUpperCase();
 						break;
-					case "title3".toLowerCase():
-						this.title3.text = data.toUpperCase();
+					case "playerOutNumber".toLowerCase():
+						this.playerOutNumber.text = data.toUpperCase();
 						break;		
-					case "title4".toLowerCase():
-						this.title4.text = data.toUpperCase();
+					case "playerin".toLowerCase():
+						this.playerin.text = data.toUpperCase();
 						break;
-					case "title5".toLowerCase():
-						this.title5.text = data.toUpperCase();
+					case "playerInNumber".toLowerCase():
+						this.playerInNumber.text = data.toUpperCase();
 						break;	
 					case "icon1".toLowerCase():						
 						request = new URLRequest(data);
@@ -108,7 +108,7 @@
 			gotoAndPlay('start');
 		}
 		public override function Stop():void{
-			//this.stop();
+			gotoAndPlay('stop');
 		}
 	}
 	

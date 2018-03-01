@@ -115,47 +115,7 @@ namespace HDCGStudio
                 catch (Exception ex)
                 {
                     HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                _danhsachcauthuHomeXml = Path.Combine(Application.StartupPath, "DanhsachcauthuHome.xml");
-                try
-                {
-                    if (File.Exists(_danhsachcauthuHomeXml))
-                    {
-                        var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuHomeXml);
-                        foreach (var data in lstData)
-                            dicDanhsachcauthuHome.Add(data.Number, data.Name);
-                        foreach (var temp in dicDanhsachcauthuHome)
-                        {
-                            cboDanhsachcauthuHome.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
-                        }
-                    }
-                    else
-                    {
-                        File.Create(_danhsachcauthuHomeXml).Dispose();
-                    }
-                }
-                catch { }
-
-                _danhsachcauthuAwayXml = Path.Combine(Application.StartupPath, "DanhsachcauthuAway.xml");
-                try
-                {
-                    if (File.Exists(_danhsachcauthuAwayXml))
-                    {
-                        var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuAwayXml);
-                        foreach (var data in lstData)
-                            dicDanhsachcauthuAway.Add(data.Number, data.Name);
-                        foreach (var temp in dicDanhsachcauthuAway)
-                        {
-                            cboDanhsachcauthuAway.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
-                        }
-                    }
-                    else
-                    {
-                        File.Create(_danhsachcauthuAwayXml).Dispose();
-                    }
-                }
-                catch { }
+                }                 
 
                 cgServer = new HDCGControler.CasparCG();
                 cgServer.Connect(AppSetting.Default.CGServerIP, AppSetting.Default.CGServerPort);
@@ -281,84 +241,11 @@ namespace HDCGStudio
                 ckVideoLoop.Checked = videoView.VideoObj.Loop;
             }
         }
-        public string GetAddXmlString()
-        {
-            var xmlAdd = "";
-            if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
-            {
-                try
-                {
-                    xmlAdd += Add("trongtaichinh", txtTrongtaiChinh.Text);
-                    xmlAdd += Add("troly1", txtTroly1.Text);
-                    xmlAdd += Add("troly2", txtTroly2.Text);
-                    xmlAdd += Add("trongtaiban", txtTrongtaiban.Text);
-                    if (txtColor.Text.Length > 0)
-                        xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
-                    if (ckChu.Checked)
-                    {
-                        xmlAdd += Add("hlv", txtHomeCoach.Text);
-                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
-                        xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
-                        if (cboDanhsachcauthuHome.Text.Length > 0)
-                        {
-                            xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuHome.Text));
-                            xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuHome.Text));
-                        }
-                    }
-                    else if (ckKhach.Checked)
-                    {
-                        xmlAdd += Add("hlv", txtAwayCoach.Text);
-                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
-                        xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
-                        if (cboDanhsachcauthuAway.Text.Length > 0)
-                        {
-                            xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuAway.Text));
-                            xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuAway.Text));
-                        }
-                    }
-                    xmlAdd += Add("teamHome", cboDoiChuNha.Text);
-                    xmlAdd += Add("teamAway", cboDoiKhach.Text);
-                    xmlAdd += Add("tyso", nBongDaChuNha.Value.ToString() + " - " + nBongDaKhach.Value.ToString());
-                }
-                catch (Exception ex)
-                {
-                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                try
-                {                   
-                    if (txtPlayer1.Text.Length > 0)
-                        xmlAdd += Add("player1", txtPlayer1.Text);
-                    if (txtPlayer2.Text.Length > 0)
-                        xmlAdd += Add("player2", txtPlayer1.Text);
-                    if (txtPlayer3.Text.Length > 0)
-                        xmlAdd += Add("player3", txtPlayer1.Text);
-                    if (txtPlayer4.Text.Length > 0)
-                        xmlAdd += Add("player4", txtPlayer4.Text);
-                    xmlAdd += Add("hatgiong1", nHatgiong1.Value.ToString());
-                    xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
-                    xmlAdd += Add("player1set1point", nDiemSet1Player1.Value.ToString());
-                    xmlAdd += Add("player2set1point", nDiemSet1Player2.Value.ToString());
-                    xmlAdd += Add("player1set2point", nDiemSet2Player1.Value.ToString());
-                    xmlAdd += Add("player2set2point", nDiemSet2Player2.Value.ToString());
-                    xmlAdd += Add("player1set3point", nDiemSet3Player1.Value.ToString());
-                    xmlAdd += Add("player2set3point", nDiemSet3Player2.Value.ToString());
-                    xmlAdd += Add("player1livePoint", txtDiemHientaiPlayer1.Text);
-                    xmlAdd += Add("player2livePoint", txtDiemHientaiPlayer2.Text);
-                }
-                catch (Exception ex)
-                {
-                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            return xmlAdd;
-        }
+        
         public string ViewTemplate(string templateFileName, int fadeUpDuration = 0)
         {
             string templateFile = "HDTemplates\\" + templateFileName;
-            
+
             try
             {
                 int nTry = 0;
@@ -667,7 +554,7 @@ namespace HDCGStudio
         {
             try
             {
-                var templateName = "HDTemplates\\" + getTemplateName(_tempName);
+                var templateName = "HDTemplates\\" + GetTemplateName(_tempName);
                 var frmInput = new PreviewForm(templateName);
 
                 frmInput.LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
@@ -680,14 +567,7 @@ namespace HDCGStudio
                 HDMessageBox.Show("404 NOT FOUND: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private string getTemplateName(string templateName)
-        {
-            try
-            {
-                return dicTemplates[templateName];
-            }
-            catch { return ""; }
-        }
+       
         private void gvTempInfo_RowClick(object sender, RowClickEventArgs e)
         {
             ViewTemplate(_tempName);
@@ -697,7 +577,7 @@ namespace HDCGStudio
             if (gvTempInfo.FocusedRowHandle >= 0)
             {
                 var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-                _tempName = getTemplateName(tempInfoView.tempObj.TemplateName.ToString());
+                _tempName = GetTemplateName(tempInfoView.tempObj.TemplateName.ToString());
                 _layer = tempInfoView.tempObj.Layer;
                 _delay = tempInfoView.tempObj.Delay;
                 _duration = tempInfoView.tempObj.Duration;
@@ -707,48 +587,7 @@ namespace HDCGStudio
         {
             xmlStr = "<" + id + " id=\"" + id + "\"><data value=\"" + val + "\"/></" + id + ">";
             return xmlStr;
-        }
-        private String PrintXML(String XML)
-        {
-            String Result = "";
-
-            MemoryStream mStream = new MemoryStream();
-            XmlTextWriter writer = new XmlTextWriter(mStream, Encoding.Unicode);
-            XmlDocument document = new XmlDocument();
-
-            try
-            {
-                // Load the XmlDocument with the XML.
-                document.LoadXml(XML);
-
-                writer.Formatting = Formatting.Indented;
-
-                // Write the XML into a formatting XmlTextWriter
-                document.WriteContentTo(writer);
-                writer.Flush();
-                mStream.Flush();
-
-                // Have to rewind the MemoryStream in order to read
-                // its contents.
-                mStream.Position = 0;
-
-                // Read MemoryStream contents into a StreamReader.
-                StreamReader sReader = new StreamReader(mStream);
-
-                // Extract the text from the StreamReader.
-                String FormattedXML = sReader.ReadToEnd();
-
-                Result = FormattedXML;
-            }
-            catch (XmlException)
-            {
-            }
-
-            mStream.Close();
-            writer.Close();
-
-            return Result;
-        }
+        }       
 
         private void barBtnManageTemplate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -804,16 +643,6 @@ namespace HDCGStudio
             catch (Exception ex)
             {
                 HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void gvTempInfo_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {
-            GridView view = sender as GridView;
-            if (e.RowHandle == view.FocusedRowHandle)
-            {
-                e.Appearance.BackColor = Color.Green;
-                e.Appearance.ForeColor = Color.White;
             }
         }
 
@@ -910,17 +739,7 @@ namespace HDCGStudio
                 else
                     LogProcess.AddLog("Đã kích hoạt");
             }
-        }
-
-        private void gvVideo_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {
-            GridView view = sender as GridView;
-            if (e.RowHandle == view.FocusedRowHandle)
-            {
-                e.Appearance.BackColor = Color.Green;
-                e.Appearance.ForeColor = Color.White;
-            }
-        }
+        }        
         string _xml = "";
         string _xmlAdd = "";
         private string Add(string str, string val)
@@ -1083,22 +902,12 @@ namespace HDCGStudio
                     if (ckChu.Checked)
                     {
                         _xmlAdd += Add("icon1", GetTeamLogo(cboDoiChuNha.Text));
-                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
-                        if (cboDanhsachcauthuHome.Text.Length > 0)
-                        {
-                            _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuHome.Text));
-                            _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuHome.Text));
-                        }
+                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);                        
                     }
                     else if (ckKhach.Checked)
                     {
                         _xmlAdd += Add("icon1", GetTeamLogo(cboDoiKhach.Text));
-                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
-                        if (cboDanhsachcauthuAway.Text.Length > 0)
-                        {
-                            _xmlAdd += Add("player1", GetPlayerName(cboDanhsachcauthuAway.Text));
-                            _xmlAdd += Add("playerNumber1", GetPlayerNumber(cboDanhsachcauthuAway.Text));
-                        }
+                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);                        
                     }
                     _xmlAdd += Add("teamHome", cboDoiChuNha.Text);
                     _xmlAdd += Add("teamAway", cboDoiKhach.Text);
@@ -1149,13 +958,20 @@ namespace HDCGStudio
                 }
             }
         }
-        private string GetPlayerNumber(string playerString)
+
+        #region Các hàm get thông tin template
+        public View.Player GetPlayingPlayer()
         {
-            return playerString.Substring(3, playerString.IndexOf('-') - 3).Trim();
-        }
-        private string GetPlayerName(string playerString)
-        {
-            return playerString.Substring(playerString.IndexOf('-') + 1).Trim();
+            var player = new View.Player();
+            if (ckChu.Checked)
+            {
+                player = gvHomePlayer.GetFocusedRow() as View.Player;
+            }
+            else if (ckKhach.Checked)
+            {
+                player = gvAwayPlayer.GetFocusedRow() as View.Player;
+            }
+            return player;
         }
         public string GetTeamLogo(string teamName)
         {
@@ -1170,32 +986,116 @@ namespace HDCGStudio
             }
             return logoPath;
         }
-        private void cboDanhsachcauthuAway_SelectedIndexChanged(object sender, EventArgs e)
+        private string GetTemplateName(string templateName)
         {
             try
             {
-                if (File.Exists(_danhsachcauthuAwayXml))
-                {
-                    cboDanhsachcauthuAway.Properties.Items.Clear();
-                    dicDanhsachcauthuAway.Clear();
-                    var lstData = Utils.GetObject<List<Object.Player>>(_danhsachcauthuAwayXml);
-                    foreach (var data in lstData)
-                        dicDanhsachcauthuAway.Add(data.Number, data.Name);
-                    foreach (var temp in dicDanhsachcauthuAway)
-                    {
-                        cboDanhsachcauthuAway.Properties.Items.Add(temp.Value + " - Số " + temp.Key);
-                    }
-                }
-                else
-                {
-                    File.Create(_danhsachcauthuAwayXml).Dispose();
-                }
+                return dicTemplates[templateName];
             }
-            catch (Exception ex)
-            {
-                HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            catch { return ""; }
         }
+        #region Get cầu thủ vào sân, ra sân
+        public View.Player GetPlayerOut()
+        {
+            var player = new View.Player();
+            if (ckChu.Checked)
+            {
+                player = gvHomePlayer.GetFocusedRow() as View.Player;
+            }
+            else if (ckKhach.Checked)
+            {
+                player = gvAwayPlayer.GetFocusedRow() as View.Player;
+            }
+            return player;
+        }
+        public View.Player GetPlayerIn()
+        {
+            var player = new View.Player();
+            if (ckChu.Checked)
+            {
+                player = gvHomePlayerDuBi.GetFocusedRow() as View.Player;
+            }
+            else if (ckKhach.Checked)
+            {
+                player = gvAwayPlayerDuBi.GetFocusedRow() as View.Player;
+            }
+            return player;
+        }
+        #endregion
+        public string GetAddXmlString()
+        {
+            var xmlAdd = "";
+            if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
+            {
+                try
+                {
+                    xmlAdd += Add("player1", GetPlayingPlayer().mObj.Name);
+                    xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number);
+
+                    xmlAdd += Add("trongtaichinh", txtTrongtaiChinh.Text);
+                    xmlAdd += Add("troly1", txtTroly1.Text);
+                    xmlAdd += Add("troly2", txtTroly2.Text);
+                    xmlAdd += Add("trongtaiban", txtTrongtaiban.Text);
+
+                    xmlAdd += Add("playerin", GetPlayerIn().mObj.Name);
+                    xmlAdd += Add("playerout", GetPlayerOut().mObj.Name);
+                    xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number);
+                    xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number);
+
+                    if (txtColor.Text.Length > 0)
+                        xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
+                    if (ckChu.Checked)
+                    {
+                        xmlAdd += Add("hlv", txtHomeCoach.Text);
+                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
+                        xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
+                    }
+                    else if (ckKhach.Checked)
+                    {
+                        xmlAdd += Add("hlv", txtAwayCoach.Text);
+                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
+                        xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
+                    }
+                    xmlAdd += Add("teamHome", cboDoiChuNha.Text);
+                    xmlAdd += Add("teamAway", cboDoiKhach.Text);
+                    xmlAdd += Add("tyso", nBongDaChuNha.Value.ToString() + " - " + nBongDaKhach.Value.ToString());
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                try
+                {
+                    if (txtPlayer1.Text.Length > 0)
+                        xmlAdd += Add("player1", txtPlayer1.Text);
+                    if (txtPlayer2.Text.Length > 0)
+                        xmlAdd += Add("player2", txtPlayer1.Text);
+                    if (txtPlayer3.Text.Length > 0)
+                        xmlAdd += Add("player3", txtPlayer1.Text);
+                    if (txtPlayer4.Text.Length > 0)
+                        xmlAdd += Add("player4", txtPlayer4.Text);
+                    xmlAdd += Add("hatgiong1", nHatgiong1.Value.ToString());
+                    xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
+                    xmlAdd += Add("player1set1point", nDiemSet1Player1.Value.ToString());
+                    xmlAdd += Add("player2set1point", nDiemSet1Player2.Value.ToString());
+                    xmlAdd += Add("player1set2point", nDiemSet2Player1.Value.ToString());
+                    xmlAdd += Add("player2set2point", nDiemSet2Player2.Value.ToString());
+                    xmlAdd += Add("player1set3point", nDiemSet3Player1.Value.ToString());
+                    xmlAdd += Add("player2set3point", nDiemSet3Player2.Value.ToString());
+                    xmlAdd += Add("player1livePoint", txtDiemHientaiPlayer1.Text);
+                    xmlAdd += Add("player2livePoint", txtDiemHientaiPlayer2.Text);
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            return xmlAdd;
+        }
+        #endregion       
 
         private void ckCauthuChu_CheckedChanged(object sender, EventArgs e)
         {
@@ -1291,16 +1191,14 @@ namespace HDCGStudio
                 if (File.Exists(templatesXmlPath))
                 {
                     bsHomePlayer.Clear();
-                    bsHomePlayerDuBi.Clear();
-                    cboDanhsachcauthuHome.Properties.Items.Clear();
+                    bsHomePlayerDuBi.Clear();                    
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
                     {
                         bsHomePlayer.Add(new View.Player()
                         {
                             mObj = temp
-                        });
-                        cboDanhsachcauthuHome.Properties.Items.Add("Số " + temp.Number + " - " + temp.Name);
+                        });                       
                     }
                     var lstDubi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
                     foreach (var temp in lstDubi)
@@ -1337,16 +1235,14 @@ namespace HDCGStudio
                 if (File.Exists(templatesXmlPath))
                 {
                     bsAwayPlayer.Clear();
-                    bsAwayPlayerDuBi.Clear();
-                    cboDanhsachcauthuAway.Properties.Items.Clear();
+                    bsAwayPlayerDuBi.Clear();                    
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
                     {
                         bsAwayPlayer.Add(new View.Player()
                         {
                             mObj = temp
-                        });
-                        cboDanhsachcauthuAway.Properties.Items.Add("Số " + temp.Number + " - " + temp.Name);
+                        });                        
                     }
                     var lstDuBi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
                     foreach (var temp in lstDuBi)
@@ -1379,5 +1275,66 @@ namespace HDCGStudio
                 frmPlayer.Activate();
             }
         }
+
+        #region RowCellStyle for GridView
+        private void gvVideo_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.Green;
+                e.Appearance.ForeColor = Color.White;
+            }
+        }
+        private void gvTempInfo_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.Green;
+                e.Appearance.ForeColor = Color.White;
+            }
+        }
+
+        private void gvHomePlayer_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.OrangeRed;
+                e.Appearance.ForeColor = Color.White;
+            }
+        }
+
+        private void gvHomePlayerDuBi_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.DarkBlue;
+                e.Appearance.ForeColor = Color.White;
+            }
+        }
+
+        private void gvAwayPlayer_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.OrangeRed;
+                e.Appearance.ForeColor = Color.White;
+            }
+        }
+
+        private void gvAwayPlayerDuBi_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.DarkBlue;
+                e.Appearance.ForeColor = Color.White;
+            }
+        }
+        #endregion
     }
 }

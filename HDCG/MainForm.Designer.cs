@@ -152,13 +152,6 @@
             this.btnChooseIcon1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtIcon1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.xTabThe = new DevExpress.XtraTab.XtraTabPage();
-            this.txtThongsocauthuKhach = new DevExpress.XtraEditors.TextEdit();
-            this.txtThongsocauthuChu = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
-            this.cboDanhsachcauthuAway = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cboDanhsachcauthuHome = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.xTabTrongtai = new DevExpress.XtraTab.XtraTabPage();
             this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
@@ -230,6 +223,9 @@
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.bsUpdateData = new System.Windows.Forms.BindingSource(this.components);
+            this.labelControl39 = new DevExpress.XtraEditors.LabelControl();
+            this.txtThongsocauthuChu = new DevExpress.XtraEditors.TextEdit();
+            this.txtThongsocauthuKhach = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -301,11 +297,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).BeginInit();
-            this.xTabThe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThongsocauthuKhach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThongsocauthuChu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuAway.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuHome.Properties)).BeginInit();
             this.xTabTrongtai.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
@@ -343,6 +334,8 @@
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThongsocauthuChu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThongsocauthuKhach.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -1003,24 +996,24 @@
             this.ckKhach.Location = new System.Drawing.Point(781, 48);
             this.ckKhach.MenuManager = this.barManager1;
             this.ckKhach.Name = "ckKhach";
-            this.ckKhach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.ckKhach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
             this.ckKhach.Properties.Appearance.Options.UseFont = true;
             this.ckKhach.Properties.Caption = "Lên đồ họa cho Khách";
-            this.ckKhach.Size = new System.Drawing.Size(190, 25);
+            this.ckKhach.Size = new System.Drawing.Size(214, 25);
             this.ckKhach.TabIndex = 140;
             this.ckKhach.CheckedChanged += new System.EventHandler(this.ckCauthuKhach_CheckedChanged);
             // 
             // ckChu
             // 
             this.ckChu.EditValue = true;
-            this.ckChu.Location = new System.Drawing.Point(328, 48);
+            this.ckChu.Location = new System.Drawing.Point(298, 48);
             this.ckChu.MenuManager = this.barManager1;
             this.ckChu.Name = "ckChu";
-            this.ckChu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.ckChu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
             this.ckChu.Properties.Appearance.Options.UseFont = true;
             this.ckChu.Properties.Caption = "Lên đồ họa cho Chủ";
             this.ckChu.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.ckChu.Size = new System.Drawing.Size(172, 25);
+            this.ckChu.Size = new System.Drawing.Size(202, 25);
             this.ckChu.TabIndex = 139;
             this.ckChu.CheckedChanged += new System.EventHandler(this.ckCauthuChu_CheckedChanged);
             // 
@@ -1082,7 +1075,6 @@
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabDoiHinh,
             this.xTabTyso,
-            this.xTabThe,
             this.xTabTrongtai,
             this.xTabThoigian});
             // 
@@ -1091,19 +1083,22 @@
             this.xTabDoiHinh.Controls.Add(this.splitContainerControl3);
             this.xTabDoiHinh.Name = "xTabDoiHinh";
             this.xTabDoiHinh.Size = new System.Drawing.Size(1212, 590);
-            this.xTabDoiHinh.Text = "Đội hình";
+            this.xTabDoiHinh.Text = "Đội hình/Cầu thủ/Thẻ";
             // 
             // splitContainerControl3
             // 
             this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl3.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl3.Name = "splitContainerControl3";
+            this.splitContainerControl3.Panel1.Controls.Add(this.txtThongsocauthuChu);
+            this.splitContainerControl3.Panel1.Controls.Add(this.labelControl39);
             this.splitContainerControl3.Panel1.Controls.Add(this.gridSplitContainer3);
             this.splitContainerControl3.Panel1.Controls.Add(this.labelControl31);
             this.splitContainerControl3.Panel1.Controls.Add(this.btnQuanlyDangky);
             this.splitContainerControl3.Panel1.Controls.Add(this.gridSplitContainer1);
             this.splitContainerControl3.Panel1.Controls.Add(this.labelControl30);
             this.splitContainerControl3.Panel1.Text = "Panel1";
+            this.splitContainerControl3.Panel2.Controls.Add(this.txtThongsocauthuKhach);
             this.splitContainerControl3.Panel2.Controls.Add(this.gridSplitContainer4);
             this.splitContainerControl3.Panel2.Controls.Add(this.btnQuanlyDangkyAway);
             this.splitContainerControl3.Panel2.Controls.Add(this.gridSplitContainer2);
@@ -1167,6 +1162,7 @@
             this.gvHomePlayerDuBi.OptionsView.EnableAppearanceEvenRow = true;
             this.gvHomePlayerDuBi.OptionsView.EnableAppearanceOddRow = true;
             this.gvHomePlayerDuBi.OptionsView.ShowGroupPanel = false;
+            this.gvHomePlayerDuBi.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvHomePlayerDuBi_RowCellStyle);
             // 
             // gridColumn18
             // 
@@ -1240,7 +1236,7 @@
             // 
             this.labelControl31.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl31.Appearance.Options.UseFont = true;
-            this.labelControl31.Location = new System.Drawing.Point(56, 383);
+            this.labelControl31.Location = new System.Drawing.Point(16, 381);
             this.labelControl31.Name = "labelControl31";
             this.labelControl31.Size = new System.Drawing.Size(69, 21);
             this.labelControl31.TabIndex = 147;
@@ -1311,6 +1307,7 @@
             this.gvHomePlayer.OptionsView.EnableAppearanceEvenRow = true;
             this.gvHomePlayer.OptionsView.EnableAppearanceOddRow = true;
             this.gvHomePlayer.OptionsView.ShowGroupPanel = false;
+            this.gvHomePlayer.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvHomePlayer_RowCellStyle);
             // 
             // gridColumn5
             // 
@@ -1444,6 +1441,7 @@
             this.gvAwayPlayerDuBi.OptionsView.EnableAppearanceEvenRow = true;
             this.gvAwayPlayerDuBi.OptionsView.EnableAppearanceOddRow = true;
             this.gvAwayPlayerDuBi.OptionsView.ShowGroupPanel = false;
+            this.gvAwayPlayerDuBi.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvAwayPlayerDuBi_RowCellStyle);
             // 
             // gridColumn9
             // 
@@ -1578,6 +1576,7 @@
             this.gvAwayPlayer.OptionsView.EnableAppearanceEvenRow = true;
             this.gvAwayPlayer.OptionsView.EnableAppearanceOddRow = true;
             this.gvAwayPlayer.OptionsView.ShowGroupPanel = false;
+            this.gvAwayPlayer.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvAwayPlayer_RowCellStyle);
             // 
             // gridColumn10
             // 
@@ -1781,82 +1780,6 @@
             this.labelControl5.Size = new System.Drawing.Size(51, 19);
             this.labelControl5.TabIndex = 124;
             this.labelControl5.Text = "Icon 2:";
-            // 
-            // xTabThe
-            // 
-            this.xTabThe.Controls.Add(this.txtThongsocauthuKhach);
-            this.xTabThe.Controls.Add(this.txtThongsocauthuChu);
-            this.xTabThe.Controls.Add(this.labelControl38);
-            this.xTabThe.Controls.Add(this.cboDanhsachcauthuAway);
-            this.xTabThe.Controls.Add(this.cboDanhsachcauthuHome);
-            this.xTabThe.Controls.Add(this.labelControl10);
-            this.xTabThe.Name = "xTabThe";
-            this.xTabThe.Size = new System.Drawing.Size(1212, 590);
-            this.xTabThe.Text = "Thẻ/Cầu thủ";
-            // 
-            // txtThongsocauthuKhach
-            // 
-            this.txtThongsocauthuKhach.Location = new System.Drawing.Point(780, 69);
-            this.txtThongsocauthuKhach.MenuManager = this.barManager1;
-            this.txtThongsocauthuKhach.Name = "txtThongsocauthuKhach";
-            this.txtThongsocauthuKhach.Size = new System.Drawing.Size(329, 22);
-            this.txtThongsocauthuKhach.TabIndex = 153;
-            // 
-            // txtThongsocauthuChu
-            // 
-            this.txtThongsocauthuChu.Location = new System.Drawing.Point(199, 70);
-            this.txtThongsocauthuChu.MenuManager = this.barManager1;
-            this.txtThongsocauthuChu.Name = "txtThongsocauthuChu";
-            this.txtThongsocauthuChu.Size = new System.Drawing.Size(300, 22);
-            this.txtThongsocauthuChu.TabIndex = 152;
-            // 
-            // labelControl38
-            // 
-            this.labelControl38.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl38.Appearance.Options.UseFont = true;
-            this.labelControl38.Location = new System.Drawing.Point(49, 70);
-            this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(134, 21);
-            this.labelControl38.TabIndex = 151;
-            this.labelControl38.Text = "Thông số cầu thủ:";
-            // 
-            // cboDanhsachcauthuAway
-            // 
-            this.cboDanhsachcauthuAway.Location = new System.Drawing.Point(780, 26);
-            this.cboDanhsachcauthuAway.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cboDanhsachcauthuAway.MenuManager = this.barManager1;
-            this.cboDanhsachcauthuAway.Name = "cboDanhsachcauthuAway";
-            this.cboDanhsachcauthuAway.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.cboDanhsachcauthuAway.Properties.Appearance.Options.UseFont = true;
-            this.cboDanhsachcauthuAway.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboDanhsachcauthuAway.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboDanhsachcauthuAway.Size = new System.Drawing.Size(329, 26);
-            this.cboDanhsachcauthuAway.TabIndex = 139;
-            // 
-            // cboDanhsachcauthuHome
-            // 
-            this.cboDanhsachcauthuHome.Location = new System.Drawing.Point(199, 26);
-            this.cboDanhsachcauthuHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cboDanhsachcauthuHome.MenuManager = this.barManager1;
-            this.cboDanhsachcauthuHome.Name = "cboDanhsachcauthuHome";
-            this.cboDanhsachcauthuHome.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.cboDanhsachcauthuHome.Properties.Appearance.Options.UseFont = true;
-            this.cboDanhsachcauthuHome.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboDanhsachcauthuHome.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboDanhsachcauthuHome.Size = new System.Drawing.Size(300, 26);
-            this.cboDanhsachcauthuHome.TabIndex = 137;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(85, 29);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(98, 21);
-            this.labelControl10.TabIndex = 136;
-            this.labelControl10.Text = "Cầu thủ/Thẻ:";
             // 
             // xTabTrongtai
             // 
@@ -2723,6 +2646,40 @@
             // 
             this.bsUpdateData.DataSource = typeof(HDCGStudio.Object.tempUpdating);
             // 
+            // labelControl39
+            // 
+            this.labelControl39.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl39.Appearance.Options.UseFont = true;
+            this.labelControl39.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.labelControl39.Location = new System.Drawing.Point(16, 335);
+            this.labelControl39.MaximumSize = new System.Drawing.Size(100, 0);
+            this.labelControl39.Name = "labelControl39";
+            this.labelControl39.Size = new System.Drawing.Size(73, 42);
+            this.labelControl39.TabIndex = 149;
+            this.labelControl39.Text = "Thông số    cầu thủ:";
+            // 
+            // txtThongsocauthuChu
+            // 
+            this.txtThongsocauthuChu.EditValue = "0 bàn sau 0 trận";
+            this.txtThongsocauthuChu.Location = new System.Drawing.Point(141, 340);
+            this.txtThongsocauthuChu.MenuManager = this.barManager1;
+            this.txtThongsocauthuChu.Name = "txtThongsocauthuChu";
+            this.txtThongsocauthuChu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtThongsocauthuChu.Properties.Appearance.Options.UseFont = true;
+            this.txtThongsocauthuChu.Size = new System.Drawing.Size(431, 26);
+            this.txtThongsocauthuChu.TabIndex = 153;
+            // 
+            // txtThongsocauthuKhach
+            // 
+            this.txtThongsocauthuKhach.EditValue = "0 bàn sau 0 trận";
+            this.txtThongsocauthuKhach.Location = new System.Drawing.Point(28, 340);
+            this.txtThongsocauthuKhach.MenuManager = this.barManager1;
+            this.txtThongsocauthuKhach.Name = "txtThongsocauthuKhach";
+            this.txtThongsocauthuKhach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtThongsocauthuKhach.Properties.Appearance.Options.UseFont = true;
+            this.txtThongsocauthuKhach.Size = new System.Drawing.Size(431, 26);
+            this.txtThongsocauthuKhach.TabIndex = 154;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -2816,12 +2773,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIcon1.Properties)).EndInit();
-            this.xTabThe.ResumeLayout(false);
-            this.xTabThe.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThongsocauthuKhach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThongsocauthuChu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuAway.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboDanhsachcauthuHome.Properties)).EndInit();
             this.xTabTrongtai.ResumeLayout(false);
             this.xTabTrongtai.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
@@ -2861,6 +2812,8 @@
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThongsocauthuChu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThongsocauthuKhach.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2982,7 +2935,6 @@
         private DevExpress.XtraEditors.TextEdit txtIcon1;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraTab.XtraTabPage xTabTrongtai;
-        private DevExpress.XtraTab.XtraTabPage xTabThe;
         private DevExpress.XtraTab.XtraTabPage xTabThoigian;
         private DevExpress.XtraEditors.SimpleButton btnChooseIcon2;
         private System.Windows.Forms.NumericUpDown nBongDaKhach;
@@ -2991,9 +2943,6 @@
         private System.Windows.Forms.BindingSource bsHomePlayer;
         private System.Windows.Forms.BindingSource bsAwayPlayer;
         private System.Windows.Forms.BindingSource bsHomePlayerDuBi;
-        private DevExpress.XtraEditors.ComboBoxEdit cboDanhsachcauthuAway;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.ComboBoxEdit cboDanhsachcauthuHome;
         private System.Windows.Forms.BindingSource bsAwayPlayerDuBi;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl4;
         private DevExpress.XtraEditors.LabelControl labelControl9;
@@ -3065,8 +3014,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl33;
         private DevExpress.XtraEditors.TextEdit txtTrongtaiChinh;
         private DevExpress.XtraEditors.LabelControl labelControl32;
-        private DevExpress.XtraEditors.TextEdit txtThongsocauthuKhach;
         private DevExpress.XtraEditors.TextEdit txtThongsocauthuChu;
-        private DevExpress.XtraEditors.LabelControl labelControl38;
+        private DevExpress.XtraEditors.LabelControl labelControl39;
+        private DevExpress.XtraEditors.TextEdit txtThongsocauthuKhach;
     }
 }
