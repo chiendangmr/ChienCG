@@ -89,7 +89,7 @@
 			gotoAndPlay('start');
 		}
 		public override function Stop():void{
-			//this.stop();
+			gotoAndPlay('stop');
 		}
 	}
 	

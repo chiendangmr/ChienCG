@@ -2448,7 +2448,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
-            this.gridColumn4.Width = 191;
+            this.gridColumn4.Width = 148;
             // 
             // gridColumn1
             // 

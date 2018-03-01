@@ -283,7 +283,7 @@ namespace HDCGStudio
         }
         public string ViewTemplate(string templateFileName, int fadeUpDuration = 0)
         {
-            string templateFile = "HDTemplates\\Update\\" + templateFileName;
+            string templateFile = "HDTemplates\\" + templateFileName;
             var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXml);
             dicTemplateData.Clear();
             foreach (var data in lstData)
