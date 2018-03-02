@@ -198,6 +198,7 @@
             this.cboTeams.Properties.Appearance.Options.UseFont = true;
             this.cboTeams.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboTeams.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboTeams.Size = new System.Drawing.Size(607, 26);
             this.cboTeams.TabIndex = 13;
             this.cboTeams.SelectedIndexChanged += new System.EventHandler(this.cboTeams_SelectedIndexChanged);

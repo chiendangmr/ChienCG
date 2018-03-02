@@ -365,32 +365,23 @@ namespace HDCGStudio
                     }
                 }
                 bool upOK = false;
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-
+                
                 try
                 {
-                    //Đảm bảo data được update mới nhất
-                    var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXml);
-                    dicTemplateData.Clear();
-                    foreach (var data in lstData)
-                        dicTemplateData.Add(data.Name, data.Data);
-
-                    if (dicTemplateData.ContainsKey(templateFile))
+                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    if (templateFile == "HDTemplates\\ThongBao_ThongBaoChung.ft")
                     {
-                        if (templateFile == "HDTemplates\\ThongBao_ThongBaoChung.ft")
-                        {
-                            upOK = cgServer.FadeUp(layer, fadeUpDuration, dicTemplateData[templateFile].Replace("\\n", "\n"));
-                        }
-                        else
-                            upOK = cgServer.FadeUp(layer, fadeUpDuration, dicTemplateData[templateFile].Replace("\\", "\\\\"));
+                        upOK = cgServer.FadeUp(layer, fadeUpDuration, xmlStr.Replace("\\n", "\n"));
                     }
                     else
-                        upOK = cgServer.CutUp(layer);
+                        upOK = cgServer.FadeUp(layer, fadeUpDuration, xmlStr.Replace("\\", "\\\\"));
+
                 }
                 catch (Exception ex)
                 {
                     HDMessageBox.Show("Không thể lấy thông tin update! - " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
 
                 System.Threading.Timer timer = null;
                 if (tempInfoView.tempObj.Duration > 0)
@@ -972,8 +963,8 @@ namespace HDCGStudio
                 if (temp.Name == teamName)
                 {
                     logoPath = temp.LogoPath;
+                    break;
                 }
-                break;
             }
             return logoPath;
         }

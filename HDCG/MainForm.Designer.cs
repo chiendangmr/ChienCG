@@ -256,6 +256,7 @@
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.player = new CGPreviewControl.FlashTemplateHostControl();
+            this.gridSplitContainer7 = new DevExpress.XtraGrid.GridSplitContainer();
             this.gridTempInfo = new DevExpress.XtraGrid.GridControl();
             this.tempInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvTempInfo = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -419,6 +420,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer7)).BeginInit();
+            this.gridSplitContainer7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTempInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tempInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTempInfo)).BeginInit();
@@ -931,7 +934,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(1771, 856);
-            this.splitContainerControl1.SplitterPosition = 1253;
+            this.splitContainerControl1.SplitterPosition = 1210;
             this.splitContainerControl1.TabIndex = 92;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -942,7 +945,7 @@
             this.xTabMain.Location = new System.Drawing.Point(0, 0);
             this.xTabMain.Name = "xTabMain";
             this.xTabMain.SelectedTabPage = this.xTabPageBongda;
-            this.xTabMain.Size = new System.Drawing.Size(1253, 856);
+            this.xTabMain.Size = new System.Drawing.Size(1210, 856);
             this.xTabMain.TabIndex = 93;
             this.xTabMain.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabPageBongda,
@@ -952,7 +955,7 @@
             // 
             this.xTabPageBongda.Controls.Add(this.splitContainerControl4);
             this.xTabPageBongda.Name = "xTabPageBongda";
-            this.xTabPageBongda.Size = new System.Drawing.Size(1219, 849);
+            this.xTabPageBongda.Size = new System.Drawing.Size(1176, 849);
             this.xTabPageBongda.Text = "Bóng đá";
             // 
             // splitContainerControl4
@@ -982,7 +985,7 @@
             this.splitContainerControl4.Panel1.Text = "Panel1";
             this.splitContainerControl4.Panel2.Controls.Add(this.xtraTabControl2);
             this.splitContainerControl4.Panel2.Text = "Panel2";
-            this.splitContainerControl4.Size = new System.Drawing.Size(1219, 849);
+            this.splitContainerControl4.Size = new System.Drawing.Size(1176, 849);
             this.splitContainerControl4.SplitterPosition = 193;
             this.splitContainerControl4.TabIndex = 115;
             this.splitContainerControl4.Text = "splitContainerControl4";
@@ -1195,7 +1198,7 @@
             this.xtraTabControl2.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xTabDoiHinh;
-            this.xtraTabControl2.Size = new System.Drawing.Size(1219, 650);
+            this.xtraTabControl2.Size = new System.Drawing.Size(1176, 650);
             this.xtraTabControl2.TabIndex = 113;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabDoiHinh,
@@ -1207,7 +1210,7 @@
             // 
             this.xTabDoiHinh.Controls.Add(this.splitContainerControl3);
             this.xTabDoiHinh.Name = "xTabDoiHinh";
-            this.xTabDoiHinh.Size = new System.Drawing.Size(1212, 615);
+            this.xTabDoiHinh.Size = new System.Drawing.Size(1169, 615);
             this.xTabDoiHinh.Text = "Đội hình/Cầu thủ/Thẻ";
             // 
             // splitContainerControl3
@@ -1231,7 +1234,7 @@
             this.splitContainerControl3.Panel2.Controls.Add(this.btnQuanlyDangkyAway);
             this.splitContainerControl3.Panel2.Controls.Add(this.gridSplitContainer2);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(1212, 615);
+            this.splitContainerControl3.Size = new System.Drawing.Size(1169, 615);
             this.splitContainerControl3.SplitterPosition = 700;
             this.splitContainerControl3.TabIndex = 114;
             this.splitContainerControl3.Text = "splitContainerControl3";
@@ -1241,7 +1244,7 @@
             this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(392, 554);
+            this.labelControl6.Location = new System.Drawing.Point(392, 561);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(67, 21);
             this.labelControl6.TabIndex = 154;
@@ -1250,7 +1253,7 @@
             // btnChooseColor
             // 
             this.btnChooseColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChooseColor.Location = new System.Drawing.Point(606, 549);
+            this.btnChooseColor.Location = new System.Drawing.Point(606, 556);
             this.btnChooseColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChooseColor.Name = "btnChooseColor";
             this.btnChooseColor.Size = new System.Drawing.Size(35, 26);
@@ -1261,7 +1264,7 @@
             // 
             this.txtColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtColor.Enabled = false;
-            this.txtColor.Location = new System.Drawing.Point(465, 553);
+            this.txtColor.Location = new System.Drawing.Point(465, 560);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(135, 22);
             this.txtColor.TabIndex = 155;
@@ -3078,7 +3081,7 @@
             this.splitContainerControl2.Name = "splitContainerControl2";
             this.splitContainerControl2.Panel1.Controls.Add(this.player);
             this.splitContainerControl2.Panel1.Text = "Panel1";
-            this.splitContainerControl2.Panel2.Controls.Add(this.gridTempInfo);
+            this.splitContainerControl2.Panel2.Controls.Add(this.gridSplitContainer7);
             this.splitContainerControl2.Panel2.Controls.Add(this.btnStop);
             this.splitContainerControl2.Panel2.Controls.Add(this.labelControl3);
             this.splitContainerControl2.Panel2.Controls.Add(this.btnLiveUpdate);
@@ -3093,8 +3096,8 @@
             this.splitContainerControl2.Panel2.Controls.Add(this.labelControl2);
             this.splitContainerControl2.Panel2.Controls.Add(this.btnUpdateAll);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(512, 856);
-            this.splitContainerControl2.SplitterPosition = 397;
+            this.splitContainerControl2.Size = new System.Drawing.Size(555, 856);
+            this.splitContainerControl2.SplitterPosition = 331;
             this.splitContainerControl2.TabIndex = 113;
             this.splitContainerControl2.Text = "splitContainerControl2";
             // 
@@ -3107,28 +3110,38 @@
             this.player.Margin = new System.Windows.Forms.Padding(5);
             this.player.Name = "player";
             this.player.ScaleMode = CGPreviewControl.FlashTemplateHostControl.ScaleModes.FullScreen;
-            this.player.Size = new System.Drawing.Size(512, 397);
+            this.player.Size = new System.Drawing.Size(555, 331);
             this.player.TabIndex = 3;
             this.player.TemplateFolder = "";
             this.player.TemplateHost = "";
             this.player.Valid = false;
             this.player.Version = CGPreviewControl.FlashTemplateHostControl.Versions.Version20;
             // 
+            // gridSplitContainer7
+            // 
+            this.gridSplitContainer7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.gridSplitContainer7.Grid = this.gridTempInfo;
+            this.gridSplitContainer7.Location = new System.Drawing.Point(0, 90);
+            this.gridSplitContainer7.Name = "gridSplitContainer7";
+            this.gridSplitContainer7.Panel1.Controls.Add(this.gridTempInfo);
+            this.gridSplitContainer7.Size = new System.Drawing.Size(384, 417);
+            this.gridSplitContainer7.TabIndex = 102;
+            // 
             // gridTempInfo
             // 
-            this.gridTempInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.gridTempInfo.DataSource = this.tempInfoBindingSource;
+            this.gridTempInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridTempInfo.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridTempInfo.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.gridTempInfo.Location = new System.Drawing.Point(3, 90);
+            this.gridTempInfo.Location = new System.Drawing.Point(0, 0);
             this.gridTempInfo.MainView = this.gvTempInfo;
             this.gridTempInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridTempInfo.MenuManager = this.barManager1;
             this.gridTempInfo.Name = "gridTempInfo";
             this.gridTempInfo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2});
-            this.gridTempInfo.Size = new System.Drawing.Size(384, 357);
+            this.gridTempInfo.Size = new System.Drawing.Size(384, 417);
             this.gridTempInfo.TabIndex = 19;
             this.gridTempInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTempInfo});
@@ -3233,13 +3246,12 @@
             this.btnStop.Appearance.Options.UseFont = true;
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnStop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStop.ImageOptions.Image")));
-            this.btnStop.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnStop.Location = new System.Drawing.Point(393, 90);
+            this.btnStop.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnStop.Location = new System.Drawing.Point(393, 326);
             this.btnStop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(90, 42);
+            this.btnStop.Size = new System.Drawing.Size(72, 42);
             this.btnStop.TabIndex = 99;
-            this.btnStop.Text = "Stop";
             this.btnStop.ToolTip = "Stop Template";
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
@@ -3247,7 +3259,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(202, 18);
+            this.labelControl3.Location = new System.Drawing.Point(261, 48);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(101, 17);
@@ -3259,13 +3271,12 @@
             this.btnLiveUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnLiveUpdate.Appearance.Options.UseFont = true;
             this.btnLiveUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLiveUpdate.ImageOptions.Image")));
-            this.btnLiveUpdate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnLiveUpdate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnLiveUpdate.Location = new System.Drawing.Point(393, 154);
             this.btnLiveUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLiveUpdate.Name = "btnLiveUpdate";
-            this.btnLiveUpdate.Size = new System.Drawing.Size(132, 42);
+            this.btnLiveUpdate.Size = new System.Drawing.Size(72, 42);
             this.btnLiveUpdate.TabIndex = 101;
-            this.btnLiveUpdate.Text = "Live Update";
             this.btnLiveUpdate.ToolTip = "Update real-time data for template";
             this.btnLiveUpdate.Click += new System.EventHandler(this.btnLiveUpdate_Click);
             // 
@@ -3276,7 +3287,7 @@
             0,
             0,
             0});
-            this.numericUpDown2.Location = new System.Drawing.Point(122, 47);
+            this.numericUpDown2.Location = new System.Drawing.Point(136, 47);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             1000000,
@@ -3289,7 +3300,7 @@
             // 
             // cboTemplateType
             // 
-            this.cboTemplateType.Location = new System.Drawing.Point(354, 51);
+            this.cboTemplateType.Location = new System.Drawing.Point(136, 10);
             this.cboTemplateType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTemplateType.MenuManager = this.barManager1;
             this.cboTemplateType.Name = "cboTemplateType";
@@ -3308,7 +3319,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(26, 48);
+            this.labelControl4.Location = new System.Drawing.Point(52, 48);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(78, 17);
@@ -3319,7 +3330,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(234, 53);
+            this.labelControl1.Location = new System.Drawing.Point(26, 13);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(104, 17);
@@ -3333,7 +3344,7 @@
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(324, 17);
+            this.numericUpDown1.Location = new System.Drawing.Point(368, 47);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1000000,
@@ -3349,13 +3360,12 @@
             this.btnPreviewTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnPreviewTemplate.Appearance.Options.UseFont = true;
             this.btnPreviewTemplate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreviewTemplate.ImageOptions.Image")));
-            this.btnPreviewTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnPreviewTemplate.Location = new System.Drawing.Point(393, 211);
+            this.btnPreviewTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnPreviewTemplate.Location = new System.Drawing.Point(393, 104);
             this.btnPreviewTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPreviewTemplate.Name = "btnPreviewTemplate";
-            this.btnPreviewTemplate.Size = new System.Drawing.Size(100, 42);
+            this.btnPreviewTemplate.Size = new System.Drawing.Size(72, 42);
             this.btnPreviewTemplate.TabIndex = 97;
-            this.btnPreviewTemplate.Text = "Preview";
             this.btnPreviewTemplate.ToolTip = "Preview Template";
             this.btnPreviewTemplate.Click += new System.EventHandler(this.btnPreviewTemplate_Click);
             // 
@@ -3365,19 +3375,18 @@
             this.btnPlay.Appearance.Options.UseFont = true;
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPlay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.ImageOptions.Image")));
-            this.btnPlay.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnPlay.Location = new System.Drawing.Point(393, 340);
+            this.btnPlay.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnPlay.Location = new System.Drawing.Point(393, 254);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(90, 42);
+            this.btnPlay.Size = new System.Drawing.Size(72, 42);
             this.btnPlay.TabIndex = 98;
-            this.btnPlay.Text = "Play";
             this.btnPlay.ToolTip = "Play Template";
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // cboTempLayer
             // 
-            this.cboTempLayer.Location = new System.Drawing.Point(75, 18);
+            this.cboTempLayer.Location = new System.Drawing.Point(368, 12);
             this.cboTempLayer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTempLayer.MenuManager = this.barManager1;
             this.cboTempLayer.Name = "cboTempLayer";
@@ -3413,7 +3422,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(26, 21);
+            this.labelControl2.Location = new System.Drawing.Point(310, 17);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(43, 17);
@@ -3425,11 +3434,11 @@
             this.btnUpdateAll.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnUpdateAll.Appearance.Options.UseFont = true;
             this.btnUpdateAll.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateAll.ImageOptions.Image")));
-            this.btnUpdateAll.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnUpdateAll.Location = new System.Drawing.Point(393, 272);
+            this.btnUpdateAll.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnUpdateAll.Location = new System.Drawing.Point(393, 204);
             this.btnUpdateAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdateAll.Name = "btnUpdateAll";
-            this.btnUpdateAll.Size = new System.Drawing.Size(172, 42);
+            this.btnUpdateAll.Size = new System.Drawing.Size(72, 42);
             this.btnUpdateAll.TabIndex = 100;
             this.btnUpdateAll.Text = "Manual Update";
             this.btnUpdateAll.ToolTip = "Manual Update data for template";
@@ -3478,6 +3487,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HDCG Studio 3.2.0";
@@ -3627,6 +3637,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
             this.splitContainerControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer7)).EndInit();
+            this.gridSplitContainer7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridTempInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tempInfoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTempInfo)).EndInit();
@@ -3898,5 +3910,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit8;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
         private System.Windows.Forms.BindingSource bsGhibanKhach;
+        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer7;
     }
 }
