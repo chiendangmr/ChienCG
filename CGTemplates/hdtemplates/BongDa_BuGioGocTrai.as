@@ -24,16 +24,13 @@
 	import flash.globalization.NumberFormatter;
 	import flash.globalization.LocaleID;
 		
-	public class BongDa_TySoGocTrai extends CasparTemplate{
+	public class BongDa_BuGioGocTrai extends CasparTemplate{
 		
 		public var myTotalBar:MovieClip = new bar();
 				
 		private var txtGroup:MovieClip = new MovieClip();
 					
-		public var dongho:TextField = new TextField();
-		public var shortNameChu:TextField = new TextField();
-		public var tyso:TextField = new TextField();
-		public var shortNameKhach:TextField = new TextField();			
+		public var bugio:TextField = new TextField();				
 				
 		private var maskBar:Shape = new Shape();
 		private var rectWidth:Number = 900;
@@ -46,19 +43,15 @@
 		private var txtTween:Tween = null;
 				
 		var clockTimer:Timer = new Timer(1000, 0);
-		var _phut:Number;
-		var _giay:Number;
+		var _phut:Number=0;
+		var _giay:Number=0;
 						
-		public function BongDa_TySoGocTrai() {
+		public function BongDa_BuGioGocTrai() {
 			// constructor code
 			super();
 			
 			this.addChild(myTotalBar);			
-			this.txtGroup.addChild(tyso);	
-			this.txtGroup.addChild(dongho);
-			this.txtGroup.addChild(shortNameChu);	
-			this.txtGroup.addChild(shortNameKhach);			
-			
+			this.txtGroup.addChild(bugio);			
 			this.addChild(txtGroup);
 			
 			this.addChild(maskBar);
@@ -76,7 +69,7 @@
 			this.myTotalBar.visible = false;	
 			
 			clockTimer.addEventListener(TimerEvent.TIMER, onClockTimer);
-						
+			clockTimer.start();			
 			ExternalInterface.addCallback("UpdateData", UpdateData);
 			ExternalInterface.addCallback("GetProperties", GetProperties);			
 		}		
@@ -88,10 +81,7 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";			
-			xmlStr +=Add(xmlStr, "tyso", tyso);			
-			xmlStr +=Add(xmlStr, "dongho", dongho);	
-			xmlStr +=Add(xmlStr, "shortNameChu", shortNameChu);
-			xmlStr +=Add(xmlStr, "shortNameKhach", shortNameKhach);			
+			xmlStr +=Add(xmlStr, "bugio", bugio);	
 			xmlStr += "</Track_Property>";
 			
 			ExternalInterface.call("Properties", xmlStr);
@@ -110,21 +100,9 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{					
-					case "tyso".toLowerCase():
-						this.tyso.text = data.toUpperCase();
-						break;
-					case "dongho".toLowerCase():						
-						this.dongho.text = data.toUpperCase();
-						this._phut = parsePhut(data);
-						this._giay = parseGiay(data) + 1;
-						clockTimer.start();
-						break;				
-					case "shortNameChu".toLowerCase():
-						this.shortNameChu.text = data;
-						break;
-					case "shortNameKhach".toLowerCase():
-						this.shortNameKhach.text = data;
-						break;						
+					case "bugio".toLowerCase():							
+						
+						break;											
 				}
 			}
 		}
@@ -163,7 +141,7 @@
 			return a*Math.PI/b;
 		}		
 		function onClockTimer(e:TimerEvent):void {
-			this.dongho.text = getFormattedTime();
+			this.bugio.text = getFormattedTime();
 		}
 		
 		function getFormattedTime():String {			
