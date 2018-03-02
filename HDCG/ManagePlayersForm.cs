@@ -46,13 +46,13 @@ namespace HDCGStudio
             {
                 HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            cboTeams.Text = _team;            
+            cboTeams.Text = _team;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtNumber.Text.Trim().Length == 0 || txtNumber.Name.Trim().Length == 0 || cboTeams.Text.Trim().Length==0)
+                if (txtNumber.Text.Trim().Length == 0 || txtNumber.Name.Trim().Length == 0 || cboTeams.Text.Trim().Length == 0)
                 {
                     HDMessageBox.Show("Đội, Tên và số áo không được để trống!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -70,7 +70,7 @@ namespace HDCGStudio
                         }
                     });
 
-                    (bsManagePlayers.List as BindingList<View.Player>).Select(v => v.mObj).ToList().SaveObject(templatesXmlPath);
+                    (bsManagePlayers.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).Select(v => v.mObj).ToList().SaveObject(templatesXmlPath);
                 }
             }
             catch (Exception ex)

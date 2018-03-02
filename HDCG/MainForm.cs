@@ -39,8 +39,6 @@ namespace HDCGStudio
         string _templateXmlPath = "";
         string _updateDataXml = "";
         string _TemplateHost = "";
-        string _danhsachcauthuHomeXml = "";
-        string _danhsachcauthuAwayXml = "";
         string _danhsachgiaidauXmlPath = "";
         List<Object.League> _lstLeagues = new List<Object.League>();
         List<Object.Team> _lstTeams = new List<Object.Team>();
@@ -365,7 +363,7 @@ namespace HDCGStudio
                     }
                 }
                 bool upOK = false;
-                
+
                 try
                 {
                     string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
@@ -743,8 +741,6 @@ namespace HDCGStudio
             {
                 _xmlAdd = "";
                 var templateName = "HDTemplates\\Update\\" + _tempName;
-                if (txtColor.Text.Length > 0)
-                    _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
                 _xml = player.GetProperties();
                 var fieldName = _xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
                 string xmlStr = "<Track_Property>" + _xmlAdd + fieldName.Replace("<Track_Property>", "");
@@ -850,15 +846,6 @@ namespace HDCGStudio
             }
         }
 
-        private void btnChooseColor_Click(object sender, EventArgs e)
-        {
-            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
-            frm.RootFolder = AppSetting.Default.MediaFolder;
-            frm.FilterString = "*.tga;*.png;*.jpg";
-            if (frm.ShowDialog() == DialogResult.OK)
-                txtColor.Text = frm.FileName;
-        }
-
         private void btnLiveUpdate_Click(object sender, EventArgs e)
         {
             if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
@@ -866,8 +853,6 @@ namespace HDCGStudio
                 try
                 {
                     _xmlAdd = "";
-                    if (txtColor.Text.Length > 0)
-                        _xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
                     if (ckChu.Checked)
                     {
                         _xmlAdd += Add("icon1", GetTeamLogo(cboDoiChuNha.Text));
@@ -994,6 +979,14 @@ namespace HDCGStudio
                 lstChinhthuc = (bsAwayPlayerDuBi.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
             return lstChinhthuc;
         }
+        public string GetPlayerName(string playerStr)
+        {
+            return playerStr.Substring(playerStr.IndexOf("-") + 1).Trim();
+        }
+        public string GetPlayerNumber(string playerStr)
+        {
+            return playerStr.Substring(0, playerStr.IndexOf("-")).Trim();
+        }
         #region Get cầu thủ vào sân, ra sân
         public View.Player GetPlayerOut()
         {
@@ -1045,19 +1038,67 @@ namespace HDCGStudio
                     xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
                     xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
 
-                    if (txtColor.Text.Length > 0)
-                        xmlAdd += Add("image", Path.Combine(AppSetting.Default.MediaFolder, txtColor.Text));
                     if (ckChu.Checked)
                     {
                         xmlAdd += Add("hlv", txtHomeCoach.Text);
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
+                        xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoChu.Text));
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
+                        xmlAdd += Add("sododoihinh", cboDoihinhChu.Text);
+                        xmlAdd += Add("vitriName1", GetPlayerName(cboVitriChu1.Text));
+                        xmlAdd += Add("vitriName2", GetPlayerName(cboVitriChu2.Text));
+                        xmlAdd += Add("vitriName3", GetPlayerName(cboVitriChu3.Text));
+                        xmlAdd += Add("vitriName4", GetPlayerName(cboVitriChu4.Text));
+                        xmlAdd += Add("vitriName5", GetPlayerName(cboVitriChu5.Text));
+                        xmlAdd += Add("vitriName6", GetPlayerName(cboVitriChu6.Text));
+                        xmlAdd += Add("vitriName7", GetPlayerName(cboVitriChu7.Text));
+                        xmlAdd += Add("vitriName8", GetPlayerName(cboVitriChu8.Text));
+                        xmlAdd += Add("vitriName9", GetPlayerName(cboVitriChu9.Text));
+                        xmlAdd += Add("vitriName10", GetPlayerName(cboVitriChu10.Text));
+                        xmlAdd += Add("vitriName11", GetPlayerName(cboVitriChu11.Text));
+
+                        xmlAdd += Add("vitriNumber1", GetPlayerNumber(cboVitriChu1.Text));
+                        xmlAdd += Add("vitriNumber2", GetPlayerNumber(cboVitriChu2.Text));
+                        xmlAdd += Add("vitriNumber3", GetPlayerNumber(cboVitriChu3.Text));
+                        xmlAdd += Add("vitriNumber4", GetPlayerNumber(cboVitriChu4.Text));
+                        xmlAdd += Add("vitriNumber5", GetPlayerNumber(cboVitriChu5.Text));
+                        xmlAdd += Add("vitriNumber6", GetPlayerNumber(cboVitriChu6.Text));
+                        xmlAdd += Add("vitriNumber7", GetPlayerNumber(cboVitriChu7.Text));
+                        xmlAdd += Add("vitriNumber8", GetPlayerNumber(cboVitriChu8.Text));
+                        xmlAdd += Add("vitriNumber9", GetPlayerNumber(cboVitriChu9.Text));
+                        xmlAdd += Add("vitriNumber10", GetPlayerNumber(cboVitriChu10.Text));
+                        xmlAdd += Add("vitriNumber11", GetPlayerNumber(cboVitriChu11.Text));
                     }
                     else if (ckKhach.Checked)
                     {
                         xmlAdd += Add("hlv", txtAwayCoach.Text);
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
+                        xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoKhach.Text));
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
+                        xmlAdd += Add("sododoihinh", cboDoihinhKhach.Text);
+                        xmlAdd += Add("vitriName1", GetPlayerName(cboVitriKhach1.Text));
+                        xmlAdd += Add("vitriName2", GetPlayerName(cboVitriKhach2.Text));
+                        xmlAdd += Add("vitriName3", GetPlayerName(cboVitriKhach3.Text));
+                        xmlAdd += Add("vitriName4", GetPlayerName(cboVitriKhach4.Text));
+                        xmlAdd += Add("vitriName5", GetPlayerName(cboVitriKhach5.Text));
+                        xmlAdd += Add("vitriName6", GetPlayerName(cboVitriKhach6.Text));
+                        xmlAdd += Add("vitriName7", GetPlayerName(cboVitriKhach7.Text));
+                        xmlAdd += Add("vitriName8", GetPlayerName(cboVitriKhach8.Text));
+                        xmlAdd += Add("vitriName9", GetPlayerName(cboVitriKhach9.Text));
+                        xmlAdd += Add("vitriName10", GetPlayerName(cboVitriKhach10.Text));
+                        xmlAdd += Add("vitriName11", GetPlayerName(cboVitriKhach11.Text));
+
+                        xmlAdd += Add("vitriNumber1", GetPlayerNumber(cboVitriKhach1.Text));
+                        xmlAdd += Add("vitriNumber2", GetPlayerNumber(cboVitriKhach2.Text));
+                        xmlAdd += Add("vitriNumber3", GetPlayerNumber(cboVitriKhach3.Text));
+                        xmlAdd += Add("vitriNumber4", GetPlayerNumber(cboVitriKhach4.Text));
+                        xmlAdd += Add("vitriNumber5", GetPlayerNumber(cboVitriKhach5.Text));
+                        xmlAdd += Add("vitriNumber6", GetPlayerNumber(cboVitriKhach6.Text));
+                        xmlAdd += Add("vitriNumber7", GetPlayerNumber(cboVitriKhach7.Text));
+                        xmlAdd += Add("vitriNumber8", GetPlayerNumber(cboVitriKhach8.Text));
+                        xmlAdd += Add("vitriNumber9", GetPlayerNumber(cboVitriKhach9.Text));
+                        xmlAdd += Add("vitriNumber10", GetPlayerNumber(cboVitriKhach10.Text));
+                        xmlAdd += Add("vitriNumber11", GetPlayerNumber(cboVitriKhach11.Text));
                     }
                     xmlAdd += Add("doiChu", cboDoiChuNha.Text);
                     xmlAdd += Add("doiKhach", cboDoiKhach.Text);
@@ -1243,7 +1284,7 @@ namespace HDCGStudio
                     }
                     else
                     {
-                        File.Create(_danhsachcauthuHomeXml).Dispose();
+                        File.Create(danhsachdoiPath).Dispose();
                     }
                 }
                 catch { }
@@ -1299,6 +1340,17 @@ namespace HDCGStudio
                     bsHomePlayerDuBi.Clear();
                     cboCauthuChu.Properties.Items.Clear();
                     bsGhibanChu.Clear();
+                    cboVitriChu1.Properties.Items.Clear();
+                    cboVitriChu2.Properties.Items.Clear();
+                    cboVitriChu3.Properties.Items.Clear();
+                    cboVitriChu4.Properties.Items.Clear();
+                    cboVitriChu5.Properties.Items.Clear();
+                    cboVitriChu6.Properties.Items.Clear();
+                    cboVitriChu7.Properties.Items.Clear();
+                    cboVitriChu8.Properties.Items.Clear();
+                    cboVitriChu9.Properties.Items.Clear();
+                    cboVitriChu10.Properties.Items.Clear();
+                    cboVitriChu11.Properties.Items.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
                     {
@@ -1307,6 +1359,17 @@ namespace HDCGStudio
                             mObj = temp
                         });
                         cboCauthuChu.Properties.Items.Add(temp.Name);
+                        cboVitriChu1.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriChu2.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriChu3.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriChu4.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriChu5.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriChu6.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriChu7.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriChu8.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriChu9.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriChu10.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriChu11.Properties.Items.Add(temp.Number + " - " + temp.Name);
                     }
                     var lstDubi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
                     foreach (var temp in lstDubi)
@@ -1349,6 +1412,17 @@ namespace HDCGStudio
                     bsAwayPlayerDuBi.Clear();
                     cboCauthuKhach.Properties.Items.Clear();
                     bsGhibanKhach.Clear();
+                    cboVitriKhach1.Properties.Items.Clear();
+                    cboVitriKhach2.Properties.Items.Clear();
+                    cboVitriKhach3.Properties.Items.Clear();
+                    cboVitriKhach4.Properties.Items.Clear();
+                    cboVitriKhach5.Properties.Items.Clear();
+                    cboVitriKhach6.Properties.Items.Clear();
+                    cboVitriKhach7.Properties.Items.Clear();
+                    cboVitriKhach8.Properties.Items.Clear();
+                    cboVitriKhach9.Properties.Items.Clear();
+                    cboVitriKhach10.Properties.Items.Clear();
+                    cboVitriKhach11.Properties.Items.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
                     {
@@ -1357,6 +1431,17 @@ namespace HDCGStudio
                             mObj = temp
                         });
                         cboCauthuKhach.Properties.Items.Add(temp.Name);
+                        cboVitriKhach1.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriKhach2.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriKhach3.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriKhach4.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriKhach5.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriKhach6.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriKhach7.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriKhach8.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriKhach9.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriKhach10.Properties.Items.Add(temp.Number + " - " + temp.Name);
+                        cboVitriKhach11.Properties.Items.Add(temp.Number + " - " + temp.Name);
                     }
                     var lstDuBi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
                     foreach (var temp in lstDuBi)
@@ -1559,6 +1644,116 @@ namespace HDCGStudio
             {
                 HDMessageBox.Show("Chọn cầu thủ và phút ghi bàn trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        #endregion
+
+        #region Xử lý đội hình
+        private void cboDoihinhChu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ckChu.Checked)
+            {
+                try
+                {
+                    switch (cboDoihinhChu.Text)
+                    {
+                        case "3-4-3":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "343.png"));
+                            break;
+                        case "3-5-2":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "352.png"));
+                            break;
+                        case "4-2-3-1":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "4231.png"));
+                            break;
+                        case "4-3-3":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "433.png"));
+                            break;
+                        case "4-4-2":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "442.png"));
+                            break;
+                        case "4-5-1":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "451.png"));
+                            break;
+                        case "5-3-2":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "532.png"));
+                            break;
+                        case "5-4-1":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "541.png"));
+                            break;
+                        default:
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "4231.png"));
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show("Chưa có ảnh cho đội hình này! " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+        }
+        private void cboDoihinhKhach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ckKhach.Checked)
+            {
+                try
+                {
+                    switch (cboDoihinhKhach.Text)
+                    {
+                        case "3-4-3":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "343.png"));
+                            break;
+                        case "3-5-2":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "352.png"));
+                            break;
+                        case "4-2-3-1":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "4231.png"));
+                            break;
+                        case "4-3-3":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "433.png"));
+                            break;
+                        case "4-4-2":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "442.png"));
+                            break;
+                        case "4-5-1":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "451.png"));
+                            break;
+                        case "5-3-2":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "532.png"));
+                            break;
+                        case "5-4-1":
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "541.png"));
+                            break;
+                        default:
+                            picDoihinh.Image = new Bitmap(Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), "4231.png"));
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show("Chưa có ảnh cho đội hình này! " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        #endregion
+        #region Xử lý màu áo
+        private void btnChooseMauAoChu_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "MauAo");
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtMauAoChu.Text = frm.FileName;
+        }
+
+        private void btnChooseMauAoKhach_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "MauAo");
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtMauAoKhach.Text = frm.FileName;
         }
         #endregion
     }
