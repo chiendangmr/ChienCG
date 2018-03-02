@@ -46,6 +46,8 @@
 		private var txtTween:Tween = null;
 				
 		var clockTimer:Timer = new Timer(1000, 0);
+		var _phut:Number;
+		var _giay:Number;
 						
 		public function BongDa_TySoGocTrai() {
 			// constructor code
@@ -113,6 +115,8 @@
 						break;
 					case "dongho".toLowerCase():						
 						this.dongho.text = data.toUpperCase();
+						this._phut = parsePhut(data);
+						this._giay = parseGiay(data) + 1;
 						clockTimer.start();
 						break;				
 					case "shortNameChu".toLowerCase():
@@ -162,18 +166,54 @@
 			this.dongho.text = getFormattedTime();
 		}
 		
-		function getFormattedTime():String {
-			var now:Date = new Date();
-			var hrs:String = String(now.getHours());
-			if (hrs.length < 2) {
-				hrs = "0" + hrs;
-			}
-			var mins:String = String(now.getMinutes());
-			if (mins.length < 2) {
-				mins = "0" + mins;
-			}
-			return hrs + ":" + mins;
+		function getFormattedTime():String {			
+			_giay++;
+			if(_giay==60){
+				_phut++;
+				_giay=0;
+				}			
+			if(_phut==45||_phut==90||_phut==105||_phut==120){
+				_giay=0;
+				}
+			var minute:String;
+			if(_phut < 10) minute = "0" + _phut;
+				else minute=String(_phut);
+			
+			var second:String;
+			if(_giay < 10) second = "0" + _giay;
+				else second=String(_giay);
+			return minute + ":" + second;
 		}	
+		function parse(str:String):Number
+		{
+			for(var i = 0; i < str.length; i++)
+			{
+				var c:String = str.charAt(i);
+				if(c != "0") break;
+			}
+
+			return Number(str.substr(i));
+		}		
+		function parseGiay(str:String):Number
+		{
+			for(var i = 0; i < str.length; i++)
+			{
+				var c:String = str.charAt(i);
+				if(c == ":") break;
+			}
+
+			return parse(str.substr(i+1));
+		}
+		function parsePhut(str:String):Number
+		{
+			for(var i = 0; i < str.length; i++)
+			{
+				var c:String = str.charAt(i);
+				if(c == ":") break;
+			}
+
+			return parse(str.substr(0,i));
+		}
 	}
 	
 }

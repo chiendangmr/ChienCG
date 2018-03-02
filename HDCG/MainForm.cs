@@ -1037,37 +1037,40 @@ namespace HDCGStudio
                     xmlAdd += Add("playerout", GetPlayerOut().mObj.Name);
                     xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
                     xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
-
+                    xmlAdd += Add("dongho", lbThoigianTran.Text);
                     if (ckChu.Checked)
                     {
                         xmlAdd += Add("hlv", txtHomeCoach.Text);
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
                         xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoChu.Text));
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
-                        xmlAdd += Add("sododoihinh", cboDoihinhChu.Text);
-                        xmlAdd += Add("vitriName1", GetPlayerName(cboVitriChu1.Text));
-                        xmlAdd += Add("vitriName2", GetPlayerName(cboVitriChu2.Text));
-                        xmlAdd += Add("vitriName3", GetPlayerName(cboVitriChu3.Text));
-                        xmlAdd += Add("vitriName4", GetPlayerName(cboVitriChu4.Text));
-                        xmlAdd += Add("vitriName5", GetPlayerName(cboVitriChu5.Text));
-                        xmlAdd += Add("vitriName6", GetPlayerName(cboVitriChu6.Text));
-                        xmlAdd += Add("vitriName7", GetPlayerName(cboVitriChu7.Text));
-                        xmlAdd += Add("vitriName8", GetPlayerName(cboVitriChu8.Text));
-                        xmlAdd += Add("vitriName9", GetPlayerName(cboVitriChu9.Text));
-                        xmlAdd += Add("vitriName10", GetPlayerName(cboVitriChu10.Text));
-                        xmlAdd += Add("vitriName11", GetPlayerName(cboVitriChu11.Text));
+                        if (_tempName == "BongDa_ThongKeCuoi.ft")
+                        {
+                            xmlAdd += Add("sododoihinh", cboDoihinhChu.Text);
+                            xmlAdd += Add("vitriName1", GetPlayerName(cboVitriChu1.Text));
+                            xmlAdd += Add("vitriName2", GetPlayerName(cboVitriChu2.Text));
+                            xmlAdd += Add("vitriName3", GetPlayerName(cboVitriChu3.Text));
+                            xmlAdd += Add("vitriName4", GetPlayerName(cboVitriChu4.Text));
+                            xmlAdd += Add("vitriName5", GetPlayerName(cboVitriChu5.Text));
+                            xmlAdd += Add("vitriName6", GetPlayerName(cboVitriChu6.Text));
+                            xmlAdd += Add("vitriName7", GetPlayerName(cboVitriChu7.Text));
+                            xmlAdd += Add("vitriName8", GetPlayerName(cboVitriChu8.Text));
+                            xmlAdd += Add("vitriName9", GetPlayerName(cboVitriChu9.Text));
+                            xmlAdd += Add("vitriName10", GetPlayerName(cboVitriChu10.Text));
+                            xmlAdd += Add("vitriName11", GetPlayerName(cboVitriChu11.Text));
 
-                        xmlAdd += Add("vitriNumber1", GetPlayerNumber(cboVitriChu1.Text));
-                        xmlAdd += Add("vitriNumber2", GetPlayerNumber(cboVitriChu2.Text));
-                        xmlAdd += Add("vitriNumber3", GetPlayerNumber(cboVitriChu3.Text));
-                        xmlAdd += Add("vitriNumber4", GetPlayerNumber(cboVitriChu4.Text));
-                        xmlAdd += Add("vitriNumber5", GetPlayerNumber(cboVitriChu5.Text));
-                        xmlAdd += Add("vitriNumber6", GetPlayerNumber(cboVitriChu6.Text));
-                        xmlAdd += Add("vitriNumber7", GetPlayerNumber(cboVitriChu7.Text));
-                        xmlAdd += Add("vitriNumber8", GetPlayerNumber(cboVitriChu8.Text));
-                        xmlAdd += Add("vitriNumber9", GetPlayerNumber(cboVitriChu9.Text));
-                        xmlAdd += Add("vitriNumber10", GetPlayerNumber(cboVitriChu10.Text));
-                        xmlAdd += Add("vitriNumber11", GetPlayerNumber(cboVitriChu11.Text));
+                            xmlAdd += Add("vitriNumber1", GetPlayerNumber(cboVitriChu1.Text));
+                            xmlAdd += Add("vitriNumber2", GetPlayerNumber(cboVitriChu2.Text));
+                            xmlAdd += Add("vitriNumber3", GetPlayerNumber(cboVitriChu3.Text));
+                            xmlAdd += Add("vitriNumber4", GetPlayerNumber(cboVitriChu4.Text));
+                            xmlAdd += Add("vitriNumber5", GetPlayerNumber(cboVitriChu5.Text));
+                            xmlAdd += Add("vitriNumber6", GetPlayerNumber(cboVitriChu6.Text));
+                            xmlAdd += Add("vitriNumber7", GetPlayerNumber(cboVitriChu7.Text));
+                            xmlAdd += Add("vitriNumber8", GetPlayerNumber(cboVitriChu8.Text));
+                            xmlAdd += Add("vitriNumber9", GetPlayerNumber(cboVitriChu9.Text));
+                            xmlAdd += Add("vitriNumber10", GetPlayerNumber(cboVitriChu10.Text));
+                            xmlAdd += Add("vitriNumber11", GetPlayerNumber(cboVitriChu11.Text));
+                        }
                     }
                     else if (ckKhach.Checked)
                     {
@@ -1075,30 +1078,33 @@ namespace HDCGStudio
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
                         xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoKhach.Text));
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
-                        xmlAdd += Add("sododoihinh", cboDoihinhKhach.Text);
-                        xmlAdd += Add("vitriName1", GetPlayerName(cboVitriKhach1.Text));
-                        xmlAdd += Add("vitriName2", GetPlayerName(cboVitriKhach2.Text));
-                        xmlAdd += Add("vitriName3", GetPlayerName(cboVitriKhach3.Text));
-                        xmlAdd += Add("vitriName4", GetPlayerName(cboVitriKhach4.Text));
-                        xmlAdd += Add("vitriName5", GetPlayerName(cboVitriKhach5.Text));
-                        xmlAdd += Add("vitriName6", GetPlayerName(cboVitriKhach6.Text));
-                        xmlAdd += Add("vitriName7", GetPlayerName(cboVitriKhach7.Text));
-                        xmlAdd += Add("vitriName8", GetPlayerName(cboVitriKhach8.Text));
-                        xmlAdd += Add("vitriName9", GetPlayerName(cboVitriKhach9.Text));
-                        xmlAdd += Add("vitriName10", GetPlayerName(cboVitriKhach10.Text));
-                        xmlAdd += Add("vitriName11", GetPlayerName(cboVitriKhach11.Text));
+                        if (_tempName == "BongDa_ThongKeCuoi.ft")
+                        {
+                            xmlAdd += Add("sododoihinh", cboDoihinhKhach.Text);
+                            xmlAdd += Add("vitriName1", GetPlayerName(cboVitriKhach1.Text));
+                            xmlAdd += Add("vitriName2", GetPlayerName(cboVitriKhach2.Text));
+                            xmlAdd += Add("vitriName3", GetPlayerName(cboVitriKhach3.Text));
+                            xmlAdd += Add("vitriName4", GetPlayerName(cboVitriKhach4.Text));
+                            xmlAdd += Add("vitriName5", GetPlayerName(cboVitriKhach5.Text));
+                            xmlAdd += Add("vitriName6", GetPlayerName(cboVitriKhach6.Text));
+                            xmlAdd += Add("vitriName7", GetPlayerName(cboVitriKhach7.Text));
+                            xmlAdd += Add("vitriName8", GetPlayerName(cboVitriKhach8.Text));
+                            xmlAdd += Add("vitriName9", GetPlayerName(cboVitriKhach9.Text));
+                            xmlAdd += Add("vitriName10", GetPlayerName(cboVitriKhach10.Text));
+                            xmlAdd += Add("vitriName11", GetPlayerName(cboVitriKhach11.Text));
 
-                        xmlAdd += Add("vitriNumber1", GetPlayerNumber(cboVitriKhach1.Text));
-                        xmlAdd += Add("vitriNumber2", GetPlayerNumber(cboVitriKhach2.Text));
-                        xmlAdd += Add("vitriNumber3", GetPlayerNumber(cboVitriKhach3.Text));
-                        xmlAdd += Add("vitriNumber4", GetPlayerNumber(cboVitriKhach4.Text));
-                        xmlAdd += Add("vitriNumber5", GetPlayerNumber(cboVitriKhach5.Text));
-                        xmlAdd += Add("vitriNumber6", GetPlayerNumber(cboVitriKhach6.Text));
-                        xmlAdd += Add("vitriNumber7", GetPlayerNumber(cboVitriKhach7.Text));
-                        xmlAdd += Add("vitriNumber8", GetPlayerNumber(cboVitriKhach8.Text));
-                        xmlAdd += Add("vitriNumber9", GetPlayerNumber(cboVitriKhach9.Text));
-                        xmlAdd += Add("vitriNumber10", GetPlayerNumber(cboVitriKhach10.Text));
-                        xmlAdd += Add("vitriNumber11", GetPlayerNumber(cboVitriKhach11.Text));
+                            xmlAdd += Add("vitriNumber1", GetPlayerNumber(cboVitriKhach1.Text));
+                            xmlAdd += Add("vitriNumber2", GetPlayerNumber(cboVitriKhach2.Text));
+                            xmlAdd += Add("vitriNumber3", GetPlayerNumber(cboVitriKhach3.Text));
+                            xmlAdd += Add("vitriNumber4", GetPlayerNumber(cboVitriKhach4.Text));
+                            xmlAdd += Add("vitriNumber5", GetPlayerNumber(cboVitriKhach5.Text));
+                            xmlAdd += Add("vitriNumber6", GetPlayerNumber(cboVitriKhach6.Text));
+                            xmlAdd += Add("vitriNumber7", GetPlayerNumber(cboVitriKhach7.Text));
+                            xmlAdd += Add("vitriNumber8", GetPlayerNumber(cboVitriKhach8.Text));
+                            xmlAdd += Add("vitriNumber9", GetPlayerNumber(cboVitriKhach9.Text));
+                            xmlAdd += Add("vitriNumber10", GetPlayerNumber(cboVitriKhach10.Text));
+                            xmlAdd += Add("vitriNumber11", GetPlayerNumber(cboVitriKhach11.Text));
+                        }
                     }
                     xmlAdd += Add("doiChu", cboDoiChuNha.Text);
                     xmlAdd += Add("doiKhach", cboDoiKhach.Text);
@@ -1756,5 +1762,73 @@ namespace HDCGStudio
                 txtMauAoKhach.Text = frm.FileName;
         }
         #endregion
+        int _thoigianTranGiay = 0;
+        int _thoigianTranPhut = 0;
+        int _thoigianThucGiay = 0;
+        int _thoigianThucPhut = 0;
+        bool _isEndPoint = false;
+        #region Đồng hồ/Thời gian
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (!_isEndPoint)
+            {
+                _thoigianTranGiay++;
+                if (_thoigianTranGiay == 60)
+                {
+                    _thoigianTranGiay = 0;
+                    _thoigianTranPhut++;
+                }
+            }
+            if ((_thoigianTranPhut == 45 || _thoigianTranPhut == 90 || _thoigianTranPhut == 105 || _thoigianTranPhut == 120) && _thoigianTranGiay == 0)
+            {
+                _thoigianTranGiay = 0;
+                _isEndPoint = true;
+            }
+            if (_thoigianTranPhut < 45 || (_thoigianTranPhut == 45 && _thoigianTranGiay == 0))
+            {
+                txtHiep.Text = "1";
+            }
+            else
+                if (_thoigianTranPhut >= 45 && _thoigianTranPhut < 90 || (_thoigianTranPhut == 90 && _thoigianTranGiay == 0))
+            {
+                txtHiep.Text = "2";
+            }
+            else if (_thoigianTranPhut >= 90 && _thoigianTranPhut < 105 || (_thoigianTranPhut == 105 && _thoigianTranGiay == 0))
+            {
+                txtHiep.Text = "phụ 1";
+            }
+            else
+                txtHiep.Text = "phụ 2";
+            var strThoigiantranPhut = _thoigianTranPhut < 10 ? "0" + _thoigianTranPhut : _thoigianTranPhut.ToString();
+            var strThoigiantranGiay = _thoigianTranGiay < 10 ? "0" + _thoigianTranGiay : _thoigianTranGiay.ToString();
+            lbThoigianTran.Text = strThoigiantranPhut + ":" + strThoigiantranGiay;
+
+            _thoigianThucGiay++;
+            if (_thoigianThucGiay == 60)
+            {
+                _thoigianThucGiay = 0;
+                _thoigianThucPhut++;
+            }
+            var strThoigianThucPhut = _thoigianThucPhut < 10 ? "0" + _thoigianThucPhut : _thoigianThucPhut.ToString();
+            var strThoigianThucGiay = _thoigianThucGiay < 10 ? "0" + _thoigianThucGiay : _thoigianThucGiay.ToString();
+            lbThoigianThuc.Text = strThoigianThucPhut + ":" + strThoigianThucGiay;
+        }
+
+        private void btnBatdautrandau_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
+        private void btnDungthoigiantran_Click(object sender, EventArgs e)
+        {
+            _isEndPoint = true;
+        }
+
+        private void btnTieptucthoigiantran_Click(object sender, EventArgs e)
+        {
+            _isEndPoint = false;
+        }
+
+        #endregion
+
     }
 }
