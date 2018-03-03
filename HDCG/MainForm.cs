@@ -559,7 +559,14 @@ namespace HDCGStudio
 
         private void gvTempInfo_RowClick(object sender, RowClickEventArgs e)
         {
-            ViewTemplate(_tempName);
+            if (cboGiaiDau.Text.Length > 0 && cboDoiChuNha.Text.Length > 0 && cboDoiKhach.Text.Length > 0)
+                ViewTemplate(_tempName);
+            else
+                HDMessageBox.Show("Bạn chưa chọn thông tin Giải đấu, Đội chủ/khách!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            var temp = gvTempInfo.GetFocusedRow() as View.tempInfo;
+            cboTempLayer.Text = temp.tempObj.Layer.ToString();
+            nDelayTime.Value = temp.tempObj.Delay;
+            nDurationTime.Value = temp.tempObj.Duration;
         }
         private void gvTempInfo_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
@@ -729,7 +736,6 @@ namespace HDCGStudio
                     LogProcess.AddLog("Đã kích hoạt");
             }
         }
-        string _xml = "";
         string _xmlAdd = "";
         private string Add(string str, string val)
         {
@@ -739,22 +745,35 @@ namespace HDCGStudio
         {
             try
             {
-                _xmlAdd = "";
-                var templateName = "HDTemplates\\Update\\" + _tempName;
-                _xml = player.GetProperties();
-                var fieldName = _xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "").Replace("~", "");
-                string xmlStr = "<Track_Property>" + _xmlAdd + fieldName.Replace("<Track_Property>", "");
-                UpdateDataFile(xmlStr);
-                this.Clear();
-                if (player.Add(1, templateName))
+                if (tempInfoBindingSource.List.Count == 0)
                 {
-                    player.Update(1, xmlStr.Replace("\\n", "\n"));
-                    player.Refresh();
+                    HDMessageBox.Show("Chưa chọn template để lưu!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                if (cboTempLayer.Text.Length > 0)
+                {
+                    var temp = gvTempInfo.GetFocusedRow() as View.tempInfo;
+
+                    tempInfoBindingSource.List.Insert(tempInfoBindingSource.List.IndexOf(temp), new View.tempInfo()
+                    {
+                        tempObj = new Object.tempInfo()
+                        {
+                            TemplateName = temp.tempObj.TemplateName,
+                            Layer = int.Parse(cboTempLayer.Text),
+                            Delay = (int)nDelayTime.Value,
+                            Duration = (int)nDurationTime.Value
+                        }
+                    });
+                    tempInfoBindingSource.List.Remove(temp);
+                }
+                else
+                {
+                    HDMessageBox.Show("Chọn Layer trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                HDMessageBox.Show("Data not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void UpdateDataFile(string data)

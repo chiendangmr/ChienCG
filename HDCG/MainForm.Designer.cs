@@ -263,6 +263,8 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.nTysoChu = new System.Windows.Forms.NumericUpDown();
             this.xTabTrongtai = new DevExpress.XtraTab.XtraTabPage();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl72 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
@@ -276,6 +278,13 @@
             this.txtTrongtaiChinh = new DevExpress.XtraEditors.TextEdit();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             this.xTabThoigian = new DevExpress.XtraTab.XtraTabPage();
+            this.btnDungthoigiantran = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTieptucthoigiantran = new DevExpress.XtraEditors.SimpleButton();
+            this.lbThoigianThuc = new DevExpress.XtraEditors.LabelControl();
+            this.lbThoigianTran = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl74 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl73 = new DevExpress.XtraEditors.LabelControl();
+            this.btnBatdautrandau = new DevExpress.XtraEditors.SimpleButton();
             this.xTabPageTennis = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
@@ -320,29 +329,20 @@
             this.btnStop = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnLiveUpdate = new DevExpress.XtraEditors.SimpleButton();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.nDelayTime = new System.Windows.Forms.NumericUpDown();
             this.cboTemplateType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nDurationTime = new System.Windows.Forms.NumericUpDown();
             this.btnPreviewTemplate = new DevExpress.XtraEditors.SimpleButton();
             this.btnPlay = new DevExpress.XtraEditors.SimpleButton();
             this.cboTempLayer = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.btnUpdateAll = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSavePlaylist = new DevExpress.XtraEditors.SimpleButton();
             this.xTab = new DevExpress.XtraTab.XtraTabControl();
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.bsUpdateData = new System.Windows.Forms.BindingSource(this.components);
-            this.btnBatdautrandau = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl72 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl73 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl74 = new DevExpress.XtraEditors.LabelControl();
-            this.lbThoigianTran = new DevExpress.XtraEditors.LabelControl();
-            this.lbThoigianThuc = new DevExpress.XtraEditors.LabelControl();
-            this.btnTieptucthoigiantran = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDungthoigiantran = new DevExpress.XtraEditors.SimpleButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
@@ -486,6 +486,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nTysoKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTysoChu)).BeginInit();
             this.xTabTrongtai.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTrongtaiban.Properties)).BeginInit();
@@ -516,16 +517,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.tempInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTempInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDelayTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDurationTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTempLayer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xTab)).BeginInit();
             this.xTab.SuspendLayout();
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -3402,6 +3402,24 @@
             this.xTabTrongtai.Size = new System.Drawing.Size(1169, 615);
             this.xTabTrongtai.Text = "Trọng tài/BLV/Địa điểm";
             // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(619, 130);
+            this.textEdit1.MenuManager = this.barManager1;
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(511, 22);
+            this.textEdit1.TabIndex = 163;
+            // 
+            // labelControl72
+            // 
+            this.labelControl72.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl72.Appearance.Options.UseFont = true;
+            this.labelControl72.Location = new System.Drawing.Point(545, 130);
+            this.labelControl72.Name = "labelControl72";
+            this.labelControl72.Size = new System.Drawing.Size(68, 21);
+            this.labelControl72.TabIndex = 162;
+            this.labelControl72.Text = "Thời tiết:";
+            // 
             // textEdit6
             // 
             this.textEdit6.Location = new System.Drawing.Point(619, 88);
@@ -3522,6 +3540,83 @@
             this.xTabThoigian.Name = "xTabThoigian";
             this.xTabThoigian.Size = new System.Drawing.Size(1169, 615);
             this.xTabThoigian.Text = "Thời gian";
+            // 
+            // btnDungthoigiantran
+            // 
+            this.btnDungthoigiantran.Location = new System.Drawing.Point(362, 98);
+            this.btnDungthoigiantran.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDungthoigiantran.Name = "btnDungthoigiantran";
+            this.btnDungthoigiantran.Size = new System.Drawing.Size(95, 42);
+            this.btnDungthoigiantran.TabIndex = 177;
+            this.btnDungthoigiantran.Text = "Dừng";
+            this.btnDungthoigiantran.ToolTip = "Dừng thời gian trận";
+            this.btnDungthoigiantran.Click += new System.EventHandler(this.btnDungthoigiantran_Click);
+            // 
+            // btnTieptucthoigiantran
+            // 
+            this.btnTieptucthoigiantran.Location = new System.Drawing.Point(485, 98);
+            this.btnTieptucthoigiantran.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTieptucthoigiantran.Name = "btnTieptucthoigiantran";
+            this.btnTieptucthoigiantran.Size = new System.Drawing.Size(81, 42);
+            this.btnTieptucthoigiantran.TabIndex = 176;
+            this.btnTieptucthoigiantran.Text = "Tiếp tục";
+            this.btnTieptucthoigiantran.ToolTip = "Tiếp tục thời gian trận";
+            this.btnTieptucthoigiantran.Click += new System.EventHandler(this.btnTieptucthoigiantran_Click);
+            // 
+            // lbThoigianThuc
+            // 
+            this.lbThoigianThuc.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F);
+            this.lbThoigianThuc.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbThoigianThuc.Appearance.Options.UseFont = true;
+            this.lbThoigianThuc.Appearance.Options.UseForeColor = true;
+            this.lbThoigianThuc.Location = new System.Drawing.Point(898, 32);
+            this.lbThoigianThuc.Name = "lbThoigianThuc";
+            this.lbThoigianThuc.Size = new System.Drawing.Size(84, 40);
+            this.lbThoigianThuc.TabIndex = 175;
+            this.lbThoigianThuc.Text = "00:00";
+            // 
+            // lbThoigianTran
+            // 
+            this.lbThoigianTran.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F);
+            this.lbThoigianTran.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.lbThoigianTran.Appearance.Options.UseFont = true;
+            this.lbThoigianTran.Appearance.Options.UseForeColor = true;
+            this.lbThoigianTran.Location = new System.Drawing.Point(482, 32);
+            this.lbThoigianTran.Name = "lbThoigianTran";
+            this.lbThoigianTran.Size = new System.Drawing.Size(84, 40);
+            this.lbThoigianTran.TabIndex = 174;
+            this.lbThoigianTran.Text = "00:00";
+            // 
+            // labelControl74
+            // 
+            this.labelControl74.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl74.Appearance.Options.UseFont = true;
+            this.labelControl74.Location = new System.Drawing.Point(362, 40);
+            this.labelControl74.Name = "labelControl74";
+            this.labelControl74.Size = new System.Drawing.Size(109, 21);
+            this.labelControl74.TabIndex = 173;
+            this.labelControl74.Text = "Thời gian trận:";
+            // 
+            // labelControl73
+            // 
+            this.labelControl73.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl73.Appearance.Options.UseFont = true;
+            this.labelControl73.Location = new System.Drawing.Point(780, 40);
+            this.labelControl73.Name = "labelControl73";
+            this.labelControl73.Size = new System.Drawing.Size(112, 21);
+            this.labelControl73.TabIndex = 172;
+            this.labelControl73.Text = "Thời gian thực:";
+            // 
+            // btnBatdautrandau
+            // 
+            this.btnBatdautrandau.Location = new System.Drawing.Point(91, 30);
+            this.btnBatdautrandau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBatdautrandau.Name = "btnBatdautrandau";
+            this.btnBatdautrandau.Size = new System.Drawing.Size(180, 42);
+            this.btnBatdautrandau.TabIndex = 171;
+            this.btnBatdautrandau.Text = "Bắt đầu trận đấu";
+            this.btnBatdautrandau.ToolTip = "Quản lý danh sách cầu thủ chủ nhà";
+            this.btnBatdautrandau.Click += new System.EventHandler(this.btnBatdautrandau_Click);
             // 
             // xTabPageTennis
             // 
@@ -3873,16 +3968,16 @@
             this.splitContainerControl2.Panel2.Controls.Add(this.btnStop);
             this.splitContainerControl2.Panel2.Controls.Add(this.labelControl3);
             this.splitContainerControl2.Panel2.Controls.Add(this.btnLiveUpdate);
-            this.splitContainerControl2.Panel2.Controls.Add(this.numericUpDown2);
+            this.splitContainerControl2.Panel2.Controls.Add(this.nDelayTime);
             this.splitContainerControl2.Panel2.Controls.Add(this.cboTemplateType);
             this.splitContainerControl2.Panel2.Controls.Add(this.labelControl4);
             this.splitContainerControl2.Panel2.Controls.Add(this.labelControl1);
-            this.splitContainerControl2.Panel2.Controls.Add(this.numericUpDown1);
+            this.splitContainerControl2.Panel2.Controls.Add(this.nDurationTime);
             this.splitContainerControl2.Panel2.Controls.Add(this.btnPreviewTemplate);
             this.splitContainerControl2.Panel2.Controls.Add(this.btnPlay);
             this.splitContainerControl2.Panel2.Controls.Add(this.cboTempLayer);
             this.splitContainerControl2.Panel2.Controls.Add(this.labelControl2);
-            this.splitContainerControl2.Panel2.Controls.Add(this.btnUpdateAll);
+            this.splitContainerControl2.Panel2.Controls.Add(this.btnSavePlaylist);
             this.splitContainerControl2.Panel2.Text = "Panel2";
             this.splitContainerControl2.Size = new System.Drawing.Size(555, 856);
             this.splitContainerControl2.SplitterPosition = 331;
@@ -4058,7 +4153,7 @@
             this.btnLiveUpdate.Appearance.Options.UseFont = true;
             this.btnLiveUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLiveUpdate.ImageOptions.Image")));
             this.btnLiveUpdate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnLiveUpdate.Location = new System.Drawing.Point(428, 202);
+            this.btnLiveUpdate.Location = new System.Drawing.Point(428, 252);
             this.btnLiveUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLiveUpdate.Name = "btnLiveUpdate";
             this.btnLiveUpdate.Size = new System.Drawing.Size(72, 42);
@@ -4066,23 +4161,23 @@
             this.btnLiveUpdate.ToolTip = "Update real-time data for template";
             this.btnLiveUpdate.Click += new System.EventHandler(this.btnLiveUpdate_Click);
             // 
-            // numericUpDown2
+            // nDelayTime
             // 
-            this.numericUpDown2.Increment = new decimal(new int[] {
+            this.nDelayTime.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown2.Location = new System.Drawing.Point(136, 47);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.nDelayTime.Location = new System.Drawing.Point(136, 47);
+            this.nDelayTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nDelayTime.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(115, 23);
-            this.numericUpDown2.TabIndex = 80;
+            this.nDelayTime.Name = "nDelayTime";
+            this.nDelayTime.Size = new System.Drawing.Size(115, 23);
+            this.nDelayTime.TabIndex = 80;
             // 
             // cboTemplateType
             // 
@@ -4123,23 +4218,23 @@
             this.labelControl1.TabIndex = 74;
             this.labelControl1.Text = "Template type:";
             // 
-            // numericUpDown1
+            // nDurationTime
             // 
-            this.numericUpDown1.Increment = new decimal(new int[] {
+            this.nDurationTime.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(403, 43);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nDurationTime.Location = new System.Drawing.Point(403, 43);
+            this.nDurationTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nDurationTime.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(97, 23);
-            this.numericUpDown1.TabIndex = 79;
+            this.nDurationTime.Name = "nDurationTime";
+            this.nDurationTime.Size = new System.Drawing.Size(97, 23);
+            this.nDurationTime.TabIndex = 79;
             // 
             // btnPreviewTemplate
             // 
@@ -4147,7 +4242,7 @@
             this.btnPreviewTemplate.Appearance.Options.UseFont = true;
             this.btnPreviewTemplate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreviewTemplate.ImageOptions.Image")));
             this.btnPreviewTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPreviewTemplate.Location = new System.Drawing.Point(428, 152);
+            this.btnPreviewTemplate.Location = new System.Drawing.Point(428, 202);
             this.btnPreviewTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPreviewTemplate.Name = "btnPreviewTemplate";
             this.btnPreviewTemplate.Size = new System.Drawing.Size(72, 42);
@@ -4215,20 +4310,20 @@
             this.labelControl2.TabIndex = 46;
             this.labelControl2.Text = "Layer:";
             // 
-            // btnUpdateAll
+            // btnSavePlaylist
             // 
-            this.btnUpdateAll.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnUpdateAll.Appearance.Options.UseFont = true;
-            this.btnUpdateAll.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateAll.ImageOptions.Image")));
-            this.btnUpdateAll.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnUpdateAll.Location = new System.Drawing.Point(428, 252);
-            this.btnUpdateAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUpdateAll.Name = "btnUpdateAll";
-            this.btnUpdateAll.Size = new System.Drawing.Size(72, 42);
-            this.btnUpdateAll.TabIndex = 100;
-            this.btnUpdateAll.Text = "Manual Update";
-            this.btnUpdateAll.ToolTip = "Manual Update data for template";
-            this.btnUpdateAll.Click += new System.EventHandler(this.btnUpdateAll_Click);
+            this.btnSavePlaylist.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnSavePlaylist.Appearance.Options.UseFont = true;
+            this.btnSavePlaylist.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSavePlaylist.ImageOptions.Image")));
+            this.btnSavePlaylist.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSavePlaylist.Location = new System.Drawing.Point(428, 90);
+            this.btnSavePlaylist.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSavePlaylist.Name = "btnSavePlaylist";
+            this.btnSavePlaylist.Size = new System.Drawing.Size(72, 42);
+            this.btnSavePlaylist.TabIndex = 100;
+            this.btnSavePlaylist.Text = "Manual Update";
+            this.btnSavePlaylist.ToolTip = "Lưu thông tin template";
+            this.btnSavePlaylist.Click += new System.EventHandler(this.btnUpdateAll_Click);
             // 
             // xTab
             // 
@@ -4259,101 +4354,6 @@
             // bsUpdateData
             // 
             this.bsUpdateData.DataSource = typeof(HDCGStudio.Object.tempUpdating);
-            // 
-            // btnBatdautrandau
-            // 
-            this.btnBatdautrandau.Location = new System.Drawing.Point(91, 30);
-            this.btnBatdautrandau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnBatdautrandau.Name = "btnBatdautrandau";
-            this.btnBatdautrandau.Size = new System.Drawing.Size(180, 42);
-            this.btnBatdautrandau.TabIndex = 171;
-            this.btnBatdautrandau.Text = "Bắt đầu trận đấu";
-            this.btnBatdautrandau.ToolTip = "Quản lý danh sách cầu thủ chủ nhà";
-            this.btnBatdautrandau.Click += new System.EventHandler(this.btnBatdautrandau_Click);
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(619, 130);
-            this.textEdit1.MenuManager = this.barManager1;
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(511, 22);
-            this.textEdit1.TabIndex = 163;
-            // 
-            // labelControl72
-            // 
-            this.labelControl72.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl72.Appearance.Options.UseFont = true;
-            this.labelControl72.Location = new System.Drawing.Point(545, 130);
-            this.labelControl72.Name = "labelControl72";
-            this.labelControl72.Size = new System.Drawing.Size(68, 21);
-            this.labelControl72.TabIndex = 162;
-            this.labelControl72.Text = "Thời tiết:";
-            // 
-            // labelControl73
-            // 
-            this.labelControl73.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl73.Appearance.Options.UseFont = true;
-            this.labelControl73.Location = new System.Drawing.Point(780, 40);
-            this.labelControl73.Name = "labelControl73";
-            this.labelControl73.Size = new System.Drawing.Size(112, 21);
-            this.labelControl73.TabIndex = 172;
-            this.labelControl73.Text = "Thời gian thực:";
-            // 
-            // labelControl74
-            // 
-            this.labelControl74.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl74.Appearance.Options.UseFont = true;
-            this.labelControl74.Location = new System.Drawing.Point(362, 40);
-            this.labelControl74.Name = "labelControl74";
-            this.labelControl74.Size = new System.Drawing.Size(109, 21);
-            this.labelControl74.TabIndex = 173;
-            this.labelControl74.Text = "Thời gian trận:";
-            // 
-            // lbThoigianTran
-            // 
-            this.lbThoigianTran.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F);
-            this.lbThoigianTran.Appearance.ForeColor = System.Drawing.Color.Green;
-            this.lbThoigianTran.Appearance.Options.UseFont = true;
-            this.lbThoigianTran.Appearance.Options.UseForeColor = true;
-            this.lbThoigianTran.Location = new System.Drawing.Point(482, 32);
-            this.lbThoigianTran.Name = "lbThoigianTran";
-            this.lbThoigianTran.Size = new System.Drawing.Size(84, 40);
-            this.lbThoigianTran.TabIndex = 174;
-            this.lbThoigianTran.Text = "00:00";
-            // 
-            // lbThoigianThuc
-            // 
-            this.lbThoigianThuc.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F);
-            this.lbThoigianThuc.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbThoigianThuc.Appearance.Options.UseFont = true;
-            this.lbThoigianThuc.Appearance.Options.UseForeColor = true;
-            this.lbThoigianThuc.Location = new System.Drawing.Point(898, 32);
-            this.lbThoigianThuc.Name = "lbThoigianThuc";
-            this.lbThoigianThuc.Size = new System.Drawing.Size(84, 40);
-            this.lbThoigianThuc.TabIndex = 175;
-            this.lbThoigianThuc.Text = "00:00";
-            // 
-            // btnTieptucthoigiantran
-            // 
-            this.btnTieptucthoigiantran.Location = new System.Drawing.Point(485, 98);
-            this.btnTieptucthoigiantran.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTieptucthoigiantran.Name = "btnTieptucthoigiantran";
-            this.btnTieptucthoigiantran.Size = new System.Drawing.Size(81, 42);
-            this.btnTieptucthoigiantran.TabIndex = 176;
-            this.btnTieptucthoigiantran.Text = "Tiếp tục";
-            this.btnTieptucthoigiantran.ToolTip = "Tiếp tục thời gian trận";
-            this.btnTieptucthoigiantran.Click += new System.EventHandler(this.btnTieptucthoigiantran_Click);
-            // 
-            // btnDungthoigiantran
-            // 
-            this.btnDungthoigiantran.Location = new System.Drawing.Point(362, 98);
-            this.btnDungthoigiantran.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDungthoigiantran.Name = "btnDungthoigiantran";
-            this.btnDungthoigiantran.Size = new System.Drawing.Size(95, 42);
-            this.btnDungthoigiantran.TabIndex = 177;
-            this.btnDungthoigiantran.Text = "Dừng";
-            this.btnDungthoigiantran.ToolTip = "Dừng thời gian trận";
-            this.btnDungthoigiantran.Click += new System.EventHandler(this.btnDungthoigiantran_Click);
             // 
             // timer1
             // 
@@ -4527,6 +4527,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nTysoChu)).EndInit();
             this.xTabTrongtai.ResumeLayout(false);
             this.xTabTrongtai.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTrongtaiban.Properties)).EndInit();
@@ -4559,16 +4560,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.tempInfoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTempInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDelayTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDurationTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTempLayer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xTab)).EndInit();
             this.xTab.ResumeLayout(false);
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4622,11 +4622,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nDurationTime;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown nDelayTime;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarButtonItem barBtnManageTemplate;
@@ -4643,7 +4643,7 @@
         private DevExpress.XtraTab.XtraTabControl xTabMain;
         private DevExpress.XtraTab.XtraTabPage xTabPageBongda;
         private DevExpress.XtraEditors.SimpleButton btnLiveUpdate;
-        private DevExpress.XtraEditors.SimpleButton btnUpdateAll;
+        private DevExpress.XtraEditors.SimpleButton btnSavePlaylist;
         private DevExpress.XtraEditors.SimpleButton btnPreviewTemplate;
         private DevExpress.XtraEditors.SimpleButton btnPlay;
         private DevExpress.XtraEditors.SimpleButton btnStop;
