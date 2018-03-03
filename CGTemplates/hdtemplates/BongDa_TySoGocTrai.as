@@ -166,15 +166,18 @@
 			this.dongho.text = getFormattedTime();
 		}
 		
-		function getFormattedTime():String {			
-			_giay++;
-			if(_giay==60){
-				_phut++;
-				_giay=0;
-				}			
+		function getFormattedTime():String {		
+				
 			if((_phut==45||_phut==90||_phut==105||_phut==120)&&_giay==0){
 				_giay=0;
-				}
+			}
+			else{
+				_giay++;
+				if(_giay==60){
+					_phut++;
+					_giay=0;
+					}			
+			}
 			var minute:String;
 			if(_phut < 10) minute = "0" + _phut;
 				else minute=String(_phut);
