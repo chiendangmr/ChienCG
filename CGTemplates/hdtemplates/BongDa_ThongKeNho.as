@@ -18,7 +18,9 @@
 	import flash.external.ExternalInterface;
 	import flash.utils.Timer;
 	import flash.events.TimerEvent;
-	import fl.containers.UILoader;
+	import flash.display.Loader;
+	import flash.events.IOErrorEvent;
+	import flash.display.DisplayObject;
 	import flash.net.URLRequest;
 	import flash.sampler.Sample;
 	import flash.globalization.NumberFormatter;
@@ -31,10 +33,8 @@
 		public var thongsonho:TextField = new TextField();
 		public var thongsonhoChu:TextField = new TextField();
 		public var thongsonhoKhach:TextField = new TextField();
-		public var icon1:UILoader = null;
-		public var icon2:UILoader = null;
-		private var request:URLRequest = null;
-		
+		public var icon1:MovieClip;
+		public var icon2:MovieClip;		
 		public function BongDa_ThongKeNho() {
 			// constructor code
 			super();							
@@ -88,12 +88,16 @@
 						this.thongsonhoKhach.text = data.toUpperCase();
 						break;		
 					case "icon1".toLowerCase():						
-						request = new URLRequest(data);
-						this.icon1.load(request);
+						var file:Loader = new Loader();
+						file.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted);
+						file.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError);
+						file.load(new URLRequest(data));
 						break;
 					case "icon2".toLowerCase():						
-						request = new URLRequest(data);
-						this.icon2.load(request);
+						var file1:Loader = new Loader();
+						file1.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted2);
+						file1.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError2);
+						file1.load(new URLRequest(data));
 						break;
 				}
 			}
@@ -103,6 +107,28 @@
 		}
 		public override function Stop():void{
 			gotoAndPlay('stop');
+		}
+		private function onOpenImageError(e:IOErrorEvent)
+		{
+			while(this.icon1.numChildren > 0)
+				this.icon1.removeChildAt(0);
+		}
+		
+		private function onOpenImageCompleted(e:Event)
+		{
+			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;						
+			this.icon1.addChild(bmp);
+		}
+		private function onOpenImageError2(e:IOErrorEvent)
+		{
+			while(this.icon2.numChildren > 0)
+				this.icon2.removeChildAt(0);
+		}
+		
+		private function onOpenImageCompleted2(e:Event)
+		{
+			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;						
+			this.icon2.addChild(bmp);
 		}
 	}
 	

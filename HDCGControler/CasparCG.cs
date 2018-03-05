@@ -520,7 +520,7 @@ namespace HDCGControler
                         try
                         {
                             casparRetrieved = false;
-                            caspar_.Channels[channel].CG.Invoke(layerMain, 1, "cutDown");
+                            caspar_.Channels[channel].CG.Invoke(layerMain, 1, "Stop");
                             for (int time = 0; !casparRetrieved && caspar_.IsConnected && time < timeOut_; time += 100)
                                 Thread.Sleep(100);
                             if (casparRetrieved)

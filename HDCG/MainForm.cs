@@ -447,7 +447,8 @@ namespace HDCGStudio
                     MessageBox.Show("Disconnect to cg serer", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    if (!cgServer.UnLoadCG(layer))
+                    if (!cgServer.CutDown(layer))
+                        //if (!cgServer.UnLoadCG(layer))
                         MessageBox.Show("Can't off cg", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -736,7 +737,7 @@ namespace HDCGStudio
                     LogProcess.AddLog("Đã kích hoạt");
             }
         }
-        
+
         private string Add(string str, string val)
         {
             return "<" + str + " id=\"" + str + "\"><data value=\"" + val + "\"/></" + str + ">";
@@ -1007,6 +1008,11 @@ namespace HDCGStudio
                     xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
                     xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
                     xmlAdd += Add("dongho", lbThoigianTran.Text);
+                    if (_tempName == "BongDa_ThongKeNho.ft")
+                    {
+                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
+                        xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
+                    }
                     if (ckChu.Checked)
                     {
                         xmlAdd += Add("hlv", txtHomeCoach.Text);
