@@ -125,7 +125,7 @@ namespace HDCGStudio
 
         private void ManageTemplateForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            HDMessageBox.Show("Bạn phải load lại danh sách đội để lấy được các cầu thủ mới!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            HDMessageBox.Show("Bạn phải load lại danh sách đội để lấy được các đội/thông tin mới!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)

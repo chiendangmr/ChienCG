@@ -36,6 +36,7 @@
             this.gvPlayers = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsCaptain = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsSubstitution = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,7 +54,6 @@
             this.txtNumber = new DevExpress.XtraEditors.TextEdit();
             this.btnRemove = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPlayers)).BeginInit();
@@ -157,6 +157,22 @@
             this.colName.VisibleIndex = 1;
             this.colName.Width = 198;
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.Caption = "Tên rút gọn";
+            this.gridColumn2.FieldName = "mObj.ShortName";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.Width = 152;
+            // 
             // gridColumn1
             // 
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
@@ -166,6 +182,7 @@
             this.gridColumn1.Caption = "Thủ môn";
             this.gridColumn1.FieldName = "mObj.IsGK";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 3;
             this.gridColumn1.Width = 119;
@@ -181,6 +198,7 @@
             this.colIsCaptain.Caption = "Đội trưởng";
             this.colIsCaptain.FieldName = "mObj.IsCaptain";
             this.colIsCaptain.Name = "colIsCaptain";
+            this.colIsCaptain.OptionsColumn.AllowEdit = false;
             this.colIsCaptain.Visible = true;
             this.colIsCaptain.VisibleIndex = 4;
             this.colIsCaptain.Width = 118;
@@ -196,6 +214,7 @@
             this.colIsSubstitution.Caption = "Đá chính";
             this.colIsSubstitution.FieldName = "mObj.IsNotSubstitution";
             this.colIsSubstitution.Name = "colIsSubstitution";
+            this.colIsSubstitution.OptionsColumn.AllowEdit = false;
             this.colIsSubstitution.Visible = true;
             this.colIsSubstitution.VisibleIndex = 5;
             this.colIsSubstitution.Width = 101;
@@ -346,21 +365,6 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.ToolTip = "Thêm cầu thủ";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn2.Caption = "Tên rút gọn";
-            this.gridColumn2.FieldName = "mObj.ShortName";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 152;
             // 
             // ManagePlayersForm
             // 
