@@ -996,8 +996,7 @@ namespace HDCGStudio
                 try
                 {
                     xmlAdd += Add("doibong", GetTeamName());
-                    xmlAdd += Add("hiepdau", "Hiệp " + txtHiep.Text);
-                    xmlAdd += Add("thongkehiepdau", "Thống kê hiệp " + txtHiep.Text);
+                    xmlAdd += Add("hiepdau", "Hiệp " + txtHiep.Text);                    
                     xmlAdd += Add("player1", GetPlayingPlayer().mObj.Name);
                     xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number.ToString());
 
@@ -1041,7 +1040,7 @@ namespace HDCGStudio
                             xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoChu.Text));
                         }
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
-                        if (_tempName == "BongDa_ThongKeCuoi.ft")
+                        if (_tempName == "BongDa_DoiHinh.ft")
                         {
                             xmlAdd += Add("sododoihinh", cboDoihinhChu.Text);
                             xmlAdd += Add("vitriName1", GetPlayerName(cboVitriChu1.Text));
@@ -1078,7 +1077,7 @@ namespace HDCGStudio
                             xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoKhach.Text));
                         }
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
-                        if (_tempName == "BongDa_ThongKeCuoi.ft")
+                        if (_tempName == "BongDa_DoiHinh.ft")
                         {
                             xmlAdd += Add("sododoihinh", cboDoihinhKhach.Text);
                             xmlAdd += Add("vitriName1", GetPlayerName(cboVitriKhach1.Text));
