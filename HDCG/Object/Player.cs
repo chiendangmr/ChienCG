@@ -8,6 +8,7 @@ namespace HDCGStudio.Object
     public class Player
     {        
         public string Name { get; set; }
+        public string ShortName { get; set; }
         public int Number { get; set; }        
         public bool IsNotSubstitution { get; set; }
         public bool IsCaptain { get; set; }

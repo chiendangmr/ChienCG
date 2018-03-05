@@ -66,7 +66,9 @@ namespace HDCGStudio
                             Name = txtName.Text,
                             IsCaptain = ckIsCaptain.Checked,
                             IsNotSubstitution = ckIsNotSubstitution.Checked,
-                            IsGK = ckIsGK.Checked
+                            IsGK = ckIsGK.Checked,
+                            ShortName = txtShortName.Text,
+                            Team = cboTeams.Text
                         }
                     });
 
@@ -124,25 +126,79 @@ namespace HDCGStudio
                 this.Close();
             }
         }
-
+        bool _isRowClick = false;
         private void cboTeams_SelectedIndexChanged(object sender, EventArgs e)
         {
-            templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboTeams.Text).Replace(" ", "_") + ".xml");
+            if (!_isRowClick)
+            {
+                templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboTeams.Text).Replace(" ", "_") + ".xml");
+                try
+                {
+                    if (File.Exists(templatesXmlPath))
+                    {
+                        bsManagePlayers.Clear();
+                        var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath);
+                        foreach (var temp in lstTemplate)
+                            bsManagePlayers.Add(new View.Player()
+                            {
+                                mObj = temp
+                            });
+                    }
+                    else
+                    {
+                        File.Create(templatesXmlPath).Dispose();
+                    }
+                    _isRowClick = false;
+                }
+                catch (Exception ex)
+                {
+                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void gvPlayers_RowClick(object sender, RowClickEventArgs e)
+        {
+            _isRowClick = true;
+            var temp = gvPlayers.GetFocusedRow() as View.Player;
+            cboTeams.Text = temp.mObj.Team;
+            txtNumber.Text = temp.mObj.Number.ToString();
+            txtName.Text = temp.mObj.Name;
+            txtShortName.Text = temp.mObj.ShortName;
+            ckIsGK.Checked = temp.mObj.IsGK;
+            ckIsCaptain.Checked = temp.mObj.IsCaptain;
+            ckIsNotSubstitution.Checked = temp.mObj.IsNotSubstitution;
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
             try
             {
-                if (File.Exists(templatesXmlPath))
+                if (txtNumber.Text.Trim().Length == 0 || txtNumber.Name.Trim().Length == 0 || cboTeams.Text.Trim().Length == 0)
                 {
-                    bsManagePlayers.Clear();
-                    var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath);
-                    foreach (var temp in lstTemplate)
-                        bsManagePlayers.Add(new View.Player()
-                        {
-                            mObj = temp
-                        });
+                    HDMessageBox.Show("Đội, Tên và số áo không được để trống!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    File.Create(templatesXmlPath).Dispose();
+                    var temp = gvPlayers.GetFocusedRow() as View.Player;
+                    bsManagePlayers.List.Insert(bsManagePlayers.List.IndexOf(temp), new View.Player()
+                    {
+                        mObj = new Object.Player()
+                        {
+                            Number = int.Parse(txtNumber.Text),
+                            Name = txtName.Text,
+                            IsCaptain = ckIsCaptain.Checked,
+                            IsNotSubstitution = ckIsNotSubstitution.Checked,
+                            IsGK = ckIsGK.Checked,
+                            ShortName = txtShortName.Text,
+                            Team = cboTeams.Text
+                        }
+                    });
+                    gvPlayers.FocusedRowHandle = bsManagePlayers.List.IndexOf(temp);
+                    bsManagePlayers.List.Remove(temp);
+                    (bsManagePlayers.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).Select(v => v.mObj).ToList().SaveObject(templatesXmlPath);
+                    gvPlayers.RefreshData();
+                    HDMessageBox.Show("Lưu thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)

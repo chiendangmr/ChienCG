@@ -864,71 +864,21 @@ namespace HDCGStudio
                 player.Add(0, "HDTemplates/HDVietNam.ft", true);
             }
         }
-
+        bool _forUpdate = false;
         private void btnLiveUpdate_Click(object sender, EventArgs e)
         {
-            if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
+            try
             {
-                try
-                {
-                    _xmlAdd = "";
-                    if (ckChu.Checked)
-                    {
-                        _xmlAdd += Add("icon1", GetTeamLogo(cboDoiChuNha.Text));
-                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
-                    }
-                    else if (ckKhach.Checked)
-                    {
-                        _xmlAdd += Add("icon1", GetTeamLogo(cboDoiKhach.Text));
-                        _xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
-                    }
-                    _xmlAdd += Add("teamHome", cboDoiChuNha.Text);
-                    _xmlAdd += Add("teamAway", cboDoiKhach.Text);
-                    _xmlAdd += Add("tyso", nTysoChu.Value.ToString() + " - " + nTysoKhach.Value.ToString());
-                    string xmlStr = "<Track_Property>" + _xmlAdd + "</Track_Property>";
-                    UpdateDataFile(xmlStr);
-                    player.Update(1, xmlStr.Replace("\\n", "\n"));
-                    player.Refresh();
-                    cgServer.UpdateTemplate(_layer, xmlStr, 0);
-                }
-                catch (Exception ex)
-                {
-                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                _forUpdate = true;
+                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                player.Update(1, xmlStr.Replace("\\n", "\n"));
+                player.Refresh();
+                cgServer.UpdateTemplate(_layer, xmlStr, 0);
+                _forUpdate = false;
             }
-            else
+            catch (Exception ex)
             {
-                try
-                {
-                    _xmlAdd = "";
-                    if (txtPlayer1.Text.Length > 0)
-                        _xmlAdd += Add("player1", txtPlayer1.Text);
-                    if (txtPlayer2.Text.Length > 0)
-                        _xmlAdd += Add("player2", txtPlayer1.Text);
-                    if (txtPlayer3.Text.Length > 0)
-                        _xmlAdd += Add("player3", txtPlayer1.Text);
-                    if (txtPlayer4.Text.Length > 0)
-                        _xmlAdd += Add("player4", txtPlayer4.Text);
-                    _xmlAdd += Add("hatgiong1", nHatgiong1.Value.ToString());
-                    _xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
-                    _xmlAdd += Add("player1set1point", nDiemSet1Player1.Value.ToString());
-                    _xmlAdd += Add("player2set1point", nDiemSet1Player2.Value.ToString());
-                    _xmlAdd += Add("player1set2point", nDiemSet2Player1.Value.ToString());
-                    _xmlAdd += Add("player2set2point", nDiemSet2Player2.Value.ToString());
-                    _xmlAdd += Add("player1set3point", nDiemSet3Player1.Value.ToString());
-                    _xmlAdd += Add("player2set3point", nDiemSet3Player2.Value.ToString());
-                    _xmlAdd += Add("player1livePoint", txtDiemHientaiPlayer1.Text);
-                    _xmlAdd += Add("player2livePoint", txtDiemHientaiPlayer2.Text);
-                    string xmlStr = "<Track_Property>" + _xmlAdd + "</Track_Property>";
-                    UpdateDataFile(xmlStr);
-                    player.Update(1, xmlStr.Replace("\\n", "\n"));
-                    player.Refresh();
-                    cgServer.UpdateTemplate(_layer, xmlStr, 0);
-                }
-                catch (Exception ex)
-                {
-                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1060,8 +1010,11 @@ namespace HDCGStudio
                     if (ckChu.Checked)
                     {
                         xmlAdd += Add("hlv", txtHomeCoach.Text);
-                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
-                        xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoChu.Text));
+                        if (!_forUpdate)
+                        {
+                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
+                            xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoChu.Text));
+                        }
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
                         if (_tempName == "BongDa_ThongKeCuoi.ft")
                         {
@@ -1094,8 +1047,11 @@ namespace HDCGStudio
                     else if (ckKhach.Checked)
                     {
                         xmlAdd += Add("hlv", txtAwayCoach.Text);
-                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
-                        xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoKhach.Text));
+                        if (!_forUpdate)
+                        {
+                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
+                            xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoKhach.Text));
+                        }
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
                         if (_tempName == "BongDa_ThongKeCuoi.ft")
                         {
@@ -1787,8 +1743,13 @@ namespace HDCGStudio
         int _thoigianThucPhut = 0;
         bool _isEndPoint = false;
         #region Đồng hồ/Thời gian
+        //DateTime _startTime = new DateTime();
         private void timer1_Tick(object sender, EventArgs e)
         {
+            //var thoigianThuc = DateTime.Now - _startTime;
+            //var strThoigianThucPhut = thoigianThuc.Minutes < 10 ? "0" + thoigianThuc.Minutes : thoigianThuc.Minutes.ToString();
+            //var strThoigianThucGiay = thoigianThuc.Seconds < 10 ? "0" + thoigianThuc.Seconds : thoigianThuc.Seconds.ToString();
+            //lbThoigianThuc.Text = strThoigianThucPhut + ":" + strThoigianThucGiay;
             if (!_isEndPoint)
             {
                 _thoigianTranGiay++;
@@ -1839,14 +1800,17 @@ namespace HDCGStudio
         }
         private void btnDungthoigiantran_Click(object sender, EventArgs e)
         {
-            _isEndPoint = true;
+            if (_isEndPoint == true)
+            {
+                _isEndPoint = false;
+                btnDungthoigiantran.Text = "Dừng";
+            }
+            else
+            {
+                _isEndPoint = true;
+                btnDungthoigiantran.Text = "Tiếp tục";
+            }
         }
-
-        private void btnTieptucthoigiantran_Click(object sender, EventArgs e)
-        {
-            _isEndPoint = false;
-        }
-
         #endregion
 
     }

@@ -39,6 +39,7 @@
             this.colIsCaptain = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsSubstitution = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtSanNha = new DevExpress.XtraEditors.TextEdit();
             this.btnChooseLogo = new DevExpress.XtraEditors.SimpleButton();
@@ -54,7 +55,10 @@
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.btnRemove = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.nPosition = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeams)).BeginInit();
@@ -66,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCoach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nPosition)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -76,6 +81,9 @@
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.gridTeams);
             this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.nPosition);
+            this.splitContainerControl1.Panel2.Controls.Add(this.labelControl7);
+            this.splitContainerControl1.Panel2.Controls.Add(this.btnSave);
             this.splitContainerControl1.Panel2.Controls.Add(this.labelControl6);
             this.splitContainerControl1.Panel2.Controls.Add(this.txtSanNha);
             this.splitContainerControl1.Panel2.Controls.Add(this.btnChooseLogo);
@@ -92,7 +100,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.btnRemove);
             this.splitContainerControl1.Panel2.Controls.Add(this.btnAdd);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(955, 824);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1015, 824);
             this.splitContainerControl1.SplitterPosition = 552;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -104,7 +112,7 @@
             this.gridTeams.Location = new System.Drawing.Point(0, 0);
             this.gridTeams.MainView = this.gvTeams;
             this.gridTeams.Name = "gridTeams";
-            this.gridTeams.Size = new System.Drawing.Size(955, 552);
+            this.gridTeams.Size = new System.Drawing.Size(1015, 552);
             this.gridTeams.TabIndex = 0;
             this.gridTeams.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTeams});
@@ -121,10 +129,12 @@
             this.colIsCaptain,
             this.colIsSubstitution,
             this.gridColumn1,
-            this.gridColumn2});
+            this.gridColumn2,
+            this.gridColumn3});
             this.gvTeams.GridControl = this.gridTeams;
             this.gvTeams.Name = "gvTeams";
             this.gvTeams.OptionsView.ShowGroupPanel = false;
+            this.gvTeams.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvTeams_RowClick);
             this.gvTeams.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle);
             // 
             // colNumber
@@ -140,7 +150,7 @@
             this.colNumber.OptionsColumn.AllowEdit = false;
             this.colNumber.Visible = true;
             this.colNumber.VisibleIndex = 0;
-            this.colNumber.Width = 183;
+            this.colNumber.Width = 172;
             // 
             // colName
             // 
@@ -155,7 +165,7 @@
             this.colName.OptionsColumn.AllowEdit = false;
             this.colName.Visible = true;
             this.colName.VisibleIndex = 1;
-            this.colName.Width = 104;
+            this.colName.Width = 105;
             // 
             // colIsCaptain
             // 
@@ -170,7 +180,7 @@
             this.colIsCaptain.Name = "colIsCaptain";
             this.colIsCaptain.Visible = true;
             this.colIsCaptain.VisibleIndex = 2;
-            this.colIsCaptain.Width = 210;
+            this.colIsCaptain.Width = 180;
             // 
             // colIsSubstitution
             // 
@@ -185,7 +195,7 @@
             this.colIsSubstitution.Name = "colIsSubstitution";
             this.colIsSubstitution.Visible = true;
             this.colIsSubstitution.VisibleIndex = 3;
-            this.colIsSubstitution.Width = 145;
+            this.colIsSubstitution.Width = 137;
             // 
             // gridColumn1
             // 
@@ -200,7 +210,22 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 4;
-            this.gridColumn1.Width = 261;
+            this.gridColumn1.Width = 223;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.Caption = "Sân nhà";
+            this.gridColumn2.FieldName = "tObj.Stadium";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 5;
+            this.gridColumn2.Width = 114;
             // 
             // labelControl6
             // 
@@ -214,11 +239,11 @@
             // 
             // txtSanNha
             // 
-            this.txtSanNha.Location = new System.Drawing.Point(224, 124);
+            this.txtSanNha.Location = new System.Drawing.Point(224, 127);
             this.txtSanNha.Name = "txtSanNha";
             this.txtSanNha.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtSanNha.Properties.Appearance.Options.UseFont = true;
-            this.txtSanNha.Size = new System.Drawing.Size(617, 30);
+            this.txtSanNha.Size = new System.Drawing.Size(441, 30);
             this.txtSanNha.TabIndex = 132;
             // 
             // btnChooseLogo
@@ -332,7 +357,7 @@
             // 
             this.btnRemove.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.ImageOptions.Image")));
             this.btnRemove.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRemove.Location = new System.Drawing.Point(514, 186);
+            this.btnRemove.Location = new System.Drawing.Point(588, 186);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(93, 57);
             this.btnRemove.TabIndex = 1;
@@ -350,24 +375,56 @@
             this.btnAdd.ToolTip = "Thêm template";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // gridColumn2
+            // btnSave
             // 
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn2.Caption = "Sân nhà";
-            this.gridColumn2.FieldName = "tObj.Stadium";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 5;
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnSave.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSave.Location = new System.Drawing.Point(424, 186);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(98, 57);
+            this.btnSave.TabIndex = 134;
+            this.btnSave.ToolTip = "Thêm template";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.Caption = "Vị trí";
+            this.gridColumn3.FieldName = "tObj.Position";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 6;
+            this.gridColumn3.Width = 64;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(718, 127);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(49, 24);
+            this.labelControl7.TabIndex = 136;
+            this.labelControl7.Text = "Vị trí:";
+            // 
+            // nPosition
+            // 
+            this.nPosition.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.nPosition.Location = new System.Drawing.Point(773, 125);
+            this.nPosition.Name = "nPosition";
+            this.nPosition.Size = new System.Drawing.Size(67, 32);
+            this.nPosition.TabIndex = 137;
             // 
             // FormManageTeam
             // 
             this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(955, 824);
+            this.ClientSize = new System.Drawing.Size(1015, 824);
             this.Controls.Add(this.splitContainerControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -388,6 +445,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCoach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nPosition)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,5 +477,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.TextEdit txtSanNha;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private System.Windows.Forms.NumericUpDown nPosition;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }

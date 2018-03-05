@@ -566,14 +566,9 @@ namespace HDCGControler
             lock (this._lockServer)
             {
                 var layerLoad = layer * 2;
-                var layerMain = layerLoad + 1;
+                var layerMain = layerLoad + 1;                
 
-                CGLayer cglayer = null;
-
-                if (flags > 0)
-                    cglayer = layers.Where(o => o.Layer == layerMain).FirstOrDefault();
-                else
-                    cglayer = layers.Where(o => o.Layer == layerLoad).FirstOrDefault();
+                var cglayer = layers.Where(o => o.Layer == layerMain).FirstOrDefault();
 
                 if (cglayer != null)
                 {
@@ -586,6 +581,7 @@ namespace HDCGControler
                                 components.AddComponent("Append", "1");
                             components.AddComponent("text", xmlStr);
                             casparRetrieved = false;
+                            //caspar_.Channels[channel].CG.Update(layerLoad, 1, toStandarXml(xmlStr));
                             caspar_.Channels[channel].CG.Update(cglayer.Layer, 1, toStandarXml(xmlStr));
                             for (int time = 0; !casparRetrieved && caspar_.IsConnected && time < timeOut_; time += 100)
                                 Thread.Sleep(100);

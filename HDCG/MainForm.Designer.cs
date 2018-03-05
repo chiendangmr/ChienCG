@@ -279,7 +279,6 @@
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             this.xTabThoigian = new DevExpress.XtraTab.XtraTabPage();
             this.btnDungthoigiantran = new DevExpress.XtraEditors.SimpleButton();
-            this.btnTieptucthoigiantran = new DevExpress.XtraEditors.SimpleButton();
             this.lbThoigianThuc = new DevExpress.XtraEditors.LabelControl();
             this.lbThoigianTran = new DevExpress.XtraEditors.LabelControl();
             this.labelControl74 = new DevExpress.XtraEditors.LabelControl();
@@ -1051,6 +1050,8 @@
             // 
             // splitContainerControl4
             // 
+            this.splitContainerControl4.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.splitContainerControl4.Appearance.Options.UseBackColor = true;
             this.splitContainerControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl4.Horizontal = false;
             this.splitContainerControl4.Location = new System.Drawing.Point(0, 0);
@@ -1074,6 +1075,8 @@
             this.splitContainerControl4.Panel1.Controls.Add(this.labelControl27);
             this.splitContainerControl4.Panel1.Controls.Add(this.btnQuanlyGiaiDau);
             this.splitContainerControl4.Panel1.Text = "Panel1";
+            this.splitContainerControl4.Panel2.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.splitContainerControl4.Panel2.Appearance.Options.UseBackColor = true;
             this.splitContainerControl4.Panel2.Controls.Add(this.xtraTabControl2);
             this.splitContainerControl4.Panel2.Text = "Panel2";
             this.splitContainerControl4.Size = new System.Drawing.Size(1176, 849);
@@ -1285,6 +1288,8 @@
             // 
             // xtraTabControl2
             // 
+            this.xtraTabControl2.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xtraTabControl2.Appearance.Options.UseBackColor = true;
             this.xtraTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl2.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl2.Name = "xtraTabControl2";
@@ -1307,6 +1312,8 @@
             // 
             // splitContainerControl3
             // 
+            this.splitContainerControl3.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainerControl3.Appearance.Options.UseBackColor = true;
             this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl3.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl3.Name = "splitContainerControl3";
@@ -1902,6 +1909,8 @@
             // 
             // xTabSododoihinh
             // 
+            this.xTabSododoihinh.Appearance.PageClient.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xTabSododoihinh.Appearance.PageClient.Options.UseBackColor = true;
             this.xTabSododoihinh.Controls.Add(this.btnChooseMauAoKhach);
             this.xTabSododoihinh.Controls.Add(this.txtMauAoKhach);
             this.xTabSododoihinh.Controls.Add(this.btnChooseMauAoChu);
@@ -3530,8 +3539,9 @@
             // 
             // xTabThoigian
             // 
+            this.xTabThoigian.Appearance.PageClient.BackColor = System.Drawing.Color.LightGray;
+            this.xTabThoigian.Appearance.PageClient.Options.UseBackColor = true;
             this.xTabThoigian.Controls.Add(this.btnDungthoigiantran);
-            this.xTabThoigian.Controls.Add(this.btnTieptucthoigiantran);
             this.xTabThoigian.Controls.Add(this.lbThoigianThuc);
             this.xTabThoigian.Controls.Add(this.lbThoigianTran);
             this.xTabThoigian.Controls.Add(this.labelControl74);
@@ -3546,22 +3556,11 @@
             this.btnDungthoigiantran.Location = new System.Drawing.Point(362, 98);
             this.btnDungthoigiantran.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDungthoigiantran.Name = "btnDungthoigiantran";
-            this.btnDungthoigiantran.Size = new System.Drawing.Size(95, 42);
+            this.btnDungthoigiantran.Size = new System.Drawing.Size(204, 42);
             this.btnDungthoigiantran.TabIndex = 177;
-            this.btnDungthoigiantran.Text = "Dừng";
-            this.btnDungthoigiantran.ToolTip = "Dừng thời gian trận";
+            this.btnDungthoigiantran.Text = "Dừng/Tiếp tục";
+            this.btnDungthoigiantran.ToolTip = "Dừng/Tiếp tục thời gian trận";
             this.btnDungthoigiantran.Click += new System.EventHandler(this.btnDungthoigiantran_Click);
-            // 
-            // btnTieptucthoigiantran
-            // 
-            this.btnTieptucthoigiantran.Location = new System.Drawing.Point(485, 98);
-            this.btnTieptucthoigiantran.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTieptucthoigiantran.Name = "btnTieptucthoigiantran";
-            this.btnTieptucthoigiantran.Size = new System.Drawing.Size(81, 42);
-            this.btnTieptucthoigiantran.TabIndex = 176;
-            this.btnTieptucthoigiantran.Text = "Tiếp tục";
-            this.btnTieptucthoigiantran.ToolTip = "Tiếp tục thời gian trận";
-            this.btnTieptucthoigiantran.Click += new System.EventHandler(this.btnTieptucthoigiantran_Click);
             // 
             // lbThoigianThuc
             // 
@@ -4884,7 +4883,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl72;
         private DevExpress.XtraEditors.SimpleButton btnDungthoigiantran;
-        private DevExpress.XtraEditors.SimpleButton btnTieptucthoigiantran;
         private DevExpress.XtraEditors.LabelControl lbThoigianThuc;
         private DevExpress.XtraEditors.LabelControl lbThoigianTran;
         private DevExpress.XtraEditors.LabelControl labelControl74;
