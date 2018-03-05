@@ -27,18 +27,15 @@
 	public class BongDa_HLV extends CasparTemplate{
 		
 		private var txtGroup:MovieClip = new MovieClip();
-		public var icon1:UILoader = null;
-		private var request:URLRequest = null;
 					
 		public var hlv:TextField = new TextField();
-		public var title2:TextField = new TextField();
+		public var doibong:TextField = new TextField();
 		
 		public function BongDa_HLV() {
 			// constructor code
 			super();							
 			this.txtGroup.addChild(hlv);	
-			this.txtGroup.addChild(title2);
-			this.txtGroup.addChild(icon1);
+			this.txtGroup.addChild(doibong);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -53,7 +50,7 @@
 		{
 			var xmlStr:String = "<Track_Property>";
 			xmlStr +=Add(xmlStr, "hlv", hlv);
-			xmlStr +=Add(xmlStr, "title2", title2);
+			xmlStr +=Add(xmlStr, "doibong", doibong);
 				
 			xmlStr += "</Track_Property>";
 			
@@ -76,13 +73,9 @@
 					case "hlv".toLowerCase():
 						this.hlv.text = data.toUpperCase();
 						break;
-					case "title2".toLowerCase():
-						this.title2.text = data.toUpperCase();
-						break;		
-					case "icon1".toLowerCase():						
-						request = new URLRequest(data);
-						this.icon1.load(request);
-						break;
+					case "doibong".toLowerCase():
+						this.doibong.text = data.toUpperCase();
+						break;							
 				}
 			}
 		}
