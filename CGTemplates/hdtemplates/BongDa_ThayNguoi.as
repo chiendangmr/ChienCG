@@ -26,11 +26,8 @@
 		
 	public class BongDa_ThayNguoi extends CasparTemplate{
 		
-		private var txtGroup:MovieClip = new MovieClip();
-		public var icon1:UILoader = null;
-		private var request:URLRequest = null;
-					
-		public var timeThayNguoi:TextField = new TextField();
+		private var txtGroup:MovieClip = new MovieClip();		
+		
 		public var playerout:TextField = new TextField();
 		public var playerOutNumber:TextField = new TextField();
 		public var playerin:TextField = new TextField();
@@ -39,12 +36,10 @@
 		public function BongDa_ThayNguoi() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(timeThayNguoi);	
 			this.txtGroup.addChild(playerout);
 			this.txtGroup.addChild(playerOutNumber);
 			this.txtGroup.addChild(playerin);
 			this.txtGroup.addChild(playerInNumber);
-			this.txtGroup.addChild(icon1);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -58,7 +53,6 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "timeThayNguoi", timeThayNguoi);
 			xmlStr +=Add(xmlStr, "playerout", playerout);
 			xmlStr +=Add(xmlStr, "playerOutNumber", playerOutNumber);
 			xmlStr +=Add(xmlStr, "playerin", playerin);
@@ -82,26 +76,19 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "timeThayNguoi".toLowerCase():
-						this.timeThayNguoi.text = data.toUpperCase();
-						break;
 					case "playerout".toLowerCase():
 						this.playerout.text = data.toUpperCase();
 						break;
 					case "playerOutNumber".toLowerCase():
-						this.playerOutNumber.text = data.toUpperCase();
+						this.playerOutNumber.text = data.toUpperCase()+".";
 						break;		
 					case "playerin".toLowerCase():
 						this.playerin.text = data.toUpperCase();
 						break;
 					case "playerInNumber".toLowerCase():
-						this.playerInNumber.text = data.toUpperCase();
+						this.playerInNumber.text = data.toUpperCase()+".";
 						break;	
-					case "icon1".toLowerCase():						
-						request = new URLRequest(data);
-						this.icon1.load(request);
-						break;
-				}
+					}
 			}
 		}
 		public override function Play():void{
