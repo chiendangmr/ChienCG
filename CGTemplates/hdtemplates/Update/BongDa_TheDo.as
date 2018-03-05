@@ -26,51 +26,23 @@
 		
 	public class BongDa_TheDo extends CasparTemplate{
 		
-		public var myTotalBar:MovieClip = new bar();
-				
 		private var txtGroup:MovieClip = new MovieClip();
+		public var icon1:UILoader = null;
+		private var request:URLRequest = null;
 					
 		public var player1:TextField = new TextField();
 		public var playerNumber1:TextField = new TextField();
 		public var title3:TextField = new TextField();
-		public var icon1:TextField = new TextField();
 		
-		private var maskBar:Shape = new Shape();
-		private var rectWidth:Number = 900;
-		private var rectHeight:Number = 160;
-		private var rcolor:Array = new Array();
-		private var alphas:Array = new Array();
-		private var ratios:Array = new Array();
-		
-		private var singleTween:Tween = null;
-		private var txtTween:Tween = null;
-				
 		public function BongDa_TheDo() {
 			// constructor code
-			super();
-			
-			this.addChild(myTotalBar);
+			super();							
 			this.txtGroup.addChild(player1);	
 			this.txtGroup.addChild(playerNumber1);
 			this.txtGroup.addChild(title3);
 			this.txtGroup.addChild(icon1);
 			
 			this.addChild(txtGroup);
-			
-			this.addChild(maskBar);
-			this.maskBar.x = 150;
-			this.maskBar.y = 50;
-			this.alphas = [1, 1];
-			this.ratios = [0, 255];
-			this.rcolor = [0xFFFFFF, 0xFFFFFF];
-			this.rectHeight = 1000;
-			this.rectWidth = 1700;
-			this.drawShapes(maskBar, alphas, ratios, rcolor, toRad(-90, -95), rectWidth, rectHeight);
-			
-			this.myTotalBar.mask = this.maskBar;
-			this.txtGroup.visible = false;
-			this.myTotalBar.visible = false;			
-			
 			ExternalInterface.addCallback("UpdateData", UpdateData);
 			ExternalInterface.addCallback("GetProperties", GetProperties);			
 		}		
@@ -112,45 +84,20 @@
 						break;
 					case "title3".toLowerCase():
 						this.title3.text = data.toUpperCase();
-						break;												
+						break;		
+					case "icon1".toLowerCase():						
+						request = new URLRequest(data);
+						this.icon1.load(request);
+						break;
 				}
 			}
 		}
-		private function comeIn():void{
-			this.myTotalBar.visible = true;
-			this.singleTween = new Tween(myTotalBar, "x", Regular.easeOut, -1500, 960, 0.5, true);
-			this.singleTween.addEventListener(TweenEvent.MOTION_FINISH, comeInTxt);
-		}
-		private function comeInTxt(e:Event):void{
-			this.txtGroup.visible = true;
-			this.txtTween = new Tween(txtGroup, "alpha", Strong.easeIn, 0, 1, 0.1, true);
-		}
-		private function comeOut(){
-			this.txtTween = new Tween(txtGroup, "alpha", Strong.easeIn, 1, 0, 0.1, true);
-			this.txtTween.addEventListener(TweenEvent.MOTION_FINISH, comeOutBar);
-		}
-		private function comeOutBar(e:Event):void{
-			this.singleTween = new Tween(myTotalBar, "y", Regular.easeOut, 540, 1200, 1, true);
-		}
 		public override function Play():void{
-			comeIn();
+			gotoAndPlay('start');
 		}
 		public override function Stop():void{
-			comeOut();
+			gotoAndPlay('stop');
 		}
-		private function drawShapes(mrect:Shape, alphas:Array, ratios:Array, colors:Array, r:Number, rectWidth:Number, rectHeight:Number):void {
-			var mat:Matrix;
-			mat=new Matrix();
-			mat.createGradientBox(rectWidth,rectHeight,r);
-			mrect.graphics.lineStyle();
-			mrect.graphics.beginGradientFill(GradientType.LINEAR,colors,alphas,ratios,mat);
-			mrect.graphics.drawRect(0,0,rectWidth,rectHeight);
-			mrect.graphics.endFill();
-		}
-		private function toRad(a:Number, b:Number):Number {
-			return a*Math.PI/b;
-		}		
-			
 	}
 	
 }

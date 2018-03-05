@@ -27,20 +27,17 @@
 	public class BongDa_2TheVang extends CasparTemplate{
 		
 		private var txtGroup:MovieClip = new MovieClip();
-		public var icon1:UILoader = null;
-		private var request:URLRequest = null;
-					
+		
 		public var player1:TextField = new TextField();
 		public var playerNumber1:TextField = new TextField();
-		public var title3:TextField = new TextField();
+		public var doibong:TextField = new TextField();
 		
 		public function BongDa_2TheVang() {
 			// constructor code
 			super();							
 			this.txtGroup.addChild(player1);	
 			this.txtGroup.addChild(playerNumber1);
-			this.txtGroup.addChild(title3);
-			this.txtGroup.addChild(icon1);
+			this.txtGroup.addChild(doibong);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -56,7 +53,7 @@
 			var xmlStr:String = "<Track_Property>";
 			xmlStr +=Add(xmlStr, "player1", player1);
 			xmlStr +=Add(xmlStr, "playerNumber1", playerNumber1);
-			xmlStr +=Add(xmlStr, "title3", title3);
+			xmlStr +=Add(xmlStr, "doibong", doibong);
 				
 			xmlStr += "</Track_Property>";
 			
@@ -80,15 +77,11 @@
 						this.player1.text = data.toUpperCase();
 						break;
 					case "playerNumber1".toLowerCase():
-						this.playerNumber1.text = data.toUpperCase();
+						this.playerNumber1.text = data.toUpperCase() + ".";
 						break;
-					case "title3".toLowerCase():
-						this.title3.text = data.toUpperCase();
-						break;	
-					case "icon1".toLowerCase():						
-						request = new URLRequest(data);
-						this.icon1.load(request);
-						break;
+					case "doibong".toLowerCase():
+						this.doibong.text = data.toUpperCase();
+						break;						
 				}
 			}
 		}
