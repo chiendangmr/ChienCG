@@ -18,7 +18,9 @@
 	import flash.external.ExternalInterface;
 	import flash.utils.Timer;
 	import flash.events.TimerEvent;
-	import fl.containers.UILoader;
+	import flash.display.Loader;
+	import flash.events.IOErrorEvent;
+	import flash.display.DisplayObject;
 	import flash.net.URLRequest;
 	import flash.sampler.Sample;
 	import flash.globalization.NumberFormatter;
@@ -27,11 +29,10 @@
 	public class BongDa_ThongKeCuoi extends CasparTemplate{
 		
 		private var txtGroup:MovieClip = new MovieClip();
-		public var icon1:UILoader = null;
-		public var icon2:UILoader = null;
-		private var request:URLRequest = null;
+		public var icon1:MovieClip;
+		public var icon2:MovieClip;
 					
-		public var thongkehiepdau:TextField = new TextField();
+		public var hiepdau:TextField = new TextField();
 		public var tyso:TextField = new TextField();
 		public var dutdiemChu:TextField = new TextField();
 		public var dutdiemKhach:TextField = new TextField();
@@ -55,7 +56,7 @@
 		public function BongDa_ThongKeCuoi() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(thongkehiepdau);	
+			this.txtGroup.addChild(hiepdau);	
 			this.txtGroup.addChild(tyso);
 			this.txtGroup.addChild(dutdiemChu);
 			this.txtGroup.addChild(dutdiemKhach);	
@@ -90,7 +91,7 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "thongkehiepdau", thongkehiepdau);
+			xmlStr +=Add(xmlStr, "hiepdau", hiepdau);
 			xmlStr +=Add(xmlStr, "tyso", tyso);
 			xmlStr +=Add(xmlStr, "dutdiemChu", dutdiemChu);
 			xmlStr +=Add(xmlStr, "dutdiemKhach", dutdiemKhach);
@@ -128,8 +129,8 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "thongkehiepdau".toLowerCase():
-						this.thongkehiepdau.text = data.toUpperCase();
+					case "hiepdau".toLowerCase():
+						this.hiepdau.text = data.toUpperCase();
 						break;
 					case "tyso".toLowerCase():
 						this.tyso.text = data.toUpperCase();
@@ -189,12 +190,16 @@
 						this.doiKhach.text = data.toUpperCase();
 						break;	
 					case "icon1".toLowerCase():						
-						request = new URLRequest(data);
-						this.icon1.load(request);
+						var file:Loader = new Loader();
+						file.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted);
+						file.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError);
+						file.load(new URLRequest(data));
 						break;
 					case "icon2".toLowerCase():						
-						request = new URLRequest(data);
-						this.icon2.load(request);
+						var file1:Loader = new Loader();
+						file1.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted2);
+						file1.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError2);
+						file1.load(new URLRequest(data));
 						break;
 				}
 			}
@@ -204,6 +209,28 @@
 		}
 		public override function Stop():void{
 			gotoAndPlay('stop');
+		}
+		private function onOpenImageError(e:IOErrorEvent)
+		{
+			while(this.icon1.numChildren > 0)
+				this.icon1.removeChildAt(0);
+		}
+		
+		private function onOpenImageCompleted(e:Event)
+		{
+			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;						
+			this.icon1.addChild(bmp);
+		}
+		private function onOpenImageError2(e:IOErrorEvent)
+		{
+			while(this.icon2.numChildren > 0)
+				this.icon2.removeChildAt(0);
+		}
+		
+		private function onOpenImageCompleted2(e:Event)
+		{
+			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;						
+			this.icon2.addChild(bmp);
 		}
 	}
 	

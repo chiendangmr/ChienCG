@@ -910,14 +910,17 @@ namespace HDCGStudio
             }
             return teamName;
         }
-        public string GetTeamLogo(string teamName)
+        public string GetTeamLogo(string teamName, bool logoNho = true)
         {
             string logoPath = "";
             foreach (var temp in _lstTeams)
             {
                 if (temp.Name == teamName)
                 {
-                    logoPath = temp.LogoPath;
+                    if (logoNho)
+                        logoPath = temp.LogoPath;
+                    else
+                        logoPath = temp.LogoPath.Replace(".png", "_to.png");
                     break;
                 }
             }
@@ -1013,12 +1016,28 @@ namespace HDCGStudio
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
                     }
+                    else if (_tempName == "BongDa_ThongKeCuoi.ft")
+                    {
+                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
+                        xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
+                    }
+                    else
+                    {
+                        if (ckChu.Checked)
+                        {
+                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
+                        }
+                        else if (ckKhach.Checked)
+                        {
+                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
+                        }
+                    }
                     if (ckChu.Checked)
                     {
                         xmlAdd += Add("hlv", txtHomeCoach.Text);
                         if (!_forUpdate)
                         {
-                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
+                            //xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
                             xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoChu.Text));
                         }
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
@@ -1055,7 +1074,7 @@ namespace HDCGStudio
                         xmlAdd += Add("hlv", txtAwayCoach.Text);
                         if (!_forUpdate)
                         {
-                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
+                            //xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
                             xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoKhach.Text));
                         }
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
