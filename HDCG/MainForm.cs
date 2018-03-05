@@ -1145,7 +1145,7 @@ namespace HDCGStudio
                         }
                         else if (ckTrungdich.Checked)
                         {
-                            xmlAdd += Add("thongsonho", "Trúng đích");
+                            xmlAdd += Add("thongsonho", "Dứt điểm trúng đích");
                             xmlAdd += Add("thongsonhoChu", nTrungdichChu.Text);
                             xmlAdd += Add("thongsonhoKhach", nTrungdichKhach.Text);
                         }
