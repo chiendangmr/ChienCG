@@ -31,7 +31,7 @@ namespace HDCGStudio
             {
                 if (File.Exists(templatesXmlPath))
                 {
-                    var lstTemplate = Utils.GetObject<List<Object.Template>>(templatesXmlPath);
+                    var lstTemplate = Utils.GetObject<List<Object.Template>>(templatesXmlPath).OrderBy(a => a.Name);
                     foreach (var temp in lstTemplate)
                         bsManageTemplate.Add(new View.Template()
                         {

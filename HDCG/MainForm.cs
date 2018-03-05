@@ -736,7 +736,7 @@ namespace HDCGStudio
                     LogProcess.AddLog("Đã kích hoạt");
             }
         }
-        string _xmlAdd = "";
+        
         private string Add(string str, string val)
         {
             return "<" + str + " id=\"" + str + "\"><data value=\"" + val + "\"/></" + str + ">";
