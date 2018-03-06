@@ -43,9 +43,9 @@ namespace HDCGStudio
                     File.Create(templatesXmlPath).Dispose();
                 }
             }
-            catch (Exception ex)
+            catch //(Exception ex)
             {
-                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnAdd_Click(object sender, EventArgs e)

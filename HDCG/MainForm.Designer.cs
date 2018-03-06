@@ -208,6 +208,16 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.nTysoChu = new System.Windows.Forms.NumericUpDown();
             this.xTabTrongtai = new DevExpress.XtraTab.XtraTabPage();
+            this.labelControl52 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
+            this.txtNhietdo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl50 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSucgio = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDonviPV = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
+            this.txtPV = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtThoiTiet = new DevExpress.XtraEditors.TextEdit();
             this.labelControl72 = new DevExpress.XtraEditors.LabelControl();
             this.txtBLV = new DevExpress.XtraEditors.TextEdit();
@@ -288,16 +298,8 @@
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.bsUpdateData = new System.Windows.Forms.BindingSource(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtPV = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtDonviPV = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSucgio = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
-            this.txtNhietdo = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl50 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl52 = new DevExpress.XtraEditors.LabelControl();
+            this.nBugio = new System.Windows.Forms.NumericUpDown();
+            this.labelControl53 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -412,6 +414,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nTysoKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTysoChu)).BeginInit();
             this.xTabTrongtai.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNhietdo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSucgio.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonviPV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThoiTiet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBLV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStadium.Properties)).BeginInit();
@@ -452,10 +458,7 @@
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDonviPV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSucgio.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNhietdo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBugio)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -2629,6 +2632,106 @@
             this.xTabTrongtai.Size = new System.Drawing.Size(1169, 615);
             this.xTabTrongtai.Text = "Trọng tài/BLV/Địa điểm";
             // 
+            // labelControl52
+            // 
+            this.labelControl52.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl52.Appearance.Options.UseFont = true;
+            this.labelControl52.Location = new System.Drawing.Point(395, 330);
+            this.labelControl52.Name = "labelControl52";
+            this.labelControl52.Size = new System.Drawing.Size(50, 19);
+            this.labelControl52.TabIndex = 173;
+            this.labelControl52.Text = "(Km/h)";
+            // 
+            // labelControl51
+            // 
+            this.labelControl51.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl51.Appearance.Options.UseFont = true;
+            this.labelControl51.Location = new System.Drawing.Point(395, 282);
+            this.labelControl51.Name = "labelControl51";
+            this.labelControl51.Size = new System.Drawing.Size(30, 19);
+            this.labelControl51.TabIndex = 172;
+            this.labelControl51.Text = "(°C)";
+            // 
+            // txtNhietdo
+            // 
+            this.txtNhietdo.Location = new System.Drawing.Point(176, 282);
+            this.txtNhietdo.MenuManager = this.barManager1;
+            this.txtNhietdo.Name = "txtNhietdo";
+            this.txtNhietdo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtNhietdo.Properties.Appearance.Options.UseFont = true;
+            this.txtNhietdo.Size = new System.Drawing.Size(202, 24);
+            this.txtNhietdo.TabIndex = 171;
+            // 
+            // labelControl50
+            // 
+            this.labelControl50.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl50.Appearance.Options.UseFont = true;
+            this.labelControl50.Location = new System.Drawing.Point(89, 282);
+            this.labelControl50.Name = "labelControl50";
+            this.labelControl50.Size = new System.Drawing.Size(69, 21);
+            this.labelControl50.TabIndex = 170;
+            this.labelControl50.Text = "Nhiệt độ:";
+            // 
+            // txtSucgio
+            // 
+            this.txtSucgio.Location = new System.Drawing.Point(176, 330);
+            this.txtSucgio.MenuManager = this.barManager1;
+            this.txtSucgio.Name = "txtSucgio";
+            this.txtSucgio.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtSucgio.Properties.Appearance.Options.UseFont = true;
+            this.txtSucgio.Size = new System.Drawing.Size(202, 24);
+            this.txtSucgio.TabIndex = 169;
+            // 
+            // labelControl49
+            // 
+            this.labelControl49.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl49.Appearance.Options.UseFont = true;
+            this.labelControl49.Location = new System.Drawing.Point(98, 330);
+            this.labelControl49.Name = "labelControl49";
+            this.labelControl49.Size = new System.Drawing.Size(60, 21);
+            this.labelControl49.TabIndex = 168;
+            this.labelControl49.Text = "Sức gió:";
+            // 
+            // txtDonviPV
+            // 
+            this.txtDonviPV.Location = new System.Drawing.Point(622, 172);
+            this.txtDonviPV.MenuManager = this.barManager1;
+            this.txtDonviPV.Name = "txtDonviPV";
+            this.txtDonviPV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtDonviPV.Properties.Appearance.Options.UseFont = true;
+            this.txtDonviPV.Size = new System.Drawing.Size(511, 24);
+            this.txtDonviPV.TabIndex = 167;
+            // 
+            // labelControl48
+            // 
+            this.labelControl48.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl48.Appearance.Options.UseFont = true;
+            this.labelControl48.Location = new System.Drawing.Point(560, 172);
+            this.labelControl48.Name = "labelControl48";
+            this.labelControl48.Size = new System.Drawing.Size(53, 21);
+            this.labelControl48.TabIndex = 166;
+            this.labelControl48.Text = "Đơn vị:";
+            // 
+            // txtPV
+            // 
+            this.txtPV.Location = new System.Drawing.Point(622, 131);
+            this.txtPV.MenuManager = this.barManager1;
+            this.txtPV.Name = "txtPV";
+            this.txtPV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtPV.Properties.Appearance.Options.UseFont = true;
+            this.txtPV.Size = new System.Drawing.Size(511, 24);
+            this.txtPV.TabIndex = 165;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(528, 131);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(85, 19);
+            this.labelControl6.TabIndex = 164;
+            this.labelControl6.Text = "Phóng viên:";
+            // 
             // txtThoiTiet
             // 
             this.txtThoiTiet.EditValue = "Trời đẹp, nắng nhẹ, nhiệt độ vừa phải";
@@ -2774,6 +2877,8 @@
             // 
             this.xTabThoigian.Appearance.PageClient.BackColor = System.Drawing.Color.LightGray;
             this.xTabThoigian.Appearance.PageClient.Options.UseBackColor = true;
+            this.xTabThoigian.Controls.Add(this.nBugio);
+            this.xTabThoigian.Controls.Add(this.labelControl53);
             this.xTabThoigian.Controls.Add(this.btnDungthoigiantran);
             this.xTabThoigian.Controls.Add(this.lbThoigianThuc);
             this.xTabThoigian.Controls.Add(this.lbThoigianTran);
@@ -3592,105 +3697,29 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // txtPV
+            // nBugio
             // 
-            this.txtPV.Location = new System.Drawing.Point(622, 131);
-            this.txtPV.MenuManager = this.barManager1;
-            this.txtPV.Name = "txtPV";
-            this.txtPV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.txtPV.Properties.Appearance.Options.UseFont = true;
-            this.txtPV.Size = new System.Drawing.Size(511, 24);
-            this.txtPV.TabIndex = 165;
+            this.nBugio.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.nBugio.Location = new System.Drawing.Point(836, 107);
+            this.nBugio.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nBugio.Name = "nBugio";
+            this.nBugio.Size = new System.Drawing.Size(146, 25);
+            this.nBugio.TabIndex = 179;
+            this.nBugio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // labelControl6
+            // labelControl53
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(528, 131);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(85, 19);
-            this.labelControl6.TabIndex = 164;
-            this.labelControl6.Text = "Phóng viên:";
-            // 
-            // txtDonviPV
-            // 
-            this.txtDonviPV.Location = new System.Drawing.Point(622, 172);
-            this.txtDonviPV.MenuManager = this.barManager1;
-            this.txtDonviPV.Name = "txtDonviPV";
-            this.txtDonviPV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.txtDonviPV.Properties.Appearance.Options.UseFont = true;
-            this.txtDonviPV.Size = new System.Drawing.Size(511, 24);
-            this.txtDonviPV.TabIndex = 167;
-            // 
-            // labelControl48
-            // 
-            this.labelControl48.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl48.Appearance.Options.UseFont = true;
-            this.labelControl48.Location = new System.Drawing.Point(560, 172);
-            this.labelControl48.Name = "labelControl48";
-            this.labelControl48.Size = new System.Drawing.Size(53, 21);
-            this.labelControl48.TabIndex = 166;
-            this.labelControl48.Text = "Đơn vị:";
-            // 
-            // txtSucgio
-            // 
-            this.txtSucgio.Location = new System.Drawing.Point(176, 330);
-            this.txtSucgio.MenuManager = this.barManager1;
-            this.txtSucgio.Name = "txtSucgio";
-            this.txtSucgio.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.txtSucgio.Properties.Appearance.Options.UseFont = true;
-            this.txtSucgio.Size = new System.Drawing.Size(202, 24);
-            this.txtSucgio.TabIndex = 169;
-            // 
-            // labelControl49
-            // 
-            this.labelControl49.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl49.Appearance.Options.UseFont = true;
-            this.labelControl49.Location = new System.Drawing.Point(98, 330);
-            this.labelControl49.Name = "labelControl49";
-            this.labelControl49.Size = new System.Drawing.Size(60, 21);
-            this.labelControl49.TabIndex = 168;
-            this.labelControl49.Text = "Sức gió:";
-            // 
-            // txtNhietdo
-            // 
-            this.txtNhietdo.Location = new System.Drawing.Point(176, 282);
-            this.txtNhietdo.MenuManager = this.barManager1;
-            this.txtNhietdo.Name = "txtNhietdo";
-            this.txtNhietdo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.txtNhietdo.Properties.Appearance.Options.UseFont = true;
-            this.txtNhietdo.Size = new System.Drawing.Size(202, 24);
-            this.txtNhietdo.TabIndex = 171;
-            // 
-            // labelControl50
-            // 
-            this.labelControl50.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl50.Appearance.Options.UseFont = true;
-            this.labelControl50.Location = new System.Drawing.Point(89, 282);
-            this.labelControl50.Name = "labelControl50";
-            this.labelControl50.Size = new System.Drawing.Size(69, 21);
-            this.labelControl50.TabIndex = 170;
-            this.labelControl50.Text = "Nhiệt độ:";
-            // 
-            // labelControl51
-            // 
-            this.labelControl51.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl51.Appearance.Options.UseFont = true;
-            this.labelControl51.Location = new System.Drawing.Point(395, 282);
-            this.labelControl51.Name = "labelControl51";
-            this.labelControl51.Size = new System.Drawing.Size(30, 19);
-            this.labelControl51.TabIndex = 172;
-            this.labelControl51.Text = "(°C)";
-            // 
-            // labelControl52
-            // 
-            this.labelControl52.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl52.Appearance.Options.UseFont = true;
-            this.labelControl52.Location = new System.Drawing.Point(395, 330);
-            this.labelControl52.Name = "labelControl52";
-            this.labelControl52.Size = new System.Drawing.Size(50, 19);
-            this.labelControl52.TabIndex = 173;
-            this.labelControl52.Text = "(Km/h)";
+            this.labelControl53.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl53.Appearance.Options.UseFont = true;
+            this.labelControl53.Location = new System.Drawing.Point(778, 108);
+            this.labelControl53.Name = "labelControl53";
+            this.labelControl53.Size = new System.Drawing.Size(52, 21);
+            this.labelControl53.TabIndex = 178;
+            this.labelControl53.Text = "Bù giờ:";
             // 
             // MainForm
             // 
@@ -3830,6 +3859,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nTysoChu)).EndInit();
             this.xTabTrongtai.ResumeLayout(false);
             this.xTabTrongtai.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNhietdo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSucgio.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonviPV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThoiTiet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBLV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStadium.Properties)).EndInit();
@@ -3872,10 +3905,7 @@
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDonviPV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSucgio.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNhietdo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBugio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4151,5 +4181,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl49;
         private DevExpress.XtraEditors.LabelControl labelControl52;
         private DevExpress.XtraEditors.LabelControl labelControl51;
+        private System.Windows.Forms.NumericUpDown nBugio;
+        private DevExpress.XtraEditors.LabelControl labelControl53;
     }
 }

@@ -111,9 +111,9 @@ namespace HDCGStudio
                         File.Create(_danhsachgiaidauXmlPath).Dispose();
                     }
                 }
-                catch (Exception ex)
+                catch //(Exception ex)
                 {
-                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //HDMessageBox.Show("Chưa có giải đấu nào trong CSDL!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 cgServer = new HDCGControler.CasparCG();
@@ -1020,11 +1020,14 @@ namespace HDCGStudio
                     xmlAdd += Add("blv", txtBLV.Text);
                     xmlAdd += Add("pv", txtPV.Text);
                     xmlAdd += Add("donviPV", txtDonviPV.Text);
-
-                    xmlAdd += Add("playerin", GetPlayerIn().mObj.Name);
-                    xmlAdd += Add("playerout", GetPlayerOut().mObj.Name);
-                    xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
-                    xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
+                    xmlAdd += Add("bugio", nBugio.Value.ToString());
+                    if (_tempName == "BongDa_ThayNguoi.ft")
+                    {
+                        xmlAdd += Add("playerin", GetPlayerIn().mObj.Name);
+                        xmlAdd += Add("playerout", GetPlayerOut().mObj.Name);
+                        xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
+                        xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
+                    }
                     xmlAdd += Add("dongho", lbThoigianTran.Text);
                     if (_tempName == "BongDa_ThongKeNho.ft")
                     {

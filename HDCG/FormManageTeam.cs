@@ -45,9 +45,9 @@ namespace HDCGStudio
                 }
                 cboLeagues.Text = _leagueName;
             }
-            catch (Exception ex)
+            catch //(Exception ex)
             {
-                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             DanhsachdoiXmlPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + dicDanhsachgiaidau.FirstOrDefault(x => x.Value == _leagueName).Key + ".xml");
             try
@@ -66,9 +66,9 @@ namespace HDCGStudio
                     File.Create(DanhsachdoiXmlPath).Dispose();
                 }
             }
-            catch (Exception ex)
+            catch //(Exception ex)
             {
-                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnAdd_Click(object sender, EventArgs e)
