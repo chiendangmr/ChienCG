@@ -99,7 +99,7 @@ namespace HDCGStudio
 
         private void ManageTemplateForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            HDMessageBox.Show("Bạn phải load lại danh sách giải đấu để lấy được các giải đấu mới!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            HDMessageBox.Show("Bạn phải khởi động lại phần mềm để lấy được các giải đấu mới!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)

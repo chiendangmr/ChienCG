@@ -996,6 +996,8 @@ namespace HDCGStudio
                 try
                 {
                     xmlAdd += Add("doibong", GetTeamName());
+                    xmlAdd += Add("shortNameChu", txtHomeShortName.Text);
+                    xmlAdd += Add("shortNameKhach", txtAwayShortName.Text);
                     xmlAdd += Add("hiepdau", "Hiệp " + txtHiep.Text);
                     xmlAdd += Add("player1", GetPlayingPlayer().mObj.Name);
                     xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number.ToString());
@@ -1094,19 +1096,23 @@ namespace HDCGStudio
                         //Danh sách ghi bàn
                         if (bsGhibanChu.List.Count > 0)
                         {
+                            var strGhiban = "";
                             for (var i = 0; i < bsGhibanChu.List.Count; i++)
                             {
                                 var temp = gvGhibanChu.GetRow(i) as View.Goal;
-                                xmlAdd += Add("ghibanChu" + (i + 1).ToString(), temp.gObj.Name + "     " + temp.gObj.StrMin);
+                                strGhiban += temp.gObj.Name + "(" + temp.gObj.StrMin + ")   ";
                             }
+                            xmlAdd += Add("ghibanChu", strGhiban);
                         }
                         if (bsGhibanKhach.List.Count > 0)
                         {
+                            var strGhiban = "";
                             for (var i = 0; i < bsGhibanKhach.List.Count; i++)
                             {
                                 var temp = gvGhibanKhach.GetRow(i) as View.Goal;
-                                xmlAdd += Add("ghibanKhach" + (i + 1).ToString(), temp.gObj.StrMin + "     " + temp.gObj.Name);
+                                strGhiban += temp.gObj.Name + "(" + temp.gObj.StrMin + ")   ";
                             }
+                            xmlAdd += Add("ghibanKhach", strGhiban);
                         }
 
                         if (_tempName == "BongDa_ThongKeCuoi.ft")
