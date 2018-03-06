@@ -1009,6 +1009,15 @@ namespace HDCGStudio
                     xmlAdd += Add("troly2", txtTroly2.Text);
                     xmlAdd += Add("trongtaiban", txtTrongtaiban.Text);
 
+                    xmlAdd += Add("blv", txtBLV.Text);
+                    xmlAdd += Add("stadium", txtStadium.Text);
+                    xmlAdd += Add("thoitiet", txtThoiTiet.Text);
+                    xmlAdd += Add("nhietdo", txtNhietdo.Text);
+                    xmlAdd += Add("sucgio", txtSucgio.Text);
+                    xmlAdd += Add("blv", txtBLV.Text);
+                    xmlAdd += Add("pv", txtPV.Text);
+                    xmlAdd += Add("donviPV", txtDonviPV.Text);
+
                     xmlAdd += Add("playerin", GetPlayerIn().mObj.Name);
                     xmlAdd += Add("playerout", GetPlayerOut().mObj.Name);
                     xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
