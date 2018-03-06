@@ -71,7 +71,7 @@
 				switch(property.toLowerCase())
 				{						
 					case "hlv".toLowerCase():
-						this.hlv.text = data.toUpperCase();
+						this.hlv.text = "HLV " + data.toUpperCase();
 						break;
 					case "doibong".toLowerCase():
 						this.doibong.text = data.toUpperCase();

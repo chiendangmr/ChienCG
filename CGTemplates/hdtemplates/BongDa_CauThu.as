@@ -28,15 +28,13 @@
 		
 		private var txtGroup:MovieClip = new MovieClip();
 					
-		public var player1:TextField = new TextField();
-		public var playerNumber1:TextField = new TextField();
+		public var playerStr:TextField = new TextField();
 		public var thongsocauthu:TextField = new TextField();
 		
 		public function BongDa_CauThu() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(player1);	
-			this.txtGroup.addChild(playerNumber1);
+			this.txtGroup.addChild(playerStr);	
 			this.txtGroup.addChild(thongsocauthu);
 			
 			this.addChild(txtGroup);
@@ -51,8 +49,7 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "player1", player1);
-			xmlStr +=Add(xmlStr, "playerNumber1", playerNumber1);
+			xmlStr +=Add(xmlStr, "playerStr", playerStr);
 			xmlStr +=Add(xmlStr, "thongsocauthu", thongsocauthu);
 				
 			xmlStr += "</Track_Property>";
@@ -73,11 +70,8 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "player1".toLowerCase():
-						this.player1.text = data.toUpperCase();
-						break;
-					case "playerNumber1".toLowerCase():
-						this.playerNumber1.text = data.toUpperCase();
+					case "playerStr".toLowerCase():
+						this.playerStr.text = data.toUpperCase();
 						break;
 					case "thongsocauthu".toLowerCase():
 						this.thongsocauthu.text = data.toUpperCase();
