@@ -28,14 +28,14 @@
 		
 		private var txtGroup:MovieClip = new MovieClip();
 					
-		public var blv:TextField = new TextField();
-		public var donviBlv:TextField = new TextField();
+		public var pv:TextField = new TextField();
+		public var donviPV:TextField = new TextField();
 		
 		public function BongDa_PV() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(blv);	
-			this.txtGroup.addChild(donviBlv);
+			this.txtGroup.addChild(pv);	
+			this.txtGroup.addChild(donviPV);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -49,8 +49,8 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "blv", blv);
-			xmlStr +=Add(xmlStr, "donviBlv", donviBlv);
+			xmlStr +=Add(xmlStr, "pv", pv);
+			xmlStr +=Add(xmlStr, "donviPV", donviPV);
 				
 			xmlStr += "</Track_Property>";
 			
@@ -70,11 +70,11 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "blv".toLowerCase():
-						this.blv.text = "blv " + data.toUpperCase();
+					case "pv".toLowerCase():
+						this.pv.text = data.toUpperCase();
 						break;
-					case "donviBlv".toLowerCase():
-						this.donviBlv.text = data.toUpperCase();
+					case "donviPV".toLowerCase():
+						this.donviPV.text = data.toUpperCase();
 						break;							
 				}
 			}

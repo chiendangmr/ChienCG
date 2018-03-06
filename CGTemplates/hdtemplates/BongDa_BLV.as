@@ -71,7 +71,7 @@
 				switch(property.toLowerCase())
 				{						
 					case "blv".toLowerCase():
-						this.blv.text = "blv " + data.toUpperCase();
+						this.blv.text = data.toUpperCase();
 						break;
 					case "donviBlv".toLowerCase():
 						this.donviBlv.text = data.toUpperCase();

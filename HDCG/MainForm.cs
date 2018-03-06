@@ -1011,7 +1011,7 @@ namespace HDCGStudio
 
                     xmlAdd += Add("blv", txtBLV.Text);
                     xmlAdd += Add("stadium", txtStadium.Text);
-                    xmlAdd += Add("thoitiet", txtThoiTiet.Text);
+                    xmlAdd += Add("txtThoitiet", txtThoiTiet.Text);
                     xmlAdd += Add("nhietdo", txtNhietdo.Text);
                     xmlAdd += Add("sucgio", txtSucgio.Text);
                     xmlAdd += Add("blv", txtBLV.Text);

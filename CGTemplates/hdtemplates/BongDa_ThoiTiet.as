@@ -79,7 +79,7 @@
 						this.txtThoitiet.text = data.toUpperCase();
 						break;
 					case "nhietdo".toLowerCase():
-						this.nhietdo.text = data.toUpperCase() + ".";
+						this.nhietdo.text = data.toUpperCase();
 						break;
 					case "sucgio".toLowerCase():
 						this.sucgio.text = data.toUpperCase();
