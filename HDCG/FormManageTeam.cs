@@ -43,6 +43,7 @@ namespace HDCGStudio
                 {
                     File.Create(DanhsachgiaidauXmlPath).Dispose();
                 }
+                cboLeagues.Text = _leagueName;
             }
             catch (Exception ex)
             {

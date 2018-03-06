@@ -253,7 +253,7 @@
             this.nPosition.Location = new System.Drawing.Point(773, 125);
             this.nPosition.Name = "nPosition";
             this.nPosition.Size = new System.Drawing.Size(67, 32);
-            this.nPosition.TabIndex = 137;
+            this.nPosition.TabIndex = 18;
             // 
             // labelControl7
             // 
@@ -272,8 +272,8 @@
             this.btnSave.Location = new System.Drawing.Point(424, 186);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(98, 57);
-            this.btnSave.TabIndex = 134;
-            this.btnSave.ToolTip = "Thêm template";
+            this.btnSave.TabIndex = 20;
+            this.btnSave.ToolTip = "Lưu thông tin đội";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // labelControl6
@@ -293,7 +293,7 @@
             this.txtSanNha.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtSanNha.Properties.Appearance.Options.UseFont = true;
             this.txtSanNha.Size = new System.Drawing.Size(441, 30);
-            this.txtSanNha.TabIndex = 132;
+            this.txtSanNha.TabIndex = 17;
             // 
             // btnChooseLogo
             // 
@@ -301,7 +301,7 @@
             this.btnChooseLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChooseLogo.Name = "btnChooseLogo";
             this.btnChooseLogo.Size = new System.Drawing.Size(35, 26);
-            this.btnChooseLogo.TabIndex = 131;
+            this.btnChooseLogo.TabIndex = 16;
             this.btnChooseLogo.Text = "...";
             this.btnChooseLogo.Click += new System.EventHandler(this.btnChooseLogo_Click);
             // 
@@ -362,7 +362,7 @@
             this.txtCoach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtCoach.Properties.Appearance.Options.UseFont = true;
             this.txtCoach.Size = new System.Drawing.Size(214, 30);
-            this.txtCoach.TabIndex = 6;
+            this.txtCoach.TabIndex = 15;
             // 
             // labelControl2
             // 
@@ -391,7 +391,7 @@
             this.txtShortName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtShortName.Properties.Appearance.Options.UseFont = true;
             this.txtShortName.Size = new System.Drawing.Size(151, 30);
-            this.txtShortName.TabIndex = 3;
+            this.txtShortName.TabIndex = 14;
             // 
             // txtName
             // 
@@ -400,7 +400,7 @@
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtName.Properties.Appearance.Options.UseFont = true;
             this.txtName.Size = new System.Drawing.Size(214, 30);
-            this.txtName.TabIndex = 2;
+            this.txtName.TabIndex = 13;
             // 
             // btnRemove
             // 
@@ -409,8 +409,8 @@
             this.btnRemove.Location = new System.Drawing.Point(588, 186);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(93, 57);
-            this.btnRemove.TabIndex = 1;
-            this.btnRemove.ToolTip = "Xóa template";
+            this.btnRemove.TabIndex = 21;
+            this.btnRemove.ToolTip = "Xóa đội";
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
@@ -420,8 +420,8 @@
             this.btnAdd.Location = new System.Drawing.Point(262, 186);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(98, 57);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.ToolTip = "Thêm template";
+            this.btnAdd.TabIndex = 19;
+            this.btnAdd.ToolTip = "Thêm đội";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // FormManageTeam

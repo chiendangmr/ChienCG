@@ -1066,127 +1066,128 @@ namespace HDCGStudio
                             //xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoChu.Text));
                         }
                         xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
-                        if (ckKhach.Checked)
+                    }
+                    if (ckKhach.Checked)
+                    {
+                        xmlAdd += Add("hlv", txtAwayCoach.Text);
+                        if (!_forUpdate)
                         {
-                            xmlAdd += Add("hlv", txtAwayCoach.Text);
-                            if (!_forUpdate)
-                            {
-                                //xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
-                                //xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoKhach.Text));
-                            }
-                            xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
+                            //xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
+                            //xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoKhach.Text));
+                        }
+                        xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
 
-                        }
-                        xmlAdd += Add("doiChu", cboDoiChuNha.Text);
-                        xmlAdd += Add("doiKhach", cboDoiKhach.Text);
-                        xmlAdd += Add("tyso", nTysoChu.Value.ToString() + " - " + nTysoKhach.Value.ToString());
-                        var lstChinhthuc = GetTeamChinhThuc();
-                        if (lstChinhthuc.Count > 0)
-                            for (var i = 0; i < lstChinhthuc.Count(); i++)
-                            {
-                                xmlAdd += Add("chinhthucName" + (i + 1).ToString(), lstChinhthuc[i].mObj.Name);
-                                xmlAdd += Add("chinhthucNumber" + (i + 1).ToString(), lstChinhthuc[i].mObj.Number.ToString());
-                            }
-                        var lstDuBi = GetTeamDuBi();
-                        if (lstDuBi.Count > 0)
-                            for (var i = 0; i < lstDuBi.Count(); i++)
-                            {
-                                xmlAdd += Add("dubiName" + (i + 1).ToString(), lstDuBi[i].mObj.Name);
-                                xmlAdd += Add("dubiNumber" + (i + 1).ToString(), lstDuBi[i].mObj.Number.ToString());
-                            }
-                        //Danh sách ghi bàn
-                        if (bsGhibanChu.List.Count > 0)
+                    }
+                    xmlAdd += Add("doiChu", cboDoiChuNha.Text);
+                    xmlAdd += Add("doiKhach", cboDoiKhach.Text);
+                    xmlAdd += Add("tyso", nTysoChu.Value.ToString() + " - " + nTysoKhach.Value.ToString());
+                    var lstChinhthuc = GetTeamChinhThuc();
+                    if (lstChinhthuc.Count > 0)
+                        for (var i = 0; i < lstChinhthuc.Count(); i++)
                         {
-                            var strGhiban = "";
-                            for (var i = 0; i < bsGhibanChu.List.Count; i++)
-                            {
-                                var temp = gvGhibanChu.GetRow(i) as View.Goal;
-                                strGhiban += temp.gObj.Name + "(" + temp.gObj.StrMin + ")   ";
-                            }
-                            xmlAdd += Add("ghibanChu", strGhiban);
+                            xmlAdd += Add("chinhthucName" + (i + 1).ToString(), lstChinhthuc[i].mObj.Name);
+                            xmlAdd += Add("chinhthucNumber" + (i + 1).ToString(), lstChinhthuc[i].mObj.Number.ToString());
                         }
-                        if (bsGhibanKhach.List.Count > 0)
+                    var lstDuBi = GetTeamDuBi();
+                    if (lstDuBi.Count > 0)
+                        for (var i = 0; i < lstDuBi.Count(); i++)
                         {
-                            var strGhiban = "";
-                            for (var i = 0; i < bsGhibanKhach.List.Count; i++)
-                            {
-                                var temp = gvGhibanKhach.GetRow(i) as View.Goal;
-                                strGhiban += temp.gObj.Name + "(" + temp.gObj.StrMin + ")   ";
-                            }
-                            xmlAdd += Add("ghibanKhach", strGhiban);
+                            xmlAdd += Add("dubiName" + (i + 1).ToString(), lstDuBi[i].mObj.Name);
+                            xmlAdd += Add("dubiNumber" + (i + 1).ToString(), lstDuBi[i].mObj.Number.ToString());
                         }
+                    //Danh sách ghi bàn
+                    if (bsGhibanChu.List.Count > 0)
+                    {
+                        var strGhiban = "";
+                        for (var i = 0; i < bsGhibanChu.List.Count; i++)
+                        {
+                            var temp = gvGhibanChu.GetRow(i) as View.Goal;
+                            strGhiban += temp.gObj.Name + "(" + temp.gObj.StrMin + ")   ";
+                        }
+                        xmlAdd += Add("ghibanChu", strGhiban);
+                    }
+                    if (bsGhibanKhach.List.Count > 0)
+                    {
+                        var strGhiban = "";
+                        for (var i = 0; i < bsGhibanKhach.List.Count; i++)
+                        {
+                            var temp = gvGhibanKhach.GetRow(i) as View.Goal;
+                            strGhiban += temp.gObj.Name + "(" + temp.gObj.StrMin + ")   ";
+                        }
+                        xmlAdd += Add("ghibanKhach", strGhiban);
+                    }
 
-                        if (_tempName == "BongDa_ThongKeCuoi.ft")
+                    if (_tempName == "BongDa_ThongKeCuoi.ft")
+                    {
+                        xmlAdd += Add("dutdiemChu", nDutdiemChu.Text);
+                        xmlAdd += Add("dutdiemKhach", nDutdiemKhach.Text);
+                        xmlAdd += Add("trungdichChu", nTrungdichChu.Text);
+                        xmlAdd += Add("trungdichKhach", nTrungdichKhach.Text);
+                        xmlAdd += Add("phamloiChu", nPhamloiChu.Text);
+                        xmlAdd += Add("phamloiKhach", nPhamloiKhach.Text);
+                        xmlAdd += Add("thevangChu", nThevangChu.Text);
+                        xmlAdd += Add("thevangKhach", nThevangKhach.Text);
+                        xmlAdd += Add("thedoChu", nThedoChu.Text);
+                        xmlAdd += Add("thedoKhach", nThedoKhach.Text);
+                        xmlAdd += Add("vietviChu", nVietviChu.Text);
+                        xmlAdd += Add("vietviKhach", nVietviKhach.Text);
+                        xmlAdd += Add("phatgocChu", nPhatgocChu.Text);
+                        xmlAdd += Add("phatgocKhach", nPhatgocKhach.Text);
+                        xmlAdd += Add("kiemsoatbongChu", nKiemsoatbongChu.Text + "%");
+                        xmlAdd += Add("kiemsoatbongKhach", nKiemsoatbongKhach.Text + "%");
+                    }
+                    else if (_tempName == "BongDa_ThongKeNho.ft")
+                    {
+                        if (ckDutdiem.Checked)
                         {
-                            xmlAdd += Add("dutdiemChu", nDutdiemChu.Text);
-                            xmlAdd += Add("dutdiemKhach", nDutdiemKhach.Text);
-                            xmlAdd += Add("trungdichChu", nTrungdichChu.Text);
-                            xmlAdd += Add("trungdichKhach", nTrungdichKhach.Text);
-                            xmlAdd += Add("phamloiChu", nPhamloiChu.Text);
-                            xmlAdd += Add("phamloiKhach", nPhamloiKhach.Text);
-                            xmlAdd += Add("thevangChu", nThevangChu.Text);
-                            xmlAdd += Add("thevangKhach", nThevangKhach.Text);
-                            xmlAdd += Add("thedoChu", nThedoChu.Text);
-                            xmlAdd += Add("thedoKhach", nThedoKhach.Text);
-                            xmlAdd += Add("vietviChu", nVietviChu.Text);
-                            xmlAdd += Add("vietviKhach", nVietviKhach.Text);
-                            xmlAdd += Add("phatgocChu", nPhatgocChu.Text);
-                            xmlAdd += Add("phatgocKhach", nPhatgocKhach.Text);
-                            xmlAdd += Add("kiemsoatbongChu", nKiemsoatbongChu.Text + "%");
-                            xmlAdd += Add("kiemsoatbongKhach", nKiemsoatbongKhach.Text + "%");
+                            xmlAdd += Add("thongsonho", "Dứt điểm");
+                            xmlAdd += Add("thongsonhoChu", nDutdiemChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nDutdiemKhach.Text);
                         }
-                        else if (_tempName == "BongDa_ThongKeNho.ft")
+                        else if (ckTrungdich.Checked)
                         {
-                            if (ckDutdiem.Checked)
-                            {
-                                xmlAdd += Add("thongsonho", "Dứt điểm");
-                                xmlAdd += Add("thongsonhoChu", nDutdiemChu.Text);
-                                xmlAdd += Add("thongsonhoKhach", nDutdiemKhach.Text);
-                            }
-                            else if (ckTrungdich.Checked)
-                            {
-                                xmlAdd += Add("thongsonho", "Dứt điểm trúng đích");
-                                xmlAdd += Add("thongsonhoChu", nTrungdichChu.Text);
-                                xmlAdd += Add("thongsonhoKhach", nTrungdichKhach.Text);
-                            }
-                            else if (ckPhamloi.Checked)
-                            {
-                                xmlAdd += Add("thongsonho", "Phạm lỗi");
-                                xmlAdd += Add("thongsonhoChu", nPhamloiChu.Text);
-                                xmlAdd += Add("thongsonhoKhach", nPhamloiKhach.Text);
-                            }
-                            else if (ckThevang.Checked)
-                            {
-                                xmlAdd += Add("thongsonho", "Thẻ vàng");
-                                xmlAdd += Add("thongsonhoChu", nThevangChu.Text);
-                                xmlAdd += Add("thongsonhoKhach", nThevangKhach.Text);
-                            }
-                            else if (ckThedo.Checked)
-                            {
-                                xmlAdd += Add("thongsonho", "Thẻ đỏ");
-                                xmlAdd += Add("thongsonhoChu", nThedoChu.Text);
-                                xmlAdd += Add("thongsonhoKhach", nThedoKhach.Text);
-                            }
-                            else if (ckVietvi.Checked)
-                            {
-                                xmlAdd += Add("thongsonho", "Việt vị");
-                                xmlAdd += Add("thongsonhoChu", nVietviChu.Text);
-                                xmlAdd += Add("thongsonhoKhach", nVietviKhach.Text);
-                            }
-                            else if (ckPhatgoc.Checked)
-                            {
-                                xmlAdd += Add("thongsonho", "Phạt góc");
-                                xmlAdd += Add("thongsonhoChu", nPhatgocChu.Text);
-                                xmlAdd += Add("thongsonhoKhach", nPhatgocKhach.Text);
-                            }
-                            else if (ckKiemsoatbong.Checked)
-                            {
-                                xmlAdd += Add("thongsonho", "Kiếm soát bóng");
-                                xmlAdd += Add("thongsonhoChu", nKiemsoatbongChu.Text + "%");
-                                xmlAdd += Add("thongsonhoKhach", nKiemsoatbongKhach.Text + "%");
-                            }
+                            xmlAdd += Add("thongsonho", "Dứt điểm trúng đích");
+                            xmlAdd += Add("thongsonhoChu", nTrungdichChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nTrungdichKhach.Text);
+                        }
+                        else if (ckPhamloi.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Phạm lỗi");
+                            xmlAdd += Add("thongsonhoChu", nPhamloiChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nPhamloiKhach.Text);
+                        }
+                        else if (ckThevang.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Thẻ vàng");
+                            xmlAdd += Add("thongsonhoChu", nThevangChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nThevangKhach.Text);
+                        }
+                        else if (ckThedo.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Thẻ đỏ");
+                            xmlAdd += Add("thongsonhoChu", nThedoChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nThedoKhach.Text);
+                        }
+                        else if (ckVietvi.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Việt vị");
+                            xmlAdd += Add("thongsonhoChu", nVietviChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nVietviKhach.Text);
+                        }
+                        else if (ckPhatgoc.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Phạt góc");
+                            xmlAdd += Add("thongsonhoChu", nPhatgocChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nPhatgocKhach.Text);
+                        }
+                        else if (ckKiemsoatbong.Checked)
+                        {
+                            xmlAdd += Add("thongsonho", "Kiếm soát bóng");
+                            xmlAdd += Add("thongsonhoChu", nKiemsoatbongChu.Text + "%");
+                            xmlAdd += Add("thongsonhoKhach", nKiemsoatbongKhach.Text + "%");
                         }
                     }
+
                 }
                 catch (Exception ex)
                 {
@@ -1257,6 +1258,8 @@ namespace HDCGStudio
                 {
                     if (File.Exists(danhsachdoiPath))
                     {
+                        cboDoiChuNha.Properties.Items.Clear();
+                        cboDoiKhach.Properties.Items.Clear();
                         _lstTeams = Utils.GetObject<List<Object.Team>>(danhsachdoiPath);
                         foreach (var data in _lstTeams)
                         {
@@ -1410,7 +1413,7 @@ namespace HDCGStudio
             }
             else
             {
-                ManagePlayersForm frmPlayer = new ManagePlayersForm(cboGiaiDau.Text, cboDoiKhach.Text);
+                ManagePlayersForm frmPlayer = new ManagePlayersForm(dicDanhsachgiaidau.FirstOrDefault(x => x.Value == cboGiaiDau.Text).Key, cboDoiKhach.Text);
                 frmPlayer.Show();
                 frmPlayer.Activate();
             }

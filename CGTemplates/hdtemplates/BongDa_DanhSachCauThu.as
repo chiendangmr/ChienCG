@@ -237,7 +237,8 @@
 						this.chinhthucName1.text = data.toUpperCase();
 						break;
 					case "chinhthucName2".toLowerCase():
-						this.chinhthucName2
+						this.chinhthucName2.text=data.toUpperCase();
+						break;
 					case "chinhthucName3".toLowerCase():
 						this.chinhthucName3.text = data.toUpperCase();
 						break;

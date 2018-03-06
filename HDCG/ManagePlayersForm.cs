@@ -28,7 +28,7 @@ namespace HDCGStudio
         string _danhsachdoiXmlPath = "";
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
-            _danhsachdoiXmlPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + Utils.ConvertToVietnameseNonSign(_giaidau).Replace(" ", "_") + ".xml");
+            _danhsachdoiXmlPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + _giaidau + ".xml");
             try
             {
                 if (File.Exists(_danhsachdoiXmlPath))

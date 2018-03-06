@@ -226,7 +226,7 @@
             this.txtShortName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtShortName.Properties.Appearance.Options.UseFont = true;
             this.txtShortName.Size = new System.Drawing.Size(215, 30);
-            this.txtShortName.TabIndex = 16;
+            this.txtShortName.TabIndex = 15;
             // 
             // labelControl4
             // 
@@ -245,7 +245,7 @@
             this.simpleButton1.Location = new System.Drawing.Point(325, 183);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(98, 57);
-            this.simpleButton1.TabIndex = 14;
+            this.simpleButton1.TabIndex = 21;
             this.simpleButton1.ToolTip = "Lưu thông tin cầu thủ";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
@@ -281,7 +281,7 @@
             this.ckIsGK.Properties.Caption = "Thủ môn:";
             this.ckIsGK.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.ckIsGK.Size = new System.Drawing.Size(119, 28);
-            this.ckIsGK.TabIndex = 7;
+            this.ckIsGK.TabIndex = 18;
             // 
             // ckIsNotSubstitution
             // 
@@ -293,7 +293,7 @@
             this.ckIsNotSubstitution.Properties.Caption = "Đá chính:";
             this.ckIsNotSubstitution.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.ckIsNotSubstitution.Size = new System.Drawing.Size(120, 28);
-            this.ckIsNotSubstitution.TabIndex = 9;
+            this.ckIsNotSubstitution.TabIndex = 17;
             // 
             // ckIsCaptain
             // 
@@ -304,7 +304,7 @@
             this.ckIsCaptain.Properties.Caption = "Đội trưởng:";
             this.ckIsCaptain.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.ckIsCaptain.Size = new System.Drawing.Size(137, 28);
-            this.ckIsCaptain.TabIndex = 8;
+            this.ckIsCaptain.TabIndex = 19;
             // 
             // labelControl2
             // 
@@ -333,7 +333,7 @@
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtName.Properties.Appearance.Options.UseFont = true;
             this.txtName.Size = new System.Drawing.Size(206, 30);
-            this.txtName.TabIndex = 3;
+            this.txtName.TabIndex = 14;
             // 
             // txtNumber
             // 
@@ -342,7 +342,7 @@
             this.txtNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtNumber.Properties.Appearance.Options.UseFont = true;
             this.txtNumber.Size = new System.Drawing.Size(86, 30);
-            this.txtNumber.TabIndex = 2;
+            this.txtNumber.TabIndex = 16;
             // 
             // btnRemove
             // 
@@ -351,7 +351,7 @@
             this.btnRemove.Location = new System.Drawing.Point(483, 183);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(93, 57);
-            this.btnRemove.TabIndex = 1;
+            this.btnRemove.TabIndex = 22;
             this.btnRemove.ToolTip = "Xóa cầu thủ";
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
@@ -362,7 +362,7 @@
             this.btnAdd.Location = new System.Drawing.Point(178, 183);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(98, 57);
-            this.btnAdd.TabIndex = 0;
+            this.btnAdd.TabIndex = 20;
             this.btnAdd.ToolTip = "Thêm cầu thủ";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 

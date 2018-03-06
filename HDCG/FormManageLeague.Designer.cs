@@ -186,8 +186,8 @@
             this.btnSave.Location = new System.Drawing.Point(319, 148);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(98, 57);
-            this.btnSave.TabIndex = 131;
-            this.btnSave.ToolTip = "Thêm template";
+            this.btnSave.TabIndex = 6;
+            this.btnSave.ToolTip = "Lưu thông tin giải";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnChooseLogo
@@ -196,7 +196,7 @@
             this.btnChooseLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChooseLogo.Name = "btnChooseLogo";
             this.btnChooseLogo.Size = new System.Drawing.Size(35, 26);
-            this.btnChooseLogo.TabIndex = 130;
+            this.btnChooseLogo.TabIndex = 4;
             this.btnChooseLogo.Text = "...";
             this.btnChooseLogo.Click += new System.EventHandler(this.btnChooseLogo_Click);
             // 
@@ -264,8 +264,8 @@
             this.btnRemove.Location = new System.Drawing.Point(459, 148);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(93, 57);
-            this.btnRemove.TabIndex = 1;
-            this.btnRemove.ToolTip = "Xóa template";
+            this.btnRemove.TabIndex = 7;
+            this.btnRemove.ToolTip = "Xóa giải";
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
@@ -275,8 +275,8 @@
             this.btnAdd.Location = new System.Drawing.Point(165, 148);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(98, 57);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.ToolTip = "Thêm template";
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.ToolTip = "Thêm giải";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // FormManageLeague
