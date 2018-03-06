@@ -44,8 +44,7 @@ namespace HDCGStudio
         List<Object.Team> _lstTeams = new List<Object.Team>();
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
-        Dictionary<string, string> dicDanhsachcauthuHome = new Dictionary<string, string>();
-        Dictionary<string, string> dicDanhsachcauthuAway = new Dictionary<string, string>();
+        Dictionary<string, string> dicDanhsachgiaidau = new Dictionary<string, string>();
 
         HDCGControler.CasparCG cgServer = null;
         private void MainForm_Shown(object sender, EventArgs e)
@@ -58,7 +57,6 @@ namespace HDCGStudio
                 cboVideoLayer.SelectedIndex = 0;
                 cboTempLayer.SelectedIndex = 5;
                 cboTemplateType.SelectedIndex = 0;
-                cboGiaiDau.SelectedIndex = 0;
 
                 _videoXmlPath = Path.Combine(Application.StartupPath, "Video.xml");
                 try
@@ -103,7 +101,10 @@ namespace HDCGStudio
                     {
                         _lstLeagues = Utils.GetObject<List<Object.League>>(_danhsachgiaidauXmlPath);
                         foreach (var temp in _lstLeagues)
+                        {
                             cboGiaiDau.Properties.Items.Add(temp.Name);
+                            dicDanhsachgiaidau.Add(temp.LeagueCode, temp.Name);
+                        }
                     }
                     else
                     {
@@ -117,7 +118,7 @@ namespace HDCGStudio
 
                 cgServer = new HDCGControler.CasparCG();
                 cgServer.Connect(AppSetting.Default.CGServerIP, AppSetting.Default.CGServerPort);
-
+                cboGiaiDau.SelectedIndex = 0;
                 this.WindowState = FormWindowState.Maximized;
                 LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
             }
@@ -1251,7 +1252,7 @@ namespace HDCGStudio
         {
             try
             {
-                var danhsachdoiPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + Utils.ConvertToVietnameseNonSign(cboGiaiDau.Text).Replace(" ", "_") + ".xml");
+                var danhsachdoiPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + dicDanhsachgiaidau.FirstOrDefault(x => x.Value == cboGiaiDau.Text).Key + ".xml");
                 try
                 {
                     if (File.Exists(danhsachdoiPath))
@@ -1295,7 +1296,7 @@ namespace HDCGStudio
             }
             else
             {
-                ManagePlayersForm frmPlayer = new ManagePlayersForm(cboGiaiDau.Text, cboDoiChuNha.Text);
+                ManagePlayersForm frmPlayer = new ManagePlayersForm(dicDanhsachgiaidau.FirstOrDefault(x => x.Value == cboGiaiDau.Text).Key, cboDoiChuNha.Text);
                 frmPlayer.Show();
                 frmPlayer.Activate();
             }

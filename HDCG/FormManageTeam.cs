@@ -24,6 +24,7 @@ namespace HDCGStudio
         }
         string DanhsachdoiXmlPath = "";
         string DanhsachgiaidauXmlPath = "";
+        Dictionary<string, string> dicDanhsachgiaidau = new Dictionary<string, string>();
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
             DanhsachgiaidauXmlPath = Path.Combine(Application.StartupPath, "Danhsachgiaidau.xml");
@@ -33,7 +34,10 @@ namespace HDCGStudio
                 {
                     var lstTemplate = Utils.GetObject<List<Object.League>>(DanhsachgiaidauXmlPath);
                     foreach (var temp in lstTemplate)
+                    {
                         cboLeagues.Properties.Items.Add(temp.Name);
+                        dicDanhsachgiaidau.Add(temp.LeagueCode, temp.Name);
+                    }
                 }
                 else
                 {
@@ -44,7 +48,7 @@ namespace HDCGStudio
             {
                 HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            DanhsachdoiXmlPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + Utils.ConvertToVietnameseNonSign(_leagueName).Replace(" ", "_") + ".xml");
+            DanhsachdoiXmlPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + dicDanhsachgiaidau.FirstOrDefault(x => x.Value == _leagueName).Key + ".xml");
             try
             {
                 if (File.Exists(DanhsachdoiXmlPath))
@@ -193,8 +197,8 @@ namespace HDCGStudio
                     });
                     gvTeams.FocusedRowHandle = bsManageTeam.List.IndexOf(temp);
                     bsManageTeam.List.Remove(temp);
-                    (bsManageTeam.List as BindingList<View.Team>).OrderBy(a => a.tObj.Position).Select(v => v.tObj).ToList().SaveObject(DanhsachdoiXmlPath);                    
-                    
+                    (bsManageTeam.List as BindingList<View.Team>).OrderBy(a => a.tObj.Position).Select(v => v.tObj).ToList().SaveObject(DanhsachdoiXmlPath);
+
                     gvTeams.RefreshData();
                     HDMessageBox.Show("Lưu thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

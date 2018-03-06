@@ -49,9 +49,9 @@ namespace HDCGStudio
         {
             try
             {
-                if (txtName.Text.Trim().Length == 0 || txtShortName.Name.Trim().Length == 0)
+                if (txtName.Text.Trim().Length == 0 || txtMaGiai.Name.Trim().Length == 0)
                 {
-                    HDMessageBox.Show("Tên và tên viết tắt không được để trống!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    HDMessageBox.Show("Tên và mã giải không được để trống!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -60,7 +60,7 @@ namespace HDCGStudio
                         lObj = new Object.League()
                         {
                             Name = txtName.Text,
-                            ShortName = txtShortName.Text,
+                            LeagueCode = txtMaGiai.Text,
                             LogoPath = txtLogoPath.Text
                         }
                     });
@@ -79,7 +79,7 @@ namespace HDCGStudio
             try
             {
                 if (gvLeagues.FocusedRowHandle < 0)
-                    HDMessageBox.Show("Chưa chọn cầu thủ để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    HDMessageBox.Show("Chưa chọn giải để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
                     var temp = gvLeagues.GetFocusedRow() as View.League;
@@ -127,6 +127,49 @@ namespace HDCGStudio
             frm.FilterString = "*.tga;*.png;*.jpg";
             if (frm.ShowDialog() == DialogResult.OK)
                 txtLogoPath.Text = frm.FileName;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtName.Text.Trim().Length == 0 || txtMaGiai.Name.Trim().Length == 0)
+                {
+                    HDMessageBox.Show("Tên và mã giải không được để trống!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    {
+                        var temp = gvLeagues.GetFocusedRow() as View.League;
+                        bsManageLeague.List.Insert(bsManageLeague.List.IndexOf(temp), new View.League()
+                        {
+                            lObj = new Object.League()
+                            {
+                                Name = txtName.Text,
+                                LeagueCode = txtMaGiai.Text,
+                                LogoPath = txtLogoPath.Text
+                            }
+                        });
+                        gvLeagues.FocusedRowHandle = bsManageLeague.List.IndexOf(temp);
+                        bsManageLeague.List.Remove(temp);
+                        (bsManageLeague.List as BindingList<View.League>).OrderBy(a => a.lObj.LeagueCode).Select(v => v.lObj).ToList().SaveObject(DanhsachgiaidauXmlPath);
+                        gvLeagues.RefreshData();
+                        HDMessageBox.Show("Lưu thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void gvLeagues_RowClick(object sender, RowClickEventArgs e)
+        {
+            var temp = gvLeagues.GetFocusedRow() as View.League;
+            txtName.Text = temp.lObj.Name;
+            txtMaGiai.Text = temp.lObj.LeagueCode;
+            txtLogoPath.Text = temp.lObj.LogoPath;
         }
     }
 }

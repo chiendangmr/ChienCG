@@ -8,7 +8,7 @@ namespace HDCGStudio.Object
     public class League
     {        
         public string Name { get; set; }
-        public string ShortName { get; set; }
+        public string LeagueCode { get; set; }
         public string LogoPath { get; set; }        
     }
 }
