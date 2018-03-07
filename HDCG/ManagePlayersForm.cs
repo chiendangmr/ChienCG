@@ -66,6 +66,7 @@ namespace HDCGStudio
                             Name = txtName.Text,
                             IsCaptain = ckIsCaptain.Checked,
                             IsNotSubstitution = ckIsNotSubstitution.Checked,
+                            IsSubstitution = ckDubi.Checked,
                             IsGK = ckIsGK.Checked,
                             ShortName = txtShortName.Text,
                             Team = cboTeams.Text
@@ -168,6 +169,7 @@ namespace HDCGStudio
             ckIsGK.Checked = temp.mObj.IsGK;
             ckIsCaptain.Checked = temp.mObj.IsCaptain;
             ckIsNotSubstitution.Checked = temp.mObj.IsNotSubstitution;
+            ckDubi.Checked = temp.mObj.IsSubstitution;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -189,6 +191,7 @@ namespace HDCGStudio
                             Name = txtName.Text,
                             IsCaptain = ckIsCaptain.Checked,
                             IsNotSubstitution = ckIsNotSubstitution.Checked,
+                            IsSubstitution = ckDubi.Checked,
                             IsGK = ckIsGK.Checked,
                             ShortName = txtShortName.Text,
                             Team = cboTeams.Text

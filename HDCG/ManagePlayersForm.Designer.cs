@@ -40,6 +40,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsCaptain = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsSubstitution = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ckDubi = new DevExpress.XtraEditors.CheckEdit();
             this.txtShortName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -54,11 +55,14 @@
             this.txtNumber = new DevExpress.XtraEditors.TextEdit();
             this.btnRemove = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsManagePlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPlayers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckDubi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTeams.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckIsGK.Properties)).BeginInit();
@@ -76,6 +80,7 @@
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.gridPlayers);
             this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.ckDubi);
             this.splitContainerControl1.Panel2.Controls.Add(this.txtShortName);
             this.splitContainerControl1.Panel2.Controls.Add(this.labelControl4);
             this.splitContainerControl1.Panel2.Controls.Add(this.simpleButton1);
@@ -91,7 +96,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.btnRemove);
             this.splitContainerControl1.Panel2.Controls.Add(this.btnAdd);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(754, 741);
+            this.splitContainerControl1.Size = new System.Drawing.Size(803, 741);
             this.splitContainerControl1.SplitterPosition = 481;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -103,7 +108,7 @@
             this.gridPlayers.Location = new System.Drawing.Point(0, 0);
             this.gridPlayers.MainView = this.gvPlayers;
             this.gridPlayers.Name = "gridPlayers";
-            this.gridPlayers.Size = new System.Drawing.Size(754, 481);
+            this.gridPlayers.Size = new System.Drawing.Size(803, 481);
             this.gridPlayers.TabIndex = 0;
             this.gridPlayers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPlayers});
@@ -120,7 +125,8 @@
             this.gridColumn2,
             this.gridColumn1,
             this.colIsCaptain,
-            this.colIsSubstitution});
+            this.colIsSubstitution,
+            this.gridColumn4});
             this.gvPlayers.GridControl = this.gridPlayers;
             this.gvPlayers.Name = "gvPlayers";
             this.gvPlayers.OptionsView.ShowGroupPanel = false;
@@ -219,9 +225,20 @@
             this.colIsSubstitution.VisibleIndex = 5;
             this.colIsSubstitution.Width = 101;
             // 
+            // ckDubi
+            // 
+            this.ckDubi.Location = new System.Drawing.Point(367, 123);
+            this.ckDubi.Name = "ckDubi";
+            this.ckDubi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.ckDubi.Properties.Appearance.Options.UseFont = true;
+            this.ckDubi.Properties.Caption = "Dự bị:";
+            this.ckDubi.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.ckDubi.Size = new System.Drawing.Size(92, 28);
+            this.ckDubi.TabIndex = 23;
+            // 
             // txtShortName
             // 
-            this.txtShortName.Location = new System.Drawing.Point(506, 65);
+            this.txtShortName.Location = new System.Drawing.Point(541, 65);
             this.txtShortName.Name = "txtShortName";
             this.txtShortName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtShortName.Properties.Appearance.Options.UseFont = true;
@@ -232,7 +249,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(386, 71);
+            this.labelControl4.Location = new System.Drawing.Point(421, 71);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(111, 24);
             this.labelControl4.TabIndex = 15;
@@ -258,7 +275,7 @@
             this.cboTeams.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboTeams.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboTeams.Size = new System.Drawing.Size(584, 26);
+            this.cboTeams.Size = new System.Drawing.Size(619, 26);
             this.cboTeams.TabIndex = 13;
             this.cboTeams.SelectedIndexChanged += new System.EventHandler(this.cboTeams_SelectedIndexChanged);
             // 
@@ -274,7 +291,7 @@
             // 
             // ckIsGK
             // 
-            this.ckIsGK.Location = new System.Drawing.Point(404, 122);
+            this.ckIsGK.Location = new System.Drawing.Point(481, 123);
             this.ckIsGK.Name = "ckIsGK";
             this.ckIsGK.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.ckIsGK.Properties.Appearance.Options.UseFont = true;
@@ -286,7 +303,7 @@
             // ckIsNotSubstitution
             // 
             this.ckIsNotSubstitution.EditValue = true;
-            this.ckIsNotSubstitution.Location = new System.Drawing.Point(251, 123);
+            this.ckIsNotSubstitution.Location = new System.Drawing.Point(229, 123);
             this.ckIsNotSubstitution.Name = "ckIsNotSubstitution";
             this.ckIsNotSubstitution.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.ckIsNotSubstitution.Properties.Appearance.Options.UseFont = true;
@@ -297,7 +314,7 @@
             // 
             // ckIsCaptain
             // 
-            this.ckIsCaptain.Location = new System.Drawing.Point(584, 120);
+            this.ckIsCaptain.Location = new System.Drawing.Point(619, 123);
             this.ckIsCaptain.Name = "ckIsCaptain";
             this.ckIsCaptain.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.ckIsCaptain.Properties.Appearance.Options.UseFont = true;
@@ -332,7 +349,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtName.Properties.Appearance.Options.UseFont = true;
-            this.txtName.Size = new System.Drawing.Size(206, 30);
+            this.txtName.Size = new System.Drawing.Size(227, 30);
             this.txtName.TabIndex = 14;
             // 
             // txtNumber
@@ -366,13 +383,43 @@
             this.btnAdd.ToolTip = "Thêm cầu thủ";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // gridColumn3
+            // 
+            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.Caption = "Đá chính";
+            this.gridColumn3.FieldName = "mObj.IsNotSubstitution";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 5;
+            this.gridColumn3.Width = 101;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.Caption = "Dự bị";
+            this.gridColumn4.FieldName = "mObj.IsSubstitution";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 6;
+            // 
             // ManagePlayersForm
             // 
             this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(754, 741);
+            this.ClientSize = new System.Drawing.Size(803, 741);
             this.Controls.Add(this.splitContainerControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -387,6 +434,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridPlayers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsManagePlayers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPlayers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckDubi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTeams.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckIsGK.Properties)).EndInit();
@@ -424,5 +472,8 @@
         private DevExpress.XtraEditors.TextEdit txtShortName;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.CheckEdit ckDubi;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
     }
 }

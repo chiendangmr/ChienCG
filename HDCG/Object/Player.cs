@@ -11,6 +11,7 @@ namespace HDCGStudio.Object
         public string ShortName { get; set; }
         public int Number { get; set; }        
         public bool IsNotSubstitution { get; set; }
+        public bool IsSubstitution { get; set; }
         public bool IsCaptain { get; set; }
         public bool IsGK { get; set; }
         public string Team { get; set; }

@@ -126,9 +126,9 @@ namespace HDCGStudio
                         File.Create(_danhsachgiaidauXmlPath).Dispose();
                     }
                 }
-                catch 
+                catch
                 {
-                   
+
                 }
 
                 cgServer = new HDCGControler.CasparCG();
@@ -390,7 +390,7 @@ namespace HDCGStudio
                     }
                     else
                         upOK = cgServer.FadeUp(layer, fadeUpDuration, xmlStr.Replace("\\", "\\\\"));
-
+                    playClicked = false;
                 }
                 catch (Exception ex)
                 {
@@ -508,7 +508,7 @@ namespace HDCGStudio
             else
                 OffTemplate(int.Parse(cboVideoLayer.Text));
         }
-
+        bool playClicked = false;
         private void btnPlay_Click(object sender, EventArgs e)
         {
             try
@@ -517,12 +517,34 @@ namespace HDCGStudio
                     HDMessageBox.Show("Not connect to cg server!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
+                    playClicked = true;
                     List<Object.Property> runtimeProperties = new List<Object.Property>();
                     runtimeProperties.Add(new Object.Property()
                     {
                         Name = "Loops",
                         Value = "false"
                     });
+                    if (_tempName == "BongDa_ThayNguoi.ft")
+                    {
+                        if (ckChu.Checked)
+                        {
+                            var playerIn = GetPlayerIn();
+                            var playerOut = GetPlayerOut();
+                            bsHomePlayer.List.Insert(bsHomePlayer.List.IndexOf(playerOut), playerIn);
+                            bsHomePlayerDuBi.List.Insert(bsHomePlayer.List.IndexOf(playerIn), playerOut);
+                            bsHomePlayer.List.Remove(playerOut);
+                            bsHomePlayerDuBi.List.Remove(playerIn);
+                        }
+                        if (ckKhach.Checked)
+                        {
+                            var playerIn = GetPlayerIn();
+                            var playerOut = GetPlayerOut();
+                            bsAwayPlayer.List.Insert(bsAwayPlayer.List.IndexOf(playerOut), playerIn);
+                            bsAwayPlayerDuBi.List.Insert(bsAwayPlayer.List.IndexOf(playerIn), playerOut);
+                            bsAwayPlayer.List.Remove(playerOut);
+                            bsAwayPlayerDuBi.List.Remove(playerIn);
+                        }
+                    }
                     System.Threading.Timer timer = null;
                     timer = new System.Threading.Timer((obj) =>
                         {
@@ -1015,7 +1037,7 @@ namespace HDCGStudio
                     xmlAdd += Add("doibong", GetTeamName());
                     xmlAdd += Add("shortNameChu", txtHomeShortName.Text);
                     xmlAdd += Add("shortNameKhach", txtAwayShortName.Text);
-                    xmlAdd += Add("hiepdau", "Hiệp " + txtHiep.Text);
+                    xmlAdd += Add("hiepdau", txtHiep.Text);
                     xmlAdd += Add("player1", GetPlayingPlayer().mObj.Name);
                     xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number.ToString());
                     if (_tempName == "BongDa_CauThu.ft")
@@ -1039,10 +1061,20 @@ namespace HDCGStudio
                     xmlAdd += Add("bugio", nBugio.Value.ToString());
                     if (_tempName == "BongDa_ThayNguoi.ft")
                     {
-                        xmlAdd += Add("playerin", GetPlayerIn().mObj.Name);
-                        xmlAdd += Add("playerout", GetPlayerOut().mObj.Name);
-                        xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
-                        xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
+                        if (playClicked)
+                        {
+                            xmlAdd += Add("playerin", GetPlayerOut().mObj.Name);
+                            xmlAdd += Add("playerout", GetPlayerIn().mObj.Name);
+                            xmlAdd += Add("playerInNumber", GetPlayerOut().mObj.Number.ToString());
+                            xmlAdd += Add("playerOutNumber", GetPlayerIn().mObj.Number.ToString());
+                        }
+                        else
+                        {
+                            xmlAdd += Add("playerin", GetPlayerIn().mObj.Name);
+                            xmlAdd += Add("playerout", GetPlayerOut().mObj.Name);
+                            xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
+                            xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
+                        }
                     }
                     xmlAdd += Add("dongho", lbThoigianTran.Text);
                     if (_tempName == "BongDa_ThongKeNho.ft")
@@ -1115,26 +1147,9 @@ namespace HDCGStudio
                             xmlAdd += Add("dubiNumber" + (i + 1).ToString(), lstDuBi[i].mObj.Number.ToString());
                         }
                     //Danh sách ghi bàn
-                    if (bsGhibanChu.List.Count > 0)
-                    {
-                        var strGhiban = "";
-                        for (var i = 0; i < bsGhibanChu.List.Count; i++)
-                        {
-                            var temp = gvGhibanChu.GetRow(i) as View.Goal;
-                            strGhiban += temp.gObj.Name + "(" + temp.gObj.StrMin + ")   ";
-                        }
-                        xmlAdd += Add("ghibanChu", strGhiban);
-                    }
-                    if (bsGhibanKhach.List.Count > 0)
-                    {
-                        var strGhiban = "";
-                        for (var i = 0; i < bsGhibanKhach.List.Count; i++)
-                        {
-                            var temp = gvGhibanKhach.GetRow(i) as View.Goal;
-                            strGhiban += temp.gObj.Name + "(" + temp.gObj.StrMin + ")   ";
-                        }
-                        xmlAdd += Add("ghibanKhach", strGhiban);
-                    }
+
+                    xmlAdd += Add("ghibanChu", rtbGhiBanChu.Text);
+                    xmlAdd += Add("ghibanKhach", rtbGhiBanKhach.Text);
 
                     if (_tempName == "BongDa_ThongKeCuoi.ft")
                     {
@@ -1342,7 +1357,6 @@ namespace HDCGStudio
                 {
                     bsHomePlayer.Clear();
                     bsHomePlayerDuBi.Clear();
-                    cboCauthuChu.Properties.Items.Clear();
                     bsGhibanChu.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
@@ -1351,16 +1365,14 @@ namespace HDCGStudio
                         {
                             mObj = temp
                         });
-                        cboCauthuChu.Properties.Items.Add(temp.Name);
                     }
-                    var lstDubi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
+                    var lstDubi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsSubstitution == true);
                     foreach (var temp in lstDubi)
                     {
                         bsHomePlayerDuBi.Add(new View.Player()
                         {
                             mObj = temp
                         });
-                        cboCauthuChu.Properties.Items.Add(temp.Name);
                     }
                 }
                 else
@@ -1392,7 +1404,6 @@ namespace HDCGStudio
                 {
                     bsAwayPlayer.Clear();
                     bsAwayPlayerDuBi.Clear();
-                    cboCauthuKhach.Properties.Items.Clear();
                     bsGhibanKhach.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
@@ -1401,16 +1412,14 @@ namespace HDCGStudio
                         {
                             mObj = temp
                         });
-                        cboCauthuKhach.Properties.Items.Add(temp.Name);
                     }
-                    var lstDuBi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == false);
+                    var lstDuBi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsSubstitution == true);
                     foreach (var temp in lstDuBi)
                     {
                         bsAwayPlayerDuBi.Add(new View.Player()
                         {
                             mObj = temp
                         });
-                        cboCauthuKhach.Properties.Items.Add(temp.Name);
                     }
                 }
                 else
@@ -1499,113 +1508,6 @@ namespace HDCGStudio
         }
         #endregion
 
-        #region Xử lý phần ghi bàn
-        private void btnThemGhibanChu_Click(object sender, EventArgs e)
-        {
-            if (cboCauthuChu.Text.Length > 0 && txtPhutGhibanChu.Text.Length > 0)
-            {
-                bsGhibanChu.List.Add(new View.Goal()
-                {
-                    gObj = new Object.Goal()
-                    {
-                        Name = cboCauthuChu.Text,
-                        StrMin = txtPhutGhibanChu.Text
-                    }
-                });
-
-            }
-            else
-            {
-                HDMessageBox.Show("Chọn cầu thủ và phút ghi bàn trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnThemGhibanKhach_Click(object sender, EventArgs e)
-        {
-            if (cboCauthuKhach.Text.Length > 0 && txtPhutGhibanKhach.Text.Length > 0)
-            {
-                bsGhibanKhach.List.Add(new View.Goal()
-                {
-                    gObj = new Object.Goal()
-                    {
-                        Name = cboCauthuKhach.Text,
-                        StrMin = txtPhutGhibanKhach.Text
-                    }
-                });
-            }
-            else
-            {
-                HDMessageBox.Show("Chọn cầu thủ và phút ghi bàn trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void gvGhibanChu_RowClick(object sender, RowClickEventArgs e)
-        {
-            var temp = gvGhibanChu.GetFocusedRow() as View.Goal;
-            cboCauthuChu.Text = temp.gObj.Name;
-            txtPhutGhibanChu.Text = temp.gObj.StrMin;
-        }
-
-        private void gvGhibanKhach_RowClick(object sender, RowClickEventArgs e)
-        {
-            var temp = gvGhibanKhach.GetFocusedRow() as View.Goal;
-            cboCauthuKhach.Text = temp.gObj.Name;
-            txtPhutGhibanKhach.Text = temp.gObj.StrMin;
-        }
-
-        private void btnLuuGhibanChu_Click(object sender, EventArgs e)
-        {
-            if (bsGhibanChu.List.Count == 0)
-            {
-                HDMessageBox.Show("Chưa chọn cầu thủ ghi bàn để lưu!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            if (cboCauthuChu.Text.Length > 0 && txtPhutGhibanChu.Text.Length > 0)
-            {
-                var temp = gvGhibanChu.GetFocusedRow() as View.Goal;
-
-                bsGhibanChu.List.Insert(bsGhibanChu.List.IndexOf(temp), new View.Goal()
-                {
-                    gObj = new Object.Goal()
-                    {
-                        Name = cboCauthuChu.Text,
-                        StrMin = txtPhutGhibanChu.Text
-                    }
-                });
-                bsGhibanChu.List.Remove(temp);
-            }
-            else
-            {
-                HDMessageBox.Show("Chọn cầu thủ và phút ghi bàn trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void btnLuuGhibanKhach_Click(object sender, EventArgs e)
-        {
-            if (bsGhibanKhach.List.Count == 0)
-            {
-                HDMessageBox.Show("Chưa chọn cầu thủ ghi bàn để lưu!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            if (cboCauthuKhach.Text.Length > 0 && txtPhutGhibanKhach.Text.Length > 0)
-            {
-                var temp = gvGhibanKhach.GetFocusedRow() as View.Goal;
-
-                bsGhibanKhach.List.Insert(bsGhibanKhach.List.IndexOf(temp), new View.Goal()
-                {
-                    gObj = new Object.Goal()
-                    {
-                        Name = cboCauthuKhach.Text,
-                        StrMin = txtPhutGhibanKhach.Text
-                    }
-                });
-                bsGhibanKhach.List.Remove(temp);
-            }
-            else
-            {
-                HDMessageBox.Show("Chọn cầu thủ và phút ghi bàn trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        #endregion
         int _thoigianTranGiay = 0;
         int _thoigianTranPhut = 0;
         int _thoigianThucGiay = 0;
@@ -1705,7 +1607,7 @@ namespace HDCGStudio
                     if (lstData[0].IsUpdateDanhsachdoibong)
                     {
                         var tempIndex = cboGiaiDau.SelectedIndex;
-                        cboGiaiDau.SelectedIndex = -1;                                              
+                        cboGiaiDau.SelectedIndex = -1;
                         UpdateNotifier();
                         cboGiaiDau.SelectedIndex = 0;
                     }
@@ -1722,7 +1624,7 @@ namespace HDCGStudio
                     File.Create(_updateNotifier).Dispose();
                 }
             }
-            catch { }            
+            catch { }
         }
         private void UpdateNotifier()
         {
