@@ -143,8 +143,10 @@
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xTabTyso = new DevExpress.XtraTab.XtraTabPage();
-            this.bsGhibanKhach = new System.Windows.Forms.BindingSource(this.components);
-            this.bsGhibanChu = new System.Windows.Forms.BindingSource(this.components);
+            this.rtbGhiBanKhach = new System.Windows.Forms.RichTextBox();
+            this.rtbGhiBanChu = new System.Windows.Forms.RichTextBox();
+            this.labelControl44 = new DevExpress.XtraEditors.LabelControl();
+            this.txtHiep = new DevExpress.XtraEditors.TextEdit();
             this.labelControl45 = new DevExpress.XtraEditors.LabelControl();
             this.ckPhamloi = new DevExpress.XtraEditors.CheckEdit();
             this.nPhamloiKhach = new System.Windows.Forms.NumericUpDown();
@@ -207,14 +209,24 @@
             this.txtTrongtaiChinh = new DevExpress.XtraEditors.TextEdit();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             this.xTabThoigian = new DevExpress.XtraTab.XtraTabPage();
+            this.rbHiep2 = new System.Windows.Forms.RadioButton();
+            this.rbHiepPhu1 = new System.Windows.Forms.RadioButton();
+            this.rbHiepPhu2 = new System.Windows.Forms.RadioButton();
+            this.rbHiep1 = new System.Windows.Forms.RadioButton();
+            this.lbThoigianHiepPhu2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl57 = new DevExpress.XtraEditors.LabelControl();
+            this.lbThoigianHiepPhu1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl55 = new DevExpress.XtraEditors.LabelControl();
+            this.lbThoigianHiep2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl47 = new DevExpress.XtraEditors.LabelControl();
             this.nBugio = new System.Windows.Forms.NumericUpDown();
             this.labelControl53 = new DevExpress.XtraEditors.LabelControl();
             this.btnDungthoigiantran = new DevExpress.XtraEditors.SimpleButton();
             this.lbThoigianThuc = new DevExpress.XtraEditors.LabelControl();
-            this.lbThoigianTran = new DevExpress.XtraEditors.LabelControl();
+            this.lbThoigianHiep1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl74 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl73 = new DevExpress.XtraEditors.LabelControl();
-            this.btnBatdautrandau = new DevExpress.XtraEditors.SimpleButton();
+            this.btnBatdauThoigiantran = new DevExpress.XtraEditors.SimpleButton();
             this.xTabPageTennis = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
@@ -269,6 +281,8 @@
             this.cboTempLayer = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnSavePlaylist = new DevExpress.XtraEditors.SimpleButton();
+            this.bsGhibanKhach = new System.Windows.Forms.BindingSource(this.components);
+            this.bsGhibanChu = new System.Windows.Forms.BindingSource(this.components);
             this.xTab = new DevExpress.XtraTab.XtraTabControl();
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
@@ -276,10 +290,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tUpdateData = new System.Windows.Forms.Timer(this.components);
             this.bsUpdateNotifier = new System.Windows.Forms.BindingSource(this.components);
-            this.labelControl44 = new DevExpress.XtraEditors.LabelControl();
-            this.txtHiep = new DevExpress.XtraEditors.TextEdit();
-            this.rtbGhiBanChu = new System.Windows.Forms.RichTextBox();
-            this.rtbGhiBanKhach = new System.Windows.Forms.RichTextBox();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.nPhut = new System.Windows.Forms.NumericUpDown();
+            this.labelControl46 = new DevExpress.XtraEditors.LabelControl();
+            this.nGiay = new System.Windows.Forms.NumericUpDown();
+            this.labelControl54 = new DevExpress.XtraEditors.LabelControl();
+            this.btnSetTime = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -348,8 +364,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.xTabTyso.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsGhibanKhach)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsGhibanChu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHiep.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckPhamloi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhamloiKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhamloiChu)).BeginInit();
@@ -417,13 +432,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDurationTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTempLayer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsGhibanKhach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsGhibanChu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xTab)).BeginInit();
             this.xTab.SuspendLayout();
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHiep.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nPhut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nGiay)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -1830,13 +1850,41 @@
             this.xTabTyso.Size = new System.Drawing.Size(1169, 615);
             this.xTabTyso.Text = "Thông số/Tỷ số/Ghi bàn";
             // 
-            // bsGhibanKhach
+            // rtbGhiBanKhach
             // 
-            this.bsGhibanKhach.DataSource = typeof(HDCGStudio.View.Goal);
+            this.rtbGhiBanKhach.Location = new System.Drawing.Point(780, 422);
+            this.rtbGhiBanKhach.Name = "rtbGhiBanKhach";
+            this.rtbGhiBanKhach.Size = new System.Drawing.Size(272, 96);
+            this.rtbGhiBanKhach.TabIndex = 188;
+            this.rtbGhiBanKhach.Text = "";
             // 
-            // bsGhibanChu
+            // rtbGhiBanChu
             // 
-            this.bsGhibanChu.DataSource = typeof(HDCGStudio.View.Goal);
+            this.rtbGhiBanChu.Location = new System.Drawing.Point(227, 422);
+            this.rtbGhiBanChu.Name = "rtbGhiBanChu";
+            this.rtbGhiBanChu.Size = new System.Drawing.Size(272, 96);
+            this.rtbGhiBanChu.TabIndex = 187;
+            this.rtbGhiBanChu.Text = "";
+            // 
+            // labelControl44
+            // 
+            this.labelControl44.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl44.Appearance.Options.UseFont = true;
+            this.labelControl44.Location = new System.Drawing.Point(95, 26);
+            this.labelControl44.Name = "labelControl44";
+            this.labelControl44.Size = new System.Drawing.Size(105, 21);
+            this.labelControl44.TabIndex = 185;
+            this.labelControl44.Text = "Thông số cho:";
+            // 
+            // txtHiep
+            // 
+            this.txtHiep.EditValue = "Hiệp 1";
+            this.txtHiep.Location = new System.Drawing.Point(498, 23);
+            this.txtHiep.Name = "txtHiep";
+            this.txtHiep.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtHiep.Properties.Appearance.Options.UseFont = true;
+            this.txtHiep.Size = new System.Drawing.Size(283, 26);
+            this.txtHiep.TabIndex = 186;
             // 
             // labelControl45
             // 
@@ -2533,17 +2581,134 @@
             // 
             this.xTabThoigian.Appearance.PageClient.BackColor = System.Drawing.Color.LightGray;
             this.xTabThoigian.Appearance.PageClient.Options.UseBackColor = true;
+            this.xTabThoigian.Controls.Add(this.groupControl2);
+            this.xTabThoigian.Controls.Add(this.rbHiep2);
+            this.xTabThoigian.Controls.Add(this.rbHiepPhu1);
+            this.xTabThoigian.Controls.Add(this.rbHiepPhu2);
+            this.xTabThoigian.Controls.Add(this.rbHiep1);
+            this.xTabThoigian.Controls.Add(this.lbThoigianHiepPhu2);
+            this.xTabThoigian.Controls.Add(this.labelControl57);
+            this.xTabThoigian.Controls.Add(this.lbThoigianHiepPhu1);
+            this.xTabThoigian.Controls.Add(this.labelControl55);
+            this.xTabThoigian.Controls.Add(this.lbThoigianHiep2);
+            this.xTabThoigian.Controls.Add(this.labelControl47);
             this.xTabThoigian.Controls.Add(this.nBugio);
             this.xTabThoigian.Controls.Add(this.labelControl53);
             this.xTabThoigian.Controls.Add(this.btnDungthoigiantran);
             this.xTabThoigian.Controls.Add(this.lbThoigianThuc);
-            this.xTabThoigian.Controls.Add(this.lbThoigianTran);
+            this.xTabThoigian.Controls.Add(this.lbThoigianHiep1);
             this.xTabThoigian.Controls.Add(this.labelControl74);
             this.xTabThoigian.Controls.Add(this.labelControl73);
-            this.xTabThoigian.Controls.Add(this.btnBatdautrandau);
+            this.xTabThoigian.Controls.Add(this.btnBatdauThoigiantran);
             this.xTabThoigian.Name = "xTabThoigian";
             this.xTabThoigian.Size = new System.Drawing.Size(1169, 615);
             this.xTabThoigian.Text = "Thời gian";
+            // 
+            // rbHiep2
+            // 
+            this.rbHiep2.AutoSize = true;
+            this.rbHiep2.Location = new System.Drawing.Point(58, 106);
+            this.rbHiep2.Name = "rbHiep2";
+            this.rbHiep2.Size = new System.Drawing.Size(17, 16);
+            this.rbHiep2.TabIndex = 189;
+            this.rbHiep2.TabStop = true;
+            this.rbHiep2.UseVisualStyleBackColor = true;
+            // 
+            // rbHiepPhu1
+            // 
+            this.rbHiepPhu1.AutoSize = true;
+            this.rbHiepPhu1.Location = new System.Drawing.Point(58, 181);
+            this.rbHiepPhu1.Name = "rbHiepPhu1";
+            this.rbHiepPhu1.Size = new System.Drawing.Size(17, 16);
+            this.rbHiepPhu1.TabIndex = 188;
+            this.rbHiepPhu1.TabStop = true;
+            this.rbHiepPhu1.UseVisualStyleBackColor = true;
+            // 
+            // rbHiepPhu2
+            // 
+            this.rbHiepPhu2.AutoSize = true;
+            this.rbHiepPhu2.Location = new System.Drawing.Point(58, 241);
+            this.rbHiepPhu2.Name = "rbHiepPhu2";
+            this.rbHiepPhu2.Size = new System.Drawing.Size(17, 16);
+            this.rbHiepPhu2.TabIndex = 187;
+            this.rbHiepPhu2.TabStop = true;
+            this.rbHiepPhu2.UseVisualStyleBackColor = true;
+            // 
+            // rbHiep1
+            // 
+            this.rbHiep1.AutoSize = true;
+            this.rbHiep1.Location = new System.Drawing.Point(58, 45);
+            this.rbHiep1.Name = "rbHiep1";
+            this.rbHiep1.Size = new System.Drawing.Size(17, 16);
+            this.rbHiep1.TabIndex = 186;
+            this.rbHiep1.TabStop = true;
+            this.rbHiep1.UseVisualStyleBackColor = true;
+            // 
+            // lbThoigianHiepPhu2
+            // 
+            this.lbThoigianHiepPhu2.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F);
+            this.lbThoigianHiepPhu2.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.lbThoigianHiepPhu2.Appearance.Options.UseFont = true;
+            this.lbThoigianHiepPhu2.Appearance.Options.UseForeColor = true;
+            this.lbThoigianHiepPhu2.Location = new System.Drawing.Point(224, 227);
+            this.lbThoigianHiepPhu2.Name = "lbThoigianHiepPhu2";
+            this.lbThoigianHiepPhu2.Size = new System.Drawing.Size(102, 40);
+            this.lbThoigianHiepPhu2.TabIndex = 185;
+            this.lbThoigianHiepPhu2.Text = "105:00";
+            // 
+            // labelControl57
+            // 
+            this.labelControl57.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl57.Appearance.Options.UseFont = true;
+            this.labelControl57.Location = new System.Drawing.Point(113, 238);
+            this.labelControl57.Name = "labelControl57";
+            this.labelControl57.Size = new System.Drawing.Size(85, 21);
+            this.labelControl57.TabIndex = 184;
+            this.labelControl57.Text = "Hiệp phụ 2:";
+            // 
+            // lbThoigianHiepPhu1
+            // 
+            this.lbThoigianHiepPhu1.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F);
+            this.lbThoigianHiepPhu1.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.lbThoigianHiepPhu1.Appearance.Options.UseFont = true;
+            this.lbThoigianHiepPhu1.Appearance.Options.UseForeColor = true;
+            this.lbThoigianHiepPhu1.Location = new System.Drawing.Point(224, 165);
+            this.lbThoigianHiepPhu1.Name = "lbThoigianHiepPhu1";
+            this.lbThoigianHiepPhu1.Size = new System.Drawing.Size(84, 40);
+            this.lbThoigianHiepPhu1.TabIndex = 183;
+            this.lbThoigianHiepPhu1.Text = "90:00";
+            // 
+            // labelControl55
+            // 
+            this.labelControl55.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl55.Appearance.Options.UseFont = true;
+            this.labelControl55.Location = new System.Drawing.Point(113, 176);
+            this.labelControl55.Name = "labelControl55";
+            this.labelControl55.Size = new System.Drawing.Size(85, 21);
+            this.labelControl55.TabIndex = 182;
+            this.labelControl55.Text = "Hiệp phụ 1:";
+            // 
+            // lbThoigianHiep2
+            // 
+            this.lbThoigianHiep2.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F);
+            this.lbThoigianHiep2.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.lbThoigianHiep2.Appearance.Options.UseFont = true;
+            this.lbThoigianHiep2.Appearance.Options.UseForeColor = true;
+            this.lbThoigianHiep2.Location = new System.Drawing.Point(224, 98);
+            this.lbThoigianHiep2.Name = "lbThoigianHiep2";
+            this.lbThoigianHiep2.Size = new System.Drawing.Size(84, 40);
+            this.lbThoigianHiep2.TabIndex = 181;
+            this.lbThoigianHiep2.Text = "45:00";
+            // 
+            // labelControl47
+            // 
+            this.labelControl47.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl47.Appearance.Options.UseFont = true;
+            this.labelControl47.Location = new System.Drawing.Point(145, 106);
+            this.labelControl47.Name = "labelControl47";
+            this.labelControl47.Size = new System.Drawing.Size(53, 21);
+            this.labelControl47.TabIndex = 180;
+            this.labelControl47.Text = "Hiệp 2:";
             // 
             // nBugio
             // 
@@ -2571,13 +2736,13 @@
             // 
             // btnDungthoigiantran
             // 
-            this.btnDungthoigiantran.Location = new System.Drawing.Point(365, 144);
+            this.btnDungthoigiantran.Location = new System.Drawing.Point(362, 155);
             this.btnDungthoigiantran.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDungthoigiantran.Name = "btnDungthoigiantran";
-            this.btnDungthoigiantran.Size = new System.Drawing.Size(204, 42);
+            this.btnDungthoigiantran.Size = new System.Drawing.Size(85, 76);
             this.btnDungthoigiantran.TabIndex = 177;
-            this.btnDungthoigiantran.Text = "Dừng/Tiếp tục";
-            this.btnDungthoigiantran.ToolTip = "Dừng/Tiếp tục thời gian trận";
+            this.btnDungthoigiantran.Text = "Dừng";
+            this.btnDungthoigiantran.ToolTip = "Dừng thời gian trận";
             this.btnDungthoigiantran.Click += new System.EventHandler(this.btnDungthoigiantran_Click);
             // 
             // lbThoigianThuc
@@ -2592,27 +2757,27 @@
             this.lbThoigianThuc.TabIndex = 175;
             this.lbThoigianThuc.Text = "00:00";
             // 
-            // lbThoigianTran
+            // lbThoigianHiep1
             // 
-            this.lbThoigianTran.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F);
-            this.lbThoigianTran.Appearance.ForeColor = System.Drawing.Color.Green;
-            this.lbThoigianTran.Appearance.Options.UseFont = true;
-            this.lbThoigianTran.Appearance.Options.UseForeColor = true;
-            this.lbThoigianTran.Location = new System.Drawing.Point(485, 78);
-            this.lbThoigianTran.Name = "lbThoigianTran";
-            this.lbThoigianTran.Size = new System.Drawing.Size(84, 40);
-            this.lbThoigianTran.TabIndex = 174;
-            this.lbThoigianTran.Text = "00:00";
+            this.lbThoigianHiep1.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F);
+            this.lbThoigianHiep1.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.lbThoigianHiep1.Appearance.Options.UseFont = true;
+            this.lbThoigianHiep1.Appearance.Options.UseForeColor = true;
+            this.lbThoigianHiep1.Location = new System.Drawing.Point(224, 34);
+            this.lbThoigianHiep1.Name = "lbThoigianHiep1";
+            this.lbThoigianHiep1.Size = new System.Drawing.Size(84, 40);
+            this.lbThoigianHiep1.TabIndex = 174;
+            this.lbThoigianHiep1.Text = "00:00";
             // 
             // labelControl74
             // 
             this.labelControl74.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl74.Appearance.Options.UseFont = true;
-            this.labelControl74.Location = new System.Drawing.Point(365, 86);
+            this.labelControl74.Location = new System.Drawing.Point(145, 42);
             this.labelControl74.Name = "labelControl74";
-            this.labelControl74.Size = new System.Drawing.Size(109, 21);
+            this.labelControl74.Size = new System.Drawing.Size(53, 21);
             this.labelControl74.TabIndex = 173;
-            this.labelControl74.Text = "Thời gian trận:";
+            this.labelControl74.Text = "Hiệp 1:";
             // 
             // labelControl73
             // 
@@ -2624,16 +2789,16 @@
             this.labelControl73.TabIndex = 172;
             this.labelControl73.Text = "Thời gian thực:";
             // 
-            // btnBatdautrandau
+            // btnBatdauThoigiantran
             // 
-            this.btnBatdautrandau.Location = new System.Drawing.Point(94, 76);
-            this.btnBatdautrandau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnBatdautrandau.Name = "btnBatdautrandau";
-            this.btnBatdautrandau.Size = new System.Drawing.Size(180, 42);
-            this.btnBatdautrandau.TabIndex = 171;
-            this.btnBatdautrandau.Text = "Bắt đầu trận đấu";
-            this.btnBatdautrandau.ToolTip = "Quản lý danh sách cầu thủ chủ nhà";
-            this.btnBatdautrandau.Click += new System.EventHandler(this.btnBatdautrandau_Click);
+            this.btnBatdauThoigiantran.Location = new System.Drawing.Point(362, 51);
+            this.btnBatdauThoigiantran.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBatdauThoigiantran.Name = "btnBatdauThoigiantran";
+            this.btnBatdauThoigiantran.Size = new System.Drawing.Size(85, 76);
+            this.btnBatdauThoigiantran.TabIndex = 171;
+            this.btnBatdauThoigiantran.Text = "Bắt đầu";
+            this.btnBatdauThoigiantran.ToolTip = "Bắt đầu tính giờ";
+            this.btnBatdauThoigiantran.Click += new System.EventHandler(this.btnBatdautrandau_Click);
             // 
             // xTabPageTennis
             // 
@@ -3342,6 +3507,14 @@
             this.btnSavePlaylist.ToolTip = "Lưu thông tin template";
             this.btnSavePlaylist.Click += new System.EventHandler(this.btnUpdateAll_Click);
             // 
+            // bsGhibanKhach
+            // 
+            this.bsGhibanKhach.DataSource = typeof(HDCGStudio.View.Goal);
+            // 
+            // bsGhibanChu
+            // 
+            this.bsGhibanChu.DataSource = typeof(HDCGStudio.View.Goal);
+            // 
             // xTab
             // 
             this.xTab.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3386,41 +3559,78 @@
             // 
             this.bsUpdateNotifier.DataSource = typeof(HDCGStudio.Object.UpdateNotifier);
             // 
-            // labelControl44
+            // groupControl2
             // 
-            this.labelControl44.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl44.Appearance.Options.UseFont = true;
-            this.labelControl44.Location = new System.Drawing.Point(95, 26);
-            this.labelControl44.Name = "labelControl44";
-            this.labelControl44.Size = new System.Drawing.Size(105, 21);
-            this.labelControl44.TabIndex = 185;
-            this.labelControl44.Text = "Thông số cho:";
+            this.groupControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupControl2.Controls.Add(this.btnSetTime);
+            this.groupControl2.Controls.Add(this.nGiay);
+            this.groupControl2.Controls.Add(this.labelControl54);
+            this.groupControl2.Controls.Add(this.nPhut);
+            this.groupControl2.Controls.Add(this.labelControl46);
+            this.groupControl2.Location = new System.Drawing.Point(58, 310);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(389, 142);
+            this.groupControl2.TabIndex = 190;
+            this.groupControl2.Text = "Thay đổi thời gian chạy";
             // 
-            // txtHiep
+            // nPhut
             // 
-            this.txtHiep.EditValue = "Hiệp 1";
-            this.txtHiep.Location = new System.Drawing.Point(498, 23);
-            this.txtHiep.Name = "txtHiep";
-            this.txtHiep.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtHiep.Properties.Appearance.Options.UseFont = true;
-            this.txtHiep.Size = new System.Drawing.Size(283, 26);
-            this.txtHiep.TabIndex = 186;
+            this.nPhut.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.nPhut.Location = new System.Drawing.Point(78, 50);
+            this.nPhut.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nPhut.Name = "nPhut";
+            this.nPhut.Size = new System.Drawing.Size(146, 25);
+            this.nPhut.TabIndex = 192;
+            this.nPhut.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // rtbGhiBanChu
+            // labelControl46
             // 
-            this.rtbGhiBanChu.Location = new System.Drawing.Point(227, 422);
-            this.rtbGhiBanChu.Name = "rtbGhiBanChu";
-            this.rtbGhiBanChu.Size = new System.Drawing.Size(272, 96);
-            this.rtbGhiBanChu.TabIndex = 187;
-            this.rtbGhiBanChu.Text = "";
+            this.labelControl46.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl46.Appearance.Options.UseFont = true;
+            this.labelControl46.Location = new System.Drawing.Point(20, 51);
+            this.labelControl46.Name = "labelControl46";
+            this.labelControl46.Size = new System.Drawing.Size(38, 19);
+            this.labelControl46.TabIndex = 191;
+            this.labelControl46.Text = "Phút:";
             // 
-            // rtbGhiBanKhach
+            // nGiay
             // 
-            this.rtbGhiBanKhach.Location = new System.Drawing.Point(780, 422);
-            this.rtbGhiBanKhach.Name = "rtbGhiBanKhach";
-            this.rtbGhiBanKhach.Size = new System.Drawing.Size(272, 96);
-            this.rtbGhiBanKhach.TabIndex = 188;
-            this.rtbGhiBanKhach.Text = "";
+            this.nGiay.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.nGiay.Location = new System.Drawing.Point(78, 81);
+            this.nGiay.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.nGiay.Name = "nGiay";
+            this.nGiay.Size = new System.Drawing.Size(146, 25);
+            this.nGiay.TabIndex = 194;
+            this.nGiay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelControl54
+            // 
+            this.labelControl54.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl54.Appearance.Options.UseFont = true;
+            this.labelControl54.Location = new System.Drawing.Point(20, 82);
+            this.labelControl54.Name = "labelControl54";
+            this.labelControl54.Size = new System.Drawing.Size(37, 19);
+            this.labelControl54.TabIndex = 193;
+            this.labelControl54.Text = "Giây:";
+            // 
+            // btnSetTime
+            // 
+            this.btnSetTime.Location = new System.Drawing.Point(279, 59);
+            this.btnSetTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSetTime.Name = "btnSetTime";
+            this.btnSetTime.Size = new System.Drawing.Size(85, 42);
+            this.btnSetTime.TabIndex = 191;
+            this.btnSetTime.Text = "Thay đổi";
+            this.btnSetTime.ToolTip = "Dừng thời gian trận";
+            this.btnSetTime.Click += new System.EventHandler(this.btnSetTime_Click);
             // 
             // MainForm
             // 
@@ -3513,8 +3723,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.xTabTyso.ResumeLayout(false);
             this.xTabTyso.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsGhibanKhach)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsGhibanChu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHiep.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckPhamloi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhamloiKhach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhamloiChu)).EndInit();
@@ -3585,13 +3794,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.cboTemplateType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDurationTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTempLayer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsGhibanKhach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsGhibanChu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xTab)).EndInit();
             this.xTab.ResumeLayout(false);
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHiep.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nPhut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nGiay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3822,13 +4037,12 @@
         private System.Windows.Forms.BindingSource bsGhibanChu;
         private System.Windows.Forms.BindingSource bsGhibanKhach;
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer7;
-        private DevExpress.XtraEditors.SimpleButton btnBatdautrandau;
+        private DevExpress.XtraEditors.SimpleButton btnBatdauThoigiantran;
         private DevExpress.XtraEditors.TextEdit txtThoiTiet;
         private DevExpress.XtraEditors.LabelControl labelControl72;
         private DevExpress.XtraEditors.SimpleButton btnDungthoigiantran;
         private DevExpress.XtraEditors.LabelControl lbThoigianThuc;
-        private DevExpress.XtraEditors.LabelControl lbThoigianTran;
-        private DevExpress.XtraEditors.LabelControl labelControl74;
+        private DevExpress.XtraEditors.LabelControl lbThoigianHiep1;
         private DevExpress.XtraEditors.LabelControl labelControl73;
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.TextEdit txtDonviPV;
@@ -3849,5 +4063,22 @@
         private DevExpress.XtraEditors.TextEdit txtHiep;
         private System.Windows.Forms.RichTextBox rtbGhiBanKhach;
         private System.Windows.Forms.RichTextBox rtbGhiBanChu;
+        private System.Windows.Forms.RadioButton rbHiep2;
+        private System.Windows.Forms.RadioButton rbHiepPhu1;
+        private System.Windows.Forms.RadioButton rbHiepPhu2;
+        private System.Windows.Forms.RadioButton rbHiep1;
+        private DevExpress.XtraEditors.LabelControl lbThoigianHiepPhu2;
+        private DevExpress.XtraEditors.LabelControl labelControl57;
+        private DevExpress.XtraEditors.LabelControl lbThoigianHiepPhu1;
+        private DevExpress.XtraEditors.LabelControl labelControl55;
+        private DevExpress.XtraEditors.LabelControl lbThoigianHiep2;
+        private DevExpress.XtraEditors.LabelControl labelControl47;
+        private DevExpress.XtraEditors.LabelControl labelControl74;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.SimpleButton btnSetTime;
+        private System.Windows.Forms.NumericUpDown nGiay;
+        private DevExpress.XtraEditors.LabelControl labelControl54;
+        private System.Windows.Forms.NumericUpDown nPhut;
+        private DevExpress.XtraEditors.LabelControl labelControl46;
     }
 }

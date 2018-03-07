@@ -338,7 +338,7 @@ namespace HDCGStudio
 
         string cgParameter = "";
         private void OnTemplate(int layer, string templateFileName, int fadeUpDuration = 3, List<Object.Property> DesignProperties = null,
-        List<Object.Property> RuntimeProperties = null)
+        List<Object.Property> RuntimeProperties = null, string xmlStr = "")
         {
             string templateFile = templateFileName;
             if (templateFileName != "PlayVideo")
@@ -383,7 +383,6 @@ namespace HDCGStudio
 
                 try
                 {
-                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
                     if (templateFile == "HDTemplates\\ThongBao_ThongBaoChung.ft")
                     {
                         upOK = cgServer.FadeUp(layer, fadeUpDuration, xmlStr.Replace("\\n", "\n"));
@@ -545,10 +544,11 @@ namespace HDCGStudio
                             bsAwayPlayerDuBi.List.Remove(playerIn);
                         }
                     }
+                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
                     System.Threading.Timer timer = null;
                     timer = new System.Threading.Timer((obj) =>
                         {
-                            OnTemplate(_layer, _tempName, 1, null, runtimeProperties);
+                            OnTemplate(_layer, _tempName, 1, null, runtimeProperties, xmlStr);
                             timer.Dispose();
                         },
                     null, _delay, Timeout.Infinite);
@@ -1076,7 +1076,23 @@ namespace HDCGStudio
                             xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
                         }
                     }
-                    xmlAdd += Add("dongho", lbThoigianTran.Text);
+                    if (rbHiep1.Checked)
+                    {
+                        xmlAdd += Add("dongho", lbThoigianHiep1.Text);
+                    }
+                    else if (rbHiep2.Checked)
+                    {
+                        xmlAdd += Add("dongho", lbThoigianHiep2.Text);
+                    }
+                    else if (rbHiepPhu1.Checked)
+                    {
+                        xmlAdd += Add("dongho", lbThoigianHiepPhu1.Text);
+                    }
+                    else if (rbHiepPhu2.Checked)
+                    {
+                        xmlAdd += Add("dongho", lbThoigianHiepPhu2.Text);
+                    }
+
                     if (_tempName == "BongDa_ThongKeNho.ft")
                     {
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
@@ -1529,31 +1545,25 @@ namespace HDCGStudio
                     _thoigianTranGiay = 0;
                     _thoigianTranPhut++;
                 }
+                var strThoigiantranPhut = _thoigianTranPhut < 10 ? "0" + _thoigianTranPhut : _thoigianTranPhut.ToString();
+                var strThoigiantranGiay = _thoigianTranGiay < 10 ? "0" + _thoigianTranGiay : _thoigianTranGiay.ToString();
+                if (rbHiep1.Checked)
+                {
+                    lbThoigianHiep1.Text = strThoigiantranPhut + ":" + strThoigiantranGiay;
+                }
+                else if (rbHiep2.Checked)
+                {
+                    lbThoigianHiep2.Text = strThoigiantranPhut + ":" + strThoigiantranGiay;
+                }
+                else if (rbHiepPhu1.Checked)
+                {
+                    lbThoigianHiepPhu1.Text = strThoigiantranPhut + ":" + strThoigiantranGiay;
+                }
+                else if (rbHiepPhu2.Checked)
+                {
+                    lbThoigianHiepPhu2.Text = strThoigiantranPhut + ":" + strThoigiantranGiay;
+                }
             }
-            if ((_thoigianTranPhut == 45 || _thoigianTranPhut == 90 || _thoigianTranPhut == 105 || _thoigianTranPhut == 120) && _thoigianTranGiay == 0)
-            {
-                _thoigianTranGiay = 0;
-                _isEndPoint = true;
-            }
-            if (_thoigianTranPhut < 45 || (_thoigianTranPhut == 45 && _thoigianTranGiay == 0))
-            {
-                txtHiep.Text = "1";
-            }
-            else
-                if (_thoigianTranPhut >= 45 && _thoigianTranPhut < 90 || (_thoigianTranPhut == 90 && _thoigianTranGiay == 0))
-            {
-                txtHiep.Text = "2";
-            }
-            else if (_thoigianTranPhut >= 90 && _thoigianTranPhut < 105 || (_thoigianTranPhut == 105 && _thoigianTranGiay == 0))
-            {
-                txtHiep.Text = "phụ 1";
-            }
-            else
-                txtHiep.Text = "phụ 2";
-            var strThoigiantranPhut = _thoigianTranPhut < 10 ? "0" + _thoigianTranPhut : _thoigianTranPhut.ToString();
-            var strThoigiantranGiay = _thoigianTranGiay < 10 ? "0" + _thoigianTranGiay : _thoigianTranGiay.ToString();
-            lbThoigianTran.Text = strThoigiantranPhut + ":" + strThoigiantranGiay;
-
             _thoigianThucGiay++;
             if (_thoigianThucGiay == 60)
             {
@@ -1567,20 +1577,29 @@ namespace HDCGStudio
 
         private void btnBatdautrandau_Click(object sender, EventArgs e)
         {
+            _isEndPoint = false;
+            if (rbHiep1.Checked)
+            {
+                _thoigianTranPhut = 0;
+            }
+            else if (rbHiep2.Checked)
+            {
+                _thoigianTranPhut = 45;
+            }
+            else if (rbHiepPhu1.Checked)
+            {
+                _thoigianTranPhut = 90;
+            }
+            else if (rbHiepPhu2.Checked)
+            {
+                _thoigianTranPhut = 105;
+            }
+            _thoigianTranGiay = 0;
             timer1.Enabled = true;
         }
         private void btnDungthoigiantran_Click(object sender, EventArgs e)
         {
-            if (_isEndPoint == true)
-            {
-                _isEndPoint = false;
-                btnDungthoigiantran.Text = "Dừng";
-            }
-            else
-            {
-                _isEndPoint = true;
-                btnDungthoigiantran.Text = "Tiếp tục";
-            }
+            _isEndPoint = true;
         }
         #endregion
 
@@ -1636,6 +1655,12 @@ namespace HDCGStudio
                 IsUpdateDanhsachgiaidau = false
             });
             (bsUpdateNotifier.List as BindingList<Object.UpdateNotifier>).Select(v => v).ToList().SaveObject(_updateNotifier);
+        }
+
+        private void btnSetTime_Click(object sender, EventArgs e)
+        {
+            _thoigianTranPhut = (int)nPhut.Value;
+            _thoigianTranGiay = (int)nGiay.Value;
         }
     }
 }
