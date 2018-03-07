@@ -233,6 +233,8 @@
             this.txtTrongtaiChinh = new DevExpress.XtraEditors.TextEdit();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             this.xTabThoigian = new DevExpress.XtraTab.XtraTabPage();
+            this.nBugio = new System.Windows.Forms.NumericUpDown();
+            this.labelControl53 = new DevExpress.XtraEditors.LabelControl();
             this.btnDungthoigiantran = new DevExpress.XtraEditors.SimpleButton();
             this.lbThoigianThuc = new DevExpress.XtraEditors.LabelControl();
             this.lbThoigianTran = new DevExpress.XtraEditors.LabelControl();
@@ -298,8 +300,8 @@
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.bsUpdateData = new System.Windows.Forms.BindingSource(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.nBugio = new System.Windows.Forms.NumericUpDown();
-            this.labelControl53 = new DevExpress.XtraEditors.LabelControl();
+            this.tUpdateData = new System.Windows.Forms.Timer(this.components);
+            this.bsUpdateNotifier = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -426,6 +428,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTroly1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTrongtaiChinh.Properties)).BeginInit();
             this.xTabThoigian.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nBugio)).BeginInit();
             this.xTabPageTennis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer3.Properties)).BeginInit();
@@ -458,7 +461,7 @@
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBugio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -2889,6 +2892,30 @@
             this.xTabThoigian.Size = new System.Drawing.Size(1169, 615);
             this.xTabThoigian.Text = "Thời gian";
             // 
+            // nBugio
+            // 
+            this.nBugio.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.nBugio.Location = new System.Drawing.Point(836, 107);
+            this.nBugio.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nBugio.Name = "nBugio";
+            this.nBugio.Size = new System.Drawing.Size(146, 25);
+            this.nBugio.TabIndex = 179;
+            this.nBugio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelControl53
+            // 
+            this.labelControl53.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl53.Appearance.Options.UseFont = true;
+            this.labelControl53.Location = new System.Drawing.Point(778, 108);
+            this.labelControl53.Name = "labelControl53";
+            this.labelControl53.Size = new System.Drawing.Size(52, 21);
+            this.labelControl53.TabIndex = 178;
+            this.labelControl53.Text = "Bù giờ:";
+            // 
             // btnDungthoigiantran
             // 
             this.btnDungthoigiantran.Location = new System.Drawing.Point(362, 98);
@@ -3697,29 +3724,14 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // nBugio
+            // tUpdateData
             // 
-            this.nBugio.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.nBugio.Location = new System.Drawing.Point(836, 107);
-            this.nBugio.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nBugio.Name = "nBugio";
-            this.nBugio.Size = new System.Drawing.Size(146, 25);
-            this.nBugio.TabIndex = 179;
-            this.nBugio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tUpdateData.Interval = 1000;
+            this.tUpdateData.Tick += new System.EventHandler(this.tUpdateData_Tick);
             // 
-            // labelControl53
+            // bsUpdateNotifier
             // 
-            this.labelControl53.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl53.Appearance.Options.UseFont = true;
-            this.labelControl53.Location = new System.Drawing.Point(778, 108);
-            this.labelControl53.Name = "labelControl53";
-            this.labelControl53.Size = new System.Drawing.Size(52, 21);
-            this.labelControl53.TabIndex = 178;
-            this.labelControl53.Text = "Bù giờ:";
+            this.bsUpdateNotifier.DataSource = typeof(HDCGStudio.Object.UpdateNotifier);
             // 
             // MainForm
             // 
@@ -3872,6 +3884,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTrongtaiChinh.Properties)).EndInit();
             this.xTabThoigian.ResumeLayout(false);
             this.xTabThoigian.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nBugio)).EndInit();
             this.xTabPageTennis.ResumeLayout(false);
             this.xTabPageTennis.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).EndInit();
@@ -3905,7 +3918,7 @@
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBugio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4183,5 +4196,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl51;
         private System.Windows.Forms.NumericUpDown nBugio;
         private DevExpress.XtraEditors.LabelControl labelControl53;
+        private System.Windows.Forms.Timer tUpdateData;
+        private System.Windows.Forms.BindingSource bsUpdateNotifier;
     }
 }

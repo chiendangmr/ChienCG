@@ -114,6 +114,7 @@
     <Compile Include="Object\Goal.cs" />
     <Compile Include="Object\League.cs" />
     <Compile Include="Object\Team.cs" />
+    <Compile Include="Object\UpdateNotifier.cs" />
     <Compile Include="PreviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +139,7 @@
     <Compile Include="View\Team.cs" />
     <Compile Include="View\Player.cs" />
     <Compile Include="View\Template.cs" />
+    <Compile Include="View\UpdateNotifier.cs" />
     <Compile Include="View\tempUpdating.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -186,6 +188,7 @@
     <None Include="Properties\DataSources\HDCG.View.Crawler.datasource" />
     <None Include="Properties\DataSources\HDCG.View.Video.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.Object.tempUpdating.datasource" />
+    <None Include="Properties\DataSources\HDCGStudio.Object.UpdateNotifier.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.View.Goal.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.View.League.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.View.Player.datasource" />

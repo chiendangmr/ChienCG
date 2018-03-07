@@ -47,7 +47,7 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtSanNha = new DevExpress.XtraEditors.TextEdit();
             this.btnChooseLogo = new DevExpress.XtraEditors.SimpleButton();
-            this.cboLeagues = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cboLeague = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtLogoPath = new DevExpress.XtraEditors.TextEdit();
@@ -59,6 +59,7 @@
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.btnRemove = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.bsUpdateNotifier = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeams)).BeginInit();
@@ -66,11 +67,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvTeams)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSanNha.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboLeagues.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboLeague.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLogoPath.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCoach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -87,7 +89,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.labelControl6);
             this.splitContainerControl1.Panel2.Controls.Add(this.txtSanNha);
             this.splitContainerControl1.Panel2.Controls.Add(this.btnChooseLogo);
-            this.splitContainerControl1.Panel2.Controls.Add(this.cboLeagues);
+            this.splitContainerControl1.Panel2.Controls.Add(this.cboLeague);
             this.splitContainerControl1.Panel2.Controls.Add(this.labelControl5);
             this.splitContainerControl1.Panel2.Controls.Add(this.labelControl4);
             this.splitContainerControl1.Panel2.Controls.Add(this.txtLogoPath);
@@ -208,7 +210,7 @@
             this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn1.Caption = "Giải đấu";
-            this.gridColumn1.FieldName = "tObj.League";
+            this.gridColumn1.FieldName = "tObj.LeagueCode";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
@@ -305,16 +307,16 @@
             this.btnChooseLogo.Text = "...";
             this.btnChooseLogo.Click += new System.EventHandler(this.btnChooseLogo_Click);
             // 
-            // cboLeagues
+            // cboLeague
             // 
-            this.cboLeagues.Location = new System.Drawing.Point(224, 12);
-            this.cboLeagues.Name = "cboLeagues";
-            this.cboLeagues.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.cboLeagues.Properties.Appearance.Options.UseFont = true;
-            this.cboLeagues.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cboLeague.Location = new System.Drawing.Point(224, 12);
+            this.cboLeague.Name = "cboLeague";
+            this.cboLeague.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.cboLeague.Properties.Appearance.Options.UseFont = true;
+            this.cboLeague.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboLeagues.Size = new System.Drawing.Size(617, 26);
-            this.cboLeagues.TabIndex = 12;
+            this.cboLeague.Size = new System.Drawing.Size(617, 26);
+            this.cboLeague.TabIndex = 12;
             // 
             // labelControl5
             // 
@@ -424,6 +426,10 @@
             this.btnAdd.ToolTip = "Thêm đội";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // bsUpdateNotifier
+            // 
+            this.bsUpdateNotifier.DataSource = typeof(HDCGStudio.Object.UpdateNotifier);
+            // 
             // FormManageTeam
             // 
             this.AcceptButton = this.btnAdd;
@@ -446,11 +452,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvTeams)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSanNha.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboLeagues.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboLeague.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLogoPath.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCoach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -476,7 +483,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtCoach;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.ComboBoxEdit cboLeagues;
+        private DevExpress.XtraEditors.ComboBoxEdit cboLeague;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.SimpleButton btnChooseLogo;
         private DevExpress.XtraEditors.LabelControl labelControl6;
@@ -486,5 +493,6 @@
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private System.Windows.Forms.NumericUpDown nPosition;
         private DevExpress.XtraEditors.LabelControl labelControl7;
+        private System.Windows.Forms.BindingSource bsUpdateNotifier;
     }
 }

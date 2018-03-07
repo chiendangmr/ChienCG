@@ -15,12 +15,14 @@ using DevExpress.XtraGrid.Views.Grid;
 namespace HDCGStudio
 {
     public partial class FormManageLeague : Form
-    {        
+    {
         public FormManageLeague()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
         string DanhsachgiaidauXmlPath = "";
+        string _danhsachdoibongXml = "";
+        string _updateNotifier = "";
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
             DanhsachgiaidauXmlPath = Path.Combine(Application.StartupPath, "Danhsachgiaidau.xml");
@@ -44,6 +46,7 @@ namespace HDCGStudio
             {
                 //HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            _updateNotifier = Path.Combine(Application.StartupPath, "UpdateNotifier.xml");
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -67,6 +70,7 @@ namespace HDCGStudio
 
                     (bsManageLeague.List as BindingList<View.League>).Select(v => v.lObj).ToList().SaveObject(DanhsachgiaidauXmlPath);
                 }
+                UpdateNotifier();
             }
             catch (Exception ex)
             {
@@ -89,6 +93,7 @@ namespace HDCGStudio
 
                         (bsManageLeague.List as BindingList<View.League>).Select(v => v.lObj).ToList().SaveObject(DanhsachgiaidauXmlPath);
                     }
+                    UpdateNotifier();
                 }
             }
             catch (Exception ex)
@@ -99,7 +104,7 @@ namespace HDCGStudio
 
         private void ManageTemplateForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            HDMessageBox.Show("Bạn phải khởi động lại phần mềm để lấy được các giải đấu mới!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            UpdateNotifier();
         }
 
         private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
@@ -155,6 +160,7 @@ namespace HDCGStudio
                         (bsManageLeague.List as BindingList<View.League>).OrderBy(a => a.lObj.LeagueCode).Select(v => v.lObj).ToList().SaveObject(DanhsachgiaidauXmlPath);
                         gvLeagues.RefreshData();
                         HDMessageBox.Show("Lưu thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        UpdateNotifier();
                     }
                 }
             }
@@ -170,6 +176,17 @@ namespace HDCGStudio
             txtName.Text = temp.lObj.Name;
             txtMaGiai.Text = temp.lObj.LeagueCode;
             txtLogoPath.Text = temp.lObj.LogoPath;
+        }
+        private void UpdateNotifier()
+        {
+            bsUpdateNotifier.List.Clear();
+            bsUpdateNotifier.List.Add(new Object.UpdateNotifier
+            {
+                IsUpdateDanhsachcauthu = false,
+                IsUpdateDanhsachdoibong = false,
+                IsUpdateDanhsachgiaidau = true
+            });
+            (bsUpdateNotifier.List as BindingList<Object.UpdateNotifier>).Select(v => v).ToList().SaveObject(_updateNotifier);
         }
     }
 }

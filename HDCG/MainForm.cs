@@ -40,6 +40,7 @@ namespace HDCGStudio
         string _updateDataXml = "";
         string _TemplateHost = "";
         string _danhsachgiaidauXmlPath = "";
+        string _updateNotifier = "";
         List<Object.League> _lstLeagues = new List<Object.League>();
         List<Object.Team> _lstTeams = new List<Object.Team>();
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
@@ -92,7 +93,21 @@ namespace HDCGStudio
                     }
                 }
                 catch { }
-
+                _updateNotifier = Path.Combine(Application.StartupPath, "UpdateNotifier.xml");
+                try
+                {
+                    if (File.Exists(_updateNotifier))
+                    {
+                        var lstData = Utils.GetObject<List<Object.UpdateNotifier>>(_updateNotifier);
+                        foreach (var data in lstData)
+                            bsUpdateNotifier.Add(data);
+                    }
+                    else
+                    {
+                        File.Create(_updateNotifier).Dispose();
+                    }
+                }
+                catch { }
                 //Load danh sách giải đấu
                 _danhsachgiaidauXmlPath = Path.Combine(Application.StartupPath, "Danhsachgiaidau.xml");
                 try
@@ -111,14 +126,15 @@ namespace HDCGStudio
                         File.Create(_danhsachgiaidauXmlPath).Dispose();
                     }
                 }
-                catch //(Exception ex)
+                catch 
                 {
-                    //HDMessageBox.Show("Chưa có giải đấu nào trong CSDL!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   
                 }
 
                 cgServer = new HDCGControler.CasparCG();
                 cgServer.Connect(AppSetting.Default.CGServerIP, AppSetting.Default.CGServerPort);
                 cboGiaiDau.SelectedIndex = 0;
+                tUpdateData.Enabled = true;
                 this.WindowState = FormWindowState.Maximized;
                 LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
             }
@@ -1666,5 +1682,58 @@ namespace HDCGStudio
         }
         #endregion
 
+        private void tUpdateData_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                if (File.Exists(_updateNotifier))
+                {
+                    var lstData = Utils.GetObject<List<Object.UpdateNotifier>>(_updateNotifier);
+                    if (lstData[0].IsUpdateDanhsachgiaidau)
+                    {
+                        _lstLeagues = Utils.GetObject<List<Object.League>>(_danhsachgiaidauXmlPath);
+                        cboGiaiDau.Properties.Items.Clear();
+                        dicDanhsachgiaidau.Clear();
+                        foreach (var temp in _lstLeagues)
+                        {
+                            cboGiaiDau.Properties.Items.Add(temp.Name);
+                            dicDanhsachgiaidau.Add(temp.LeagueCode, temp.Name);
+                        }
+                        UpdateNotifier();
+                        cboGiaiDau.SelectedIndex = 0;
+                    }
+                    if (lstData[0].IsUpdateDanhsachdoibong)
+                    {
+                        var tempIndex = cboGiaiDau.SelectedIndex;
+                        cboGiaiDau.SelectedIndex = -1;                                              
+                        UpdateNotifier();
+                        cboGiaiDau.SelectedIndex = 0;
+                    }
+                    if (lstData[0].IsUpdateDanhsachcauthu)
+                    {
+                        var tempIndex = cboGiaiDau.SelectedIndex;
+                        cboGiaiDau.SelectedIndex = -1;
+                        UpdateNotifier();
+                        cboGiaiDau.SelectedIndex = 0;
+                    }
+                }
+                else
+                {
+                    File.Create(_updateNotifier).Dispose();
+                }
+            }
+            catch { }            
+        }
+        private void UpdateNotifier()
+        {
+            bsUpdateNotifier.List.Clear();
+            bsUpdateNotifier.List.Add(new Object.UpdateNotifier
+            {
+                IsUpdateDanhsachcauthu = false,
+                IsUpdateDanhsachdoibong = false,
+                IsUpdateDanhsachgiaidau = false
+            });
+            (bsUpdateNotifier.List as BindingList<Object.UpdateNotifier>).Select(v => v).ToList().SaveObject(_updateNotifier);
+        }
     }
 }
