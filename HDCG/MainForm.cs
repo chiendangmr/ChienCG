@@ -239,10 +239,17 @@ namespace HDCGStudio
             }
         }
 
-
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                if (HDMessageBox.Show("Bạn có chắc chắn thoát?", "Chú ý", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    e.Cancel = false;
+                }
+                else
+                    e.Cancel = true;
+            }
         }
 
         private void gvVideo_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -296,11 +303,8 @@ namespace HDCGStudio
         }
         public string UpdateTemplate(PreviewForm frmInput, string templateFileName, int fadeUpDuration = 0)
         {
-            string templateFile = "HDTemplates\\" + templateFileName;
-            var lstData = Utils.GetObject<List<Object.tempUpdating>>(_updateDataXml);
-            dicTemplateData.Clear();
-            foreach (var data in lstData)
-                dicTemplateData.Add(data.Name, data.Data);
+            string templateFile = "HDTemplates\\" + templateFileName;            
+            
             try
             {
                 int nTry = 0;
@@ -309,8 +313,9 @@ namespace HDCGStudio
 
                 if (frmInput.player.Add(1, templateFile))
                 {
-                    if (dicTemplateData.ContainsKey("HDTemplates\\" + templateFileName))
-                        frmInput.player.Update(1, dicTemplateData["HDTemplates\\" + templateFileName].Replace("\\n", "\n"));
+                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    
+                    frmInput.player.Update(1, xmlStr.Replace("\\n", "\n"));
                     frmInput.player.Refresh();
                     frmInput.player.InvokeMethod(1, "fadeUp");
 
@@ -389,24 +394,26 @@ namespace HDCGStudio
                     }
                     else
                         upOK = cgServer.FadeUp(layer, fadeUpDuration, xmlStr.Replace("\\", "\\\\"));
-                    playClicked = false;
                 }
                 catch (Exception ex)
                 {
                     HDMessageBox.Show("Không thể lấy thông tin update! - " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-
-                System.Threading.Timer timer = null;
-                if (tempInfoView.tempObj.Duration > 0)
+                if (!isTySoGoc)
                 {
-                    timer = new System.Threading.Timer((obj) =>
-                    {
-                        OffTemplate(tempInfoView.tempObj.Layer);
-                        timer.Dispose();
-                    },
-                null, tempInfoView.tempObj.Delay + tempInfoView.tempObj.Duration, Timeout.Infinite);
+                    var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
 
+                    System.Threading.Timer timer = null;
+                    if (tempInfoView.tempObj.Duration > 0)
+                    {
+                        timer = new System.Threading.Timer((obj) =>
+                        {
+                            OffTemplate(tempInfoView.tempObj.Layer);
+                            timer.Dispose();
+                        },
+                    null, tempInfoView.tempObj.Delay + tempInfoView.tempObj.Duration, Timeout.Infinite);
+                    }
+                    isTySoGoc = false;
                 }
             }
         }
@@ -507,7 +514,7 @@ namespace HDCGStudio
             else
                 OffTemplate(int.Parse(cboVideoLayer.Text));
         }
-        bool playClicked = false;
+
         private void btnPlay_Click(object sender, EventArgs e)
         {
             try
@@ -516,13 +523,13 @@ namespace HDCGStudio
                     HDMessageBox.Show("Not connect to cg server!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
-                    playClicked = true;
                     List<Object.Property> runtimeProperties = new List<Object.Property>();
                     runtimeProperties.Add(new Object.Property()
                     {
                         Name = "Loops",
                         Value = "false"
                     });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
                     if (_tempName == "BongDa_ThayNguoi.ft")
                     {
                         if (ckChu.Checked)
@@ -544,7 +551,7 @@ namespace HDCGStudio
                             bsAwayPlayerDuBi.List.Remove(playerIn);
                         }
                     }
-                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+
                     System.Threading.Timer timer = null;
                     timer = new System.Threading.Timer((obj) =>
                         {
@@ -644,10 +651,21 @@ namespace HDCGStudio
             {
                 if (File.Exists(_templateXmlPath))
                 {
+                    tempInfoBindingSource.List.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Template>>(_templateXmlPath).OrderBy(a => a.Name);
                     foreach (var temp in lstTemplate)
                     {
                         dicTemplates.Add(temp.Name, temp.FileName);
+                        tempInfoBindingSource.List.Add(new View.tempInfo()
+                        {
+                            tempObj = new Object.tempInfo
+                            {
+                                TemplateName = temp.Name,
+                                Layer = 105,
+                                Duration = 0,
+                                Delay = 0
+                            }
+                        });
                     }
                 }
                 else
@@ -659,27 +677,27 @@ namespace HDCGStudio
             {
                 HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            tempInfoBindingSource.List.Clear();
-            try
-            {
-                if (File.Exists(_tempInfoXmlPath))
-                {
-                    var lstBarMC = Utils.GetObject<List<Object.tempInfo>>(_tempInfoXmlPath);
-                    foreach (var barMC in lstBarMC)
-                        tempInfoBindingSource.List.Add(new View.tempInfo()
-                        {
-                            tempObj = barMC
-                        });
-                }
-                else
-                {
-                    File.Create(_tempInfoXmlPath).Dispose();
-                }
-            }
-            catch (Exception ex)
-            {
-                HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+
+            //try
+            //{
+            //    if (File.Exists(_tempInfoXmlPath))
+            //    {
+            //        var lstBarMC = Utils.GetObject<List<Object.tempInfo>>(_tempInfoXmlPath);
+            //        foreach (var barMC in lstBarMC)
+            //            tempInfoBindingSource.List.Add(new View.tempInfo()
+            //            {
+            //                tempObj = barMC
+            //            });
+            //    }
+            //    else
+            //    {
+            //        File.Create(_tempInfoXmlPath).Dispose();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    HDMessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
@@ -913,6 +931,8 @@ namespace HDCGStudio
                 string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
                 player.Update(1, xmlStr.Replace("\\n", "\n"));
                 player.Refresh();
+                cgServer.UpdateTemplate(120, xmlStr, 0);
+
                 cgServer.UpdateTemplate(_layer, xmlStr, 0);
                 _forUpdate = false;
             }
@@ -1050,7 +1070,7 @@ namespace HDCGStudio
                     xmlAdd += Add("troly2", txtTroly2.Text);
                     xmlAdd += Add("trongtaiban", txtTrongtaiban.Text);
 
-                    xmlAdd += Add("blv", txtBLV.Text);
+                    xmlAdd += Add("giaidauVongdau", cboGiaiDau.Text + " - VÒNG " + nVongDau.Text);
                     xmlAdd += Add("stadium", txtStadium.Text);
                     xmlAdd += Add("txtThoitiet", txtThoiTiet.Text);
                     xmlAdd += Add("nhietdo", txtNhietdo.Text);
@@ -1061,20 +1081,11 @@ namespace HDCGStudio
                     xmlAdd += Add("bugio", nBugio.Value.ToString());
                     if (_tempName == "BongDa_ThayNguoi.ft")
                     {
-                        if (playClicked)
-                        {
-                            xmlAdd += Add("playerin", GetPlayerOut().mObj.Name);
-                            xmlAdd += Add("playerout", GetPlayerIn().mObj.Name);
-                            xmlAdd += Add("playerInNumber", GetPlayerOut().mObj.Number.ToString());
-                            xmlAdd += Add("playerOutNumber", GetPlayerIn().mObj.Number.ToString());
-                        }
-                        else
-                        {
-                            xmlAdd += Add("playerin", GetPlayerIn().mObj.Name);
-                            xmlAdd += Add("playerout", GetPlayerOut().mObj.Name);
-                            xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
-                            xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
-                        }
+                        xmlAdd += Add("playerin", GetPlayerIn().mObj.Name);
+                        xmlAdd += Add("playerout", GetPlayerOut().mObj.Name);
+                        xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
+                        xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
+
                     }
                     if (rbHiep1.Checked)
                     {
@@ -1098,7 +1109,7 @@ namespace HDCGStudio
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
                     }
-                    else if (_tempName == "BongDa_ThongKeCuoi.ft" || _tempName == "BongDa_TySoChinh.ft")
+                    else if (_tempName == "BongDa_ThongKeCuoi.ft" || _tempName == "BongDa_TySoChinh.ft" || _tempName == "BongDa_BangCho.ft")
                     {
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
@@ -1233,8 +1244,8 @@ namespace HDCGStudio
                         else if (ckKiemsoatbong.Checked)
                         {
                             xmlAdd += Add("thongsonho", "Kiếm soát bóng");
-                            xmlAdd += Add("thongsonhoChu", nKiemsoatbongChu.Text + "%");
-                            xmlAdd += Add("thongsonhoKhach", nKiemsoatbongKhach.Text + "%");
+                            xmlAdd += Add("thongsonhoChu", nKiemsoatbongChu.Text);
+                            xmlAdd += Add("thongsonhoKhach", nKiemsoatbongKhach.Text);
                         }
                     }
 
@@ -1661,6 +1672,131 @@ namespace HDCGStudio
         {
             _thoigianTranPhut = (int)nPhut.Value;
             _thoigianTranGiay = (int)nGiay.Value;
+        }
+        bool isTySoGoc = false;
+        private void btnOnTySoGoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!cgServer.Connect())
+                    HDMessageBox.Show("Not connect to cg server!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    if (cboGiaiDau.Text.Length > 0 && cboDoiChuNha.Text.Length > 0 && cboDoiKhach.Text.Length > 0)
+                    {
+                        isTySoGoc = true;
+                        List<Object.Property> runtimeProperties = new List<Object.Property>();
+                        runtimeProperties.Add(new Object.Property()
+                        {
+                            Name = "Loops",
+                            Value = "false"
+                        });
+                        string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                        var tempTySoGocName = "";
+                        var tempBuGioGocName = "";
+                        if (cboTysogocType.Text == "Trái")
+                        {
+                            tempTySoGocName = "BongDa_TySoGocTrai.ft";
+                            tempBuGioGocName = "BongDa_BuGioGocTrai.ft";
+                        }
+                        else
+                        {
+                            tempTySoGocName = "BongDa_TySoGocPhai.ft";
+                            tempBuGioGocName = "BongDa_BuGioGocPhai.ft";
+                        }
+                        if (ckTysogocVaBugioOn.Checked)
+                        {
+                            OnTemplate(120, tempTySoGocName, 1, null, runtimeProperties, xmlStr);
+                            OnTemplate(121, tempBuGioGocName, 1, null, runtimeProperties, xmlStr);
+                        }
+                        else
+                        {
+                            OnTemplate(120, tempTySoGocName, 1, null, runtimeProperties, xmlStr);
+                        }
+                    }
+
+                    else
+                        HDMessageBox.Show("Bạn chưa chọn thông tin Giải đấu, Đội chủ/khách!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+                HDMessageBox.Show("Please add a Template!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnOffTySoGoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ckTysogocVaBugioOff.Checked)
+                {
+                    OffTemplate(120);
+                    OffTemplate(121);
+                }
+                else
+                {
+                    OffTemplate(120);
+                }
+            }
+            catch
+            {
+                HDMessageBox.Show("404 - Template not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnOnBugio_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!cgServer.Connect())
+                    HDMessageBox.Show("Not connect to cg server!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    if (cboGiaiDau.Text.Length > 0 && cboDoiChuNha.Text.Length > 0 && cboDoiKhach.Text.Length > 0)
+                    {
+                        isTySoGoc = true;
+                        List<Object.Property> runtimeProperties = new List<Object.Property>();
+                        runtimeProperties.Add(new Object.Property()
+                        {
+                            Name = "Loops",
+                            Value = "false"
+                        });
+                        string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                        var tempBuGioGocName = "";
+                        if (cboTysogocType.Text == "Trái")
+                        {
+                            tempBuGioGocName = "BongDa_BuGioGocTrai.ft";
+                        }
+                        else
+                        {
+                            tempBuGioGocName = "BongDa_BuGioGocPhai.ft";
+                        }
+                        OnTemplate(121, tempBuGioGocName, 1, null, runtimeProperties, xmlStr);
+
+                    }
+
+                    else
+                        HDMessageBox.Show("Bạn chưa chọn thông tin Giải đấu, Đội chủ/khách!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+                HDMessageBox.Show("Please add a Template!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnOffBugio_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OffTemplate(121);
+
+            }
+            catch
+            {
+                HDMessageBox.Show("404 - Template not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
