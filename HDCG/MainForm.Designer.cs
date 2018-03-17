@@ -313,6 +313,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tUpdateData = new System.Windows.Forms.Timer(this.components);
             this.bsUpdateNotifier = new System.Windows.Forms.BindingSource(this.components);
+            this.labelControl63 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDoam = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl64 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -469,6 +472,7 @@
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoam.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -695,7 +699,7 @@
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(1775, 940);
+            this.groupControl1.Size = new System.Drawing.Size(1895, 940);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Videos, Images";
             // 
@@ -720,7 +724,7 @@
             this.panelControl11.Location = new System.Drawing.Point(518, 6);
             this.panelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl11.Name = "panelControl11";
-            this.panelControl11.Size = new System.Drawing.Size(1243, 927);
+            this.panelControl11.Size = new System.Drawing.Size(1363, 927);
             this.panelControl11.TabIndex = 46;
             // 
             // grdVideo
@@ -735,7 +739,7 @@
             this.grdVideo.Name = "grdVideo";
             this.grdVideo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.grdVideo.Size = new System.Drawing.Size(1239, 923);
+            this.grdVideo.Size = new System.Drawing.Size(1359, 923);
             this.grdVideo.TabIndex = 18;
             this.grdVideo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVideo});
@@ -2360,6 +2364,9 @@
             // 
             // xTabTrongtai
             // 
+            this.xTabTrongtai.Controls.Add(this.labelControl63);
+            this.xTabTrongtai.Controls.Add(this.txtDoam);
+            this.xTabTrongtai.Controls.Add(this.labelControl64);
             this.xTabTrongtai.Controls.Add(this.labelControl52);
             this.xTabTrongtai.Controls.Add(this.labelControl51);
             this.xTabTrongtai.Controls.Add(this.txtNhietdo);
@@ -2386,7 +2393,7 @@
             this.xTabTrongtai.Controls.Add(this.labelControl32);
             this.xTabTrongtai.Name = "xTabTrongtai";
             this.xTabTrongtai.Size = new System.Drawing.Size(1169, 695);
-            this.xTabTrongtai.Text = "Trọng tài/BLV/Địa điểm";
+            this.xTabTrongtai.Text = "Trọng tài/BLV/Địa điểm/Thời tiết";
             // 
             // labelControl52
             // 
@@ -3838,7 +3845,7 @@
             // 
             this.xTabVideo.Controls.Add(this.groupControl1);
             this.xTabVideo.Name = "xTabVideo";
-            this.xTabVideo.Size = new System.Drawing.Size(1775, 940);
+            this.xTabVideo.Size = new System.Drawing.Size(1895, 940);
             this.xTabVideo.Text = "Videos/Images";
             // 
             // bsUpdateData
@@ -3858,6 +3865,36 @@
             // bsUpdateNotifier
             // 
             this.bsUpdateNotifier.DataSource = typeof(HDCGStudio.Object.UpdateNotifier);
+            // 
+            // labelControl63
+            // 
+            this.labelControl63.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl63.Appearance.Options.UseFont = true;
+            this.labelControl63.Location = new System.Drawing.Point(395, 373);
+            this.labelControl63.Name = "labelControl63";
+            this.labelControl63.Size = new System.Drawing.Size(28, 19);
+            this.labelControl63.TabIndex = 176;
+            this.labelControl63.Text = "(%)";
+            // 
+            // txtDoam
+            // 
+            this.txtDoam.Location = new System.Drawing.Point(176, 373);
+            this.txtDoam.MenuManager = this.barManager1;
+            this.txtDoam.Name = "txtDoam";
+            this.txtDoam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtDoam.Properties.Appearance.Options.UseFont = true;
+            this.txtDoam.Size = new System.Drawing.Size(202, 24);
+            this.txtDoam.TabIndex = 175;
+            // 
+            // labelControl64
+            // 
+            this.labelControl64.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl64.Appearance.Options.UseFont = true;
+            this.labelControl64.Location = new System.Drawing.Point(103, 373);
+            this.labelControl64.Name = "labelControl64";
+            this.labelControl64.Size = new System.Drawing.Size(55, 21);
+            this.labelControl64.TabIndex = 174;
+            this.labelControl64.Text = "Độ ẩm:";
             // 
             // MainForm
             // 
@@ -4041,6 +4078,7 @@
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoam.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4331,5 +4369,8 @@
         private DevExpress.XtraEditors.SimpleButton btnSaveVideoInfo;
         private DevExpress.XtraEditors.SimpleButton btnOffBugio;
         private DevExpress.XtraEditors.SimpleButton btnOnBugio;
+        private DevExpress.XtraEditors.LabelControl labelControl63;
+        private DevExpress.XtraEditors.TextEdit txtDoam;
+        private DevExpress.XtraEditors.LabelControl labelControl64;
     }
 }
