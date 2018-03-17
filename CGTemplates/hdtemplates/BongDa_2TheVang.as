@@ -104,7 +104,7 @@
 		private function onOpenImageCompleted(e:Event)
 		{
 			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;
-			bmp.width=53;
+			bmp.width=51;
 			bmp.height=43;
 			this.icon1.addChild(bmp);
 		}

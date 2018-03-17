@@ -17,8 +17,7 @@
 	import flash.filters.*;
 	import flash.external.ExternalInterface;
 	import flash.utils.Timer;
-	import flash.events.TimerEvent;
-	import fl.containers.UILoader;
+	import flash.events.TimerEvent;	
 	import flash.net.URLRequest;
 	import flash.sampler.Sample;
 	import flash.globalization.NumberFormatter;
