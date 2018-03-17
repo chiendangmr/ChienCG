@@ -18,7 +18,9 @@
 	import flash.external.ExternalInterface;
 	import flash.utils.Timer;
 	import flash.events.TimerEvent;
-	import fl.containers.UILoader;
+	import flash.display.Loader;
+	import flash.events.IOErrorEvent;
+	import flash.display.DisplayObject;
 	import flash.net.URLRequest;
 	import flash.sampler.Sample;
 	import flash.globalization.NumberFormatter;
@@ -30,14 +32,14 @@
 		
 		public var player1:TextField = new TextField();
 		public var playerNumber1:TextField = new TextField();
-		public var doibong:TextField = new TextField();
+		public var icon1:MovieClip;
 		
 		public function BongDa_2TheVang() {
 			// constructor code
 			super();							
 			this.txtGroup.addChild(player1);	
 			this.txtGroup.addChild(playerNumber1);
-			this.txtGroup.addChild(doibong);
+			this.txtGroup.addChild(icon1);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -53,8 +55,7 @@
 			var xmlStr:String = "<Track_Property>";
 			xmlStr +=Add(xmlStr, "player1", player1);
 			xmlStr +=Add(xmlStr, "playerNumber1", playerNumber1);
-			xmlStr +=Add(xmlStr, "doibong", doibong);
-				
+			
 			xmlStr += "</Track_Property>";
 			
 			ExternalInterface.call("Properties", xmlStr);
@@ -79,9 +80,12 @@
 					case "playerNumber1".toLowerCase():
 						this.playerNumber1.text = data.toUpperCase() + ".";
 						break;
-					case "doibong".toLowerCase():
-						this.doibong.text = data.toUpperCase();
-						break;						
+					case "icon1".toLowerCase():						
+						var file:Loader = new Loader();
+						file.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted);
+						file.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError);
+						file.load(new URLRequest(data));
+						break;					
 				}
 			}
 		}
@@ -90,6 +94,19 @@
 		}
 		public override function Stop():void{
 			gotoAndPlay('stop');
+		}
+		private function onOpenImageError(e:IOErrorEvent)
+		{
+			while(this.icon1.numChildren > 0)
+				this.icon1.removeChildAt(0);
+		}
+		
+		private function onOpenImageCompleted(e:Event)
+		{
+			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;
+			bmp.width=53;
+			bmp.height=43;
+			this.icon1.addChild(bmp);
 		}
 	}
 	

@@ -1058,7 +1058,7 @@ namespace HDCGStudio
                     xmlAdd += Add("shortNameChu", txtHomeShortName.Text);
                     xmlAdd += Add("shortNameKhach", txtAwayShortName.Text);
                     xmlAdd += Add("hiepdau", txtHiep.Text);
-                    xmlAdd += Add("player1", GetPlayingPlayer().mObj.Name);
+                    xmlAdd += Add("player1", GetPlayingPlayer().mObj.ShortName);
                     xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number.ToString());
                     if (_tempName == "BongDa_CauThu.ft")
                     {
