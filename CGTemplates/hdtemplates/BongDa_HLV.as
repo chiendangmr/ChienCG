@@ -18,7 +18,9 @@
 	import flash.external.ExternalInterface;
 	import flash.utils.Timer;
 	import flash.events.TimerEvent;
-	import fl.containers.UILoader;
+	import flash.display.Loader;
+	import flash.events.IOErrorEvent;
+	import flash.display.DisplayObject;
 	import flash.net.URLRequest;
 	import flash.sampler.Sample;
 	import flash.globalization.NumberFormatter;
@@ -27,16 +29,16 @@
 	public class BongDa_HLV extends CasparTemplate{
 		
 		private var txtGroup:MovieClip = new MovieClip();
-					
-		public var hlv:TextField = new TextField();
-		public var doibong:TextField = new TextField();
+		public var icon1:MovieClip;				
+		public var dong1:TextField = new TextField();
+		public var dong2:TextField = new TextField();
 		
 		public function BongDa_HLV() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(hlv);	
-			this.txtGroup.addChild(doibong);
-			
+			this.txtGroup.addChild(dong1);	
+			this.txtGroup.addChild(dong2);
+			this.txtGroup.addChild(icon1);
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
 			ExternalInterface.addCallback("GetProperties", GetProperties);			
@@ -49,8 +51,8 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "hlv", hlv);
-			xmlStr +=Add(xmlStr, "doibong", doibong);
+			xmlStr +=Add(xmlStr, "dong1", dong1);
+			xmlStr +=Add(xmlStr, "dong2", dong2);
 				
 			xmlStr += "</Track_Property>";
 			
@@ -70,12 +72,18 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "hlv".toLowerCase():
-						this.hlv.text = "HLV " + data.toUpperCase();
+					case "dong1".toLowerCase():
+						this.dong1.text = data.toUpperCase();
 						break;
-					case "doibong".toLowerCase():
-						this.doibong.text = data.toUpperCase();
-						break;							
+					case "dong2".toLowerCase():
+						this.dong2.text = data.toUpperCase();
+						break;	
+					case "icon1".toLowerCase():						
+						var file:Loader = new Loader();
+						file.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted);
+						file.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError);
+						file.load(new URLRequest(data));
+						break;
 				}
 			}
 		}
@@ -84,6 +92,19 @@
 		}
 		public override function Stop():void{
 			gotoAndPlay('stop');
+		}
+		private function onOpenImageError(e:IOErrorEvent)
+		{
+			while(this.icon1.numChildren > 0)
+				this.icon1.removeChildAt(0);
+		}
+		
+		private function onOpenImageCompleted(e:Event)
+		{
+			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;	
+			bmp.width=51;
+			bmp.height=43;
+			this.icon1.addChild(bmp);
 		}
 	}
 	

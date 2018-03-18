@@ -1076,9 +1076,9 @@ namespace HDCGStudio
                     xmlAdd += Add("nhietdo", txtNhietdo.Text);
                     xmlAdd += Add("sucgio", txtSucgio.Text);
                     xmlAdd += Add("doam", txtDoam.Text);
-                    xmlAdd += Add("blv", txtBLV.Text);
-                    xmlAdd += Add("pv", txtPV.Text);
-                    xmlAdd += Add("donviPV", txtDonviPV.Text);
+
+                    xmlAdd += Add("dong1", txtLine1.Text);
+                    xmlAdd += Add("dong2", txtLine2.Text);
                     xmlAdd += Add("bugio", nBugio.Value.ToString());
                     if (_tempName == "BongDa_ThayNguoi.ft")
                     {
@@ -1110,7 +1110,7 @@ namespace HDCGStudio
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
                     }
-                    else if (_tempName == "BongDa_DanhSachChinhThuc.ft" || _tempName == "BongDa_DanhSachDuBi.ft")
+                    else if (_tempName == "BongDa_DanhSachChinhThuc.ft" || _tempName == "BongDa_DanhSachDuBi.ft" || _tempName.Contains("BongDa_TySo"))
                     {
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
@@ -1150,6 +1150,8 @@ namespace HDCGStudio
                     xmlAdd += Add("doiChu", cboDoiChuNha.Text);
                     xmlAdd += Add("doiKhach", cboDoiKhach.Text);
                     xmlAdd += Add("tyso", nTysoChu.Value.ToString() + "-" + nTysoKhach.Value.ToString());
+                    xmlAdd += Add("goalChu", nTysoChu.Value.ToString());
+                    xmlAdd += Add("goalKhach", nTysoKhach.Value.ToString());
                     if (_tempName == "BongDa_DanhSachChinhThuc.ft")
                     {
                         var lstChinhthucChu = GetTeamChinhThuc("home");

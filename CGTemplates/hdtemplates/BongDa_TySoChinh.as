@@ -35,7 +35,8 @@
 		public var hiepdau:TextField = new TextField();
 		public var doiChu:TextField = new TextField();
 		public var doiKhach:TextField = new TextField();
-		public var tyso:TextField = new TextField();
+		public var goalChu:TextField = new TextField();
+		public var goalKhach:TextField = new TextField();
 		public var ghibanChu:TextField = new TextField();		
 		public var ghibanKhach:TextField = new TextField();
 						
@@ -45,7 +46,8 @@
 			this.txtGroup.addChild(hiepdau);	
 			this.txtGroup.addChild(doiChu);
 			this.txtGroup.addChild(doiKhach);
-			this.txtGroup.addChild(tyso);	
+			this.txtGroup.addChild(goalChu);	
+			this.txtGroup.addChild(goalKhach);
 			this.txtGroup.addChild(ghibanChu);			
 			this.txtGroup.addChild(ghibanKhach);
 			this.txtGroup.addChild(icon1);
@@ -66,7 +68,7 @@
 			xmlStr +=Add(xmlStr, "hiepdau", hiepdau);
 			xmlStr +=Add(xmlStr, "doiChu", doiChu);
 			xmlStr +=Add(xmlStr, "doiKhach", doiKhach);
-			xmlStr +=Add(xmlStr, "tyso", tyso);
+			xmlStr +=Add(xmlStr, "goalChu", goalChu);
 			xmlStr +=Add(xmlStr, "ghibanChu", ghibanChu);			
 			xmlStr +=Add(xmlStr, "ghibanKhach", ghibanKhach);
 			xmlStr += "</Track_Property>";
@@ -96,14 +98,17 @@
 					case "doiKhach".toLowerCase():
 						this.doiKhach.text = data.toUpperCase();
 						break;
-					case "tyso".toLowerCase():
-						this.tyso.text = data.toUpperCase();
+					case "goalChu".toLowerCase():
+						this.goalChu.text = data.toUpperCase();
+						break;
+					case "goalKhach".toLowerCase():
+						this.goalKhach.text = data.toUpperCase();
 						break;
 					case "ghibanChu".toLowerCase():
-						this.ghibanChu.text = data;
+						this.ghibanChu.text = data.toUpperCase();
 						break;					
 					case "ghibanKhach".toLowerCase():
-						this.ghibanKhach.text = data;
+						this.ghibanKhach.text = data.toUpperCase();
 						break;	
 					case "icon1".toLowerCase():						
 						var file:Loader = new Loader();
@@ -134,7 +139,9 @@
 		
 		private function onOpenImageCompleted(e:Event)
 		{
-			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;						
+			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;	
+			bmp.width=63;
+			bmp.height=60;
 			this.icon1.addChild(bmp);
 		}
 		private function onOpenImageError2(e:IOErrorEvent)
@@ -145,7 +152,9 @@
 		
 		private function onOpenImageCompleted2(e:Event)
 		{
-			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;						
+			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;	
+			bmp.width=63;
+			bmp.height=60;
 			this.icon2.addChild(bmp);
 		}
 	}
