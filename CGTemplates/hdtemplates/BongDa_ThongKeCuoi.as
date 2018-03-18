@@ -29,8 +29,6 @@
 	public class BongDa_ThongKeCuoi extends CasparTemplate{
 		
 		private var txtGroup:MovieClip = new MovieClip();
-		public var icon1:MovieClip;
-		public var icon2:MovieClip;
 					
 		public var hiepdau:TextField = new TextField();
 		public var tyso:TextField = new TextField();
@@ -76,8 +74,6 @@
 			this.txtGroup.addChild(kiemsoatbongKhach);			
 			this.txtGroup.addChild(doiChu);
 			this.txtGroup.addChild(doiKhach);
-			this.txtGroup.addChild(icon1);
-			this.txtGroup.addChild(icon2);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -188,19 +184,7 @@
 						break;
 					case "doiKhach".toLowerCase():
 						this.doiKhach.text = data.toUpperCase();
-						break;	
-					case "icon1".toLowerCase():						
-						var file:Loader = new Loader();
-						file.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted);
-						file.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError);
-						file.load(new URLRequest(data));
-						break;
-					case "icon2".toLowerCase():						
-						var file1:Loader = new Loader();
-						file1.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted2);
-						file1.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError2);
-						file1.load(new URLRequest(data));
-						break;
+						break;					
 				}
 			}
 		}
@@ -209,29 +193,7 @@
 		}
 		public override function Stop():void{
 			gotoAndPlay('stop');
-		}
-		private function onOpenImageError(e:IOErrorEvent)
-		{
-			while(this.icon1.numChildren > 0)
-				this.icon1.removeChildAt(0);
-		}
-		
-		private function onOpenImageCompleted(e:Event)
-		{
-			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;						
-			this.icon1.addChild(bmp);
-		}
-		private function onOpenImageError2(e:IOErrorEvent)
-		{
-			while(this.icon2.numChildren > 0)
-				this.icon2.removeChildAt(0);
-		}
-		
-		private function onOpenImageCompleted2(e:Event)
-		{
-			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;						
-			this.icon2.addChild(bmp);
-		}
+		}		
 	}
 	
 }

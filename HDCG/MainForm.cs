@@ -1154,7 +1154,7 @@ namespace HDCGStudio
                     }
                     xmlAdd += Add("doiChu", cboDoiChuNha.Text);
                     xmlAdd += Add("doiKhach", cboDoiKhach.Text);
-                    xmlAdd += Add("tyso", nTysoChu.Value.ToString() + " - " + nTysoKhach.Value.ToString());
+                    xmlAdd += Add("tyso", nTysoChu.Value.ToString() + "-" + nTysoKhach.Value.ToString());
                     var lstChinhthuc = GetTeamChinhThuc();
                     if (lstChinhthuc.Count > 0)
                         for (var i = 0; i < lstChinhthuc.Count(); i++)
@@ -1174,7 +1174,7 @@ namespace HDCGStudio
                     xmlAdd += Add("ghibanChu", rtbGhiBanChu.Text);
                     xmlAdd += Add("ghibanKhach", rtbGhiBanKhach.Text);
 
-                    if (_tempName == "BongDa_ThongKeCuoi.ft")
+                    if (_tempName == "BongDa_ThongSoCuoiTran.ft")
                     {
                         xmlAdd += Add("dutdiemChu", nDutdiemChu.Text);
                         xmlAdd += Add("dutdiemKhach", nDutdiemKhach.Text);
