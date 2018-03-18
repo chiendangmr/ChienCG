@@ -993,21 +993,21 @@ namespace HDCGStudio
             }
             catch { return ""; }
         }
-        public List<View.Player> GetTeamChinhThuc()
+        public List<View.Player> GetTeamChinhThuc(string team)
         {
             var lstChinhthuc = new List<View.Player>();
-            if (ckChu.Checked)
+            if (team == "home")
                 lstChinhthuc = (bsHomePlayer.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
-            else if (ckKhach.Checked)
+            else if (team == "away")
                 lstChinhthuc = (bsAwayPlayer.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
             return lstChinhthuc;
         }
-        public List<View.Player> GetTeamDuBi()
+        public List<View.Player> GetTeamDuBi(string team)
         {
             var lstChinhthuc = new List<View.Player>();
-            if (ckChu.Checked)
+            if (team == "home")
                 lstChinhthuc = (bsHomePlayerDuBi.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
-            else if (ckKhach.Checked)
+            else if (team == "away")
                 lstChinhthuc = (bsAwayPlayerDuBi.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
             return lstChinhthuc;
         }
@@ -1105,30 +1105,25 @@ namespace HDCGStudio
                         xmlAdd += Add("dongho", lbThoigianHiepPhu2.Text);
                     }
 
-                    else if (_tempName == "BongDa_ThongKeCuoi.ft" || _tempName == "BongDa_TySoChinh.ft" || _tempName == "BongDa_BangCho.ft")
+                    if (_tempName == "BongDa_TySoChinh.ft" || _tempName == "BongDa_BangCho.ft")
                     {
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
+                    }
+                    else if (_tempName == "BongDa_DanhSachChinhThuc.ft" || _tempName == "BongDa_DanhSachDuBi.ft")
+                    {
+                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
+                        xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
                     }
                     else
                     {
                         if (ckChu.Checked)
                         {
-                            if (_tempName == "BongDa_DanhSachCauThu.ft")
-                            {
-                                xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
-                            }
-                            else
-                                xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
+                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
                         }
                         else if (ckKhach.Checked)
                         {
-                            if (_tempName == "BongDa_DanhSachCauThu.ft")
-                            {
-                                xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
-                            }
-                            else
-                                xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
+                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
                         }
                     }
                     if (ckChu.Checked)
@@ -1155,20 +1150,40 @@ namespace HDCGStudio
                     xmlAdd += Add("doiChu", cboDoiChuNha.Text);
                     xmlAdd += Add("doiKhach", cboDoiKhach.Text);
                     xmlAdd += Add("tyso", nTysoChu.Value.ToString() + "-" + nTysoKhach.Value.ToString());
-                    var lstChinhthuc = GetTeamChinhThuc();
-                    if (lstChinhthuc.Count > 0)
-                        for (var i = 0; i < lstChinhthuc.Count(); i++)
-                        {
-                            xmlAdd += Add("chinhthucName" + (i + 1).ToString(), lstChinhthuc[i].mObj.Name);
-                            xmlAdd += Add("chinhthucNumber" + (i + 1).ToString(), lstChinhthuc[i].mObj.Number.ToString());
-                        }
-                    var lstDuBi = GetTeamDuBi();
-                    if (lstDuBi.Count > 0)
-                        for (var i = 0; i < lstDuBi.Count(); i++)
-                        {
-                            xmlAdd += Add("dubiName" + (i + 1).ToString(), lstDuBi[i].mObj.Name);
-                            xmlAdd += Add("dubiNumber" + (i + 1).ToString(), lstDuBi[i].mObj.Number.ToString());
-                        }
+                    if (_tempName == "BongDa_DanhSachChinhThuc.ft")
+                    {
+                        var lstChinhthucChu = GetTeamChinhThuc("home");
+                        var lstChinhthucKhach = GetTeamChinhThuc("away");
+                        if (lstChinhthucChu.Count > 0)
+                            for (var i = 0; i < lstChinhthucChu.Count(); i++)
+                            {
+                                xmlAdd += Add("chinhthucChuName" + (i + 1).ToString(), lstChinhthucChu[i].mObj.Name);
+                                xmlAdd += Add("chinhthucChuNumber" + (i + 1).ToString(), lstChinhthucChu[i].mObj.Number.ToString());
+                            }
+                        if (lstChinhthucKhach.Count > 0)
+                            for (var i = 0; i < lstChinhthucKhach.Count(); i++)
+                            {
+                                xmlAdd += Add("chinhthucKhachName" + (i + 1).ToString(), lstChinhthucKhach[i].mObj.Name);
+                                xmlAdd += Add("chinhthucKhachNumber" + (i + 1).ToString(), lstChinhthucKhach[i].mObj.Number.ToString());
+                            }
+                    }
+                    if (_tempName == "BongDa_DanhSachDuBi.ft")
+                    {
+                        var lstDuBiChu = GetTeamDuBi("home");
+                        if (lstDuBiChu.Count > 0)
+                            for (var i = 0; i < lstDuBiChu.Count(); i++)
+                            {
+                                xmlAdd += Add("dubiChuName" + (i + 1).ToString(), lstDuBiChu[i].mObj.Name);
+                                xmlAdd += Add("dubiChuNumber" + (i + 1).ToString(), lstDuBiChu[i].mObj.Number.ToString());
+                            }
+                        var lstDuBiKhach = GetTeamDuBi("away");
+                        if (lstDuBiKhach.Count > 0)
+                            for (var i = 0; i < lstDuBiKhach.Count(); i++)
+                            {
+                                xmlAdd += Add("dubiKhachName" + (i + 1).ToString(), lstDuBiKhach[i].mObj.Name);
+                                xmlAdd += Add("dubiKhachNumber" + (i + 1).ToString(), lstDuBiKhach[i].mObj.Number.ToString());
+                            }
+                    }
                     //Danh sách ghi bàn
 
                     xmlAdd += Add("ghibanChu", rtbGhiBanChu.Text);
