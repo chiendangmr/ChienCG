@@ -30,19 +30,17 @@
 		
 		private var txtGroup:MovieClip = new MovieClip();
 					
-		public var thongsonho:TextField = new TextField();
 		public var thongsonhoChu:TextField = new TextField();
 		public var thongsonhoKhach:TextField = new TextField();
-		public var icon1:MovieClip;
-		public var icon2:MovieClip;		
+		public var doichuShort:TextField = new TextField();
+		public var doikhachShort:TextField = new TextField();	
 		public function BongDa_ThongKeNho() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(thongsonho);	
 			this.txtGroup.addChild(thongsonhoChu);
 			this.txtGroup.addChild(thongsonhoKhach);
-			this.txtGroup.addChild(icon1);
-			this.txtGroup.addChild(icon2);
+			this.txtGroup.addChild(doichuShort);
+			this.txtGroup.addChild(doikhachShort);
 			
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -56,7 +54,6 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "thongsonho", thongsonho);
 			xmlStr +=Add(xmlStr, "thongsonhoChu", thongsonhoChu);
 			xmlStr +=Add(xmlStr, "thongsonhoKhach", thongsonhoKhach);
 				
@@ -78,26 +75,17 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "thongsonho".toLowerCase():
-						this.thongsonho.text = data.toUpperCase();
-						break;
 					case "thongsonhoChu".toLowerCase():
 						this.thongsonhoChu.text = data.toUpperCase();
 						break;
 					case "thongsonhoKhach".toLowerCase():
 						this.thongsonhoKhach.text = data.toUpperCase();
 						break;		
-					case "icon1".toLowerCase():						
-						var file:Loader = new Loader();
-						file.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted);
-						file.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError);
-						file.load(new URLRequest(data));
+					case "doichuShort".toLowerCase():						
+						this.doichuShort.text = data.toUpperCase();
 						break;
-					case "icon2".toLowerCase():						
-						var file1:Loader = new Loader();
-						file1.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted2);
-						file1.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError2);
-						file1.load(new URLRequest(data));
+					case "doikhachShort".toLowerCase():						
+						this.doikhachShort.text = data.toUpperCase();
 						break;
 				}
 			}
@@ -107,29 +95,7 @@
 		}
 		public override function Stop():void{
 			gotoAndPlay('stop');
-		}
-		private function onOpenImageError(e:IOErrorEvent)
-		{
-			while(this.icon1.numChildren > 0)
-				this.icon1.removeChildAt(0);
-		}
-		
-		private function onOpenImageCompleted(e:Event)
-		{
-			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;						
-			this.icon1.addChild(bmp);
-		}
-		private function onOpenImageError2(e:IOErrorEvent)
-		{
-			while(this.icon2.numChildren > 0)
-				this.icon2.removeChildAt(0);
-		}
-		
-		private function onOpenImageCompleted2(e:Event)
-		{
-			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;						
-			this.icon2.addChild(bmp);
-		}
+		}		
 	}
 	
 }

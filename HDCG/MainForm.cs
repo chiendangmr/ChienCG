@@ -303,8 +303,8 @@ namespace HDCGStudio
         }
         public string UpdateTemplate(PreviewForm frmInput, string templateFileName, int fadeUpDuration = 0)
         {
-            string templateFile = "HDTemplates\\" + templateFileName;            
-            
+            string templateFile = "HDTemplates\\" + templateFileName;
+
             try
             {
                 int nTry = 0;
@@ -314,7 +314,7 @@ namespace HDCGStudio
                 if (frmInput.player.Add(1, templateFile))
                 {
                     string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
-                    
+
                     frmInput.player.Update(1, xmlStr.Replace("\\n", "\n"));
                     frmInput.player.Refresh();
                     frmInput.player.InvokeMethod(1, "fadeUp");
@@ -1055,8 +1055,8 @@ namespace HDCGStudio
                 try
                 {
                     xmlAdd += Add("doibong", GetTeamName());
-                    xmlAdd += Add("shortNameChu", txtHomeShortName.Text);
-                    xmlAdd += Add("shortNameKhach", txtAwayShortName.Text);
+                    xmlAdd += Add("doichuShort", txtHomeShortName.Text);
+                    xmlAdd += Add("doikhachShort", txtAwayShortName.Text);
                     xmlAdd += Add("hiepdau", txtHiep.Text);
                     xmlAdd += Add("player1", GetPlayingPlayer().mObj.ShortName);
                     xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number.ToString());
@@ -1105,11 +1105,6 @@ namespace HDCGStudio
                         xmlAdd += Add("dongho", lbThoigianHiepPhu2.Text);
                     }
 
-                    if (_tempName == "BongDa_ThongKeNho.ft")
-                    {
-                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
-                        xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
-                    }
                     else if (_tempName == "BongDa_ThongKeCuoi.ft" || _tempName == "BongDa_TySoChinh.ft" || _tempName == "BongDa_BangCho.ft")
                     {
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
@@ -1198,53 +1193,45 @@ namespace HDCGStudio
                         xmlAdd += Add("kiemsoatbongChu", nKiemsoatbongChu.Text + "%");
                         xmlAdd += Add("kiemsoatbongKhach", nKiemsoatbongKhach.Text + "%");
                     }
-                    else if (_tempName == "BongDa_ThongKeNho.ft")
+                    else if (_tempName.Contains("BongDa_ThongSo"))
                     {
-                        if (ckDutdiem.Checked)
+                        if (_tempName == "BongDa_ThongSo_DutDiem.ft")
                         {
-                            xmlAdd += Add("thongsonho", "Dứt điểm");
                             xmlAdd += Add("thongsonhoChu", nDutdiemChu.Text);
                             xmlAdd += Add("thongsonhoKhach", nDutdiemKhach.Text);
                         }
-                        else if (ckTrungdich.Checked)
+                        else if (_tempName == "BongDa_ThongSo_DutDiemTrungDich.ft")
                         {
-                            xmlAdd += Add("thongsonho", "Dứt điểm trúng đích");
                             xmlAdd += Add("thongsonhoChu", nTrungdichChu.Text);
                             xmlAdd += Add("thongsonhoKhach", nTrungdichKhach.Text);
                         }
-                        else if (ckPhamloi.Checked)
+                        else if (_tempName == "BongDa_ThongSo_PhamLoi.ft")
                         {
-                            xmlAdd += Add("thongsonho", "Phạm lỗi");
                             xmlAdd += Add("thongsonhoChu", nPhamloiChu.Text);
                             xmlAdd += Add("thongsonhoKhach", nPhamloiKhach.Text);
                         }
-                        else if (ckThevang.Checked)
+                        else if (_tempName == "BongDa_ThongSo_TheVang.ft")
                         {
-                            xmlAdd += Add("thongsonho", "Thẻ vàng");
                             xmlAdd += Add("thongsonhoChu", nThevangChu.Text);
                             xmlAdd += Add("thongsonhoKhach", nThevangKhach.Text);
                         }
-                        else if (ckThedo.Checked)
+                        else if (_tempName == "BongDa_ThongSo_TheDo.ft")
                         {
-                            xmlAdd += Add("thongsonho", "Thẻ đỏ");
                             xmlAdd += Add("thongsonhoChu", nThedoChu.Text);
                             xmlAdd += Add("thongsonhoKhach", nThedoKhach.Text);
                         }
-                        else if (ckVietvi.Checked)
+                        else if (_tempName == "BongDa_ThongSo_VietVi.ft")
                         {
-                            xmlAdd += Add("thongsonho", "Việt vị");
                             xmlAdd += Add("thongsonhoChu", nVietviChu.Text);
                             xmlAdd += Add("thongsonhoKhach", nVietviKhach.Text);
                         }
-                        else if (ckPhatgoc.Checked)
+                        else if (_tempName == "BongDa_ThongSo_PhatGoc.ft")
                         {
-                            xmlAdd += Add("thongsonho", "Phạt góc");
                             xmlAdd += Add("thongsonhoChu", nPhatgocChu.Text);
                             xmlAdd += Add("thongsonhoKhach", nPhatgocKhach.Text);
                         }
-                        else if (ckKiemsoatbong.Checked)
+                        else if (_tempName == "BongDa_ThongSo_KiemSoatBong.ft")
                         {
-                            xmlAdd += Add("thongsonho", "Kiếm soát bóng");
                             xmlAdd += Add("thongsonhoChu", nKiemsoatbongChu.Text);
                             xmlAdd += Add("thongsonhoKhach", nKiemsoatbongKhach.Text);
                         }

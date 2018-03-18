@@ -151,32 +151,24 @@
             this.labelControl44 = new DevExpress.XtraEditors.LabelControl();
             this.txtHiep = new DevExpress.XtraEditors.TextEdit();
             this.labelControl45 = new DevExpress.XtraEditors.LabelControl();
-            this.ckPhamloi = new DevExpress.XtraEditors.CheckEdit();
             this.nPhamloiKhach = new System.Windows.Forms.NumericUpDown();
             this.nPhamloiChu = new System.Windows.Forms.NumericUpDown();
             this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
-            this.ckThevang = new DevExpress.XtraEditors.CheckEdit();
             this.nThevangKhach = new System.Windows.Forms.NumericUpDown();
             this.nThevangChu = new System.Windows.Forms.NumericUpDown();
             this.labelControl42 = new DevExpress.XtraEditors.LabelControl();
-            this.ckThedo = new DevExpress.XtraEditors.CheckEdit();
             this.nThedoKhach = new System.Windows.Forms.NumericUpDown();
             this.nThedoChu = new System.Windows.Forms.NumericUpDown();
             this.labelControl41 = new DevExpress.XtraEditors.LabelControl();
-            this.ckVietvi = new DevExpress.XtraEditors.CheckEdit();
             this.nVietviKhach = new System.Windows.Forms.NumericUpDown();
             this.nVietviChu = new System.Windows.Forms.NumericUpDown();
             this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
-            this.ckKiemsoatbong = new DevExpress.XtraEditors.CheckEdit();
             this.nKiemsoatbongKhach = new System.Windows.Forms.NumericUpDown();
             this.nKiemsoatbongChu = new System.Windows.Forms.NumericUpDown();
             this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
-            this.ckPhatgoc = new DevExpress.XtraEditors.CheckEdit();
             this.nPhatgocKhach = new System.Windows.Forms.NumericUpDown();
             this.nPhatgocChu = new System.Windows.Forms.NumericUpDown();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.ckTrungdich = new DevExpress.XtraEditors.CheckEdit();
-            this.ckDutdiem = new DevExpress.XtraEditors.CheckEdit();
             this.nTrungdichKhach = new System.Windows.Forms.NumericUpDown();
             this.nTrungdichChu = new System.Windows.Forms.NumericUpDown();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -187,6 +179,9 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.nTysoChu = new System.Windows.Forms.NumericUpDown();
             this.xTabTrongtai = new DevExpress.XtraTab.XtraTabPage();
+            this.labelControl63 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDoam = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl64 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl52 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
             this.txtNhietdo = new DevExpress.XtraEditors.TextEdit();
@@ -313,9 +308,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tUpdateData = new System.Windows.Forms.Timer(this.components);
             this.bsUpdateNotifier = new System.Windows.Forms.BindingSource(this.components);
-            this.labelControl63 = new DevExpress.XtraEditors.LabelControl();
-            this.txtDoam = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl64 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -384,26 +376,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.xTabTyso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtHiep.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPhamloi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhamloiKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhamloiChu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckThevang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nThevangKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nThevangChu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckThedo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nThedoKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nThedoChu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckVietvi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nVietviKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nVietviChu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckKiemsoatbong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nKiemsoatbongKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nKiemsoatbongChu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPhatgoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhatgocKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhatgocChu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckTrungdich.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckDutdiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTrungdichKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTrungdichChu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDutdiemKhach)).BeginInit();
@@ -411,6 +395,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nTysoKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTysoChu)).BeginInit();
             this.xTabTrongtai.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhietdo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSucgio.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonviPV.Properties)).BeginInit();
@@ -472,7 +457,6 @@
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoam.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -1867,32 +1851,24 @@
             this.xTabTyso.Controls.Add(this.labelControl44);
             this.xTabTyso.Controls.Add(this.txtHiep);
             this.xTabTyso.Controls.Add(this.labelControl45);
-            this.xTabTyso.Controls.Add(this.ckPhamloi);
             this.xTabTyso.Controls.Add(this.nPhamloiKhach);
             this.xTabTyso.Controls.Add(this.nPhamloiChu);
             this.xTabTyso.Controls.Add(this.labelControl43);
-            this.xTabTyso.Controls.Add(this.ckThevang);
             this.xTabTyso.Controls.Add(this.nThevangKhach);
             this.xTabTyso.Controls.Add(this.nThevangChu);
             this.xTabTyso.Controls.Add(this.labelControl42);
-            this.xTabTyso.Controls.Add(this.ckThedo);
             this.xTabTyso.Controls.Add(this.nThedoKhach);
             this.xTabTyso.Controls.Add(this.nThedoChu);
             this.xTabTyso.Controls.Add(this.labelControl41);
-            this.xTabTyso.Controls.Add(this.ckVietvi);
             this.xTabTyso.Controls.Add(this.nVietviKhach);
             this.xTabTyso.Controls.Add(this.nVietviChu);
             this.xTabTyso.Controls.Add(this.labelControl40);
-            this.xTabTyso.Controls.Add(this.ckKiemsoatbong);
             this.xTabTyso.Controls.Add(this.nKiemsoatbongKhach);
             this.xTabTyso.Controls.Add(this.nKiemsoatbongChu);
             this.xTabTyso.Controls.Add(this.labelControl38);
-            this.xTabTyso.Controls.Add(this.ckPhatgoc);
             this.xTabTyso.Controls.Add(this.nPhatgocKhach);
             this.xTabTyso.Controls.Add(this.nPhatgocChu);
             this.xTabTyso.Controls.Add(this.labelControl10);
-            this.xTabTyso.Controls.Add(this.ckTrungdich);
-            this.xTabTyso.Controls.Add(this.ckDutdiem);
             this.xTabTyso.Controls.Add(this.nTrungdichKhach);
             this.xTabTyso.Controls.Add(this.nTrungdichChu);
             this.xTabTyso.Controls.Add(this.labelControl7);
@@ -1952,17 +1928,6 @@
             this.labelControl45.TabIndex = 167;
             this.labelControl45.Text = "Ghi bàn:";
             // 
-            // ckPhamloi
-            // 
-            this.ckPhamloi.Location = new System.Drawing.Point(630, 213);
-            this.ckPhamloi.MenuManager = this.barManager1;
-            this.ckPhamloi.Name = "ckPhamloi";
-            this.ckPhamloi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.ckPhamloi.Properties.Appearance.Options.UseFont = true;
-            this.ckPhamloi.Properties.Caption = "";
-            this.ckPhamloi.Size = new System.Drawing.Size(30, 19);
-            this.ckPhamloi.TabIndex = 165;
-            // 
             // nPhamloiKhach
             // 
             this.nPhamloiKhach.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -1999,17 +1964,6 @@
             this.labelControl43.Size = new System.Drawing.Size(69, 21);
             this.labelControl43.TabIndex = 162;
             this.labelControl43.Text = "Phạm lỗi:";
-            // 
-            // ckThevang
-            // 
-            this.ckThevang.Location = new System.Drawing.Point(630, 245);
-            this.ckThevang.MenuManager = this.barManager1;
-            this.ckThevang.Name = "ckThevang";
-            this.ckThevang.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.ckThevang.Properties.Appearance.Options.UseFont = true;
-            this.ckThevang.Properties.Caption = "";
-            this.ckThevang.Size = new System.Drawing.Size(30, 19);
-            this.ckThevang.TabIndex = 161;
             // 
             // nThevangKhach
             // 
@@ -2048,17 +2002,6 @@
             this.labelControl42.TabIndex = 158;
             this.labelControl42.Text = "Thẻ vàng:";
             // 
-            // ckThedo
-            // 
-            this.ckThedo.Location = new System.Drawing.Point(630, 276);
-            this.ckThedo.MenuManager = this.barManager1;
-            this.ckThedo.Name = "ckThedo";
-            this.ckThedo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.ckThedo.Properties.Appearance.Options.UseFont = true;
-            this.ckThedo.Properties.Caption = "";
-            this.ckThedo.Size = new System.Drawing.Size(30, 19);
-            this.ckThedo.TabIndex = 157;
-            // 
             // nThedoKhach
             // 
             this.nThedoKhach.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -2095,17 +2038,6 @@
             this.labelControl41.Size = new System.Drawing.Size(58, 21);
             this.labelControl41.TabIndex = 154;
             this.labelControl41.Text = "Thẻ đỏ:";
-            // 
-            // ckVietvi
-            // 
-            this.ckVietvi.Location = new System.Drawing.Point(630, 307);
-            this.ckVietvi.MenuManager = this.barManager1;
-            this.ckVietvi.Name = "ckVietvi";
-            this.ckVietvi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.ckVietvi.Properties.Appearance.Options.UseFont = true;
-            this.ckVietvi.Properties.Caption = "";
-            this.ckVietvi.Size = new System.Drawing.Size(30, 19);
-            this.ckVietvi.TabIndex = 153;
             // 
             // nVietviKhach
             // 
@@ -2144,17 +2076,6 @@
             this.labelControl40.TabIndex = 150;
             this.labelControl40.Text = "Việt vị:";
             // 
-            // ckKiemsoatbong
-            // 
-            this.ckKiemsoatbong.Location = new System.Drawing.Point(630, 369);
-            this.ckKiemsoatbong.MenuManager = this.barManager1;
-            this.ckKiemsoatbong.Name = "ckKiemsoatbong";
-            this.ckKiemsoatbong.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.ckKiemsoatbong.Properties.Appearance.Options.UseFont = true;
-            this.ckKiemsoatbong.Properties.Caption = "";
-            this.ckKiemsoatbong.Size = new System.Drawing.Size(30, 19);
-            this.ckKiemsoatbong.TabIndex = 149;
-            // 
             // nKiemsoatbongKhach
             // 
             this.nKiemsoatbongKhach.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -2192,17 +2113,6 @@
             this.labelControl38.TabIndex = 146;
             this.labelControl38.Text = "Kiểm soát bóng (%):";
             // 
-            // ckPhatgoc
-            // 
-            this.ckPhatgoc.Location = new System.Drawing.Point(630, 338);
-            this.ckPhatgoc.MenuManager = this.barManager1;
-            this.ckPhatgoc.Name = "ckPhatgoc";
-            this.ckPhatgoc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.ckPhatgoc.Properties.Appearance.Options.UseFont = true;
-            this.ckPhatgoc.Properties.Caption = "";
-            this.ckPhatgoc.Size = new System.Drawing.Size(30, 19);
-            this.ckPhatgoc.TabIndex = 145;
-            // 
             // nPhatgocKhach
             // 
             this.nPhatgocKhach.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -2239,28 +2149,6 @@
             this.labelControl10.Size = new System.Drawing.Size(70, 21);
             this.labelControl10.TabIndex = 142;
             this.labelControl10.Text = "Phạt góc:";
-            // 
-            // ckTrungdich
-            // 
-            this.ckTrungdich.Location = new System.Drawing.Point(630, 182);
-            this.ckTrungdich.MenuManager = this.barManager1;
-            this.ckTrungdich.Name = "ckTrungdich";
-            this.ckTrungdich.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.ckTrungdich.Properties.Appearance.Options.UseFont = true;
-            this.ckTrungdich.Properties.Caption = "";
-            this.ckTrungdich.Size = new System.Drawing.Size(30, 19);
-            this.ckTrungdich.TabIndex = 141;
-            // 
-            // ckDutdiem
-            // 
-            this.ckDutdiem.Location = new System.Drawing.Point(630, 146);
-            this.ckDutdiem.MenuManager = this.barManager1;
-            this.ckDutdiem.Name = "ckDutdiem";
-            this.ckDutdiem.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.ckDutdiem.Properties.Appearance.Options.UseFont = true;
-            this.ckDutdiem.Properties.Caption = "";
-            this.ckDutdiem.Size = new System.Drawing.Size(30, 19);
-            this.ckDutdiem.TabIndex = 140;
             // 
             // nTrungdichKhach
             // 
@@ -2394,6 +2282,36 @@
             this.xTabTrongtai.Name = "xTabTrongtai";
             this.xTabTrongtai.Size = new System.Drawing.Size(1169, 695);
             this.xTabTrongtai.Text = "Trọng tài/BLV/Địa điểm/Thời tiết";
+            // 
+            // labelControl63
+            // 
+            this.labelControl63.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl63.Appearance.Options.UseFont = true;
+            this.labelControl63.Location = new System.Drawing.Point(395, 373);
+            this.labelControl63.Name = "labelControl63";
+            this.labelControl63.Size = new System.Drawing.Size(28, 19);
+            this.labelControl63.TabIndex = 176;
+            this.labelControl63.Text = "(%)";
+            // 
+            // txtDoam
+            // 
+            this.txtDoam.Location = new System.Drawing.Point(176, 373);
+            this.txtDoam.MenuManager = this.barManager1;
+            this.txtDoam.Name = "txtDoam";
+            this.txtDoam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtDoam.Properties.Appearance.Options.UseFont = true;
+            this.txtDoam.Size = new System.Drawing.Size(202, 24);
+            this.txtDoam.TabIndex = 175;
+            // 
+            // labelControl64
+            // 
+            this.labelControl64.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl64.Appearance.Options.UseFont = true;
+            this.labelControl64.Location = new System.Drawing.Point(103, 373);
+            this.labelControl64.Name = "labelControl64";
+            this.labelControl64.Size = new System.Drawing.Size(55, 21);
+            this.labelControl64.TabIndex = 174;
+            this.labelControl64.Text = "Độ ẩm:";
             // 
             // labelControl52
             // 
@@ -3866,36 +3784,6 @@
             // 
             this.bsUpdateNotifier.DataSource = typeof(HDCGStudio.Object.UpdateNotifier);
             // 
-            // labelControl63
-            // 
-            this.labelControl63.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl63.Appearance.Options.UseFont = true;
-            this.labelControl63.Location = new System.Drawing.Point(395, 373);
-            this.labelControl63.Name = "labelControl63";
-            this.labelControl63.Size = new System.Drawing.Size(28, 19);
-            this.labelControl63.TabIndex = 176;
-            this.labelControl63.Text = "(%)";
-            // 
-            // txtDoam
-            // 
-            this.txtDoam.Location = new System.Drawing.Point(176, 373);
-            this.txtDoam.MenuManager = this.barManager1;
-            this.txtDoam.Name = "txtDoam";
-            this.txtDoam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.txtDoam.Properties.Appearance.Options.UseFont = true;
-            this.txtDoam.Size = new System.Drawing.Size(202, 24);
-            this.txtDoam.TabIndex = 175;
-            // 
-            // labelControl64
-            // 
-            this.labelControl64.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl64.Appearance.Options.UseFont = true;
-            this.labelControl64.Location = new System.Drawing.Point(103, 373);
-            this.labelControl64.Name = "labelControl64";
-            this.labelControl64.Size = new System.Drawing.Size(55, 21);
-            this.labelControl64.TabIndex = 174;
-            this.labelControl64.Text = "Độ ẩm:";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -3986,26 +3874,18 @@
             this.xTabTyso.ResumeLayout(false);
             this.xTabTyso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtHiep.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPhamloi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhamloiKhach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhamloiChu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckThevang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nThevangKhach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nThevangChu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckThedo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nThedoKhach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nThedoChu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckVietvi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nVietviKhach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nVietviChu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckKiemsoatbong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nKiemsoatbongKhach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nKiemsoatbongChu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPhatgoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhatgocKhach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhatgocChu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckTrungdich.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckDutdiem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTrungdichKhach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTrungdichChu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDutdiemKhach)).EndInit();
@@ -4014,6 +3894,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nTysoChu)).EndInit();
             this.xTabTrongtai.ResumeLayout(false);
             this.xTabTrongtai.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhietdo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSucgio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonviPV.Properties)).EndInit();
@@ -4078,7 +3959,6 @@
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoam.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4267,32 +4147,24 @@
         private DevExpress.XtraEditors.LabelControl labelControl39;
         private DevExpress.XtraEditors.TextEdit txtThongsocauthuKhach;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.CheckEdit ckPhamloi;
         private System.Windows.Forms.NumericUpDown nPhamloiKhach;
         private System.Windows.Forms.NumericUpDown nPhamloiChu;
         private DevExpress.XtraEditors.LabelControl labelControl43;
-        private DevExpress.XtraEditors.CheckEdit ckThevang;
         private System.Windows.Forms.NumericUpDown nThevangKhach;
         private System.Windows.Forms.NumericUpDown nThevangChu;
         private DevExpress.XtraEditors.LabelControl labelControl42;
-        private DevExpress.XtraEditors.CheckEdit ckThedo;
         private System.Windows.Forms.NumericUpDown nThedoKhach;
         private System.Windows.Forms.NumericUpDown nThedoChu;
         private DevExpress.XtraEditors.LabelControl labelControl41;
-        private DevExpress.XtraEditors.CheckEdit ckVietvi;
         private System.Windows.Forms.NumericUpDown nVietviKhach;
         private System.Windows.Forms.NumericUpDown nVietviChu;
         private DevExpress.XtraEditors.LabelControl labelControl40;
-        private DevExpress.XtraEditors.CheckEdit ckKiemsoatbong;
         private System.Windows.Forms.NumericUpDown nKiemsoatbongKhach;
         private System.Windows.Forms.NumericUpDown nKiemsoatbongChu;
         private DevExpress.XtraEditors.LabelControl labelControl38;
-        private DevExpress.XtraEditors.CheckEdit ckPhatgoc;
         private System.Windows.Forms.NumericUpDown nPhatgocKhach;
         private System.Windows.Forms.NumericUpDown nPhatgocChu;
         private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.CheckEdit ckTrungdich;
-        private DevExpress.XtraEditors.CheckEdit ckDutdiem;
         private System.Windows.Forms.NumericUpDown nTrungdichKhach;
         private System.Windows.Forms.NumericUpDown nTrungdichChu;
         private DevExpress.XtraEditors.LabelControl labelControl7;
