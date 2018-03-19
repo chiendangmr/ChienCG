@@ -41,6 +41,8 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.txtMaDoi = new DevExpress.XtraEditors.TextEdit();
             this.nPosition = new System.Windows.Forms.NumericUpDown();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -60,11 +62,13 @@
             this.btnRemove = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.bsUpdateNotifier = new System.Windows.Forms.BindingSource(this.components);
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeams)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsManageTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTeams)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaDoi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSanNha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboLeague.Properties)).BeginInit();
@@ -83,6 +87,8 @@
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.gridTeams);
             this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.labelControl8);
+            this.splitContainerControl1.Panel2.Controls.Add(this.txtMaDoi);
             this.splitContainerControl1.Panel2.Controls.Add(this.nPosition);
             this.splitContainerControl1.Panel2.Controls.Add(this.labelControl7);
             this.splitContainerControl1.Panel2.Controls.Add(this.btnSave);
@@ -102,8 +108,8 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.btnRemove);
             this.splitContainerControl1.Panel2.Controls.Add(this.btnAdd);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1015, 824);
-            this.splitContainerControl1.SplitterPosition = 552;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1015, 786);
+            this.splitContainerControl1.SplitterPosition = 483;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -114,7 +120,7 @@
             this.gridTeams.Location = new System.Drawing.Point(0, 0);
             this.gridTeams.MainView = this.gvTeams;
             this.gridTeams.Name = "gridTeams";
-            this.gridTeams.Size = new System.Drawing.Size(1015, 552);
+            this.gridTeams.Size = new System.Drawing.Size(1015, 483);
             this.gridTeams.TabIndex = 0;
             this.gridTeams.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTeams});
@@ -126,6 +132,7 @@
             // gvTeams
             // 
             this.gvTeams.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn4,
             this.colNumber,
             this.colName,
             this.colIsCaptain,
@@ -249,10 +256,29 @@
             this.gridColumn3.VisibleIndex = 6;
             this.gridColumn3.Width = 64;
             // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(617, 91);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(66, 24);
+            this.labelControl8.TabIndex = 137;
+            this.labelControl8.Text = "Mã đội:";
+            // 
+            // txtMaDoi
+            // 
+            this.txtMaDoi.Location = new System.Drawing.Point(689, 88);
+            this.txtMaDoi.Name = "txtMaDoi";
+            this.txtMaDoi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txtMaDoi.Properties.Appearance.Options.UseFont = true;
+            this.txtMaDoi.Size = new System.Drawing.Size(151, 30);
+            this.txtMaDoi.TabIndex = 138;
+            // 
             // nPosition
             // 
             this.nPosition.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.nPosition.Location = new System.Drawing.Point(773, 125);
+            this.nPosition.Location = new System.Drawing.Point(773, 161);
             this.nPosition.Name = "nPosition";
             this.nPosition.Size = new System.Drawing.Size(67, 32);
             this.nPosition.TabIndex = 18;
@@ -261,7 +287,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(718, 127);
+            this.labelControl7.Location = new System.Drawing.Point(718, 163);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(49, 24);
             this.labelControl7.TabIndex = 136;
@@ -271,7 +297,7 @@
             // 
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSave.Location = new System.Drawing.Point(424, 186);
+            this.btnSave.Location = new System.Drawing.Point(466, 220);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(98, 57);
             this.btnSave.TabIndex = 20;
@@ -282,7 +308,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(100, 127);
+            this.labelControl6.Location = new System.Drawing.Point(100, 163);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(79, 24);
             this.labelControl6.TabIndex = 133;
@@ -290,7 +316,7 @@
             // 
             // txtSanNha
             // 
-            this.txtSanNha.Location = new System.Drawing.Point(224, 127);
+            this.txtSanNha.Location = new System.Drawing.Point(224, 163);
             this.txtSanNha.Name = "txtSanNha";
             this.txtSanNha.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtSanNha.Properties.Appearance.Options.UseFont = true;
@@ -299,7 +325,7 @@
             // 
             // btnChooseLogo
             // 
-            this.btnChooseLogo.Location = new System.Drawing.Point(806, 89);
+            this.btnChooseLogo.Location = new System.Drawing.Point(806, 125);
             this.btnChooseLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChooseLogo.Name = "btnChooseLogo";
             this.btnChooseLogo.Size = new System.Drawing.Size(35, 26);
@@ -332,7 +358,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(514, 91);
+            this.labelControl4.Location = new System.Drawing.Point(514, 127);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(50, 24);
             this.labelControl4.TabIndex = 9;
@@ -340,7 +366,7 @@
             // 
             // txtLogoPath
             // 
-            this.txtLogoPath.Location = new System.Drawing.Point(588, 88);
+            this.txtLogoPath.Location = new System.Drawing.Point(588, 124);
             this.txtLogoPath.Name = "txtLogoPath";
             this.txtLogoPath.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtLogoPath.Properties.Appearance.Options.UseFont = true;
@@ -351,7 +377,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(100, 91);
+            this.labelControl3.Location = new System.Drawing.Point(100, 127);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(108, 24);
             this.labelControl3.TabIndex = 7;
@@ -359,7 +385,7 @@
             // 
             // txtCoach
             // 
-            this.txtCoach.Location = new System.Drawing.Point(224, 88);
+            this.txtCoach.Location = new System.Drawing.Point(224, 124);
             this.txtCoach.Name = "txtCoach";
             this.txtCoach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtCoach.Properties.Appearance.Options.UseFont = true;
@@ -370,7 +396,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(514, 52);
+            this.labelControl2.Location = new System.Drawing.Point(97, 91);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(111, 24);
             this.labelControl2.TabIndex = 5;
@@ -388,7 +414,7 @@
             // 
             // txtShortName
             // 
-            this.txtShortName.Location = new System.Drawing.Point(690, 49);
+            this.txtShortName.Location = new System.Drawing.Point(224, 88);
             this.txtShortName.Name = "txtShortName";
             this.txtShortName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtShortName.Properties.Appearance.Options.UseFont = true;
@@ -401,14 +427,14 @@
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtName.Properties.Appearance.Options.UseFont = true;
-            this.txtName.Size = new System.Drawing.Size(214, 30);
+            this.txtName.Size = new System.Drawing.Size(616, 30);
             this.txtName.TabIndex = 13;
             // 
             // btnRemove
             // 
             this.btnRemove.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.ImageOptions.Image")));
             this.btnRemove.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRemove.Location = new System.Drawing.Point(588, 186);
+            this.btnRemove.Location = new System.Drawing.Point(630, 220);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(93, 57);
             this.btnRemove.TabIndex = 21;
@@ -419,7 +445,7 @@
             // 
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
             this.btnAdd.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnAdd.Location = new System.Drawing.Point(262, 186);
+            this.btnAdd.Location = new System.Drawing.Point(304, 220);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(98, 57);
             this.btnAdd.TabIndex = 19;
@@ -430,12 +456,28 @@
             // 
             this.bsUpdateNotifier.DataSource = typeof(HDCGStudio.Object.UpdateNotifier);
             // 
+            // gridColumn4
+            // 
+            this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn4.AppearanceCell.Options.UseFont = true;
+            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.Caption = "Mã đội";
+            this.gridColumn4.FieldName = "tObj.TeamCode";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 7;
+            // 
             // FormManageTeam
             // 
             this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 824);
+            this.ClientSize = new System.Drawing.Size(1015, 786);
             this.Controls.Add(this.splitContainerControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -450,6 +492,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridTeams)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsManageTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTeams)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaDoi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSanNha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboLeague.Properties)).EndInit();
@@ -494,5 +537,8 @@
         private System.Windows.Forms.NumericUpDown nPosition;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private System.Windows.Forms.BindingSource bsUpdateNotifier;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.TextEdit txtMaDoi;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
     }
 }

@@ -20,12 +20,11 @@ namespace HDCGStudio
         {
             InitializeComponent();
         }
-        string DanhsachgiaidauXmlPath = "";
-        string _danhsachdoibongXml = "";
+        string DanhsachgiaidauXmlPath = "";        
         string _updateNotifier = "";
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
-            DanhsachgiaidauXmlPath = Path.Combine(Application.StartupPath, "Danhsachgiaidau.xml");
+            DanhsachgiaidauXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachgiaidau.xml");
             try
             {
                 if (File.Exists(DanhsachgiaidauXmlPath))
@@ -46,7 +45,7 @@ namespace HDCGStudio
             {
                 //HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            _updateNotifier = Path.Combine(Application.StartupPath, "UpdateNotifier.xml");
+            _updateNotifier = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "UpdateNotifier.xml");
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {

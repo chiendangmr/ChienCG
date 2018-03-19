@@ -26,7 +26,7 @@ namespace HDCGStudio
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
             var xmlFileName = "template_" + Utils.ConvertToVietnameseNonSign(_templateType).Replace(" ", "").ToLower() + "_list.xml";
-            templatesXmlPath = Path.Combine(Application.StartupPath, xmlFileName);
+            templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), xmlFileName);
             try
             {
                 if (File.Exists(templatesXmlPath))

@@ -59,7 +59,7 @@ namespace HDCGStudio
                 cboTempLayer.SelectedIndex = 5;
                 cboTemplateType.SelectedIndex = 0;
 
-                _videoXmlPath = Path.Combine(Application.StartupPath, "Video.xml");
+                _videoXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Video.xml");
                 try
                 {
                     if (File.Exists(_videoXmlPath))
@@ -78,7 +78,7 @@ namespace HDCGStudio
                 }
                 catch { }
 
-                _updateDataXml = Path.Combine(Application.StartupPath, "UpdateData.xml");
+                _updateDataXml = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "UpdateData.xml");
                 try
                 {
                     if (File.Exists(_updateDataXml))
@@ -93,7 +93,7 @@ namespace HDCGStudio
                     }
                 }
                 catch { }
-                _updateNotifier = Path.Combine(Application.StartupPath, "UpdateNotifier.xml");
+                _updateNotifier = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "UpdateNotifier.xml");
                 try
                 {
                     if (File.Exists(_updateNotifier))
@@ -109,7 +109,7 @@ namespace HDCGStudio
                 }
                 catch { }
                 //Load danh sách giải đấu
-                _danhsachgiaidauXmlPath = Path.Combine(Application.StartupPath, "Danhsachgiaidau.xml");
+                _danhsachgiaidauXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachgiaidau.xml");
                 try
                 {
                     if (File.Exists(_danhsachgiaidauXmlPath))
@@ -644,8 +644,8 @@ namespace HDCGStudio
             dicTemplates.Clear();
             var xmlTemplate = "template_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
             var xmlPlaylist = "playlist_" + Utils.ConvertToVietnameseNonSign(cboTemplateType.Text).Replace(" ", "").ToLower() + "_list.xml";
-            _templateXmlPath = Path.Combine(Application.StartupPath, xmlTemplate);
-            _tempInfoXmlPath = Path.Combine(Application.StartupPath, xmlPlaylist);
+            _templateXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), xmlTemplate);
+            _tempInfoXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), xmlPlaylist);
 
             try
             {
@@ -997,18 +997,18 @@ namespace HDCGStudio
         {
             var lstChinhthuc = new List<View.Player>();
             if (team == "home")
-                lstChinhthuc = (bsHomePlayer.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
+                lstChinhthuc = (bsHomePlayer.List as BindingList<View.Player>).OrderBy(a => a.mObj.Index).ToList();
             else if (team == "away")
-                lstChinhthuc = (bsAwayPlayer.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
+                lstChinhthuc = (bsAwayPlayer.List as BindingList<View.Player>).OrderBy(a => a.mObj.Index).ToList();
             return lstChinhthuc;
         }
         public List<View.Player> GetTeamDuBi(string team)
         {
             var lstChinhthuc = new List<View.Player>();
             if (team == "home")
-                lstChinhthuc = (bsHomePlayerDuBi.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
+                lstChinhthuc = (bsHomePlayerDuBi.List as BindingList<View.Player>).OrderBy(a => a.mObj.Index).ToList();
             else if (team == "away")
-                lstChinhthuc = (bsAwayPlayerDuBi.List as BindingList<View.Player>).OrderBy(a => a.mObj.Number).ToList();
+                lstChinhthuc = (bsAwayPlayerDuBi.List as BindingList<View.Player>).OrderBy(a => a.mObj.Index).ToList();
             return lstChinhthuc;
         }
         public string GetPlayerName(string playerStr)
@@ -1062,7 +1062,7 @@ namespace HDCGStudio
                     xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number.ToString());
                     if (_tempName == "BongDa_CauThu.ft")
                     {
-                        xmlAdd += Add("playerStr", GetPlayingPlayer().mObj.Number.ToString() + ". " + GetPlayingPlayer().mObj.Name);
+                        xmlAdd += Add("playerStr", GetPlayingPlayer().mObj.Number.ToString() + ". " + GetPlayingPlayer().mObj.ShortName);
                     }
 
                     xmlAdd += Add("trongtaichinh", txtTrongtaiChinh.Text);
@@ -1319,7 +1319,7 @@ namespace HDCGStudio
         {
             try
             {
-                var danhsachdoiPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + dicDanhsachgiaidau.FirstOrDefault(x => x.Value == cboGiaiDau.Text).Key + ".xml");
+                var danhsachdoiPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachdoi" + dicDanhsachgiaidau.FirstOrDefault(x => x.Value == cboGiaiDau.Text).Key + ".xml");
                 try
                 {
                     if (File.Exists(danhsachdoiPath))
@@ -1382,7 +1382,7 @@ namespace HDCGStudio
                     break;
                 }
             }
-            var templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboDoiChuNha.Text).Replace(" ", "_") + ".xml");
+            var templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboDoiChuNha.Text).Replace(" ", "_") + ".xml");
             try
             {
                 if (File.Exists(templatesXmlPath))
@@ -1429,7 +1429,7 @@ namespace HDCGStudio
                     break;
                 }
             }
-            var templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboDoiKhach.Text).Replace(" ", "_") + ".xml");
+            var templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboDoiKhach.Text).Replace(" ", "_") + ".xml");
             try
             {
                 if (File.Exists(templatesXmlPath))

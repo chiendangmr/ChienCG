@@ -1277,7 +1277,7 @@
             // 
             // txtThongsocauthuChu
             // 
-            this.txtThongsocauthuChu.EditValue = "0 bàn sau 0 trận";
+            this.txtThongsocauthuChu.EditValue = "Ghi bàn";
             this.txtThongsocauthuChu.Location = new System.Drawing.Point(141, 340);
             this.txtThongsocauthuChu.MenuManager = this.barManager1;
             this.txtThongsocauthuChu.Name = "txtThongsocauthuChu";
@@ -1579,7 +1579,7 @@
             // 
             // txtThongsocauthuKhach
             // 
-            this.txtThongsocauthuKhach.EditValue = "0 bàn sau 0 trận";
+            this.txtThongsocauthuKhach.EditValue = "Ghi bàn";
             this.txtThongsocauthuKhach.Location = new System.Drawing.Point(28, 340);
             this.txtThongsocauthuKhach.MenuManager = this.barManager1;
             this.txtThongsocauthuKhach.Name = "txtThongsocauthuKhach";

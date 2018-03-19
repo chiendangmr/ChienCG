@@ -28,7 +28,7 @@ namespace HDCGStudio
         string _danhsachdoiXmlPath = "";
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
-            _danhsachdoiXmlPath = Path.Combine(Application.StartupPath, "Danhsachdoi" + _giaidau + ".xml");
+            _danhsachdoiXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachdoi" + _giaidau + ".xml");
             try
             {
                 if (File.Exists(_danhsachdoiXmlPath))
@@ -69,7 +69,8 @@ namespace HDCGStudio
                             IsSubstitution = ckDubi.Checked,
                             IsGK = ckIsGK.Checked,
                             ShortName = txtShortName.Text,
-                            Team = cboTeams.Text
+                            Team = cboTeams.Text,
+                            Index = (int)nIndex.Value
                         }
                     });
 
@@ -132,7 +133,7 @@ namespace HDCGStudio
         {
             if (!_isRowClick)
             {
-                templatesXmlPath = Path.Combine(Application.StartupPath, "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboTeams.Text).Replace(" ", "_") + ".xml");
+                templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboTeams.Text).Replace(" ", "_") + ".xml");
                 try
                 {
                     if (File.Exists(templatesXmlPath))
@@ -170,6 +171,7 @@ namespace HDCGStudio
             ckIsCaptain.Checked = temp.mObj.IsCaptain;
             ckIsNotSubstitution.Checked = temp.mObj.IsNotSubstitution;
             ckDubi.Checked = temp.mObj.IsSubstitution;
+            nIndex.Value = temp.mObj.Index;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -194,7 +196,8 @@ namespace HDCGStudio
                             IsSubstitution = ckDubi.Checked,
                             IsGK = ckIsGK.Checked,
                             ShortName = txtShortName.Text,
-                            Team = cboTeams.Text
+                            Team = cboTeams.Text,
+                            Index = (int)nIndex.Value
                         }
                     });
                     gvPlayers.FocusedRowHandle = bsManagePlayers.List.IndexOf(temp);

@@ -40,6 +40,9 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsCaptain = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsSubstitution = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.nIndex = new System.Windows.Forms.NumericUpDown();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.ckDubi = new DevExpress.XtraEditors.CheckEdit();
             this.txtShortName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -56,12 +59,13 @@
             this.btnRemove = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsManagePlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPlayers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nIndex)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckDubi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTeams.Properties)).BeginInit();
@@ -80,6 +84,8 @@
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.gridPlayers);
             this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.nIndex);
+            this.splitContainerControl1.Panel2.Controls.Add(this.labelControl5);
             this.splitContainerControl1.Panel2.Controls.Add(this.ckDubi);
             this.splitContainerControl1.Panel2.Controls.Add(this.txtShortName);
             this.splitContainerControl1.Panel2.Controls.Add(this.labelControl4);
@@ -96,7 +102,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.btnRemove);
             this.splitContainerControl1.Panel2.Controls.Add(this.btnAdd);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(803, 741);
+            this.splitContainerControl1.Size = new System.Drawing.Size(912, 816);
             this.splitContainerControl1.SplitterPosition = 481;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -108,7 +114,7 @@
             this.gridPlayers.Location = new System.Drawing.Point(0, 0);
             this.gridPlayers.MainView = this.gvPlayers;
             this.gridPlayers.Name = "gridPlayers";
-            this.gridPlayers.Size = new System.Drawing.Size(803, 481);
+            this.gridPlayers.Size = new System.Drawing.Size(912, 481);
             this.gridPlayers.TabIndex = 0;
             this.gridPlayers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPlayers});
@@ -126,7 +132,8 @@
             this.gridColumn1,
             this.colIsCaptain,
             this.colIsSubstitution,
-            this.gridColumn4});
+            this.gridColumn4,
+            this.gridColumn5});
             this.gvPlayers.GridControl = this.gridPlayers;
             this.gvPlayers.Name = "gvPlayers";
             this.gvPlayers.OptionsView.ShowGroupPanel = false;
@@ -140,7 +147,7 @@
             this.colNumber.AppearanceHeader.Options.UseTextOptions = true;
             this.colNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNumber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colNumber.Caption = "Số";
+            this.colNumber.Caption = "Số áo";
             this.colNumber.FieldName = "mObj.Number";
             this.colNumber.Name = "colNumber";
             this.colNumber.OptionsColumn.AllowEdit = false;
@@ -225,9 +232,41 @@
             this.colIsSubstitution.VisibleIndex = 5;
             this.colIsSubstitution.Width = 101;
             // 
+            // gridColumn4
+            // 
+            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.Caption = "Dự bị";
+            this.gridColumn4.FieldName = "mObj.IsSubstitution";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 6;
+            // 
+            // nIndex
+            // 
+            this.nIndex.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nIndex.Location = new System.Drawing.Point(747, 124);
+            this.nIndex.Name = "nIndex";
+            this.nIndex.Size = new System.Drawing.Size(86, 27);
+            this.nIndex.TabIndex = 16;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(648, 124);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(90, 24);
+            this.labelControl5.TabIndex = 24;
+            this.labelControl5.Text = "Số thứ tự:";
+            // 
             // ckDubi
             // 
-            this.ckDubi.Location = new System.Drawing.Point(367, 123);
+            this.ckDubi.Location = new System.Drawing.Point(331, 177);
             this.ckDubi.Name = "ckDubi";
             this.ckDubi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.ckDubi.Properties.Appearance.Options.UseFont = true;
@@ -238,18 +277,18 @@
             // 
             // txtShortName
             // 
-            this.txtShortName.Location = new System.Drawing.Point(541, 65);
+            this.txtShortName.Location = new System.Drawing.Point(137, 121);
             this.txtShortName.Name = "txtShortName";
             this.txtShortName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtShortName.Properties.Appearance.Options.UseFont = true;
-            this.txtShortName.Size = new System.Drawing.Size(215, 30);
+            this.txtShortName.Size = new System.Drawing.Size(405, 30);
             this.txtShortName.TabIndex = 15;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(421, 71);
+            this.labelControl4.Location = new System.Drawing.Point(8, 124);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(111, 24);
             this.labelControl4.TabIndex = 15;
@@ -259,7 +298,7 @@
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(325, 183);
+            this.simpleButton1.Location = new System.Drawing.Point(406, 238);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(98, 57);
             this.simpleButton1.TabIndex = 21;
@@ -275,7 +314,7 @@
             this.cboTeams.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboTeams.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboTeams.Size = new System.Drawing.Size(619, 26);
+            this.cboTeams.Size = new System.Drawing.Size(696, 26);
             this.cboTeams.TabIndex = 13;
             this.cboTeams.SelectedIndexChanged += new System.EventHandler(this.cboTeams_SelectedIndexChanged);
             // 
@@ -291,7 +330,7 @@
             // 
             // ckIsGK
             // 
-            this.ckIsGK.Location = new System.Drawing.Point(481, 123);
+            this.ckIsGK.Location = new System.Drawing.Point(495, 177);
             this.ckIsGK.Name = "ckIsGK";
             this.ckIsGK.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.ckIsGK.Properties.Appearance.Options.UseFont = true;
@@ -303,7 +342,7 @@
             // ckIsNotSubstitution
             // 
             this.ckIsNotSubstitution.EditValue = true;
-            this.ckIsNotSubstitution.Location = new System.Drawing.Point(229, 123);
+            this.ckIsNotSubstitution.Location = new System.Drawing.Point(133, 177);
             this.ckIsNotSubstitution.Name = "ckIsNotSubstitution";
             this.ckIsNotSubstitution.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.ckIsNotSubstitution.Properties.Appearance.Options.UseFont = true;
@@ -314,7 +353,7 @@
             // 
             // ckIsCaptain
             // 
-            this.ckIsCaptain.Location = new System.Drawing.Point(619, 123);
+            this.ckIsCaptain.Location = new System.Drawing.Point(696, 177);
             this.ckIsCaptain.Name = "ckIsCaptain";
             this.ckIsCaptain.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.ckIsCaptain.Properties.Appearance.Options.UseFont = true;
@@ -337,7 +376,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(62, 122);
+            this.labelControl1.Location = new System.Drawing.Point(681, 68);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(57, 24);
             this.labelControl1.TabIndex = 4;
@@ -349,12 +388,12 @@
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtName.Properties.Appearance.Options.UseFont = true;
-            this.txtName.Size = new System.Drawing.Size(227, 30);
+            this.txtName.Size = new System.Drawing.Size(405, 30);
             this.txtName.TabIndex = 14;
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(137, 121);
+            this.txtNumber.Location = new System.Drawing.Point(747, 68);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtNumber.Properties.Appearance.Options.UseFont = true;
@@ -365,7 +404,7 @@
             // 
             this.btnRemove.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.ImageOptions.Image")));
             this.btnRemove.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRemove.Location = new System.Drawing.Point(483, 183);
+            this.btnRemove.Location = new System.Drawing.Point(564, 238);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(93, 57);
             this.btnRemove.TabIndex = 22;
@@ -376,7 +415,7 @@
             // 
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
             this.btnAdd.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnAdd.Location = new System.Drawing.Point(178, 183);
+            this.btnAdd.Location = new System.Drawing.Point(259, 238);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(98, 57);
             this.btnAdd.TabIndex = 20;
@@ -399,19 +438,19 @@
             this.gridColumn3.VisibleIndex = 5;
             this.gridColumn3.Width = 101;
             // 
-            // gridColumn4
+            // gridColumn5
             // 
-            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn4.Caption = "Dự bị";
-            this.gridColumn4.FieldName = "mObj.IsSubstitution";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 6;
+            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn5.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn5.Caption = "STT";
+            this.gridColumn5.FieldName = "mObj.Index";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 7;
             // 
             // ManagePlayersForm
             // 
@@ -419,7 +458,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(803, 741);
+            this.ClientSize = new System.Drawing.Size(912, 816);
             this.Controls.Add(this.splitContainerControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -434,6 +473,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridPlayers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsManagePlayers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPlayers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nIndex)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckDubi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTeams.Properties)).EndInit();
@@ -475,5 +515,8 @@
         private DevExpress.XtraEditors.CheckEdit ckDubi;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private System.Windows.Forms.NumericUpDown nIndex;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }

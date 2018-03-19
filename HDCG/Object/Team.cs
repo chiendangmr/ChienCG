@@ -9,6 +9,7 @@ namespace HDCGStudio.Object
     {        
         public string Name { get; set; }
         public string ShortName { get; set; }
+        public string TeamCode { get; set; }
         public string LogoPath { get; set; }
         public string CoachName { get; set; }
         public int Position { get; set; }

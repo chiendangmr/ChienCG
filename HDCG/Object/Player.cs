@@ -15,6 +15,7 @@ namespace HDCGStudio.Object
         public bool IsCaptain { get; set; }
         public bool IsGK { get; set; }
         public string Team { get; set; }
+        public int Index { get; set; }
         
     }
 }
