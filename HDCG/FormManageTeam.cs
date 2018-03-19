@@ -77,9 +77,9 @@ namespace HDCGStudio
         {
             try
             {
-                if (txtName.Text.Trim().Length == 0 || txtCoach.Text.Trim().Length == 0 || txtShortName.Text.Trim().Length == 0 || cboLeague.Text.Trim().Length == 0)
+                if (txtMaDoi.Text.Trim().Length == 0 || txtName.Text.Trim().Length == 0 || txtCoach.Text.Trim().Length == 0 || txtShortName.Text.Trim().Length == 0 || cboLeague.Text.Trim().Length == 0)
                 {
-                    HDMessageBox.Show("Phải chọn đủ Giải đấu, Tên, Tên viết tắt và HLV để khởi tạo một đội bóng!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    HDMessageBox.Show("Phải chọn đủ Giải đấu, Mã đội, Tên, Tên viết tắt và HLV để khởi tạo một đội bóng!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -167,24 +167,28 @@ namespace HDCGStudio
 
         private void gvTeams_RowClick(object sender, RowClickEventArgs e)
         {
-            var temp = gvTeams.GetFocusedRow() as View.Team;
-            cboLeague.Text = dicDanhsachgiaidau[temp.tObj.LeagueCode];
-            txtCoach.Text = temp.tObj.CoachName;
-            txtName.Text = temp.tObj.Name;
-            txtShortName.Text = temp.tObj.ShortName;
-            txtLogoPath.Text = temp.tObj.LogoPath;
-            txtSanNha.Text = temp.tObj.Stadium;
-            nPosition.Value = temp.tObj.Position;
-            txtMaDoi.Text = temp.tObj.TeamCode;
+            try
+            {
+                var temp = gvTeams.GetFocusedRow() as View.Team;
+                cboLeague.Text = dicDanhsachgiaidau[temp.tObj.LeagueCode];
+                txtCoach.Text = temp.tObj.CoachName;
+                txtName.Text = temp.tObj.Name;
+                txtShortName.Text = temp.tObj.ShortName;
+                txtLogoPath.Text = temp.tObj.LogoPath;
+                txtSanNha.Text = temp.tObj.Stadium;
+                nPosition.Value = temp.tObj.Position;
+                txtMaDoi.Text = temp.tObj.TeamCode;
+            }
+            catch { }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtName.Text.Trim().Length == 0 || txtCoach.Text.Trim().Length == 0 || txtShortName.Text.Trim().Length == 0 || cboLeague.Text.Trim().Length == 0)
+                if (txtMaDoi.Text.Trim().Length == 0 || txtName.Text.Trim().Length == 0 || txtCoach.Text.Trim().Length == 0 || txtShortName.Text.Trim().Length == 0 || cboLeague.Text.Trim().Length == 0)
                 {
-                    HDMessageBox.Show("Phải chọn đủ Giải đấu, Tên, Tên viết tắt và HLV!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    HDMessageBox.Show("Phải chọn đủ Giải đấu, Mã đội, Tên, Tên viết tắt và HLV!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {

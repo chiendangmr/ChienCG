@@ -18,6 +18,7 @@ namespace HDCGStudio
     {
         string _giaidau = "";
         string _team = "";
+        Dictionary<string, string> dicDanhsachdoi = new Dictionary<string, string>();
         public ManagePlayersForm(string GiaiDau, string team)
         {
             InitializeComponent();
@@ -35,7 +36,10 @@ namespace HDCGStudio
                 {
                     var lstTemplate = Utils.GetObject<List<Object.Team>>(_danhsachdoiXmlPath);
                     foreach (var temp in lstTemplate)
+                    {
                         cboTeams.Properties.Items.Add(temp.Name);
+                        dicDanhsachdoi.Add(temp.TeamCode, temp.Name);
+                    }
                 }
                 else
                 {
@@ -46,7 +50,14 @@ namespace HDCGStudio
             {
                 HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            cboTeams.Text = _team;
+            for (int i = 0; i < cboTeams.Properties.Items.Count; i++)
+            {
+                if (cboTeams.Properties.Items[i].ToString() == dicDanhsachdoi[_team])
+                {
+                    cboTeams.SelectedIndex = i;
+                    break;
+                }
+            }
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -133,7 +144,7 @@ namespace HDCGStudio
         {
             if (!_isRowClick)
             {
-                templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboTeams.Text).Replace(" ", "_") + ".xml");
+                templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachcauthu" + dicDanhsachdoi.FirstOrDefault(x => x.Value == cboTeams.Text).Key + ".xml");
                 try
                 {
                     if (File.Exists(templatesXmlPath))
@@ -161,17 +172,21 @@ namespace HDCGStudio
 
         private void gvPlayers_RowClick(object sender, RowClickEventArgs e)
         {
-            _isRowClick = true;
-            var temp = gvPlayers.GetFocusedRow() as View.Player;
-            cboTeams.Text = temp.mObj.Team;
-            txtNumber.Text = temp.mObj.Number.ToString();
-            txtName.Text = temp.mObj.Name;
-            txtShortName.Text = temp.mObj.ShortName;
-            ckIsGK.Checked = temp.mObj.IsGK;
-            ckIsCaptain.Checked = temp.mObj.IsCaptain;
-            ckIsNotSubstitution.Checked = temp.mObj.IsNotSubstitution;
-            ckDubi.Checked = temp.mObj.IsSubstitution;
-            nIndex.Value = temp.mObj.Index;
+            try
+            {
+                _isRowClick = true;
+                var temp = gvPlayers.GetFocusedRow() as View.Player;
+                cboTeams.Text = temp.mObj.Team;
+                txtNumber.Text = temp.mObj.Number.ToString();
+                txtName.Text = temp.mObj.Name;
+                txtShortName.Text = temp.mObj.ShortName;
+                ckIsGK.Checked = temp.mObj.IsGK;
+                ckIsCaptain.Checked = temp.mObj.IsCaptain;
+                ckIsNotSubstitution.Checked = temp.mObj.IsNotSubstitution;
+                ckDubi.Checked = temp.mObj.IsSubstitution;
+                nIndex.Value = temp.mObj.Index;
+            }
+            catch { }
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

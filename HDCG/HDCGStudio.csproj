@@ -188,6 +188,7 @@
     <None Include="Properties\DataSources\HDCG.View.Watermark.datasource" />
     <None Include="Properties\DataSources\HDCG.View.Crawler.datasource" />
     <None Include="Properties\DataSources\HDCG.View.Video.datasource" />
+    <None Include="Properties\DataSources\HDCGStudio.Object.Goal.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.Object.tempUpdating.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.Object.UpdateNotifier.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.View.Goal.datasource" />

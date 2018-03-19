@@ -46,6 +46,7 @@ namespace HDCGStudio
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
         Dictionary<string, string> dicDanhsachgiaidau = new Dictionary<string, string>();
+        Dictionary<string, string> dicDanhsachdoi = new Dictionary<string, string>();
 
         HDCGControler.CasparCG cgServer = null;
         private void MainForm_Shown(object sender, EventArgs e)
@@ -530,27 +531,6 @@ namespace HDCGStudio
                         Value = "false"
                     });
                     string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
-                    if (_tempName == "BongDa_ThayNguoi.ft")
-                    {
-                        if (ckChu.Checked)
-                        {
-                            var playerIn = GetPlayerIn();
-                            var playerOut = GetPlayerOut();
-                            bsHomePlayer.List.Insert(bsHomePlayer.List.IndexOf(playerOut), playerIn);
-                            bsHomePlayerDuBi.List.Insert(bsHomePlayer.List.IndexOf(playerIn), playerOut);
-                            bsHomePlayer.List.Remove(playerOut);
-                            bsHomePlayerDuBi.List.Remove(playerIn);
-                        }
-                        if (ckKhach.Checked)
-                        {
-                            var playerIn = GetPlayerIn();
-                            var playerOut = GetPlayerOut();
-                            bsAwayPlayer.List.Insert(bsAwayPlayer.List.IndexOf(playerOut), playerIn);
-                            bsAwayPlayerDuBi.List.Insert(bsAwayPlayer.List.IndexOf(playerIn), playerOut);
-                            bsAwayPlayer.List.Remove(playerOut);
-                            bsAwayPlayerDuBi.List.Remove(playerIn);
-                        }
-                    }
 
                     System.Threading.Timer timer = null;
                     timer = new System.Threading.Timer((obj) =>
@@ -943,27 +923,27 @@ namespace HDCGStudio
         }
 
         #region Các hàm get thông tin template
-        public View.Player GetPlayingPlayer()
+        public View.Player GetPlayingPlayer(bool isChu)
         {
             var player = new View.Player();
-            if (ckChu.Checked)
+            if (isChu)
             {
                 player = gvHomePlayer.GetFocusedRow() as View.Player;
             }
-            else if (ckKhach.Checked)
+            else
             {
                 player = gvAwayPlayer.GetFocusedRow() as View.Player;
             }
             return player;
         }
-        public string GetTeamName()
+        public string GetTeamName(bool isChu)
         {
             var teamName = "";
-            if (ckChu.Checked)
+            if (isChu)
             {
                 teamName = cboDoiChuNha.Text;
             }
-            else if (ckKhach.Checked)
+            else
             {
                 teamName = cboDoiKhach.Text;
             }
@@ -1020,49 +1000,49 @@ namespace HDCGStudio
             return playerStr.Substring(0, playerStr.IndexOf("-")).Trim();
         }
         #region Get cầu thủ vào sân, ra sân
-        public View.Player GetPlayerOut()
+        public View.Player GetPlayerOut(bool isChu)
         {
             var player = new View.Player();
-            if (ckChu.Checked)
+            if (isChu)
             {
                 player = gvHomePlayer.GetFocusedRow() as View.Player;
             }
-            else if (ckKhach.Checked)
+            else
             {
                 player = gvAwayPlayer.GetFocusedRow() as View.Player;
             }
             return player;
         }
-        public View.Player GetPlayerIn()
+        public View.Player GetPlayerIn(bool isChu)
         {
             var player = new View.Player();
-            if (ckChu.Checked)
+            if (isChu)
             {
                 player = gvHomePlayerDuBi.GetFocusedRow() as View.Player;
             }
-            else if (ckKhach.Checked)
+            else
             {
                 player = gvAwayPlayerDuBi.GetFocusedRow() as View.Player;
             }
             return player;
         }
         #endregion
-        public string GetAddXmlString()
+        public string GetAddXmlString(bool isChu = true)
         {
             var xmlAdd = "";
             if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
             {
                 try
                 {
-                    xmlAdd += Add("doibong", GetTeamName());
+                    xmlAdd += Add("doibong", GetTeamName(isChu));
                     xmlAdd += Add("doichuShort", txtHomeShortName.Text);
                     xmlAdd += Add("doikhachShort", txtAwayShortName.Text);
                     xmlAdd += Add("hiepdau", txtHiep.Text);
-                    xmlAdd += Add("player1", GetPlayingPlayer().mObj.ShortName);
-                    xmlAdd += Add("playerNumber1", GetPlayingPlayer().mObj.Number.ToString());
+                    xmlAdd += Add("player1", GetPlayingPlayer(isChu).mObj.ShortName);
+                    xmlAdd += Add("playerNumber1", GetPlayingPlayer(isChu).mObj.Number.ToString());
                     if (_tempName == "BongDa_CauThu.ft")
                     {
-                        xmlAdd += Add("playerStr", GetPlayingPlayer().mObj.Number.ToString() + ". " + GetPlayingPlayer().mObj.ShortName);
+                        xmlAdd += Add("playerStr", GetPlayingPlayer(isChu).mObj.Number.ToString() + ". " + GetPlayingPlayer(isChu).mObj.ShortName);
                     }
 
                     xmlAdd += Add("trongtaichinh", txtTrongtaiChinh.Text);
@@ -1082,10 +1062,10 @@ namespace HDCGStudio
                     xmlAdd += Add("bugio", nBugio.Value.ToString());
                     if (_tempName == "BongDa_ThayNguoi.ft")
                     {
-                        xmlAdd += Add("playerin", GetPlayerIn().mObj.Name);
-                        xmlAdd += Add("playerout", GetPlayerOut().mObj.Name);
-                        xmlAdd += Add("playerInNumber", GetPlayerIn().mObj.Number.ToString());
-                        xmlAdd += Add("playerOutNumber", GetPlayerOut().mObj.Number.ToString());
+                        xmlAdd += Add("playerin", GetPlayerIn(isChu).mObj.Name);
+                        xmlAdd += Add("playerout", GetPlayerOut(isChu).mObj.Name);
+                        xmlAdd += Add("playerInNumber", GetPlayerIn(isChu).mObj.Number.ToString());
+                        xmlAdd += Add("playerOutNumber", GetPlayerOut(isChu).mObj.Number.ToString());
 
                     }
                     if (rbHiep1.Checked)
@@ -1105,7 +1085,7 @@ namespace HDCGStudio
                         xmlAdd += Add("dongho", lbThoigianHiepPhu2.Text);
                     }
 
-                    if (_tempName == "BongDa_TySoChinh.ft" || _tempName == "BongDa_BangCho.ft")
+                    if (_tempName == "BongDa_ThongSoCuoiTran.ft" || _tempName == "BongDa_BangCho.ft")
                     {
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
@@ -1117,34 +1097,24 @@ namespace HDCGStudio
                     }
                     else
                     {
-                        if (ckChu.Checked)
+                        if (isChu)
                         {
                             xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
                         }
-                        else if (ckKhach.Checked)
+                        else
                         {
                             xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
                         }
                     }
-                    if (ckChu.Checked)
+                    if (isChu)
                     {
                         xmlAdd += Add("hlv", txtHomeCoach.Text);
-                        if (!_forUpdate)
-                        {
-                            //xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
-                            //xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoChu.Text));
-                        }
-                        xmlAdd += Add("thongsocauthu", txtThongsocauthuChu.Text);
+                        xmlAdd += Add("thongsocauthu", cboNoiDungChu.Text);
                     }
-                    if (ckKhach.Checked)
+                    else
                     {
                         xmlAdd += Add("hlv", txtAwayCoach.Text);
-                        if (!_forUpdate)
-                        {
-                            //xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
-                            //xmlAdd += Add("image", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "DoiHinh"), txtMauAoKhach.Text));
-                        }
-                        xmlAdd += Add("thongsocauthu", txtThongsocauthuKhach.Text);
+                        xmlAdd += Add("thongsocauthu", cboNoiDungKhach.Text);
 
                     }
                     xmlAdd += Add("doiChu", cboDoiChuNha.Text);
@@ -1187,9 +1157,18 @@ namespace HDCGStudio
                             }
                     }
                     //Danh sách ghi bàn
-
-                    xmlAdd += Add("ghibanChu", rtbGhiBanChu.Text);
-                    xmlAdd += Add("ghibanKhach", rtbGhiBanKhach.Text);
+                    string tempGhiBanChu = "";
+                    foreach (var temp in bsGhibanChu.List as BindingList<Object.Goal>)
+                    {
+                        tempGhiBanChu += temp.Name + "   " + temp.StrMin + "\n";
+                    }
+                    string tempGhiBanKhach = "";
+                    foreach (var temp in bsGhibanKhach.List as BindingList<Object.Goal>)
+                    {
+                        tempGhiBanKhach += temp.StrMin + "   " + temp.Name + "\n";
+                    }
+                    xmlAdd += Add("ghibanChu", tempGhiBanChu);
+                    xmlAdd += Add("ghibanKhach", tempGhiBanKhach);
 
                     if (_tempName == "BongDa_ThongSoCuoiTran.ft")
                     {
@@ -1290,23 +1269,7 @@ namespace HDCGStudio
             }
             return xmlAdd;
         }
-        #endregion       
-
-        private void ckCauthuChu_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckChu.Checked)
-            {
-                ckKhach.Checked = false;
-            }
-        }
-
-        private void ckCauthuKhach_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckKhach.Checked)
-            {
-                ckChu.Checked = false;
-            }
-        }
+        #endregion               
 
         private void btnQuanlyGiaiDau_Click(object sender, EventArgs e)
         {
@@ -1324,6 +1287,7 @@ namespace HDCGStudio
                 {
                     if (File.Exists(danhsachdoiPath))
                     {
+                        dicDanhsachdoi.Clear();
                         cboDoiChuNha.Properties.Items.Clear();
                         cboDoiKhach.Properties.Items.Clear();
                         _lstTeams = Utils.GetObject<List<Object.Team>>(danhsachdoiPath);
@@ -1331,6 +1295,7 @@ namespace HDCGStudio
                         {
                             cboDoiChuNha.Properties.Items.Add(data.Name);
                             cboDoiKhach.Properties.Items.Add(data.Name);
+                            dicDanhsachdoi.Add(data.TeamCode, data.Name);
                         }
                     }
                     else
@@ -1365,7 +1330,7 @@ namespace HDCGStudio
             }
             else
             {
-                ManagePlayersForm frmPlayer = new ManagePlayersForm(dicDanhsachgiaidau.FirstOrDefault(x => x.Value == cboGiaiDau.Text).Key, cboDoiChuNha.Text);
+                ManagePlayersForm frmPlayer = new ManagePlayersForm(dicDanhsachgiaidau.FirstOrDefault(x => x.Value == cboGiaiDau.Text).Key, dicDanhsachdoi.FirstOrDefault(x => x.Value == cboDoiChuNha.Text).Key);
                 frmPlayer.Show();
                 frmPlayer.Activate();
             }
@@ -1382,7 +1347,7 @@ namespace HDCGStudio
                     break;
                 }
             }
-            var templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboDoiChuNha.Text).Replace(" ", "_") + ".xml");
+            var templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachcauthu" + dicDanhsachdoi.FirstOrDefault(x => x.Value == cboDoiChuNha.Text).Key + ".xml");
             try
             {
                 if (File.Exists(templatesXmlPath))
@@ -1390,6 +1355,8 @@ namespace HDCGStudio
                     bsHomePlayer.Clear();
                     bsHomePlayerDuBi.Clear();
                     bsGhibanChu.Clear();
+                    cboGhibanChu.Properties.Items.Clear();
+                    bsGhibanChu.List.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
                     {
@@ -1397,6 +1364,7 @@ namespace HDCGStudio
                         {
                             mObj = temp
                         });
+                        cboGhibanChu.Properties.Items.Add(temp.Name);
                     }
                     var lstDubi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsSubstitution == true);
                     foreach (var temp in lstDubi)
@@ -1405,6 +1373,7 @@ namespace HDCGStudio
                         {
                             mObj = temp
                         });
+                        cboGhibanChu.Properties.Items.Add(temp.Name);
                     }
                 }
                 else
@@ -1429,7 +1398,7 @@ namespace HDCGStudio
                     break;
                 }
             }
-            var templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachcauthu" + Utils.ConvertToVietnameseNonSign(cboDoiKhach.Text).Replace(" ", "_") + ".xml");
+            var templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachcauthu" + dicDanhsachdoi.FirstOrDefault(x => x.Value == cboDoiKhach.Text).Key + ".xml");
             try
             {
                 if (File.Exists(templatesXmlPath))
@@ -1437,6 +1406,8 @@ namespace HDCGStudio
                     bsAwayPlayer.Clear();
                     bsAwayPlayerDuBi.Clear();
                     bsGhibanKhach.Clear();
+                    cboGhiBanKhach.Properties.Items.Clear();
+                    bsGhibanKhach.List.Clear();
                     var lstTemplate = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsNotSubstitution == true);
                     foreach (var temp in lstTemplate)
                     {
@@ -1444,6 +1415,7 @@ namespace HDCGStudio
                         {
                             mObj = temp
                         });
+                        cboGhiBanKhach.Properties.Items.Add(temp.Name);
                     }
                     var lstDuBi = Utils.GetObject<List<Object.Player>>(templatesXmlPath).Where(a => a.IsSubstitution == true);
                     foreach (var temp in lstDuBi)
@@ -1452,6 +1424,7 @@ namespace HDCGStudio
                         {
                             mObj = temp
                         });
+                        cboGhiBanKhach.Properties.Items.Add(temp.Name);
                     }
                 }
                 else
@@ -1473,7 +1446,7 @@ namespace HDCGStudio
             }
             else
             {
-                ManagePlayersForm frmPlayer = new ManagePlayersForm(dicDanhsachgiaidau.FirstOrDefault(x => x.Value == cboGiaiDau.Text).Key, cboDoiKhach.Text);
+                ManagePlayersForm frmPlayer = new ManagePlayersForm(dicDanhsachgiaidau.FirstOrDefault(x => x.Value == cboGiaiDau.Text).Key, dicDanhsachdoi.FirstOrDefault(x => x.Value == cboDoiKhach.Text).Key);
                 frmPlayer.Show();
                 frmPlayer.Activate();
             }
@@ -1801,6 +1774,577 @@ namespace HDCGStudio
             catch
             {
                 HDMessageBox.Show("404 - Template not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnOnHLVChu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _tempName = "BongDa_HLV.ft";
+                List<Object.Property> runtimeProperties = new List<Object.Property>();
+                runtimeProperties.Add(new Object.Property()
+                {
+                    Name = "Loops",
+                    Value = "false"
+                });
+                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+            }
+            catch { }
+        }
+
+        private void btnOffHLVChu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OffTemplate(105);
+            }
+            catch
+            {
+                HDMessageBox.Show("404 - Template not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnOnHLVKhach_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _tempName = "BongDa_HLV.ft";
+                List<Object.Property> runtimeProperties = new List<Object.Property>();
+                runtimeProperties.Add(new Object.Property()
+                {
+                    Name = "Loops",
+                    Value = "false"
+                });
+                string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
+                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+            }
+            catch { }
+        }
+
+        private void btnOffHLVKhach_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OffTemplate(105);
+            }
+            catch
+            {
+                HDMessageBox.Show("404 - Template not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnOnNoiDungChu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cboNoiDungChu.Text == "Thay người")
+                {
+                    _tempName = "BongDa_ThayNguoi.ft";
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    var playerIn = GetPlayerIn(true);
+                    var playerOut = GetPlayerOut(true);
+                    bsHomePlayer.List.Insert(bsHomePlayer.List.IndexOf(playerOut), playerIn);
+                    bsHomePlayerDuBi.List.Insert(bsHomePlayer.List.IndexOf(playerIn), playerOut);
+                    bsHomePlayer.List.Remove(playerOut);
+                    bsHomePlayerDuBi.List.Remove(playerIn);
+                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                }
+                else if (cboNoiDungChu.Text == "Ghi bàn")
+                {
+                    _tempName = "BongDa_CauThu.ft";
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                }
+                else if (cboNoiDungChu.Text == "Thẻ vàng")
+                {
+                    _tempName = "BongDa_TheVang.ft";
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                }
+                else if (cboNoiDungChu.Text == "2 thẻ vàng")
+                {
+                    _tempName = "BongDa_2TheVang.ft";
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                }
+                else if (cboNoiDungChu.Text == "Thẻ đỏ")
+                {
+                    _tempName = "BongDa_TheDo.ft";
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                }
+            }
+            catch { }
+        }
+
+        private void btnOnNoiDungKhach_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cboNoiDungKhach.Text == "Thay người")
+                {
+                    _tempName = "BongDa_ThayNguoi.ft";
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
+                    var playerIn = GetPlayerIn(false);
+                    var playerOut = GetPlayerOut(false);
+                    bsAwayPlayer.List.Insert(bsAwayPlayer.List.IndexOf(playerOut), playerIn);
+                    bsAwayPlayerDuBi.List.Insert(bsAwayPlayer.List.IndexOf(playerIn), playerOut);
+                    bsAwayPlayer.List.Remove(playerOut);
+                    bsAwayPlayerDuBi.List.Remove(playerIn);
+                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                }
+                else if (cboNoiDungKhach.Text == "Ghi bàn")
+                {
+                    _tempName = "BongDa_CauThu.ft";
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
+                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                }
+                else if (cboNoiDungKhach.Text == "Thẻ vàng")
+                {
+                    _tempName = "BongDa_TheVang.ft";
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
+                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                }
+                else if (cboNoiDungKhach.Text == "2 thẻ vàng")
+                {
+                    _tempName = "BongDa_2TheVang.ft";
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
+                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                }
+                else if (cboNoiDungKhach.Text == "Thẻ đỏ")
+                {
+                    _tempName = "BongDa_TheDo.ft";
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
+                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                }
+            }
+            catch { }
+        }
+
+        private void btnOffNoiDungChu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OffTemplate(105);
+            }
+            catch
+            {
+                HDMessageBox.Show("404 - Template not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnOffNoiDungKhach_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OffTemplate(105);
+            }
+            catch
+            {
+                HDMessageBox.Show("404 - Template not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnOnDanhsachchinhthuc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _tempName = "BongDa_DanhSachChinhThuc.ft";
+                List<Object.Property> runtimeProperties = new List<Object.Property>();
+                runtimeProperties.Add(new Object.Property()
+                {
+                    Name = "Loops",
+                    Value = "false"
+                });
+                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+            }
+            catch { }
+        }
+
+        private void btnOffDanhsachchinhthuc_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void btnOnDanhsachdubi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _tempName = "BongDa_DanhSachDuBi.ft";
+                List<Object.Property> runtimeProperties = new List<Object.Property>();
+                runtimeProperties.Add(new Object.Property()
+                {
+                    Name = "Loops",
+                    Value = "false"
+                });
+                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+            }
+            catch { }
+        }
+
+        private void btnOffDanhsachdubi_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+        private void BatTemplate(string tempName)
+        {
+            try
+            {
+                _tempName = tempName;
+                List<Object.Property> runtimeProperties = new List<Object.Property>();
+                runtimeProperties.Add(new Object.Property()
+                {
+                    Name = "Loops",
+                    Value = "false"
+                });
+                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+            }
+            catch { }
+        }
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _tempName = "BongDa_ThongSo_DutDiem.ft";
+                List<Object.Property> runtimeProperties = new List<Object.Property>();
+                runtimeProperties.Add(new Object.Property()
+                {
+                    Name = "Loops",
+                    Value = "false"
+                });
+                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+            }
+            catch { }
+        }
+
+        private void simpleButton12_Click(object sender, EventArgs e)
+        {
+            BatTemplate("BongDa_ThongSo_DutDiemTrungDich.ft");
+        }
+
+        private void simpleButton10_Click(object sender, EventArgs e)
+        {
+            BatTemplate("BongDa_ThongSo_PhamLoi.ft");
+        }
+
+        private void simpleButton8_Click(object sender, EventArgs e)
+        {
+            BatTemplate("BongDa_ThongSo_TheVang.ft");
+        }
+
+        private void simpleButton6_Click(object sender, EventArgs e)
+        {
+            BatTemplate("BongDa_ThongSo_TheDo.ft");
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            BatTemplate("BongDa_ThongSo_VietVi.ft");
+        }
+
+        private void simpleButton14_Click(object sender, EventArgs e)
+        {
+            BatTemplate("BongDa_ThongSo_PhatGoc.ft");
+        }
+
+        private void simpleButton16_Click(object sender, EventArgs e)
+        {
+            BatTemplate("BongDa_ThongSo_KiemSoatBong.ft");
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton11_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton9_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton7_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton13_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton15_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+        private void simpleButton18_Click(object sender, EventArgs e)
+        {
+            switch (cboLoaiDoHoaTySo.Text)
+            {
+                case "Tỷ số không kèm danh sách ghi bàn":
+                    BatTemplate("BongDa_TySo.ft");
+                    break;
+                case "Tỷ số kèm danh sách ghi bàn Chủ":
+                    BatTemplate("BongDa_TySo_GhiBanChu.ft");
+                    break;
+                case "Tỷ số kèm danh sách ghi bàn Khách":
+                    BatTemplate("BongDa_TySo_GhiBanKhach.ft");
+                    break;
+                case "Tỷ số kèm danh sách ghi bàn đẩy đủ":
+                    BatTemplate("BongDa_TySo_GhiBan.ft");
+                    break;
+                case "Thông số cuối":
+                    BatTemplate("BongDa_ThongSoCuoiTran.ft");
+                    break;
+            };
+        }
+
+        private void simpleButton17_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton22_Click(object sender, EventArgs e)
+        {
+            BatTemplate("BongDa_TrongTai.ft");
+        }
+
+        private void simpleButton21_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton20_Click(object sender, EventArgs e)
+        {
+            BatTemplate("BongDa_BarTen.ft");
+        }
+
+        private void simpleButton19_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton24_Click(object sender, EventArgs e)
+        {
+            BatTemplate("BongDa_ThoiTiet.ft");
+        }
+
+        private void simpleButton23_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton26_Click(object sender, EventArgs e)
+        {
+            if (cboGhibanChu.Text.Length > 0 && txtPhutChu.Text.Length > 0)
+            {
+                bsGhibanChu.List.Add(new Object.Goal
+                {
+                    Name = cboGhibanChu.Text,
+                    StrMin = txtPhutChu.Text
+                });
+            }
+            else
+            {
+                HDMessageBox.Show("Thiếu thông tin cầu thủ/phút ghi bàn!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void simpleButton27_Click(object sender, EventArgs e)
+        {
+            if (gridView2.FocusedRowHandle < 0)
+            {
+                HDMessageBox.Show("Chưa chọn cầu thủ để xóa!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var temp = gridView2.GetFocusedRow() as Object.Goal;
+                bsGhibanChu.List.Remove(temp);
+            }
+        }
+
+        private void gridView2_RowClick(object sender, RowClickEventArgs e)
+        {
+            var temp = gridView2.GetFocusedRow() as Object.Goal;
+            cboGhibanChu.Text = temp.Name;
+            txtPhutChu.Text = temp.StrMin;
+        }
+
+        private void simpleButton25_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (bsGhibanChu.List.Count == 0)
+                {
+                    HDMessageBox.Show("Chưa chọn cầu thủ để lưu!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                if (cboGhibanChu.Text.Length > 0 && txtPhutChu.Text.Length > 0)
+                {
+                    var temp = gridView2.GetFocusedRow() as Object.Goal;
+
+                    bsGhibanChu.List.Insert(bsGhibanChu.List.IndexOf(temp), new Object.Goal()
+                    {
+                        Name = cboGhibanChu.Text,
+                        StrMin = txtPhutChu.Text
+                    });
+                    bsGhibanChu.List.Remove(temp);
+                }
+                else
+                {
+                    HDMessageBox.Show("Chọn cầu thủ, phút trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void gridView7_RowClick(object sender, RowClickEventArgs e)
+        {
+            var temp = gridView7.GetFocusedRow() as Object.Goal;
+            cboGhiBanKhach.Text = temp.Name;
+            txtPhutKhach.Text = temp.StrMin;
+        }
+
+        private void simpleButton30_Click(object sender, EventArgs e)
+        {
+            if (cboGhiBanKhach.Text.Length > 0 && txtPhutKhach.Text.Length > 0)
+            {
+                bsGhibanKhach.List.Add(new Object.Goal
+                {
+                    Name = cboGhiBanKhach.Text,
+                    StrMin = txtPhutKhach.Text
+                });
+            }
+            else
+            {
+                HDMessageBox.Show("Thiếu thông tin cầu thủ/phút ghi bàn!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void simpleButton29_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (bsGhibanKhach.List.Count == 0)
+                {
+                    HDMessageBox.Show("Chưa chọn cầu thủ để lưu!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                if (cboGhiBanKhach.Text.Length > 0 && txtPhutKhach.Text.Length > 0)
+                {
+                    var temp = gridView2.GetFocusedRow() as Object.Goal;
+
+                    bsGhibanKhach.List.Insert(bsGhibanKhach.List.IndexOf(temp), new Object.Goal()
+                    {
+                        Name = cboGhiBanKhach.Text,
+                        StrMin = txtPhutKhach.Text
+                    });
+                    bsGhibanKhach.List.Remove(temp);
+                }
+                else
+                {
+                    HDMessageBox.Show("Chọn cầu thủ, phút trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void simpleButton28_Click(object sender, EventArgs e)
+        {
+            if (gridView7.FocusedRowHandle < 0)
+            {
+                HDMessageBox.Show("Chưa chọn cầu thủ để xóa!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var temp = gridView7.GetFocusedRow() as Object.Goal;
+                bsGhibanKhach.List.Remove(temp);
             }
         }
     }
