@@ -30,14 +30,14 @@
 		
 		private var txtGroup:MovieClip = new MovieClip();
 		public var icon1:MovieClip;				
-		public var dong1:TextField = new TextField();
-		public var dong2:TextField = new TextField();
+		public var hlv:TextField = new TextField();
+		public var doibong:TextField = new TextField();
 		
 		public function BongDa_HLV() {
 			// constructor code
 			super();							
-			this.txtGroup.addChild(dong1);	
-			this.txtGroup.addChild(dong2);
+			this.txtGroup.addChild(hlv);	
+			this.txtGroup.addChild(doibong);
 			this.txtGroup.addChild(icon1);
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -51,8 +51,8 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "dong1", dong1);
-			xmlStr +=Add(xmlStr, "dong2", dong2);
+			xmlStr +=Add(xmlStr, "hlv", hlv);
+			xmlStr +=Add(xmlStr, "doibong", doibong);
 				
 			xmlStr += "</Track_Property>";
 			
@@ -72,11 +72,11 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "dong1".toLowerCase():
-						this.dong1.text = data.toUpperCase();
+					case "hlv".toLowerCase():
+						this.hlv.text = "HLV " + data.toUpperCase();
 						break;
-					case "dong2".toLowerCase():
-						this.dong2.text = data.toUpperCase();
+					case "doibong".toLowerCase():
+						this.doibong.text = data.toUpperCase();
 						break;	
 					case "icon1".toLowerCase():						
 						var file:Loader = new Loader();

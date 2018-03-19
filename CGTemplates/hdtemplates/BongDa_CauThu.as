@@ -18,7 +18,9 @@
 	import flash.external.ExternalInterface;
 	import flash.utils.Timer;
 	import flash.events.TimerEvent;
-	import fl.containers.UILoader;
+	import flash.display.Loader;
+	import flash.events.IOErrorEvent;
+	import flash.display.DisplayObject;
 	import flash.net.URLRequest;
 	import flash.sampler.Sample;
 	import flash.globalization.NumberFormatter;
@@ -27,7 +29,7 @@
 	public class BongDa_CauThu extends CasparTemplate{
 		
 		private var txtGroup:MovieClip = new MovieClip();
-					
+		public var icon1:MovieClip;				
 		public var playerStr:TextField = new TextField();
 		public var thongsocauthu:TextField = new TextField();
 		
@@ -36,7 +38,7 @@
 			super();							
 			this.txtGroup.addChild(playerStr);	
 			this.txtGroup.addChild(thongsocauthu);
-			
+			this.txtGroup.addChild(icon1);
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
 			ExternalInterface.addCallback("GetProperties", GetProperties);			
@@ -75,7 +77,13 @@
 						break;
 					case "thongsocauthu".toLowerCase():
 						this.thongsocauthu.text = data.toUpperCase();
-						break;												
+						break;		
+					case "icon1".toLowerCase():						
+						var file:Loader = new Loader();
+						file.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted);
+						file.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError);
+						file.load(new URLRequest(data));
+						break;
 				}
 			}
 		}
@@ -84,6 +92,19 @@
 		}
 		public override function Stop():void{
 			gotoAndPlay('stop');
+		}
+		private function onOpenImageError(e:IOErrorEvent)
+		{
+			while(this.icon1.numChildren > 0)
+				this.icon1.removeChildAt(0);
+		}
+		
+		private function onOpenImageCompleted(e:Event)
+		{
+			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;	
+			bmp.width=51;
+			bmp.height=43;
+			this.icon1.addChild(bmp);
 		}
 	}
 	

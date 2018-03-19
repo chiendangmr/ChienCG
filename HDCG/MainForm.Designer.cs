@@ -179,6 +179,11 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.nTysoChu = new System.Windows.Forms.NumericUpDown();
             this.xTabTrongtai = new DevExpress.XtraTab.XtraTabPage();
+            this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtLine1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
+            this.txtLine2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl63 = new DevExpress.XtraEditors.LabelControl();
             this.txtDoam = new DevExpress.XtraEditors.TextEdit();
             this.labelControl64 = new DevExpress.XtraEditors.LabelControl();
@@ -188,10 +193,6 @@
             this.labelControl50 = new DevExpress.XtraEditors.LabelControl();
             this.txtSucgio = new DevExpress.XtraEditors.TextEdit();
             this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
-            this.txtLine2 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
-            this.txtLine1 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtThoiTiet = new DevExpress.XtraEditors.TextEdit();
             this.labelControl72 = new DevExpress.XtraEditors.LabelControl();
             this.txtStadium = new DevExpress.XtraEditors.TextEdit();
@@ -271,6 +272,7 @@
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.player = new CGPreviewControl.FlashTemplateHostControl();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.gridSplitContainer7 = new DevExpress.XtraGrid.GridSplitContainer();
             this.gridTempInfo = new DevExpress.XtraGrid.GridControl();
@@ -306,7 +308,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tUpdateData = new System.Windows.Forms.Timer(this.components);
             this.bsUpdateNotifier = new System.Windows.Forms.BindingSource(this.components);
-            this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -394,11 +395,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.nTysoKhach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTysoChu)).BeginInit();
             this.xTabTrongtai.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
+            this.groupControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLine1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLine2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDoam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhietdo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSucgio.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLine2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLine1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThoiTiet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStadium.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTrongtaiban.Properties)).BeginInit();
@@ -433,6 +436,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer7)).BeginInit();
@@ -455,8 +460,6 @@
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
-            this.groupControl6.SuspendLayout();
             this.SuspendLayout();
             // 
             // barManager1
@@ -2278,6 +2281,58 @@
             this.xTabTrongtai.Size = new System.Drawing.Size(1169, 695);
             this.xTabTrongtai.Text = "Trọng tài/Bar tên/Địa điểm/Thời tiết";
             // 
+            // groupControl6
+            // 
+            this.groupControl6.Controls.Add(this.labelControl6);
+            this.groupControl6.Controls.Add(this.txtLine1);
+            this.groupControl6.Controls.Add(this.labelControl48);
+            this.groupControl6.Controls.Add(this.txtLine2);
+            this.groupControl6.Location = new System.Drawing.Point(504, 39);
+            this.groupControl6.Name = "groupControl6";
+            this.groupControl6.Size = new System.Drawing.Size(623, 153);
+            this.groupControl6.TabIndex = 177;
+            this.groupControl6.Text = "Bar tên";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(18, 50);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(58, 19);
+            this.labelControl6.TabIndex = 164;
+            this.labelControl6.Text = "Dòng 1:";
+            // 
+            // txtLine1
+            // 
+            this.txtLine1.Location = new System.Drawing.Point(112, 50);
+            this.txtLine1.MenuManager = this.barManager1;
+            this.txtLine1.Name = "txtLine1";
+            this.txtLine1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtLine1.Properties.Appearance.Options.UseFont = true;
+            this.txtLine1.Size = new System.Drawing.Size(483, 24);
+            this.txtLine1.TabIndex = 165;
+            // 
+            // labelControl48
+            // 
+            this.labelControl48.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl48.Appearance.Options.UseFont = true;
+            this.labelControl48.Location = new System.Drawing.Point(18, 91);
+            this.labelControl48.Name = "labelControl48";
+            this.labelControl48.Size = new System.Drawing.Size(58, 19);
+            this.labelControl48.TabIndex = 166;
+            this.labelControl48.Text = "Dòng 2:";
+            // 
+            // txtLine2
+            // 
+            this.txtLine2.Location = new System.Drawing.Point(112, 91);
+            this.txtLine2.MenuManager = this.barManager1;
+            this.txtLine2.Name = "txtLine2";
+            this.txtLine2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtLine2.Properties.Appearance.Options.UseFont = true;
+            this.txtLine2.Size = new System.Drawing.Size(483, 24);
+            this.txtLine2.TabIndex = 167;
+            // 
             // labelControl63
             // 
             this.labelControl63.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
@@ -2367,46 +2422,6 @@
             this.labelControl49.Size = new System.Drawing.Size(60, 21);
             this.labelControl49.TabIndex = 168;
             this.labelControl49.Text = "Sức gió:";
-            // 
-            // txtLine2
-            // 
-            this.txtLine2.Location = new System.Drawing.Point(112, 91);
-            this.txtLine2.MenuManager = this.barManager1;
-            this.txtLine2.Name = "txtLine2";
-            this.txtLine2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.txtLine2.Properties.Appearance.Options.UseFont = true;
-            this.txtLine2.Size = new System.Drawing.Size(483, 24);
-            this.txtLine2.TabIndex = 167;
-            // 
-            // labelControl48
-            // 
-            this.labelControl48.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl48.Appearance.Options.UseFont = true;
-            this.labelControl48.Location = new System.Drawing.Point(18, 91);
-            this.labelControl48.Name = "labelControl48";
-            this.labelControl48.Size = new System.Drawing.Size(58, 19);
-            this.labelControl48.TabIndex = 166;
-            this.labelControl48.Text = "Dòng 2:";
-            // 
-            // txtLine1
-            // 
-            this.txtLine1.Location = new System.Drawing.Point(112, 50);
-            this.txtLine1.MenuManager = this.barManager1;
-            this.txtLine1.Name = "txtLine1";
-            this.txtLine1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.txtLine1.Properties.Appearance.Options.UseFont = true;
-            this.txtLine1.Size = new System.Drawing.Size(483, 24);
-            this.txtLine1.TabIndex = 165;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(18, 50);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(58, 19);
-            this.labelControl6.TabIndex = 164;
-            this.labelControl6.Text = "Dòng 1:";
             // 
             // txtThoiTiet
             // 
@@ -3297,23 +3312,7 @@
             this.splitContainerControl2.Name = "splitContainerControl2";
             this.splitContainerControl2.Panel1.Controls.Add(this.player);
             this.splitContainerControl2.Panel1.Text = "Panel1";
-            this.splitContainerControl2.Panel2.Controls.Add(this.groupControl5);
-            this.splitContainerControl2.Panel2.Controls.Add(this.labelControl58);
-            this.splitContainerControl2.Panel2.Controls.Add(this.btnStop);
-            this.splitContainerControl2.Panel2.Controls.Add(this.labelControl3);
-            this.splitContainerControl2.Panel2.Controls.Add(this.btnLiveUpdate);
-            this.splitContainerControl2.Panel2.Controls.Add(this.nDelayTime);
-            this.splitContainerControl2.Panel2.Controls.Add(this.cboTemplateType);
-            this.splitContainerControl2.Panel2.Controls.Add(this.labelControl4);
-            this.splitContainerControl2.Panel2.Controls.Add(this.labelControl1);
-            this.splitContainerControl2.Panel2.Controls.Add(this.nDurationTime);
-            this.splitContainerControl2.Panel2.Controls.Add(this.btnPreviewTemplate);
-            this.splitContainerControl2.Panel2.Controls.Add(this.btnPlay);
-            this.splitContainerControl2.Panel2.Controls.Add(this.cboTempLayer);
-            this.splitContainerControl2.Panel2.Controls.Add(this.ckKhach);
-            this.splitContainerControl2.Panel2.Controls.Add(this.labelControl2);
-            this.splitContainerControl2.Panel2.Controls.Add(this.ckChu);
-            this.splitContainerControl2.Panel2.Controls.Add(this.btnSavePlaylist);
+            this.splitContainerControl2.Panel2.Controls.Add(this.panelControl1);
             this.splitContainerControl2.Panel2.Text = "Panel2";
             this.splitContainerControl2.Size = new System.Drawing.Size(675, 936);
             this.splitContainerControl2.SplitterPosition = 331;
@@ -3336,13 +3335,39 @@
             this.player.Valid = false;
             this.player.Version = CGPreviewControl.FlashTemplateHostControl.Versions.Version20;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.groupControl5);
+            this.panelControl1.Controls.Add(this.labelControl58);
+            this.panelControl1.Controls.Add(this.btnStop);
+            this.panelControl1.Controls.Add(this.labelControl3);
+            this.panelControl1.Controls.Add(this.btnLiveUpdate);
+            this.panelControl1.Controls.Add(this.nDelayTime);
+            this.panelControl1.Controls.Add(this.cboTemplateType);
+            this.panelControl1.Controls.Add(this.labelControl4);
+            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Controls.Add(this.nDurationTime);
+            this.panelControl1.Controls.Add(this.btnPreviewTemplate);
+            this.panelControl1.Controls.Add(this.btnPlay);
+            this.panelControl1.Controls.Add(this.cboTempLayer);
+            this.panelControl1.Controls.Add(this.ckKhach);
+            this.panelControl1.Controls.Add(this.labelControl2);
+            this.panelControl1.Controls.Add(this.ckChu);
+            this.panelControl1.Controls.Add(this.btnSavePlaylist);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(675, 599);
+            this.panelControl1.TabIndex = 4;
+            // 
             // groupControl5
             // 
+            this.groupControl5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupControl5.Controls.Add(this.gridSplitContainer7);
-            this.groupControl5.Location = new System.Drawing.Point(3, 39);
+            this.groupControl5.Location = new System.Drawing.Point(27, 38);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(419, 557);
-            this.groupControl5.TabIndex = 177;
+            this.groupControl5.Size = new System.Drawing.Size(491, 505);
+            this.groupControl5.TabIndex = 194;
             this.groupControl5.Text = "Danh sách templates";
             // 
             // gridSplitContainer7
@@ -3352,7 +3377,7 @@
             this.gridSplitContainer7.Location = new System.Drawing.Point(2, 25);
             this.gridSplitContainer7.Name = "gridSplitContainer7";
             this.gridSplitContainer7.Panel1.Controls.Add(this.gridTempInfo);
-            this.gridSplitContainer7.Size = new System.Drawing.Size(415, 530);
+            this.gridSplitContainer7.Size = new System.Drawing.Size(487, 478);
             this.gridSplitContainer7.TabIndex = 103;
             // 
             // gridTempInfo
@@ -3368,7 +3393,7 @@
             this.gridTempInfo.Name = "gridTempInfo";
             this.gridTempInfo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2});
-            this.gridTempInfo.Size = new System.Drawing.Size(415, 530);
+            this.gridTempInfo.Size = new System.Drawing.Size(487, 478);
             this.gridTempInfo.TabIndex = 19;
             this.gridTempInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTempInfo});
@@ -3429,7 +3454,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
-            this.gridColumn4.Width = 148;
+            this.gridColumn4.Width = 164;
             // 
             // gridColumn1
             // 
@@ -3445,7 +3470,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 45;
+            this.gridColumn1.Width = 93;
             // 
             // gridColumn2
             // 
@@ -3458,7 +3483,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
-            this.gridColumn2.Width = 44;
+            this.gridColumn2.Width = 102;
             // 
             // repositoryItemCheckEdit2
             // 
@@ -3468,12 +3493,12 @@
             // 
             // labelControl58
             // 
-            this.labelControl58.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl58.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.labelControl58.Appearance.Options.UseFont = true;
-            this.labelControl58.Location = new System.Drawing.Point(282, 12);
+            this.labelControl58.Location = new System.Drawing.Point(29, 562);
             this.labelControl58.Name = "labelControl58";
-            this.labelControl58.Size = new System.Drawing.Size(82, 17);
-            this.labelControl58.TabIndex = 176;
+            this.labelControl58.Size = new System.Drawing.Size(112, 23);
+            this.labelControl58.TabIndex = 193;
             this.labelControl58.Text = "Lên đồ họa:";
             // 
             // btnStop
@@ -3483,11 +3508,11 @@
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnStop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStop.ImageOptions.Image")));
             this.btnStop.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnStop.Location = new System.Drawing.Point(439, 450);
+            this.btnStop.Location = new System.Drawing.Point(546, 448);
             this.btnStop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(72, 66);
-            this.btnStop.TabIndex = 99;
+            this.btnStop.TabIndex = 188;
             this.btnStop.ToolTip = "Stop Template";
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
@@ -3495,11 +3520,11 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(439, 157);
+            this.labelControl3.Location = new System.Drawing.Point(546, 155);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(101, 17);
-            this.labelControl3.TabIndex = 78;
+            this.labelControl3.TabIndex = 181;
             this.labelControl3.Text = "Duration(ms): ";
             // 
             // btnLiveUpdate
@@ -3508,11 +3533,11 @@
             this.btnLiveUpdate.Appearance.Options.UseFont = true;
             this.btnLiveUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLiveUpdate.ImageOptions.Image")));
             this.btnLiveUpdate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnLiveUpdate.Location = new System.Drawing.Point(439, 318);
+            this.btnLiveUpdate.Location = new System.Drawing.Point(546, 316);
             this.btnLiveUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLiveUpdate.Name = "btnLiveUpdate";
             this.btnLiveUpdate.Size = new System.Drawing.Size(72, 42);
-            this.btnLiveUpdate.TabIndex = 101;
+            this.btnLiveUpdate.TabIndex = 190;
             this.btnLiveUpdate.ToolTip = "Update real-time data for template";
             this.btnLiveUpdate.Click += new System.EventHandler(this.btnLiveUpdate_Click);
             // 
@@ -3523,7 +3548,7 @@
             0,
             0,
             0});
-            this.nDelayTime.Location = new System.Drawing.Point(439, 122);
+            this.nDelayTime.Location = new System.Drawing.Point(546, 120);
             this.nDelayTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nDelayTime.Maximum = new decimal(new int[] {
             1000000,
@@ -3532,11 +3557,11 @@
             0});
             this.nDelayTime.Name = "nDelayTime";
             this.nDelayTime.Size = new System.Drawing.Size(101, 23);
-            this.nDelayTime.TabIndex = 80;
+            this.nDelayTime.TabIndex = 183;
             // 
             // cboTemplateType
             // 
-            this.cboTemplateType.Location = new System.Drawing.Point(115, 10);
+            this.cboTemplateType.Location = new System.Drawing.Point(139, 9);
             this.cboTemplateType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTemplateType.MenuManager = this.barManager1;
             this.cboTemplateType.Name = "cboTemplateType";
@@ -3548,29 +3573,29 @@
             "Thông báo"});
             this.cboTemplateType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboTemplateType.Size = new System.Drawing.Size(115, 22);
-            this.cboTemplateType.TabIndex = 85;
-            this.cboTemplateType.SelectedValueChanged += new System.EventHandler(this.cboTemplateType_SelectedValueChanged);
+            this.cboTemplateType.TabIndex = 185;
+            this.cboTemplateType.SelectedIndexChanged += new System.EventHandler(this.cboTemplateType_SelectedValueChanged);
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(439, 97);
+            this.labelControl4.Location = new System.Drawing.Point(546, 95);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(78, 17);
-            this.labelControl4.TabIndex = 81;
+            this.labelControl4.TabIndex = 184;
             this.labelControl4.Text = "Delay(ms): ";
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(5, 12);
+            this.labelControl1.Location = new System.Drawing.Point(29, 11);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(104, 17);
-            this.labelControl1.TabIndex = 74;
+            this.labelControl1.TabIndex = 180;
             this.labelControl1.Text = "Template type:";
             // 
             // nDurationTime
@@ -3580,7 +3605,7 @@
             0,
             0,
             0});
-            this.nDurationTime.Location = new System.Drawing.Point(439, 182);
+            this.nDurationTime.Location = new System.Drawing.Point(546, 180);
             this.nDurationTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nDurationTime.Maximum = new decimal(new int[] {
             1000000,
@@ -3589,7 +3614,7 @@
             0});
             this.nDurationTime.Name = "nDurationTime";
             this.nDurationTime.Size = new System.Drawing.Size(101, 23);
-            this.nDurationTime.TabIndex = 79;
+            this.nDurationTime.TabIndex = 182;
             // 
             // btnPreviewTemplate
             // 
@@ -3597,11 +3622,11 @@
             this.btnPreviewTemplate.Appearance.Options.UseFont = true;
             this.btnPreviewTemplate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreviewTemplate.ImageOptions.Image")));
             this.btnPreviewTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPreviewTemplate.Location = new System.Drawing.Point(439, 268);
+            this.btnPreviewTemplate.Location = new System.Drawing.Point(546, 266);
             this.btnPreviewTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPreviewTemplate.Name = "btnPreviewTemplate";
             this.btnPreviewTemplate.Size = new System.Drawing.Size(72, 42);
-            this.btnPreviewTemplate.TabIndex = 97;
+            this.btnPreviewTemplate.TabIndex = 186;
             this.btnPreviewTemplate.ToolTip = "Preview Template";
             this.btnPreviewTemplate.Click += new System.EventHandler(this.btnPreviewTemplate_Click);
             // 
@@ -3612,17 +3637,17 @@
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPlay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.ImageOptions.Image")));
             this.btnPlay.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPlay.Location = new System.Drawing.Point(439, 378);
+            this.btnPlay.Location = new System.Drawing.Point(546, 376);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(72, 64);
-            this.btnPlay.TabIndex = 98;
+            this.btnPlay.TabIndex = 187;
             this.btnPlay.ToolTip = "Play Template";
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // cboTempLayer
             // 
-            this.cboTempLayer.Location = new System.Drawing.Point(439, 67);
+            this.cboTempLayer.Location = new System.Drawing.Point(546, 65);
             this.cboTempLayer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTempLayer.MenuManager = this.barManager1;
             this.cboTempLayer.Name = "cboTempLayer";
@@ -3652,44 +3677,44 @@
             "120"});
             this.cboTempLayer.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboTempLayer.Size = new System.Drawing.Size(97, 22);
-            this.cboTempLayer.TabIndex = 47;
+            this.cboTempLayer.TabIndex = 179;
             // 
             // ckKhach
             // 
-            this.ckKhach.Location = new System.Drawing.Point(469, 11);
+            this.ckKhach.Location = new System.Drawing.Point(325, 549);
             this.ckKhach.MenuManager = this.barManager1;
             this.ckKhach.Name = "ckKhach";
-            this.ckKhach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.ckKhach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18.25F);
             this.ckKhach.Properties.Appearance.Options.UseFont = true;
             this.ckKhach.Properties.Caption = "Khách";
             this.ckKhach.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.ckKhach.Size = new System.Drawing.Size(66, 21);
-            this.ckKhach.TabIndex = 140;
+            this.ckKhach.Size = new System.Drawing.Size(119, 40);
+            this.ckKhach.TabIndex = 192;
             this.ckKhach.CheckedChanged += new System.EventHandler(this.ckCauthuKhach_CheckedChanged);
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(439, 40);
+            this.labelControl2.Location = new System.Drawing.Point(546, 38);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(43, 17);
-            this.labelControl2.TabIndex = 46;
+            this.labelControl2.TabIndex = 178;
             this.labelControl2.Text = "Layer:";
             // 
             // ckChu
             // 
             this.ckChu.EditValue = true;
-            this.ckChu.Location = new System.Drawing.Point(370, 11);
+            this.ckChu.Location = new System.Drawing.Point(172, 549);
             this.ckChu.MenuManager = this.barManager1;
             this.ckChu.Name = "ckChu";
-            this.ckChu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.ckChu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18.25F);
             this.ckChu.Properties.Appearance.Options.UseFont = true;
             this.ckChu.Properties.Caption = "Chủ";
             this.ckChu.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.ckChu.Size = new System.Drawing.Size(55, 21);
-            this.ckChu.TabIndex = 139;
+            this.ckChu.Size = new System.Drawing.Size(82, 41);
+            this.ckChu.TabIndex = 191;
             this.ckChu.CheckedChanged += new System.EventHandler(this.ckCauthuChu_CheckedChanged);
             // 
             // btnSavePlaylist
@@ -3698,11 +3723,11 @@
             this.btnSavePlaylist.Appearance.Options.UseFont = true;
             this.btnSavePlaylist.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSavePlaylist.ImageOptions.Image")));
             this.btnSavePlaylist.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSavePlaylist.Location = new System.Drawing.Point(439, 218);
+            this.btnSavePlaylist.Location = new System.Drawing.Point(546, 216);
             this.btnSavePlaylist.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSavePlaylist.Name = "btnSavePlaylist";
             this.btnSavePlaylist.Size = new System.Drawing.Size(72, 42);
-            this.btnSavePlaylist.TabIndex = 100;
+            this.btnSavePlaylist.TabIndex = 189;
             this.btnSavePlaylist.Text = "Manual Update";
             this.btnSavePlaylist.ToolTip = "Lưu thông tin template";
             this.btnSavePlaylist.Click += new System.EventHandler(this.btnUpdateAll_Click);
@@ -3758,18 +3783,6 @@
             // bsUpdateNotifier
             // 
             this.bsUpdateNotifier.DataSource = typeof(HDCGStudio.Object.UpdateNotifier);
-            // 
-            // groupControl6
-            // 
-            this.groupControl6.Controls.Add(this.labelControl6);
-            this.groupControl6.Controls.Add(this.txtLine1);
-            this.groupControl6.Controls.Add(this.labelControl48);
-            this.groupControl6.Controls.Add(this.txtLine2);
-            this.groupControl6.Location = new System.Drawing.Point(504, 39);
-            this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(623, 153);
-            this.groupControl6.TabIndex = 177;
-            this.groupControl6.Text = "Bar tên";
             // 
             // MainForm
             // 
@@ -3881,11 +3894,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.nTysoChu)).EndInit();
             this.xTabTrongtai.ResumeLayout(false);
             this.xTabTrongtai.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
+            this.groupControl6.ResumeLayout(false);
+            this.groupControl6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLine1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLine2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDoam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhietdo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSucgio.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLine2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLine1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThoiTiet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStadium.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTrongtaiban.Properties)).EndInit();
@@ -3923,6 +3939,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
             this.splitContainerControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer7)).EndInit();
@@ -3945,9 +3964,6 @@
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
-            this.groupControl6.ResumeLayout(false);
-            this.groupControl6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3991,18 +4007,10 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private System.Windows.Forms.BindingSource videoBindingSource;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraEditors.ComboBoxEdit cboTempLayer;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.BindingSource tempInfoBindingSource;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private System.Windows.Forms.NumericUpDown nDurationTime;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private System.Windows.Forms.NumericUpDown nDelayTime;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarButtonItem barBtnManageTemplate;
-        private DevExpress.XtraEditors.ComboBoxEdit cboTemplateType;
         private DevExpress.XtraBars.BarButtonItem barBtnManageIcons;
         private DevExpress.XtraBars.BarButtonItem barBtnManageImage;
         private DevExpress.XtraBars.BarButtonItem barBtnManagePlayer;
@@ -4014,11 +4022,6 @@
         private System.Windows.Forms.BindingSource bsUpdateData;
         private DevExpress.XtraTab.XtraTabControl xTabMain;
         private DevExpress.XtraTab.XtraTabPage xTabPageBongda;
-        private DevExpress.XtraEditors.SimpleButton btnLiveUpdate;
-        private DevExpress.XtraEditors.SimpleButton btnSavePlaylist;
-        private DevExpress.XtraEditors.SimpleButton btnPreviewTemplate;
-        private DevExpress.XtraEditors.SimpleButton btnPlay;
-        private DevExpress.XtraEditors.SimpleButton btnStop;
         private DevExpress.XtraTab.XtraTabPage xTabPageTennis;
         private DevExpress.XtraEditors.SimpleButton btnDiemPlayer2;
         private DevExpress.XtraEditors.TextEdit txtDiemHientaiPlayer2;
@@ -4073,8 +4076,6 @@
         private DevExpress.XtraEditors.TextEdit txtAwayShortName;
         private DevExpress.XtraEditors.ComboBoxEdit cboDoiChuNha;
         private DevExpress.XtraEditors.LabelControl labelControl24;
-        private DevExpress.XtraEditors.CheckEdit ckKhach;
-        private DevExpress.XtraEditors.CheckEdit ckChu;
         private DevExpress.XtraEditors.ComboBoxEdit cboGiaiDau;
         private DevExpress.XtraEditors.SimpleButton btnQuanlyDanhsachDoi;
         private DevExpress.XtraEditors.LabelControl labelControl27;
@@ -4205,19 +4206,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl46;
         private System.Windows.Forms.NumericUpDown nVongDau;
         private DevExpress.XtraEditors.LabelControl labelControl56;
-        private DevExpress.XtraEditors.LabelControl labelControl58;
         private DevExpress.XtraEditors.LabelControl labelControl60;
         private DevExpress.XtraEditors.LabelControl labelControl59;
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.XtraEditors.GroupControl groupControl5;
-        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer7;
-        private DevExpress.XtraGrid.GridControl gridTempInfo;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvTempInfo;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraEditors.CheckEdit ckTysogocVaBugioOff;
         private DevExpress.XtraEditors.LabelControl labelControl62;
         private DevExpress.XtraEditors.ComboBoxEdit cboTysogocType;
@@ -4232,5 +4223,31 @@
         private DevExpress.XtraEditors.TextEdit txtDoam;
         private DevExpress.XtraEditors.LabelControl labelControl64;
         private DevExpress.XtraEditors.GroupControl groupControl6;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer7;
+        private DevExpress.XtraGrid.GridControl gridTempInfo;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvTempInfo;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
+        private DevExpress.XtraEditors.LabelControl labelControl58;
+        private DevExpress.XtraEditors.SimpleButton btnStop;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.SimpleButton btnLiveUpdate;
+        private System.Windows.Forms.NumericUpDown nDelayTime;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTemplateType;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.NumericUpDown nDurationTime;
+        private DevExpress.XtraEditors.SimpleButton btnPreviewTemplate;
+        private DevExpress.XtraEditors.SimpleButton btnPlay;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTempLayer;
+        private DevExpress.XtraEditors.CheckEdit ckKhach;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.CheckEdit ckChu;
+        private DevExpress.XtraEditors.SimpleButton btnSavePlaylist;
     }
 }

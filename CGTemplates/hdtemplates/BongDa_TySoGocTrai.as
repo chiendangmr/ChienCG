@@ -28,9 +28,9 @@
 		private var txtGroup:MovieClip = new MovieClip();
 					
 		public var dongho:TextField = new TextField();
-		public var shortNameChu:TextField = new TextField();
+		public var doichuShort:TextField = new TextField();
 		public var tyso:TextField = new TextField();
-		public var shortNameKhach:TextField = new TextField();			
+		public var doikhachShort:TextField = new TextField();			
 				
 		var clockTimer:Timer = new Timer(1000, 0);
 		var _phut:Number=0;
@@ -42,8 +42,8 @@
 			
 			this.txtGroup.addChild(tyso);	
 			this.txtGroup.addChild(dongho);
-			this.txtGroup.addChild(shortNameChu);	
-			this.txtGroup.addChild(shortNameKhach);			
+			this.txtGroup.addChild(doichuShort);	
+			this.txtGroup.addChild(doikhachShort);			
 			
 			this.addChild(txtGroup);		
 			
@@ -62,8 +62,8 @@
 			var xmlStr:String = "<Track_Property>";			
 			xmlStr +=Add(xmlStr, "tyso", tyso);			
 			xmlStr +=Add(xmlStr, "dongho", dongho);	
-			xmlStr +=Add(xmlStr, "shortNameChu", shortNameChu);
-			xmlStr +=Add(xmlStr, "shortNameKhach", shortNameKhach);			
+			xmlStr +=Add(xmlStr, "doichuShort", doichuShort);
+			xmlStr +=Add(xmlStr, "doikhachShort", doikhachShort);			
 			xmlStr += "</Track_Property>";
 			
 			ExternalInterface.call("Properties", xmlStr);
@@ -91,11 +91,11 @@
 						this._giay = parseGiay(data) + 1;
 						clockTimer.start();
 						break;				
-					case "shortNameChu".toLowerCase():
-						this.shortNameChu.text = data;
+					case "doichuShort".toLowerCase():
+						this.doichuShort.text = data;
 						break;
-					case "shortNameKhach".toLowerCase():
-						this.shortNameKhach.text = data;
+					case "doikhachShort".toLowerCase():
+						this.doikhachShort.text = data;
 						break;						
 				}
 			}
