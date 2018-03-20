@@ -1012,6 +1012,7 @@ namespace HDCGStudio
             }
             return player;
         }
+
         public View.Player GetPlayerIn(bool isChu)
         {
             var player = new View.Player();
@@ -1892,7 +1893,10 @@ namespace HDCGStudio
                         Name = "Loops",
                         Value = "false"
                     });
+                    
                     string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    var playerOut = GetPlayerOut(true);
+                    bsHomePlayer.List.Remove(playerOut);
                     OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
                 }
                 else if (cboNoiDungChu.Text == "Thẻ đỏ")
@@ -1905,6 +1909,8 @@ namespace HDCGStudio
                         Value = "false"
                     });
                     string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    var playerOut = GetPlayerOut(true);
+                    bsHomePlayer.List.Remove(playerOut);
                     OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
                 }
             }
@@ -1970,6 +1976,8 @@ namespace HDCGStudio
                         Value = "false"
                     });
                     string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
+                    var playerOut = GetPlayerOut(false);
+                    bsAwayPlayer.List.Remove(playerOut);
                     OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
                 }
                 else if (cboNoiDungKhach.Text == "Thẻ đỏ")
@@ -1982,6 +1990,8 @@ namespace HDCGStudio
                         Value = "false"
                     });
                     string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
+                    var playerOut = GetPlayerOut(false);
+                    bsAwayPlayer.List.Remove(playerOut);
                     OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
                 }
             }
