@@ -2132,6 +2132,7 @@
             this.xTabTyso.Controls.Add(this.gridSplitContainer6);
             this.xTabTyso.Controls.Add(this.gridSplitContainer5);
             this.xTabTyso.Controls.Add(this.simpleButton28);
+            this.xTabTyso.Controls.Add(this.btnLiveUpdate);
             this.xTabTyso.Controls.Add(this.simpleButton29);
             this.xTabTyso.Controls.Add(this.simpleButton30);
             this.xTabTyso.Controls.Add(this.simpleButton27);
@@ -4369,7 +4370,6 @@
             this.panelControl1.Controls.Add(this.groupControl5);
             this.panelControl1.Controls.Add(this.btnStop);
             this.panelControl1.Controls.Add(this.labelControl3);
-            this.panelControl1.Controls.Add(this.btnLiveUpdate);
             this.panelControl1.Controls.Add(this.nDelayTime);
             this.panelControl1.Controls.Add(this.cboTemplateType);
             this.panelControl1.Controls.Add(this.labelControl4);
@@ -4524,7 +4524,7 @@
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnStop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStop.ImageOptions.Image")));
             this.btnStop.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnStop.Location = new System.Drawing.Point(546, 448);
+            this.btnStop.Location = new System.Drawing.Point(546, 469);
             this.btnStop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(72, 66);
@@ -4547,13 +4547,13 @@
             // 
             this.btnLiveUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnLiveUpdate.Appearance.Options.UseFont = true;
-            this.btnLiveUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLiveUpdate.ImageOptions.Image")));
             this.btnLiveUpdate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnLiveUpdate.Location = new System.Drawing.Point(546, 316);
+            this.btnLiveUpdate.Location = new System.Drawing.Point(588, 77);
             this.btnLiveUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLiveUpdate.Name = "btnLiveUpdate";
-            this.btnLiveUpdate.Size = new System.Drawing.Size(72, 42);
+            this.btnLiveUpdate.Size = new System.Drawing.Size(103, 47);
             this.btnLiveUpdate.TabIndex = 190;
+            this.btnLiveUpdate.Text = "Live Update";
             this.btnLiveUpdate.ToolTip = "Update real-time data for template";
             this.btnLiveUpdate.Click += new System.EventHandler(this.btnLiveUpdate_Click);
             // 
@@ -4638,10 +4638,10 @@
             this.btnPreviewTemplate.Appearance.Options.UseFont = true;
             this.btnPreviewTemplate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreviewTemplate.ImageOptions.Image")));
             this.btnPreviewTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPreviewTemplate.Location = new System.Drawing.Point(546, 266);
+            this.btnPreviewTemplate.Location = new System.Drawing.Point(546, 288);
             this.btnPreviewTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPreviewTemplate.Name = "btnPreviewTemplate";
-            this.btnPreviewTemplate.Size = new System.Drawing.Size(72, 42);
+            this.btnPreviewTemplate.Size = new System.Drawing.Size(72, 64);
             this.btnPreviewTemplate.TabIndex = 186;
             this.btnPreviewTemplate.ToolTip = "Preview Template";
             this.btnPreviewTemplate.Click += new System.EventHandler(this.btnPreviewTemplate_Click);
@@ -4653,7 +4653,7 @@
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPlay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.ImageOptions.Image")));
             this.btnPlay.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPlay.Location = new System.Drawing.Point(546, 376);
+            this.btnPlay.Location = new System.Drawing.Point(546, 382);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(72, 64);
