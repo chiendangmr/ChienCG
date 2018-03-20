@@ -902,19 +902,18 @@ namespace HDCGStudio
                 player.Add(0, "HDTemplates/HDVietNam.ft", true);
             }
         }
-        bool _forUpdate = false;
+
         private void btnLiveUpdate_Click(object sender, EventArgs e)
         {
             try
             {
-                _forUpdate = true;
                 string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
                 player.Update(1, xmlStr.Replace("\\n", "\n"));
                 player.Refresh();
                 cgServer.UpdateTemplate(120, xmlStr, 0);
 
                 cgServer.UpdateTemplate(_layer, xmlStr, 0);
-                _forUpdate = false;
+
             }
             catch (Exception ex)
             {
@@ -1056,9 +1055,12 @@ namespace HDCGStudio
                     xmlAdd += Add("nhietdo", txtNhietdo.Text);
                     xmlAdd += Add("sucgio", txtSucgio.Text);
                     xmlAdd += Add("doam", txtDoam.Text);
-
-                    xmlAdd += Add("dong1", txtLine1.Text);
-                    xmlAdd += Add("dong2", txtLine2.Text);
+                    if (_tempName == "BongDa_BarTen.ft")
+                    {
+                        xmlAdd += Add("dong1", txtLine1.Text);
+                        xmlAdd += Add("dong2", txtLine2.Text);
+                        xmlAdd += Add("iconBarTen", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), txtLogoBarTen.Text));
+                    }
                     xmlAdd += Add("bugio", nBugio.Value.ToString());
                     if (_tempName == "BongDa_ThayNguoi.ft")
                     {
@@ -1852,7 +1854,7 @@ namespace HDCGStudio
                     var playerIn = GetPlayerIn(true);
                     var playerOut = GetPlayerOut(true);
                     bsHomePlayer.List.Insert(bsHomePlayer.List.IndexOf(playerOut), playerIn);
-                    bsHomePlayerDuBi.List.Insert(bsHomePlayer.List.IndexOf(playerIn), playerOut);
+                    bsHomePlayerDuBi.List.Insert(bsHomePlayerDuBi.List.IndexOf(playerIn), playerOut);
                     bsHomePlayer.List.Remove(playerOut);
                     bsHomePlayerDuBi.List.Remove(playerIn);
                     OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
@@ -1906,7 +1908,10 @@ namespace HDCGStudio
                     OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnOnNoiDungKhach_Click(object sender, EventArgs e)
@@ -1926,7 +1931,7 @@ namespace HDCGStudio
                     var playerIn = GetPlayerIn(false);
                     var playerOut = GetPlayerOut(false);
                     bsAwayPlayer.List.Insert(bsAwayPlayer.List.IndexOf(playerOut), playerIn);
-                    bsAwayPlayerDuBi.List.Insert(bsAwayPlayer.List.IndexOf(playerIn), playerOut);
+                    bsAwayPlayerDuBi.List.Insert(bsAwayPlayerDuBi.List.IndexOf(playerIn), playerOut);
                     bsAwayPlayer.List.Remove(playerOut);
                     bsAwayPlayerDuBi.List.Remove(playerIn);
                     OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
@@ -2346,6 +2351,15 @@ namespace HDCGStudio
                 var temp = gridView7.GetFocusedRow() as Object.Goal;
                 bsGhibanKhach.List.Remove(temp);
             }
+        }
+
+        private void btnBrowseLogoBarTen_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons");
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtLogoBarTen.Text = frm.FileName;
         }
     }
 }

@@ -28,7 +28,8 @@
 		
 	public class BongDa_BarTen extends CasparTemplate{
 		
-		private var txtGroup:MovieClip = new MovieClip();					
+		private var txtGroup:MovieClip = new MovieClip();
+		public var iconBarTen:MovieClip;				
 		public var dong1:TextField = new TextField();
 		public var dong2:TextField = new TextField();
 		
@@ -37,6 +38,7 @@
 			super();							
 			this.txtGroup.addChild(dong1);	
 			this.txtGroup.addChild(dong2);
+			this.txtGroup.addChild(iconBarTen);
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
 			ExternalInterface.addCallback("GetProperties", GetProperties);			
@@ -75,7 +77,13 @@
 						break;
 					case "dong2".toLowerCase():
 						this.dong2.text = data.toUpperCase();
-						break;						
+						break;	
+					case "iconBarTen".toLowerCase():						
+						var file:Loader = new Loader();
+						file.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted);
+						file.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError);
+						file.load(new URLRequest(data));
+						break;
 				}
 			}
 		}
@@ -84,7 +92,20 @@
 		}
 		public override function Stop():void{
 			gotoAndPlay('stop');
-		}		
+		}
+		private function onOpenImageError(e:IOErrorEvent)
+		{
+			while(this.iconBarTen.numChildren > 0)
+				this.iconBarTen.removeChildAt(0);
+		}
+		
+		private function onOpenImageCompleted(e:Event)
+		{
+			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;	
+			bmp.width=51;
+			bmp.height=43;
+			this.iconBarTen.addChild(bmp);
+		}
 	}
 	
 }
