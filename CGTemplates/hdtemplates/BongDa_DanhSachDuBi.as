@@ -295,7 +295,7 @@
 						this.dubiKhachName3.text = data.toUpperCase();
 						break;
 					case "dubiKhachName4".toLowerCase():
-						this.dubiKhachName4
+						this.dubiKhachName4.text = data.toUpperCase();
 					case "dubiKhachName5".toLowerCase():
 						this.dubiKhachName5.text = data.toUpperCase();
 						break;

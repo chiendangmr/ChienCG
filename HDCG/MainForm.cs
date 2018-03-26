@@ -1122,7 +1122,7 @@ namespace HDCGStudio
                     }
                     xmlAdd += Add("doiChu", cboDoiChuNha.Text);
                     xmlAdd += Add("doiKhach", cboDoiKhach.Text);
-                    xmlAdd += Add("tyso", nTysoChu.Value.ToString() + "-" + nTysoKhach.Value.ToString());
+                    xmlAdd += Add("tyso", nTysoChu.Value.ToString() + " - " + nTysoKhach.Value.ToString());
                     xmlAdd += Add("goalChu", nTysoChu.Value.ToString());
                     xmlAdd += Add("goalKhach", nTysoKhach.Value.ToString());
                     if (_tempName == "BongDa_DanhSachChinhThuc.ft")
@@ -1893,7 +1893,7 @@ namespace HDCGStudio
                         Name = "Loops",
                         Value = "false"
                     });
-                    
+
                     string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
                     var playerOut = GetPlayerOut(true);
                     bsHomePlayer.List.Remove(playerOut);
