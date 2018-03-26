@@ -1237,9 +1237,9 @@ namespace HDCGStudio
                     }
 
                 }
-                catch (Exception ex)
+                catch //(Exception ex)
                 {
-                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -1265,9 +1265,9 @@ namespace HDCGStudio
                     xmlAdd += Add("player1livePoint", txtDiemHientaiPlayer1.Text);
                     xmlAdd += Add("player2livePoint", txtDiemHientaiPlayer2.Text);
                 }
-                catch (Exception ex)
+                catch //(Exception ex)
                 {
-                    HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             return xmlAdd;
@@ -1655,6 +1655,7 @@ namespace HDCGStudio
             _thoigianTranGiay = (int)nGiay.Value;
         }
         bool isTySoGoc = false;
+        bool _tySoGocOn = false;
         private void btnOnTySoGoc_Click(object sender, EventArgs e)
         {
             try
@@ -1694,6 +1695,7 @@ namespace HDCGStudio
                         {
                             OnTemplate(120, tempTySoGocName, 1, null, runtimeProperties, xmlStr);
                         }
+                        _tySoGocOn = true;
                     }
 
                     else
@@ -1719,10 +1721,11 @@ namespace HDCGStudio
                 {
                     OffTemplate(120);
                 }
+                _tySoGocOn = false;
             }
             catch
             {
-                HDMessageBox.Show("404 - Template not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //HDMessageBox.Show("404 - Template not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2370,6 +2373,29 @@ namespace HDCGStudio
             frm.FilterString = "*.tga;*.png;*.jpg";
             if (frm.ShowDialog() == DialogResult.OK)
                 txtLogoBarTen.Text = frm.FileName;
+        }
+        bool isGatLen = true;
+        private void btnGat_Click(object sender, EventArgs e)
+        {
+            if (isGatLen)
+            {
+                if (_tySoGocOn)
+                {
+                    btnOffTySoGoc.PerformClick();
+                    Thread.Sleep(500);
+                }
+                BatTemplate("BongDa_Gat.ft");
+                isGatLen = false;
+                btnGat.ToolTip = "Lên Gạt và lên đồ họa khác";
+            }
+            else
+            {
+                BatTemplate("BongDa_Gat.ft");
+                Thread.Sleep(1000);
+                btnOnTySoGoc.PerformClick();
+                isGatLen = true;
+                btnGat.ToolTip = "Lên Gạt và xuống đồ họa khác";
+            }
         }
     }
 }

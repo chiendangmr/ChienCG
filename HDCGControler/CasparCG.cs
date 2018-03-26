@@ -504,8 +504,10 @@ namespace HDCGControler
         public bool CutDown(int channel, int layer)
         {
             if (caspar_ == null || !caspar_.IsConnected)
+            {
+                //caspar_.Channels[channel].CG.Clear();
                 return false;
-
+            }
             lock (this._lockServer)
             {
                 var layerLoad = layer * 2;

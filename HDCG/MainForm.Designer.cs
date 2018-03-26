@@ -277,6 +277,7 @@
             this.txtLine2 = new DevExpress.XtraEditors.TextEdit();
             this.xTabThoigian = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.btnGat = new DevExpress.XtraEditors.SimpleButton();
             this.btnOffBugio = new DevExpress.XtraEditors.SimpleButton();
             this.btnOnBugio = new DevExpress.XtraEditors.SimpleButton();
             this.btnOffTySoGoc = new DevExpress.XtraEditors.SimpleButton();
@@ -770,7 +771,7 @@
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(1895, 1060);
+            this.groupControl1.Size = new System.Drawing.Size(1895, 962);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Videos, Images";
             // 
@@ -795,7 +796,7 @@
             this.panelControl11.Location = new System.Drawing.Point(518, 6);
             this.panelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl11.Name = "panelControl11";
-            this.panelControl11.Size = new System.Drawing.Size(1363, 1047);
+            this.panelControl11.Size = new System.Drawing.Size(1363, 949);
             this.panelControl11.TabIndex = 46;
             // 
             // grdVideo
@@ -810,7 +811,7 @@
             this.grdVideo.Name = "grdVideo";
             this.grdVideo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.grdVideo.Size = new System.Drawing.Size(1359, 1043);
+            this.grdVideo.Size = new System.Drawing.Size(1359, 945);
             this.grdVideo.TabIndex = 18;
             this.grdVideo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVideo});
@@ -3202,8 +3203,9 @@
             // 
             // groupControl8
             // 
-            this.groupControl8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl8.Controls.Add(this.simpleButton23);
             this.groupControl8.Controls.Add(this.simpleButton24);
             this.groupControl8.Controls.Add(this.txtStadium);
@@ -3219,9 +3221,9 @@
             this.groupControl8.Controls.Add(this.labelControl50);
             this.groupControl8.Controls.Add(this.labelControl51);
             this.groupControl8.Controls.Add(this.txtNhietdo);
-            this.groupControl8.Location = new System.Drawing.Point(20, 288);
+            this.groupControl8.Location = new System.Drawing.Point(3, 288);
             this.groupControl8.Name = "groupControl8";
-            this.groupControl8.Size = new System.Drawing.Size(1107, 366);
+            this.groupControl8.Size = new System.Drawing.Size(1163, 426);
             this.groupControl8.TabIndex = 179;
             this.groupControl8.Text = "Thời tiết - Địa điểm";
             // 
@@ -3396,9 +3398,9 @@
             this.groupControl7.Controls.Add(this.txtTroly2);
             this.groupControl7.Controls.Add(this.labelControl35);
             this.groupControl7.Controls.Add(this.txtTrongtaiban);
-            this.groupControl7.Location = new System.Drawing.Point(20, 39);
+            this.groupControl7.Location = new System.Drawing.Point(3, 3);
             this.groupControl7.Name = "groupControl7";
-            this.groupControl7.Size = new System.Drawing.Size(478, 243);
+            this.groupControl7.Size = new System.Drawing.Size(495, 279);
             this.groupControl7.TabIndex = 178;
             this.groupControl7.Text = "Trọng tài:";
             // 
@@ -3521,9 +3523,9 @@
             this.groupControl6.Controls.Add(this.txtLine1);
             this.groupControl6.Controls.Add(this.labelControl48);
             this.groupControl6.Controls.Add(this.txtLine2);
-            this.groupControl6.Location = new System.Drawing.Point(504, 39);
+            this.groupControl6.Location = new System.Drawing.Point(504, 3);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(623, 243);
+            this.groupControl6.Size = new System.Drawing.Size(662, 279);
             this.groupControl6.TabIndex = 177;
             this.groupControl6.Text = "Bar tên";
             // 
@@ -3645,6 +3647,7 @@
             this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl4.Controls.Add(this.btnGat);
             this.groupControl4.Controls.Add(this.btnOffBugio);
             this.groupControl4.Controls.Add(this.btnOnBugio);
             this.groupControl4.Controls.Add(this.btnOffTySoGoc);
@@ -3658,12 +3661,27 @@
             this.groupControl4.Controls.Add(this.labelControl53);
             this.groupControl4.Location = new System.Drawing.Point(3, 310);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(1163, 284);
+            this.groupControl4.Size = new System.Drawing.Size(1163, 404);
             this.groupControl4.TabIndex = 191;
-            this.groupControl4.Text = "Tỷ số góc và bù giờ";
+            this.groupControl4.Text = "Tỷ số góc, gạt và bù giờ";
+            // 
+            // btnGat
+            // 
+            this.btnGat.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F, System.Drawing.FontStyle.Bold);
+            this.btnGat.Appearance.Options.UseFont = true;
+            this.btnGat.Location = new System.Drawing.Point(464, 146);
+            this.btnGat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnGat.Name = "btnGat";
+            this.btnGat.Size = new System.Drawing.Size(138, 61);
+            this.btnGat.TabIndex = 199;
+            this.btnGat.Text = "Lên Gạt";
+            this.btnGat.ToolTip = "Lên Gạt và xuống đồ họa khác";
+            this.btnGat.Click += new System.EventHandler(this.btnGat_Click);
             // 
             // btnOffBugio
             // 
+            this.btnOffBugio.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F, System.Drawing.FontStyle.Bold);
+            this.btnOffBugio.Appearance.Options.UseFont = true;
             this.btnOffBugio.Location = new System.Drawing.Point(837, 146);
             this.btnOffBugio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOffBugio.Name = "btnOffBugio";
@@ -3674,6 +3692,8 @@
             // 
             // btnOnBugio
             // 
+            this.btnOnBugio.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F, System.Drawing.FontStyle.Bold);
+            this.btnOnBugio.Appearance.Options.UseFont = true;
             this.btnOnBugio.Location = new System.Drawing.Point(661, 146);
             this.btnOnBugio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOnBugio.Name = "btnOnBugio";
@@ -3684,6 +3704,8 @@
             // 
             // btnOffTySoGoc
             // 
+            this.btnOffTySoGoc.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F, System.Drawing.FontStyle.Bold);
+            this.btnOffTySoGoc.Appearance.Options.UseFont = true;
             this.btnOffTySoGoc.Location = new System.Drawing.Point(279, 146);
             this.btnOffTySoGoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOffTySoGoc.Name = "btnOffTySoGoc";
@@ -3694,6 +3716,8 @@
             // 
             // btnOnTySoGoc
             // 
+            this.btnOnTySoGoc.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F, System.Drawing.FontStyle.Bold);
+            this.btnOnTySoGoc.Appearance.Options.UseFont = true;
             this.btnOnTySoGoc.Location = new System.Drawing.Point(103, 146);
             this.btnOnTySoGoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOnTySoGoc.Name = "btnOnTySoGoc";
@@ -3704,15 +3728,14 @@
             // 
             // ckTysogocVaBugioOff
             // 
-            this.ckTysogocVaBugioOff.EditValue = true;
-            this.ckTysogocVaBugioOff.Location = new System.Drawing.Point(575, 56);
+            this.ckTysogocVaBugioOff.Location = new System.Drawing.Point(558, 56);
             this.ckTysogocVaBugioOff.MenuManager = this.barManager1;
             this.ckTysogocVaBugioOff.Name = "ckTysogocVaBugioOff";
             this.ckTysogocVaBugioOff.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.ckTysogocVaBugioOff.Properties.Appearance.Options.UseFont = true;
-            this.ckTysogocVaBugioOff.Properties.Caption = "Xuống đồ họa cùng Bù giờ";
+            this.ckTysogocVaBugioOff.Properties.Caption = "Xuống Tỷ số góc cùng Bù giờ";
             this.ckTysogocVaBugioOff.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.ckTysogocVaBugioOff.Size = new System.Drawing.Size(224, 25);
+            this.ckTysogocVaBugioOff.Size = new System.Drawing.Size(241, 25);
             this.ckTysogocVaBugioOff.TabIndex = 184;
             // 
             // labelControl62
@@ -3755,14 +3778,14 @@
             // 
             // ckTysogocVaBugioOn
             // 
-            this.ckTysogocVaBugioOn.Location = new System.Drawing.Point(294, 56);
+            this.ckTysogocVaBugioOn.Location = new System.Drawing.Point(279, 56);
             this.ckTysogocVaBugioOn.MenuManager = this.barManager1;
             this.ckTysogocVaBugioOn.Name = "ckTysogocVaBugioOn";
             this.ckTysogocVaBugioOn.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.ckTysogocVaBugioOn.Properties.Appearance.Options.UseFont = true;
-            this.ckTysogocVaBugioOn.Properties.Caption = "Lên đồ họa cùng Bù giờ";
+            this.ckTysogocVaBugioOn.Properties.Caption = "Lên Tỷ số góc cùng Bù giờ";
             this.ckTysogocVaBugioOn.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.ckTysogocVaBugioOn.Size = new System.Drawing.Size(206, 25);
+            this.ckTysogocVaBugioOn.Size = new System.Drawing.Size(221, 25);
             this.ckTysogocVaBugioOn.TabIndex = 181;
             // 
             // nBugio
@@ -4084,7 +4107,7 @@
             this.xTabPageTennis.Controls.Add(this.txtPlayer1);
             this.xTabPageTennis.Controls.Add(this.labelControl11);
             this.xTabPageTennis.Name = "xTabPageTennis";
-            this.xTabPageTennis.Size = new System.Drawing.Size(1176, 1049);
+            this.xTabPageTennis.Size = new System.Drawing.Size(1176, 951);
             this.xTabPageTennis.Text = "Tennis";
             // 
             // labelControl26
@@ -4786,7 +4809,7 @@
             // 
             this.xTabVideo.Controls.Add(this.groupControl1);
             this.xTabVideo.Name = "xTabVideo";
-            this.xTabVideo.Size = new System.Drawing.Size(1895, 1060);
+            this.xTabVideo.Size = new System.Drawing.Size(1895, 962);
             this.xTabVideo.Text = "Videos/Images";
             // 
             // bsUpdateData
@@ -5357,5 +5380,6 @@
         private DevExpress.XtraEditors.SimpleButton btnBrowseLogoBarTen;
         private DevExpress.XtraEditors.LabelControl labelControl66;
         private DevExpress.XtraEditors.TextEdit txtLogoBarTen;
+        private DevExpress.XtraEditors.SimpleButton btnGat;
     }
 }
