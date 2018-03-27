@@ -1037,6 +1037,8 @@ namespace HDCGStudio
                     xmlAdd += Add("doibong", GetTeamName(isChu));
                     xmlAdd += Add("doichuShort", txtHomeShortName.Text);
                     xmlAdd += Add("doikhachShort", txtAwayShortName.Text);
+                    xmlAdd += Add("mauaoChu", String.Format("{0:X}", colorChu.Color.ToArgb()));
+                    xmlAdd += Add("mauaoKhach", String.Format("{0:X}", colorKhach.Color.ToArgb()));
                     xmlAdd += Add("hiepdau", txtHiep.Text);
                     xmlAdd += Add("player1", GetPlayingPlayer(isChu).mObj.ShortName);
                     xmlAdd += Add("playerNumber1", GetPlayingPlayer(isChu).mObj.Number.ToString());

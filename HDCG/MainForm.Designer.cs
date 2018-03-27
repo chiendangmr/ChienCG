@@ -373,6 +373,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tUpdateData = new System.Windows.Forms.Timer(this.components);
             this.bsUpdateNotifier = new System.Windows.Forms.BindingSource(this.components);
+            this.colorChu = new DevExpress.XtraEditors.ColorPickEdit();
+            this.colorKhach = new DevExpress.XtraEditors.ColorPickEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -545,6 +547,8 @@
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorChu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorKhach.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -622,7 +626,7 @@
             // 
             // barBtnManageTemplate
             // 
-            this.barBtnManageTemplate.Caption = "Manage Templates";
+            this.barBtnManageTemplate.Caption = "Quản lý Templates";
             this.barBtnManageTemplate.Id = 10;
             this.barBtnManageTemplate.Name = "barBtnManageTemplate";
             this.barBtnManageTemplate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnManageTemplate_ItemClick);
@@ -630,7 +634,7 @@
             // mnuHelp
             // 
             this.mnuHelp.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.mnuHelp.Caption = "Help";
+            this.mnuHelp.Caption = "Thông tin";
             this.mnuHelp.Id = 0;
             this.mnuHelp.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.mnuAbout)});
@@ -679,7 +683,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1902, 25);
+            this.barDockControlTop.Size = new System.Drawing.Size(1902, 26);
             // 
             // barDockControlBottom
             // 
@@ -694,19 +698,19 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 996);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 995);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1902, 25);
+            this.barDockControlRight.Location = new System.Drawing.Point(1902, 26);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 996);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 995);
             // 
             // barButtonItem1
             // 
@@ -771,7 +775,7 @@
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(1895, 962);
+            this.groupControl1.Size = new System.Drawing.Size(1895, 961);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Videos, Images";
             // 
@@ -796,7 +800,7 @@
             this.panelControl11.Location = new System.Drawing.Point(518, 6);
             this.panelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl11.Name = "panelControl11";
-            this.panelControl11.Size = new System.Drawing.Size(1363, 949);
+            this.panelControl11.Size = new System.Drawing.Size(1363, 948);
             this.panelControl11.TabIndex = 46;
             // 
             // grdVideo
@@ -811,7 +815,7 @@
             this.grdVideo.Name = "grdVideo";
             this.grdVideo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.grdVideo.Size = new System.Drawing.Size(1359, 945);
+            this.grdVideo.Size = new System.Drawing.Size(1359, 944);
             this.grdVideo.TabIndex = 18;
             this.grdVideo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVideo});
@@ -1043,7 +1047,7 @@
             this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.ShowCaption = false;
-            this.groupControl3.Size = new System.Drawing.Size(1895, 962);
+            this.groupControl3.Size = new System.Drawing.Size(1895, 961);
             this.groupControl3.TabIndex = 15;
             this.groupControl3.Text = "Templates";
             // 
@@ -1056,7 +1060,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1891, 958);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1891, 957);
             this.splitContainerControl1.SplitterPosition = 1210;
             this.splitContainerControl1.TabIndex = 92;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -1068,7 +1072,7 @@
             this.xTabMain.Location = new System.Drawing.Point(0, 0);
             this.xTabMain.Name = "xTabMain";
             this.xTabMain.SelectedTabPage = this.xTabPageBongda;
-            this.xTabMain.Size = new System.Drawing.Size(1210, 958);
+            this.xTabMain.Size = new System.Drawing.Size(1210, 957);
             this.xTabMain.TabIndex = 93;
             this.xTabMain.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabPageBongda,
@@ -1078,7 +1082,7 @@
             // 
             this.xTabPageBongda.Controls.Add(this.splitContainerControl4);
             this.xTabPageBongda.Name = "xTabPageBongda";
-            this.xTabPageBongda.Size = new System.Drawing.Size(1176, 951);
+            this.xTabPageBongda.Size = new System.Drawing.Size(1176, 950);
             this.xTabPageBongda.Text = "Bóng đá";
             // 
             // splitContainerControl4
@@ -1089,6 +1093,8 @@
             this.splitContainerControl4.Horizontal = false;
             this.splitContainerControl4.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl4.Name = "splitContainerControl4";
+            this.splitContainerControl4.Panel1.Controls.Add(this.colorKhach);
+            this.splitContainerControl4.Panel1.Controls.Add(this.colorChu);
             this.splitContainerControl4.Panel1.Controls.Add(this.btnOffHLVKhach);
             this.splitContainerControl4.Panel1.Controls.Add(this.btnOnHLVKhach);
             this.splitContainerControl4.Panel1.Controls.Add(this.btnOffHLVChu);
@@ -1116,7 +1122,7 @@
             this.splitContainerControl4.Panel2.Appearance.Options.UseBackColor = true;
             this.splitContainerControl4.Panel2.Controls.Add(this.xtraTabControl2);
             this.splitContainerControl4.Panel2.Text = "Panel2";
-            this.splitContainerControl4.Size = new System.Drawing.Size(1176, 951);
+            this.splitContainerControl4.Size = new System.Drawing.Size(1176, 950);
             this.splitContainerControl4.SplitterPosition = 193;
             this.splitContainerControl4.TabIndex = 115;
             this.splitContainerControl4.Text = "splitContainerControl4";
@@ -1126,7 +1132,7 @@
             this.btnOffHLVKhach.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnOffHLVKhach.Appearance.Options.UseFont = true;
             this.btnOffHLVKhach.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOffHLVKhach.Location = new System.Drawing.Point(1047, 146);
+            this.btnOffHLVKhach.Location = new System.Drawing.Point(1077, 146);
             this.btnOffHLVKhach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOffHLVKhach.Name = "btnOffHLVKhach";
             this.btnOffHLVKhach.Size = new System.Drawing.Size(45, 30);
@@ -1140,7 +1146,7 @@
             this.btnOnHLVKhach.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnOnHLVKhach.Appearance.Options.UseFont = true;
             this.btnOnHLVKhach.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOnHLVKhach.Location = new System.Drawing.Point(989, 146);
+            this.btnOnHLVKhach.Location = new System.Drawing.Point(1019, 146);
             this.btnOnHLVKhach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOnHLVKhach.Name = "btnOnHLVKhach";
             this.btnOnHLVKhach.Size = new System.Drawing.Size(52, 30);
@@ -1227,29 +1233,29 @@
             // 
             // txtHomeCoach
             // 
-            this.txtHomeCoach.Location = new System.Drawing.Point(200, 148);
+            this.txtHomeCoach.Location = new System.Drawing.Point(146, 148);
             this.txtHomeCoach.MenuManager = this.barManager1;
             this.txtHomeCoach.Name = "txtHomeCoach";
             this.txtHomeCoach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtHomeCoach.Properties.Appearance.Options.UseFont = true;
-            this.txtHomeCoach.Size = new System.Drawing.Size(191, 26);
+            this.txtHomeCoach.Size = new System.Drawing.Size(245, 26);
             this.txtHomeCoach.TabIndex = 150;
             // 
             // txtHomeShortName
             // 
-            this.txtHomeShortName.Location = new System.Drawing.Point(298, 113);
+            this.txtHomeShortName.Location = new System.Drawing.Point(146, 114);
             this.txtHomeShortName.MenuManager = this.barManager1;
             this.txtHomeShortName.Name = "txtHomeShortName";
             this.txtHomeShortName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtHomeShortName.Properties.Appearance.Options.UseFont = true;
-            this.txtHomeShortName.Size = new System.Drawing.Size(202, 26);
+            this.txtHomeShortName.Size = new System.Drawing.Size(245, 26);
             this.txtHomeShortName.TabIndex = 149;
             // 
             // labelControl29
             // 
             this.labelControl29.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl29.Appearance.Options.UseFont = true;
-            this.labelControl29.Location = new System.Drawing.Point(95, 149);
+            this.labelControl29.Location = new System.Drawing.Point(37, 151);
             this.labelControl29.Name = "labelControl29";
             this.labelControl29.Size = new System.Drawing.Size(89, 21);
             this.labelControl29.TabIndex = 148;
@@ -1257,19 +1263,19 @@
             // 
             // txtAwayCoach
             // 
-            this.txtAwayCoach.Location = new System.Drawing.Point(781, 149);
+            this.txtAwayCoach.Location = new System.Drawing.Point(768, 148);
             this.txtAwayCoach.MenuManager = this.barManager1;
             this.txtAwayCoach.Name = "txtAwayCoach";
             this.txtAwayCoach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtAwayCoach.Properties.Appearance.Options.UseFont = true;
-            this.txtAwayCoach.Size = new System.Drawing.Size(202, 26);
+            this.txtAwayCoach.Size = new System.Drawing.Size(245, 26);
             this.txtAwayCoach.TabIndex = 148;
             // 
             // labelControl28
             // 
             this.labelControl28.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl28.Appearance.Options.UseFont = true;
-            this.labelControl28.Location = new System.Drawing.Point(92, 114);
+            this.labelControl28.Location = new System.Drawing.Point(34, 116);
             this.labelControl28.Name = "labelControl28";
             this.labelControl28.Size = new System.Drawing.Size(92, 21);
             this.labelControl28.TabIndex = 147;
@@ -1277,7 +1283,7 @@
             // 
             // cboDoiKhach
             // 
-            this.cboDoiKhach.Location = new System.Drawing.Point(781, 80);
+            this.cboDoiKhach.Location = new System.Drawing.Point(858, 80);
             this.cboDoiKhach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboDoiKhach.MenuManager = this.barManager1;
             this.cboDoiKhach.Name = "cboDoiKhach";
@@ -1286,13 +1292,13 @@
             this.cboDoiKhach.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboDoiKhach.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboDoiKhach.Size = new System.Drawing.Size(311, 30);
+            this.cboDoiKhach.Size = new System.Drawing.Size(264, 30);
             this.cboDoiKhach.TabIndex = 140;
             this.cboDoiKhach.SelectedIndexChanged += new System.EventHandler(this.cboDoiKhach_SelectedIndexChanged);
             // 
             // txtAwayShortName
             // 
-            this.txtAwayShortName.Location = new System.Drawing.Point(781, 114);
+            this.txtAwayShortName.Location = new System.Drawing.Point(920, 117);
             this.txtAwayShortName.MenuManager = this.barManager1;
             this.txtAwayShortName.Name = "txtAwayShortName";
             this.txtAwayShortName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
@@ -1302,7 +1308,7 @@
             // 
             // cboDoiChuNha
             // 
-            this.cboDoiChuNha.Location = new System.Drawing.Point(200, 80);
+            this.cboDoiChuNha.Location = new System.Drawing.Point(146, 80);
             this.cboDoiChuNha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboDoiChuNha.MenuManager = this.barManager1;
             this.cboDoiChuNha.Name = "cboDoiChuNha";
@@ -1311,7 +1317,7 @@
             this.cboDoiChuNha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboDoiChuNha.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboDoiChuNha.Size = new System.Drawing.Size(300, 30);
+            this.cboDoiChuNha.Size = new System.Drawing.Size(264, 30);
             this.cboDoiChuNha.TabIndex = 146;
             this.cboDoiChuNha.SelectedIndexChanged += new System.EventHandler(this.cboDoiChuNha_SelectedIndexChanged);
             // 
@@ -1319,7 +1325,7 @@
             // 
             this.labelControl24.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl24.Appearance.Options.UseFont = true;
-            this.labelControl24.Location = new System.Drawing.Point(153, 81);
+            this.labelControl24.Location = new System.Drawing.Point(95, 83);
             this.labelControl24.Name = "labelControl24";
             this.labelControl24.Size = new System.Drawing.Size(31, 21);
             this.labelControl24.TabIndex = 145;
@@ -1380,7 +1386,7 @@
             this.xtraTabControl2.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xTabDoiHinh;
-            this.xtraTabControl2.Size = new System.Drawing.Size(1176, 752);
+            this.xtraTabControl2.Size = new System.Drawing.Size(1176, 751);
             this.xtraTabControl2.TabIndex = 113;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabDoiHinh,
@@ -1392,7 +1398,7 @@
             // 
             this.xTabDoiHinh.Controls.Add(this.splitContainerControl3);
             this.xTabDoiHinh.Name = "xTabDoiHinh";
-            this.xTabDoiHinh.Size = new System.Drawing.Size(1169, 717);
+            this.xTabDoiHinh.Size = new System.Drawing.Size(1169, 716);
             this.xTabDoiHinh.Text = "Đội hình/Cầu thủ/Thẻ";
             // 
             // splitContainerControl3
@@ -1423,7 +1429,7 @@
             this.splitContainerControl3.Panel2.Controls.Add(this.btnQuanlyDangkyAway);
             this.splitContainerControl3.Panel2.Controls.Add(this.gridSplitContainer2);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(1169, 717);
+            this.splitContainerControl3.Size = new System.Drawing.Size(1169, 716);
             this.splitContainerControl3.SplitterPosition = 689;
             this.splitContainerControl3.TabIndex = 114;
             this.splitContainerControl3.Text = "splitContainerControl3";
@@ -2200,7 +2206,7 @@
             this.xTabTyso.Controls.Add(this.labelControl8);
             this.xTabTyso.Controls.Add(this.nTysoChu);
             this.xTabTyso.Name = "xTabTyso";
-            this.xTabTyso.Size = new System.Drawing.Size(1169, 717);
+            this.xTabTyso.Size = new System.Drawing.Size(1169, 716);
             this.xTabTyso.Text = "Thông số/Tỷ số/Ghi bàn";
             // 
             // gridSplitContainer6
@@ -3198,7 +3204,7 @@
             this.xTabTrongtai.Controls.Add(this.groupControl7);
             this.xTabTrongtai.Controls.Add(this.groupControl6);
             this.xTabTrongtai.Name = "xTabTrongtai";
-            this.xTabTrongtai.Size = new System.Drawing.Size(1169, 717);
+            this.xTabTrongtai.Size = new System.Drawing.Size(1169, 716);
             this.xTabTrongtai.Text = "Trọng tài/Bar tên/Địa điểm/Thời tiết";
             // 
             // groupControl8
@@ -3639,7 +3645,7 @@
             this.xTabThoigian.Controls.Add(this.groupControl4);
             this.xTabThoigian.Controls.Add(this.groupControl2);
             this.xTabThoigian.Name = "xTabThoigian";
-            this.xTabThoigian.Size = new System.Drawing.Size(1169, 717);
+            this.xTabThoigian.Size = new System.Drawing.Size(1169, 716);
             this.xTabThoigian.Text = "Thời gian/Tỷ số góc/Bù giờ";
             // 
             // groupControl4
@@ -4107,7 +4113,7 @@
             this.xTabPageTennis.Controls.Add(this.txtPlayer1);
             this.xTabPageTennis.Controls.Add(this.labelControl11);
             this.xTabPageTennis.Name = "xTabPageTennis";
-            this.xTabPageTennis.Size = new System.Drawing.Size(1176, 951);
+            this.xTabPageTennis.Size = new System.Drawing.Size(1176, 950);
             this.xTabPageTennis.Text = "Tennis";
             // 
             // labelControl26
@@ -4423,7 +4429,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.panelControl1);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(675, 958);
+            this.splitContainerControl2.Size = new System.Drawing.Size(675, 957);
             this.splitContainerControl2.SplitterPosition = 331;
             this.splitContainerControl2.TabIndex = 113;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -4462,7 +4468,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(675, 621);
+            this.panelControl1.Size = new System.Drawing.Size(675, 620);
             this.panelControl1.TabIndex = 4;
             // 
             // groupControl5
@@ -4789,10 +4795,10 @@
             // xTab
             // 
             this.xTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xTab.Location = new System.Drawing.Point(0, 25);
+            this.xTab.Location = new System.Drawing.Point(0, 26);
             this.xTab.Name = "xTab";
             this.xTab.SelectedTabPage = this.xTabTemplate;
-            this.xTab.Size = new System.Drawing.Size(1902, 996);
+            this.xTab.Size = new System.Drawing.Size(1902, 995);
             this.xTab.TabIndex = 16;
             this.xTab.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabTemplate,
@@ -4802,14 +4808,14 @@
             // 
             this.xTabTemplate.Controls.Add(this.groupControl3);
             this.xTabTemplate.Name = "xTabTemplate";
-            this.xTabTemplate.Size = new System.Drawing.Size(1895, 962);
+            this.xTabTemplate.Size = new System.Drawing.Size(1895, 961);
             this.xTabTemplate.Text = "Templates";
             // 
             // xTabVideo
             // 
             this.xTabVideo.Controls.Add(this.groupControl1);
             this.xTabVideo.Name = "xTabVideo";
-            this.xTabVideo.Size = new System.Drawing.Size(1895, 962);
+            this.xTabVideo.Size = new System.Drawing.Size(1895, 961);
             this.xTabVideo.Text = "Videos/Images";
             // 
             // bsUpdateData
@@ -4829,6 +4835,30 @@
             // bsUpdateNotifier
             // 
             this.bsUpdateNotifier.DataSource = typeof(HDCGStudio.Object.UpdateNotifier);
+            // 
+            // colorChu
+            // 
+            this.colorChu.EditValue = System.Drawing.Color.Empty;
+            this.colorChu.Location = new System.Drawing.Point(416, 80);
+            this.colorChu.MenuManager = this.barManager1;
+            this.colorChu.Name = "colorChu";
+            this.colorChu.Properties.AutomaticColor = System.Drawing.Color.Black;
+            this.colorChu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.colorChu.Size = new System.Drawing.Size(84, 22);
+            this.colorChu.TabIndex = 201;
+            // 
+            // colorKhach
+            // 
+            this.colorKhach.EditValue = System.Drawing.Color.Empty;
+            this.colorKhach.Location = new System.Drawing.Point(768, 82);
+            this.colorKhach.MenuManager = this.barManager1;
+            this.colorKhach.Name = "colorKhach";
+            this.colorKhach.Properties.AutomaticColor = System.Drawing.Color.Black;
+            this.colorKhach.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.colorKhach.Size = new System.Drawing.Size(84, 22);
+            this.colorKhach.TabIndex = 202;
             // 
             // MainForm
             // 
@@ -5031,6 +5061,8 @@
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorChu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorKhach.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5381,5 +5413,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl66;
         private DevExpress.XtraEditors.TextEdit txtLogoBarTen;
         private DevExpress.XtraEditors.SimpleButton btnGat;
+        private DevExpress.XtraEditors.ColorPickEdit colorChu;
+        private DevExpress.XtraEditors.ColorPickEdit colorKhach;
     }
 }

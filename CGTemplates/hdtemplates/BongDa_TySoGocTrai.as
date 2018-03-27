@@ -22,11 +22,14 @@
 	import flash.sampler.Sample;
 	import flash.globalization.NumberFormatter;
 	import flash.globalization.LocaleID;
+	import flash.geom.ColorTransform;
 		
 	public class BongDa_TySoGocTrai extends CasparTemplate{		
 				
 		private var txtGroup:MovieClip = new MovieClip();
-					
+		public var mauaoChu:MovieClip;	
+		public var mauaoKhach:MovieClip;	
+		
 		public var dongho:TextField = new TextField();
 		public var doichuShort:TextField = new TextField();
 		public var tyso:TextField = new TextField();
@@ -43,7 +46,9 @@
 			this.txtGroup.addChild(tyso);	
 			this.txtGroup.addChild(dongho);
 			this.txtGroup.addChild(doichuShort);	
-			this.txtGroup.addChild(doikhachShort);			
+			this.txtGroup.addChild(doikhachShort);	
+			this.txtGroup.addChild(mauaoChu);
+			this.txtGroup.addChild(mauaoKhach);
 			
 			this.addChild(txtGroup);		
 			
@@ -96,7 +101,17 @@
 						break;
 					case "doikhachShort".toLowerCase():
 						this.doikhachShort.text = data;
-						break;						
+						break;	
+					case "mauaoChu".toLowerCase():
+						var c:ColorTransform = new ColorTransform();
+						c.color = uint("0x" + data);
+						this.mauaoChu.transform.colorTransform = c;
+						break;	
+					case "mauaoKhach".toLowerCase():
+						var d:ColorTransform = new ColorTransform();
+						d.color = uint("0x" + data);
+						this.mauaoKhach.transform.colorTransform = d;
+						break;
 				}
 			}
 		}
