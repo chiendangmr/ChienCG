@@ -57,7 +57,6 @@ namespace HDCGStudio
                 cboFormat.Caption = AppSetting.Default.Format;
 
                 cboVideoLayer.SelectedIndex = 0;
-                cboTempLayer.SelectedIndex = 5;
                 cboTemplateType.SelectedIndex = 0;
 
                 _videoXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Video.xml");
@@ -265,7 +264,7 @@ namespace HDCGStudio
             }
         }
 
-        public string ViewTemplate(string templateFileName, int fadeUpDuration = 0)
+        public string ViewTemplate(string templateFileName, int fadeUpDuration = 0, bool isChu = true)
         {
             string templateFile = "HDTemplates\\" + templateFileName;
 
@@ -277,7 +276,7 @@ namespace HDCGStudio
                 Clear();
                 if (player.Add(1, templateFile))
                 {
-                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    string xmlStr = "<Track_Property>" + GetAddXmlString(isChu) + "</Track_Property>";
                     UpdateDataFile(xmlStr);
 
                     player.Update(1, xmlStr.Replace("\\n", "\n"));
@@ -516,39 +515,6 @@ namespace HDCGStudio
                 OffTemplate(int.Parse(cboVideoLayer.Text));
         }
 
-        private void btnPlay_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!cgServer.Connect())
-                    HDMessageBox.Show("Not connect to cg server!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                else
-                {
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
-
-                    System.Threading.Timer timer = null;
-                    timer = new System.Threading.Timer((obj) =>
-                        {
-                            OnTemplate(_layer, _tempName, 1, null, runtimeProperties, xmlStr);
-                            timer.Dispose();
-                        },
-                    null, _delay, Timeout.Infinite);
-                }
-            }
-            catch
-            {
-                HDMessageBox.Show("Please add a Template!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-
-        }
-
         private void btnStop_Click(object sender, EventArgs e)
         {
             try
@@ -590,10 +556,6 @@ namespace HDCGStudio
                 ViewTemplate(_tempName);
             else
                 HDMessageBox.Show("Bạn chưa chọn thông tin Giải đấu, Đội chủ/khách!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            var temp = gvTempInfo.GetFocusedRow() as View.tempInfo;
-            cboTempLayer.Text = temp.tempObj.Layer.ToString();
-            nDelayTime.Value = temp.tempObj.Delay;
-            nDurationTime.Value = temp.tempObj.Duration;
         }
         private void gvTempInfo_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
@@ -686,31 +648,8 @@ namespace HDCGStudio
             {
                 btnPreviewTemplate.PerformClick();
             }
-            else if (e.KeyCode == Keys.Space)
-            {
-                btnPlay.PerformClick();
-            }
-            else if (e.KeyCode == Keys.Escape)
-            {
-                btnStop.PerformClick();
-            }
         }
 
-        private void gridTempInfo_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F2)
-            {
-                btnPreviewTemplate.PerformClick();
-            }
-            else if (e.KeyCode == Keys.Space)
-            {
-                btnPlay.PerformClick();
-            }
-            else if (e.KeyCode == Keys.Escape)
-            {
-                btnStop.PerformClick();
-            }
-        }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -779,41 +718,7 @@ namespace HDCGStudio
         {
             return "<" + str + " id=\"" + str + "\"><data value=\"" + val + "\"/></" + str + ">";
         }
-        private void btnUpdateAll_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (tempInfoBindingSource.List.Count == 0)
-                {
-                    HDMessageBox.Show("Chưa chọn template để lưu!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                if (cboTempLayer.Text.Length > 0)
-                {
-                    var temp = gvTempInfo.GetFocusedRow() as View.tempInfo;
 
-                    tempInfoBindingSource.List.Insert(tempInfoBindingSource.List.IndexOf(temp), new View.tempInfo()
-                    {
-                        tempObj = new Object.tempInfo()
-                        {
-                            TemplateName = temp.tempObj.TemplateName,
-                            Layer = int.Parse(cboTempLayer.Text),
-                            Delay = (int)nDelayTime.Value,
-                            Duration = (int)nDurationTime.Value
-                        }
-                    });
-                    tempInfoBindingSource.List.Remove(temp);
-                }
-                else
-                {
-                    HDMessageBox.Show("Chọn Layer trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         private void UpdateDataFile(string data)
         {
             try
@@ -1789,15 +1694,7 @@ namespace HDCGStudio
         {
             try
             {
-                _tempName = "BongDa_HLV.ft";
-                List<Object.Property> runtimeProperties = new List<Object.Property>();
-                runtimeProperties.Add(new Object.Property()
-                {
-                    Name = "Loops",
-                    Value = "false"
-                });
-                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
-                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                BatTemplate("BongDa_HLV.ft");
             }
             catch { }
         }
@@ -1818,15 +1715,7 @@ namespace HDCGStudio
         {
             try
             {
-                _tempName = "BongDa_HLV.ft";
-                List<Object.Property> runtimeProperties = new List<Object.Property>();
-                runtimeProperties.Add(new Object.Property()
-                {
-                    Name = "Loops",
-                    Value = "false"
-                });
-                string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
-                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                BatTemplate("BongDa_HLV.ft", false);
             }
             catch { }
         }
@@ -1849,74 +1738,34 @@ namespace HDCGStudio
             {
                 if (cboNoiDungChu.Text == "Thay người")
                 {
-                    _tempName = "BongDa_ThayNguoi.ft";
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    BatTemplate("BongDa_ThayNguoi.ft");
                     var playerIn = GetPlayerIn(true);
                     var playerOut = GetPlayerOut(true);
                     bsHomePlayer.List.Insert(bsHomePlayer.List.IndexOf(playerOut), playerIn);
                     bsHomePlayerDuBi.List.Insert(bsHomePlayerDuBi.List.IndexOf(playerIn), playerOut);
                     bsHomePlayer.List.Remove(playerOut);
                     bsHomePlayerDuBi.List.Remove(playerIn);
-                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+
                 }
                 else if (cboNoiDungChu.Text == "Ghi bàn")
                 {
-                    _tempName = "BongDa_CauThu.ft";
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
-                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                    BatTemplate("BongDa_CauThu.ft");
                 }
                 else if (cboNoiDungChu.Text == "Thẻ vàng")
                 {
-                    _tempName = "BongDa_TheVang.ft";
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
-                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                    BatTemplate("BongDa_TheVang.ft");
                 }
                 else if (cboNoiDungChu.Text == "2 thẻ vàng")
                 {
-                    _tempName = "BongDa_2TheVang.ft";
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-
-                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    BatTemplate("BongDa_2TheVang.ft");
                     var playerOut = GetPlayerOut(true);
                     bsHomePlayer.List.Remove(playerOut);
-                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
                 }
                 else if (cboNoiDungChu.Text == "Thẻ đỏ")
                 {
-                    _tempName = "BongDa_TheDo.ft";
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-                    string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                    BatTemplate("BongDa_TheDo.ft");
                     var playerOut = GetPlayerOut(true);
                     bsHomePlayer.List.Remove(playerOut);
-                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
                 }
             }
             catch (Exception ex)
@@ -1931,73 +1780,33 @@ namespace HDCGStudio
             {
                 if (cboNoiDungKhach.Text == "Thay người")
                 {
-                    _tempName = "BongDa_ThayNguoi.ft";
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-                    string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
+                    BatTemplate("BongDa_ThayNguoi.ft", false);
                     var playerIn = GetPlayerIn(false);
                     var playerOut = GetPlayerOut(false);
                     bsAwayPlayer.List.Insert(bsAwayPlayer.List.IndexOf(playerOut), playerIn);
                     bsAwayPlayerDuBi.List.Insert(bsAwayPlayerDuBi.List.IndexOf(playerIn), playerOut);
                     bsAwayPlayer.List.Remove(playerOut);
                     bsAwayPlayerDuBi.List.Remove(playerIn);
-                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
                 }
                 else if (cboNoiDungKhach.Text == "Ghi bàn")
                 {
-                    _tempName = "BongDa_CauThu.ft";
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-                    string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
-                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                    BatTemplate("BongDa_CauThu.ft", false);
                 }
                 else if (cboNoiDungKhach.Text == "Thẻ vàng")
                 {
-                    _tempName = "BongDa_TheVang.ft";
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-                    string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
-                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                    BatTemplate("BongDa_TheVang.ft", false);
                 }
                 else if (cboNoiDungKhach.Text == "2 thẻ vàng")
                 {
-                    _tempName = "BongDa_2TheVang.ft";
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-                    string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
+                    BatTemplate("BongDa_2TheVang.ft", false);
                     var playerOut = GetPlayerOut(false);
                     bsAwayPlayer.List.Remove(playerOut);
-                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
                 }
                 else if (cboNoiDungKhach.Text == "Thẻ đỏ")
                 {
-                    _tempName = "BongDa_TheDo.ft";
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-                    string xmlStr = "<Track_Property>" + GetAddXmlString(false) + "</Track_Property>";
+                    BatTemplate("BongDa_TheDo.ft", false);
                     var playerOut = GetPlayerOut(false);
                     bsAwayPlayer.List.Remove(playerOut);
-                    OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
                 }
             }
             catch { }
@@ -2030,16 +1839,8 @@ namespace HDCGStudio
         private void btnOnDanhsachchinhthuc_Click(object sender, EventArgs e)
         {
             try
-            {
-                _tempName = "BongDa_DanhSachChinhThuc.ft";
-                List<Object.Property> runtimeProperties = new List<Object.Property>();
-                runtimeProperties.Add(new Object.Property()
-                {
-                    Name = "Loops",
-                    Value = "false"
-                });
-                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
-                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+            {                
+                BatTemplate("BongDa_DanhSachChinhThuc.ft");
             }
             catch { }
         }
@@ -2052,16 +1853,8 @@ namespace HDCGStudio
         private void btnOnDanhsachdubi_Click(object sender, EventArgs e)
         {
             try
-            {
-                _tempName = "BongDa_DanhSachDuBi.ft";
-                List<Object.Property> runtimeProperties = new List<Object.Property>();
-                runtimeProperties.Add(new Object.Property()
-                {
-                    Name = "Loops",
-                    Value = "false"
-                });
-                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
-                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+            {               
+                BatTemplate("BongDa_DanhSachDuBi.ft");
             }
             catch { }
         }
@@ -2070,7 +1863,7 @@ namespace HDCGStudio
         {
             OffTemplate(105);
         }
-        private void BatTemplate(string tempName)
+        private void BatTemplate(string tempName, bool isChu = true)
         {
             try
             {
@@ -2081,24 +1874,17 @@ namespace HDCGStudio
                     Name = "Loops",
                     Value = "false"
                 });
-                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                string xmlStr = "<Track_Property>" + GetAddXmlString(isChu) + "</Track_Property>";
                 OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                ViewTemplate(_tempName, 0, isChu);
             }
             catch { }
         }
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             try
-            {
-                _tempName = "BongDa_ThongSo_DutDiem.ft";
-                List<Object.Property> runtimeProperties = new List<Object.Property>();
-                runtimeProperties.Add(new Object.Property()
-                {
-                    Name = "Loops",
-                    Value = "false"
-                });
-                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
-                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+            {                
+                BatTemplate("BongDa_ThongSo_DutDiem.ft");
             }
             catch { }
         }
