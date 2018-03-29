@@ -314,35 +314,130 @@
             this.btnDungthoigiantran = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl47 = new DevExpress.XtraEditors.LabelControl();
             this.xTabPageTennis = new DevExpress.XtraTab.XtraTabPage();
+            this.splitContainerControl5 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.txtDonviTennisTeam2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDonviTennisTeam1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl69 = new DevExpress.XtraEditors.LabelControl();
+            this.txtPlayer1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtHLVTennisTeam1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtShortNameTeam1 = new DevExpress.XtraEditors.TextEdit();
+            this.nHatgiong1 = new System.Windows.Forms.NumericUpDown();
+            this.labelControl71 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.txtHLVTennisTeam2 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl75 = new DevExpress.XtraEditors.LabelControl();
             this.txtPlayer2 = new DevExpress.XtraEditors.TextEdit();
+            this.cboTennisTeam2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtShortNameTeam2 = new DevExpress.XtraEditors.TextEdit();
+            this.cboTennisTeam1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl76 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.cboGiaiDauTennis = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.nHatgiong2 = new System.Windows.Forms.NumericUpDown();
+            this.btnManageTeamTennis = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl77 = new DevExpress.XtraEditors.LabelControl();
+            this.btnManageLeagueTennis = new DevExpress.XtraEditors.SimpleButton();
+            this.txtPlayer4 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.txtPlayer3 = new DevExpress.XtraEditors.TextEdit();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.groupControl9 = new DevExpress.XtraEditors.GroupControl();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.simpleButton34 = new DevExpress.XtraEditors.SimpleButton();
+            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
+            this.labelControl67 = new DevExpress.XtraEditors.LabelControl();
+            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
+            this.labelControl68 = new DevExpress.XtraEditors.LabelControl();
+            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
+            this.labelControl78 = new DevExpress.XtraEditors.LabelControl();
+            this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown18 = new System.Windows.Forms.NumericUpDown();
+            this.labelControl79 = new DevExpress.XtraEditors.LabelControl();
+            this.numericUpDown19 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown20 = new System.Windows.Forms.NumericUpDown();
+            this.labelControl80 = new DevExpress.XtraEditors.LabelControl();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton31 = new DevExpress.XtraEditors.SimpleButton();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.simpleButton32 = new DevExpress.XtraEditors.SimpleButton();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.simpleButton33 = new DevExpress.XtraEditors.SimpleButton();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.btnDiemPlayer2 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDiemHientaiPlayer2 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.nDiemSet1Player1 = new System.Windows.Forms.NumericUpDown();
+            this.btnDiemPlayer1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
+            this.nDiemSet3Player2 = new System.Windows.Forms.NumericUpDown();
+            this.txtDiemHientaiPlayer1 = new DevExpress.XtraEditors.TextEdit();
             this.nDiemSet2Player1 = new System.Windows.Forms.NumericUpDown();
+            this.nDiemSet2Player2 = new System.Windows.Forms.NumericUpDown();
             this.nDiemSet3Player1 = new System.Windows.Forms.NumericUpDown();
             this.nDiemSet1Player2 = new System.Windows.Forms.NumericUpDown();
-            this.nDiemSet2Player2 = new System.Windows.Forms.NumericUpDown();
-            this.nDiemSet3Player2 = new System.Windows.Forms.NumericUpDown();
-            this.nDiemSet1Player1 = new System.Windows.Forms.NumericUpDown();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.btnDiemPlayer2 = new DevExpress.XtraEditors.SimpleButton();
-            this.txtDiemHientaiPlayer2 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.btnDiemPlayer1 = new DevExpress.XtraEditors.SimpleButton();
-            this.txtDiemHientaiPlayer1 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.nHatgiong2 = new System.Windows.Forms.NumericUpDown();
-            this.txtPlayer4 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.nHatgiong1 = new System.Windows.Forms.NumericUpDown();
-            this.txtPlayer1 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.groupControl10 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton35 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton36 = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl70 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl81 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl82 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl83 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl84 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl85 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl86 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl87 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
+            this.groupControl11 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton37 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton38 = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl88 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl89 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit14 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl90 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit15 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl91 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit16 = new DevExpress.XtraEditors.TextEdit();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.player = new CGPreviewControl.FlashTemplateHostControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -366,29 +461,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tUpdateData = new System.Windows.Forms.Timer(this.components);
             this.bsUpdateNotifier = new System.Windows.Forms.BindingSource(this.components);
-            this.splitContainerControl5 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.simpleButton31 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton32 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton33 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton34 = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl69 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl70 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl71 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl75 = new DevExpress.XtraEditors.LabelControl();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl76 = new DevExpress.XtraEditors.LabelControl();
-            this.cboGiaiDauTennis = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.btnManageTeamTennis = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl77 = new DevExpress.XtraEditors.LabelControl();
-            this.btnManageLeagueTennis = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl92 = new DevExpress.XtraEditors.LabelControl();
+            this.cboTennisType = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -527,20 +601,71 @@
             ((System.ComponentModel.ISupportInitialize)(this.nGiay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhut)).BeginInit();
             this.xTabPageTennis.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5)).BeginInit();
+            this.splitContainerControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonviTennisTeam2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonviTennisTeam1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHLVTennisTeam1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShortNameTeam1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHatgiong1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHLVTennisTeam2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTennisTeam2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShortNameTeam2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTennisTeam1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboGiaiDauTennis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHatgiong2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHatgiong1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl9)).BeginInit();
+            this.groupControl9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player2)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl10)).BeginInit();
+            this.groupControl10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl11)).BeginInit();
+            this.groupControl11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -560,18 +685,7 @@
             this.xTabVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5)).BeginInit();
-            this.splitContainerControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
-            this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboGiaiDauTennis.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTennisType.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -798,7 +912,7 @@
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(1895, 961);
+            this.groupControl1.Size = new System.Drawing.Size(1850, 961);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Videos, Images";
             // 
@@ -823,7 +937,7 @@
             this.panelControl11.Location = new System.Drawing.Point(518, 6);
             this.panelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl11.Name = "panelControl11";
-            this.panelControl11.Size = new System.Drawing.Size(1363, 948);
+            this.panelControl11.Size = new System.Drawing.Size(1318, 948);
             this.panelControl11.TabIndex = 46;
             // 
             // grdVideo
@@ -838,7 +952,7 @@
             this.grdVideo.Name = "grdVideo";
             this.grdVideo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.grdVideo.Size = new System.Drawing.Size(1359, 944);
+            this.grdVideo.Size = new System.Drawing.Size(1314, 944);
             this.grdVideo.TabIndex = 18;
             this.grdVideo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVideo});
@@ -2187,6 +2301,8 @@
             // 
             // xTabTyso
             // 
+            this.xTabTyso.Appearance.PageClient.BackColor = System.Drawing.Color.Maroon;
+            this.xTabTyso.Appearance.PageClient.Options.UseBackColor = true;
             this.xTabTyso.Controls.Add(this.gridSplitContainer6);
             this.xTabTyso.Controls.Add(this.gridSplitContainer5);
             this.xTabTyso.Controls.Add(this.simpleButton28);
@@ -2253,7 +2369,7 @@
             this.xTabTyso.Controls.Add(this.labelControl8);
             this.xTabTyso.Controls.Add(this.nTysoChu);
             this.xTabTyso.Name = "xTabTyso";
-            this.xTabTyso.Size = new System.Drawing.Size(1169, 716);
+            this.xTabTyso.Size = new System.Drawing.Size(1295, 716);
             this.xTabTyso.Text = "Thông số/Tỷ số/Ghi bàn";
             // 
             // gridSplitContainer6
@@ -4137,260 +4253,184 @@
             this.xTabPageTennis.Size = new System.Drawing.Size(1302, 950);
             this.xTabPageTennis.Text = "Tennis";
             // 
+            // splitContainerControl5
+            // 
+            this.splitContainerControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl5.Horizontal = false;
+            this.splitContainerControl5.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl5.Name = "splitContainerControl5";
+            this.splitContainerControl5.Panel1.Appearance.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.splitContainerControl5.Panel1.Appearance.Options.UseBackColor = true;
+            this.splitContainerControl5.Panel1.Controls.Add(this.cboTennisType);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl92);
+            this.splitContainerControl5.Panel1.Controls.Add(this.txtDonviTennisTeam2);
+            this.splitContainerControl5.Panel1.Controls.Add(this.txtDonviTennisTeam1);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl26);
+            this.splitContainerControl5.Panel1.Controls.Add(this.numericUpDown5);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl4);
+            this.splitContainerControl5.Panel1.Controls.Add(this.numericUpDown6);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl25);
+            this.splitContainerControl5.Panel1.Controls.Add(this.textEdit5);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl69);
+            this.splitContainerControl5.Panel1.Controls.Add(this.txtPlayer1);
+            this.splitContainerControl5.Panel1.Controls.Add(this.txtHLVTennisTeam1);
+            this.splitContainerControl5.Panel1.Controls.Add(this.txtShortNameTeam1);
+            this.splitContainerControl5.Panel1.Controls.Add(this.nHatgiong1);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl71);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl11);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl12);
+            this.splitContainerControl5.Panel1.Controls.Add(this.txtHLVTennisTeam2);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl75);
+            this.splitContainerControl5.Panel1.Controls.Add(this.txtPlayer2);
+            this.splitContainerControl5.Panel1.Controls.Add(this.cboTennisTeam2);
+            this.splitContainerControl5.Panel1.Controls.Add(this.txtShortNameTeam2);
+            this.splitContainerControl5.Panel1.Controls.Add(this.cboTennisTeam1);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl76);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl14);
+            this.splitContainerControl5.Panel1.Controls.Add(this.cboGiaiDauTennis);
+            this.splitContainerControl5.Panel1.Controls.Add(this.nHatgiong2);
+            this.splitContainerControl5.Panel1.Controls.Add(this.btnManageTeamTennis);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl77);
+            this.splitContainerControl5.Panel1.Controls.Add(this.btnManageLeagueTennis);
+            this.splitContainerControl5.Panel1.Controls.Add(this.txtPlayer4);
+            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl13);
+            this.splitContainerControl5.Panel1.Controls.Add(this.txtPlayer3);
+            this.splitContainerControl5.Panel1.Text = "Panel1";
+            this.splitContainerControl5.Panel2.Controls.Add(this.xtraTabControl1);
+            this.splitContainerControl5.Panel2.Text = "Panel2";
+            this.splitContainerControl5.Size = new System.Drawing.Size(1302, 950);
+            this.splitContainerControl5.SplitterPosition = 371;
+            this.splitContainerControl5.TabIndex = 131;
+            this.splitContainerControl5.Text = "splitContainerControl5";
+            // 
+            // txtDonviTennisTeam2
+            // 
+            this.txtDonviTennisTeam2.Location = new System.Drawing.Point(828, 218);
+            this.txtDonviTennisTeam2.MenuManager = this.barManager1;
+            this.txtDonviTennisTeam2.Name = "txtDonviTennisTeam2";
+            this.txtDonviTennisTeam2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtDonviTennisTeam2.Properties.Appearance.Options.UseFont = true;
+            this.txtDonviTennisTeam2.Size = new System.Drawing.Size(296, 26);
+            this.txtDonviTennisTeam2.TabIndex = 232;
+            // 
+            // txtDonviTennisTeam1
+            // 
+            this.txtDonviTennisTeam1.Location = new System.Drawing.Point(256, 220);
+            this.txtDonviTennisTeam1.MenuManager = this.barManager1;
+            this.txtDonviTennisTeam1.Name = "txtDonviTennisTeam1";
+            this.txtDonviTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtDonviTennisTeam1.Properties.Appearance.Options.UseFont = true;
+            this.txtDonviTennisTeam1.Size = new System.Drawing.Size(304, 26);
+            this.txtDonviTennisTeam1.TabIndex = 231;
+            // 
             // labelControl26
             // 
             this.labelControl26.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl26.Appearance.Options.UseFont = true;
-            this.labelControl26.Location = new System.Drawing.Point(322, 132);
+            this.labelControl26.Location = new System.Drawing.Point(669, 221);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(9, 19);
-            this.labelControl26.TabIndex = 130;
-            this.labelControl26.Text = "*";
+            this.labelControl26.Size = new System.Drawing.Size(47, 21);
+            this.labelControl26.TabIndex = 230;
+            this.labelControl26.Text = "Đơn vị";
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.numericUpDown5.Location = new System.Drawing.Point(1120, 284);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(58, 27);
+            this.numericUpDown5.TabIndex = 226;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(1036, 284);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(77, 21);
+            this.labelControl4.TabIndex = 227;
+            this.labelControl4.Text = "Hạt giống:";
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.numericUpDown6.Location = new System.Drawing.Point(1120, 318);
+            this.numericUpDown6.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(58, 27);
+            this.numericUpDown6.TabIndex = 228;
             // 
             // labelControl25
             // 
             this.labelControl25.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl25.Appearance.Options.UseFont = true;
-            this.labelControl25.Location = new System.Drawing.Point(322, 50);
+            this.labelControl25.Location = new System.Drawing.Point(1036, 318);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(9, 19);
-            this.labelControl25.TabIndex = 129;
-            this.labelControl25.Text = "*";
+            this.labelControl25.Size = new System.Drawing.Size(77, 21);
+            this.labelControl25.TabIndex = 229;
+            this.labelControl25.Text = "Hạt giống:";
             // 
-            // txtPlayer2
+            // textEdit5
             // 
-            this.txtPlayer2.Location = new System.Drawing.Point(132, 129);
-            this.txtPlayer2.Name = "txtPlayer2";
-            this.txtPlayer2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtPlayer2.Properties.Appearance.Options.UseFont = true;
-            this.txtPlayer2.Size = new System.Drawing.Size(184, 26);
-            this.txtPlayer2.TabIndex = 128;
+            this.textEdit5.Location = new System.Drawing.Point(589, 107);
+            this.textEdit5.Name = "textEdit5";
+            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.textEdit5.Properties.Appearance.Options.UseFont = true;
+            this.textEdit5.Size = new System.Drawing.Size(205, 26);
+            this.textEdit5.TabIndex = 225;
             // 
-            // txtPlayer3
+            // labelControl69
             // 
-            this.txtPlayer3.Location = new System.Drawing.Point(132, 79);
-            this.txtPlayer3.Name = "txtPlayer3";
-            this.txtPlayer3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtPlayer3.Properties.Appearance.Options.UseFont = true;
-            this.txtPlayer3.Size = new System.Drawing.Size(184, 26);
-            this.txtPlayer3.TabIndex = 127;
+            this.labelControl69.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl69.Appearance.Options.UseFont = true;
+            this.labelControl69.Location = new System.Drawing.Point(536, 110);
+            this.labelControl69.Name = "labelControl69";
+            this.labelControl69.Size = new System.Drawing.Size(43, 19);
+            this.labelControl69.TabIndex = 217;
+            this.labelControl69.Text = "Vòng:";
             // 
-            // labelControl23
+            // txtPlayer1
             // 
-            this.labelControl23.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl23.Appearance.Options.UseFont = true;
-            this.labelControl23.Location = new System.Drawing.Point(756, 37);
-            this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(28, 19);
-            this.labelControl23.TabIndex = 126;
-            this.labelControl23.Text = "Live";
+            this.txtPlayer1.Location = new System.Drawing.Point(354, 283);
+            this.txtPlayer1.Name = "txtPlayer1";
+            this.txtPlayer1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtPlayer1.Properties.Appearance.Options.UseFont = true;
+            this.txtPlayer1.Size = new System.Drawing.Size(206, 26);
+            this.txtPlayer1.TabIndex = 93;
             // 
-            // nDiemSet2Player1
+            // txtHLVTennisTeam1
             // 
-            this.nDiemSet2Player1.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nDiemSet2Player1.Location = new System.Drawing.Point(637, 60);
-            this.nDiemSet2Player1.Name = "nDiemSet2Player1";
-            this.nDiemSet2Player1.Size = new System.Drawing.Size(44, 27);
-            this.nDiemSet2Player1.TabIndex = 125;
+            this.txtHLVTennisTeam1.Location = new System.Drawing.Point(256, 251);
+            this.txtHLVTennisTeam1.MenuManager = this.barManager1;
+            this.txtHLVTennisTeam1.Name = "txtHLVTennisTeam1";
+            this.txtHLVTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtHLVTennisTeam1.Properties.Appearance.Options.UseFont = true;
+            this.txtHLVTennisTeam1.Size = new System.Drawing.Size(304, 26);
+            this.txtHLVTennisTeam1.TabIndex = 216;
             // 
-            // nDiemSet3Player1
+            // txtShortNameTeam1
             // 
-            this.nDiemSet3Player1.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nDiemSet3Player1.Location = new System.Drawing.Point(687, 60);
-            this.nDiemSet3Player1.Name = "nDiemSet3Player1";
-            this.nDiemSet3Player1.Size = new System.Drawing.Size(44, 27);
-            this.nDiemSet3Player1.TabIndex = 124;
-            // 
-            // nDiemSet1Player2
-            // 
-            this.nDiemSet1Player2.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nDiemSet1Player2.Location = new System.Drawing.Point(587, 150);
-            this.nDiemSet1Player2.Name = "nDiemSet1Player2";
-            this.nDiemSet1Player2.Size = new System.Drawing.Size(44, 27);
-            this.nDiemSet1Player2.TabIndex = 123;
-            // 
-            // nDiemSet2Player2
-            // 
-            this.nDiemSet2Player2.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nDiemSet2Player2.Location = new System.Drawing.Point(637, 150);
-            this.nDiemSet2Player2.Name = "nDiemSet2Player2";
-            this.nDiemSet2Player2.Size = new System.Drawing.Size(44, 27);
-            this.nDiemSet2Player2.TabIndex = 122;
-            // 
-            // nDiemSet3Player2
-            // 
-            this.nDiemSet3Player2.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nDiemSet3Player2.Location = new System.Drawing.Point(687, 150);
-            this.nDiemSet3Player2.Name = "nDiemSet3Player2";
-            this.nDiemSet3Player2.Size = new System.Drawing.Size(44, 27);
-            this.nDiemSet3Player2.TabIndex = 121;
-            // 
-            // nDiemSet1Player1
-            // 
-            this.nDiemSet1Player1.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nDiemSet1Player1.Location = new System.Drawing.Point(587, 60);
-            this.nDiemSet1Player1.Name = "nDiemSet1Player1";
-            this.nDiemSet1Player1.Size = new System.Drawing.Size(44, 27);
-            this.nDiemSet1Player1.TabIndex = 120;
-            // 
-            // labelControl20
-            // 
-            this.labelControl20.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl20.Appearance.Options.UseFont = true;
-            this.labelControl20.Location = new System.Drawing.Point(595, 37);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(9, 19);
-            this.labelControl20.TabIndex = 114;
-            this.labelControl20.Text = "1";
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Location = new System.Drawing.Point(647, 37);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(9, 19);
-            this.labelControl19.TabIndex = 113;
-            this.labelControl19.Text = "2";
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl18.Appearance.Options.UseFont = true;
-            this.labelControl18.Location = new System.Drawing.Point(690, 37);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(9, 19);
-            this.labelControl18.TabIndex = 112;
-            this.labelControl18.Text = "3";
-            // 
-            // labelControl17
-            // 
-            this.labelControl17.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl17.Appearance.Options.UseFont = true;
-            this.labelControl17.Location = new System.Drawing.Point(544, 37);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(28, 19);
-            this.labelControl17.TabIndex = 111;
-            this.labelControl17.Text = "SET";
-            // 
-            // btnDiemPlayer2
-            // 
-            this.btnDiemPlayer2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDiemPlayer2.ImageOptions.Image")));
-            this.btnDiemPlayer2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnDiemPlayer2.Location = new System.Drawing.Point(805, 150);
-            this.btnDiemPlayer2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDiemPlayer2.Name = "btnDiemPlayer2";
-            this.btnDiemPlayer2.Size = new System.Drawing.Size(39, 26);
-            this.btnDiemPlayer2.TabIndex = 110;
-            // 
-            // txtDiemHientaiPlayer2
-            // 
-            this.txtDiemHientaiPlayer2.EditValue = "0";
-            this.txtDiemHientaiPlayer2.Enabled = false;
-            this.txtDiemHientaiPlayer2.Location = new System.Drawing.Point(743, 149);
-            this.txtDiemHientaiPlayer2.Name = "txtDiemHientaiPlayer2";
-            this.txtDiemHientaiPlayer2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtDiemHientaiPlayer2.Properties.Appearance.Options.UseFont = true;
-            this.txtDiemHientaiPlayer2.Size = new System.Drawing.Size(56, 26);
-            this.txtDiemHientaiPlayer2.TabIndex = 109;
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl16.Appearance.Options.UseFont = true;
-            this.labelControl16.Location = new System.Drawing.Point(535, 152);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(45, 21);
-            this.labelControl16.TabIndex = 108;
-            this.labelControl16.Text = "Điểm:";
-            // 
-            // btnDiemPlayer1
-            // 
-            this.btnDiemPlayer1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDiemPlayer1.ImageOptions.Image")));
-            this.btnDiemPlayer1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnDiemPlayer1.Location = new System.Drawing.Point(805, 59);
-            this.btnDiemPlayer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDiemPlayer1.Name = "btnDiemPlayer1";
-            this.btnDiemPlayer1.Size = new System.Drawing.Size(39, 26);
-            this.btnDiemPlayer1.TabIndex = 107;
-            // 
-            // txtDiemHientaiPlayer1
-            // 
-            this.txtDiemHientaiPlayer1.EditValue = "0";
-            this.txtDiemHientaiPlayer1.Enabled = false;
-            this.txtDiemHientaiPlayer1.Location = new System.Drawing.Point(743, 59);
-            this.txtDiemHientaiPlayer1.Name = "txtDiemHientaiPlayer1";
-            this.txtDiemHientaiPlayer1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtDiemHientaiPlayer1.Properties.Appearance.Options.UseFont = true;
-            this.txtDiemHientaiPlayer1.Size = new System.Drawing.Size(56, 26);
-            this.txtDiemHientaiPlayer1.TabIndex = 106;
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.Location = new System.Drawing.Point(535, 62);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(45, 21);
-            this.labelControl15.TabIndex = 105;
-            this.labelControl15.Text = "Điểm:";
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(354, 150);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(77, 21);
-            this.labelControl13.TabIndex = 104;
-            this.labelControl13.Text = "Hạt giống:";
-            // 
-            // nHatgiong2
-            // 
-            this.nHatgiong2.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nHatgiong2.Location = new System.Drawing.Point(438, 150);
-            this.nHatgiong2.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nHatgiong2.Name = "nHatgiong2";
-            this.nHatgiong2.Size = new System.Drawing.Size(58, 27);
-            this.nHatgiong2.TabIndex = 103;
-            // 
-            // txtPlayer4
-            // 
-            this.txtPlayer4.Location = new System.Drawing.Point(132, 161);
-            this.txtPlayer4.Name = "txtPlayer4";
-            this.txtPlayer4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtPlayer4.Properties.Appearance.Options.UseFont = true;
-            this.txtPlayer4.Size = new System.Drawing.Size(184, 26);
-            this.txtPlayer4.TabIndex = 102;
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(63, 150);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(63, 19);
-            this.labelControl14.TabIndex = 101;
-            this.labelControl14.Text = "Player 2:";
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(354, 60);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(77, 21);
-            this.labelControl12.TabIndex = 100;
-            this.labelControl12.Text = "Hạt giống:";
+            this.txtShortNameTeam1.Location = new System.Drawing.Point(256, 186);
+            this.txtShortNameTeam1.MenuManager = this.barManager1;
+            this.txtShortNameTeam1.Name = "txtShortNameTeam1";
+            this.txtShortNameTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtShortNameTeam1.Properties.Appearance.Options.UseFont = true;
+            this.txtShortNameTeam1.Size = new System.Drawing.Size(304, 26);
+            this.txtShortNameTeam1.TabIndex = 215;
             // 
             // nHatgiong1
             // 
             this.nHatgiong1.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nHatgiong1.Location = new System.Drawing.Point(438, 60);
+            this.nHatgiong1.Location = new System.Drawing.Point(289, 282);
             this.nHatgiong1.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -4400,24 +4440,1261 @@
             this.nHatgiong1.Size = new System.Drawing.Size(58, 27);
             this.nHatgiong1.TabIndex = 99;
             // 
-            // txtPlayer1
+            // labelControl71
             // 
-            this.txtPlayer1.Location = new System.Drawing.Point(132, 47);
-            this.txtPlayer1.Name = "txtPlayer1";
-            this.txtPlayer1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtPlayer1.Properties.Appearance.Options.UseFont = true;
-            this.txtPlayer1.Size = new System.Drawing.Size(184, 26);
-            this.txtPlayer1.TabIndex = 93;
+            this.labelControl71.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl71.Appearance.Options.UseFont = true;
+            this.labelControl71.Location = new System.Drawing.Point(677, 254);
+            this.labelControl71.Name = "labelControl71";
+            this.labelControl71.Size = new System.Drawing.Size(29, 19);
+            this.labelControl71.TabIndex = 214;
+            this.labelControl71.Text = "HLV";
             // 
             // labelControl11
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(63, 66);
+            this.labelControl11.Location = new System.Drawing.Point(665, 290);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(63, 19);
+            this.labelControl11.Size = new System.Drawing.Size(57, 19);
             this.labelControl11.TabIndex = 92;
-            this.labelControl11.Text = "Player 1:";
+            this.labelControl11.Text = "Player 1";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Location = new System.Drawing.Point(205, 286);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(77, 21);
+            this.labelControl12.TabIndex = 100;
+            this.labelControl12.Text = "Hạt giống:";
+            // 
+            // txtHLVTennisTeam2
+            // 
+            this.txtHLVTennisTeam2.Location = new System.Drawing.Point(828, 251);
+            this.txtHLVTennisTeam2.MenuManager = this.barManager1;
+            this.txtHLVTennisTeam2.Name = "txtHLVTennisTeam2";
+            this.txtHLVTennisTeam2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtHLVTennisTeam2.Properties.Appearance.Options.UseFont = true;
+            this.txtHLVTennisTeam2.Size = new System.Drawing.Size(296, 26);
+            this.txtHLVTennisTeam2.TabIndex = 213;
+            // 
+            // labelControl75
+            // 
+            this.labelControl75.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl75.Appearance.Options.UseFont = true;
+            this.labelControl75.Location = new System.Drawing.Point(647, 189);
+            this.labelControl75.Name = "labelControl75";
+            this.labelControl75.Size = new System.Drawing.Size(86, 21);
+            this.labelControl75.TabIndex = 212;
+            this.labelControl75.Text = "Tên viết tắt";
+            // 
+            // txtPlayer2
+            // 
+            this.txtPlayer2.Location = new System.Drawing.Point(828, 283);
+            this.txtPlayer2.Name = "txtPlayer2";
+            this.txtPlayer2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtPlayer2.Properties.Appearance.Options.UseFont = true;
+            this.txtPlayer2.Size = new System.Drawing.Size(184, 26);
+            this.txtPlayer2.TabIndex = 128;
+            // 
+            // cboTennisTeam2
+            // 
+            this.cboTennisTeam2.Location = new System.Drawing.Point(826, 149);
+            this.cboTennisTeam2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboTennisTeam2.MenuManager = this.barManager1;
+            this.cboTennisTeam2.Name = "cboTennisTeam2";
+            this.cboTennisTeam2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.cboTennisTeam2.Properties.Appearance.Options.UseFont = true;
+            this.cboTennisTeam2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboTennisTeam2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboTennisTeam2.Size = new System.Drawing.Size(298, 30);
+            this.cboTennisTeam2.TabIndex = 207;
+            // 
+            // txtShortNameTeam2
+            // 
+            this.txtShortNameTeam2.Location = new System.Drawing.Point(826, 186);
+            this.txtShortNameTeam2.MenuManager = this.barManager1;
+            this.txtShortNameTeam2.Name = "txtShortNameTeam2";
+            this.txtShortNameTeam2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtShortNameTeam2.Properties.Appearance.Options.UseFont = true;
+            this.txtShortNameTeam2.Size = new System.Drawing.Size(298, 26);
+            this.txtShortNameTeam2.TabIndex = 211;
+            // 
+            // cboTennisTeam1
+            // 
+            this.cboTennisTeam1.Location = new System.Drawing.Point(256, 149);
+            this.cboTennisTeam1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboTennisTeam1.MenuManager = this.barManager1;
+            this.cboTennisTeam1.Name = "cboTennisTeam1";
+            this.cboTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.cboTennisTeam1.Properties.Appearance.Options.UseFont = true;
+            this.cboTennisTeam1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboTennisTeam1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboTennisTeam1.Size = new System.Drawing.Size(304, 30);
+            this.cboTennisTeam1.TabIndex = 210;
+            // 
+            // labelControl76
+            // 
+            this.labelControl76.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl76.Appearance.Options.UseFont = true;
+            this.labelControl76.Location = new System.Drawing.Point(673, 152);
+            this.labelControl76.Name = "labelControl76";
+            this.labelControl76.Size = new System.Drawing.Size(25, 21);
+            this.labelControl76.TabIndex = 209;
+            this.labelControl76.Text = "Đội";
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl14.Appearance.Options.UseFont = true;
+            this.labelControl14.Location = new System.Drawing.Point(665, 324);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(57, 19);
+            this.labelControl14.TabIndex = 101;
+            this.labelControl14.Text = "Player 2";
+            // 
+            // cboGiaiDauTennis
+            // 
+            this.cboGiaiDauTennis.Location = new System.Drawing.Point(236, 18);
+            this.cboGiaiDauTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboGiaiDauTennis.MenuManager = this.barManager1;
+            this.cboGiaiDauTennis.Name = "cboGiaiDauTennis";
+            this.cboGiaiDauTennis.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.cboGiaiDauTennis.Properties.Appearance.Options.UseFont = true;
+            this.cboGiaiDauTennis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboGiaiDauTennis.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboGiaiDauTennis.Size = new System.Drawing.Size(596, 26);
+            this.cboGiaiDauTennis.TabIndex = 205;
+            // 
+            // nHatgiong2
+            // 
+            this.nHatgiong2.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.nHatgiong2.Location = new System.Drawing.Point(289, 316);
+            this.nHatgiong2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nHatgiong2.Name = "nHatgiong2";
+            this.nHatgiong2.Size = new System.Drawing.Size(58, 27);
+            this.nHatgiong2.TabIndex = 103;
+            // 
+            // btnManageTeamTennis
+            // 
+            this.btnManageTeamTennis.Location = new System.Drawing.Point(1036, 16);
+            this.btnManageTeamTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnManageTeamTennis.Name = "btnManageTeamTennis";
+            this.btnManageTeamTennis.Size = new System.Drawing.Size(180, 26);
+            this.btnManageTeamTennis.TabIndex = 203;
+            this.btnManageTeamTennis.Text = "Quản lý đội thuộc giải đấu";
+            this.btnManageTeamTennis.ToolTip = "Quản lý danh sách cầu thủ chủ nhà";
+            // 
+            // labelControl77
+            // 
+            this.labelControl77.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl77.Appearance.Options.UseFont = true;
+            this.labelControl77.Location = new System.Drawing.Point(154, 21);
+            this.labelControl77.Name = "labelControl77";
+            this.labelControl77.Size = new System.Drawing.Size(67, 21);
+            this.labelControl77.TabIndex = 204;
+            this.labelControl77.Text = "Giải đấu:";
+            // 
+            // btnManageLeagueTennis
+            // 
+            this.btnManageLeagueTennis.Location = new System.Drawing.Point(838, 16);
+            this.btnManageLeagueTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnManageLeagueTennis.Name = "btnManageLeagueTennis";
+            this.btnManageLeagueTennis.Size = new System.Drawing.Size(180, 26);
+            this.btnManageLeagueTennis.TabIndex = 206;
+            this.btnManageLeagueTennis.Text = "Quản lý giải đấu";
+            this.btnManageLeagueTennis.ToolTip = "Quản lý danh sách cầu thủ chủ nhà";
+            // 
+            // txtPlayer4
+            // 
+            this.txtPlayer4.Location = new System.Drawing.Point(828, 315);
+            this.txtPlayer4.Name = "txtPlayer4";
+            this.txtPlayer4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtPlayer4.Properties.Appearance.Options.UseFont = true;
+            this.txtPlayer4.Size = new System.Drawing.Size(184, 26);
+            this.txtPlayer4.TabIndex = 102;
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl13.Appearance.Options.UseFont = true;
+            this.labelControl13.Location = new System.Drawing.Point(205, 318);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(77, 21);
+            this.labelControl13.TabIndex = 104;
+            this.labelControl13.Text = "Hạt giống:";
+            // 
+            // txtPlayer3
+            // 
+            this.txtPlayer3.Location = new System.Drawing.Point(354, 319);
+            this.txtPlayer3.Name = "txtPlayer3";
+            this.txtPlayer3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtPlayer3.Properties.Appearance.Options.UseFont = true;
+            this.txtPlayer3.Size = new System.Drawing.Size(206, 26);
+            this.txtPlayer3.TabIndex = 127;
+            // 
+            // xtraTabControl1
+            // 
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
+            this.xtraTabControl1.Size = new System.Drawing.Size(1302, 573);
+            this.xtraTabControl1.TabIndex = 131;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage2});
+            // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Controls.Add(this.checkBox2);
+            this.xtraTabPage1.Controls.Add(this.checkBox1);
+            this.xtraTabPage1.Controls.Add(this.groupControl9);
+            this.xtraTabPage1.Controls.Add(this.radioButton5);
+            this.xtraTabPage1.Controls.Add(this.radioButton1);
+            this.xtraTabPage1.Controls.Add(this.radioButton2);
+            this.xtraTabPage1.Controls.Add(this.radioButton3);
+            this.xtraTabPage1.Controls.Add(this.radioButton4);
+            this.xtraTabPage1.Controls.Add(this.labelControl2);
+            this.xtraTabPage1.Controls.Add(this.labelControl3);
+            this.xtraTabPage1.Controls.Add(this.simpleButton31);
+            this.xtraTabPage1.Controls.Add(this.numericUpDown1);
+            this.xtraTabPage1.Controls.Add(this.simpleButton32);
+            this.xtraTabPage1.Controls.Add(this.numericUpDown2);
+            this.xtraTabPage1.Controls.Add(this.simpleButton33);
+            this.xtraTabPage1.Controls.Add(this.numericUpDown3);
+            this.xtraTabPage1.Controls.Add(this.numericUpDown4);
+            this.xtraTabPage1.Controls.Add(this.labelControl17);
+            this.xtraTabPage1.Controls.Add(this.labelControl18);
+            this.xtraTabPage1.Controls.Add(this.btnDiemPlayer2);
+            this.xtraTabPage1.Controls.Add(this.labelControl19);
+            this.xtraTabPage1.Controls.Add(this.txtDiemHientaiPlayer2);
+            this.xtraTabPage1.Controls.Add(this.labelControl20);
+            this.xtraTabPage1.Controls.Add(this.nDiemSet1Player1);
+            this.xtraTabPage1.Controls.Add(this.btnDiemPlayer1);
+            this.xtraTabPage1.Controls.Add(this.labelControl23);
+            this.xtraTabPage1.Controls.Add(this.nDiemSet3Player2);
+            this.xtraTabPage1.Controls.Add(this.txtDiemHientaiPlayer1);
+            this.xtraTabPage1.Controls.Add(this.nDiemSet2Player1);
+            this.xtraTabPage1.Controls.Add(this.nDiemSet2Player2);
+            this.xtraTabPage1.Controls.Add(this.nDiemSet3Player1);
+            this.xtraTabPage1.Controls.Add(this.nDiemSet1Player2);
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(1295, 538);
+            this.xtraTabPage1.Text = "Tỷ số/Thông số";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.checkBox2.Location = new System.Drawing.Point(333, 13);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(74, 25);
+            this.checkBox2.TabIndex = 226;
+            this.checkBox2.Text = "5 set";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.checkBox1.Location = new System.Drawing.Point(225, 12);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(74, 25);
+            this.checkBox1.TabIndex = 225;
+            this.checkBox1.Text = "3 set";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // groupControl9
+            // 
+            this.groupControl9.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.groupControl9.AppearanceCaption.Options.UseFont = true;
+            this.groupControl9.AppearanceCaption.Options.UseTextOptions = true;
+            this.groupControl9.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.groupControl9.Controls.Add(this.radioButton12);
+            this.groupControl9.Controls.Add(this.radioButton11);
+            this.groupControl9.Controls.Add(this.radioButton6);
+            this.groupControl9.Controls.Add(this.numericUpDown7);
+            this.groupControl9.Controls.Add(this.radioButton7);
+            this.groupControl9.Controls.Add(this.numericUpDown8);
+            this.groupControl9.Controls.Add(this.radioButton8);
+            this.groupControl9.Controls.Add(this.labelControl15);
+            this.groupControl9.Controls.Add(this.radioButton9);
+            this.groupControl9.Controls.Add(this.numericUpDown9);
+            this.groupControl9.Controls.Add(this.radioButton10);
+            this.groupControl9.Controls.Add(this.simpleButton34);
+            this.groupControl9.Controls.Add(this.numericUpDown10);
+            this.groupControl9.Controls.Add(this.labelControl16);
+            this.groupControl9.Controls.Add(this.numericUpDown11);
+            this.groupControl9.Controls.Add(this.numericUpDown12);
+            this.groupControl9.Controls.Add(this.labelControl67);
+            this.groupControl9.Controls.Add(this.numericUpDown13);
+            this.groupControl9.Controls.Add(this.numericUpDown14);
+            this.groupControl9.Controls.Add(this.labelControl68);
+            this.groupControl9.Controls.Add(this.numericUpDown15);
+            this.groupControl9.Controls.Add(this.numericUpDown16);
+            this.groupControl9.Controls.Add(this.labelControl78);
+            this.groupControl9.Controls.Add(this.numericUpDown17);
+            this.groupControl9.Controls.Add(this.numericUpDown18);
+            this.groupControl9.Controls.Add(this.labelControl79);
+            this.groupControl9.Controls.Add(this.numericUpDown19);
+            this.groupControl9.Controls.Add(this.numericUpDown20);
+            this.groupControl9.Controls.Add(this.labelControl80);
+            this.groupControl9.Location = new System.Drawing.Point(333, 126);
+            this.groupControl9.Name = "groupControl9";
+            this.groupControl9.Size = new System.Drawing.Size(733, 347);
+            this.groupControl9.TabIndex = 195;
+            this.groupControl9.Text = "Thông số";
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Location = new System.Drawing.Point(103, 234);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(17, 16);
+            this.radioButton12.TabIndex = 235;
+            this.radioButton12.TabStop = true;
+            this.radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(103, 267);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(17, 16);
+            this.radioButton11.TabIndex = 234;
+            this.radioButton11.TabStop = true;
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(103, 195);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(17, 16);
+            this.radioButton6.TabIndex = 200;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown7
+            // 
+            this.numericUpDown7.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown7.Location = new System.Drawing.Point(492, 116);
+            this.numericUpDown7.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown7.Name = "numericUpDown7";
+            this.numericUpDown7.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown7.TabIndex = 233;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(103, 83);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(17, 16);
+            this.radioButton7.TabIndex = 199;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown8
+            // 
+            this.numericUpDown8.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown8.Location = new System.Drawing.Point(126, 117);
+            this.numericUpDown8.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown8.Name = "numericUpDown8";
+            this.numericUpDown8.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown8.TabIndex = 232;
+            this.numericUpDown8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(103, 120);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(17, 16);
+            this.radioButton8.TabIndex = 198;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl15.Appearance.Options.UseFont = true;
+            this.labelControl15.Location = new System.Drawing.Point(309, 117);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(130, 19);
+            this.labelControl15.TabIndex = 231;
+            this.labelControl15.Text = "GIAO BÓNG 1(%)";
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(103, 159);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(17, 16);
+            this.radioButton9.TabIndex = 197;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown9
+            // 
+            this.numericUpDown9.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown9.Location = new System.Drawing.Point(492, 156);
+            this.numericUpDown9.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown9.Name = "numericUpDown9";
+            this.numericUpDown9.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown9.TabIndex = 230;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(103, 45);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(17, 16);
+            this.radioButton10.TabIndex = 196;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // simpleButton34
+            // 
+            this.simpleButton34.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton34.Appearance.Options.UseFont = true;
+            this.simpleButton34.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton34.Location = new System.Drawing.Point(294, 306);
+            this.simpleButton34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton34.Name = "simpleButton34";
+            this.simpleButton34.Size = new System.Drawing.Size(176, 30);
+            this.simpleButton34.TabIndex = 221;
+            this.simpleButton34.Text = "Bật thông số nhỏ";
+            this.simpleButton34.ToolTip = "Lên đồ họa";
+            // 
+            // numericUpDown10
+            // 
+            this.numericUpDown10.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown10.Location = new System.Drawing.Point(126, 154);
+            this.numericUpDown10.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown10.Name = "numericUpDown10";
+            this.numericUpDown10.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown10.TabIndex = 229;
+            this.numericUpDown10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl16.Appearance.Options.UseFont = true;
+            this.labelControl16.Location = new System.Drawing.Point(343, 155);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(62, 19);
+            this.labelControl16.TabIndex = 228;
+            this.labelControl16.Text = "WINNER";
+            // 
+            // numericUpDown11
+            // 
+            this.numericUpDown11.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown11.Location = new System.Drawing.Point(492, 191);
+            this.numericUpDown11.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown11.Name = "numericUpDown11";
+            this.numericUpDown11.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown11.TabIndex = 227;
+            // 
+            // numericUpDown12
+            // 
+            this.numericUpDown12.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown12.Location = new System.Drawing.Point(126, 191);
+            this.numericUpDown12.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown12.Name = "numericUpDown12";
+            this.numericUpDown12.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown12.TabIndex = 226;
+            this.numericUpDown12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelControl67
+            // 
+            this.labelControl67.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl67.Appearance.Options.UseFont = true;
+            this.labelControl67.Location = new System.Drawing.Point(313, 192);
+            this.labelControl67.Name = "labelControl67";
+            this.labelControl67.Size = new System.Drawing.Size(126, 21);
+            this.labelControl67.TabIndex = 225;
+            this.labelControl67.Text = "LỖI ĐÁNH HỎNG";
+            // 
+            // numericUpDown13
+            // 
+            this.numericUpDown13.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown13.Location = new System.Drawing.Point(492, 229);
+            this.numericUpDown13.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown13.Name = "numericUpDown13";
+            this.numericUpDown13.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown13.TabIndex = 224;
+            // 
+            // numericUpDown14
+            // 
+            this.numericUpDown14.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown14.Location = new System.Drawing.Point(126, 230);
+            this.numericUpDown14.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown14.Name = "numericUpDown14";
+            this.numericUpDown14.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown14.TabIndex = 223;
+            this.numericUpDown14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelControl68
+            // 
+            this.labelControl68.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl68.Appearance.Options.UseFont = true;
+            this.labelControl68.Location = new System.Drawing.Point(327, 228);
+            this.labelControl68.Name = "labelControl68";
+            this.labelControl68.Size = new System.Drawing.Size(110, 19);
+            this.labelControl68.TabIndex = 222;
+            this.labelControl68.Text = "BREAK POINTS";
+            // 
+            // numericUpDown15
+            // 
+            this.numericUpDown15.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown15.Location = new System.Drawing.Point(492, 263);
+            this.numericUpDown15.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown15.Name = "numericUpDown15";
+            this.numericUpDown15.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown15.TabIndex = 221;
+            // 
+            // numericUpDown16
+            // 
+            this.numericUpDown16.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown16.Location = new System.Drawing.Point(126, 265);
+            this.numericUpDown16.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown16.Name = "numericUpDown16";
+            this.numericUpDown16.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown16.TabIndex = 220;
+            this.numericUpDown16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelControl78
+            // 
+            this.labelControl78.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl78.Appearance.Options.UseFont = true;
+            this.labelControl78.Location = new System.Drawing.Point(335, 262);
+            this.labelControl78.Name = "labelControl78";
+            this.labelControl78.Size = new System.Drawing.Size(90, 21);
+            this.labelControl78.TabIndex = 219;
+            this.labelControl78.Text = "TỔNG ĐIỂM";
+            // 
+            // numericUpDown17
+            // 
+            this.numericUpDown17.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown17.Location = new System.Drawing.Point(492, 74);
+            this.numericUpDown17.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown17.Name = "numericUpDown17";
+            this.numericUpDown17.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown17.TabIndex = 218;
+            // 
+            // numericUpDown18
+            // 
+            this.numericUpDown18.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown18.Location = new System.Drawing.Point(126, 79);
+            this.numericUpDown18.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown18.Name = "numericUpDown18";
+            this.numericUpDown18.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown18.TabIndex = 217;
+            this.numericUpDown18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelControl79
+            // 
+            this.labelControl79.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl79.Appearance.Options.UseFont = true;
+            this.labelControl79.Location = new System.Drawing.Point(339, 78);
+            this.labelControl79.Name = "labelControl79";
+            this.labelControl79.Size = new System.Drawing.Size(60, 21);
+            this.labelControl79.TabIndex = 216;
+            this.labelControl79.Text = "LỖI KÉP";
+            // 
+            // numericUpDown19
+            // 
+            this.numericUpDown19.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown19.Location = new System.Drawing.Point(492, 41);
+            this.numericUpDown19.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown19.Name = "numericUpDown19";
+            this.numericUpDown19.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown19.TabIndex = 215;
+            // 
+            // numericUpDown20
+            // 
+            this.numericUpDown20.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown20.Location = new System.Drawing.Point(126, 41);
+            this.numericUpDown20.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown20.Name = "numericUpDown20";
+            this.numericUpDown20.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown20.TabIndex = 214;
+            this.numericUpDown20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelControl80
+            // 
+            this.labelControl80.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl80.Appearance.Options.UseFont = true;
+            this.labelControl80.Location = new System.Drawing.Point(349, 44);
+            this.labelControl80.Name = "labelControl80";
+            this.labelControl80.Size = new System.Drawing.Size(39, 19);
+            this.labelControl80.TabIndex = 213;
+            this.labelControl80.Text = "ACES";
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(70, 432);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(17, 16);
+            this.radioButton5.TabIndex = 194;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(70, 157);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(17, 16);
+            this.radioButton1.TabIndex = 193;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(70, 235);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(17, 16);
+            this.radioButton2.TabIndex = 192;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(70, 331);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(17, 16);
+            this.radioButton3.TabIndex = 191;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(70, 72);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(17, 16);
+            this.radioButton4.TabIndex = 190;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(122, 404);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(34, 69);
+            this.labelControl2.TabIndex = 131;
+            this.labelControl2.Text = "5";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(122, 304);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(34, 69);
+            this.labelControl3.TabIndex = 132;
+            this.labelControl3.Text = "4";
+            // 
+            // simpleButton31
+            // 
+            this.simpleButton31.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton31.Appearance.Options.UseFont = true;
+            this.simpleButton31.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton31.Location = new System.Drawing.Point(758, 494);
+            this.simpleButton31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton31.Name = "simpleButton31";
+            this.simpleButton31.Size = new System.Drawing.Size(146, 30);
+            this.simpleButton31.TabIndex = 224;
+            this.simpleButton31.Text = "Tắt đồ họa";
+            this.simpleButton31.ToolTip = "Xuống đồ họa";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(1073, 398);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(102, 75);
+            this.numericUpDown1.TabIndex = 133;
+            // 
+            // simpleButton32
+            // 
+            this.simpleButton32.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton32.Appearance.Options.UseFont = true;
+            this.simpleButton32.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton32.Location = new System.Drawing.Point(646, 57);
+            this.simpleButton32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton32.Name = "simpleButton32";
+            this.simpleButton32.Size = new System.Drawing.Size(112, 41);
+            this.simpleButton32.TabIndex = 223;
+            this.simpleButton32.Text = "Live Update";
+            this.simpleButton32.ToolTip = "Lên đồ họa";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.Location = new System.Drawing.Point(225, 298);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(102, 75);
+            this.numericUpDown2.TabIndex = 136;
+            // 
+            // simpleButton33
+            // 
+            this.simpleButton33.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton33.Appearance.Options.UseFont = true;
+            this.simpleButton33.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton33.Location = new System.Drawing.Point(549, 494);
+            this.simpleButton33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton33.Name = "simpleButton33";
+            this.simpleButton33.Size = new System.Drawing.Size(156, 30);
+            this.simpleButton33.TabIndex = 222;
+            this.simpleButton33.Text = "Bật thống kê lớn";
+            this.simpleButton33.ToolTip = "Xuống đồ họa";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown3.Location = new System.Drawing.Point(1075, 298);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(102, 75);
+            this.numericUpDown3.TabIndex = 134;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown4.Location = new System.Drawing.Point(225, 398);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(102, 75);
+            this.numericUpDown4.TabIndex = 135;
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl17.Appearance.Options.UseFont = true;
+            this.labelControl17.Location = new System.Drawing.Point(128, 15);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(31, 19);
+            this.labelControl17.TabIndex = 111;
+            this.labelControl17.Text = "SET";
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl18.Appearance.Options.UseFont = true;
+            this.labelControl18.Location = new System.Drawing.Point(122, 209);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(34, 69);
+            this.labelControl18.TabIndex = 112;
+            this.labelControl18.Text = "3";
+            // 
+            // btnDiemPlayer2
+            // 
+            this.btnDiemPlayer2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDiemPlayer2.ImageOptions.Image")));
+            this.btnDiemPlayer2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnDiemPlayer2.Location = new System.Drawing.Point(910, 57);
+            this.btnDiemPlayer2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDiemPlayer2.Name = "btnDiemPlayer2";
+            this.btnDiemPlayer2.Size = new System.Drawing.Size(60, 41);
+            this.btnDiemPlayer2.TabIndex = 110;
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl19.Appearance.Options.UseFont = true;
+            this.labelControl19.Location = new System.Drawing.Point(122, 130);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(34, 69);
+            this.labelControl19.TabIndex = 113;
+            this.labelControl19.Text = "2";
+            // 
+            // txtDiemHientaiPlayer2
+            // 
+            this.txtDiemHientaiPlayer2.EditValue = "0";
+            this.txtDiemHientaiPlayer2.Enabled = false;
+            this.txtDiemHientaiPlayer2.Location = new System.Drawing.Point(827, 58);
+            this.txtDiemHientaiPlayer2.Name = "txtDiemHientaiPlayer2";
+            this.txtDiemHientaiPlayer2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 16.8F, System.Drawing.FontStyle.Bold);
+            this.txtDiemHientaiPlayer2.Properties.Appearance.Options.UseFont = true;
+            this.txtDiemHientaiPlayer2.Size = new System.Drawing.Size(77, 40);
+            this.txtDiemHientaiPlayer2.TabIndex = 109;
+            // 
+            // labelControl20
+            // 
+            this.labelControl20.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl20.Appearance.Options.UseFont = true;
+            this.labelControl20.Location = new System.Drawing.Point(122, 47);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(34, 69);
+            this.labelControl20.TabIndex = 114;
+            this.labelControl20.Text = "1";
+            // 
+            // nDiemSet1Player1
+            // 
+            this.nDiemSet1Player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nDiemSet1Player1.Location = new System.Drawing.Point(225, 47);
+            this.nDiemSet1Player1.Name = "nDiemSet1Player1";
+            this.nDiemSet1Player1.Size = new System.Drawing.Size(102, 75);
+            this.nDiemSet1Player1.TabIndex = 120;
+            // 
+            // btnDiemPlayer1
+            // 
+            this.btnDiemPlayer1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDiemPlayer1.ImageOptions.Image")));
+            this.btnDiemPlayer1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnDiemPlayer1.Location = new System.Drawing.Point(417, 57);
+            this.btnDiemPlayer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDiemPlayer1.Name = "btnDiemPlayer1";
+            this.btnDiemPlayer1.Size = new System.Drawing.Size(58, 41);
+            this.btnDiemPlayer1.TabIndex = 107;
+            // 
+            // labelControl23
+            // 
+            this.labelControl23.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl23.Appearance.Options.UseFont = true;
+            this.labelControl23.Location = new System.Drawing.Point(676, 15);
+            this.labelControl23.Name = "labelControl23";
+            this.labelControl23.Size = new System.Drawing.Size(33, 19);
+            this.labelControl23.TabIndex = 126;
+            this.labelControl23.Text = "Live";
+            // 
+            // nDiemSet3Player2
+            // 
+            this.nDiemSet3Player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nDiemSet3Player2.Location = new System.Drawing.Point(1075, 209);
+            this.nDiemSet3Player2.Name = "nDiemSet3Player2";
+            this.nDiemSet3Player2.Size = new System.Drawing.Size(104, 75);
+            this.nDiemSet3Player2.TabIndex = 121;
+            // 
+            // txtDiemHientaiPlayer1
+            // 
+            this.txtDiemHientaiPlayer1.EditValue = "0";
+            this.txtDiemHientaiPlayer1.Enabled = false;
+            this.txtDiemHientaiPlayer1.Location = new System.Drawing.Point(482, 58);
+            this.txtDiemHientaiPlayer1.Name = "txtDiemHientaiPlayer1";
+            this.txtDiemHientaiPlayer1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 16.8F, System.Drawing.FontStyle.Bold);
+            this.txtDiemHientaiPlayer1.Properties.Appearance.Options.UseFont = true;
+            this.txtDiemHientaiPlayer1.Size = new System.Drawing.Size(77, 40);
+            this.txtDiemHientaiPlayer1.TabIndex = 106;
+            // 
+            // nDiemSet2Player1
+            // 
+            this.nDiemSet2Player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nDiemSet2Player1.Location = new System.Drawing.Point(225, 128);
+            this.nDiemSet2Player1.Name = "nDiemSet2Player1";
+            this.nDiemSet2Player1.Size = new System.Drawing.Size(102, 75);
+            this.nDiemSet2Player1.TabIndex = 125;
+            // 
+            // nDiemSet2Player2
+            // 
+            this.nDiemSet2Player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nDiemSet2Player2.Location = new System.Drawing.Point(1073, 126);
+            this.nDiemSet2Player2.Name = "nDiemSet2Player2";
+            this.nDiemSet2Player2.Size = new System.Drawing.Size(104, 75);
+            this.nDiemSet2Player2.TabIndex = 122;
+            // 
+            // nDiemSet3Player1
+            // 
+            this.nDiemSet3Player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nDiemSet3Player1.Location = new System.Drawing.Point(225, 209);
+            this.nDiemSet3Player1.Name = "nDiemSet3Player1";
+            this.nDiemSet3Player1.Size = new System.Drawing.Size(102, 75);
+            this.nDiemSet3Player1.TabIndex = 124;
+            // 
+            // nDiemSet1Player2
+            // 
+            this.nDiemSet1Player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nDiemSet1Player2.Location = new System.Drawing.Point(1073, 45);
+            this.nDiemSet1Player2.Name = "nDiemSet1Player2";
+            this.nDiemSet1Player2.Size = new System.Drawing.Size(104, 75);
+            this.nDiemSet1Player2.TabIndex = 123;
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.groupControl10);
+            this.xtraTabPage2.Controls.Add(this.groupControl11);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(1295, 538);
+            this.xtraTabPage2.Text = "Giới thiệu/Trọng tài";
+            // 
+            // groupControl10
+            // 
+            this.groupControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl10.Controls.Add(this.simpleButton35);
+            this.groupControl10.Controls.Add(this.simpleButton36);
+            this.groupControl10.Controls.Add(this.textEdit8);
+            this.groupControl10.Controls.Add(this.labelControl70);
+            this.groupControl10.Controls.Add(this.labelControl81);
+            this.groupControl10.Controls.Add(this.labelControl82);
+            this.groupControl10.Controls.Add(this.textEdit9);
+            this.groupControl10.Controls.Add(this.textEdit10);
+            this.groupControl10.Controls.Add(this.labelControl83);
+            this.groupControl10.Controls.Add(this.labelControl84);
+            this.groupControl10.Controls.Add(this.textEdit11);
+            this.groupControl10.Controls.Add(this.labelControl85);
+            this.groupControl10.Controls.Add(this.labelControl86);
+            this.groupControl10.Controls.Add(this.labelControl87);
+            this.groupControl10.Controls.Add(this.textEdit12);
+            this.groupControl10.Location = new System.Drawing.Point(3, 3);
+            this.groupControl10.Name = "groupControl10";
+            this.groupControl10.Size = new System.Drawing.Size(713, 532);
+            this.groupControl10.TabIndex = 181;
+            this.groupControl10.Text = "Thời tiết - Địa điểm";
+            // 
+            // simpleButton35
+            // 
+            this.simpleButton35.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton35.Appearance.Options.UseFont = true;
+            this.simpleButton35.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton35.Location = new System.Drawing.Point(388, 290);
+            this.simpleButton35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton35.Name = "simpleButton35";
+            this.simpleButton35.Size = new System.Drawing.Size(58, 47);
+            this.simpleButton35.TabIndex = 202;
+            this.simpleButton35.Text = "Tắt";
+            this.simpleButton35.ToolTip = "Xuống đồ họa";
+            // 
+            // simpleButton36
+            // 
+            this.simpleButton36.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton36.Appearance.Options.UseFont = true;
+            this.simpleButton36.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton36.Location = new System.Drawing.Point(287, 290);
+            this.simpleButton36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton36.Name = "simpleButton36";
+            this.simpleButton36.Size = new System.Drawing.Size(65, 47);
+            this.simpleButton36.TabIndex = 201;
+            this.simpleButton36.Text = "Bật";
+            this.simpleButton36.ToolTip = "Lên đồ họa";
+            // 
+            // textEdit8
+            // 
+            this.textEdit8.Location = new System.Drawing.Point(150, 49);
+            this.textEdit8.MenuManager = this.barManager1;
+            this.textEdit8.Name = "textEdit8";
+            this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.textEdit8.Properties.Appearance.Options.UseFont = true;
+            this.textEdit8.Size = new System.Drawing.Size(511, 24);
+            this.textEdit8.TabIndex = 159;
+            // 
+            // labelControl70
+            // 
+            this.labelControl70.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl70.Appearance.Options.UseFont = true;
+            this.labelControl70.Location = new System.Drawing.Point(38, 49);
+            this.labelControl70.Name = "labelControl70";
+            this.labelControl70.Size = new System.Drawing.Size(106, 21);
+            this.labelControl70.TabIndex = 158;
+            this.labelControl70.Text = "Sân vận động:";
+            // 
+            // labelControl81
+            // 
+            this.labelControl81.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl81.Appearance.Options.UseFont = true;
+            this.labelControl81.Location = new System.Drawing.Point(68, 98);
+            this.labelControl81.Name = "labelControl81";
+            this.labelControl81.Size = new System.Drawing.Size(68, 21);
+            this.labelControl81.TabIndex = 162;
+            this.labelControl81.Text = "Thời tiết:";
+            // 
+            // labelControl82
+            // 
+            this.labelControl82.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl82.Appearance.Options.UseFont = true;
+            this.labelControl82.Location = new System.Drawing.Point(369, 231);
+            this.labelControl82.Name = "labelControl82";
+            this.labelControl82.Size = new System.Drawing.Size(28, 19);
+            this.labelControl82.TabIndex = 176;
+            this.labelControl82.Text = "(%)";
+            // 
+            // textEdit9
+            // 
+            this.textEdit9.EditValue = "Trời đẹp, nắng nhẹ, nhiệt độ vừa phải";
+            this.textEdit9.Location = new System.Drawing.Point(150, 98);
+            this.textEdit9.MenuManager = this.barManager1;
+            this.textEdit9.Name = "textEdit9";
+            this.textEdit9.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.textEdit9.Properties.Appearance.Options.UseFont = true;
+            this.textEdit9.Size = new System.Drawing.Size(511, 24);
+            this.textEdit9.TabIndex = 163;
+            // 
+            // textEdit10
+            // 
+            this.textEdit10.Location = new System.Drawing.Point(150, 231);
+            this.textEdit10.MenuManager = this.barManager1;
+            this.textEdit10.Name = "textEdit10";
+            this.textEdit10.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.textEdit10.Properties.Appearance.Options.UseFont = true;
+            this.textEdit10.Size = new System.Drawing.Size(202, 24);
+            this.textEdit10.TabIndex = 175;
+            // 
+            // labelControl83
+            // 
+            this.labelControl83.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl83.Appearance.Options.UseFont = true;
+            this.labelControl83.Location = new System.Drawing.Point(72, 188);
+            this.labelControl83.Name = "labelControl83";
+            this.labelControl83.Size = new System.Drawing.Size(60, 21);
+            this.labelControl83.TabIndex = 168;
+            this.labelControl83.Text = "Sức gió:";
+            // 
+            // labelControl84
+            // 
+            this.labelControl84.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl84.Appearance.Options.UseFont = true;
+            this.labelControl84.Location = new System.Drawing.Point(77, 231);
+            this.labelControl84.Name = "labelControl84";
+            this.labelControl84.Size = new System.Drawing.Size(55, 21);
+            this.labelControl84.TabIndex = 174;
+            this.labelControl84.Text = "Độ ẩm:";
+            // 
+            // textEdit11
+            // 
+            this.textEdit11.Location = new System.Drawing.Point(150, 188);
+            this.textEdit11.MenuManager = this.barManager1;
+            this.textEdit11.Name = "textEdit11";
+            this.textEdit11.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.textEdit11.Properties.Appearance.Options.UseFont = true;
+            this.textEdit11.Size = new System.Drawing.Size(202, 24);
+            this.textEdit11.TabIndex = 169;
+            // 
+            // labelControl85
+            // 
+            this.labelControl85.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl85.Appearance.Options.UseFont = true;
+            this.labelControl85.Location = new System.Drawing.Point(369, 188);
+            this.labelControl85.Name = "labelControl85";
+            this.labelControl85.Size = new System.Drawing.Size(50, 19);
+            this.labelControl85.TabIndex = 173;
+            this.labelControl85.Text = "(Km/h)";
+            // 
+            // labelControl86
+            // 
+            this.labelControl86.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl86.Appearance.Options.UseFont = true;
+            this.labelControl86.Location = new System.Drawing.Point(63, 140);
+            this.labelControl86.Name = "labelControl86";
+            this.labelControl86.Size = new System.Drawing.Size(69, 21);
+            this.labelControl86.TabIndex = 170;
+            this.labelControl86.Text = "Nhiệt độ:";
+            // 
+            // labelControl87
+            // 
+            this.labelControl87.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl87.Appearance.Options.UseFont = true;
+            this.labelControl87.Location = new System.Drawing.Point(369, 140);
+            this.labelControl87.Name = "labelControl87";
+            this.labelControl87.Size = new System.Drawing.Size(30, 19);
+            this.labelControl87.TabIndex = 172;
+            this.labelControl87.Text = "(°C)";
+            // 
+            // textEdit12
+            // 
+            this.textEdit12.Location = new System.Drawing.Point(150, 140);
+            this.textEdit12.MenuManager = this.barManager1;
+            this.textEdit12.Name = "textEdit12";
+            this.textEdit12.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.textEdit12.Properties.Appearance.Options.UseFont = true;
+            this.textEdit12.Size = new System.Drawing.Size(202, 24);
+            this.textEdit12.TabIndex = 171;
+            // 
+            // groupControl11
+            // 
+            this.groupControl11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl11.Controls.Add(this.simpleButton37);
+            this.groupControl11.Controls.Add(this.simpleButton38);
+            this.groupControl11.Controls.Add(this.textEdit13);
+            this.groupControl11.Controls.Add(this.labelControl88);
+            this.groupControl11.Controls.Add(this.labelControl89);
+            this.groupControl11.Controls.Add(this.textEdit14);
+            this.groupControl11.Controls.Add(this.labelControl90);
+            this.groupControl11.Controls.Add(this.textEdit15);
+            this.groupControl11.Controls.Add(this.labelControl91);
+            this.groupControl11.Controls.Add(this.textEdit16);
+            this.groupControl11.Location = new System.Drawing.Point(722, 3);
+            this.groupControl11.Name = "groupControl11";
+            this.groupControl11.Size = new System.Drawing.Size(570, 532);
+            this.groupControl11.TabIndex = 180;
+            this.groupControl11.Text = "Trọng tài:";
+            // 
+            // simpleButton37
+            // 
+            this.simpleButton37.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton37.Appearance.Options.UseFont = true;
+            this.simpleButton37.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton37.Location = new System.Drawing.Point(314, 182);
+            this.simpleButton37.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton37.Name = "simpleButton37";
+            this.simpleButton37.Size = new System.Drawing.Size(82, 37);
+            this.simpleButton37.TabIndex = 202;
+            this.simpleButton37.Text = "Tắt";
+            this.simpleButton37.ToolTip = "Xuống đồ họa";
+            // 
+            // simpleButton38
+            // 
+            this.simpleButton38.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton38.Appearance.Options.UseFont = true;
+            this.simpleButton38.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton38.Location = new System.Drawing.Point(169, 182);
+            this.simpleButton38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton38.Name = "simpleButton38";
+            this.simpleButton38.Size = new System.Drawing.Size(90, 37);
+            this.simpleButton38.TabIndex = 201;
+            this.simpleButton38.Text = "Bật";
+            this.simpleButton38.ToolTip = "Lên đồ họa";
+            // 
+            // textEdit13
+            // 
+            this.textEdit13.Location = new System.Drawing.Point(156, 45);
+            this.textEdit13.MenuManager = this.barManager1;
+            this.textEdit13.Name = "textEdit13";
+            this.textEdit13.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.textEdit13.Properties.Appearance.Options.UseFont = true;
+            this.textEdit13.Size = new System.Drawing.Size(272, 24);
+            this.textEdit13.TabIndex = 151;
+            // 
+            // labelControl88
+            // 
+            this.labelControl88.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl88.Appearance.Options.UseFont = true;
+            this.labelControl88.Location = new System.Drawing.Point(21, 45);
+            this.labelControl88.Name = "labelControl88";
+            this.labelControl88.Size = new System.Drawing.Size(117, 21);
+            this.labelControl88.TabIndex = 150;
+            this.labelControl88.Text = "Trọng tài chính:";
+            // 
+            // labelControl89
+            // 
+            this.labelControl89.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl89.Appearance.Options.UseFont = true;
+            this.labelControl89.Location = new System.Drawing.Point(15, 77);
+            this.labelControl89.Name = "labelControl89";
+            this.labelControl89.Size = new System.Drawing.Size(123, 21);
+            this.labelControl89.TabIndex = 152;
+            this.labelControl89.Text = "Trọng tài biên 1:";
+            // 
+            // textEdit14
+            // 
+            this.textEdit14.Location = new System.Drawing.Point(156, 77);
+            this.textEdit14.MenuManager = this.barManager1;
+            this.textEdit14.Name = "textEdit14";
+            this.textEdit14.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.textEdit14.Properties.Appearance.Options.UseFont = true;
+            this.textEdit14.Size = new System.Drawing.Size(272, 24);
+            this.textEdit14.TabIndex = 153;
+            // 
+            // labelControl90
+            // 
+            this.labelControl90.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl90.Appearance.Options.UseFont = true;
+            this.labelControl90.Location = new System.Drawing.Point(15, 107);
+            this.labelControl90.Name = "labelControl90";
+            this.labelControl90.Size = new System.Drawing.Size(123, 21);
+            this.labelControl90.TabIndex = 154;
+            this.labelControl90.Text = "Trọng tài biên 2:";
+            // 
+            // textEdit15
+            // 
+            this.textEdit15.Location = new System.Drawing.Point(156, 107);
+            this.textEdit15.MenuManager = this.barManager1;
+            this.textEdit15.Name = "textEdit15";
+            this.textEdit15.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.textEdit15.Properties.Appearance.Options.UseFont = true;
+            this.textEdit15.Size = new System.Drawing.Size(272, 24);
+            this.textEdit15.TabIndex = 155;
+            // 
+            // labelControl91
+            // 
+            this.labelControl91.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl91.Appearance.Options.UseFont = true;
+            this.labelControl91.Location = new System.Drawing.Point(33, 138);
+            this.labelControl91.Name = "labelControl91";
+            this.labelControl91.Size = new System.Drawing.Size(105, 21);
+            this.labelControl91.TabIndex = 156;
+            this.labelControl91.Text = "Trọng tài bàn:";
+            // 
+            // textEdit16
+            // 
+            this.textEdit16.Location = new System.Drawing.Point(156, 138);
+            this.textEdit16.MenuManager = this.barManager1;
+            this.textEdit16.Name = "textEdit16";
+            this.textEdit16.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.textEdit16.Properties.Appearance.Options.UseFont = true;
+            this.textEdit16.Size = new System.Drawing.Size(272, 24);
+            this.textEdit16.TabIndex = 157;
             // 
             // splitContainerControl2
             // 
@@ -4659,7 +5936,7 @@
             // 
             this.xTabVideo.Controls.Add(this.groupControl1);
             this.xTabVideo.Name = "xTabVideo";
-            this.xTabVideo.Size = new System.Drawing.Size(1895, 961);
+            this.xTabVideo.Size = new System.Drawing.Size(1850, 961);
             this.xTabVideo.Text = "Videos/Images";
             // 
             // bsUpdateData
@@ -4680,305 +5957,36 @@
             // 
             this.bsUpdateNotifier.DataSource = typeof(HDCGStudio.Object.UpdateNotifier);
             // 
-            // splitContainerControl5
+            // labelControl92
             // 
-            this.splitContainerControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl5.Horizontal = false;
-            this.splitContainerControl5.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl5.Name = "splitContainerControl5";
-            this.splitContainerControl5.Panel1.Controls.Add(this.simpleButton31);
-            this.splitContainerControl5.Panel1.Controls.Add(this.simpleButton32);
-            this.splitContainerControl5.Panel1.Controls.Add(this.simpleButton33);
-            this.splitContainerControl5.Panel1.Controls.Add(this.simpleButton34);
-            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl69);
-            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl70);
-            this.splitContainerControl5.Panel1.Controls.Add(this.textEdit1);
-            this.splitContainerControl5.Panel1.Controls.Add(this.textEdit2);
-            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl71);
-            this.splitContainerControl5.Panel1.Controls.Add(this.textEdit3);
-            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl75);
-            this.splitContainerControl5.Panel1.Controls.Add(this.comboBoxEdit1);
-            this.splitContainerControl5.Panel1.Controls.Add(this.textEdit4);
-            this.splitContainerControl5.Panel1.Controls.Add(this.comboBoxEdit2);
-            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl76);
-            this.splitContainerControl5.Panel1.Controls.Add(this.cboGiaiDauTennis);
-            this.splitContainerControl5.Panel1.Controls.Add(this.btnManageTeamTennis);
-            this.splitContainerControl5.Panel1.Controls.Add(this.labelControl77);
-            this.splitContainerControl5.Panel1.Controls.Add(this.btnManageLeagueTennis);
-            this.splitContainerControl5.Panel1.Text = "Panel1";
-            this.splitContainerControl5.Panel2.Controls.Add(this.xtraTabControl1);
-            this.splitContainerControl5.Panel2.Text = "Panel2";
-            this.splitContainerControl5.Size = new System.Drawing.Size(1302, 950);
-            this.splitContainerControl5.SplitterPosition = 264;
-            this.splitContainerControl5.TabIndex = 131;
-            this.splitContainerControl5.Text = "splitContainerControl5";
+            this.labelControl92.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl92.Appearance.Options.UseFont = true;
+            this.labelControl92.Location = new System.Drawing.Point(510, 66);
+            this.labelControl92.Name = "labelControl92";
+            this.labelControl92.Size = new System.Drawing.Size(69, 21);
+            this.labelControl92.TabIndex = 233;
+            this.labelControl92.Text = "Loại đấu:";
             // 
-            // xtraTabControl1
+            // cboTennisType
             // 
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1302, 680);
-            this.xtraTabControl1.TabIndex = 131;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2});
-            // 
-            // xtraTabPage1
-            // 
-            this.xtraTabPage1.Controls.Add(this.txtPlayer1);
-            this.xtraTabPage1.Controls.Add(this.labelControl17);
-            this.xtraTabPage1.Controls.Add(this.labelControl26);
-            this.xtraTabPage1.Controls.Add(this.labelControl18);
-            this.xtraTabPage1.Controls.Add(this.labelControl11);
-            this.xtraTabPage1.Controls.Add(this.btnDiemPlayer2);
-            this.xtraTabPage1.Controls.Add(this.labelControl25);
-            this.xtraTabPage1.Controls.Add(this.labelControl19);
-            this.xtraTabPage1.Controls.Add(this.nHatgiong1);
-            this.xtraTabPage1.Controls.Add(this.txtDiemHientaiPlayer2);
-            this.xtraTabPage1.Controls.Add(this.txtPlayer2);
-            this.xtraTabPage1.Controls.Add(this.labelControl20);
-            this.xtraTabPage1.Controls.Add(this.labelControl12);
-            this.xtraTabPage1.Controls.Add(this.labelControl16);
-            this.xtraTabPage1.Controls.Add(this.txtPlayer3);
-            this.xtraTabPage1.Controls.Add(this.nDiemSet1Player1);
-            this.xtraTabPage1.Controls.Add(this.labelControl14);
-            this.xtraTabPage1.Controls.Add(this.btnDiemPlayer1);
-            this.xtraTabPage1.Controls.Add(this.labelControl23);
-            this.xtraTabPage1.Controls.Add(this.nDiemSet3Player2);
-            this.xtraTabPage1.Controls.Add(this.txtPlayer4);
-            this.xtraTabPage1.Controls.Add(this.txtDiemHientaiPlayer1);
-            this.xtraTabPage1.Controls.Add(this.nDiemSet2Player1);
-            this.xtraTabPage1.Controls.Add(this.nDiemSet2Player2);
-            this.xtraTabPage1.Controls.Add(this.nHatgiong2);
-            this.xtraTabPage1.Controls.Add(this.labelControl15);
-            this.xtraTabPage1.Controls.Add(this.nDiemSet3Player1);
-            this.xtraTabPage1.Controls.Add(this.nDiemSet1Player2);
-            this.xtraTabPage1.Controls.Add(this.labelControl13);
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1295, 646);
-            this.xtraTabPage1.Text = "xtraTabPage1";
-            // 
-            // xtraTabPage2
-            // 
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(293, 266);
-            this.xtraTabPage2.Text = "xtraTabPage2";
-            // 
-            // simpleButton31
-            // 
-            this.simpleButton31.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton31.Appearance.Options.UseFont = true;
-            this.simpleButton31.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton31.Location = new System.Drawing.Point(1075, 184);
-            this.simpleButton31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton31.Name = "simpleButton31";
-            this.simpleButton31.Size = new System.Drawing.Size(45, 30);
-            this.simpleButton31.TabIndex = 224;
-            this.simpleButton31.Text = "Tắt";
-            this.simpleButton31.ToolTip = "Xuống đồ họa";
-            // 
-            // simpleButton32
-            // 
-            this.simpleButton32.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton32.Appearance.Options.UseFont = true;
-            this.simpleButton32.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton32.Location = new System.Drawing.Point(1017, 184);
-            this.simpleButton32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton32.Name = "simpleButton32";
-            this.simpleButton32.Size = new System.Drawing.Size(52, 30);
-            this.simpleButton32.TabIndex = 223;
-            this.simpleButton32.Text = "Bật";
-            this.simpleButton32.ToolTip = "Lên đồ họa";
-            // 
-            // simpleButton33
-            // 
-            this.simpleButton33.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton33.Appearance.Options.UseFont = true;
-            this.simpleButton33.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton33.Location = new System.Drawing.Point(453, 182);
-            this.simpleButton33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton33.Name = "simpleButton33";
-            this.simpleButton33.Size = new System.Drawing.Size(45, 30);
-            this.simpleButton33.TabIndex = 222;
-            this.simpleButton33.Text = "Tắt";
-            this.simpleButton33.ToolTip = "Xuống đồ họa";
-            // 
-            // simpleButton34
-            // 
-            this.simpleButton34.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton34.Appearance.Options.UseFont = true;
-            this.simpleButton34.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton34.Location = new System.Drawing.Point(395, 182);
-            this.simpleButton34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton34.Name = "simpleButton34";
-            this.simpleButton34.Size = new System.Drawing.Size(52, 30);
-            this.simpleButton34.TabIndex = 221;
-            this.simpleButton34.Text = "Bật";
-            this.simpleButton34.ToolTip = "Lên đồ họa";
-            // 
-            // labelControl69
-            // 
-            this.labelControl69.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl69.Appearance.Options.UseFont = true;
-            this.labelControl69.Location = new System.Drawing.Point(577, 88);
-            this.labelControl69.Name = "labelControl69";
-            this.labelControl69.Size = new System.Drawing.Size(43, 19);
-            this.labelControl69.TabIndex = 217;
-            this.labelControl69.Text = "Vòng:";
-            // 
-            // labelControl70
-            // 
-            this.labelControl70.Appearance.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl70.Appearance.Options.UseFont = true;
-            this.labelControl70.Location = new System.Drawing.Point(627, 128);
-            this.labelControl70.Name = "labelControl70";
-            this.labelControl70.Size = new System.Drawing.Size(43, 40);
-            this.labelControl70.TabIndex = 208;
-            this.labelControl70.Text = "VS";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(144, 186);
-            this.textEdit1.MenuManager = this.barManager1;
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(245, 26);
-            this.textEdit1.TabIndex = 216;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(144, 152);
-            this.textEdit2.MenuManager = this.barManager1;
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(245, 26);
-            this.textEdit2.TabIndex = 215;
-            // 
-            // labelControl71
-            // 
-            this.labelControl71.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl71.Appearance.Options.UseFont = true;
-            this.labelControl71.Location = new System.Drawing.Point(89, 189);
-            this.labelControl71.Name = "labelControl71";
-            this.labelControl71.Size = new System.Drawing.Size(35, 19);
-            this.labelControl71.TabIndex = 214;
-            this.labelControl71.Text = "HLV:";
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Location = new System.Drawing.Point(766, 186);
-            this.textEdit3.MenuManager = this.barManager1;
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(245, 26);
-            this.textEdit3.TabIndex = 213;
-            // 
-            // labelControl75
-            // 
-            this.labelControl75.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl75.Appearance.Options.UseFont = true;
-            this.labelControl75.Location = new System.Drawing.Point(32, 154);
-            this.labelControl75.Name = "labelControl75";
-            this.labelControl75.Size = new System.Drawing.Size(92, 21);
-            this.labelControl75.TabIndex = 212;
-            this.labelControl75.Text = "Tên viết tắt:";
-            // 
-            // comboBoxEdit1
-            // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(856, 118);
-            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxEdit1.MenuManager = this.barManager1;
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cboTennisType.EditValue = "Đơn Nam";
+            this.cboTennisType.Location = new System.Drawing.Point(589, 63);
+            this.cboTennisType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboTennisType.MenuManager = this.barManager1;
+            this.cboTennisType.Name = "cboTennisType";
+            this.cboTennisType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.cboTennisType.Properties.Appearance.Options.UseFont = true;
+            this.cboTennisType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(264, 30);
-            this.comboBoxEdit1.TabIndex = 207;
-            // 
-            // textEdit4
-            // 
-            this.textEdit4.Location = new System.Drawing.Point(918, 155);
-            this.textEdit4.MenuManager = this.barManager1;
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(202, 26);
-            this.textEdit4.TabIndex = 211;
-            // 
-            // comboBoxEdit2
-            // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(144, 118);
-            this.comboBoxEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxEdit2.MenuManager = this.barManager1;
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.comboBoxEdit2.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit2.Size = new System.Drawing.Size(264, 30);
-            this.comboBoxEdit2.TabIndex = 210;
-            // 
-            // labelControl76
-            // 
-            this.labelControl76.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl76.Appearance.Options.UseFont = true;
-            this.labelControl76.Location = new System.Drawing.Point(93, 121);
-            this.labelControl76.Name = "labelControl76";
-            this.labelControl76.Size = new System.Drawing.Size(31, 21);
-            this.labelControl76.TabIndex = 209;
-            this.labelControl76.Text = "Đội:";
-            // 
-            // cboGiaiDauTennis
-            // 
-            this.cboGiaiDauTennis.Location = new System.Drawing.Point(226, 53);
-            this.cboGiaiDauTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cboGiaiDauTennis.MenuManager = this.barManager1;
-            this.cboGiaiDauTennis.Name = "cboGiaiDauTennis";
-            this.cboGiaiDauTennis.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.cboGiaiDauTennis.Properties.Appearance.Options.UseFont = true;
-            this.cboGiaiDauTennis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboGiaiDauTennis.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cboGiaiDauTennis.Size = new System.Drawing.Size(547, 26);
-            this.cboGiaiDauTennis.TabIndex = 205;
-            // 
-            // btnManageTeamTennis
-            // 
-            this.btnManageTeamTennis.Location = new System.Drawing.Point(965, 51);
-            this.btnManageTeamTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnManageTeamTennis.Name = "btnManageTeamTennis";
-            this.btnManageTeamTennis.Size = new System.Drawing.Size(180, 26);
-            this.btnManageTeamTennis.TabIndex = 203;
-            this.btnManageTeamTennis.Text = "Quản lý đội thuộc giải đấu";
-            this.btnManageTeamTennis.ToolTip = "Quản lý danh sách cầu thủ chủ nhà";
-            // 
-            // labelControl77
-            // 
-            this.labelControl77.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl77.Appearance.Options.UseFont = true;
-            this.labelControl77.Location = new System.Drawing.Point(144, 56);
-            this.labelControl77.Name = "labelControl77";
-            this.labelControl77.Size = new System.Drawing.Size(67, 21);
-            this.labelControl77.TabIndex = 204;
-            this.labelControl77.Text = "Giải đấu:";
-            // 
-            // btnManageLeagueTennis
-            // 
-            this.btnManageLeagueTennis.Location = new System.Drawing.Point(779, 51);
-            this.btnManageLeagueTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnManageLeagueTennis.Name = "btnManageLeagueTennis";
-            this.btnManageLeagueTennis.Size = new System.Drawing.Size(180, 26);
-            this.btnManageLeagueTennis.TabIndex = 206;
-            this.btnManageLeagueTennis.Text = "Quản lý giải đấu";
-            this.btnManageLeagueTennis.ToolTip = "Quản lý danh sách cầu thủ chủ nhà";
+            this.cboTennisType.Properties.Items.AddRange(new object[] {
+            "Đơn Nam",
+            "Đơn Nữ",
+            "Đôi Nam",
+            "Đôi Nữ",
+            "Đôi Nam Nữ"});
+            this.cboTennisType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboTennisType.Size = new System.Drawing.Size(205, 26);
+            this.cboTennisType.TabIndex = 234;
             // 
             // MainForm
             // 
@@ -5145,20 +6153,75 @@
             ((System.ComponentModel.ISupportInitialize)(this.nGiay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhut)).EndInit();
             this.xTabPageTennis.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5)).EndInit();
+            this.splitContainerControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonviTennisTeam2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonviTennisTeam1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHLVTennisTeam1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShortNameTeam1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHatgiong1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHLVTennisTeam2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTennisTeam2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShortNameTeam2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTennisTeam1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboGiaiDauTennis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHatgiong2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayer4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHatgiong1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage1.ResumeLayout(false);
+            this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl9)).EndInit();
+            this.groupControl9.ResumeLayout(false);
+            this.groupControl9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemHientaiPlayer1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player2)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl10)).EndInit();
+            this.groupControl10.ResumeLayout(false);
+            this.groupControl10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl11)).EndInit();
+            this.groupControl11.ResumeLayout(false);
+            this.groupControl11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
             this.splitContainerControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -5179,19 +6242,7 @@
             this.xTabVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5)).EndInit();
-            this.splitContainerControl5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
-            this.xtraTabPage1.ResumeLayout(false);
-            this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboGiaiDauTennis.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTennisType.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5253,10 +6304,8 @@
         private DevExpress.XtraTab.XtraTabPage xTabPageTennis;
         private DevExpress.XtraEditors.SimpleButton btnDiemPlayer2;
         private DevExpress.XtraEditors.TextEdit txtDiemHientaiPlayer2;
-        private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.SimpleButton btnDiemPlayer1;
         private DevExpress.XtraEditors.TextEdit txtDiemHientaiPlayer1;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private System.Windows.Forms.NumericUpDown nHatgiong2;
         private DevExpress.XtraEditors.TextEdit txtPlayer4;
@@ -5278,8 +6327,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.TextEdit txtPlayer2;
         private DevExpress.XtraEditors.TextEdit txtPlayer3;
-        private DevExpress.XtraEditors.LabelControl labelControl26;
-        private DevExpress.XtraEditors.LabelControl labelControl25;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
         private DevExpress.XtraTab.XtraTabPage xTabDoiHinh;
@@ -5541,15 +6588,14 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton33;
         private DevExpress.XtraEditors.SimpleButton simpleButton34;
         private DevExpress.XtraEditors.LabelControl labelControl69;
-        private DevExpress.XtraEditors.LabelControl labelControl70;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtHLVTennisTeam1;
+        private DevExpress.XtraEditors.TextEdit txtShortNameTeam1;
         private DevExpress.XtraEditors.LabelControl labelControl71;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtHLVTennisTeam2;
         private DevExpress.XtraEditors.LabelControl labelControl75;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTennisTeam2;
+        private DevExpress.XtraEditors.TextEdit txtShortNameTeam2;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTennisTeam1;
         private DevExpress.XtraEditors.LabelControl labelControl76;
         private DevExpress.XtraEditors.ComboBoxEdit cboGiaiDauTennis;
         private DevExpress.XtraEditors.SimpleButton btnManageTeamTennis;
@@ -5558,5 +6604,84 @@
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private DevExpress.XtraEditors.TextEdit txtDonviTennisTeam2;
+        private DevExpress.XtraEditors.TextEdit txtDonviTennisTeam1;
+        private DevExpress.XtraEditors.LabelControl labelControl26;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private DevExpress.XtraEditors.LabelControl labelControl25;
+        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.GroupControl groupControl9;
+        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.NumericUpDown numericUpDown9;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.NumericUpDown numericUpDown10;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private System.Windows.Forms.NumericUpDown numericUpDown11;
+        private System.Windows.Forms.NumericUpDown numericUpDown12;
+        private DevExpress.XtraEditors.LabelControl labelControl67;
+        private System.Windows.Forms.NumericUpDown numericUpDown13;
+        private System.Windows.Forms.NumericUpDown numericUpDown14;
+        private DevExpress.XtraEditors.LabelControl labelControl68;
+        private System.Windows.Forms.NumericUpDown numericUpDown15;
+        private System.Windows.Forms.NumericUpDown numericUpDown16;
+        private DevExpress.XtraEditors.LabelControl labelControl78;
+        private System.Windows.Forms.NumericUpDown numericUpDown17;
+        private System.Windows.Forms.NumericUpDown numericUpDown18;
+        private DevExpress.XtraEditors.LabelControl labelControl79;
+        private System.Windows.Forms.NumericUpDown numericUpDown19;
+        private System.Windows.Forms.NumericUpDown numericUpDown20;
+        private DevExpress.XtraEditors.LabelControl labelControl80;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private DevExpress.XtraEditors.GroupControl groupControl10;
+        private DevExpress.XtraEditors.SimpleButton simpleButton35;
+        private DevExpress.XtraEditors.SimpleButton simpleButton36;
+        private DevExpress.XtraEditors.TextEdit textEdit8;
+        private DevExpress.XtraEditors.LabelControl labelControl70;
+        private DevExpress.XtraEditors.LabelControl labelControl81;
+        private DevExpress.XtraEditors.LabelControl labelControl82;
+        private DevExpress.XtraEditors.TextEdit textEdit9;
+        private DevExpress.XtraEditors.TextEdit textEdit10;
+        private DevExpress.XtraEditors.LabelControl labelControl83;
+        private DevExpress.XtraEditors.LabelControl labelControl84;
+        private DevExpress.XtraEditors.TextEdit textEdit11;
+        private DevExpress.XtraEditors.LabelControl labelControl85;
+        private DevExpress.XtraEditors.LabelControl labelControl86;
+        private DevExpress.XtraEditors.LabelControl labelControl87;
+        private DevExpress.XtraEditors.TextEdit textEdit12;
+        private DevExpress.XtraEditors.GroupControl groupControl11;
+        private DevExpress.XtraEditors.SimpleButton simpleButton37;
+        private DevExpress.XtraEditors.SimpleButton simpleButton38;
+        private DevExpress.XtraEditors.TextEdit textEdit13;
+        private DevExpress.XtraEditors.LabelControl labelControl88;
+        private DevExpress.XtraEditors.LabelControl labelControl89;
+        private DevExpress.XtraEditors.TextEdit textEdit14;
+        private DevExpress.XtraEditors.LabelControl labelControl90;
+        private DevExpress.XtraEditors.TextEdit textEdit15;
+        private DevExpress.XtraEditors.LabelControl labelControl91;
+        private DevExpress.XtraEditors.TextEdit textEdit16;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTennisType;
+        private DevExpress.XtraEditors.LabelControl labelControl92;
     }
 }
