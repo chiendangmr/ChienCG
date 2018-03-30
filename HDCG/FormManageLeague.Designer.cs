@@ -49,7 +49,6 @@
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.btnRemove = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.bsUpdateNotifier = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLeagues)).BeginInit();
@@ -58,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtLogoPath.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaGiai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -281,10 +279,6 @@
             this.btnAdd.ToolTip = "Thêm giải";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // bsUpdateNotifier
-            // 
-            this.bsUpdateNotifier.DataSource = typeof(HDCGStudio.Object.UpdateNotifier);
-            // 
             // FormManageLeague
             // 
             this.AcceptButton = this.btnAdd;
@@ -308,7 +302,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtLogoPath.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaGiai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,6 +327,5 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.SimpleButton btnSave;
-        private System.Windows.Forms.BindingSource bsUpdateNotifier;
     }
 }

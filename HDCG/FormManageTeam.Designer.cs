@@ -34,6 +34,7 @@
             this.gridTeams = new DevExpress.XtraGrid.GridControl();
             this.bsManageTeam = new System.Windows.Forms.BindingSource(this.components);
             this.gvTeams = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsCaptain = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -61,8 +62,6 @@
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.btnRemove = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.bsUpdateNotifier = new System.Windows.Forms.BindingSource(this.components);
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeams)).BeginInit();
@@ -76,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCoach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -145,6 +143,22 @@
             this.gvTeams.OptionsView.ShowGroupPanel = false;
             this.gvTeams.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvTeams_RowClick);
             this.gvTeams.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle);
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn4.AppearanceCell.Options.UseFont = true;
+            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.Caption = "Mã đội";
+            this.gridColumn4.FieldName = "tObj.TeamCode";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 7;
             // 
             // colNumber
             // 
@@ -452,26 +466,6 @@
             this.btnAdd.ToolTip = "Thêm đội";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // bsUpdateNotifier
-            // 
-            this.bsUpdateNotifier.DataSource = typeof(HDCGStudio.Object.UpdateNotifier);
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.gridColumn4.AppearanceCell.Options.UseFont = true;
-            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn4.Caption = "Mã đội";
-            this.gridColumn4.FieldName = "tObj.TeamCode";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 7;
-            // 
             // FormManageTeam
             // 
             this.AcceptButton = this.btnAdd;
@@ -500,7 +494,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCoach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsUpdateNotifier)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -536,7 +529,6 @@
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private System.Windows.Forms.NumericUpDown nPosition;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private System.Windows.Forms.BindingSource bsUpdateNotifier;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.TextEdit txtMaDoi;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;

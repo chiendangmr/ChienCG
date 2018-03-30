@@ -40,13 +40,17 @@ namespace HDCGStudio
         string _updateDataXml = "";
         string _TemplateHost = "";
         string _danhsachgiaidauXmlPath = "";
-        string _updateNotifier = "";
+        string _danhsachgiaiTennisPath = "";
         List<Object.League> _lstLeagues = new List<Object.League>();
+        List<Object.Tennis.League> _lstTennisLeagues = new List<Object.Tennis.League>();
         List<Object.Team> _lstTeams = new List<Object.Team>();
+        List<Object.Tennis.Team> _lstTennisTeams = new List<Object.Tennis.Team>();
         Dictionary<string, string> dicTemplates = new Dictionary<string, string>();
         Dictionary<string, string> dicTemplateData = new Dictionary<string, string>();
         Dictionary<string, string> dicDanhsachgiaidau = new Dictionary<string, string>();
+        Dictionary<string, string> dicDanhsachgiaidauTennis = new Dictionary<string, string>();
         Dictionary<string, string> dicDanhsachdoi = new Dictionary<string, string>();
+        Dictionary<string, string> dicDanhsachdoiTennis = new Dictionary<string, string>();
 
         HDCGControler.CasparCG cgServer = null;
         private void MainForm_Shown(object sender, EventArgs e)
@@ -93,21 +97,6 @@ namespace HDCGStudio
                     }
                 }
                 catch { }
-                _updateNotifier = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "UpdateNotifier.xml");
-                try
-                {
-                    if (File.Exists(_updateNotifier))
-                    {
-                        var lstData = Utils.GetObject<List<Object.UpdateNotifier>>(_updateNotifier);
-                        foreach (var data in lstData)
-                            bsUpdateNotifier.Add(data);
-                    }
-                    else
-                    {
-                        File.Create(_updateNotifier).Dispose();
-                    }
-                }
-                catch { }
                 //Load danh sách giải đấu
                 _danhsachgiaidauXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "Danhsachgiaidau.xml");
                 try
@@ -130,11 +119,31 @@ namespace HDCGStudio
                 {
 
                 }
+                _danhsachgiaiTennisPath = Path.Combine(Path.Combine(Application.StartupPath, "Data/Tennis"), "Danhsachgiaidau.xml");
+                try
+                {
+                    if (File.Exists(_danhsachgiaiTennisPath))
+                    {
+                        _lstTennisLeagues = Utils.GetObject<List<Object.Tennis.League>>(_danhsachgiaiTennisPath);
+                        foreach (var temp in _lstTennisLeagues)
+                        {
+                            cboGiaiDauTennis.Properties.Items.Add(temp.Name);
+                            dicDanhsachgiaidauTennis.Add(temp.LeagueCode, temp.Name);
+                        }
+                    }
+                    else
+                    {
+                        File.Create(_danhsachgiaiTennisPath).Dispose();
+                    }
+                }
+                catch
+                {
 
+                }
                 cgServer = new HDCGControler.CasparCG();
                 cgServer.Connect(AppSetting.Default.CGServerIP, AppSetting.Default.CGServerPort);
-                cboGiaiDau.SelectedIndex = 0;
-                tUpdateData.Enabled = true;
+                cboGiaiDau.SelectedIndex = -1;
+                cboGiaiDauTennis.SelectedIndex = -1;
                 this.WindowState = FormWindowState.Maximized;
                 LoadTemplateHost(Path.Combine(AppSetting.Default.TemplateFolder, "cg20.fth.1080i5000"));
             }
@@ -174,6 +183,7 @@ namespace HDCGStudio
             AppSetting.Default.Save();
         }
 
+        #region Video/Images
         private void btnBrowseVideo_Click(object sender, EventArgs e)
         {
             OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
@@ -263,7 +273,9 @@ namespace HDCGStudio
                 ckVideoLoop.Checked = videoView.VideoObj.Loop;
             }
         }
+        #endregion
 
+        #region Hàm xử lý chung
         public string ViewTemplate(string templateFileName, int fadeUpDuration = 0, bool isChu = true)
         {
             string templateFile = "HDTemplates\\" + templateFileName;
@@ -276,8 +288,7 @@ namespace HDCGStudio
                 Clear();
                 if (player.Add(1, templateFile))
                 {
-                    string xmlStr = "<Track_Property>" + GetAddXmlString(isChu) + "</Track_Property>";
-                    UpdateDataFile(xmlStr);
+                    string xmlStr = "<Track_Property>" + GetAddXmlString(isChu) + "</Track_Property>";                    
 
                     player.Update(1, xmlStr.Replace("\\n", "\n"));
                     player.Refresh();
@@ -515,19 +526,6 @@ namespace HDCGStudio
                 OffTemplate(int.Parse(cboVideoLayer.Text));
         }
 
-        private void btnStop_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var tempInfoView = gvTempInfo.GetFocusedRow() as View.tempInfo;
-                OffTemplate(tempInfoView.tempObj.Layer);
-            }
-            catch
-            {
-                HDMessageBox.Show("404 - Template not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         string _tempName = "";
         int _layer = 0;
         int _delay = 0;
@@ -573,14 +571,9 @@ namespace HDCGStudio
             xmlStr = "<" + id + " id=\"" + id + "\"><data value=\"" + val + "\"/></" + id + ">";
             return xmlStr;
         }
+        #endregion
 
-        private void barBtnManageTemplate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ManageTemplateForm mTemp = new ManageTemplateForm(cboTemplateType.Text);
-            mTemp.Show();
-            mTemp.Activate();
-        }
-
+        #region Bóng đá
         private void cboTemplateType_SelectedValueChanged(object sender, EventArgs e)
         {
             dicTemplates.Clear();
@@ -717,54 +710,7 @@ namespace HDCGStudio
         private string Add(string str, string val)
         {
             return "<" + str + " id=\"" + str + "\"><data value=\"" + val + "\"/></" + str + ">";
-        }
-
-        private void UpdateDataFile(string data)
-        {
-            try
-            {
-                if (bsUpdateData.List.Count > 0)
-                {
-                    int dataCount = 0;
-                    foreach (var temp in bsUpdateData.List as BindingList<Object.tempUpdating>)
-                    {
-                        if (temp.Name == _tempName)
-                        {
-                            dataCount++;
-                            temp.Data = data;
-                            (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXml);
-                        }
-                    }
-                    if (dataCount == 0)
-                    {
-                        bsUpdateData.List.Add(new Object.tempUpdating()
-                        {
-                            Name = _tempName,
-                            Data = data
-
-                        });
-
-                        (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXml);
-                    }
-                }
-                else
-                {
-                    bsUpdateData.List.Add(new Object.tempUpdating()
-                    {
-                        Name = _tempName,
-                        Data = data
-
-                    });
-
-                    (bsUpdateData.List as BindingList<Object.tempUpdating>).ToList().SaveObject(_updateDataXml);
-
-                }
-            }
-            catch (Exception ex)
-            {
-                HDMessageBox.Show("UpdateDataFile lỗi: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        }       
         public void LoadTemplateHost(string path)
         {
             if (!Directory.Exists(Path.GetDirectoryName(path)))
@@ -1163,14 +1109,14 @@ namespace HDCGStudio
                         xmlAdd += Add("player4", txtPlayer4.Text);
                     xmlAdd += Add("hatgiong1", nHatgiong1.Value.ToString());
                     xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
-                    xmlAdd += Add("player1set1point", nDiemSet1Player1.Value.ToString());
-                    xmlAdd += Add("player2set1point", nDiemSet1Player2.Value.ToString());
-                    xmlAdd += Add("player1set2point", nDiemSet2Player1.Value.ToString());
-                    xmlAdd += Add("player2set2point", nDiemSet2Player2.Value.ToString());
-                    xmlAdd += Add("player1set3point", nDiemSet3Player1.Value.ToString());
-                    xmlAdd += Add("player2set3point", nDiemSet3Player2.Value.ToString());
-                    xmlAdd += Add("player1livePoint", txtDiemHientaiPlayer1.Text);
-                    xmlAdd += Add("player2livePoint", txtDiemHientaiPlayer2.Text);
+                    xmlAdd += Add("set1point1", nDiemSet1Player1.Value.ToString());
+                    xmlAdd += Add("set1point2", nDiemSet1Player2.Value.ToString());
+                    xmlAdd += Add("set2point1", nDiemSet2Player1.Value.ToString());
+                    xmlAdd += Add("set2point2", nDiemSet2Player2.Value.ToString());
+                    xmlAdd += Add("set3point1", nDiemSet3Player1.Value.ToString());
+                    xmlAdd += Add("set3point2", nDiemSet3Player2.Value.ToString());
+                    xmlAdd += Add("player1livePoint", cboPointTeam1.Text);
+                    xmlAdd += Add("player2livePoint", cboPointTeam2.Text);
                 }
                 catch //(Exception ex)
                 {
@@ -1187,7 +1133,25 @@ namespace HDCGStudio
             frmManageLeague.Show();
             frmManageLeague.Activate();
         }
-
+        private void LamMoiBongDa()
+        {
+            try
+            {
+                _lstLeagues = Utils.GetObject<List<Object.League>>(_danhsachgiaidauXmlPath);
+                cboGiaiDau.Properties.Items.Clear();
+                dicDanhsachgiaidau.Clear();
+                foreach (var temp in _lstLeagues)
+                {
+                    cboGiaiDau.Properties.Items.Add(temp.Name);
+                    dicDanhsachgiaidau.Add(temp.LeagueCode, temp.Name);
+                }
+                cboGiaiDau.SelectedIndex = -1;                
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show("Lỗi trong làm mới dữ liệu bóng đá: " + ex.Message);
+            }
+        }
         private void cboGiaiDau_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -1500,61 +1464,7 @@ namespace HDCGStudio
         {
             _isEndPoint = true;
         }
-        #endregion
-
-        private void tUpdateData_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-                if (File.Exists(_updateNotifier))
-                {
-                    var lstData = Utils.GetObject<List<Object.UpdateNotifier>>(_updateNotifier);
-                    if (lstData[0].IsUpdateDanhsachgiaidau)
-                    {
-                        _lstLeagues = Utils.GetObject<List<Object.League>>(_danhsachgiaidauXmlPath);
-                        cboGiaiDau.Properties.Items.Clear();
-                        dicDanhsachgiaidau.Clear();
-                        foreach (var temp in _lstLeagues)
-                        {
-                            cboGiaiDau.Properties.Items.Add(temp.Name);
-                            dicDanhsachgiaidau.Add(temp.LeagueCode, temp.Name);
-                        }
-                        UpdateNotifier();
-                        cboGiaiDau.SelectedIndex = 0;
-                    }
-                    if (lstData[0].IsUpdateDanhsachdoibong)
-                    {
-                        var tempIndex = cboGiaiDau.SelectedIndex;
-                        cboGiaiDau.SelectedIndex = -1;
-                        UpdateNotifier();
-                        cboGiaiDau.SelectedIndex = 0;
-                    }
-                    if (lstData[0].IsUpdateDanhsachcauthu)
-                    {
-                        var tempIndex = cboGiaiDau.SelectedIndex;
-                        cboGiaiDau.SelectedIndex = -1;
-                        UpdateNotifier();
-                        cboGiaiDau.SelectedIndex = 0;
-                    }
-                }
-                else
-                {
-                    File.Create(_updateNotifier).Dispose();
-                }
-            }
-            catch { }
-        }
-        private void UpdateNotifier()
-        {
-            bsUpdateNotifier.List.Clear();
-            bsUpdateNotifier.List.Add(new Object.UpdateNotifier
-            {
-                IsUpdateDanhsachcauthu = false,
-                IsUpdateDanhsachdoibong = false,
-                IsUpdateDanhsachgiaidau = false
-            });
-            (bsUpdateNotifier.List as BindingList<Object.UpdateNotifier>).Select(v => v).ToList().SaveObject(_updateNotifier);
-        }
+        #endregion       
 
         private void btnSetTime_Click(object sender, EventArgs e)
         {
@@ -1839,7 +1749,7 @@ namespace HDCGStudio
         private void btnOnDanhsachchinhthuc_Click(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 BatTemplate("BongDa_DanhSachChinhThuc.ft");
             }
             catch { }
@@ -1853,7 +1763,7 @@ namespace HDCGStudio
         private void btnOnDanhsachdubi_Click(object sender, EventArgs e)
         {
             try
-            {               
+            {
                 BatTemplate("BongDa_DanhSachDuBi.ft");
             }
             catch { }
@@ -1883,7 +1793,7 @@ namespace HDCGStudio
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 BatTemplate("BongDa_ThongSo_DutDiem.ft");
             }
             catch { }
@@ -2184,6 +2094,109 @@ namespace HDCGStudio
                 isGatLen = true;
                 btnGat.ToolTip = "Lên Gạt và xuống đồ họa khác";
             }
+        }
+
+        private void btnManageTemplates_Click(object sender, EventArgs e)
+        {
+            ManageTemplateForm mTemp = new ManageTemplateForm(cboTemplateType.Text);
+            mTemp.Show();
+            mTemp.Activate();
+        }
+        #endregion
+
+        #region Tennis
+        private void btnOnTySoLonTennis_Click(object sender, EventArgs e)
+        {
+            BatTemplate("DavisCup_TySoLon.ft");
+        }
+
+        private void btnManageLeagueTennis_Click(object sender, EventArgs e)
+        {
+            FormManageTennisLeague frmManageLeague = new FormManageTennisLeague();
+            frmManageLeague.Show();
+            frmManageLeague.Activate();
+        }
+
+        private void btnManageTeamTennis_Click(object sender, EventArgs e)
+        {
+            if (cboGiaiDauTennis.Text.Trim().Length == 0)
+            {
+                HDMessageBox.Show("Chọn giải đấu trước!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                FormManageTennisTeam formManageTeam = new FormManageTennisTeam(cboGiaiDauTennis.Text);
+                formManageTeam.Show();
+                formManageTeam.Activate();
+            }
+        }
+        private void btnRefreshGiaiDau_Click(object sender, EventArgs e)
+        {
+            RefreshGiaiDau();
+        }
+        public void RefreshGiaiDau()
+        {
+            _danhsachgiaiTennisPath = Path.Combine(Path.Combine(Application.StartupPath, "Data/Tennis"), "Danhsachgiaidau.xml");
+            try
+            {
+                if (File.Exists(_danhsachgiaiTennisPath))
+                {
+                    cboGiaiDauTennis.Properties.Items.Clear();
+                    dicDanhsachgiaidauTennis.Clear();
+                    _lstTennisLeagues = Utils.GetObject<List<Object.Tennis.League>>(_danhsachgiaiTennisPath);
+                    foreach (var temp in _lstTennisLeagues)
+                    {
+                        cboGiaiDauTennis.Properties.Items.Add(temp.Name);
+                        dicDanhsachgiaidauTennis.Add(temp.LeagueCode, temp.Name);
+                    }
+                    cboGiaiDauTennis.SelectedIndex = -1;                    
+                }
+                else
+                {
+                    File.Create(_danhsachgiaiTennisPath).Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show("Lỗi trong làm mới dữ liệu tennis: " + ex.Message);
+            }
+
+        }
+        private void cboGiaiDauTennis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var danhsachdoiPath = Path.Combine(Path.Combine(Application.StartupPath, "Data/Tennis"), "Danhsachdoi" + dicDanhsachgiaidauTennis.FirstOrDefault(x => x.Value == cboGiaiDauTennis.Text).Key + ".xml");
+                try
+                {
+                    if (File.Exists(danhsachdoiPath))
+                    {
+                        dicDanhsachdoiTennis.Clear();
+                        cboTennisTeam1.Properties.Items.Clear();
+                        cboTennisTeam2.Properties.Items.Clear();
+                        _lstTennisTeams = Utils.GetObject<List<Object.Tennis.Team>>(danhsachdoiPath);
+                        foreach (var data in _lstTennisTeams)
+                        {
+                            cboTennisTeam1.Properties.Items.Add(data.Name);
+                            cboTennisTeam2.Properties.Items.Add(data.Name);
+                            dicDanhsachdoiTennis.Add(data.TeamCode, data.Name);
+                        }
+
+                    }
+                    else
+                    {
+                        File.Create(danhsachdoiPath).Dispose();
+                    }
+                }
+                catch { }
+            }
+            catch { }
+        }
+        #endregion
+
+        private void btnLamMoiBongDa_Click(object sender, EventArgs e)
+        {
+            LamMoiBongDa();
         }
     }
 }

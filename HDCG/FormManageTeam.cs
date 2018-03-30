@@ -24,7 +24,7 @@ namespace HDCGStudio
         }
         string DanhsachdoiXmlPath = "";
         string DanhsachgiaidauXmlPath = "";
-        string _updateNotifier = "";
+        
         Dictionary<string, string> dicDanhsachgiaidau = new Dictionary<string, string>();
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
@@ -71,7 +71,7 @@ namespace HDCGStudio
             {
                 //HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            _updateNotifier = Path.Combine(Path.Combine(Application.StartupPath, "Data"), "UpdateNotifier.xml");
+            
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -99,8 +99,7 @@ namespace HDCGStudio
                     });
 
                     (bsManageTeam.List as BindingList<View.Team>).OrderBy(a => a.tObj.Position).Select(v => v.tObj).ToList().SaveObject(DanhsachdoiXmlPath);
-                    gvTeams.RefreshData();
-                    UpdateNotifier();
+                    gvTeams.RefreshData();                   
                 }
             }
             catch (Exception ex)
@@ -123,8 +122,7 @@ namespace HDCGStudio
                         bsManageTeam.List.Remove(gvTeams.GetFocusedRow());
 
                         (bsManageTeam.List as BindingList<View.Team>).Select(v => v.tObj).ToList().SaveObject(DanhsachdoiXmlPath);
-                    }
-                    UpdateNotifier();
+                    }                    
                 }
             }
             catch (Exception ex)
@@ -135,7 +133,7 @@ namespace HDCGStudio
 
         private void ManageTemplateForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            UpdateNotifier();
+            HDMessageBox.Show("Bạn phải Làm mới dữ liệu để lấy các dữ liệu mới!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
@@ -212,25 +210,13 @@ namespace HDCGStudio
                     (bsManageTeam.List as BindingList<View.Team>).OrderBy(a => a.tObj.Position).Select(v => v.tObj).ToList().SaveObject(DanhsachdoiXmlPath);
 
                     gvTeams.RefreshData();
-                    HDMessageBox.Show("Lưu thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    UpdateNotifier();
+                    HDMessageBox.Show("Lưu thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
                 }
             }
             catch (Exception ex)
             {
                 HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        private void UpdateNotifier()
-        {
-            bsUpdateNotifier.List.Clear();
-            bsUpdateNotifier.List.Add(new Object.UpdateNotifier
-            {
-                IsUpdateDanhsachcauthu = false,
-                IsUpdateDanhsachdoibong = true,
-                IsUpdateDanhsachgiaidau = false
-            });
-            (bsUpdateNotifier.List as BindingList<Object.UpdateNotifier>).Select(v => v).ToList().SaveObject(_updateNotifier);
-        }
+        }        
     }
 }
