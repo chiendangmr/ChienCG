@@ -117,6 +117,12 @@
     <Compile Include="FormManageTeam.Designer.cs">
       <DependentUpon>FormManageTeam.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageTennisPlayersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTennisPlayersForm.Designer.cs">
+      <DependentUpon>ManageTennisPlayersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagePlayersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     <EmbeddedResource Include="FormManageTeam.resx">
       <DependentUpon>FormManageTeam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageTennisPlayersForm.resx">
+      <DependentUpon>ManageTennisPlayersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagePlayersForm.resx">
       <DependentUpon>ManagePlayersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +224,7 @@
     <None Include="Properties\DataSources\HDCGStudio.Object.Goal.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.Object.tempUpdating.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.Object.Tennis.League.datasource" />
+    <None Include="Properties\DataSources\HDCGStudio.Object.Tennis.Player.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.Object.Tennis.Team.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.Object.UpdateNotifier.datasource" />
     <None Include="Properties\DataSources\HDCGStudio.View.Goal.datasource" />

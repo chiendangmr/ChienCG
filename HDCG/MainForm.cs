@@ -288,7 +288,7 @@ namespace HDCGStudio
                 Clear();
                 if (player.Add(1, templateFile))
                 {
-                    string xmlStr = "<Track_Property>" + GetAddXmlString(isChu) + "</Track_Property>";                    
+                    string xmlStr = "<Track_Property>" + GetAddXmlString(isChu) + "</Track_Property>";
 
                     player.Update(1, xmlStr.Replace("\\n", "\n"));
                     player.Refresh();
@@ -710,7 +710,7 @@ namespace HDCGStudio
         private string Add(string str, string val)
         {
             return "<" + str + " id=\"" + str + "\"><data value=\"" + val + "\"/></" + str + ">";
-        }       
+        }
         public void LoadTemplateHost(string path)
         {
             if (!Directory.Exists(Path.GetDirectoryName(path)))
@@ -1099,14 +1099,6 @@ namespace HDCGStudio
             {
                 try
                 {
-                    if (txtPlayer1.Text.Length > 0)
-                        xmlAdd += Add("player1", txtPlayer1.Text);
-                    if (txtPlayer2.Text.Length > 0)
-                        xmlAdd += Add("player2", txtPlayer1.Text);
-                    if (txtPlayer3.Text.Length > 0)
-                        xmlAdd += Add("player3", txtPlayer1.Text);
-                    if (txtPlayer4.Text.Length > 0)
-                        xmlAdd += Add("player4", txtPlayer4.Text);
                     xmlAdd += Add("hatgiong1", nHatgiong1.Value.ToString());
                     xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
                     xmlAdd += Add("set1point1", nDiemSet1Player1.Value.ToString());
@@ -1145,7 +1137,9 @@ namespace HDCGStudio
                     cboGiaiDau.Properties.Items.Add(temp.Name);
                     dicDanhsachgiaidau.Add(temp.LeagueCode, temp.Name);
                 }
-                cboGiaiDau.SelectedIndex = -1;                
+                cboGiaiDau.SelectedIndex = -1;
+                cboDoiChuNha.SelectedIndex = -1;
+                cboDoiKhach.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -2149,7 +2143,9 @@ namespace HDCGStudio
                         cboGiaiDauTennis.Properties.Items.Add(temp.Name);
                         dicDanhsachgiaidauTennis.Add(temp.LeagueCode, temp.Name);
                     }
-                    cboGiaiDauTennis.SelectedIndex = -1;                    
+                    cboGiaiDauTennis.SelectedIndex = -1;
+                    cboTennisTeam1.SelectedIndex = -1;
+                    cboTennisTeam2.SelectedIndex = -1;
                 }
                 else
                 {
@@ -2192,6 +2188,214 @@ namespace HDCGStudio
             }
             catch { }
         }
+        private void btnQuanlydanhsachTeam1_Click(object sender, EventArgs e)
+        {
+            if (cboGiaiDauTennis.Text.Trim().Length == 0 || cboTennisTeam1.Text.Trim().Length == 0)
+            {
+                HDMessageBox.Show("Chọn giải đấu và đội trước!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                ManageTennisPlayersForm frmPlayer = new ManageTennisPlayersForm(dicDanhsachgiaidauTennis.FirstOrDefault(x => x.Value == cboGiaiDauTennis.Text).Key, dicDanhsachdoiTennis.FirstOrDefault(x => x.Value == cboTennisTeam1.Text).Key);
+                frmPlayer.Show();
+                frmPlayer.Activate();
+            }
+        }
+
+        private void btnQuanlydanhsachTeam2_Click(object sender, EventArgs e)
+        {
+            if (cboGiaiDauTennis.Text.Trim().Length == 0 || cboTennisTeam2.Text.Trim().Length == 0)
+            {
+                HDMessageBox.Show("Chọn giải đấu và đội trước!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                ManageTennisPlayersForm frmPlayer = new ManageTennisPlayersForm(dicDanhsachgiaidauTennis.FirstOrDefault(x => x.Value == cboGiaiDauTennis.Text).Key, dicDanhsachdoiTennis.FirstOrDefault(x => x.Value == cboTennisTeam2.Text).Key);
+                frmPlayer.Show();
+                frmPlayer.Activate();
+            }
+        }
+        private void cboTennisTeam1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var temp in _lstTennisTeams)
+            {
+                if (temp.Name == cboTennisTeam1.Text)
+                {
+                    txtShortNameTeam1.Text = temp.ShortName;
+                    txtHLVTennisTeam1.Text = temp.CoachName;
+                    txtDonviTennisTeam1.Text = temp.City;
+                    break;
+                }
+            }
+            var templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data/Tennis"), "Danhsachcauthu" + dicDanhsachdoiTennis.FirstOrDefault(x => x.Value == cboTennisTeam1.Text).Key + ".xml");
+            try
+            {
+                if (File.Exists(templatesXmlPath))
+                {
+                    cboTeam1Player1.Properties.Items.Clear();
+                    cboTeam1Player2.Properties.Items.Clear();
+                    var lstTemplate = Utils.GetObject<List<Object.Tennis.Player>>(templatesXmlPath);
+                    foreach (var temp in lstTemplate)
+                    {
+                        cboTeam1Player1.Properties.Items.Add(temp.Name);
+                        cboTeam1Player2.Properties.Items.Add(temp.Name);
+                    }
+                }
+                else
+                {
+                    File.Create(templatesXmlPath).Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cboTennisTeam2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var temp in _lstTennisTeams)
+            {
+                if (temp.Name == cboTennisTeam2.Text)
+                {
+                    txtShortNameTeam2.Text = temp.ShortName;
+                    txtHLVTennisTeam2.Text = temp.CoachName;
+                    txtDonviTennisTeam2.Text = temp.City;
+                    break;
+                }
+            }
+            var templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data/Tennis"), "Danhsachcauthu" + dicDanhsachdoiTennis.FirstOrDefault(x => x.Value == cboTennisTeam2.Text).Key + ".xml");
+            try
+            {
+                if (File.Exists(templatesXmlPath))
+                {
+                    cboTeam2Player1.Properties.Items.Clear();
+                    cboTeam2Player2.Properties.Items.Clear();
+                    var lstTemplate = Utils.GetObject<List<Object.Tennis.Player>>(templatesXmlPath);
+                    foreach (var temp in lstTemplate)
+                    {
+                        cboTeam2Player1.Properties.Items.Add(temp.Name);
+                        cboTeam2Player2.Properties.Items.Add(temp.Name);
+                    }
+                }
+                else
+                {
+                    File.Create(templatesXmlPath).Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnDiemPlayer1_Click(object sender, EventArgs e)
+        {
+            if (cboPointTeam2.Text == "AD")
+            {
+                cboPointTeam1.SelectedIndex = 4;
+                cboPointTeam2.SelectedIndex = 4;
+            }
+            else
+            {
+                if ((cboPointTeam1.Text == "40" && cboPointTeam2.Text != "40") || (cboPointTeam1.Text == "AD"))
+                {
+                    if (rSet1.Checked)
+                    {
+                        nDiemSet1Player1.Value++;
+                    }
+                    else if (rSet2.Checked)
+                    {
+                        nDiemSet2Player1.Value++;
+                    }
+                    else if (rSet3.Checked)
+                    {
+                        nDiemSet3Player1.Value++;
+                    }
+                    else if (rSet4.Checked)
+                    {
+                        nDiemSet4Player1.Value++;
+                    }
+                    else if (rSet5.Checked)
+                    {
+                        nDiemSet5Player1.Value++;
+                    }
+                    cboPointTeam2.SelectedIndex = 1;
+                }
+                if (cboPointTeam1.SelectedIndex < 5)
+                {
+                    if (cboPointTeam1.SelectedIndex == 4 && cboPointTeam2.SelectedIndex != 4)
+                    {
+                        cboPointTeam1.SelectedIndex = 1;
+                        cboPointTeam2.SelectedIndex = 1;
+                    }
+                    else
+                    {
+                        cboPointTeam1.SelectedIndex++;
+                        if (cboPointTeam1.SelectedIndex == 5)
+                            cboPointTeam2.SelectedIndex = 0;
+                    }
+                }
+                else
+                {
+                    cboPointTeam1.SelectedIndex = 1;
+                }
+            }
+        }
+
+        private void btnDiemPlayer2_Click(object sender, EventArgs e)
+        {
+            if (cboPointTeam1.Text == "AD")
+            {
+                cboPointTeam2.SelectedIndex = 4;
+                cboPointTeam1.SelectedIndex = 4;
+            }
+            else
+            {
+                if ((cboPointTeam2.Text == "40" && cboPointTeam1.Text != "40") || (cboPointTeam2.Text == "AD"))
+                {
+                    if (rSet1.Checked)
+                    {
+                        nDiemSet1Player2.Value++;
+                    }
+                    else if (rSet2.Checked)
+                    {
+                        nDiemSet2Player2.Value++;
+                    }
+                    else if (rSet3.Checked)
+                    {
+                        nDiemSet3Player2.Value++;
+                    }
+                    else if (rSet4.Checked)
+                    {
+                        nDiemSet4Player2.Value++;
+                    }
+                    else if (rSet5.Checked)
+                    {
+                        nDiemSet5Player2.Value++;
+                    }
+                    cboPointTeam1.SelectedIndex = 1;
+                }
+                if (cboPointTeam2.SelectedIndex < 5)
+                {
+                    if (cboPointTeam2.SelectedIndex == 4 && cboPointTeam1.SelectedIndex != 4)
+                    {
+                        cboPointTeam2.SelectedIndex = 1;
+                        cboPointTeam1.SelectedIndex = 1;
+                    }
+                    else
+                    {
+                        cboPointTeam2.SelectedIndex++;
+                        if (cboPointTeam2.SelectedIndex == 5)
+                            cboPointTeam1.SelectedIndex = 0;
+                    }
+                }
+                else
+                {
+                    cboPointTeam2.SelectedIndex = 1;
+                }
+            }
+        }
+
         #endregion
 
         private void btnLamMoiBongDa_Click(object sender, EventArgs e)

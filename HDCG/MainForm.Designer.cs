@@ -316,6 +316,12 @@
             this.labelControl47 = new DevExpress.XtraEditors.LabelControl();
             this.xTabPageTennis = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl5 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.cboTeam2Player2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cboTeam2Player1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cboTeam1Player2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cboTeam1Player1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnQuanlydanhsachTeam2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnQuanlydanhsachTeam1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefreshGiaiDau = new DevExpress.XtraEditors.SimpleButton();
             this.cboTennisType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl92 = new DevExpress.XtraEditors.LabelControl();
@@ -328,7 +334,6 @@
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl69 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPlayer1 = new DevExpress.XtraEditors.TextEdit();
             this.txtHLVTennisTeam1 = new DevExpress.XtraEditors.TextEdit();
             this.txtShortNameTeam1 = new DevExpress.XtraEditors.TextEdit();
             this.nHatgiong1 = new System.Windows.Forms.NumericUpDown();
@@ -337,7 +342,6 @@
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.txtHLVTennisTeam2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl75 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPlayer2 = new DevExpress.XtraEditors.TextEdit();
             this.cboTennisTeam2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtShortNameTeam2 = new DevExpress.XtraEditors.TextEdit();
             this.cboTennisTeam1 = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -348,9 +352,7 @@
             this.btnManageTeamTennis = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl77 = new DevExpress.XtraEditors.LabelControl();
             this.btnManageLeagueTennis = new DevExpress.XtraEditors.SimpleButton();
-            this.txtPlayer4 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPlayer3 = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.cboPointTeam2 = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -398,19 +400,19 @@
             this.numericUpDown19 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown20 = new System.Windows.Forms.NumericUpDown();
             this.labelControl80 = new DevExpress.XtraEditors.LabelControl();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.rSet5 = new System.Windows.Forms.RadioButton();
+            this.rSet2 = new System.Windows.Forms.RadioButton();
+            this.rSet3 = new System.Windows.Forms.RadioButton();
+            this.rSet4 = new System.Windows.Forms.RadioButton();
+            this.rSet1 = new System.Windows.Forms.RadioButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton31 = new DevExpress.XtraEditors.SimpleButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nDiemSet5Player2 = new System.Windows.Forms.NumericUpDown();
             this.btnLiveUpdateTennis = new DevExpress.XtraEditors.SimpleButton();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.nDiemSet4Player1 = new System.Windows.Forms.NumericUpDown();
+            this.nDiemSet4Player2 = new System.Windows.Forms.NumericUpDown();
+            this.nDiemSet5Player1 = new System.Windows.Forms.NumericUpDown();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.btnDiemPlayer2 = new DevExpress.XtraEditors.SimpleButton();
@@ -613,25 +615,25 @@
             this.xTabPageTennis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5)).BeginInit();
             this.splitContainerControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTeam2Player2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTeam2Player1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTeam1Player2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTeam1Player1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTennisType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonviTennisTeam2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonviTennisTeam1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHLVTennisTeam1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortNameTeam1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHatgiong1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHLVTennisTeam2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTennisTeam2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortNameTeam2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTennisTeam1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboGiaiDauTennis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHatgiong2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -659,10 +661,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet5Player2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet4Player1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet4Player2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet5Player1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player1)).BeginInit();
@@ -3412,7 +3414,7 @@
             this.groupControl8.Controls.Add(this.txtNhietdo);
             this.groupControl8.Location = new System.Drawing.Point(3, 288);
             this.groupControl8.Name = "groupControl8";
-            this.groupControl8.Size = new System.Drawing.Size(1289, 515);
+            this.groupControl8.Size = new System.Drawing.Size(1330, 515);
             this.groupControl8.TabIndex = 179;
             this.groupControl8.Text = "Thời tiết - Địa điểm";
             // 
@@ -3716,7 +3718,7 @@
             this.groupControl6.Controls.Add(this.txtLine2);
             this.groupControl6.Location = new System.Drawing.Point(504, 3);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(788, 279);
+            this.groupControl6.Size = new System.Drawing.Size(829, 279);
             this.groupControl6.TabIndex = 177;
             this.groupControl6.Text = "Bar tên";
             // 
@@ -3852,7 +3854,7 @@
             this.groupControl4.Controls.Add(this.labelControl53);
             this.groupControl4.Location = new System.Drawing.Point(3, 310);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(1289, 493);
+            this.groupControl4.Size = new System.Drawing.Size(1330, 493);
             this.groupControl4.TabIndex = 191;
             this.groupControl4.Text = "Tỷ số góc, gạt và bù giờ";
             // 
@@ -4031,7 +4033,7 @@
             this.groupControl2.Controls.Add(this.labelControl47);
             this.groupControl2.Location = new System.Drawing.Point(3, 3);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1289, 305);
+            this.groupControl2.Size = new System.Drawing.Size(1330, 305);
             this.groupControl2.TabIndex = 190;
             this.groupControl2.Text = "Thời gian";
             // 
@@ -4281,6 +4283,12 @@
             this.splitContainerControl5.Name = "splitContainerControl5";
             this.splitContainerControl5.Panel1.Appearance.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.splitContainerControl5.Panel1.Appearance.Options.UseBackColor = true;
+            this.splitContainerControl5.Panel1.Controls.Add(this.cboTeam2Player2);
+            this.splitContainerControl5.Panel1.Controls.Add(this.cboTeam2Player1);
+            this.splitContainerControl5.Panel1.Controls.Add(this.cboTeam1Player2);
+            this.splitContainerControl5.Panel1.Controls.Add(this.cboTeam1Player1);
+            this.splitContainerControl5.Panel1.Controls.Add(this.btnQuanlydanhsachTeam2);
+            this.splitContainerControl5.Panel1.Controls.Add(this.btnQuanlydanhsachTeam1);
             this.splitContainerControl5.Panel1.Controls.Add(this.btnRefreshGiaiDau);
             this.splitContainerControl5.Panel1.Controls.Add(this.cboTennisType);
             this.splitContainerControl5.Panel1.Controls.Add(this.labelControl92);
@@ -4293,7 +4301,6 @@
             this.splitContainerControl5.Panel1.Controls.Add(this.labelControl25);
             this.splitContainerControl5.Panel1.Controls.Add(this.textEdit5);
             this.splitContainerControl5.Panel1.Controls.Add(this.labelControl69);
-            this.splitContainerControl5.Panel1.Controls.Add(this.txtPlayer1);
             this.splitContainerControl5.Panel1.Controls.Add(this.txtHLVTennisTeam1);
             this.splitContainerControl5.Panel1.Controls.Add(this.txtShortNameTeam1);
             this.splitContainerControl5.Panel1.Controls.Add(this.nHatgiong1);
@@ -4302,7 +4309,6 @@
             this.splitContainerControl5.Panel1.Controls.Add(this.labelControl12);
             this.splitContainerControl5.Panel1.Controls.Add(this.txtHLVTennisTeam2);
             this.splitContainerControl5.Panel1.Controls.Add(this.labelControl75);
-            this.splitContainerControl5.Panel1.Controls.Add(this.txtPlayer2);
             this.splitContainerControl5.Panel1.Controls.Add(this.cboTennisTeam2);
             this.splitContainerControl5.Panel1.Controls.Add(this.txtShortNameTeam2);
             this.splitContainerControl5.Panel1.Controls.Add(this.cboTennisTeam1);
@@ -4313,9 +4319,7 @@
             this.splitContainerControl5.Panel1.Controls.Add(this.btnManageTeamTennis);
             this.splitContainerControl5.Panel1.Controls.Add(this.labelControl77);
             this.splitContainerControl5.Panel1.Controls.Add(this.btnManageLeagueTennis);
-            this.splitContainerControl5.Panel1.Controls.Add(this.txtPlayer4);
             this.splitContainerControl5.Panel1.Controls.Add(this.labelControl13);
-            this.splitContainerControl5.Panel1.Controls.Add(this.txtPlayer3);
             this.splitContainerControl5.Panel1.Text = "Panel1";
             this.splitContainerControl5.Panel2.Controls.Add(this.xtraTabControl1);
             this.splitContainerControl5.Panel2.Text = "Panel2";
@@ -4323,6 +4327,82 @@
             this.splitContainerControl5.SplitterPosition = 371;
             this.splitContainerControl5.TabIndex = 131;
             this.splitContainerControl5.Text = "splitContainerControl5";
+            // 
+            // cboTeam2Player2
+            // 
+            this.cboTeam2Player2.Location = new System.Drawing.Point(828, 319);
+            this.cboTeam2Player2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboTeam2Player2.MenuManager = this.barManager1;
+            this.cboTeam2Player2.Name = "cboTeam2Player2";
+            this.cboTeam2Player2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.cboTeam2Player2.Properties.Appearance.Options.UseFont = true;
+            this.cboTeam2Player2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboTeam2Player2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboTeam2Player2.Size = new System.Drawing.Size(202, 26);
+            this.cboTeam2Player2.TabIndex = 241;
+            // 
+            // cboTeam2Player1
+            // 
+            this.cboTeam2Player1.Location = new System.Drawing.Point(828, 283);
+            this.cboTeam2Player1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboTeam2Player1.MenuManager = this.barManager1;
+            this.cboTeam2Player1.Name = "cboTeam2Player1";
+            this.cboTeam2Player1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.cboTeam2Player1.Properties.Appearance.Options.UseFont = true;
+            this.cboTeam2Player1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboTeam2Player1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboTeam2Player1.Size = new System.Drawing.Size(202, 26);
+            this.cboTeam2Player1.TabIndex = 240;
+            // 
+            // cboTeam1Player2
+            // 
+            this.cboTeam1Player2.Location = new System.Drawing.Point(355, 317);
+            this.cboTeam1Player2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboTeam1Player2.MenuManager = this.barManager1;
+            this.cboTeam1Player2.Name = "cboTeam1Player2";
+            this.cboTeam1Player2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.cboTeam1Player2.Properties.Appearance.Options.UseFont = true;
+            this.cboTeam1Player2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboTeam1Player2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboTeam1Player2.Size = new System.Drawing.Size(205, 26);
+            this.cboTeam1Player2.TabIndex = 239;
+            // 
+            // cboTeam1Player1
+            // 
+            this.cboTeam1Player1.Location = new System.Drawing.Point(355, 281);
+            this.cboTeam1Player1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboTeam1Player1.MenuManager = this.barManager1;
+            this.cboTeam1Player1.Name = "cboTeam1Player1";
+            this.cboTeam1Player1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.cboTeam1Player1.Properties.Appearance.Options.UseFont = true;
+            this.cboTeam1Player1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboTeam1Player1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboTeam1Player1.Size = new System.Drawing.Size(205, 26);
+            this.cboTeam1Player1.TabIndex = 238;
+            // 
+            // btnQuanlydanhsachTeam2
+            // 
+            this.btnQuanlydanhsachTeam2.Location = new System.Drawing.Point(1130, 150);
+            this.btnQuanlydanhsachTeam2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnQuanlydanhsachTeam2.Name = "btnQuanlydanhsachTeam2";
+            this.btnQuanlydanhsachTeam2.Size = new System.Drawing.Size(179, 26);
+            this.btnQuanlydanhsachTeam2.TabIndex = 237;
+            this.btnQuanlydanhsachTeam2.Text = "Quản lý danh sách thi đấu";
+            this.btnQuanlydanhsachTeam2.Click += new System.EventHandler(this.btnQuanlydanhsachTeam2_Click);
+            // 
+            // btnQuanlydanhsachTeam1
+            // 
+            this.btnQuanlydanhsachTeam1.Location = new System.Drawing.Point(71, 152);
+            this.btnQuanlydanhsachTeam1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnQuanlydanhsachTeam1.Name = "btnQuanlydanhsachTeam1";
+            this.btnQuanlydanhsachTeam1.Size = new System.Drawing.Size(179, 26);
+            this.btnQuanlydanhsachTeam1.TabIndex = 236;
+            this.btnQuanlydanhsachTeam1.Text = "Quản lý danh sách thi đấu";
+            this.btnQuanlydanhsachTeam1.Click += new System.EventHandler(this.btnQuanlydanhsachTeam1_Click);
             // 
             // btnRefreshGiaiDau
             // 
@@ -4461,15 +4541,6 @@
             this.labelControl69.TabIndex = 217;
             this.labelControl69.Text = "Vòng:";
             // 
-            // txtPlayer1
-            // 
-            this.txtPlayer1.Location = new System.Drawing.Point(354, 283);
-            this.txtPlayer1.Name = "txtPlayer1";
-            this.txtPlayer1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtPlayer1.Properties.Appearance.Options.UseFont = true;
-            this.txtPlayer1.Size = new System.Drawing.Size(206, 26);
-            this.txtPlayer1.TabIndex = 93;
-            // 
             // txtHLVTennisTeam1
             // 
             this.txtHLVTennisTeam1.Location = new System.Drawing.Point(256, 251);
@@ -4553,15 +4624,6 @@
             this.labelControl75.TabIndex = 212;
             this.labelControl75.Text = "Tên viết tắt";
             // 
-            // txtPlayer2
-            // 
-            this.txtPlayer2.Location = new System.Drawing.Point(828, 283);
-            this.txtPlayer2.Name = "txtPlayer2";
-            this.txtPlayer2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtPlayer2.Properties.Appearance.Options.UseFont = true;
-            this.txtPlayer2.Size = new System.Drawing.Size(184, 26);
-            this.txtPlayer2.TabIndex = 128;
-            // 
             // cboTennisTeam2
             // 
             this.cboTennisTeam2.Location = new System.Drawing.Point(826, 149);
@@ -4575,6 +4637,7 @@
             this.cboTennisTeam2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboTennisTeam2.Size = new System.Drawing.Size(298, 30);
             this.cboTennisTeam2.TabIndex = 207;
+            this.cboTennisTeam2.SelectedIndexChanged += new System.EventHandler(this.cboTennisTeam2_SelectedIndexChanged);
             // 
             // txtShortNameTeam2
             // 
@@ -4599,6 +4662,7 @@
             this.cboTennisTeam1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboTennisTeam1.Size = new System.Drawing.Size(304, 30);
             this.cboTennisTeam1.TabIndex = 210;
+            this.cboTennisTeam1.SelectedIndexChanged += new System.EventHandler(this.cboTennisTeam1_SelectedIndexChanged);
             // 
             // labelControl76
             // 
@@ -4678,15 +4742,6 @@
             this.btnManageLeagueTennis.Text = "Quản lý giải đấu";
             this.btnManageLeagueTennis.Click += new System.EventHandler(this.btnManageLeagueTennis_Click);
             // 
-            // txtPlayer4
-            // 
-            this.txtPlayer4.Location = new System.Drawing.Point(828, 315);
-            this.txtPlayer4.Name = "txtPlayer4";
-            this.txtPlayer4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtPlayer4.Properties.Appearance.Options.UseFont = true;
-            this.txtPlayer4.Size = new System.Drawing.Size(184, 26);
-            this.txtPlayer4.TabIndex = 102;
-            // 
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
@@ -4696,15 +4751,6 @@
             this.labelControl13.Size = new System.Drawing.Size(77, 21);
             this.labelControl13.TabIndex = 104;
             this.labelControl13.Text = "Hạt giống:";
-            // 
-            // txtPlayer3
-            // 
-            this.txtPlayer3.Location = new System.Drawing.Point(354, 319);
-            this.txtPlayer3.Name = "txtPlayer3";
-            this.txtPlayer3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtPlayer3.Properties.Appearance.Options.UseFont = true;
-            this.txtPlayer3.Size = new System.Drawing.Size(206, 26);
-            this.txtPlayer3.TabIndex = 127;
             // 
             // xtraTabControl1
             // 
@@ -4735,19 +4781,19 @@
             this.xtraTabPage1.Controls.Add(this.checkBox2);
             this.xtraTabPage1.Controls.Add(this.checkBox1);
             this.xtraTabPage1.Controls.Add(this.groupControl9);
-            this.xtraTabPage1.Controls.Add(this.radioButton5);
-            this.xtraTabPage1.Controls.Add(this.radioButton1);
-            this.xtraTabPage1.Controls.Add(this.radioButton2);
-            this.xtraTabPage1.Controls.Add(this.radioButton3);
-            this.xtraTabPage1.Controls.Add(this.radioButton4);
+            this.xtraTabPage1.Controls.Add(this.rSet5);
+            this.xtraTabPage1.Controls.Add(this.rSet2);
+            this.xtraTabPage1.Controls.Add(this.rSet3);
+            this.xtraTabPage1.Controls.Add(this.rSet4);
+            this.xtraTabPage1.Controls.Add(this.rSet1);
             this.xtraTabPage1.Controls.Add(this.labelControl2);
             this.xtraTabPage1.Controls.Add(this.labelControl3);
             this.xtraTabPage1.Controls.Add(this.simpleButton31);
-            this.xtraTabPage1.Controls.Add(this.numericUpDown1);
+            this.xtraTabPage1.Controls.Add(this.nDiemSet5Player2);
             this.xtraTabPage1.Controls.Add(this.btnLiveUpdateTennis);
-            this.xtraTabPage1.Controls.Add(this.numericUpDown2);
-            this.xtraTabPage1.Controls.Add(this.numericUpDown3);
-            this.xtraTabPage1.Controls.Add(this.numericUpDown4);
+            this.xtraTabPage1.Controls.Add(this.nDiemSet4Player1);
+            this.xtraTabPage1.Controls.Add(this.nDiemSet4Player2);
+            this.xtraTabPage1.Controls.Add(this.nDiemSet5Player1);
             this.xtraTabPage1.Controls.Add(this.labelControl17);
             this.xtraTabPage1.Controls.Add(this.labelControl18);
             this.xtraTabPage1.Controls.Add(this.btnDiemPlayer2);
@@ -4767,6 +4813,7 @@
             // 
             // cboPointTeam2
             // 
+            this.cboPointTeam2.EditValue = "0";
             this.cboPointTeam2.Location = new System.Drawing.Point(783, 58);
             this.cboPointTeam2.MenuManager = this.barManager1;
             this.cboPointTeam2.Name = "cboPointTeam2";
@@ -4788,6 +4835,7 @@
             // 
             // cboPointTeam1
             // 
+            this.cboPointTeam1.EditValue = "0";
             this.cboPointTeam1.Location = new System.Drawing.Point(481, 58);
             this.cboPointTeam1.MenuManager = this.barManager1;
             this.cboPointTeam1.Name = "cboPointTeam1";
@@ -4931,6 +4979,8 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
             this.checkBox2.Location = new System.Drawing.Point(333, 13);
             this.checkBox2.Name = "checkBox2";
@@ -5347,55 +5397,52 @@
             this.labelControl80.TabIndex = 213;
             this.labelControl80.Text = "ACES";
             // 
-            // radioButton5
+            // rSet5
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(70, 432);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(17, 16);
-            this.radioButton5.TabIndex = 194;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rSet5.AutoSize = true;
+            this.rSet5.Location = new System.Drawing.Point(70, 432);
+            this.rSet5.Name = "rSet5";
+            this.rSet5.Size = new System.Drawing.Size(17, 16);
+            this.rSet5.TabIndex = 194;
+            this.rSet5.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rSet2
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(70, 157);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(17, 16);
-            this.radioButton1.TabIndex = 193;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rSet2.AutoSize = true;
+            this.rSet2.Location = new System.Drawing.Point(70, 157);
+            this.rSet2.Name = "rSet2";
+            this.rSet2.Size = new System.Drawing.Size(17, 16);
+            this.rSet2.TabIndex = 193;
+            this.rSet2.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rSet3
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(70, 235);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(17, 16);
-            this.radioButton2.TabIndex = 192;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rSet3.AutoSize = true;
+            this.rSet3.Location = new System.Drawing.Point(70, 235);
+            this.rSet3.Name = "rSet3";
+            this.rSet3.Size = new System.Drawing.Size(17, 16);
+            this.rSet3.TabIndex = 192;
+            this.rSet3.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rSet4
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(70, 331);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(17, 16);
-            this.radioButton3.TabIndex = 191;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rSet4.AutoSize = true;
+            this.rSet4.Location = new System.Drawing.Point(70, 331);
+            this.rSet4.Name = "rSet4";
+            this.rSet4.Size = new System.Drawing.Size(17, 16);
+            this.rSet4.TabIndex = 191;
+            this.rSet4.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rSet1
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(70, 72);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(17, 16);
-            this.radioButton4.TabIndex = 190;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rSet1.AutoSize = true;
+            this.rSet1.Checked = true;
+            this.rSet1.Location = new System.Drawing.Point(70, 72);
+            this.rSet1.Name = "rSet1";
+            this.rSet1.Size = new System.Drawing.Size(17, 16);
+            this.rSet1.TabIndex = 190;
+            this.rSet1.TabStop = true;
+            this.rSet1.UseVisualStyleBackColor = true;
             // 
             // labelControl2
             // 
@@ -5430,13 +5477,13 @@
             this.simpleButton31.Text = "Tắt đồ họa";
             this.simpleButton31.ToolTip = "Xuống đồ họa";
             // 
-            // numericUpDown1
+            // nDiemSet5Player2
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(1073, 398);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(102, 75);
-            this.numericUpDown1.TabIndex = 133;
+            this.nDiemSet5Player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nDiemSet5Player2.Location = new System.Drawing.Point(1073, 398);
+            this.nDiemSet5Player2.Name = "nDiemSet5Player2";
+            this.nDiemSet5Player2.Size = new System.Drawing.Size(102, 75);
+            this.nDiemSet5Player2.TabIndex = 133;
             // 
             // btnLiveUpdateTennis
             // 
@@ -5451,29 +5498,29 @@
             this.btnLiveUpdateTennis.Text = "Live Update";
             this.btnLiveUpdateTennis.ToolTip = "Lên đồ họa";
             // 
-            // numericUpDown2
+            // nDiemSet4Player1
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(225, 298);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(102, 75);
-            this.numericUpDown2.TabIndex = 136;
+            this.nDiemSet4Player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nDiemSet4Player1.Location = new System.Drawing.Point(225, 298);
+            this.nDiemSet4Player1.Name = "nDiemSet4Player1";
+            this.nDiemSet4Player1.Size = new System.Drawing.Size(102, 75);
+            this.nDiemSet4Player1.TabIndex = 136;
             // 
-            // numericUpDown3
+            // nDiemSet4Player2
             // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(1075, 298);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(102, 75);
-            this.numericUpDown3.TabIndex = 134;
+            this.nDiemSet4Player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nDiemSet4Player2.Location = new System.Drawing.Point(1075, 298);
+            this.nDiemSet4Player2.Name = "nDiemSet4Player2";
+            this.nDiemSet4Player2.Size = new System.Drawing.Size(102, 75);
+            this.nDiemSet4Player2.TabIndex = 134;
             // 
-            // numericUpDown4
+            // nDiemSet5Player1
             // 
-            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown4.Location = new System.Drawing.Point(225, 398);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(102, 75);
-            this.numericUpDown4.TabIndex = 135;
+            this.nDiemSet5Player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nDiemSet5Player1.Location = new System.Drawing.Point(225, 398);
+            this.nDiemSet5Player1.Name = "nDiemSet5Player1";
+            this.nDiemSet5Player1.Size = new System.Drawing.Size(102, 75);
+            this.nDiemSet5Player1.TabIndex = 135;
             // 
             // labelControl17
             // 
@@ -5504,6 +5551,7 @@
             this.btnDiemPlayer2.Name = "btnDiemPlayer2";
             this.btnDiemPlayer2.Size = new System.Drawing.Size(60, 41);
             this.btnDiemPlayer2.TabIndex = 110;
+            this.btnDiemPlayer2.Click += new System.EventHandler(this.btnDiemPlayer2_Click);
             // 
             // labelControl19
             // 
@@ -5542,6 +5590,7 @@
             this.btnDiemPlayer1.Name = "btnDiemPlayer1";
             this.btnDiemPlayer1.Size = new System.Drawing.Size(58, 41);
             this.btnDiemPlayer1.TabIndex = 107;
+            this.btnDiemPlayer1.Click += new System.EventHandler(this.btnDiemPlayer1_Click);
             // 
             // labelControl23
             // 
@@ -5801,7 +5850,7 @@
             this.groupControl11.Controls.Add(this.textEdit16);
             this.groupControl11.Location = new System.Drawing.Point(722, 3);
             this.groupControl11.Name = "groupControl11";
-            this.groupControl11.Size = new System.Drawing.Size(570, 622);
+            this.groupControl11.Size = new System.Drawing.Size(611, 622);
             this.groupControl11.TabIndex = 180;
             this.groupControl11.Text = "Trọng tài:";
             // 
@@ -6341,25 +6390,25 @@
             this.xTabPageTennis.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5)).EndInit();
             this.splitContainerControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cboTeam2Player2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTeam2Player1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTeam1Player2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTeam1Player1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTennisType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonviTennisTeam2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonviTennisTeam1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHLVTennisTeam1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortNameTeam1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHatgiong1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHLVTennisTeam2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTennisTeam2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortNameTeam2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTennisTeam1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboGiaiDauTennis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHatgiong2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayer3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
@@ -6389,10 +6438,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet5Player2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet4Player1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet4Player2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDiemSet5Player1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDiemSet1Player1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDiemSet3Player2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDiemSet2Player1)).EndInit();
@@ -6495,11 +6544,9 @@
         private DevExpress.XtraEditors.SimpleButton btnDiemPlayer1;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private System.Windows.Forms.NumericUpDown nHatgiong2;
-        private DevExpress.XtraEditors.TextEdit txtPlayer4;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private System.Windows.Forms.NumericUpDown nHatgiong1;
-        private DevExpress.XtraEditors.TextEdit txtPlayer1;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private System.Windows.Forms.NumericUpDown nDiemSet2Player1;
@@ -6512,8 +6559,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl19;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.LabelControl labelControl17;
-        private DevExpress.XtraEditors.TextEdit txtPlayer2;
-        private DevExpress.XtraEditors.TextEdit txtPlayer3;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
         private DevExpress.XtraTab.XtraTabPage xTabDoiHinh;
@@ -6791,10 +6836,10 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown nDiemSet5Player2;
+        private System.Windows.Forms.NumericUpDown nDiemSet4Player1;
+        private System.Windows.Forms.NumericUpDown nDiemSet4Player2;
+        private System.Windows.Forms.NumericUpDown nDiemSet5Player1;
         private DevExpress.XtraEditors.TextEdit txtDonviTennisTeam2;
         private DevExpress.XtraEditors.TextEdit txtDonviTennisTeam1;
         private DevExpress.XtraEditors.LabelControl labelControl26;
@@ -6832,11 +6877,11 @@
         private System.Windows.Forms.NumericUpDown numericUpDown19;
         private System.Windows.Forms.NumericUpDown numericUpDown20;
         private DevExpress.XtraEditors.LabelControl labelControl80;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rSet5;
+        private System.Windows.Forms.RadioButton rSet2;
+        private System.Windows.Forms.RadioButton rSet3;
+        private System.Windows.Forms.RadioButton rSet4;
+        private System.Windows.Forms.RadioButton rSet1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private DevExpress.XtraEditors.GroupControl groupControl10;
@@ -6883,5 +6928,11 @@
         private DevExpress.XtraEditors.ComboBoxEdit cboPointTeam1;
         private DevExpress.XtraEditors.SimpleButton btnRefreshGiaiDau;
         private DevExpress.XtraEditors.SimpleButton btnLamMoiBongDa;
+        private DevExpress.XtraEditors.SimpleButton btnQuanlydanhsachTeam2;
+        private DevExpress.XtraEditors.SimpleButton btnQuanlydanhsachTeam1;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTeam2Player2;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTeam2Player1;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTeam1Player2;
+        private DevExpress.XtraEditors.ComboBoxEdit cboTeam1Player1;
     }
 }
