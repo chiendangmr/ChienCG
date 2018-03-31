@@ -357,7 +357,7 @@
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.cboPointTeam2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cboPointTeam1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cboThongtinphu = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ckWithThongTinPhu = new System.Windows.Forms.CheckBox();
             this.txtSet5time = new DevExpress.XtraEditors.TextEdit();
             this.txtSet4time = new DevExpress.XtraEditors.TextEdit();
@@ -475,6 +475,9 @@
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelControl94 = new DevExpress.XtraEditors.LabelControl();
+            this.nTySo2 = new System.Windows.Forms.NumericUpDown();
+            this.nTySo1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -639,7 +642,7 @@
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboPointTeam2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPointTeam1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboThongtinphu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSet5time.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSet4time.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSet3time.Properties)).BeginInit();
@@ -702,6 +705,8 @@
             this.xTab.SuspendLayout();
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nTySo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTySo1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -4766,9 +4771,12 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.nTySo1);
+            this.xtraTabPage1.Controls.Add(this.nTySo2);
+            this.xtraTabPage1.Controls.Add(this.labelControl94);
             this.xtraTabPage1.Controls.Add(this.cboPointTeam2);
             this.xtraTabPage1.Controls.Add(this.cboPointTeam1);
-            this.xtraTabPage1.Controls.Add(this.comboBoxEdit1);
+            this.xtraTabPage1.Controls.Add(this.cboThongtinphu);
             this.xtraTabPage1.Controls.Add(this.ckWithThongTinPhu);
             this.xtraTabPage1.Controls.Add(this.txtSet5time);
             this.xtraTabPage1.Controls.Add(this.txtSet4time);
@@ -4855,17 +4863,17 @@
             this.cboPointTeam1.Size = new System.Drawing.Size(121, 40);
             this.cboPointTeam1.TabIndex = 242;
             // 
-            // comboBoxEdit1
+            // cboThongtinphu
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(557, 500);
-            this.comboBoxEdit1.MenuManager = this.barManager1;
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cboThongtinphu.Location = new System.Drawing.Point(557, 579);
+            this.cboThongtinphu.MenuManager = this.barManager1;
+            this.cboThongtinphu.Name = "cboThongtinphu";
+            this.cboThongtinphu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.cboThongtinphu.Properties.Appearance.Options.UseFont = true;
+            this.cboThongtinphu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.DropDownRows = 10;
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            this.cboThongtinphu.Properties.DropDownRows = 10;
+            this.cboThongtinphu.Properties.Items.AddRange(new object[] {
             "Breakpoint",
             "Deciding Point",
             "Deuce",
@@ -4879,15 +4887,15 @@
             "Set Point",
             "Super Tiebreak",
             "Tiebreak"});
-            this.comboBoxEdit1.Properties.Sorted = true;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(175, 24);
-            this.comboBoxEdit1.TabIndex = 241;
+            this.cboThongtinphu.Properties.Sorted = true;
+            this.cboThongtinphu.Size = new System.Drawing.Size(175, 24);
+            this.cboThongtinphu.TabIndex = 241;
             // 
             // ckWithThongTinPhu
             // 
             this.ckWithThongTinPhu.AutoSize = true;
             this.ckWithThongTinPhu.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.ckWithThongTinPhu.Location = new System.Drawing.Point(390, 499);
+            this.ckWithThongTinPhu.Location = new System.Drawing.Point(390, 578);
             this.ckWithThongTinPhu.Name = "ckWithThongTinPhu";
             this.ckWithThongTinPhu.Size = new System.Drawing.Size(156, 22);
             this.ckWithThongTinPhu.TabIndex = 240;
@@ -4954,7 +4962,7 @@
             this.btnOnTySoLonTennis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnOnTySoLonTennis.Appearance.Options.UseFont = true;
             this.btnOnTySoLonTennis.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOnTySoLonTennis.Location = new System.Drawing.Point(852, 494);
+            this.btnOnTySoLonTennis.Location = new System.Drawing.Point(852, 573);
             this.btnOnTySoLonTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOnTySoLonTennis.Name = "btnOnTySoLonTennis";
             this.btnOnTySoLonTennis.Size = new System.Drawing.Size(146, 30);
@@ -4968,13 +4976,14 @@
             this.simpleButton39.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.simpleButton39.Appearance.Options.UseFont = true;
             this.simpleButton39.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton39.Location = new System.Drawing.Point(225, 494);
+            this.simpleButton39.Location = new System.Drawing.Point(225, 573);
             this.simpleButton39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton39.Name = "simpleButton39";
             this.simpleButton39.Size = new System.Drawing.Size(146, 30);
             this.simpleButton39.TabIndex = 227;
             this.simpleButton39.Text = "Lên Tỷ số nhỏ";
             this.simpleButton39.ToolTip = "Xuống đồ họa";
+            this.simpleButton39.Click += new System.EventHandler(this.simpleButton39_Click);
             // 
             // checkBox2
             // 
@@ -5469,7 +5478,7 @@
             this.simpleButton31.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.simpleButton31.Appearance.Options.UseFont = true;
             this.simpleButton31.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton31.Location = new System.Drawing.Point(1031, 492);
+            this.simpleButton31.Location = new System.Drawing.Point(1031, 571);
             this.simpleButton31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton31.Name = "simpleButton31";
             this.simpleButton31.Size = new System.Drawing.Size(146, 30);
@@ -5497,6 +5506,7 @@
             this.btnLiveUpdateTennis.TabIndex = 223;
             this.btnLiveUpdateTennis.Text = "Live Update";
             this.btnLiveUpdateTennis.ToolTip = "Lên đồ họa";
+            this.btnLiveUpdateTennis.Click += new System.EventHandler(this.btnLiveUpdateTennis_Click);
             // 
             // nDiemSet4Player1
             // 
@@ -6223,6 +6233,32 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // labelControl94
+            // 
+            this.labelControl94.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl94.Appearance.Options.UseFont = true;
+            this.labelControl94.Location = new System.Drawing.Point(333, 500);
+            this.labelControl94.Name = "labelControl94";
+            this.labelControl94.Size = new System.Drawing.Size(148, 29);
+            this.labelControl94.TabIndex = 236;
+            this.labelControl94.Text = "Chung cuộc:";
+            // 
+            // nTySo2
+            // 
+            this.nTySo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nTySo2.Location = new System.Drawing.Point(827, 479);
+            this.nTySo2.Name = "nTySo2";
+            this.nTySo2.Size = new System.Drawing.Size(102, 75);
+            this.nTySo2.TabIndex = 244;
+            // 
+            // nTySo1
+            // 
+            this.nTySo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nTySo1.Location = new System.Drawing.Point(500, 479);
+            this.nTySo1.Name = "nTySo1";
+            this.nTySo1.Size = new System.Drawing.Size(102, 75);
+            this.nTySo1.TabIndex = 245;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -6415,7 +6451,7 @@
             this.xtraTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboPointTeam2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPointTeam1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboThongtinphu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSet5time.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSet4time.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSet3time.Properties)).EndInit();
@@ -6482,6 +6518,8 @@
             this.xTab.ResumeLayout(false);
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nTySo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTySo1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6922,7 +6960,7 @@
         private DevExpress.XtraEditors.TextEdit txtSet3time;
         private DevExpress.XtraEditors.TextEdit txtSet2time;
         private DevExpress.XtraEditors.TextEdit txtSet1time;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cboThongtinphu;
         private System.Windows.Forms.CheckBox ckWithThongTinPhu;
         private DevExpress.XtraEditors.ComboBoxEdit cboPointTeam2;
         private DevExpress.XtraEditors.ComboBoxEdit cboPointTeam1;
@@ -6934,5 +6972,8 @@
         private DevExpress.XtraEditors.ComboBoxEdit cboTeam2Player1;
         private DevExpress.XtraEditors.ComboBoxEdit cboTeam1Player2;
         private DevExpress.XtraEditors.ComboBoxEdit cboTeam1Player1;
+        private System.Windows.Forms.NumericUpDown nTySo1;
+        private System.Windows.Forms.NumericUpDown nTySo2;
+        private DevExpress.XtraEditors.LabelControl labelControl94;
     }
 }

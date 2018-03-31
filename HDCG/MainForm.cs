@@ -550,10 +550,7 @@ namespace HDCGStudio
 
         private void gvTempInfo_RowClick(object sender, RowClickEventArgs e)
         {
-            if (cboGiaiDau.Text.Length > 0 && cboDoiChuNha.Text.Length > 0 && cboDoiKhach.Text.Length > 0)
-                ViewTemplate(_tempName);
-            else
-                HDMessageBox.Show("Bạn chưa chọn thông tin Giải đấu, Đội chủ/khách!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            ViewTemplate(_tempName);
         }
         private void gvTempInfo_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
@@ -803,6 +800,22 @@ namespace HDCGStudio
         {
             string logoPath = "";
             foreach (var temp in _lstTeams)
+            {
+                if (temp.Name == teamName)
+                {
+                    if (logoNho)
+                        logoPath = temp.LogoPath;
+                    else
+                        logoPath = temp.LogoPath.Replace(".png", "_to.png");
+                    break;
+                }
+            }
+            return logoPath;
+        }
+        public string GetTennisTeamLogo(string teamName, bool logoNho = true)
+        {
+            string logoPath = "";
+            foreach (var temp in _lstTennisTeams)
             {
                 if (temp.Name == teamName)
                 {
@@ -1099,16 +1112,66 @@ namespace HDCGStudio
             {
                 try
                 {
+
                     xmlAdd += Add("hatgiong1", nHatgiong1.Value.ToString());
                     xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
+
                     xmlAdd += Add("set1point1", nDiemSet1Player1.Value.ToString());
                     xmlAdd += Add("set1point2", nDiemSet1Player2.Value.ToString());
                     xmlAdd += Add("set2point1", nDiemSet2Player1.Value.ToString());
                     xmlAdd += Add("set2point2", nDiemSet2Player2.Value.ToString());
                     xmlAdd += Add("set3point1", nDiemSet3Player1.Value.ToString());
                     xmlAdd += Add("set3point2", nDiemSet3Player2.Value.ToString());
-                    xmlAdd += Add("player1livePoint", cboPointTeam1.Text);
-                    xmlAdd += Add("player2livePoint", cboPointTeam2.Text);
+                    xmlAdd += Add("set4point1", nDiemSet4Player1.Value.ToString());
+                    xmlAdd += Add("set4point2", nDiemSet4Player2.Value.ToString());
+                    xmlAdd += Add("set5point1", nDiemSet5Player1.Value.ToString());
+                    xmlAdd += Add("set5point2", nDiemSet5Player2.Value.ToString());
+
+                    xmlAdd += Add("thongtinphu", cboThongtinphu.Text);
+
+                    xmlAdd += Add("livepoint1", cboPointTeam1.Text);
+                    xmlAdd += Add("livepoint2", cboPointTeam2.Text);
+                    xmlAdd += Add("team1", cboTeam1Player1.Text);
+                    xmlAdd += Add("team2", cboTeam2Player1.Text);
+                    xmlAdd += Add("team1short", txtShortNameTeam1.Text);
+                    xmlAdd += Add("team2short", txtShortNameTeam2.Text);
+                    xmlAdd += Add("set1time", txtSet1time.Text);
+                    xmlAdd += Add("set2time", txtSet2time.Text);
+                    xmlAdd += Add("set3time", txtSet3time.Text);
+                    xmlAdd += Add("set4time", txtSet4time.Text);
+                    xmlAdd += Add("set5time", txtSet5time.Text);
+                    xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons/Tennis"), GetTennisTeamLogo(cboTennisTeam1.Text)));
+                    xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons/Tennis"), GetTennisTeamLogo(cboTennisTeam2.Text)));
+
+                    xmlAdd += Add("tyso1", nTySo1.Text);
+                    xmlAdd += Add("tyso2", nTySo2.Text);
+
+                    if (rSet1.Checked)
+                    {
+                        xmlAdd += Add("setpoint1", nDiemSet1Player1.Text);
+                        xmlAdd += Add("setpoint2", nDiemSet1Player2.Text);
+                    }
+                    else if (rSet2.Checked)
+                    {
+                        xmlAdd += Add("setpoint1", nDiemSet2Player1.Text);
+                        xmlAdd += Add("setpoint2", nDiemSet2Player2.Text);
+                    }
+                    else if (rSet3.Checked)
+                    {
+                        xmlAdd += Add("setpoint1", nDiemSet3Player1.Text);
+                        xmlAdd += Add("setpoint2", nDiemSet3Player2.Text);
+                    }
+                    else if (rSet4.Checked)
+                    {
+                        xmlAdd += Add("setpoint1", nDiemSet4Player1.Text);
+                        xmlAdd += Add("setpoint2", nDiemSet4Player2.Text);
+                    }
+                    else if (rSet5.Checked)
+                    {
+                        xmlAdd += Add("setpoint1", nDiemSet5Player1.Text);
+                        xmlAdd += Add("setpoint2", nDiemSet5Player2.Text);
+                    }
+
                 }
                 catch //(Exception ex)
                 {
@@ -2396,11 +2459,39 @@ namespace HDCGStudio
             }
         }
 
+        private void simpleButton39_Click(object sender, EventArgs e)
+        {
+            if (ckWithThongTinPhu.Checked)
+            {
+                BatTemplate("DavisCup_TySoNho_ThongTinPhu.ft");
+            }
+            else
+            {
+                BatTemplate("DavisCup_TySoNho.ft");
+            }
+        }
+        private void btnLiveUpdateTennis_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                player.Update(1, xmlStr.Replace("\\n", "\n"));
+                player.Refresh();
+                cgServer.UpdateTemplate(120, xmlStr, 0);
+
+                cgServer.UpdateTemplate(105, xmlStr, 0);
+
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         private void btnLamMoiBongDa_Click(object sender, EventArgs e)
         {
             LamMoiBongDa();
-        }
+        }        
     }
 }

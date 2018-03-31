@@ -201,8 +201,8 @@
 		private function onOpenImageCompleted(e:Event)
 		{
 			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;	
-			bmp.width=40;
-			bmp.height=40;
+			bmp.width=50;
+			bmp.height=50;
 			this.icon1.addChild(bmp);
 		}
 		private function onOpenImageError2(e:IOErrorEvent)
@@ -214,8 +214,8 @@
 		private function onOpenImageCompleted2(e:Event)
 		{
 			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;	
-			bmp.width=40;
-			bmp.height=40;
+			bmp.width=50;
+			bmp.height=50;
 			this.icon2.addChild(bmp);
 		}
 	}
