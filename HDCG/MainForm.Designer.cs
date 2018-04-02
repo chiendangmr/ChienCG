@@ -355,6 +355,13 @@
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.simpleButton40 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton32 = new DevExpress.XtraEditors.SimpleButton();
+            this.ckGiaobong2 = new System.Windows.Forms.CheckBox();
+            this.ckGiaobong1 = new System.Windows.Forms.CheckBox();
+            this.nTySo1 = new System.Windows.Forms.NumericUpDown();
+            this.nTySo2 = new System.Windows.Forms.NumericUpDown();
+            this.labelControl94 = new DevExpress.XtraEditors.LabelControl();
             this.cboPointTeam2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cboPointTeam1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cboThongtinphu = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -475,9 +482,7 @@
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.labelControl94 = new DevExpress.XtraEditors.LabelControl();
-            this.nTySo2 = new System.Windows.Forms.NumericUpDown();
-            this.nTySo1 = new System.Windows.Forms.NumericUpDown();
+            this.simpleButton41 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -640,6 +645,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nTySo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTySo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPointTeam2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPointTeam1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboThongtinphu.Properties)).BeginInit();
@@ -705,8 +712,6 @@
             this.xTab.SuspendLayout();
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nTySo2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nTySo1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -839,7 +844,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 1110);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 1176);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlBottom.Size = new System.Drawing.Size(1902, 34);
@@ -851,7 +856,7 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 1085);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 1151);
             // 
             // barDockControlRight
             // 
@@ -860,7 +865,7 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1902, 25);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 1085);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 1151);
             // 
             // barButtonItem1
             // 
@@ -930,7 +935,7 @@
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(1895, 1051);
+            this.groupControl1.Size = new System.Drawing.Size(1895, 1117);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Videos, Images";
             // 
@@ -955,7 +960,7 @@
             this.panelControl11.Location = new System.Drawing.Point(518, 6);
             this.panelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl11.Name = "panelControl11";
-            this.panelControl11.Size = new System.Drawing.Size(1363, 1038);
+            this.panelControl11.Size = new System.Drawing.Size(1363, 1104);
             this.panelControl11.TabIndex = 46;
             // 
             // grdVideo
@@ -970,7 +975,7 @@
             this.grdVideo.Name = "grdVideo";
             this.grdVideo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.grdVideo.Size = new System.Drawing.Size(1359, 1034);
+            this.grdVideo.Size = new System.Drawing.Size(1359, 1100);
             this.grdVideo.TabIndex = 18;
             this.grdVideo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVideo});
@@ -1202,7 +1207,7 @@
             this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.ShowCaption = false;
-            this.groupControl3.Size = new System.Drawing.Size(1895, 1051);
+            this.groupControl3.Size = new System.Drawing.Size(1895, 1117);
             this.groupControl3.TabIndex = 15;
             this.groupControl3.Text = "Templates";
             // 
@@ -1215,7 +1220,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1891, 1047);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1891, 1113);
             this.splitContainerControl1.SplitterPosition = 1377;
             this.splitContainerControl1.TabIndex = 92;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -1227,17 +1232,18 @@
             this.xTabMain.Location = new System.Drawing.Point(0, 0);
             this.xTabMain.Name = "xTabMain";
             this.xTabMain.SelectedTabPage = this.xTabPageBongda;
-            this.xTabMain.Size = new System.Drawing.Size(1377, 1047);
+            this.xTabMain.Size = new System.Drawing.Size(1377, 1113);
             this.xTabMain.TabIndex = 93;
             this.xTabMain.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabPageBongda,
             this.xTabPageTennis});
+            this.xTabMain.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xTabMain_SelectedPageChanged);
             // 
             // xTabPageBongda
             // 
             this.xTabPageBongda.Controls.Add(this.splitContainerControl4);
             this.xTabPageBongda.Name = "xTabPageBongda";
-            this.xTabPageBongda.Size = new System.Drawing.Size(1343, 1040);
+            this.xTabPageBongda.Size = new System.Drawing.Size(1343, 1106);
             this.xTabPageBongda.Text = "Bóng đá";
             // 
             // splitContainerControl4
@@ -1278,7 +1284,7 @@
             this.splitContainerControl4.Panel2.Appearance.Options.UseBackColor = true;
             this.splitContainerControl4.Panel2.Controls.Add(this.xtraTabControl2);
             this.splitContainerControl4.Panel2.Text = "Panel2";
-            this.splitContainerControl4.Size = new System.Drawing.Size(1343, 1040);
+            this.splitContainerControl4.Size = new System.Drawing.Size(1343, 1106);
             this.splitContainerControl4.SplitterPosition = 193;
             this.splitContainerControl4.TabIndex = 115;
             this.splitContainerControl4.Text = "splitContainerControl4";
@@ -1574,7 +1580,7 @@
             this.xtraTabControl2.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xTabDoiHinh;
-            this.xtraTabControl2.Size = new System.Drawing.Size(1343, 841);
+            this.xtraTabControl2.Size = new System.Drawing.Size(1343, 907);
             this.xtraTabControl2.TabIndex = 113;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabDoiHinh,
@@ -1586,7 +1592,7 @@
             // 
             this.xTabDoiHinh.Controls.Add(this.splitContainerControl3);
             this.xTabDoiHinh.Name = "xTabDoiHinh";
-            this.xTabDoiHinh.Size = new System.Drawing.Size(1336, 806);
+            this.xTabDoiHinh.Size = new System.Drawing.Size(1336, 872);
             this.xTabDoiHinh.Text = "Đội hình/Cầu thủ/Thẻ";
             // 
             // splitContainerControl3
@@ -1617,7 +1623,7 @@
             this.splitContainerControl3.Panel2.Controls.Add(this.btnQuanlyDangkyAway);
             this.splitContainerControl3.Panel2.Controls.Add(this.gridSplitContainer2);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(1336, 806);
+            this.splitContainerControl3.Size = new System.Drawing.Size(1336, 872);
             this.splitContainerControl3.SplitterPosition = 689;
             this.splitContainerControl3.TabIndex = 114;
             this.splitContainerControl3.Text = "splitContainerControl3";
@@ -2396,7 +2402,7 @@
             this.xTabTyso.Controls.Add(this.labelControl8);
             this.xTabTyso.Controls.Add(this.nTysoChu);
             this.xTabTyso.Name = "xTabTyso";
-            this.xTabTyso.Size = new System.Drawing.Size(1336, 806);
+            this.xTabTyso.Size = new System.Drawing.Size(1336, 872);
             this.xTabTyso.Text = "Thông số/Tỷ số/Ghi bàn";
             // 
             // gridSplitContainer6
@@ -3394,7 +3400,7 @@
             this.xTabTrongtai.Controls.Add(this.groupControl7);
             this.xTabTrongtai.Controls.Add(this.groupControl6);
             this.xTabTrongtai.Name = "xTabTrongtai";
-            this.xTabTrongtai.Size = new System.Drawing.Size(1336, 806);
+            this.xTabTrongtai.Size = new System.Drawing.Size(1336, 872);
             this.xTabTrongtai.Text = "Trọng tài/Bar tên/Địa điểm/Thời tiết";
             // 
             // groupControl8
@@ -3837,7 +3843,7 @@
             this.xTabThoigian.Controls.Add(this.groupControl4);
             this.xTabThoigian.Controls.Add(this.groupControl2);
             this.xTabThoigian.Name = "xTabThoigian";
-            this.xTabThoigian.Size = new System.Drawing.Size(1336, 806);
+            this.xTabThoigian.Size = new System.Drawing.Size(1336, 872);
             this.xTabThoigian.Text = "Thời gian/Tỷ số góc/Bù giờ";
             // 
             // groupControl4
@@ -4277,7 +4283,7 @@
             // 
             this.xTabPageTennis.Controls.Add(this.splitContainerControl5);
             this.xTabPageTennis.Name = "xTabPageTennis";
-            this.xTabPageTennis.Size = new System.Drawing.Size(1343, 1040);
+            this.xTabPageTennis.Size = new System.Drawing.Size(1343, 1106);
             this.xTabPageTennis.Text = "Tennis";
             // 
             // splitContainerControl5
@@ -4328,7 +4334,7 @@
             this.splitContainerControl5.Panel1.Text = "Panel1";
             this.splitContainerControl5.Panel2.Controls.Add(this.xtraTabControl1);
             this.splitContainerControl5.Panel2.Text = "Panel2";
-            this.splitContainerControl5.Size = new System.Drawing.Size(1343, 1040);
+            this.splitContainerControl5.Size = new System.Drawing.Size(1343, 1106);
             this.splitContainerControl5.SplitterPosition = 371;
             this.splitContainerControl5.TabIndex = 131;
             this.splitContainerControl5.Text = "splitContainerControl5";
@@ -4763,7 +4769,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1343, 663);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1343, 729);
             this.xtraTabControl1.TabIndex = 131;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -4771,6 +4777,11 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.simpleButton41);
+            this.xtraTabPage1.Controls.Add(this.simpleButton40);
+            this.xtraTabPage1.Controls.Add(this.simpleButton32);
+            this.xtraTabPage1.Controls.Add(this.ckGiaobong2);
+            this.xtraTabPage1.Controls.Add(this.ckGiaobong1);
             this.xtraTabPage1.Controls.Add(this.nTySo1);
             this.xtraTabPage1.Controls.Add(this.nTySo2);
             this.xtraTabPage1.Controls.Add(this.labelControl94);
@@ -4816,8 +4827,87 @@
             this.xtraTabPage1.Controls.Add(this.nDiemSet3Player1);
             this.xtraTabPage1.Controls.Add(this.nDiemSet1Player2);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1336, 628);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1336, 694);
             this.xtraTabPage1.Text = "Tỷ số/Thông số";
+            // 
+            // simpleButton40
+            // 
+            this.simpleButton40.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton40.Appearance.Options.UseFont = true;
+            this.simpleButton40.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton40.Location = new System.Drawing.Point(557, 660);
+            this.simpleButton40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton40.Name = "simpleButton40";
+            this.simpleButton40.Size = new System.Drawing.Size(175, 30);
+            this.simpleButton40.TabIndex = 249;
+            this.simpleButton40.Text = "Xuống thông tin phụ";
+            this.simpleButton40.Click += new System.EventHandler(this.simpleButton40_Click);
+            // 
+            // simpleButton32
+            // 
+            this.simpleButton32.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton32.Appearance.Options.UseFont = true;
+            this.simpleButton32.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton32.Location = new System.Drawing.Point(390, 660);
+            this.simpleButton32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton32.Name = "simpleButton32";
+            this.simpleButton32.Size = new System.Drawing.Size(146, 30);
+            this.simpleButton32.TabIndex = 248;
+            this.simpleButton32.Text = "Lên Thông tin phụ";
+            this.simpleButton32.Click += new System.EventHandler(this.simpleButton32_Click);
+            // 
+            // ckGiaobong2
+            // 
+            this.ckGiaobong2.AutoSize = true;
+            this.ckGiaobong2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ckGiaobong2.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.ckGiaobong2.Location = new System.Drawing.Point(798, 109);
+            this.ckGiaobong2.Name = "ckGiaobong2";
+            this.ckGiaobong2.Size = new System.Drawing.Size(106, 25);
+            this.ckGiaobong2.TabIndex = 247;
+            this.ckGiaobong2.Text = "Giao bóng";
+            this.ckGiaobong2.UseVisualStyleBackColor = true;
+            this.ckGiaobong2.CheckedChanged += new System.EventHandler(this.ckGiaobong2_CheckedChanged);
+            // 
+            // ckGiaobong1
+            // 
+            this.ckGiaobong1.AutoSize = true;
+            this.ckGiaobong1.Checked = true;
+            this.ckGiaobong1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckGiaobong1.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.ckGiaobong1.Location = new System.Drawing.Point(481, 109);
+            this.ckGiaobong1.Name = "ckGiaobong1";
+            this.ckGiaobong1.Size = new System.Drawing.Size(106, 25);
+            this.ckGiaobong1.TabIndex = 246;
+            this.ckGiaobong1.Text = "Giao bóng";
+            this.ckGiaobong1.UseVisualStyleBackColor = true;
+            this.ckGiaobong1.CheckedChanged += new System.EventHandler(this.ckGiaobong1_CheckedChanged);
+            // 
+            // nTySo1
+            // 
+            this.nTySo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nTySo1.Location = new System.Drawing.Point(500, 522);
+            this.nTySo1.Name = "nTySo1";
+            this.nTySo1.Size = new System.Drawing.Size(102, 75);
+            this.nTySo1.TabIndex = 245;
+            // 
+            // nTySo2
+            // 
+            this.nTySo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nTySo2.Location = new System.Drawing.Point(827, 522);
+            this.nTySo2.Name = "nTySo2";
+            this.nTySo2.Size = new System.Drawing.Size(102, 75);
+            this.nTySo2.TabIndex = 244;
+            // 
+            // labelControl94
+            // 
+            this.labelControl94.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl94.Appearance.Options.UseFont = true;
+            this.labelControl94.Location = new System.Drawing.Point(333, 543);
+            this.labelControl94.Name = "labelControl94";
+            this.labelControl94.Size = new System.Drawing.Size(148, 29);
+            this.labelControl94.TabIndex = 236;
+            this.labelControl94.Text = "Chung cuộc:";
             // 
             // cboPointTeam2
             // 
@@ -4865,7 +4955,7 @@
             // 
             // cboThongtinphu
             // 
-            this.cboThongtinphu.Location = new System.Drawing.Point(557, 579);
+            this.cboThongtinphu.Location = new System.Drawing.Point(557, 622);
             this.cboThongtinphu.MenuManager = this.barManager1;
             this.cboThongtinphu.Name = "cboThongtinphu";
             this.cboThongtinphu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -4895,7 +4985,7 @@
             // 
             this.ckWithThongTinPhu.AutoSize = true;
             this.ckWithThongTinPhu.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.ckWithThongTinPhu.Location = new System.Drawing.Point(390, 578);
+            this.ckWithThongTinPhu.Location = new System.Drawing.Point(390, 621);
             this.ckWithThongTinPhu.Name = "ckWithThongTinPhu";
             this.ckWithThongTinPhu.Size = new System.Drawing.Size(156, 22);
             this.ckWithThongTinPhu.TabIndex = 240;
@@ -4904,7 +4994,7 @@
             // 
             // txtSet5time
             // 
-            this.txtSet5time.Location = new System.Drawing.Point(1216, 422);
+            this.txtSet5time.Location = new System.Drawing.Point(1216, 459);
             this.txtSet5time.Name = "txtSet5time";
             this.txtSet5time.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtSet5time.Properties.Appearance.Options.UseFont = true;
@@ -4913,7 +5003,7 @@
             // 
             // txtSet4time
             // 
-            this.txtSet4time.Location = new System.Drawing.Point(1216, 321);
+            this.txtSet4time.Location = new System.Drawing.Point(1216, 358);
             this.txtSet4time.Name = "txtSet4time";
             this.txtSet4time.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtSet4time.Properties.Appearance.Options.UseFont = true;
@@ -4922,7 +5012,7 @@
             // 
             // txtSet3time
             // 
-            this.txtSet3time.Location = new System.Drawing.Point(1216, 236);
+            this.txtSet3time.Location = new System.Drawing.Point(1216, 273);
             this.txtSet3time.Name = "txtSet3time";
             this.txtSet3time.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtSet3time.Properties.Appearance.Options.UseFont = true;
@@ -4931,7 +5021,7 @@
             // 
             // txtSet2time
             // 
-            this.txtSet2time.Location = new System.Drawing.Point(1216, 151);
+            this.txtSet2time.Location = new System.Drawing.Point(1216, 188);
             this.txtSet2time.Name = "txtSet2time";
             this.txtSet2time.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtSet2time.Properties.Appearance.Options.UseFont = true;
@@ -4940,7 +5030,7 @@
             // 
             // txtSet1time
             // 
-            this.txtSet1time.Location = new System.Drawing.Point(1216, 69);
+            this.txtSet1time.Location = new System.Drawing.Point(1216, 106);
             this.txtSet1time.Name = "txtSet1time";
             this.txtSet1time.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtSet1time.Properties.Appearance.Options.UseFont = true;
@@ -4951,7 +5041,7 @@
             // 
             this.labelControl93.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
             this.labelControl93.Appearance.Options.UseFont = true;
-            this.labelControl93.Location = new System.Drawing.Point(1216, 14);
+            this.labelControl93.Location = new System.Drawing.Point(1216, 51);
             this.labelControl93.Name = "labelControl93";
             this.labelControl93.Size = new System.Drawing.Size(79, 21);
             this.labelControl93.TabIndex = 229;
@@ -4962,13 +5052,12 @@
             this.btnOnTySoLonTennis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnOnTySoLonTennis.Appearance.Options.UseFont = true;
             this.btnOnTySoLonTennis.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOnTySoLonTennis.Location = new System.Drawing.Point(852, 573);
+            this.btnOnTySoLonTennis.Location = new System.Drawing.Point(852, 616);
             this.btnOnTySoLonTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOnTySoLonTennis.Name = "btnOnTySoLonTennis";
             this.btnOnTySoLonTennis.Size = new System.Drawing.Size(146, 30);
             this.btnOnTySoLonTennis.TabIndex = 228;
             this.btnOnTySoLonTennis.Text = "Lên Tỷ số lớn";
-            this.btnOnTySoLonTennis.ToolTip = "Xuống đồ họa";
             this.btnOnTySoLonTennis.Click += new System.EventHandler(this.btnOnTySoLonTennis_Click);
             // 
             // simpleButton39
@@ -4976,13 +5065,12 @@
             this.simpleButton39.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.simpleButton39.Appearance.Options.UseFont = true;
             this.simpleButton39.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton39.Location = new System.Drawing.Point(225, 573);
+            this.simpleButton39.Location = new System.Drawing.Point(225, 616);
             this.simpleButton39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton39.Name = "simpleButton39";
             this.simpleButton39.Size = new System.Drawing.Size(146, 30);
             this.simpleButton39.TabIndex = 227;
             this.simpleButton39.Text = "Lên Tỷ số nhỏ";
-            this.simpleButton39.ToolTip = "Xuống đồ họa";
             this.simpleButton39.Click += new System.EventHandler(this.simpleButton39_Click);
             // 
             // checkBox2
@@ -5045,7 +5133,7 @@
             this.groupControl9.Controls.Add(this.numericUpDown19);
             this.groupControl9.Controls.Add(this.numericUpDown20);
             this.groupControl9.Controls.Add(this.labelControl80);
-            this.groupControl9.Location = new System.Drawing.Point(333, 126);
+            this.groupControl9.Location = new System.Drawing.Point(334, 157);
             this.groupControl9.Name = "groupControl9";
             this.groupControl9.Size = new System.Drawing.Size(733, 347);
             this.groupControl9.TabIndex = 195;
@@ -5182,7 +5270,6 @@
             this.simpleButton34.Size = new System.Drawing.Size(176, 30);
             this.simpleButton34.TabIndex = 221;
             this.simpleButton34.Text = "Bật thông số nhỏ";
-            this.simpleButton34.ToolTip = "Lên đồ họa";
             // 
             // numericUpDown10
             // 
@@ -5219,7 +5306,6 @@
             this.simpleButton33.Size = new System.Drawing.Size(156, 30);
             this.simpleButton33.TabIndex = 222;
             this.simpleButton33.Text = "Bật thống kê lớn";
-            this.simpleButton33.ToolTip = "Xuống đồ họa";
             // 
             // numericUpDown11
             // 
@@ -5409,7 +5495,7 @@
             // rSet5
             // 
             this.rSet5.AutoSize = true;
-            this.rSet5.Location = new System.Drawing.Point(70, 432);
+            this.rSet5.Location = new System.Drawing.Point(70, 469);
             this.rSet5.Name = "rSet5";
             this.rSet5.Size = new System.Drawing.Size(17, 16);
             this.rSet5.TabIndex = 194;
@@ -5418,7 +5504,7 @@
             // rSet2
             // 
             this.rSet2.AutoSize = true;
-            this.rSet2.Location = new System.Drawing.Point(70, 157);
+            this.rSet2.Location = new System.Drawing.Point(70, 194);
             this.rSet2.Name = "rSet2";
             this.rSet2.Size = new System.Drawing.Size(17, 16);
             this.rSet2.TabIndex = 193;
@@ -5427,7 +5513,7 @@
             // rSet3
             // 
             this.rSet3.AutoSize = true;
-            this.rSet3.Location = new System.Drawing.Point(70, 235);
+            this.rSet3.Location = new System.Drawing.Point(70, 272);
             this.rSet3.Name = "rSet3";
             this.rSet3.Size = new System.Drawing.Size(17, 16);
             this.rSet3.TabIndex = 192;
@@ -5436,7 +5522,7 @@
             // rSet4
             // 
             this.rSet4.AutoSize = true;
-            this.rSet4.Location = new System.Drawing.Point(70, 331);
+            this.rSet4.Location = new System.Drawing.Point(70, 368);
             this.rSet4.Name = "rSet4";
             this.rSet4.Size = new System.Drawing.Size(17, 16);
             this.rSet4.TabIndex = 191;
@@ -5446,7 +5532,7 @@
             // 
             this.rSet1.AutoSize = true;
             this.rSet1.Checked = true;
-            this.rSet1.Location = new System.Drawing.Point(70, 72);
+            this.rSet1.Location = new System.Drawing.Point(70, 109);
             this.rSet1.Name = "rSet1";
             this.rSet1.Size = new System.Drawing.Size(17, 16);
             this.rSet1.TabIndex = 190;
@@ -5457,7 +5543,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(122, 404);
+            this.labelControl2.Location = new System.Drawing.Point(122, 441);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(34, 69);
             this.labelControl2.TabIndex = 131;
@@ -5467,7 +5553,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(122, 304);
+            this.labelControl3.Location = new System.Drawing.Point(122, 341);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(34, 69);
             this.labelControl3.TabIndex = 132;
@@ -5478,18 +5564,19 @@
             this.simpleButton31.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.simpleButton31.Appearance.Options.UseFont = true;
             this.simpleButton31.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton31.Location = new System.Drawing.Point(1031, 571);
+            this.simpleButton31.Location = new System.Drawing.Point(1031, 614);
             this.simpleButton31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton31.Name = "simpleButton31";
             this.simpleButton31.Size = new System.Drawing.Size(146, 30);
             this.simpleButton31.TabIndex = 224;
-            this.simpleButton31.Text = "Tắt đồ họa";
-            this.simpleButton31.ToolTip = "Xuống đồ họa";
+            this.simpleButton31.Text = "Tắt Tỷ số lớn";
+            this.simpleButton31.ToolTip = "Xuống tất cả đồ họa";
+            this.simpleButton31.Click += new System.EventHandler(this.simpleButton31_Click);
             // 
             // nDiemSet5Player2
             // 
             this.nDiemSet5Player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nDiemSet5Player2.Location = new System.Drawing.Point(1073, 398);
+            this.nDiemSet5Player2.Location = new System.Drawing.Point(1073, 435);
             this.nDiemSet5Player2.Name = "nDiemSet5Player2";
             this.nDiemSet5Player2.Size = new System.Drawing.Size(102, 75);
             this.nDiemSet5Player2.TabIndex = 133;
@@ -5505,13 +5592,12 @@
             this.btnLiveUpdateTennis.Size = new System.Drawing.Size(112, 41);
             this.btnLiveUpdateTennis.TabIndex = 223;
             this.btnLiveUpdateTennis.Text = "Live Update";
-            this.btnLiveUpdateTennis.ToolTip = "Lên đồ họa";
             this.btnLiveUpdateTennis.Click += new System.EventHandler(this.btnLiveUpdateTennis_Click);
             // 
             // nDiemSet4Player1
             // 
             this.nDiemSet4Player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nDiemSet4Player1.Location = new System.Drawing.Point(225, 298);
+            this.nDiemSet4Player1.Location = new System.Drawing.Point(225, 335);
             this.nDiemSet4Player1.Name = "nDiemSet4Player1";
             this.nDiemSet4Player1.Size = new System.Drawing.Size(102, 75);
             this.nDiemSet4Player1.TabIndex = 136;
@@ -5519,7 +5605,7 @@
             // nDiemSet4Player2
             // 
             this.nDiemSet4Player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nDiemSet4Player2.Location = new System.Drawing.Point(1075, 298);
+            this.nDiemSet4Player2.Location = new System.Drawing.Point(1075, 335);
             this.nDiemSet4Player2.Name = "nDiemSet4Player2";
             this.nDiemSet4Player2.Size = new System.Drawing.Size(102, 75);
             this.nDiemSet4Player2.TabIndex = 134;
@@ -5527,7 +5613,7 @@
             // nDiemSet5Player1
             // 
             this.nDiemSet5Player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nDiemSet5Player1.Location = new System.Drawing.Point(225, 398);
+            this.nDiemSet5Player1.Location = new System.Drawing.Point(225, 435);
             this.nDiemSet5Player1.Name = "nDiemSet5Player1";
             this.nDiemSet5Player1.Size = new System.Drawing.Size(102, 75);
             this.nDiemSet5Player1.TabIndex = 135;
@@ -5536,7 +5622,7 @@
             // 
             this.labelControl17.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
             this.labelControl17.Appearance.Options.UseFont = true;
-            this.labelControl17.Location = new System.Drawing.Point(128, 15);
+            this.labelControl17.Location = new System.Drawing.Point(125, 45);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(31, 19);
             this.labelControl17.TabIndex = 111;
@@ -5546,7 +5632,7 @@
             // 
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl18.Appearance.Options.UseFont = true;
-            this.labelControl18.Location = new System.Drawing.Point(122, 209);
+            this.labelControl18.Location = new System.Drawing.Point(122, 246);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(34, 69);
             this.labelControl18.TabIndex = 112;
@@ -5567,7 +5653,7 @@
             // 
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Location = new System.Drawing.Point(122, 130);
+            this.labelControl19.Location = new System.Drawing.Point(122, 167);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(34, 69);
             this.labelControl19.TabIndex = 113;
@@ -5577,7 +5663,7 @@
             // 
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl20.Appearance.Options.UseFont = true;
-            this.labelControl20.Location = new System.Drawing.Point(122, 47);
+            this.labelControl20.Location = new System.Drawing.Point(122, 84);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(34, 69);
             this.labelControl20.TabIndex = 114;
@@ -5586,7 +5672,7 @@
             // nDiemSet1Player1
             // 
             this.nDiemSet1Player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nDiemSet1Player1.Location = new System.Drawing.Point(225, 47);
+            this.nDiemSet1Player1.Location = new System.Drawing.Point(225, 84);
             this.nDiemSet1Player1.Name = "nDiemSet1Player1";
             this.nDiemSet1Player1.Size = new System.Drawing.Size(102, 75);
             this.nDiemSet1Player1.TabIndex = 120;
@@ -5615,7 +5701,7 @@
             // nDiemSet3Player2
             // 
             this.nDiemSet3Player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nDiemSet3Player2.Location = new System.Drawing.Point(1075, 209);
+            this.nDiemSet3Player2.Location = new System.Drawing.Point(1075, 246);
             this.nDiemSet3Player2.Name = "nDiemSet3Player2";
             this.nDiemSet3Player2.Size = new System.Drawing.Size(104, 75);
             this.nDiemSet3Player2.TabIndex = 121;
@@ -5623,7 +5709,7 @@
             // nDiemSet2Player1
             // 
             this.nDiemSet2Player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nDiemSet2Player1.Location = new System.Drawing.Point(225, 128);
+            this.nDiemSet2Player1.Location = new System.Drawing.Point(225, 165);
             this.nDiemSet2Player1.Name = "nDiemSet2Player1";
             this.nDiemSet2Player1.Size = new System.Drawing.Size(102, 75);
             this.nDiemSet2Player1.TabIndex = 125;
@@ -5631,7 +5717,7 @@
             // nDiemSet2Player2
             // 
             this.nDiemSet2Player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nDiemSet2Player2.Location = new System.Drawing.Point(1073, 126);
+            this.nDiemSet2Player2.Location = new System.Drawing.Point(1073, 163);
             this.nDiemSet2Player2.Name = "nDiemSet2Player2";
             this.nDiemSet2Player2.Size = new System.Drawing.Size(104, 75);
             this.nDiemSet2Player2.TabIndex = 122;
@@ -5639,7 +5725,7 @@
             // nDiemSet3Player1
             // 
             this.nDiemSet3Player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nDiemSet3Player1.Location = new System.Drawing.Point(225, 209);
+            this.nDiemSet3Player1.Location = new System.Drawing.Point(225, 246);
             this.nDiemSet3Player1.Name = "nDiemSet3Player1";
             this.nDiemSet3Player1.Size = new System.Drawing.Size(102, 75);
             this.nDiemSet3Player1.TabIndex = 124;
@@ -5647,7 +5733,7 @@
             // nDiemSet1Player2
             // 
             this.nDiemSet1Player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nDiemSet1Player2.Location = new System.Drawing.Point(1073, 45);
+            this.nDiemSet1Player2.Location = new System.Drawing.Point(1073, 82);
             this.nDiemSet1Player2.Name = "nDiemSet1Player2";
             this.nDiemSet1Player2.Size = new System.Drawing.Size(104, 75);
             this.nDiemSet1Player2.TabIndex = 123;
@@ -5657,7 +5743,7 @@
             this.xtraTabPage2.Controls.Add(this.groupControl10);
             this.xtraTabPage2.Controls.Add(this.groupControl11);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1336, 628);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1336, 694);
             this.xtraTabPage2.Text = "Giới thiệu/Trọng tài";
             // 
             // groupControl10
@@ -5682,7 +5768,7 @@
             this.groupControl10.Controls.Add(this.textEdit12);
             this.groupControl10.Location = new System.Drawing.Point(3, 3);
             this.groupControl10.Name = "groupControl10";
-            this.groupControl10.Size = new System.Drawing.Size(713, 622);
+            this.groupControl10.Size = new System.Drawing.Size(713, 633);
             this.groupControl10.TabIndex = 181;
             this.groupControl10.Text = "Thời tiết - Địa điểm";
             // 
@@ -5860,7 +5946,7 @@
             this.groupControl11.Controls.Add(this.textEdit16);
             this.groupControl11.Location = new System.Drawing.Point(722, 3);
             this.groupControl11.Name = "groupControl11";
-            this.groupControl11.Size = new System.Drawing.Size(611, 622);
+            this.groupControl11.Size = new System.Drawing.Size(611, 633);
             this.groupControl11.TabIndex = 180;
             this.groupControl11.Text = "Trọng tài:";
             // 
@@ -5980,7 +6066,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.panelControl1);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(508, 1047);
+            this.splitContainerControl2.Size = new System.Drawing.Size(508, 1113);
             this.splitContainerControl2.SplitterPosition = 456;
             this.splitContainerControl2.TabIndex = 113;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -6011,7 +6097,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(508, 585);
+            this.panelControl1.Size = new System.Drawing.Size(508, 651);
             this.panelControl1.TabIndex = 4;
             // 
             // btnManageTemplates
@@ -6208,7 +6294,7 @@
             this.xTab.Location = new System.Drawing.Point(0, 25);
             this.xTab.Name = "xTab";
             this.xTab.SelectedTabPage = this.xTabTemplate;
-            this.xTab.Size = new System.Drawing.Size(1902, 1085);
+            this.xTab.Size = new System.Drawing.Size(1902, 1151);
             this.xTab.TabIndex = 16;
             this.xTab.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabTemplate,
@@ -6218,14 +6304,14 @@
             // 
             this.xTabTemplate.Controls.Add(this.groupControl3);
             this.xTabTemplate.Name = "xTabTemplate";
-            this.xTabTemplate.Size = new System.Drawing.Size(1895, 1051);
+            this.xTabTemplate.Size = new System.Drawing.Size(1895, 1117);
             this.xTabTemplate.Text = "Templates";
             // 
             // xTabVideo
             // 
             this.xTabVideo.Controls.Add(this.groupControl1);
             this.xTabVideo.Name = "xTabVideo";
-            this.xTabVideo.Size = new System.Drawing.Size(1895, 1051);
+            this.xTabVideo.Size = new System.Drawing.Size(1895, 1117);
             this.xTabVideo.Text = "Videos/Images";
             // 
             // timer1
@@ -6233,38 +6319,26 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // labelControl94
+            // simpleButton41
             // 
-            this.labelControl94.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl94.Appearance.Options.UseFont = true;
-            this.labelControl94.Location = new System.Drawing.Point(333, 500);
-            this.labelControl94.Name = "labelControl94";
-            this.labelControl94.Size = new System.Drawing.Size(148, 29);
-            this.labelControl94.TabIndex = 236;
-            this.labelControl94.Text = "Chung cuộc:";
-            // 
-            // nTySo2
-            // 
-            this.nTySo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nTySo2.Location = new System.Drawing.Point(827, 479);
-            this.nTySo2.Name = "nTySo2";
-            this.nTySo2.Size = new System.Drawing.Size(102, 75);
-            this.nTySo2.TabIndex = 244;
-            // 
-            // nTySo1
-            // 
-            this.nTySo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nTySo1.Location = new System.Drawing.Point(500, 479);
-            this.nTySo1.Name = "nTySo1";
-            this.nTySo1.Size = new System.Drawing.Size(102, 75);
-            this.nTySo1.TabIndex = 245;
+            this.simpleButton41.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton41.Appearance.Options.UseFont = true;
+            this.simpleButton41.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton41.Location = new System.Drawing.Point(225, 660);
+            this.simpleButton41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton41.Name = "simpleButton41";
+            this.simpleButton41.Size = new System.Drawing.Size(146, 30);
+            this.simpleButton41.TabIndex = 250;
+            this.simpleButton41.Text = "Xuống Tỷ số nhỏ";
+            this.simpleButton41.ToolTip = "Xuống tất cả đồ họa";
+            this.simpleButton41.Click += new System.EventHandler(this.simpleButton41_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1902, 1144);
+            this.ClientSize = new System.Drawing.Size(1902, 1210);
             this.Controls.Add(this.xTab);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -6449,6 +6523,8 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nTySo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTySo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPointTeam2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPointTeam1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboThongtinphu.Properties)).EndInit();
@@ -6518,8 +6594,6 @@
             this.xTab.ResumeLayout(false);
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nTySo2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nTySo1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6975,5 +7049,10 @@
         private System.Windows.Forms.NumericUpDown nTySo1;
         private System.Windows.Forms.NumericUpDown nTySo2;
         private DevExpress.XtraEditors.LabelControl labelControl94;
+        private System.Windows.Forms.CheckBox ckGiaobong2;
+        private System.Windows.Forms.CheckBox ckGiaobong1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton40;
+        private DevExpress.XtraEditors.SimpleButton simpleButton32;
+        private DevExpress.XtraEditors.SimpleButton simpleButton41;
     }
 }

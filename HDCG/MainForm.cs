@@ -1114,18 +1114,7 @@ namespace HDCGStudio
                 {
 
                     xmlAdd += Add("hatgiong1", nHatgiong1.Value.ToString());
-                    xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
-
-                    xmlAdd += Add("set1point1", nDiemSet1Player1.Value.ToString());
-                    xmlAdd += Add("set1point2", nDiemSet1Player2.Value.ToString());
-                    xmlAdd += Add("set2point1", nDiemSet2Player1.Value.ToString());
-                    xmlAdd += Add("set2point2", nDiemSet2Player2.Value.ToString());
-                    xmlAdd += Add("set3point1", nDiemSet3Player1.Value.ToString());
-                    xmlAdd += Add("set3point2", nDiemSet3Player2.Value.ToString());
-                    xmlAdd += Add("set4point1", nDiemSet4Player1.Value.ToString());
-                    xmlAdd += Add("set4point2", nDiemSet4Player2.Value.ToString());
-                    xmlAdd += Add("set5point1", nDiemSet5Player1.Value.ToString());
-                    xmlAdd += Add("set5point2", nDiemSet5Player2.Value.ToString());
+                    xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());                   
 
                     xmlAdd += Add("thongtinphu", cboThongtinphu.Text);
 
@@ -1142,6 +1131,16 @@ namespace HDCGStudio
                     xmlAdd += Add("set5time", txtSet5time.Text);
                     xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons/Tennis"), GetTennisTeamLogo(cboTennisTeam1.Text)));
                     xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons/Tennis"), GetTennisTeamLogo(cboTennisTeam2.Text)));
+                    if (ckGiaobong1.Checked)
+                    {
+                        xmlAdd += Add("giaobong1", "true");
+                        xmlAdd += Add("giaobong2", "false");
+                    }
+                    else
+                    {
+                        xmlAdd += Add("giaobong2", "true");
+                        xmlAdd += Add("giaobong1", "false");
+                    }
 
                     xmlAdd += Add("tyso1", nTySo1.Text);
                     xmlAdd += Add("tyso2", nTySo2.Text);
@@ -1150,26 +1149,77 @@ namespace HDCGStudio
                     {
                         xmlAdd += Add("setpoint1", nDiemSet1Player1.Text);
                         xmlAdd += Add("setpoint2", nDiemSet1Player2.Text);
+
+                        xmlAdd += Add("set1point1", nDiemSet1Player1.Value.ToString());
+                        xmlAdd += Add("set1point2", nDiemSet1Player2.Value.ToString());
+                        xmlAdd += Add("set2point1", "");
+                        xmlAdd += Add("set2point2", "");
+                        xmlAdd += Add("set3point1", "");
+                        xmlAdd += Add("set3point2", "");
+                        xmlAdd += Add("set4point1", "");
+                        xmlAdd += Add("set4point2", "");
+                        xmlAdd += Add("set5point1", "");
+                        xmlAdd += Add("set5point2", "");
                     }
                     else if (rSet2.Checked)
                     {
                         xmlAdd += Add("setpoint1", nDiemSet2Player1.Text);
                         xmlAdd += Add("setpoint2", nDiemSet2Player2.Text);
+                        xmlAdd += Add("set1point1", nDiemSet1Player1.Value.ToString());
+                        xmlAdd += Add("set1point2", nDiemSet1Player2.Value.ToString());
+                        xmlAdd += Add("set2point1", nDiemSet2Player1.Value.ToString());
+                        xmlAdd += Add("set2point2", nDiemSet2Player2.Value.ToString());
+                        xmlAdd += Add("set3point1", "");
+                        xmlAdd += Add("set3point2", "");
+                        xmlAdd += Add("set4point1", "");
+                        xmlAdd += Add("set4point2", "");
+                        xmlAdd += Add("set5point1", "");
+                        xmlAdd += Add("set5point2", "");
                     }
                     else if (rSet3.Checked)
                     {
                         xmlAdd += Add("setpoint1", nDiemSet3Player1.Text);
                         xmlAdd += Add("setpoint2", nDiemSet3Player2.Text);
+                        xmlAdd += Add("set1point1", nDiemSet1Player1.Value.ToString());
+                        xmlAdd += Add("set1point2", nDiemSet1Player2.Value.ToString());
+                        xmlAdd += Add("set2point1", nDiemSet2Player1.Value.ToString());
+                        xmlAdd += Add("set2point2", nDiemSet2Player2.Value.ToString());
+                        xmlAdd += Add("set3point1", nDiemSet3Player1.Value.ToString());
+                        xmlAdd += Add("set3point2", nDiemSet3Player2.Value.ToString());                        
+                        xmlAdd += Add("set4point1", "");
+                        xmlAdd += Add("set4point2", "");
+                        xmlAdd += Add("set5point1", "");
+                        xmlAdd += Add("set5point2", "");
                     }
                     else if (rSet4.Checked)
                     {
                         xmlAdd += Add("setpoint1", nDiemSet4Player1.Text);
                         xmlAdd += Add("setpoint2", nDiemSet4Player2.Text);
+                        xmlAdd += Add("set1point1", nDiemSet1Player1.Value.ToString());
+                        xmlAdd += Add("set1point2", nDiemSet1Player2.Value.ToString());
+                        xmlAdd += Add("set2point1", nDiemSet2Player1.Value.ToString());
+                        xmlAdd += Add("set2point2", nDiemSet2Player2.Value.ToString());
+                        xmlAdd += Add("set3point1", nDiemSet3Player1.Value.ToString());
+                        xmlAdd += Add("set3point2", nDiemSet3Player2.Value.ToString());
+                        xmlAdd += Add("set4point1", nDiemSet4Player1.Value.ToString());
+                        xmlAdd += Add("set4point2", nDiemSet4Player2.Value.ToString());
+                        xmlAdd += Add("set5point1", "");
+                        xmlAdd += Add("set5point2", "");
                     }
                     else if (rSet5.Checked)
                     {
                         xmlAdd += Add("setpoint1", nDiemSet5Player1.Text);
                         xmlAdd += Add("setpoint2", nDiemSet5Player2.Text);
+                        xmlAdd += Add("set1point1", nDiemSet1Player1.Value.ToString());
+                        xmlAdd += Add("set1point2", nDiemSet1Player2.Value.ToString());
+                        xmlAdd += Add("set2point1", nDiemSet2Player1.Value.ToString());
+                        xmlAdd += Add("set2point2", nDiemSet2Player2.Value.ToString());
+                        xmlAdd += Add("set3point1", nDiemSet3Player1.Value.ToString());
+                        xmlAdd += Add("set3point2", nDiemSet3Player2.Value.ToString());
+                        xmlAdd += Add("set4point1", nDiemSet4Player1.Value.ToString());
+                        xmlAdd += Add("set4point2", nDiemSet4Player2.Value.ToString());
+                        xmlAdd += Add("set5point1", nDiemSet5Player1.Value.ToString());
+                        xmlAdd += Add("set5point2", nDiemSet5Player2.Value.ToString());
                     }
 
                 }
@@ -1830,7 +1880,7 @@ namespace HDCGStudio
         {
             OffTemplate(105);
         }
-        private void BatTemplate(string tempName, bool isChu = true)
+        private void BatTemplate(string tempName, bool isChu = true, int layer = 105)
         {
             try
             {
@@ -1842,7 +1892,7 @@ namespace HDCGStudio
                     Value = "false"
                 });
                 string xmlStr = "<Track_Property>" + GetAddXmlString(isChu) + "</Track_Property>";
-                OnTemplate(105, _tempName, 1, null, runtimeProperties, xmlStr);
+                OnTemplate(layer, _tempName, 1, null, runtimeProperties, xmlStr);
                 ViewTemplate(_tempName, 0, isChu);
             }
             catch { }
@@ -2351,6 +2401,20 @@ namespace HDCGStudio
                 HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void AddTySoChungCuoc1(int val1, int val2)
+        {
+            if ((val1 >= 6 && val2 <= (val1 - 2)))
+            {
+                nTySo1.Value++;
+            }
+        }
+        private void AddTySoChungCuoc2(int val1, int val2)
+        {
+            if ((val1 >= 6 && val2 <= (val1 - 2)))
+            {
+                nTySo2.Value++;
+            }
+        }
         private void btnDiemPlayer1_Click(object sender, EventArgs e)
         {
             if (cboPointTeam2.Text == "AD")
@@ -2365,24 +2429,34 @@ namespace HDCGStudio
                     if (rSet1.Checked)
                     {
                         nDiemSet1Player1.Value++;
+                        AddTySoChungCuoc1((int)nDiemSet1Player1.Value, (int)nDiemSet1Player2.Value);
                     }
                     else if (rSet2.Checked)
                     {
                         nDiemSet2Player1.Value++;
+                        AddTySoChungCuoc1((int)nDiemSet2Player1.Value, (int)nDiemSet2Player2.Value);
                     }
                     else if (rSet3.Checked)
                     {
                         nDiemSet3Player1.Value++;
+                        AddTySoChungCuoc1((int)nDiemSet3Player1.Value, (int)nDiemSet3Player2.Value);
                     }
                     else if (rSet4.Checked)
                     {
                         nDiemSet4Player1.Value++;
+                        AddTySoChungCuoc1((int)nDiemSet4Player1.Value, (int)nDiemSet4Player2.Value);
                     }
                     else if (rSet5.Checked)
                     {
                         nDiemSet5Player1.Value++;
+                        AddTySoChungCuoc1((int)nDiemSet5Player1.Value, (int)nDiemSet5Player2.Value);
                     }
                     cboPointTeam2.SelectedIndex = 1;
+                    if (ckGiaobong1.Checked)
+                    {
+                        ckGiaobong2.Checked = true;
+                    }
+                    else ckGiaobong2.Checked = false;
                 }
                 if (cboPointTeam1.SelectedIndex < 5)
                 {
@@ -2419,24 +2493,30 @@ namespace HDCGStudio
                     if (rSet1.Checked)
                     {
                         nDiemSet1Player2.Value++;
+                        AddTySoChungCuoc2((int)nDiemSet1Player2.Value, (int)nDiemSet1Player1.Value);
                     }
                     else if (rSet2.Checked)
                     {
-                        nDiemSet2Player2.Value++;
+                        nDiemSet2Player2.Value++; AddTySoChungCuoc2((int)nDiemSet2Player2.Value, (int)nDiemSet2Player1.Value);
                     }
                     else if (rSet3.Checked)
                     {
-                        nDiemSet3Player2.Value++;
+                        nDiemSet3Player2.Value++; AddTySoChungCuoc2((int)nDiemSet3Player2.Value, (int)nDiemSet3Player1.Value);
                     }
                     else if (rSet4.Checked)
                     {
-                        nDiemSet4Player2.Value++;
+                        nDiemSet4Player2.Value++; AddTySoChungCuoc2((int)nDiemSet4Player2.Value, (int)nDiemSet4Player1.Value);
                     }
                     else if (rSet5.Checked)
                     {
-                        nDiemSet5Player2.Value++;
+                        nDiemSet5Player2.Value++; AddTySoChungCuoc2((int)nDiemSet5Player2.Value, (int)nDiemSet5Player1.Value);
                     }
                     cboPointTeam1.SelectedIndex = 1;
+                    if (ckGiaobong1.Checked)
+                    {
+                        ckGiaobong2.Checked = true;
+                    }
+                    else ckGiaobong2.Checked = false;
                 }
                 if (cboPointTeam2.SelectedIndex < 5)
                 {
@@ -2458,16 +2538,19 @@ namespace HDCGStudio
                 }
             }
         }
-
+        
         private void simpleButton39_Click(object sender, EventArgs e)
         {
             if (ckWithThongTinPhu.Checked)
             {
-                BatTemplate("DavisCup_TySoNho_ThongTinPhu.ft");
+                BatTemplate("DavisCup_TySoNho.ft");
+                BatTemplate("DavisCup_TySoNho_GiaoBong.ft", true, 106);
+                BatTemplate("DavisCup_ThongTinPhu.ft", true, 107);                
             }
             else
             {
                 BatTemplate("DavisCup_TySoNho.ft");
+                BatTemplate("DavisCup_TySoNho_GiaoBong.ft", true, 106);                
             }
         }
         private void btnLiveUpdateTennis_Click(object sender, EventArgs e)
@@ -2477,9 +2560,9 @@ namespace HDCGStudio
                 string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
                 player.Update(1, xmlStr.Replace("\\n", "\n"));
                 player.Refresh();
-                cgServer.UpdateTemplate(120, xmlStr, 0);
-
-                cgServer.UpdateTemplate(105, xmlStr, 0);
+                cgServer.UpdateTemplate(105, xmlStr.Replace("\\", "\\\\"), 0);
+                cgServer.UpdateTemplate(106, xmlStr.Replace("\\", "\\\\"), 0);
+                cgServer.UpdateTemplate(107, xmlStr.Replace("\\", "\\\\"), 0);
 
             }
             catch (Exception ex)
@@ -2487,11 +2570,83 @@ namespace HDCGStudio
                 HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void simpleButton31_Click(object sender, EventArgs e)
+        {
+            try
+            {               
+                OffTemplate(105);
+            }
+            catch
+            {
+                HDMessageBox.Show("404 - Template not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void ckGiaobong1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckGiaobong1.Checked)
+            {
+                ckGiaobong2.Checked = false;
+            }
+            else
+            {
+                ckGiaobong2.Checked = true;
+            }
+        }
+
+        private void ckGiaobong2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckGiaobong2.Checked)
+            {
+                ckGiaobong1.Checked = false;
+            }
+            else
+            {
+                ckGiaobong1.Checked = true;
+            }
+        }
+        private void simpleButton32_Click(object sender, EventArgs e)
+        {
+            BatTemplate("DavisCup_ThongTinPhu.ft", true, 107);            
+        }
+
+        private void simpleButton40_Click(object sender, EventArgs e)
+        {
+            OffTemplate(107);            
+        }
         #endregion
 
         private void btnLamMoiBongDa_Click(object sender, EventArgs e)
         {
             LamMoiBongDa();
-        }        
+        }
+
+        private void xTabMain_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
+            {
+                cboTemplateType.SelectedIndex = 0;
+            }
+            else if (xTabMain.SelectedTabPage.Equals(xTabPageTennis))
+            {
+                cboTemplateType.SelectedIndex = 1;
+            }
+        }
+
+        private void simpleButton41_Click(object sender, EventArgs e)
+        {
+            if (ckWithThongTinPhu.Checked)
+            {
+                OffTemplate(107);
+                OffTemplate(106);
+                OffTemplate(105);
+            }
+            else
+            {
+                OffTemplate(106);
+                OffTemplate(105);
+            }
+        }
     }
 }

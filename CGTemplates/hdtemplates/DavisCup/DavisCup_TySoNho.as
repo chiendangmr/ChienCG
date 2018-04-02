@@ -111,7 +111,7 @@
 						break;
 					case "tyso2".toLowerCase():
 						this.tyso2.text = data.toUpperCase();
-						break;	
+						break;						
 					case "livepoint1".toLowerCase():
 						this.livepoint1.text = data.toUpperCase();
 						break;
@@ -129,7 +129,7 @@
 						file1.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted2);
 						file1.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onOpenImageError2);
 						file1.load(new URLRequest(data));
-						break;
+						break;					
 				}
 			}
 		}
@@ -164,7 +164,7 @@
 			bmp.width=45;
 			bmp.height=45;
 			this.icon2.addChild(bmp);
-		}
+		}		
 	}
 	
 }
