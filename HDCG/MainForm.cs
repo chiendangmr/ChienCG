@@ -41,6 +41,7 @@ namespace HDCGStudio
         string _TemplateHost = "";
         string _danhsachgiaidauXmlPath = "";
         string _danhsachgiaiTennisPath = "";
+        string _TennisLeagueCode = "";
         List<Object.League> _lstLeagues = new List<Object.League>();
         List<Object.Tennis.League> _lstTennisLeagues = new List<Object.Tennis.League>();
         List<Object.Team> _lstTeams = new List<Object.Team>();
@@ -758,9 +759,9 @@ namespace HDCGStudio
                 string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
                 player.Update(1, xmlStr.Replace("\\n", "\n"));
                 player.Refresh();
-                cgServer.UpdateTemplate(120, xmlStr, 0);
+                cgServer.UpdateTemplate(120, xmlStr.Replace("\\", "\\\\"), 0);
 
-                cgServer.UpdateTemplate(_layer, xmlStr, 0);
+                cgServer.UpdateTemplate(_layer, xmlStr.Replace("\\", "\\\\"), 0);
 
             }
             catch (Exception ex)
@@ -1225,55 +1226,55 @@ namespace HDCGStudio
                     xmlAdd += Add("player2", cboTeam2Player1.Text);
                     if (rServesIn.Checked)
                     {
-                        xmlAdd += Add("thongso", labelControl80.Text);
-                        xmlAdd += Add("giatriThongso1", numericUpDown20.Value.ToString());
-                        xmlAdd += Add("giatriThongso2", numericUpDown19.Value.ToString());
+                        xmlAdd += Add("thongso", txtServesIn.Text);
+                        xmlAdd += Add("giatriThongso1", numericUpDown20.Value.ToString() + "%");
+                        xmlAdd += Add("giatriThongso2", numericUpDown19.Value.ToString() + "%");
                     }
                     else if (rServesWon.Checked)
                     {
-                        xmlAdd += Add("thongso", labelControl79.Text);
-                        xmlAdd += Add("giatriThongso1", numericUpDown18.Value.ToString());
-                        xmlAdd += Add("giatriThongso2", numericUpDown17.Value.ToString());
+                        xmlAdd += Add("thongso", txtServesWon.Text);
+                        xmlAdd += Add("giatriThongso1", numericUpDown18.Value.ToString() + "%");
+                        xmlAdd += Add("giatriThongso2", numericUpDown17.Value.ToString() + "%");
                     }
                     else if (rAces.Checked)
                     {
-                        xmlAdd += Add("thongso", labelControl15.Text);
+                        xmlAdd += Add("thongso", txtAces.Text);
                         xmlAdd += Add("giatriThongso1", numericUpDown8.Value.ToString());
                         xmlAdd += Add("giatriThongso2", numericUpDown7.Value.ToString());
                     }
                     else if (rDoubleFaults.Checked)
                     {
-                        xmlAdd += Add("thongso", labelControl16.Text);
+                        xmlAdd += Add("thongso", txtDoubleF.Text);
                         xmlAdd += Add("giatriThongso1", numericUpDown10.Value.ToString());
                         xmlAdd += Add("giatriThongso2", numericUpDown9.Value.ToString());
                     }
                     else if (rForehand.Checked)
                     {
-                        xmlAdd += Add("thongso", labelControl67.Text);
+                        xmlAdd += Add("thongso", txtForehand.Text);
                         xmlAdd += Add("giatriThongso1", numericUpDown12.Value.ToString());
                         xmlAdd += Add("giatriThongso2", numericUpDown11.Value.ToString());
                     }
                     else if (rBackhand.Checked)
                     {
-                        xmlAdd += Add("thongso", labelControl68.Text);
+                        xmlAdd += Add("thongso", txtBackhand.Text);
                         xmlAdd += Add("giatriThongso1", numericUpDown14.Value.ToString());
                         xmlAdd += Add("giatriThongso2", numericUpDown13.Value.ToString());
                     }
                     else if (rPointWonAtnet.Checked)
                     {
-                        xmlAdd += Add("thongso", labelz.Text);
+                        xmlAdd += Add("thongso", txtPointWon.Text);
                         xmlAdd += Add("giatriThongso1", numericUpDown16.Value.ToString());
                         xmlAdd += Add("giatriThongso2", numericUpDown15.Value.ToString());
                     }
                     else if (rBreakPointsWon.Checked)
                     {
-                        xmlAdd += Add("thongso", labelControl95.Text);
+                        xmlAdd += Add("thongso", txtBreakpoint.Text);
                         xmlAdd += Add("giatriThongso1", numericUpDown2.Value.ToString());
                         xmlAdd += Add("giatriThongso2", numericUpDown1.Value.ToString());
                     }
                     else if (rUnforcedErrors.Checked)
                     {
-                        xmlAdd += Add("thongso", labelControl96.Text);
+                        xmlAdd += Add("thongso", txtUnforced.Text);
                         xmlAdd += Add("giatriThongso1", numericUpDown4.Value.ToString());
                         xmlAdd += Add("giatriThongso2", numericUpDown3.Value.ToString());
                     }
@@ -1937,20 +1938,30 @@ namespace HDCGStudio
         }
         private void BatTemplate(string tempName, bool isChu = true, int layer = 105)
         {
-            try
-            {
-                _tempName = tempName;
-                List<Object.Property> runtimeProperties = new List<Object.Property>();
-                runtimeProperties.Add(new Object.Property()
+            if (cboGiaiDauTennis.Text.Length > 0)
+                try
                 {
-                    Name = "Loops",
-                    Value = "false"
-                });
-                string xmlStr = "<Track_Property>" + GetAddXmlString(isChu) + "</Track_Property>";
-                OnTemplate(layer, _tempName, 1, null, runtimeProperties, xmlStr);
-                ViewTemplate(_tempName, 0, isChu);
-            }
-            catch { }
+                    if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
+                    {
+                        _tempName = tempName;
+                    }
+                    else
+                    {
+                        _tempName = _TennisLeagueCode + "_" + tempName;
+                    }
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string xmlStr = "<Track_Property>" + GetAddXmlString(isChu) + "</Track_Property>";
+                    OnTemplate(layer, _tempName, 1, null, runtimeProperties, xmlStr);
+                    ViewTemplate(_tempName, 0, isChu);
+                }
+                catch { }
+            else
+                HDMessageBox.Show("Chọn Giải đấu trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void simpleButton2_Click(object sender, EventArgs e)
         {
@@ -2269,7 +2280,7 @@ namespace HDCGStudio
         #region Tennis
         private void btnOnTySoLonTennis_Click(object sender, EventArgs e)
         {
-            BatTemplate("DavisCup_TySoLon.ft");
+            BatTemplate("TySoLon.ft");
         }
 
         private void btnManageLeagueTennis_Click(object sender, EventArgs e)
@@ -2330,6 +2341,7 @@ namespace HDCGStudio
         {
             try
             {
+                _TennisLeagueCode = dicDanhsachgiaidauTennis.FirstOrDefault(x => x.Value == cboGiaiDauTennis.Text).Key;
                 var danhsachdoiPath = Path.Combine(Path.Combine(Application.StartupPath, "Data/Tennis"), "Danhsachdoi" + dicDanhsachgiaidauTennis.FirstOrDefault(x => x.Value == cboGiaiDauTennis.Text).Key + ".xml");
                 try
                 {
@@ -2598,14 +2610,14 @@ namespace HDCGStudio
         {
             if (ckWithThongTinPhu.Checked)
             {
-                BatTemplate("DavisCup_TySoNho.ft");
-                BatTemplate("DavisCup_TySoNho_GiaoBong.ft", true, 106);
-                BatTemplate("DavisCup_ThongTinPhu.ft", true, 107);
+                BatTemplate("TySoNho.ft");
+                BatTemplate("TySoNho_GiaoBong.ft", true, 106);
+                BatTemplate("ThongTinPhu.ft", true, 107);
             }
             else
             {
-                BatTemplate("DavisCup_TySoNho.ft");
-                BatTemplate("DavisCup_TySoNho_GiaoBong.ft", true, 106);
+                BatTemplate("TySoNho.ft");
+                BatTemplate("TySoNho_GiaoBong.ft", true, 106);
             }
         }
         private void btnLiveUpdateTennis_Click(object sender, EventArgs e)
@@ -2663,7 +2675,7 @@ namespace HDCGStudio
         }
         private void simpleButton32_Click(object sender, EventArgs e)
         {
-            BatTemplate("DavisCup_ThongTinPhu.ft", true, 107);
+            BatTemplate("ThongTinPhu.ft", true, 107);
         }
 
         private void simpleButton40_Click(object sender, EventArgs e)
@@ -2688,7 +2700,7 @@ namespace HDCGStudio
 
         private void simpleButton34_Click(object sender, EventArgs e)
         {
-            BatTemplate("DavisCup_ThongSoNho.ft");
+            BatTemplate("ThongSoNho.ft");
         }
 
         private void simpleButton42_Click(object sender, EventArgs e)
@@ -2698,7 +2710,7 @@ namespace HDCGStudio
 
         private void simpleButton33_Click(object sender, EventArgs e)
         {
-            BatTemplate("DavisCup_ThongKeLon.ft");
+            BatTemplate("ThongKeCuoi.ft");
         }
         #endregion
 

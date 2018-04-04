@@ -385,29 +385,22 @@
             this.rServesWon = new System.Windows.Forms.RadioButton();
             this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
             this.rAces = new System.Windows.Forms.RadioButton();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.rDoubleFaults = new System.Windows.Forms.RadioButton();
             this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
             this.rServesIn = new System.Windows.Forms.RadioButton();
             this.simpleButton34 = new DevExpress.XtraEditors.SimpleButton();
             this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton33 = new DevExpress.XtraEditors.SimpleButton();
             this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
-            this.labelControl67 = new DevExpress.XtraEditors.LabelControl();
             this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
-            this.labelControl68 = new DevExpress.XtraEditors.LabelControl();
             this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
-            this.labelz = new DevExpress.XtraEditors.LabelControl();
             this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown18 = new System.Windows.Forms.NumericUpDown();
-            this.labelControl79 = new DevExpress.XtraEditors.LabelControl();
             this.numericUpDown19 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown20 = new System.Windows.Forms.NumericUpDown();
-            this.labelControl80 = new DevExpress.XtraEditors.LabelControl();
             this.rSet5 = new System.Windows.Forms.RadioButton();
             this.rSet2 = new System.Windows.Forms.RadioButton();
             this.rSet3 = new System.Windows.Forms.RadioButton();
@@ -487,11 +480,18 @@
             this.rUnforcedErrors = new System.Windows.Forms.RadioButton();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.labelControl95 = new DevExpress.XtraEditors.LabelControl();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.labelControl96 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton42 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtServesIn = new DevExpress.XtraEditors.TextEdit();
+            this.txtServesWon = new DevExpress.XtraEditors.TextEdit();
+            this.txtAces = new DevExpress.XtraEditors.TextEdit();
+            this.txtDoubleF = new DevExpress.XtraEditors.TextEdit();
+            this.txtForehand = new DevExpress.XtraEditors.TextEdit();
+            this.txtBackhand = new DevExpress.XtraEditors.TextEdit();
+            this.txtPointWon = new DevExpress.XtraEditors.TextEdit();
+            this.txtBreakpoint = new DevExpress.XtraEditors.TextEdit();
+            this.txtUnforced = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -725,6 +725,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtServesIn.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtServesWon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAces.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoubleF.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtForehand.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBackhand.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPointWon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBreakpoint.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUnforced.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -5130,15 +5139,22 @@
             this.groupControl9.AppearanceCaption.Options.UseFont = true;
             this.groupControl9.AppearanceCaption.Options.UseTextOptions = true;
             this.groupControl9.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.groupControl9.Controls.Add(this.txtUnforced);
+            this.groupControl9.Controls.Add(this.txtBreakpoint);
+            this.groupControl9.Controls.Add(this.txtPointWon);
+            this.groupControl9.Controls.Add(this.txtBackhand);
+            this.groupControl9.Controls.Add(this.txtForehand);
+            this.groupControl9.Controls.Add(this.txtDoubleF);
+            this.groupControl9.Controls.Add(this.txtAces);
+            this.groupControl9.Controls.Add(this.txtServesWon);
+            this.groupControl9.Controls.Add(this.txtServesIn);
             this.groupControl9.Controls.Add(this.simpleButton42);
             this.groupControl9.Controls.Add(this.rBreakPointsWon);
             this.groupControl9.Controls.Add(this.rUnforcedErrors);
             this.groupControl9.Controls.Add(this.numericUpDown1);
             this.groupControl9.Controls.Add(this.numericUpDown2);
-            this.groupControl9.Controls.Add(this.labelControl95);
             this.groupControl9.Controls.Add(this.numericUpDown3);
             this.groupControl9.Controls.Add(this.numericUpDown4);
-            this.groupControl9.Controls.Add(this.labelControl96);
             this.groupControl9.Controls.Add(this.rBackhand);
             this.groupControl9.Controls.Add(this.rPointWonAtnet);
             this.groupControl9.Controls.Add(this.rForehand);
@@ -5146,29 +5162,22 @@
             this.groupControl9.Controls.Add(this.rServesWon);
             this.groupControl9.Controls.Add(this.numericUpDown8);
             this.groupControl9.Controls.Add(this.rAces);
-            this.groupControl9.Controls.Add(this.labelControl15);
             this.groupControl9.Controls.Add(this.rDoubleFaults);
             this.groupControl9.Controls.Add(this.numericUpDown9);
             this.groupControl9.Controls.Add(this.rServesIn);
             this.groupControl9.Controls.Add(this.simpleButton34);
             this.groupControl9.Controls.Add(this.numericUpDown10);
-            this.groupControl9.Controls.Add(this.labelControl16);
             this.groupControl9.Controls.Add(this.simpleButton33);
             this.groupControl9.Controls.Add(this.numericUpDown11);
             this.groupControl9.Controls.Add(this.numericUpDown12);
-            this.groupControl9.Controls.Add(this.labelControl67);
             this.groupControl9.Controls.Add(this.numericUpDown13);
             this.groupControl9.Controls.Add(this.numericUpDown14);
-            this.groupControl9.Controls.Add(this.labelControl68);
             this.groupControl9.Controls.Add(this.numericUpDown15);
             this.groupControl9.Controls.Add(this.numericUpDown16);
-            this.groupControl9.Controls.Add(this.labelz);
             this.groupControl9.Controls.Add(this.numericUpDown17);
             this.groupControl9.Controls.Add(this.numericUpDown18);
-            this.groupControl9.Controls.Add(this.labelControl79);
             this.groupControl9.Controls.Add(this.numericUpDown19);
             this.groupControl9.Controls.Add(this.numericUpDown20);
-            this.groupControl9.Controls.Add(this.labelControl80);
             this.groupControl9.Location = new System.Drawing.Point(334, 124);
             this.groupControl9.Name = "groupControl9";
             this.groupControl9.Size = new System.Drawing.Size(733, 386);
@@ -5182,7 +5191,6 @@
             this.rBackhand.Name = "rBackhand";
             this.rBackhand.Size = new System.Drawing.Size(17, 16);
             this.rBackhand.TabIndex = 235;
-            this.rBackhand.TabStop = true;
             this.rBackhand.UseVisualStyleBackColor = true;
             // 
             // rPointWonAtnet
@@ -5192,7 +5200,6 @@
             this.rPointWonAtnet.Name = "rPointWonAtnet";
             this.rPointWonAtnet.Size = new System.Drawing.Size(17, 16);
             this.rPointWonAtnet.TabIndex = 234;
-            this.rPointWonAtnet.TabStop = true;
             this.rPointWonAtnet.UseVisualStyleBackColor = true;
             // 
             // rForehand
@@ -5202,7 +5209,6 @@
             this.rForehand.Name = "rForehand";
             this.rForehand.Size = new System.Drawing.Size(17, 16);
             this.rForehand.TabIndex = 200;
-            this.rForehand.TabStop = true;
             this.rForehand.UseVisualStyleBackColor = true;
             // 
             // numericUpDown7
@@ -5225,7 +5231,6 @@
             this.rServesWon.Name = "rServesWon";
             this.rServesWon.Size = new System.Drawing.Size(17, 16);
             this.rServesWon.TabIndex = 199;
-            this.rServesWon.TabStop = true;
             this.rServesWon.UseVisualStyleBackColor = true;
             // 
             // numericUpDown8
@@ -5249,18 +5254,7 @@
             this.rAces.Name = "rAces";
             this.rAces.Size = new System.Drawing.Size(17, 16);
             this.rAces.TabIndex = 198;
-            this.rAces.TabStop = true;
             this.rAces.UseVisualStyleBackColor = true;
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.Location = new System.Drawing.Point(348, 110);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(39, 19);
-            this.labelControl15.TabIndex = 231;
-            this.labelControl15.Text = "ACES";
             // 
             // rDoubleFaults
             // 
@@ -5269,7 +5263,6 @@
             this.rDoubleFaults.Name = "rDoubleFaults";
             this.rDoubleFaults.Size = new System.Drawing.Size(17, 16);
             this.rDoubleFaults.TabIndex = 197;
-            this.rDoubleFaults.TabStop = true;
             this.rDoubleFaults.UseVisualStyleBackColor = true;
             // 
             // numericUpDown9
@@ -5323,16 +5316,6 @@
             this.numericUpDown10.TabIndex = 229;
             this.numericUpDown10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // labelControl16
-            // 
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl16.Appearance.Options.UseFont = true;
-            this.labelControl16.Location = new System.Drawing.Point(312, 141);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(122, 19);
-            this.labelControl16.TabIndex = 228;
-            this.labelControl16.Text = "DOUBLE FAULTS";
-            // 
             // simpleButton33
             // 
             this.simpleButton33.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
@@ -5373,16 +5356,6 @@
             this.numericUpDown12.TabIndex = 226;
             this.numericUpDown12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // labelControl67
-            // 
-            this.labelControl67.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl67.Appearance.Options.UseFont = true;
-            this.labelControl67.Location = new System.Drawing.Point(301, 169);
-            this.labelControl67.Name = "labelControl67";
-            this.labelControl67.Size = new System.Drawing.Size(158, 19);
-            this.labelControl67.TabIndex = 225;
-            this.labelControl67.Text = "FOREHAND WINNERS";
-            // 
             // numericUpDown13
             // 
             this.numericUpDown13.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -5409,16 +5382,6 @@
             this.numericUpDown14.Size = new System.Drawing.Size(100, 25);
             this.numericUpDown14.TabIndex = 223;
             this.numericUpDown14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // labelControl68
-            // 
-            this.labelControl68.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl68.Appearance.Options.UseFont = true;
-            this.labelControl68.Location = new System.Drawing.Point(302, 200);
-            this.labelControl68.Name = "labelControl68";
-            this.labelControl68.Size = new System.Drawing.Size(158, 19);
-            this.labelControl68.TabIndex = 222;
-            this.labelControl68.Text = "BACKHAND WINNERS";
             // 
             // numericUpDown15
             // 
@@ -5447,16 +5410,6 @@
             this.numericUpDown16.TabIndex = 220;
             this.numericUpDown16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // labelz
-            // 
-            this.labelz.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelz.Appearance.Options.UseFont = true;
-            this.labelz.Location = new System.Drawing.Point(308, 231);
-            this.labelz.Name = "labelz";
-            this.labelz.Size = new System.Drawing.Size(151, 19);
-            this.labelz.TabIndex = 219;
-            this.labelz.Text = "POINT WON AT NET";
-            // 
             // numericUpDown17
             // 
             this.numericUpDown17.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -5484,16 +5437,6 @@
             this.numericUpDown18.TabIndex = 217;
             this.numericUpDown18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // labelControl79
-            // 
-            this.labelControl79.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl79.Appearance.Options.UseFont = true;
-            this.labelControl79.Location = new System.Drawing.Point(301, 74);
-            this.labelControl79.Name = "labelControl79";
-            this.labelControl79.Size = new System.Drawing.Size(145, 19);
-            this.labelControl79.TabIndex = 216;
-            this.labelControl79.Text = "% 1st SERVES WON";
-            // 
             // numericUpDown19
             // 
             this.numericUpDown19.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -5520,16 +5463,6 @@
             this.numericUpDown20.Size = new System.Drawing.Size(100, 25);
             this.numericUpDown20.TabIndex = 214;
             this.numericUpDown20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // labelControl80
-            // 
-            this.labelControl80.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl80.Appearance.Options.UseFont = true;
-            this.labelControl80.Location = new System.Drawing.Point(302, 45);
-            this.labelControl80.Name = "labelControl80";
-            this.labelControl80.Size = new System.Drawing.Size(125, 19);
-            this.labelControl80.TabIndex = 213;
-            this.labelControl80.Text = "% 1st SERVES IN";
             // 
             // rSet5
             // 
@@ -6365,7 +6298,6 @@
             this.rBreakPointsWon.Name = "rBreakPointsWon";
             this.rBreakPointsWon.Size = new System.Drawing.Size(17, 16);
             this.rBreakPointsWon.TabIndex = 243;
-            this.rBreakPointsWon.TabStop = true;
             this.rBreakPointsWon.UseVisualStyleBackColor = true;
             // 
             // rUnforcedErrors
@@ -6375,7 +6307,6 @@
             this.rUnforcedErrors.Name = "rUnforcedErrors";
             this.rUnforcedErrors.Size = new System.Drawing.Size(17, 16);
             this.rUnforcedErrors.TabIndex = 242;
-            this.rUnforcedErrors.TabStop = true;
             this.rUnforcedErrors.UseVisualStyleBackColor = true;
             // 
             // numericUpDown1
@@ -6405,16 +6336,6 @@
             this.numericUpDown2.TabIndex = 240;
             this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // labelControl95
-            // 
-            this.labelControl95.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl95.Appearance.Options.UseFont = true;
-            this.labelControl95.Location = new System.Drawing.Point(308, 263);
-            this.labelControl95.Name = "labelControl95";
-            this.labelControl95.Size = new System.Drawing.Size(152, 19);
-            this.labelControl95.TabIndex = 239;
-            this.labelControl95.Text = "BREAK POINTS WON";
-            // 
             // numericUpDown3
             // 
             this.numericUpDown3.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -6442,16 +6363,6 @@
             this.numericUpDown4.TabIndex = 237;
             this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // labelControl96
-            // 
-            this.labelControl96.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl96.Appearance.Options.UseFont = true;
-            this.labelControl96.Location = new System.Drawing.Point(308, 294);
-            this.labelControl96.Name = "labelControl96";
-            this.labelControl96.Size = new System.Drawing.Size(147, 19);
-            this.labelControl96.TabIndex = 236;
-            this.labelControl96.Text = "UNFORCED ERRORS";
-            // 
             // simpleButton42
             // 
             this.simpleButton42.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
@@ -6465,6 +6376,123 @@
             this.simpleButton42.Text = "Tắt";
             this.simpleButton42.ToolTip = "Tắt Thông số nhỏ/Thống kê lớn";
             this.simpleButton42.Click += new System.EventHandler(this.simpleButton42_Click);
+            // 
+            // txtServesIn
+            // 
+            this.txtServesIn.EditValue = "% 1st SERVES IN";
+            this.txtServesIn.Location = new System.Drawing.Point(262, 40);
+            this.txtServesIn.MenuManager = this.barManager1;
+            this.txtServesIn.Name = "txtServesIn";
+            this.txtServesIn.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtServesIn.Properties.Appearance.Options.UseFont = true;
+            this.txtServesIn.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtServesIn.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtServesIn.Size = new System.Drawing.Size(205, 26);
+            this.txtServesIn.TabIndex = 252;
+            // 
+            // txtServesWon
+            // 
+            this.txtServesWon.EditValue = "% 1st SERVES WON";
+            this.txtServesWon.Location = new System.Drawing.Point(262, 72);
+            this.txtServesWon.MenuManager = this.barManager1;
+            this.txtServesWon.Name = "txtServesWon";
+            this.txtServesWon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtServesWon.Properties.Appearance.Options.UseFont = true;
+            this.txtServesWon.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtServesWon.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtServesWon.Size = new System.Drawing.Size(205, 26);
+            this.txtServesWon.TabIndex = 253;
+            // 
+            // txtAces
+            // 
+            this.txtAces.EditValue = "ACES";
+            this.txtAces.Location = new System.Drawing.Point(262, 105);
+            this.txtAces.MenuManager = this.barManager1;
+            this.txtAces.Name = "txtAces";
+            this.txtAces.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtAces.Properties.Appearance.Options.UseFont = true;
+            this.txtAces.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtAces.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtAces.Size = new System.Drawing.Size(205, 26);
+            this.txtAces.TabIndex = 254;
+            // 
+            // txtDoubleF
+            // 
+            this.txtDoubleF.EditValue = "DOUBLE FAULTS";
+            this.txtDoubleF.Location = new System.Drawing.Point(262, 138);
+            this.txtDoubleF.MenuManager = this.barManager1;
+            this.txtDoubleF.Name = "txtDoubleF";
+            this.txtDoubleF.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtDoubleF.Properties.Appearance.Options.UseFont = true;
+            this.txtDoubleF.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtDoubleF.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtDoubleF.Size = new System.Drawing.Size(205, 26);
+            this.txtDoubleF.TabIndex = 255;
+            // 
+            // txtForehand
+            // 
+            this.txtForehand.EditValue = "FOREHAND WINNERS";
+            this.txtForehand.Location = new System.Drawing.Point(262, 168);
+            this.txtForehand.MenuManager = this.barManager1;
+            this.txtForehand.Name = "txtForehand";
+            this.txtForehand.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtForehand.Properties.Appearance.Options.UseFont = true;
+            this.txtForehand.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtForehand.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtForehand.Size = new System.Drawing.Size(205, 26);
+            this.txtForehand.TabIndex = 256;
+            // 
+            // txtBackhand
+            // 
+            this.txtBackhand.EditValue = "BACKHAND WINNERS";
+            this.txtBackhand.Location = new System.Drawing.Point(262, 197);
+            this.txtBackhand.MenuManager = this.barManager1;
+            this.txtBackhand.Name = "txtBackhand";
+            this.txtBackhand.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtBackhand.Properties.Appearance.Options.UseFont = true;
+            this.txtBackhand.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtBackhand.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtBackhand.Size = new System.Drawing.Size(205, 26);
+            this.txtBackhand.TabIndex = 257;
+            // 
+            // txtPointWon
+            // 
+            this.txtPointWon.EditValue = "POINT WON AT NET";
+            this.txtPointWon.Location = new System.Drawing.Point(262, 227);
+            this.txtPointWon.MenuManager = this.barManager1;
+            this.txtPointWon.Name = "txtPointWon";
+            this.txtPointWon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtPointWon.Properties.Appearance.Options.UseFont = true;
+            this.txtPointWon.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPointWon.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtPointWon.Size = new System.Drawing.Size(205, 26);
+            this.txtPointWon.TabIndex = 258;
+            // 
+            // txtBreakpoint
+            // 
+            this.txtBreakpoint.EditValue = "BREAK POINTS WON";
+            this.txtBreakpoint.Location = new System.Drawing.Point(262, 258);
+            this.txtBreakpoint.MenuManager = this.barManager1;
+            this.txtBreakpoint.Name = "txtBreakpoint";
+            this.txtBreakpoint.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtBreakpoint.Properties.Appearance.Options.UseFont = true;
+            this.txtBreakpoint.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtBreakpoint.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtBreakpoint.Size = new System.Drawing.Size(205, 26);
+            this.txtBreakpoint.TabIndex = 259;
+            // 
+            // txtUnforced
+            // 
+            this.txtUnforced.EditValue = "UNFORCED ERRORS";
+            this.txtUnforced.Location = new System.Drawing.Point(262, 291);
+            this.txtUnforced.MenuManager = this.barManager1;
+            this.txtUnforced.Name = "txtUnforced";
+            this.txtUnforced.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtUnforced.Properties.Appearance.Options.UseFont = true;
+            this.txtUnforced.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtUnforced.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtUnforced.Size = new System.Drawing.Size(205, 26);
+            this.txtUnforced.TabIndex = 260;
             // 
             // MainForm
             // 
@@ -6731,6 +6759,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtServesIn.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtServesWon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAces.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoubleF.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtForehand.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBackhand.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPointWon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBreakpoint.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUnforced.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7105,27 +7142,20 @@
         private System.Windows.Forms.RadioButton rServesWon;
         private System.Windows.Forms.NumericUpDown numericUpDown8;
         private System.Windows.Forms.RadioButton rAces;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
         private System.Windows.Forms.RadioButton rDoubleFaults;
         private System.Windows.Forms.NumericUpDown numericUpDown9;
         private System.Windows.Forms.RadioButton rServesIn;
         private System.Windows.Forms.NumericUpDown numericUpDown10;
-        private DevExpress.XtraEditors.LabelControl labelControl16;
         private System.Windows.Forms.NumericUpDown numericUpDown11;
         private System.Windows.Forms.NumericUpDown numericUpDown12;
-        private DevExpress.XtraEditors.LabelControl labelControl67;
         private System.Windows.Forms.NumericUpDown numericUpDown13;
         private System.Windows.Forms.NumericUpDown numericUpDown14;
-        private DevExpress.XtraEditors.LabelControl labelControl68;
         private System.Windows.Forms.NumericUpDown numericUpDown15;
         private System.Windows.Forms.NumericUpDown numericUpDown16;
-        private DevExpress.XtraEditors.LabelControl labelz;
         private System.Windows.Forms.NumericUpDown numericUpDown17;
         private System.Windows.Forms.NumericUpDown numericUpDown18;
-        private DevExpress.XtraEditors.LabelControl labelControl79;
         private System.Windows.Forms.NumericUpDown numericUpDown19;
         private System.Windows.Forms.NumericUpDown numericUpDown20;
-        private DevExpress.XtraEditors.LabelControl labelControl80;
         private System.Windows.Forms.RadioButton rSet5;
         private System.Windows.Forms.RadioButton rSet2;
         private System.Windows.Forms.RadioButton rSet3;
@@ -7195,10 +7225,17 @@
         private System.Windows.Forms.RadioButton rUnforcedErrors;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private DevExpress.XtraEditors.LabelControl labelControl95;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private DevExpress.XtraEditors.LabelControl labelControl96;
         private DevExpress.XtraEditors.SimpleButton simpleButton42;
+        private DevExpress.XtraEditors.TextEdit txtUnforced;
+        private DevExpress.XtraEditors.TextEdit txtBreakpoint;
+        private DevExpress.XtraEditors.TextEdit txtPointWon;
+        private DevExpress.XtraEditors.TextEdit txtBackhand;
+        private DevExpress.XtraEditors.TextEdit txtForehand;
+        private DevExpress.XtraEditors.TextEdit txtDoubleF;
+        private DevExpress.XtraEditors.TextEdit txtAces;
+        private DevExpress.XtraEditors.TextEdit txtServesWon;
+        private DevExpress.XtraEditors.TextEdit txtServesIn;
     }
 }

@@ -86,10 +86,10 @@
 				switch(property.toLowerCase())
 				{						
 					case "player1".toLowerCase():
-						this.player1.text = data.toUpperCase();
+						this.player1.text = data;
 						break;
 					case "player2".toLowerCase():
-						this.player2.text = data.toUpperCase();
+						this.player2.text = data;
 						break;
 					case "thongso".toLowerCase():
 						this.thongso.text = data;

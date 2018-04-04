@@ -28,7 +28,7 @@
 		
 	public class DavisCup_ThongKeCuoi extends CasparTemplate{
 		
-		public var viewGroup:MovieClip;
+		public var viewGroup:MovieClip = new MovieClip();
 		public var icon1:MovieClip;
 		public var icon2:MovieClip;
 		
@@ -38,6 +38,8 @@
 		public var team1:TextField = new TextField();
 		public var team2:TextField = new TextField();
 		public var setTimeFull:TextField = new TextField();
+		public var servesIn:TextField = new TextField();
+		public var servesWon:TextField = new TextField();
 		public var servesIn1:TextField = new TextField();
 		public var servesIn2:TextField = new TextField();
 		public var servesWon1:TextField = new TextField();
@@ -61,6 +63,34 @@
 			// constructor code
 			super();
 			
+			this.viewGroup.addChild(giaidau);
+			this.viewGroup.addChild(vongdau);
+			this.viewGroup.addChild(setSummary);
+			this.viewGroup.addChild(team1);
+			this.viewGroup.addChild(team2);
+			this.viewGroup.addChild(setTimeFull);
+			this.viewGroup.addChild(servesIn);
+			this.viewGroup.addChild(servesWon);
+			this.viewGroup.addChild(servesIn1);
+			this.viewGroup.addChild(servesIn2);
+			this.viewGroup.addChild(servesWon1);
+			this.viewGroup.addChild(servesWon2);
+			this.viewGroup.addChild(aces1);
+			this.viewGroup.addChild(aces2);
+			this.viewGroup.addChild(doubleF1);
+			this.viewGroup.addChild(doubleF2);
+			this.viewGroup.addChild(forehandW1);
+			this.viewGroup.addChild(forehandW2);
+			this.viewGroup.addChild(backhandW1);
+			this.viewGroup.addChild(backhandW2);
+			this.viewGroup.addChild(pointWinAtNet1);
+			this.viewGroup.addChild(pointWinAtNet2);
+			this.viewGroup.addChild(breakpointW1);
+			this.viewGroup.addChild(breakpointW2);
+			this.viewGroup.addChild(unforcedE1);
+			this.viewGroup.addChild(unforcedE2);
+			this.viewGroup.addChild(icon1);
+			this.viewGroup.addChild(icon2);
 			this.addChild(viewGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
 			ExternalInterface.addCallback("GetProperties", GetProperties);			
@@ -128,7 +158,13 @@
 						break;
 					case "setTimeFull".toLowerCase():
 						this.setTimeFull.text = data.toUpperCase();
-						break;	
+						break;
+					case "servesIn".toLowerCase():
+						this.servesIn.text = data;
+						break;
+					case "servesWon".toLowerCase():
+						this.servesWon.text = data;
+						break;
 					case "servesIn1".toLowerCase():
 						this.servesIn1.text = data.toUpperCase();
 						break;
@@ -213,8 +249,8 @@
 		private function onOpenImageCompleted(e:Event)
 		{
 			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;	
-			bmp.width=200;
-			bmp.height=200;
+			bmp.width=130;
+			bmp.height=130;
 			this.icon1.addChild(bmp);
 		}
 		private function onOpenImageError2(e:IOErrorEvent)
@@ -226,8 +262,8 @@
 		private function onOpenImageCompleted2(e:Event)
 		{
 			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;	
-			bmp.width=200;
-			bmp.height=200;
+			bmp.width=130;
+			bmp.height=130;
 			this.icon2.addChild(bmp);
 		}
 	}
