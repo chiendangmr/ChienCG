@@ -43,6 +43,7 @@
 			// constructor code
 			super();
 			
+			tyso.scaleX = 5;
 			this.txtGroup.addChild(tyso);	
 			this.txtGroup.addChild(dongho);
 			this.txtGroup.addChild(doichuShort);	

@@ -481,8 +481,8 @@ namespace HDCGStudio
                     MessageBox.Show("Disconnect to cg serer", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    if (!cgServer.CutDown(layer))
-                        //if (!cgServer.UnLoadCG(layer))
+                    //if (!cgServer.CutDown(layer))
+                    if (!cgServer.UnLoadCG(layer))
                         MessageBox.Show("Can't off cg", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -1114,7 +1114,7 @@ namespace HDCGStudio
                 {
 
                     xmlAdd += Add("hatgiong1", nHatgiong1.Value.ToString());
-                    xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());                   
+                    xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
 
                     xmlAdd += Add("thongtinphu", cboThongtinphu.Text);
 
@@ -1185,7 +1185,7 @@ namespace HDCGStudio
                         xmlAdd += Add("set2point1", nDiemSet2Player1.Value.ToString());
                         xmlAdd += Add("set2point2", nDiemSet2Player2.Value.ToString());
                         xmlAdd += Add("set3point1", nDiemSet3Player1.Value.ToString());
-                        xmlAdd += Add("set3point2", nDiemSet3Player2.Value.ToString());                        
+                        xmlAdd += Add("set3point2", nDiemSet3Player2.Value.ToString());
                         xmlAdd += Add("set4point1", "");
                         xmlAdd += Add("set4point2", "");
                         xmlAdd += Add("set5point1", "");
@@ -1221,7 +1221,62 @@ namespace HDCGStudio
                         xmlAdd += Add("set5point1", nDiemSet5Player1.Value.ToString());
                         xmlAdd += Add("set5point2", nDiemSet5Player2.Value.ToString());
                     }
-
+                    xmlAdd += Add("player1", cboTeam1Player1.Text);
+                    xmlAdd += Add("player2", cboTeam2Player1.Text);
+                    if (rServesIn.Checked)
+                    {
+                        xmlAdd += Add("thongso", labelControl80.Text);
+                        xmlAdd += Add("giatriThongso1", numericUpDown20.Value.ToString());
+                        xmlAdd += Add("giatriThongso2", numericUpDown19.Value.ToString());
+                    }
+                    else if (rServesWon.Checked)
+                    {
+                        xmlAdd += Add("thongso", labelControl79.Text);
+                        xmlAdd += Add("giatriThongso1", numericUpDown18.Value.ToString());
+                        xmlAdd += Add("giatriThongso2", numericUpDown17.Value.ToString());
+                    }
+                    else if (rAces.Checked)
+                    {
+                        xmlAdd += Add("thongso", labelControl15.Text);
+                        xmlAdd += Add("giatriThongso1", numericUpDown8.Value.ToString());
+                        xmlAdd += Add("giatriThongso2", numericUpDown7.Value.ToString());
+                    }
+                    else if (rDoubleFaults.Checked)
+                    {
+                        xmlAdd += Add("thongso", labelControl16.Text);
+                        xmlAdd += Add("giatriThongso1", numericUpDown10.Value.ToString());
+                        xmlAdd += Add("giatriThongso2", numericUpDown9.Value.ToString());
+                    }
+                    else if (rForehand.Checked)
+                    {
+                        xmlAdd += Add("thongso", labelControl67.Text);
+                        xmlAdd += Add("giatriThongso1", numericUpDown12.Value.ToString());
+                        xmlAdd += Add("giatriThongso2", numericUpDown11.Value.ToString());
+                    }
+                    else if (rBackhand.Checked)
+                    {
+                        xmlAdd += Add("thongso", labelControl68.Text);
+                        xmlAdd += Add("giatriThongso1", numericUpDown14.Value.ToString());
+                        xmlAdd += Add("giatriThongso2", numericUpDown13.Value.ToString());
+                    }
+                    else if (rPointWonAtnet.Checked)
+                    {
+                        xmlAdd += Add("thongso", labelz.Text);
+                        xmlAdd += Add("giatriThongso1", numericUpDown16.Value.ToString());
+                        xmlAdd += Add("giatriThongso2", numericUpDown15.Value.ToString());
+                    }
+                    else if (rBreakPointsWon.Checked)
+                    {
+                        xmlAdd += Add("thongso", labelControl95.Text);
+                        xmlAdd += Add("giatriThongso1", numericUpDown2.Value.ToString());
+                        xmlAdd += Add("giatriThongso2", numericUpDown1.Value.ToString());
+                    }
+                    else if (rUnforcedErrors.Checked)
+                    {
+                        xmlAdd += Add("thongso", labelControl96.Text);
+                        xmlAdd += Add("giatriThongso1", numericUpDown4.Value.ToString());
+                        xmlAdd += Add("giatriThongso2", numericUpDown3.Value.ToString());
+                    }
                 }
                 catch //(Exception ex)
                 {
@@ -2538,19 +2593,19 @@ namespace HDCGStudio
                 }
             }
         }
-        
+
         private void simpleButton39_Click(object sender, EventArgs e)
         {
             if (ckWithThongTinPhu.Checked)
             {
                 BatTemplate("DavisCup_TySoNho.ft");
                 BatTemplate("DavisCup_TySoNho_GiaoBong.ft", true, 106);
-                BatTemplate("DavisCup_ThongTinPhu.ft", true, 107);                
+                BatTemplate("DavisCup_ThongTinPhu.ft", true, 107);
             }
             else
             {
                 BatTemplate("DavisCup_TySoNho.ft");
-                BatTemplate("DavisCup_TySoNho_GiaoBong.ft", true, 106);                
+                BatTemplate("DavisCup_TySoNho_GiaoBong.ft", true, 106);
             }
         }
         private void btnLiveUpdateTennis_Click(object sender, EventArgs e)
@@ -2574,7 +2629,7 @@ namespace HDCGStudio
         private void simpleButton31_Click(object sender, EventArgs e)
         {
             try
-            {               
+            {
                 OffTemplate(105);
             }
             catch
@@ -2608,12 +2663,42 @@ namespace HDCGStudio
         }
         private void simpleButton32_Click(object sender, EventArgs e)
         {
-            BatTemplate("DavisCup_ThongTinPhu.ft", true, 107);            
+            BatTemplate("DavisCup_ThongTinPhu.ft", true, 107);
         }
 
         private void simpleButton40_Click(object sender, EventArgs e)
         {
-            OffTemplate(107);            
+            OffTemplate(107);
+        }
+
+        private void simpleButton41_Click(object sender, EventArgs e)
+        {
+            if (ckWithThongTinPhu.Checked)
+            {
+                OffTemplate(107);
+                OffTemplate(106);
+                OffTemplate(105);
+            }
+            else
+            {
+                OffTemplate(106);
+                OffTemplate(105);
+            }
+        }
+
+        private void simpleButton34_Click(object sender, EventArgs e)
+        {
+            BatTemplate("DavisCup_ThongSoNho.ft");
+        }
+
+        private void simpleButton42_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+
+        private void simpleButton33_Click(object sender, EventArgs e)
+        {
+            BatTemplate("DavisCup_ThongKeLon.ft");
         }
         #endregion
 
@@ -2634,19 +2719,5 @@ namespace HDCGStudio
             }
         }
 
-        private void simpleButton41_Click(object sender, EventArgs e)
-        {
-            if (ckWithThongTinPhu.Checked)
-            {
-                OffTemplate(107);
-                OffTemplate(106);
-                OffTemplate(105);
-            }
-            else
-            {
-                OffTemplate(106);
-                OffTemplate(105);
-            }
-        }
     }
 }
