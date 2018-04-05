@@ -23,7 +23,7 @@ namespace HDCGStudio
             _leagueName = league;
         }
         string _DanhsachdoiXmlPath = "";
-        string _DanhsachgiaidauXmlPath = "";        
+        string _DanhsachgiaidauXmlPath = "";
         Dictionary<string, string> dicDanhsachgiaidau = new Dictionary<string, string>();
         private void ManageTemplateForm_Shown(object sender, EventArgs e)
         {
@@ -66,7 +66,7 @@ namespace HDCGStudio
             catch //(Exception ex)
             {
                 //HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }            
+            }
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -85,14 +85,17 @@ namespace HDCGStudio
                         CoachName = txtCoach.Text,
                         LeagueCode = dicDanhsachgiaidau.FirstOrDefault(x => x.Value == cboLeague.Text).Key,
                         LogoPath = txtLogoPath.Text,
-                        City = txtSanNha.Text,
-                        HatGiong = (int)nPosition.Value,
-                        TeamCode = txtMaDoi.Text
-
+                        City = txtDonVi.Text,
+                        HatGiong = (int)nHatGiong.Value,
+                        TeamCode = txtMaDoi.Text,
+                        Played = (int)nPlayed.Value,
+                        Points = txtPoints.Text,
+                        Position = (int)nPosition.Value,
+                        Previous = (int)nPrevious.Value
                     });
 
                     (bsManageTeam.List as BindingList<Object.Tennis.Team>).OrderBy(a => a.HatGiong).ToList().SaveObject(_DanhsachdoiXmlPath);
-                    gvTeams.RefreshData();                    
+                    gvTeams.RefreshData();
                 }
             }
             catch (Exception ex)
@@ -115,7 +118,7 @@ namespace HDCGStudio
                         bsManageTeam.List.Remove(gvTeams.GetFocusedRow());
 
                         (bsManageTeam.List as BindingList<Object.Tennis.Team>).ToList().SaveObject(_DanhsachdoiXmlPath);
-                    }                    
+                    }
                 }
             }
             catch (Exception ex)
@@ -166,9 +169,13 @@ namespace HDCGStudio
                 txtName.Text = temp.Name;
                 txtShortName.Text = temp.ShortName;
                 txtLogoPath.Text = temp.LogoPath;
-                txtSanNha.Text = temp.City;
-                nPosition.Value = temp.HatGiong;
+                txtDonVi.Text = temp.City;
+                nHatGiong.Value = temp.HatGiong;
                 txtMaDoi.Text = temp.TeamCode;
+                nPrevious.Value = temp.Previous;
+                nPosition.Value = temp.Position;
+                txtPoints.Text = temp.Points;
+                nPlayed.Value = temp.Played;
             }
             catch { }
         }
@@ -191,9 +198,13 @@ namespace HDCGStudio
                         CoachName = txtCoach.Text,
                         LeagueCode = dicDanhsachgiaidau.FirstOrDefault(x => x.Value == cboLeague.Text).Key,
                         LogoPath = txtLogoPath.Text,
-                        City = txtSanNha.Text,
-                        HatGiong = (int)nPosition.Value,
-                        TeamCode = txtMaDoi.Text
+                        City = txtDonVi.Text,
+                        HatGiong = (int)nHatGiong.Value,
+                        TeamCode = txtMaDoi.Text,
+                        Played = (int)nPlayed.Value,
+                        Points = txtPoints.Text,
+                        Position = (int)nPosition.Value,
+                        Previous = (int)nPrevious.Value
 
                     });
                     gvTeams.FocusedRowHandle = bsManageTeam.List.IndexOf(temp);
@@ -201,13 +212,13 @@ namespace HDCGStudio
                     (bsManageTeam.List as BindingList<Object.Tennis.Team>).OrderBy(a => a.HatGiong).ToList().SaveObject(_DanhsachdoiXmlPath);
 
                     gvTeams.RefreshData();
-                    HDMessageBox.Show("Lưu thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
+                    HDMessageBox.Show("Lưu thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
                 HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }        
+        }
     }
 }

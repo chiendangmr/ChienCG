@@ -15,5 +15,9 @@ namespace HDCGStudio.Object.Tennis
         public string LeagueCode { get; set; }
         public string City { get; set; }
         public int HatGiong { get; set; }
+        public int Position { get; set; }
+        public string Points { get; set; }
+        public int Played { get; set; }
+        public int Previous { get; set; }
     }
 }

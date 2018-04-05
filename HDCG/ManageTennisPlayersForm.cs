@@ -76,8 +76,18 @@ namespace HDCGStudio
                             IsMale = ckIsNotSubstitution.Checked,
                             ShortName = txtShortName.Text,
                             Team = cboTeams.Text,
-                            HatGiong = (int)nIndex.Value
-
+                            HatGiong = (int)nIndex.Value,
+                            Rank = (int)nRank.Value,
+                            isCaptain = ckCaptain.Checked,
+                            Nation = txtNation.Text,
+                            Age = (int)nAge.Value,
+                            Height = txtHeight.Text,
+                            Weight = txtWeight.Text,
+                            WorldRanking = (int)nWorldRanking.Value,
+                            Appearances = (int)nAppearances.Value,
+                            SingleWin = (int)nSingleWin.Value,
+                            SingleLose = (int)nSingleLose.Value,
+                            Debut = txtDebut.Text
                         });
 
                     (bsManagePlayers.List as BindingList<Object.Tennis.Player>).OrderBy(a => a.HatGiong).ToList().SaveObject(templatesXmlPath);
@@ -173,6 +183,17 @@ namespace HDCGStudio
                 txtShortName.Text = temp.ShortName;
                 ckIsNotSubstitution.Checked = temp.IsMale;
                 nIndex.Value = temp.HatGiong;
+                ckCaptain.Checked = temp.isCaptain;
+                nRank.Value = temp.Rank;
+                txtNation.Text = temp.Nation;
+                nAge.Value = temp.Age;
+                txtHeight.Text = temp.Height;
+                txtWeight.Text = temp.Weight;
+                nWorldRanking.Value = temp.WorldRanking;
+                nAppearances.Value = temp.Appearances;
+                nSingleWin.Value = temp.SingleWin;
+                nSingleLose.Value = temp.SingleLose;
+                txtDebut.Text = temp.Debut;
             }
             catch { }
         }
@@ -194,7 +215,18 @@ namespace HDCGStudio
                         IsMale = ckIsNotSubstitution.Checked,
                         ShortName = txtShortName.Text,
                         Team = cboTeams.Text,
-                        HatGiong = (int)nIndex.Value
+                        HatGiong = (int)nIndex.Value,
+                        Rank = (int)nRank.Value,
+                        isCaptain = ckCaptain.Checked,
+                        Nation = txtNation.Text,
+                        Age = (int)nAge.Value,
+                        Height = txtHeight.Text,
+                        Weight = txtWeight.Text,
+                        WorldRanking = (int)nWorldRanking.Value,
+                        Appearances = (int)nAppearances.Value,
+                        SingleWin = (int)nSingleWin.Value,
+                        SingleLose = (int)nSingleLose.Value,
+                        Debut = txtDebut.Text
                     });
                     gvPlayers.FocusedRowHandle = bsManagePlayers.List.IndexOf(temp);
                     bsManagePlayers.List.Remove(temp);

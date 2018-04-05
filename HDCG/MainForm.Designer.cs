@@ -354,7 +354,60 @@
             this.btnManageLeagueTennis = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
+            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton46 = new DevExpress.XtraEditors.SimpleButton();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton43 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton44 = new DevExpress.XtraEditors.SimpleButton();
+            this.gridSplitContainer9 = new DevExpress.XtraGrid.GridSplitContainer();
+            this.gridControl4 = new DevExpress.XtraGrid.GridControl();
+            this.bsTennisPlayer2 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView11 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridView12 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridSplitContainer8 = new DevExpress.XtraGrid.GridSplitContainer();
+            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
+            this.bsTennisPlayer1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView9 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridView10 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.nTiebreak1 = new System.Windows.Forms.NumericUpDown();
+            this.nTiebreak2 = new System.Windows.Forms.NumericUpDown();
+            this.cbTiebreak = new System.Windows.Forms.CheckBox();
             this.simpleButton41 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton40 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton32 = new DevExpress.XtraEditors.SimpleButton();
@@ -375,9 +428,25 @@
             this.labelControl93 = new DevExpress.XtraEditors.LabelControl();
             this.btnOnTySoLonTennis = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton39 = new DevExpress.XtraEditors.SimpleButton();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ck5set = new System.Windows.Forms.CheckBox();
+            this.ck3set = new System.Windows.Forms.CheckBox();
             this.groupControl9 = new DevExpress.XtraEditors.GroupControl();
+            this.txtUnforced = new DevExpress.XtraEditors.TextEdit();
+            this.txtBreakpoint = new DevExpress.XtraEditors.TextEdit();
+            this.txtPointWon = new DevExpress.XtraEditors.TextEdit();
+            this.txtBackhand = new DevExpress.XtraEditors.TextEdit();
+            this.txtForehand = new DevExpress.XtraEditors.TextEdit();
+            this.txtDoubleF = new DevExpress.XtraEditors.TextEdit();
+            this.txtAces = new DevExpress.XtraEditors.TextEdit();
+            this.txtServesWon = new DevExpress.XtraEditors.TextEdit();
+            this.txtServesIn = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton42 = new DevExpress.XtraEditors.SimpleButton();
+            this.rBreakPointsWon = new System.Windows.Forms.RadioButton();
+            this.rUnforcedErrors = new System.Windows.Forms.RadioButton();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.rBackhand = new System.Windows.Forms.RadioButton();
             this.rPointWonAtnet = new System.Windows.Forms.RadioButton();
             this.rForehand = new System.Windows.Forms.RadioButton();
@@ -476,22 +545,6 @@
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.rBreakPointsWon = new System.Windows.Forms.RadioButton();
-            this.rUnforcedErrors = new System.Windows.Forms.RadioButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.simpleButton42 = new DevExpress.XtraEditors.SimpleButton();
-            this.txtServesIn = new DevExpress.XtraEditors.TextEdit();
-            this.txtServesWon = new DevExpress.XtraEditors.TextEdit();
-            this.txtAces = new DevExpress.XtraEditors.TextEdit();
-            this.txtDoubleF = new DevExpress.XtraEditors.TextEdit();
-            this.txtForehand = new DevExpress.XtraEditors.TextEdit();
-            this.txtBackhand = new DevExpress.XtraEditors.TextEdit();
-            this.txtPointWon = new DevExpress.XtraEditors.TextEdit();
-            this.txtBreakpoint = new DevExpress.XtraEditors.TextEdit();
-            this.txtUnforced = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -653,7 +706,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.nHatgiong2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer9)).BeginInit();
+            this.gridSplitContainer9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTennisPlayer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer8)).BeginInit();
+            this.gridSplitContainer8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTennisPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView10)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nTiebreak1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTiebreak2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTySo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTySo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPointTeam2.Properties)).BeginInit();
@@ -666,6 +738,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSet1time.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl9)).BeginInit();
             this.groupControl9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUnforced.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBreakpoint.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPointWon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBackhand.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtForehand.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoubleF.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAces.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtServesWon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtServesIn.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
@@ -721,19 +806,6 @@
             this.xTab.SuspendLayout();
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtServesIn.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtServesWon.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAces.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoubleF.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtForehand.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBackhand.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPointWon.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBreakpoint.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUnforced.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -4357,13 +4429,13 @@
             this.splitContainerControl5.Panel2.Controls.Add(this.xtraTabControl1);
             this.splitContainerControl5.Panel2.Text = "Panel2";
             this.splitContainerControl5.Size = new System.Drawing.Size(1343, 1106);
-            this.splitContainerControl5.SplitterPosition = 371;
+            this.splitContainerControl5.SplitterPosition = 302;
             this.splitContainerControl5.TabIndex = 131;
             this.splitContainerControl5.Text = "splitContainerControl5";
             // 
             // cboTeam2Player2
             // 
-            this.cboTeam2Player2.Location = new System.Drawing.Point(828, 319);
+            this.cboTeam2Player2.Location = new System.Drawing.Point(829, 256);
             this.cboTeam2Player2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTeam2Player2.MenuManager = this.barManager1;
             this.cboTeam2Player2.Name = "cboTeam2Player2";
@@ -4371,13 +4443,12 @@
             this.cboTeam2Player2.Properties.Appearance.Options.UseFont = true;
             this.cboTeam2Player2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboTeam2Player2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboTeam2Player2.Size = new System.Drawing.Size(202, 26);
             this.cboTeam2Player2.TabIndex = 241;
             // 
             // cboTeam2Player1
             // 
-            this.cboTeam2Player1.Location = new System.Drawing.Point(828, 283);
+            this.cboTeam2Player1.Location = new System.Drawing.Point(829, 220);
             this.cboTeam2Player1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTeam2Player1.MenuManager = this.barManager1;
             this.cboTeam2Player1.Name = "cboTeam2Player1";
@@ -4385,13 +4456,12 @@
             this.cboTeam2Player1.Properties.Appearance.Options.UseFont = true;
             this.cboTeam2Player1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboTeam2Player1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboTeam2Player1.Size = new System.Drawing.Size(202, 26);
             this.cboTeam2Player1.TabIndex = 240;
             // 
             // cboTeam1Player2
             // 
-            this.cboTeam1Player2.Location = new System.Drawing.Point(355, 317);
+            this.cboTeam1Player2.Location = new System.Drawing.Point(356, 254);
             this.cboTeam1Player2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTeam1Player2.MenuManager = this.barManager1;
             this.cboTeam1Player2.Name = "cboTeam1Player2";
@@ -4399,13 +4469,12 @@
             this.cboTeam1Player2.Properties.Appearance.Options.UseFont = true;
             this.cboTeam1Player2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboTeam1Player2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboTeam1Player2.Size = new System.Drawing.Size(205, 26);
             this.cboTeam1Player2.TabIndex = 239;
             // 
             // cboTeam1Player1
             // 
-            this.cboTeam1Player1.Location = new System.Drawing.Point(355, 281);
+            this.cboTeam1Player1.Location = new System.Drawing.Point(356, 218);
             this.cboTeam1Player1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTeam1Player1.MenuManager = this.barManager1;
             this.cboTeam1Player1.Name = "cboTeam1Player1";
@@ -4413,13 +4482,12 @@
             this.cboTeam1Player1.Properties.Appearance.Options.UseFont = true;
             this.cboTeam1Player1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboTeam1Player1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboTeam1Player1.Size = new System.Drawing.Size(205, 26);
             this.cboTeam1Player1.TabIndex = 238;
             // 
             // btnQuanlydanhsachTeam2
             // 
-            this.btnQuanlydanhsachTeam2.Location = new System.Drawing.Point(1130, 150);
+            this.btnQuanlydanhsachTeam2.Location = new System.Drawing.Point(1131, 87);
             this.btnQuanlydanhsachTeam2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQuanlydanhsachTeam2.Name = "btnQuanlydanhsachTeam2";
             this.btnQuanlydanhsachTeam2.Size = new System.Drawing.Size(179, 26);
@@ -4429,7 +4497,7 @@
             // 
             // btnQuanlydanhsachTeam1
             // 
-            this.btnQuanlydanhsachTeam1.Location = new System.Drawing.Point(71, 152);
+            this.btnQuanlydanhsachTeam1.Location = new System.Drawing.Point(72, 89);
             this.btnQuanlydanhsachTeam1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQuanlydanhsachTeam1.Name = "btnQuanlydanhsachTeam1";
             this.btnQuanlydanhsachTeam1.Size = new System.Drawing.Size(179, 26);
@@ -4451,7 +4519,7 @@
             // cboTennisType
             // 
             this.cboTennisType.EditValue = "Đơn Nam";
-            this.cboTennisType.Location = new System.Drawing.Point(589, 63);
+            this.cboTennisType.Location = new System.Drawing.Point(236, 52);
             this.cboTennisType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTennisType.MenuManager = this.barManager1;
             this.cboTennisType.Name = "cboTennisType";
@@ -4473,7 +4541,7 @@
             // 
             this.labelControl92.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl92.Appearance.Options.UseFont = true;
-            this.labelControl92.Location = new System.Drawing.Point(510, 66);
+            this.labelControl92.Location = new System.Drawing.Point(152, 55);
             this.labelControl92.Name = "labelControl92";
             this.labelControl92.Size = new System.Drawing.Size(69, 21);
             this.labelControl92.TabIndex = 233;
@@ -4481,7 +4549,7 @@
             // 
             // txtDonviTennisTeam2
             // 
-            this.txtDonviTennisTeam2.Location = new System.Drawing.Point(828, 218);
+            this.txtDonviTennisTeam2.Location = new System.Drawing.Point(829, 155);
             this.txtDonviTennisTeam2.MenuManager = this.barManager1;
             this.txtDonviTennisTeam2.Name = "txtDonviTennisTeam2";
             this.txtDonviTennisTeam2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
@@ -4491,7 +4559,7 @@
             // 
             // txtDonviTennisTeam1
             // 
-            this.txtDonviTennisTeam1.Location = new System.Drawing.Point(256, 220);
+            this.txtDonviTennisTeam1.Location = new System.Drawing.Point(257, 157);
             this.txtDonviTennisTeam1.MenuManager = this.barManager1;
             this.txtDonviTennisTeam1.Name = "txtDonviTennisTeam1";
             this.txtDonviTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
@@ -4503,7 +4571,7 @@
             // 
             this.labelControl26.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl26.Appearance.Options.UseFont = true;
-            this.labelControl26.Location = new System.Drawing.Point(669, 221);
+            this.labelControl26.Location = new System.Drawing.Point(670, 158);
             this.labelControl26.Name = "labelControl26";
             this.labelControl26.Size = new System.Drawing.Size(47, 21);
             this.labelControl26.TabIndex = 230;
@@ -4512,7 +4580,7 @@
             // numericUpDown5
             // 
             this.numericUpDown5.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.numericUpDown5.Location = new System.Drawing.Point(1120, 284);
+            this.numericUpDown5.Location = new System.Drawing.Point(1121, 221);
             this.numericUpDown5.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -4526,7 +4594,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(1036, 284);
+            this.labelControl4.Location = new System.Drawing.Point(1037, 221);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(77, 21);
             this.labelControl4.TabIndex = 227;
@@ -4535,7 +4603,7 @@
             // numericUpDown6
             // 
             this.numericUpDown6.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.numericUpDown6.Location = new System.Drawing.Point(1120, 318);
+            this.numericUpDown6.Location = new System.Drawing.Point(1121, 255);
             this.numericUpDown6.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -4549,7 +4617,7 @@
             // 
             this.labelControl25.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl25.Appearance.Options.UseFont = true;
-            this.labelControl25.Location = new System.Drawing.Point(1036, 318);
+            this.labelControl25.Location = new System.Drawing.Point(1037, 255);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(77, 21);
             this.labelControl25.TabIndex = 229;
@@ -4557,18 +4625,18 @@
             // 
             // textEdit5
             // 
-            this.textEdit5.Location = new System.Drawing.Point(589, 107);
+            this.textEdit5.Location = new System.Drawing.Point(558, 52);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Size = new System.Drawing.Size(205, 26);
+            this.textEdit5.Size = new System.Drawing.Size(743, 26);
             this.textEdit5.TabIndex = 225;
             // 
             // labelControl69
             // 
             this.labelControl69.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl69.Appearance.Options.UseFont = true;
-            this.labelControl69.Location = new System.Drawing.Point(536, 110);
+            this.labelControl69.Location = new System.Drawing.Point(501, 55);
             this.labelControl69.Name = "labelControl69";
             this.labelControl69.Size = new System.Drawing.Size(43, 19);
             this.labelControl69.TabIndex = 217;
@@ -4576,7 +4644,7 @@
             // 
             // txtHLVTennisTeam1
             // 
-            this.txtHLVTennisTeam1.Location = new System.Drawing.Point(256, 251);
+            this.txtHLVTennisTeam1.Location = new System.Drawing.Point(257, 188);
             this.txtHLVTennisTeam1.MenuManager = this.barManager1;
             this.txtHLVTennisTeam1.Name = "txtHLVTennisTeam1";
             this.txtHLVTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
@@ -4586,7 +4654,7 @@
             // 
             // txtShortNameTeam1
             // 
-            this.txtShortNameTeam1.Location = new System.Drawing.Point(256, 186);
+            this.txtShortNameTeam1.Location = new System.Drawing.Point(257, 123);
             this.txtShortNameTeam1.MenuManager = this.barManager1;
             this.txtShortNameTeam1.Name = "txtShortNameTeam1";
             this.txtShortNameTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
@@ -4597,7 +4665,7 @@
             // nHatgiong1
             // 
             this.nHatgiong1.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nHatgiong1.Location = new System.Drawing.Point(289, 282);
+            this.nHatgiong1.Location = new System.Drawing.Point(290, 219);
             this.nHatgiong1.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -4611,7 +4679,7 @@
             // 
             this.labelControl71.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl71.Appearance.Options.UseFont = true;
-            this.labelControl71.Location = new System.Drawing.Point(677, 254);
+            this.labelControl71.Location = new System.Drawing.Point(678, 191);
             this.labelControl71.Name = "labelControl71";
             this.labelControl71.Size = new System.Drawing.Size(29, 19);
             this.labelControl71.TabIndex = 214;
@@ -4621,7 +4689,7 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(665, 290);
+            this.labelControl11.Location = new System.Drawing.Point(666, 227);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(57, 19);
             this.labelControl11.TabIndex = 92;
@@ -4631,7 +4699,7 @@
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(205, 286);
+            this.labelControl12.Location = new System.Drawing.Point(206, 223);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(77, 21);
             this.labelControl12.TabIndex = 100;
@@ -4639,7 +4707,7 @@
             // 
             // txtHLVTennisTeam2
             // 
-            this.txtHLVTennisTeam2.Location = new System.Drawing.Point(828, 251);
+            this.txtHLVTennisTeam2.Location = new System.Drawing.Point(829, 188);
             this.txtHLVTennisTeam2.MenuManager = this.barManager1;
             this.txtHLVTennisTeam2.Name = "txtHLVTennisTeam2";
             this.txtHLVTennisTeam2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
@@ -4651,7 +4719,7 @@
             // 
             this.labelControl75.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl75.Appearance.Options.UseFont = true;
-            this.labelControl75.Location = new System.Drawing.Point(647, 189);
+            this.labelControl75.Location = new System.Drawing.Point(648, 126);
             this.labelControl75.Name = "labelControl75";
             this.labelControl75.Size = new System.Drawing.Size(86, 21);
             this.labelControl75.TabIndex = 212;
@@ -4659,7 +4727,7 @@
             // 
             // cboTennisTeam2
             // 
-            this.cboTennisTeam2.Location = new System.Drawing.Point(826, 149);
+            this.cboTennisTeam2.Location = new System.Drawing.Point(827, 86);
             this.cboTennisTeam2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTennisTeam2.MenuManager = this.barManager1;
             this.cboTennisTeam2.Name = "cboTennisTeam2";
@@ -4674,7 +4742,7 @@
             // 
             // txtShortNameTeam2
             // 
-            this.txtShortNameTeam2.Location = new System.Drawing.Point(826, 186);
+            this.txtShortNameTeam2.Location = new System.Drawing.Point(827, 123);
             this.txtShortNameTeam2.MenuManager = this.barManager1;
             this.txtShortNameTeam2.Name = "txtShortNameTeam2";
             this.txtShortNameTeam2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
@@ -4684,7 +4752,7 @@
             // 
             // cboTennisTeam1
             // 
-            this.cboTennisTeam1.Location = new System.Drawing.Point(256, 149);
+            this.cboTennisTeam1.Location = new System.Drawing.Point(257, 86);
             this.cboTennisTeam1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTennisTeam1.MenuManager = this.barManager1;
             this.cboTennisTeam1.Name = "cboTennisTeam1";
@@ -4701,7 +4769,7 @@
             // 
             this.labelControl76.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl76.Appearance.Options.UseFont = true;
-            this.labelControl76.Location = new System.Drawing.Point(673, 152);
+            this.labelControl76.Location = new System.Drawing.Point(674, 89);
             this.labelControl76.Name = "labelControl76";
             this.labelControl76.Size = new System.Drawing.Size(25, 21);
             this.labelControl76.TabIndex = 209;
@@ -4711,7 +4779,7 @@
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(665, 324);
+            this.labelControl14.Location = new System.Drawing.Point(666, 261);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(57, 19);
             this.labelControl14.TabIndex = 101;
@@ -4735,7 +4803,7 @@
             // nHatgiong2
             // 
             this.nHatgiong2.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.nHatgiong2.Location = new System.Drawing.Point(289, 316);
+            this.nHatgiong2.Location = new System.Drawing.Point(290, 253);
             this.nHatgiong2.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -4779,7 +4847,7 @@
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(205, 318);
+            this.labelControl13.Location = new System.Drawing.Point(206, 255);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(77, 21);
             this.labelControl13.TabIndex = 104;
@@ -4787,18 +4855,602 @@
             // 
             // xtraTabControl1
             // 
+            this.xtraTabControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.xtraTabControl1.Appearance.Options.UseFont = true;
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1343, 729);
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage3;
+            this.xtraTabControl1.Size = new System.Drawing.Size(1343, 798);
             this.xtraTabControl1.TabIndex = 131;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage3,
             this.xtraTabPage1,
             this.xtraTabPage2});
             // 
+            // xtraTabPage3
+            // 
+            this.xtraTabPage3.Appearance.Header.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.xtraTabPage3.Appearance.Header.Options.UseFont = true;
+            this.xtraTabPage3.Controls.Add(this.comboBoxEdit2);
+            this.xtraTabPage3.Controls.Add(this.labelControl16);
+            this.xtraTabPage3.Controls.Add(this.simpleButton46);
+            this.xtraTabPage3.Controls.Add(this.comboBoxEdit1);
+            this.xtraTabPage3.Controls.Add(this.labelControl15);
+            this.xtraTabPage3.Controls.Add(this.simpleButton43);
+            this.xtraTabPage3.Controls.Add(this.simpleButton44);
+            this.xtraTabPage3.Controls.Add(this.gridSplitContainer9);
+            this.xtraTabPage3.Controls.Add(this.gridSplitContainer8);
+            this.xtraTabPage3.Name = "xtraTabPage3";
+            this.xtraTabPage3.Size = new System.Drawing.Size(1336, 762);
+            this.xtraTabPage3.Text = "Cầu thủ/Profile/Rankings";
+            // 
+            // comboBoxEdit2
+            // 
+            this.comboBoxEdit2.Location = new System.Drawing.Point(908, 343);
+            this.comboBoxEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxEdit2.MenuManager = this.barManager1;
+            this.comboBoxEdit2.Name = "comboBoxEdit2";
+            this.comboBoxEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.comboBoxEdit2.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit2.Properties.Items.AddRange(new object[] {
+            "Tên",
+            "Player Profile"});
+            this.comboBoxEdit2.Size = new System.Drawing.Size(205, 26);
+            this.comboBoxEdit2.TabIndex = 254;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl16.Appearance.Options.UseFont = true;
+            this.labelControl16.Location = new System.Drawing.Point(843, 346);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(59, 21);
+            this.labelControl16.TabIndex = 253;
+            this.labelControl16.Text = "Đồ họa:";
+            // 
+            // simpleButton46
+            // 
+            this.simpleButton46.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton46.Appearance.Options.UseFont = true;
+            this.simpleButton46.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton46.Location = new System.Drawing.Point(1129, 341);
+            this.simpleButton46.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton46.Name = "simpleButton46";
+            this.simpleButton46.Size = new System.Drawing.Size(59, 30);
+            this.simpleButton46.TabIndex = 255;
+            this.simpleButton46.Text = "Bật";
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.Location = new System.Drawing.Point(171, 345);
+            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxEdit1.MenuManager = this.barManager1;
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            "Tên",
+            "Player Profile"});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(205, 26);
+            this.comboBoxEdit1.TabIndex = 243;
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl15.Appearance.Options.UseFont = true;
+            this.labelControl15.Location = new System.Drawing.Point(106, 348);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(59, 21);
+            this.labelControl15.TabIndex = 242;
+            this.labelControl15.Text = "Đồ họa:";
+            // 
+            // simpleButton43
+            // 
+            this.simpleButton43.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton43.Appearance.Options.UseFont = true;
+            this.simpleButton43.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton43.Location = new System.Drawing.Point(642, 348);
+            this.simpleButton43.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton43.Name = "simpleButton43";
+            this.simpleButton43.Size = new System.Drawing.Size(64, 30);
+            this.simpleButton43.TabIndex = 252;
+            this.simpleButton43.Text = "Tắt";
+            this.simpleButton43.ToolTip = "Xuống tất cả đồ họa";
+            // 
+            // simpleButton44
+            // 
+            this.simpleButton44.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton44.Appearance.Options.UseFont = true;
+            this.simpleButton44.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton44.Location = new System.Drawing.Point(392, 343);
+            this.simpleButton44.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton44.Name = "simpleButton44";
+            this.simpleButton44.Size = new System.Drawing.Size(59, 30);
+            this.simpleButton44.TabIndex = 251;
+            this.simpleButton44.Text = "Bật";
+            // 
+            // gridSplitContainer9
+            // 
+            this.gridSplitContainer9.Grid = this.gridControl4;
+            this.gridSplitContainer9.Location = new System.Drawing.Point(740, 24);
+            this.gridSplitContainer9.Name = "gridSplitContainer9";
+            this.gridSplitContainer9.Panel1.Controls.Add(this.gridControl4);
+            this.gridSplitContainer9.Size = new System.Drawing.Size(517, 284);
+            this.gridSplitContainer9.TabIndex = 152;
+            // 
+            // gridControl4
+            // 
+            this.gridControl4.DataSource = this.bsTennisPlayer2;
+            this.gridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl4.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl4.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.gridControl4.Location = new System.Drawing.Point(0, 0);
+            this.gridControl4.MainView = this.gridView11;
+            this.gridControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl4.MenuManager = this.barManager1;
+            this.gridControl4.Name = "gridControl4";
+            this.gridControl4.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit10});
+            this.gridControl4.Size = new System.Drawing.Size(517, 284);
+            this.gridControl4.TabIndex = 151;
+            this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView11,
+            this.gridView12});
+            // 
+            // bsTennisPlayer2
+            // 
+            this.bsTennisPlayer2.DataSource = typeof(HDCGStudio.Object.Tennis.Player);
+            // 
+            // gridView11
+            // 
+            this.gridView11.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn30,
+            this.gridColumn32,
+            this.gridColumn33,
+            this.gridColumn34,
+            this.gridColumn35,
+            this.gridColumn39,
+            this.gridColumn49,
+            this.gridColumn50,
+            this.gridColumn51,
+            this.gridColumn52,
+            this.gridColumn53,
+            this.gridColumn54,
+            this.gridColumn55,
+            this.gridColumn56,
+            this.gridColumn57});
+            this.gridView11.GridControl = this.gridControl4;
+            this.gridView11.Name = "gridView11";
+            this.gridView11.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView11.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView11.OptionsBehavior.Editable = false;
+            this.gridView11.OptionsCustomization.AllowFilter = false;
+            this.gridView11.OptionsCustomization.AllowGroup = false;
+            this.gridView11.OptionsMenu.EnableColumnMenu = false;
+            this.gridView11.OptionsMenu.EnableFooterMenu = false;
+            this.gridView11.OptionsMenu.EnableGroupPanelMenu = false;
+            this.gridView11.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView11.OptionsView.ColumnAutoWidth = false;
+            this.gridView11.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridView11.OptionsView.EnableAppearanceOddRow = true;
+            this.gridView11.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn30
+            // 
+            this.gridColumn30.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn30.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn30.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn30.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn30.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn30.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn30.Caption = "Họ tên";
+            this.gridColumn30.FieldName = "Name";
+            this.gridColumn30.Name = "gridColumn30";
+            this.gridColumn30.Visible = true;
+            this.gridColumn30.VisibleIndex = 0;
+            this.gridColumn30.Width = 110;
+            // 
+            // gridColumn32
+            // 
+            this.gridColumn32.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn32.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn32.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn32.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn32.Caption = "Tên ngắn";
+            this.gridColumn32.FieldName = "ShortName";
+            this.gridColumn32.Name = "gridColumn32";
+            this.gridColumn32.Visible = true;
+            this.gridColumn32.VisibleIndex = 1;
+            this.gridColumn32.Width = 87;
+            // 
+            // gridColumn33
+            // 
+            this.gridColumn33.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn33.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn33.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn33.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn33.Caption = "Hạt giống";
+            this.gridColumn33.FieldName = "HatGiong";
+            this.gridColumn33.Name = "gridColumn33";
+            this.gridColumn33.Visible = true;
+            this.gridColumn33.VisibleIndex = 2;
+            this.gridColumn33.Width = 83;
+            // 
+            // gridColumn34
+            // 
+            this.gridColumn34.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn34.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn34.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn34.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn34.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn34.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn34.Caption = "Rank";
+            this.gridColumn34.FieldName = "Rank";
+            this.gridColumn34.Name = "gridColumn34";
+            this.gridColumn34.Visible = true;
+            this.gridColumn34.VisibleIndex = 3;
+            this.gridColumn34.Width = 55;
+            // 
+            // gridColumn35
+            // 
+            this.gridColumn35.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn35.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn35.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn35.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn35.Caption = "Đội trưởng";
+            this.gridColumn35.FieldName = "isCaptain";
+            this.gridColumn35.Name = "gridColumn35";
+            this.gridColumn35.Visible = true;
+            this.gridColumn35.VisibleIndex = 4;
+            this.gridColumn35.Width = 87;
+            // 
+            // gridColumn39
+            // 
+            this.gridColumn39.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn39.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn39.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn39.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn39.Caption = "Nam";
+            this.gridColumn39.FieldName = "IsMale";
+            this.gridColumn39.Name = "gridColumn39";
+            this.gridColumn39.Visible = true;
+            this.gridColumn39.VisibleIndex = 5;
+            // 
+            // gridColumn49
+            // 
+            this.gridColumn49.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn49.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn49.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn49.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn49.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn49.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn49.Caption = "Quốc gia";
+            this.gridColumn49.FieldName = "Nation";
+            this.gridColumn49.Name = "gridColumn49";
+            this.gridColumn49.Visible = true;
+            this.gridColumn49.VisibleIndex = 6;
+            // 
+            // gridColumn50
+            // 
+            this.gridColumn50.Caption = "Tuổi";
+            this.gridColumn50.FieldName = "Age";
+            this.gridColumn50.Name = "gridColumn50";
+            this.gridColumn50.Visible = true;
+            this.gridColumn50.VisibleIndex = 7;
+            // 
+            // gridColumn51
+            // 
+            this.gridColumn51.Caption = "Chiều cao";
+            this.gridColumn51.FieldName = "Height";
+            this.gridColumn51.Name = "gridColumn51";
+            this.gridColumn51.Visible = true;
+            this.gridColumn51.VisibleIndex = 8;
+            // 
+            // gridColumn52
+            // 
+            this.gridColumn52.Caption = "Cân nặng";
+            this.gridColumn52.FieldName = "Weight";
+            this.gridColumn52.Name = "gridColumn52";
+            this.gridColumn52.Visible = true;
+            this.gridColumn52.VisibleIndex = 9;
+            // 
+            // gridColumn53
+            // 
+            this.gridColumn53.Caption = "World Ranking";
+            this.gridColumn53.FieldName = "WorldRanking";
+            this.gridColumn53.Name = "gridColumn53";
+            this.gridColumn53.Visible = true;
+            this.gridColumn53.VisibleIndex = 10;
+            // 
+            // gridColumn54
+            // 
+            this.gridColumn54.Caption = "Singles Wins";
+            this.gridColumn54.FieldName = "SingleWin";
+            this.gridColumn54.Name = "gridColumn54";
+            this.gridColumn54.Visible = true;
+            this.gridColumn54.VisibleIndex = 11;
+            // 
+            // gridColumn55
+            // 
+            this.gridColumn55.Caption = "Singles Losses";
+            this.gridColumn55.FieldName = "SingleLose";
+            this.gridColumn55.Name = "gridColumn55";
+            this.gridColumn55.Visible = true;
+            this.gridColumn55.VisibleIndex = 12;
+            // 
+            // gridColumn56
+            // 
+            this.gridColumn56.Caption = "Appearances";
+            this.gridColumn56.FieldName = "Appearances";
+            this.gridColumn56.Name = "gridColumn56";
+            this.gridColumn56.Visible = true;
+            this.gridColumn56.VisibleIndex = 13;
+            // 
+            // gridColumn57
+            // 
+            this.gridColumn57.Caption = "Debut";
+            this.gridColumn57.FieldName = "Debut";
+            this.gridColumn57.Name = "gridColumn57";
+            this.gridColumn57.Visible = true;
+            this.gridColumn57.VisibleIndex = 14;
+            // 
+            // repositoryItemCheckEdit10
+            // 
+            this.repositoryItemCheckEdit10.AutoHeight = false;
+            this.repositoryItemCheckEdit10.Caption = "Check";
+            this.repositoryItemCheckEdit10.Name = "repositoryItemCheckEdit10";
+            // 
+            // gridView12
+            // 
+            this.gridView12.GridControl = this.gridControl4;
+            this.gridView12.Name = "gridView12";
+            // 
+            // gridSplitContainer8
+            // 
+            this.gridSplitContainer8.Grid = this.gridControl3;
+            this.gridSplitContainer8.Location = new System.Drawing.Point(106, 24);
+            this.gridSplitContainer8.Name = "gridSplitContainer8";
+            this.gridSplitContainer8.Panel1.Controls.Add(this.gridControl3);
+            this.gridSplitContainer8.Size = new System.Drawing.Size(517, 284);
+            this.gridSplitContainer8.TabIndex = 151;
+            // 
+            // gridControl3
+            // 
+            this.gridControl3.DataSource = this.bsTennisPlayer1;
+            this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl3.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl3.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.gridControl3.Location = new System.Drawing.Point(0, 0);
+            this.gridControl3.MainView = this.gridView9;
+            this.gridControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl3.MenuManager = this.barManager1;
+            this.gridControl3.Name = "gridControl3";
+            this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit9});
+            this.gridControl3.Size = new System.Drawing.Size(517, 284);
+            this.gridControl3.TabIndex = 151;
+            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView9,
+            this.gridView10});
+            // 
+            // bsTennisPlayer1
+            // 
+            this.bsTennisPlayer1.DataSource = typeof(HDCGStudio.Object.Tennis.Player);
+            // 
+            // gridView9
+            // 
+            this.gridView9.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn28,
+            this.gridColumn29,
+            this.gridColumn31,
+            this.gridColumn36,
+            this.gridColumn37,
+            this.gridColumn38,
+            this.gridColumn40,
+            this.gridColumn41,
+            this.gridColumn42,
+            this.gridColumn43,
+            this.gridColumn44,
+            this.gridColumn45,
+            this.gridColumn46,
+            this.gridColumn47,
+            this.gridColumn48});
+            this.gridView9.GridControl = this.gridControl3;
+            this.gridView9.Name = "gridView9";
+            this.gridView9.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView9.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView9.OptionsBehavior.Editable = false;
+            this.gridView9.OptionsCustomization.AllowFilter = false;
+            this.gridView9.OptionsCustomization.AllowGroup = false;
+            this.gridView9.OptionsMenu.EnableColumnMenu = false;
+            this.gridView9.OptionsMenu.EnableFooterMenu = false;
+            this.gridView9.OptionsMenu.EnableGroupPanelMenu = false;
+            this.gridView9.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView9.OptionsView.ColumnAutoWidth = false;
+            this.gridView9.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridView9.OptionsView.EnableAppearanceOddRow = true;
+            this.gridView9.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn28
+            // 
+            this.gridColumn28.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn28.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn28.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn28.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn28.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn28.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn28.Caption = "Họ tên";
+            this.gridColumn28.FieldName = "Name";
+            this.gridColumn28.Name = "gridColumn28";
+            this.gridColumn28.Visible = true;
+            this.gridColumn28.VisibleIndex = 0;
+            this.gridColumn28.Width = 110;
+            // 
+            // gridColumn29
+            // 
+            this.gridColumn29.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn29.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn29.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn29.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn29.Caption = "Tên ngắn";
+            this.gridColumn29.FieldName = "ShortName";
+            this.gridColumn29.Name = "gridColumn29";
+            this.gridColumn29.Visible = true;
+            this.gridColumn29.VisibleIndex = 1;
+            this.gridColumn29.Width = 87;
+            // 
+            // gridColumn31
+            // 
+            this.gridColumn31.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn31.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn31.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn31.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn31.Caption = "Hạt giống";
+            this.gridColumn31.FieldName = "HatGiong";
+            this.gridColumn31.Name = "gridColumn31";
+            this.gridColumn31.Visible = true;
+            this.gridColumn31.VisibleIndex = 2;
+            this.gridColumn31.Width = 83;
+            // 
+            // gridColumn36
+            // 
+            this.gridColumn36.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn36.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn36.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn36.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn36.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn36.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn36.Caption = "Rank";
+            this.gridColumn36.FieldName = "Rank";
+            this.gridColumn36.Name = "gridColumn36";
+            this.gridColumn36.Visible = true;
+            this.gridColumn36.VisibleIndex = 3;
+            this.gridColumn36.Width = 55;
+            // 
+            // gridColumn37
+            // 
+            this.gridColumn37.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn37.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn37.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn37.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn37.Caption = "Đội trưởng";
+            this.gridColumn37.FieldName = "isCaptain";
+            this.gridColumn37.Name = "gridColumn37";
+            this.gridColumn37.Visible = true;
+            this.gridColumn37.VisibleIndex = 4;
+            this.gridColumn37.Width = 87;
+            // 
+            // gridColumn38
+            // 
+            this.gridColumn38.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn38.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn38.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn38.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn38.Caption = "Nam";
+            this.gridColumn38.FieldName = "IsMale";
+            this.gridColumn38.Name = "gridColumn38";
+            this.gridColumn38.Visible = true;
+            this.gridColumn38.VisibleIndex = 5;
+            // 
+            // gridColumn40
+            // 
+            this.gridColumn40.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn40.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn40.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn40.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn40.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn40.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn40.Caption = "Quốc gia";
+            this.gridColumn40.FieldName = "Nation";
+            this.gridColumn40.Name = "gridColumn40";
+            this.gridColumn40.Visible = true;
+            this.gridColumn40.VisibleIndex = 6;
+            // 
+            // gridColumn41
+            // 
+            this.gridColumn41.Caption = "Tuổi";
+            this.gridColumn41.FieldName = "Age";
+            this.gridColumn41.Name = "gridColumn41";
+            this.gridColumn41.Visible = true;
+            this.gridColumn41.VisibleIndex = 7;
+            // 
+            // gridColumn42
+            // 
+            this.gridColumn42.Caption = "Chiều cao";
+            this.gridColumn42.FieldName = "Height";
+            this.gridColumn42.Name = "gridColumn42";
+            this.gridColumn42.Visible = true;
+            this.gridColumn42.VisibleIndex = 8;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.Caption = "Cân nặng";
+            this.gridColumn43.FieldName = "Weight";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.Visible = true;
+            this.gridColumn43.VisibleIndex = 9;
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.Caption = "World Ranking";
+            this.gridColumn44.FieldName = "WorldRanking";
+            this.gridColumn44.Name = "gridColumn44";
+            this.gridColumn44.Visible = true;
+            this.gridColumn44.VisibleIndex = 10;
+            // 
+            // gridColumn45
+            // 
+            this.gridColumn45.Caption = "Singles Wins";
+            this.gridColumn45.FieldName = "SingleWin";
+            this.gridColumn45.Name = "gridColumn45";
+            this.gridColumn45.Visible = true;
+            this.gridColumn45.VisibleIndex = 11;
+            // 
+            // gridColumn46
+            // 
+            this.gridColumn46.Caption = "Singles Losses";
+            this.gridColumn46.FieldName = "SingleLose";
+            this.gridColumn46.Name = "gridColumn46";
+            this.gridColumn46.Visible = true;
+            this.gridColumn46.VisibleIndex = 12;
+            // 
+            // gridColumn47
+            // 
+            this.gridColumn47.Caption = "Appearances";
+            this.gridColumn47.FieldName = "Appearances";
+            this.gridColumn47.Name = "gridColumn47";
+            this.gridColumn47.Visible = true;
+            this.gridColumn47.VisibleIndex = 13;
+            // 
+            // gridColumn48
+            // 
+            this.gridColumn48.Caption = "Debut";
+            this.gridColumn48.FieldName = "Debut";
+            this.gridColumn48.Name = "gridColumn48";
+            this.gridColumn48.Visible = true;
+            this.gridColumn48.VisibleIndex = 14;
+            // 
+            // repositoryItemCheckEdit9
+            // 
+            this.repositoryItemCheckEdit9.AutoHeight = false;
+            this.repositoryItemCheckEdit9.Caption = "Check";
+            this.repositoryItemCheckEdit9.Name = "repositoryItemCheckEdit9";
+            // 
+            // gridView10
+            // 
+            this.gridView10.GridControl = this.gridControl3;
+            this.gridView10.Name = "gridView10";
+            // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.nTiebreak1);
+            this.xtraTabPage1.Controls.Add(this.nTiebreak2);
+            this.xtraTabPage1.Controls.Add(this.cbTiebreak);
             this.xtraTabPage1.Controls.Add(this.simpleButton41);
             this.xtraTabPage1.Controls.Add(this.simpleButton40);
             this.xtraTabPage1.Controls.Add(this.simpleButton32);
@@ -4819,8 +5471,8 @@
             this.xtraTabPage1.Controls.Add(this.labelControl93);
             this.xtraTabPage1.Controls.Add(this.btnOnTySoLonTennis);
             this.xtraTabPage1.Controls.Add(this.simpleButton39);
-            this.xtraTabPage1.Controls.Add(this.checkBox2);
-            this.xtraTabPage1.Controls.Add(this.checkBox1);
+            this.xtraTabPage1.Controls.Add(this.ck5set);
+            this.xtraTabPage1.Controls.Add(this.ck3set);
             this.xtraTabPage1.Controls.Add(this.groupControl9);
             this.xtraTabPage1.Controls.Add(this.rSet5);
             this.xtraTabPage1.Controls.Add(this.rSet2);
@@ -4849,15 +5501,53 @@
             this.xtraTabPage1.Controls.Add(this.nDiemSet3Player1);
             this.xtraTabPage1.Controls.Add(this.nDiemSet1Player2);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1336, 694);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1336, 762);
             this.xtraTabPage1.Text = "Tỷ số/Thông số";
+            // 
+            // nTiebreak1
+            // 
+            this.nTiebreak1.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.nTiebreak1.Location = new System.Drawing.Point(481, 128);
+            this.nTiebreak1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nTiebreak1.Name = "nTiebreak1";
+            this.nTiebreak1.Size = new System.Drawing.Size(121, 31);
+            this.nTiebreak1.TabIndex = 261;
+            this.nTiebreak1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nTiebreak2
+            // 
+            this.nTiebreak2.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.nTiebreak2.Location = new System.Drawing.Point(783, 128);
+            this.nTiebreak2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nTiebreak2.Name = "nTiebreak2";
+            this.nTiebreak2.Size = new System.Drawing.Size(121, 31);
+            this.nTiebreak2.TabIndex = 262;
+            // 
+            // cbTiebreak
+            // 
+            this.cbTiebreak.AutoSize = true;
+            this.cbTiebreak.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.cbTiebreak.Location = new System.Drawing.Point(652, 132);
+            this.cbTiebreak.Name = "cbTiebreak";
+            this.cbTiebreak.Size = new System.Drawing.Size(105, 25);
+            this.cbTiebreak.TabIndex = 251;
+            this.cbTiebreak.Text = "Tiebreak";
+            this.cbTiebreak.UseVisualStyleBackColor = true;
             // 
             // simpleButton41
             // 
             this.simpleButton41.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.simpleButton41.Appearance.Options.UseFont = true;
             this.simpleButton41.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton41.Location = new System.Drawing.Point(225, 660);
+            this.simpleButton41.Location = new System.Drawing.Point(225, 719);
             this.simpleButton41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton41.Name = "simpleButton41";
             this.simpleButton41.Size = new System.Drawing.Size(146, 30);
@@ -4871,7 +5561,7 @@
             this.simpleButton40.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.simpleButton40.Appearance.Options.UseFont = true;
             this.simpleButton40.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton40.Location = new System.Drawing.Point(557, 660);
+            this.simpleButton40.Location = new System.Drawing.Point(557, 719);
             this.simpleButton40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton40.Name = "simpleButton40";
             this.simpleButton40.Size = new System.Drawing.Size(175, 30);
@@ -4884,7 +5574,7 @@
             this.simpleButton32.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.simpleButton32.Appearance.Options.UseFont = true;
             this.simpleButton32.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton32.Location = new System.Drawing.Point(390, 660);
+            this.simpleButton32.Location = new System.Drawing.Point(390, 719);
             this.simpleButton32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton32.Name = "simpleButton32";
             this.simpleButton32.Size = new System.Drawing.Size(146, 30);
@@ -4922,7 +5612,7 @@
             // nTySo1
             // 
             this.nTySo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nTySo1.Location = new System.Drawing.Point(500, 522);
+            this.nTySo1.Location = new System.Drawing.Point(500, 581);
             this.nTySo1.Name = "nTySo1";
             this.nTySo1.Size = new System.Drawing.Size(102, 75);
             this.nTySo1.TabIndex = 245;
@@ -4930,7 +5620,7 @@
             // nTySo2
             // 
             this.nTySo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nTySo2.Location = new System.Drawing.Point(827, 522);
+            this.nTySo2.Location = new System.Drawing.Point(827, 581);
             this.nTySo2.Name = "nTySo2";
             this.nTySo2.Size = new System.Drawing.Size(102, 75);
             this.nTySo2.TabIndex = 244;
@@ -4939,7 +5629,7 @@
             // 
             this.labelControl94.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
             this.labelControl94.Appearance.Options.UseFont = true;
-            this.labelControl94.Location = new System.Drawing.Point(333, 543);
+            this.labelControl94.Location = new System.Drawing.Point(333, 602);
             this.labelControl94.Name = "labelControl94";
             this.labelControl94.Size = new System.Drawing.Size(148, 29);
             this.labelControl94.TabIndex = 236;
@@ -4975,6 +5665,8 @@
             this.cboPointTeam1.Name = "cboPointTeam1";
             this.cboPointTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 16.8F, System.Drawing.FontStyle.Bold);
             this.cboPointTeam1.Properties.Appearance.Options.UseFont = true;
+            this.cboPointTeam1.Properties.Appearance.Options.UseTextOptions = true;
+            this.cboPointTeam1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.cboPointTeam1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboPointTeam1.Properties.Items.AddRange(new object[] {
@@ -4991,7 +5683,7 @@
             // 
             // cboThongtinphu
             // 
-            this.cboThongtinphu.Location = new System.Drawing.Point(557, 622);
+            this.cboThongtinphu.Location = new System.Drawing.Point(557, 681);
             this.cboThongtinphu.MenuManager = this.barManager1;
             this.cboThongtinphu.Name = "cboThongtinphu";
             this.cboThongtinphu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -5021,7 +5713,7 @@
             // 
             this.ckWithThongTinPhu.AutoSize = true;
             this.ckWithThongTinPhu.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.ckWithThongTinPhu.Location = new System.Drawing.Point(390, 621);
+            this.ckWithThongTinPhu.Location = new System.Drawing.Point(390, 680);
             this.ckWithThongTinPhu.Name = "ckWithThongTinPhu";
             this.ckWithThongTinPhu.Size = new System.Drawing.Size(156, 22);
             this.ckWithThongTinPhu.TabIndex = 240;
@@ -5088,7 +5780,7 @@
             this.btnOnTySoLonTennis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnOnTySoLonTennis.Appearance.Options.UseFont = true;
             this.btnOnTySoLonTennis.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOnTySoLonTennis.Location = new System.Drawing.Point(852, 616);
+            this.btnOnTySoLonTennis.Location = new System.Drawing.Point(852, 675);
             this.btnOnTySoLonTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOnTySoLonTennis.Name = "btnOnTySoLonTennis";
             this.btnOnTySoLonTennis.Size = new System.Drawing.Size(146, 30);
@@ -5101,7 +5793,7 @@
             this.simpleButton39.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.simpleButton39.Appearance.Options.UseFont = true;
             this.simpleButton39.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton39.Location = new System.Drawing.Point(225, 616);
+            this.simpleButton39.Location = new System.Drawing.Point(225, 675);
             this.simpleButton39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton39.Name = "simpleButton39";
             this.simpleButton39.Size = new System.Drawing.Size(146, 30);
@@ -5109,29 +5801,31 @@
             this.simpleButton39.Text = "Lên Tỷ số nhỏ";
             this.simpleButton39.Click += new System.EventHandler(this.simpleButton39_Click);
             // 
-            // checkBox2
+            // ck5set
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
-            this.checkBox2.Location = new System.Drawing.Point(333, 13);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(74, 25);
-            this.checkBox2.TabIndex = 226;
-            this.checkBox2.Text = "5 set";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.ck5set.AutoSize = true;
+            this.ck5set.Checked = true;
+            this.ck5set.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ck5set.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.ck5set.Location = new System.Drawing.Point(333, 13);
+            this.ck5set.Name = "ck5set";
+            this.ck5set.Size = new System.Drawing.Size(74, 25);
+            this.ck5set.TabIndex = 226;
+            this.ck5set.Text = "5 set";
+            this.ck5set.UseVisualStyleBackColor = true;
+            this.ck5set.CheckedChanged += new System.EventHandler(this.ck5set_CheckedChanged);
             // 
-            // checkBox1
+            // ck3set
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.Location = new System.Drawing.Point(225, 12);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(74, 25);
-            this.checkBox1.TabIndex = 225;
-            this.checkBox1.Text = "3 set";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ck3set.AutoSize = true;
+            this.ck3set.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.ck3set.Location = new System.Drawing.Point(225, 12);
+            this.ck3set.Name = "ck3set";
+            this.ck3set.Size = new System.Drawing.Size(74, 25);
+            this.ck3set.TabIndex = 225;
+            this.ck3set.Text = "3 set";
+            this.ck3set.UseVisualStyleBackColor = true;
+            this.ck3set.CheckedChanged += new System.EventHandler(this.ck3set_CheckedChanged);
             // 
             // groupControl9
             // 
@@ -5178,11 +5872,214 @@
             this.groupControl9.Controls.Add(this.numericUpDown18);
             this.groupControl9.Controls.Add(this.numericUpDown19);
             this.groupControl9.Controls.Add(this.numericUpDown20);
-            this.groupControl9.Location = new System.Drawing.Point(334, 124);
+            this.groupControl9.Location = new System.Drawing.Point(334, 179);
             this.groupControl9.Name = "groupControl9";
             this.groupControl9.Size = new System.Drawing.Size(733, 386);
             this.groupControl9.TabIndex = 195;
             this.groupControl9.Text = "Thông số";
+            // 
+            // txtUnforced
+            // 
+            this.txtUnforced.EditValue = "UNFORCED ERRORS";
+            this.txtUnforced.Location = new System.Drawing.Point(262, 291);
+            this.txtUnforced.MenuManager = this.barManager1;
+            this.txtUnforced.Name = "txtUnforced";
+            this.txtUnforced.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtUnforced.Properties.Appearance.Options.UseFont = true;
+            this.txtUnforced.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtUnforced.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtUnforced.Size = new System.Drawing.Size(205, 26);
+            this.txtUnforced.TabIndex = 260;
+            // 
+            // txtBreakpoint
+            // 
+            this.txtBreakpoint.EditValue = "BREAK POINTS WON";
+            this.txtBreakpoint.Location = new System.Drawing.Point(262, 258);
+            this.txtBreakpoint.MenuManager = this.barManager1;
+            this.txtBreakpoint.Name = "txtBreakpoint";
+            this.txtBreakpoint.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtBreakpoint.Properties.Appearance.Options.UseFont = true;
+            this.txtBreakpoint.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtBreakpoint.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtBreakpoint.Size = new System.Drawing.Size(205, 26);
+            this.txtBreakpoint.TabIndex = 259;
+            // 
+            // txtPointWon
+            // 
+            this.txtPointWon.EditValue = "POINT WON AT NET";
+            this.txtPointWon.Location = new System.Drawing.Point(262, 227);
+            this.txtPointWon.MenuManager = this.barManager1;
+            this.txtPointWon.Name = "txtPointWon";
+            this.txtPointWon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtPointWon.Properties.Appearance.Options.UseFont = true;
+            this.txtPointWon.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPointWon.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtPointWon.Size = new System.Drawing.Size(205, 26);
+            this.txtPointWon.TabIndex = 258;
+            // 
+            // txtBackhand
+            // 
+            this.txtBackhand.EditValue = "BACKHAND WINNERS";
+            this.txtBackhand.Location = new System.Drawing.Point(262, 197);
+            this.txtBackhand.MenuManager = this.barManager1;
+            this.txtBackhand.Name = "txtBackhand";
+            this.txtBackhand.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtBackhand.Properties.Appearance.Options.UseFont = true;
+            this.txtBackhand.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtBackhand.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtBackhand.Size = new System.Drawing.Size(205, 26);
+            this.txtBackhand.TabIndex = 257;
+            // 
+            // txtForehand
+            // 
+            this.txtForehand.EditValue = "FOREHAND WINNERS";
+            this.txtForehand.Location = new System.Drawing.Point(262, 168);
+            this.txtForehand.MenuManager = this.barManager1;
+            this.txtForehand.Name = "txtForehand";
+            this.txtForehand.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtForehand.Properties.Appearance.Options.UseFont = true;
+            this.txtForehand.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtForehand.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtForehand.Size = new System.Drawing.Size(205, 26);
+            this.txtForehand.TabIndex = 256;
+            // 
+            // txtDoubleF
+            // 
+            this.txtDoubleF.EditValue = "DOUBLE FAULTS";
+            this.txtDoubleF.Location = new System.Drawing.Point(262, 138);
+            this.txtDoubleF.MenuManager = this.barManager1;
+            this.txtDoubleF.Name = "txtDoubleF";
+            this.txtDoubleF.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtDoubleF.Properties.Appearance.Options.UseFont = true;
+            this.txtDoubleF.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtDoubleF.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtDoubleF.Size = new System.Drawing.Size(205, 26);
+            this.txtDoubleF.TabIndex = 255;
+            // 
+            // txtAces
+            // 
+            this.txtAces.EditValue = "ACES";
+            this.txtAces.Location = new System.Drawing.Point(262, 105);
+            this.txtAces.MenuManager = this.barManager1;
+            this.txtAces.Name = "txtAces";
+            this.txtAces.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtAces.Properties.Appearance.Options.UseFont = true;
+            this.txtAces.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtAces.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtAces.Size = new System.Drawing.Size(205, 26);
+            this.txtAces.TabIndex = 254;
+            // 
+            // txtServesWon
+            // 
+            this.txtServesWon.EditValue = "% 1st SERVES WON";
+            this.txtServesWon.Location = new System.Drawing.Point(262, 72);
+            this.txtServesWon.MenuManager = this.barManager1;
+            this.txtServesWon.Name = "txtServesWon";
+            this.txtServesWon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtServesWon.Properties.Appearance.Options.UseFont = true;
+            this.txtServesWon.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtServesWon.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtServesWon.Size = new System.Drawing.Size(205, 26);
+            this.txtServesWon.TabIndex = 253;
+            // 
+            // txtServesIn
+            // 
+            this.txtServesIn.EditValue = "% 1st SERVES IN";
+            this.txtServesIn.Location = new System.Drawing.Point(262, 40);
+            this.txtServesIn.MenuManager = this.barManager1;
+            this.txtServesIn.Name = "txtServesIn";
+            this.txtServesIn.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtServesIn.Properties.Appearance.Options.UseFont = true;
+            this.txtServesIn.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtServesIn.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtServesIn.Size = new System.Drawing.Size(205, 26);
+            this.txtServesIn.TabIndex = 252;
+            // 
+            // simpleButton42
+            // 
+            this.simpleButton42.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton42.Appearance.Options.UseFont = true;
+            this.simpleButton42.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton42.Location = new System.Drawing.Point(348, 345);
+            this.simpleButton42.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton42.Name = "simpleButton42";
+            this.simpleButton42.Size = new System.Drawing.Size(61, 30);
+            this.simpleButton42.TabIndex = 251;
+            this.simpleButton42.Text = "Tắt";
+            this.simpleButton42.ToolTip = "Tắt Thông số nhỏ/Thống kê lớn";
+            this.simpleButton42.Click += new System.EventHandler(this.simpleButton42_Click);
+            // 
+            // rBreakPointsWon
+            // 
+            this.rBreakPointsWon.AutoSize = true;
+            this.rBreakPointsWon.Location = new System.Drawing.Point(103, 266);
+            this.rBreakPointsWon.Name = "rBreakPointsWon";
+            this.rBreakPointsWon.Size = new System.Drawing.Size(17, 16);
+            this.rBreakPointsWon.TabIndex = 243;
+            this.rBreakPointsWon.UseVisualStyleBackColor = true;
+            // 
+            // rUnforcedErrors
+            // 
+            this.rUnforcedErrors.AutoSize = true;
+            this.rUnforcedErrors.Location = new System.Drawing.Point(103, 296);
+            this.rUnforcedErrors.Name = "rUnforcedErrors";
+            this.rUnforcedErrors.Size = new System.Drawing.Size(17, 16);
+            this.rUnforcedErrors.TabIndex = 242;
+            this.rUnforcedErrors.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown1.Location = new System.Drawing.Point(493, 262);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown1.TabIndex = 241;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown2.Location = new System.Drawing.Point(126, 261);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown2.TabIndex = 240;
+            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown3.Location = new System.Drawing.Point(492, 294);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown3.TabIndex = 238;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.numericUpDown4.Location = new System.Drawing.Point(126, 292);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(100, 25);
+            this.numericUpDown4.TabIndex = 237;
+            this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // rBackhand
             // 
@@ -5536,7 +6433,7 @@
             this.simpleButton31.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.simpleButton31.Appearance.Options.UseFont = true;
             this.simpleButton31.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton31.Location = new System.Drawing.Point(1031, 614);
+            this.simpleButton31.Location = new System.Drawing.Point(1031, 673);
             this.simpleButton31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton31.Name = "simpleButton31";
             this.simpleButton31.Size = new System.Drawing.Size(146, 30);
@@ -5715,14 +6612,13 @@
             this.xtraTabPage2.Controls.Add(this.groupControl10);
             this.xtraTabPage2.Controls.Add(this.groupControl11);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1336, 694);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1336, 762);
             this.xtraTabPage2.Text = "Giới thiệu/Trọng tài";
             // 
             // groupControl10
             // 
-            this.groupControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupControl10.Controls.Add(this.simpleButton35);
             this.groupControl10.Controls.Add(this.simpleButton36);
             this.groupControl10.Controls.Add(this.textEdit8);
@@ -5740,7 +6636,7 @@
             this.groupControl10.Controls.Add(this.textEdit12);
             this.groupControl10.Location = new System.Drawing.Point(3, 3);
             this.groupControl10.Name = "groupControl10";
-            this.groupControl10.Size = new System.Drawing.Size(713, 633);
+            this.groupControl10.Size = new System.Drawing.Size(713, 701);
             this.groupControl10.TabIndex = 181;
             this.groupControl10.Text = "Thời tiết - Địa điểm";
             // 
@@ -5918,7 +6814,7 @@
             this.groupControl11.Controls.Add(this.textEdit16);
             this.groupControl11.Location = new System.Drawing.Point(722, 3);
             this.groupControl11.Name = "groupControl11";
-            this.groupControl11.Size = new System.Drawing.Size(611, 633);
+            this.groupControl11.Size = new System.Drawing.Size(611, 701);
             this.groupControl11.TabIndex = 180;
             this.groupControl11.Text = "Trọng tài:";
             // 
@@ -6291,209 +7187,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // rBreakPointsWon
-            // 
-            this.rBreakPointsWon.AutoSize = true;
-            this.rBreakPointsWon.Location = new System.Drawing.Point(103, 266);
-            this.rBreakPointsWon.Name = "rBreakPointsWon";
-            this.rBreakPointsWon.Size = new System.Drawing.Size(17, 16);
-            this.rBreakPointsWon.TabIndex = 243;
-            this.rBreakPointsWon.UseVisualStyleBackColor = true;
-            // 
-            // rUnforcedErrors
-            // 
-            this.rUnforcedErrors.AutoSize = true;
-            this.rUnforcedErrors.Location = new System.Drawing.Point(103, 296);
-            this.rUnforcedErrors.Name = "rUnforcedErrors";
-            this.rUnforcedErrors.Size = new System.Drawing.Size(17, 16);
-            this.rUnforcedErrors.TabIndex = 242;
-            this.rUnforcedErrors.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.numericUpDown1.Location = new System.Drawing.Point(493, 262);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 25);
-            this.numericUpDown1.TabIndex = 241;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.numericUpDown2.Location = new System.Drawing.Point(126, 261);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(100, 25);
-            this.numericUpDown2.TabIndex = 240;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.numericUpDown3.Location = new System.Drawing.Point(492, 294);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(100, 25);
-            this.numericUpDown3.TabIndex = 238;
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.numericUpDown4.Location = new System.Drawing.Point(126, 292);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(100, 25);
-            this.numericUpDown4.TabIndex = 237;
-            this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // simpleButton42
-            // 
-            this.simpleButton42.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton42.Appearance.Options.UseFont = true;
-            this.simpleButton42.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton42.Location = new System.Drawing.Point(348, 345);
-            this.simpleButton42.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton42.Name = "simpleButton42";
-            this.simpleButton42.Size = new System.Drawing.Size(61, 30);
-            this.simpleButton42.TabIndex = 251;
-            this.simpleButton42.Text = "Tắt";
-            this.simpleButton42.ToolTip = "Tắt Thông số nhỏ/Thống kê lớn";
-            this.simpleButton42.Click += new System.EventHandler(this.simpleButton42_Click);
-            // 
-            // txtServesIn
-            // 
-            this.txtServesIn.EditValue = "% 1st SERVES IN";
-            this.txtServesIn.Location = new System.Drawing.Point(262, 40);
-            this.txtServesIn.MenuManager = this.barManager1;
-            this.txtServesIn.Name = "txtServesIn";
-            this.txtServesIn.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtServesIn.Properties.Appearance.Options.UseFont = true;
-            this.txtServesIn.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtServesIn.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtServesIn.Size = new System.Drawing.Size(205, 26);
-            this.txtServesIn.TabIndex = 252;
-            // 
-            // txtServesWon
-            // 
-            this.txtServesWon.EditValue = "% 1st SERVES WON";
-            this.txtServesWon.Location = new System.Drawing.Point(262, 72);
-            this.txtServesWon.MenuManager = this.barManager1;
-            this.txtServesWon.Name = "txtServesWon";
-            this.txtServesWon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtServesWon.Properties.Appearance.Options.UseFont = true;
-            this.txtServesWon.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtServesWon.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtServesWon.Size = new System.Drawing.Size(205, 26);
-            this.txtServesWon.TabIndex = 253;
-            // 
-            // txtAces
-            // 
-            this.txtAces.EditValue = "ACES";
-            this.txtAces.Location = new System.Drawing.Point(262, 105);
-            this.txtAces.MenuManager = this.barManager1;
-            this.txtAces.Name = "txtAces";
-            this.txtAces.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtAces.Properties.Appearance.Options.UseFont = true;
-            this.txtAces.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtAces.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtAces.Size = new System.Drawing.Size(205, 26);
-            this.txtAces.TabIndex = 254;
-            // 
-            // txtDoubleF
-            // 
-            this.txtDoubleF.EditValue = "DOUBLE FAULTS";
-            this.txtDoubleF.Location = new System.Drawing.Point(262, 138);
-            this.txtDoubleF.MenuManager = this.barManager1;
-            this.txtDoubleF.Name = "txtDoubleF";
-            this.txtDoubleF.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtDoubleF.Properties.Appearance.Options.UseFont = true;
-            this.txtDoubleF.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtDoubleF.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtDoubleF.Size = new System.Drawing.Size(205, 26);
-            this.txtDoubleF.TabIndex = 255;
-            // 
-            // txtForehand
-            // 
-            this.txtForehand.EditValue = "FOREHAND WINNERS";
-            this.txtForehand.Location = new System.Drawing.Point(262, 168);
-            this.txtForehand.MenuManager = this.barManager1;
-            this.txtForehand.Name = "txtForehand";
-            this.txtForehand.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtForehand.Properties.Appearance.Options.UseFont = true;
-            this.txtForehand.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtForehand.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtForehand.Size = new System.Drawing.Size(205, 26);
-            this.txtForehand.TabIndex = 256;
-            // 
-            // txtBackhand
-            // 
-            this.txtBackhand.EditValue = "BACKHAND WINNERS";
-            this.txtBackhand.Location = new System.Drawing.Point(262, 197);
-            this.txtBackhand.MenuManager = this.barManager1;
-            this.txtBackhand.Name = "txtBackhand";
-            this.txtBackhand.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtBackhand.Properties.Appearance.Options.UseFont = true;
-            this.txtBackhand.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtBackhand.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtBackhand.Size = new System.Drawing.Size(205, 26);
-            this.txtBackhand.TabIndex = 257;
-            // 
-            // txtPointWon
-            // 
-            this.txtPointWon.EditValue = "POINT WON AT NET";
-            this.txtPointWon.Location = new System.Drawing.Point(262, 227);
-            this.txtPointWon.MenuManager = this.barManager1;
-            this.txtPointWon.Name = "txtPointWon";
-            this.txtPointWon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtPointWon.Properties.Appearance.Options.UseFont = true;
-            this.txtPointWon.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtPointWon.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtPointWon.Size = new System.Drawing.Size(205, 26);
-            this.txtPointWon.TabIndex = 258;
-            // 
-            // txtBreakpoint
-            // 
-            this.txtBreakpoint.EditValue = "BREAK POINTS WON";
-            this.txtBreakpoint.Location = new System.Drawing.Point(262, 258);
-            this.txtBreakpoint.MenuManager = this.barManager1;
-            this.txtBreakpoint.Name = "txtBreakpoint";
-            this.txtBreakpoint.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtBreakpoint.Properties.Appearance.Options.UseFont = true;
-            this.txtBreakpoint.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtBreakpoint.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtBreakpoint.Size = new System.Drawing.Size(205, 26);
-            this.txtBreakpoint.TabIndex = 259;
-            // 
-            // txtUnforced
-            // 
-            this.txtUnforced.EditValue = "UNFORCED ERRORS";
-            this.txtUnforced.Location = new System.Drawing.Point(262, 291);
-            this.txtUnforced.MenuManager = this.barManager1;
-            this.txtUnforced.Name = "txtUnforced";
-            this.txtUnforced.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.txtUnforced.Properties.Appearance.Options.UseFont = true;
-            this.txtUnforced.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtUnforced.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtUnforced.Size = new System.Drawing.Size(205, 26);
-            this.txtUnforced.TabIndex = 260;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -6682,8 +7375,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.nHatgiong2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage3.ResumeLayout(false);
+            this.xtraTabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer9)).EndInit();
+            this.gridSplitContainer9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTennisPlayer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer8)).EndInit();
+            this.gridSplitContainer8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTennisPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView10)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nTiebreak1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTiebreak2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTySo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTySo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPointTeam2.Properties)).EndInit();
@@ -6697,6 +7410,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl9)).EndInit();
             this.groupControl9.ResumeLayout(false);
             this.groupControl9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUnforced.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBreakpoint.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPointWon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBackhand.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtForehand.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoubleF.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAces.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtServesWon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtServesIn.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
@@ -6755,19 +7481,6 @@
             this.xTab.ResumeLayout(false);
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtServesIn.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtServesWon.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAces.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoubleF.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtForehand.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBackhand.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPointWon.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBreakpoint.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUnforced.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7161,8 +7874,8 @@
         private System.Windows.Forms.RadioButton rSet3;
         private System.Windows.Forms.RadioButton rSet4;
         private System.Windows.Forms.RadioButton rSet1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox ck5set;
+        private System.Windows.Forms.CheckBox ck3set;
         private DevExpress.XtraEditors.GroupControl groupControl10;
         private DevExpress.XtraEditors.SimpleButton simpleButton35;
         private DevExpress.XtraEditors.SimpleButton simpleButton36;
@@ -7237,5 +7950,58 @@
         private DevExpress.XtraEditors.TextEdit txtAces;
         private DevExpress.XtraEditors.TextEdit txtServesWon;
         private DevExpress.XtraEditors.TextEdit txtServesIn;
+        private System.Windows.Forms.NumericUpDown nTiebreak1;
+        private System.Windows.Forms.NumericUpDown nTiebreak2;
+        private System.Windows.Forms.CheckBox cbTiebreak;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
+        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer8;
+        private DevExpress.XtraGrid.GridControl gridControl3;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit9;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView10;
+        private System.Windows.Forms.BindingSource bsTennisPlayer1;
+        private System.Windows.Forms.BindingSource bsTennisPlayer2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
+        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer9;
+        private DevExpress.XtraGrid.GridControl gridControl4;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn49;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn50;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn51;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn54;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn57;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit10;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.SimpleButton simpleButton46;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.SimpleButton simpleButton43;
+        private DevExpress.XtraEditors.SimpleButton simpleButton44;
     }
 }

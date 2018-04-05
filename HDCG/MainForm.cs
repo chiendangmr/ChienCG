@@ -1118,9 +1118,16 @@ namespace HDCGStudio
                     xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
 
                     xmlAdd += Add("thongtinphu", cboThongtinphu.Text);
-
-                    xmlAdd += Add("livepoint1", cboPointTeam1.Text);
-                    xmlAdd += Add("livepoint2", cboPointTeam2.Text);
+                    if (cbTiebreak.Checked)
+                    {
+                        xmlAdd += Add("livepoint1", nTiebreak1.Text);
+                        xmlAdd += Add("livepoint2", nTiebreak2.Text);
+                    }
+                    else
+                    {
+                        xmlAdd += Add("livepoint1", cboPointTeam1.Text);
+                        xmlAdd += Add("livepoint2", cboPointTeam2.Text);
+                    }
                     xmlAdd += Add("team1", cboTeam1Player1.Text);
                     xmlAdd += Add("team2", cboTeam2Player1.Text);
                     xmlAdd += Add("team1short", txtShortNameTeam1.Text);
@@ -2280,7 +2287,10 @@ namespace HDCGStudio
         #region Tennis
         private void btnOnTySoLonTennis_Click(object sender, EventArgs e)
         {
-            BatTemplate("TySoLon.ft");
+            if (ck3set.Checked)
+                BatTemplate("TySoLon3Set.ft");
+            else if (ck5set.Checked)
+                BatTemplate("TySoLon.ft");
         }
 
         private void btnManageLeagueTennis_Click(object sender, EventArgs e)
@@ -2407,6 +2417,7 @@ namespace HDCGStudio
                     break;
                 }
             }
+            bsTennisPlayer1.List.Clear();            
             var templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data/Tennis"), "Danhsachcauthu" + dicDanhsachdoiTennis.FirstOrDefault(x => x.Value == cboTennisTeam1.Text).Key + ".xml");
             try
             {
@@ -2419,6 +2430,7 @@ namespace HDCGStudio
                     {
                         cboTeam1Player1.Properties.Items.Add(temp.Name);
                         cboTeam1Player2.Properties.Items.Add(temp.Name);
+                        bsTennisPlayer1.List.Add(temp);
                     }
                 }
                 else
@@ -2444,6 +2456,7 @@ namespace HDCGStudio
                     break;
                 }
             }
+            bsTennisPlayer2.List.Clear();
             var templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data/Tennis"), "Danhsachcauthu" + dicDanhsachdoiTennis.FirstOrDefault(x => x.Value == cboTennisTeam2.Text).Key + ".xml");
             try
             {
@@ -2456,6 +2469,7 @@ namespace HDCGStudio
                     {
                         cboTeam2Player1.Properties.Items.Add(temp.Name);
                         cboTeam2Player2.Properties.Items.Add(temp.Name);
+                        bsTennisPlayer2.List.Add(temp);
                     }
                 }
                 else
@@ -2731,5 +2745,16 @@ namespace HDCGStudio
             }
         }
 
+        private void ck5set_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ck5set.Checked)
+                ck3set.Checked = false;            
+        }
+
+        private void ck3set_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ck3set.Checked)
+                ck5set.Checked = false;
+        }
     }
 }
