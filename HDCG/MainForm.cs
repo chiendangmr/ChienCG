@@ -1285,6 +1285,73 @@ namespace HDCGStudio
                         xmlAdd += Add("giatriThongso1", numericUpDown4.Value.ToString());
                         xmlAdd += Add("giatriThongso2", numericUpDown3.Value.ToString());
                     }
+                    #region Teamboard
+                    var lstPlayer1 = bsTennisPlayer1.List as BindingList<Object.Tennis.Player>;
+                    for (var i = 0; i < lstPlayer1.Count; i++)
+                    {
+                        xmlAdd += Add("team1Player" + (i + 1).ToString(), lstPlayer1[i].Name);
+                        xmlAdd += Add("team1Rank" + (i + 1).ToString(), lstPlayer1[i].Rank.ToString());
+                    }
+                    xmlAdd += Add("captain1", lstPlayer1.Where(a => a.isCaptain == true).FirstOrDefault().Name);
+
+
+                    var lstPlayer = bsTennisPlayer2.List as BindingList<Object.Tennis.Player>;
+                    for (var i = 0; i < lstPlayer.Count; i++)
+                    {
+                        xmlAdd += Add("team2Player" + (i + 1).ToString(), lstPlayer[i].Name);
+                        xmlAdd += Add("team2Rank" + (i + 1).ToString(), lstPlayer[i].Rank.ToString());
+                    }
+                    xmlAdd += Add("captain2", lstPlayer.Where(a => a.isCaptain == true).FirstOrDefault().Name);
+                    #endregion
+
+                    if (isChu)
+                    {
+                        xmlAdd += Add("logo", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons/Tennis"), GetTennisTeamLogo(cboTennisTeam1.Text)));
+                        var tempChu = gvTennisTeam1.GetFocusedRow() as Object.Tennis.Player;
+                        switch (cboTennisTypeTeam1.Text)
+                        {
+                            case "Tên":
+                                xmlAdd += Add("PlayerName", tempChu.Name);
+                                xmlAdd += Add("nation", tempChu.Nation);
+                                break;
+                            case "Player Profile":
+                                xmlAdd += Add("PlayerName", tempChu.Name);
+                                xmlAdd += Add("age", tempChu.Age.ToString());
+                                xmlAdd += Add("nation", tempChu.Nation);
+                                xmlAdd += Add("heightt", tempChu.Height);
+                                xmlAdd += Add("weightt", tempChu.Weight);
+                                xmlAdd += Add("worldRanking", tempChu.WorldRanking.ToString());
+                                xmlAdd += Add("appearances", tempChu.Appearances.ToString());
+                                xmlAdd += Add("singleWin", tempChu.SingleWin.ToString());
+                                xmlAdd += Add("singleLose", tempChu.SingleLose.ToString());
+                                xmlAdd += Add("debut", tempChu.Debut);
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        xmlAdd += Add("logo", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons/Tennis"), GetTennisTeamLogo(cboTennisTeam2.Text)));
+                        var tempChu = gvTennisTeam2.GetFocusedRow() as Object.Tennis.Player;
+                        switch (cboTennisTypeTeam2.Text)
+                        {
+                            case "Tên":
+                                xmlAdd += Add("PlayerName", tempChu.Name);
+                                xmlAdd += Add("nation", tempChu.Nation);
+                                break;
+                            case "Player Profile":
+                                xmlAdd += Add("PlayerName", tempChu.Name);
+                                xmlAdd += Add("age", tempChu.Age.ToString());
+                                xmlAdd += Add("nation", tempChu.Nation);
+                                xmlAdd += Add("heightt", tempChu.Height);
+                                xmlAdd += Add("weightt", tempChu.Weight);
+                                xmlAdd += Add("worldRanking", tempChu.WorldRanking.ToString());
+                                xmlAdd += Add("appearances", tempChu.Appearances.ToString());
+                                xmlAdd += Add("singleWin", tempChu.SingleWin.ToString());
+                                xmlAdd += Add("singleLose", tempChu.SingleLose.ToString());
+                                xmlAdd += Add("debut", tempChu.Debut);
+                                break;
+                        }
+                    }
                 }
                 catch //(Exception ex)
                 {
@@ -2417,7 +2484,7 @@ namespace HDCGStudio
                     break;
                 }
             }
-            bsTennisPlayer1.List.Clear();            
+            bsTennisPlayer1.List.Clear();
             var templatesXmlPath = Path.Combine(Path.Combine(Application.StartupPath, "Data/Tennis"), "Danhsachcauthu" + dicDanhsachdoiTennis.FirstOrDefault(x => x.Value == cboTennisTeam1.Text).Key + ".xml");
             try
             {
@@ -2726,6 +2793,60 @@ namespace HDCGStudio
         {
             BatTemplate("ThongKeCuoi.ft");
         }
+
+        private void ck5set_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ck5set.Checked)
+                ck3set.Checked = false;
+        }
+
+        private void ck3set_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ck3set.Checked)
+                ck5set.Checked = false;
+        }
+
+        private void btnOnTennisTypeTeam1_Click(object sender, EventArgs e)
+        {
+            switch (cboTennisTypeTeam1.Text)
+            {
+                case "Tên":
+                    BatTemplate("CauThu.ft");
+                    break;
+                case "Player Profile":
+                    BatTemplate("Profile.ft");
+                    break;
+            }
+
+        }
+
+        private void btnOnTennisTypeTeam2_Click(object sender, EventArgs e)
+        {
+            switch (cboTennisTypeTeam2.Text)
+            {
+                case "Tên":
+                    BatTemplate("CauThu.ft", false);
+                    break;
+                case "Player Profile":
+                    BatTemplate("Profile.ft", false);
+                    break;
+            }
+        }
+
+        private void btnOffTennisType_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
+        private void btnOnTeamboard_Click(object sender, EventArgs e)
+        {
+            BatTemplate("TeamBoard.ft");
+
+        }
+
+        private void btnOffTeamboard_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
         #endregion
 
         private void btnLamMoiBongDa_Click(object sender, EventArgs e)
@@ -2745,16 +2866,6 @@ namespace HDCGStudio
             }
         }
 
-        private void ck5set_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ck5set.Checked)
-                ck3set.Checked = false;            
-        }
 
-        private void ck3set_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ck3set.Checked)
-                ck5set.Checked = false;
-        }
     }
 }
