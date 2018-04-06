@@ -355,6 +355,8 @@
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
+            this.cboDoHoaChungTennis = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl80 = new DevExpress.XtraEditors.LabelControl();
             this.btnOffRanking = new DevExpress.XtraEditors.SimpleButton();
             this.btnOnRanking = new DevExpress.XtraEditors.SimpleButton();
             this.txtPreviousTennisTeam1 = new DevExpress.XtraEditors.TextEdit();
@@ -512,26 +514,30 @@
             this.nDiemSet1Player2 = new System.Windows.Forms.NumericUpDown();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl10 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton35 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton36 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl86 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
+            this.btnOffNewHighlight = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOnNewsHighlight = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl70 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl81 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl82 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl83 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl84 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl85 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl86 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl87 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
             this.groupControl11 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton37 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton38 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl88 = new DevExpress.XtraEditors.LabelControl();
+            this.btnTennisLogoBrowse = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl82 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTennisLogo = new DevExpress.XtraEditors.TextEdit();
+            this.btnOffBarTen = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOnBarTen = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl83 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTennisLine1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl84 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTennisLine2 = new DevExpress.XtraEditors.TextEdit();
+            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.editPlayer = new CGPreviewControl.FlashTemplateHostControl();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl85 = new DevExpress.XtraEditors.LabelControl();
+            this.btnOffEditableTemplate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOnEditableTemplate = new DevExpress.XtraEditors.SimpleButton();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.player = new CGPreviewControl.FlashTemplateHostControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -553,8 +559,7 @@
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnOffTeamboard = new DevExpress.XtraEditors.SimpleButton();
-            this.btnOnTeamboard = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdateEditableTemplate = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -717,6 +722,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboDoHoaChungTennis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreviousTennisTeam1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreviousTennisTeam2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayedTennisTeam2.Properties)).BeginInit();
@@ -796,14 +802,16 @@
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl10)).BeginInit();
             this.groupControl10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl11)).BeginInit();
             this.groupControl11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTennisLogo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTennisLine1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTennisLine2.Properties)).BeginInit();
+            this.xtraTabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -4482,6 +4490,8 @@
             this.cboTeam1Player2.Name = "cboTeam1Player2";
             this.cboTeam1Player2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
             this.cboTeam1Player2.Properties.Appearance.Options.UseFont = true;
+            this.cboTeam1Player2.Properties.Appearance.Options.UseTextOptions = true;
+            this.cboTeam1Player2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.cboTeam1Player2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboTeam1Player2.Size = new System.Drawing.Size(205, 26);
@@ -4495,6 +4505,8 @@
             this.cboTeam1Player1.Name = "cboTeam1Player1";
             this.cboTeam1Player1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
             this.cboTeam1Player1.Properties.Appearance.Options.UseFont = true;
+            this.cboTeam1Player1.Properties.Appearance.Options.UseTextOptions = true;
+            this.cboTeam1Player1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.cboTeam1Player1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboTeam1Player1.Size = new System.Drawing.Size(205, 26);
@@ -4579,6 +4591,8 @@
             this.txtDonviTennisTeam1.Name = "txtDonviTennisTeam1";
             this.txtDonviTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtDonviTennisTeam1.Properties.Appearance.Options.UseFont = true;
+            this.txtDonviTennisTeam1.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtDonviTennisTeam1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtDonviTennisTeam1.Size = new System.Drawing.Size(304, 26);
             this.txtDonviTennisTeam1.TabIndex = 231;
             // 
@@ -4664,6 +4678,8 @@
             this.txtHLVTennisTeam1.Name = "txtHLVTennisTeam1";
             this.txtHLVTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtHLVTennisTeam1.Properties.Appearance.Options.UseFont = true;
+            this.txtHLVTennisTeam1.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtHLVTennisTeam1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtHLVTennisTeam1.Size = new System.Drawing.Size(304, 26);
             this.txtHLVTennisTeam1.TabIndex = 216;
             // 
@@ -4674,6 +4690,8 @@
             this.txtShortNameTeam1.Name = "txtShortNameTeam1";
             this.txtShortNameTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtShortNameTeam1.Properties.Appearance.Options.UseFont = true;
+            this.txtShortNameTeam1.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtShortNameTeam1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtShortNameTeam1.Size = new System.Drawing.Size(304, 26);
             this.txtShortNameTeam1.TabIndex = 215;
             // 
@@ -4773,6 +4791,8 @@
             this.cboTennisTeam1.Name = "cboTennisTeam1";
             this.cboTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
             this.cboTennisTeam1.Properties.Appearance.Options.UseFont = true;
+            this.cboTennisTeam1.Properties.Appearance.Options.UseTextOptions = true;
+            this.cboTennisTeam1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.cboTennisTeam1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboTennisTeam1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
@@ -4881,14 +4901,15 @@
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage3,
             this.xtraTabPage1,
-            this.xtraTabPage2});
+            this.xtraTabPage2,
+            this.xtraTabPage4});
             // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.Appearance.Header.Font = new System.Drawing.Font("Tahoma", 8.8F);
             this.xtraTabPage3.Appearance.Header.Options.UseFont = true;
-            this.xtraTabPage3.Controls.Add(this.btnOffTeamboard);
-            this.xtraTabPage3.Controls.Add(this.btnOnTeamboard);
+            this.xtraTabPage3.Controls.Add(this.cboDoHoaChungTennis);
+            this.xtraTabPage3.Controls.Add(this.labelControl80);
             this.xtraTabPage3.Controls.Add(this.btnOffRanking);
             this.xtraTabPage3.Controls.Add(this.btnOnRanking);
             this.xtraTabPage3.Controls.Add(this.txtPreviousTennisTeam1);
@@ -4916,30 +4937,63 @@
             this.xtraTabPage3.Size = new System.Drawing.Size(1336, 762);
             this.xtraTabPage3.Text = "Cầu thủ/Profile/Rankings";
             // 
+            // cboDoHoaChungTennis
+            // 
+            this.cboDoHoaChungTennis.EditValue = "Match ID";
+            this.cboDoHoaChungTennis.Location = new System.Drawing.Point(590, 179);
+            this.cboDoHoaChungTennis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboDoHoaChungTennis.MenuManager = this.barManager1;
+            this.cboDoHoaChungTennis.Name = "cboDoHoaChungTennis";
+            this.cboDoHoaChungTennis.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.cboDoHoaChungTennis.Properties.Appearance.Options.UseFont = true;
+            this.cboDoHoaChungTennis.Properties.Appearance.Options.UseTextOptions = true;
+            this.cboDoHoaChungTennis.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cboDoHoaChungTennis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboDoHoaChungTennis.Properties.Items.AddRange(new object[] {
+            "Match ID",
+            "Player V Player",
+            "Teamboard",
+            "Ranking"});
+            this.cboDoHoaChungTennis.Size = new System.Drawing.Size(205, 26);
+            this.cboDoHoaChungTennis.TabIndex = 273;
+            // 
+            // labelControl80
+            // 
+            this.labelControl80.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl80.Appearance.Options.UseFont = true;
+            this.labelControl80.Location = new System.Drawing.Point(476, 182);
+            this.labelControl80.Name = "labelControl80";
+            this.labelControl80.Size = new System.Drawing.Size(108, 21);
+            this.labelControl80.TabIndex = 272;
+            this.labelControl80.Text = "Đồ họa chung:";
+            // 
             // btnOffRanking
             // 
             this.btnOffRanking.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnOffRanking.Appearance.Options.UseFont = true;
             this.btnOffRanking.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOffRanking.Location = new System.Drawing.Point(709, 177);
+            this.btnOffRanking.Location = new System.Drawing.Point(923, 177);
             this.btnOffRanking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOffRanking.Name = "btnOffRanking";
-            this.btnOffRanking.Size = new System.Drawing.Size(122, 30);
+            this.btnOffRanking.Size = new System.Drawing.Size(77, 30);
             this.btnOffRanking.TabIndex = 269;
-            this.btnOffRanking.Text = "Tắt Rankings";
+            this.btnOffRanking.Text = "Tắt";
             this.btnOffRanking.ToolTip = "Xuống tất cả đồ họa";
+            this.btnOffRanking.Click += new System.EventHandler(this.btnOffRanking_Click);
             // 
             // btnOnRanking
             // 
             this.btnOnRanking.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnOnRanking.Appearance.Options.UseFont = true;
             this.btnOnRanking.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOnRanking.Location = new System.Drawing.Point(557, 177);
+            this.btnOnRanking.Location = new System.Drawing.Point(826, 177);
             this.btnOnRanking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOnRanking.Name = "btnOnRanking";
-            this.btnOnRanking.Size = new System.Drawing.Size(125, 30);
+            this.btnOnRanking.Size = new System.Drawing.Size(75, 30);
             this.btnOnRanking.TabIndex = 268;
-            this.btnOnRanking.Text = "Bật Rankings";
+            this.btnOnRanking.Text = "Bật";
+            this.btnOnRanking.Click += new System.EventHandler(this.btnOnRanking_Click);
             // 
             // txtPreviousTennisTeam1
             // 
@@ -4948,6 +5002,8 @@
             this.txtPreviousTennisTeam1.Name = "txtPreviousTennisTeam1";
             this.txtPreviousTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtPreviousTennisTeam1.Properties.Appearance.Options.UseFont = true;
+            this.txtPreviousTennisTeam1.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPreviousTennisTeam1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtPreviousTennisTeam1.Size = new System.Drawing.Size(304, 26);
             this.txtPreviousTennisTeam1.TabIndex = 267;
             // 
@@ -4988,6 +5044,8 @@
             this.txtPlayedTennisTeam1.Name = "txtPlayedTennisTeam1";
             this.txtPlayedTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtPlayedTennisTeam1.Properties.Appearance.Options.UseFont = true;
+            this.txtPlayedTennisTeam1.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPlayedTennisTeam1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtPlayedTennisTeam1.Size = new System.Drawing.Size(304, 26);
             this.txtPlayedTennisTeam1.TabIndex = 263;
             // 
@@ -5008,6 +5066,8 @@
             this.txtPositionTennisTeam1.Name = "txtPositionTennisTeam1";
             this.txtPositionTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtPositionTennisTeam1.Properties.Appearance.Options.UseFont = true;
+            this.txtPositionTennisTeam1.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPositionTennisTeam1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtPositionTennisTeam1.Size = new System.Drawing.Size(304, 26);
             this.txtPositionTennisTeam1.TabIndex = 261;
             // 
@@ -5018,6 +5078,8 @@
             this.txtPointTennisTeam1.Name = "txtPointTennisTeam1";
             this.txtPointTennisTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.txtPointTennisTeam1.Properties.Appearance.Options.UseFont = true;
+            this.txtPointTennisTeam1.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPointTennisTeam1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtPointTennisTeam1.Size = new System.Drawing.Size(304, 26);
             this.txtPointTennisTeam1.TabIndex = 260;
             // 
@@ -5064,7 +5126,7 @@
             // cboTennisTypeTeam2
             // 
             this.cboTennisTypeTeam2.EditValue = "Tên";
-            this.cboTennisTypeTeam2.Location = new System.Drawing.Point(917, 554);
+            this.cboTennisTypeTeam2.Location = new System.Drawing.Point(989, 554);
             this.cboTennisTypeTeam2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTennisTypeTeam2.MenuManager = this.barManager1;
             this.cboTennisTypeTeam2.Name = "cboTennisTypeTeam2";
@@ -5074,7 +5136,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboTennisTypeTeam2.Properties.Items.AddRange(new object[] {
             "Tên",
-            "Player Profile"});
+            "Player Profile",
+            "Huấn luyện viên"});
             this.cboTennisTypeTeam2.Size = new System.Drawing.Size(205, 26);
             this.cboTennisTypeTeam2.TabIndex = 254;
             // 
@@ -5082,18 +5145,18 @@
             // 
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl16.Appearance.Options.UseFont = true;
-            this.labelControl16.Location = new System.Drawing.Point(852, 557);
+            this.labelControl16.Location = new System.Drawing.Point(882, 557);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(59, 21);
+            this.labelControl16.Size = new System.Drawing.Size(101, 21);
             this.labelControl16.TabIndex = 253;
-            this.labelControl16.Text = "Đồ họa:";
+            this.labelControl16.Text = "Đồ họa riêng:";
             // 
             // btnOnTennisTypeTeam2
             // 
             this.btnOnTennisTypeTeam2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnOnTennisTypeTeam2.Appearance.Options.UseFont = true;
             this.btnOnTennisTypeTeam2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOnTennisTypeTeam2.Location = new System.Drawing.Point(1138, 552);
+            this.btnOnTennisTypeTeam2.Location = new System.Drawing.Point(1210, 552);
             this.btnOnTennisTypeTeam2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOnTennisTypeTeam2.Name = "btnOnTennisTypeTeam2";
             this.btnOnTennisTypeTeam2.Size = new System.Drawing.Size(59, 30);
@@ -5104,17 +5167,20 @@
             // cboTennisTypeTeam1
             // 
             this.cboTennisTypeTeam1.EditValue = "Tên";
-            this.cboTennisTypeTeam1.Location = new System.Drawing.Point(180, 556);
+            this.cboTennisTypeTeam1.Location = new System.Drawing.Point(222, 556);
             this.cboTennisTypeTeam1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTennisTypeTeam1.MenuManager = this.barManager1;
             this.cboTennisTypeTeam1.Name = "cboTennisTypeTeam1";
             this.cboTennisTypeTeam1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
             this.cboTennisTypeTeam1.Properties.Appearance.Options.UseFont = true;
+            this.cboTennisTypeTeam1.Properties.Appearance.Options.UseTextOptions = true;
+            this.cboTennisTypeTeam1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.cboTennisTypeTeam1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboTennisTypeTeam1.Properties.Items.AddRange(new object[] {
             "Tên",
-            "Player Profile"});
+            "Player Profile",
+            "Huấn luyện viên"});
             this.cboTennisTypeTeam1.Size = new System.Drawing.Size(205, 26);
             this.cboTennisTypeTeam1.TabIndex = 243;
             // 
@@ -5124,9 +5190,9 @@
             this.labelControl15.Appearance.Options.UseFont = true;
             this.labelControl15.Location = new System.Drawing.Point(115, 559);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(59, 21);
+            this.labelControl15.Size = new System.Drawing.Size(101, 21);
             this.labelControl15.TabIndex = 242;
-            this.labelControl15.Text = "Đồ họa:";
+            this.labelControl15.Text = "Đồ họa riêng:";
             // 
             // btnOffTennisType
             // 
@@ -5147,7 +5213,7 @@
             this.btnOnTennisTypeTeam1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnOnTennisTypeTeam1.Appearance.Options.UseFont = true;
             this.btnOnTennisTypeTeam1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOnTennisTypeTeam1.Location = new System.Drawing.Point(401, 554);
+            this.btnOnTennisTypeTeam1.Location = new System.Drawing.Point(443, 554);
             this.btnOnTennisTypeTeam1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOnTennisTypeTeam1.Name = "btnOnTennisTypeTeam1";
             this.btnOnTennisTypeTeam1.Size = new System.Drawing.Size(59, 30);
@@ -6800,56 +6866,69 @@
             // 
             this.groupControl10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupControl10.Controls.Add(this.simpleButton35);
-            this.groupControl10.Controls.Add(this.simpleButton36);
+            this.groupControl10.Controls.Add(this.labelControl86);
+            this.groupControl10.Controls.Add(this.textEdit12);
+            this.groupControl10.Controls.Add(this.btnOffNewHighlight);
+            this.groupControl10.Controls.Add(this.btnOnNewsHighlight);
             this.groupControl10.Controls.Add(this.textEdit8);
             this.groupControl10.Controls.Add(this.labelControl70);
             this.groupControl10.Controls.Add(this.labelControl81);
-            this.groupControl10.Controls.Add(this.labelControl82);
             this.groupControl10.Controls.Add(this.textEdit9);
-            this.groupControl10.Controls.Add(this.textEdit10);
-            this.groupControl10.Controls.Add(this.labelControl83);
-            this.groupControl10.Controls.Add(this.labelControl84);
-            this.groupControl10.Controls.Add(this.textEdit11);
-            this.groupControl10.Controls.Add(this.labelControl85);
-            this.groupControl10.Controls.Add(this.labelControl86);
-            this.groupControl10.Controls.Add(this.labelControl87);
-            this.groupControl10.Controls.Add(this.textEdit12);
             this.groupControl10.Location = new System.Drawing.Point(3, 3);
             this.groupControl10.Name = "groupControl10";
             this.groupControl10.Size = new System.Drawing.Size(713, 756);
             this.groupControl10.TabIndex = 181;
             this.groupControl10.Text = "Thời tiết - Địa điểm";
             // 
-            // simpleButton35
+            // labelControl86
             // 
-            this.simpleButton35.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton35.Appearance.Options.UseFont = true;
-            this.simpleButton35.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton35.Location = new System.Drawing.Point(388, 290);
-            this.simpleButton35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton35.Name = "simpleButton35";
-            this.simpleButton35.Size = new System.Drawing.Size(58, 47);
-            this.simpleButton35.TabIndex = 202;
-            this.simpleButton35.Text = "Tắt";
-            this.simpleButton35.ToolTip = "Xuống đồ họa";
+            this.labelControl86.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl86.Appearance.Options.UseFont = true;
+            this.labelControl86.Location = new System.Drawing.Point(63, 45);
+            this.labelControl86.Name = "labelControl86";
+            this.labelControl86.Size = new System.Drawing.Size(74, 21);
+            this.labelControl86.TabIndex = 203;
+            this.labelControl86.Text = "Thời gian:";
             // 
-            // simpleButton36
+            // textEdit12
             // 
-            this.simpleButton36.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton36.Appearance.Options.UseFont = true;
-            this.simpleButton36.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton36.Location = new System.Drawing.Point(287, 290);
-            this.simpleButton36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton36.Name = "simpleButton36";
-            this.simpleButton36.Size = new System.Drawing.Size(65, 47);
-            this.simpleButton36.TabIndex = 201;
-            this.simpleButton36.Text = "Bật";
-            this.simpleButton36.ToolTip = "Lên đồ họa";
+            this.textEdit12.Location = new System.Drawing.Point(150, 45);
+            this.textEdit12.MenuManager = this.barManager1;
+            this.textEdit12.Name = "textEdit12";
+            this.textEdit12.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.textEdit12.Properties.Appearance.Options.UseFont = true;
+            this.textEdit12.Size = new System.Drawing.Size(509, 24);
+            this.textEdit12.TabIndex = 204;
+            // 
+            // btnOffNewHighlight
+            // 
+            this.btnOffNewHighlight.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnOffNewHighlight.Appearance.Options.UseFont = true;
+            this.btnOffNewHighlight.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnOffNewHighlight.Location = new System.Drawing.Point(468, 204);
+            this.btnOffNewHighlight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOffNewHighlight.Name = "btnOffNewHighlight";
+            this.btnOffNewHighlight.Size = new System.Drawing.Size(58, 47);
+            this.btnOffNewHighlight.TabIndex = 202;
+            this.btnOffNewHighlight.Text = "Tắt";
+            this.btnOffNewHighlight.ToolTip = "Xuống đồ họa";
+            // 
+            // btnOnNewsHighlight
+            // 
+            this.btnOnNewsHighlight.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnOnNewsHighlight.Appearance.Options.UseFont = true;
+            this.btnOnNewsHighlight.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnOnNewsHighlight.Location = new System.Drawing.Point(257, 204);
+            this.btnOnNewsHighlight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOnNewsHighlight.Name = "btnOnNewsHighlight";
+            this.btnOnNewsHighlight.Size = new System.Drawing.Size(180, 47);
+            this.btnOnNewsHighlight.TabIndex = 201;
+            this.btnOnNewsHighlight.Text = "Bật News & Highlights";
+            this.btnOnNewsHighlight.ToolTip = "Lên đồ họa";
             // 
             // textEdit8
             // 
-            this.textEdit8.Location = new System.Drawing.Point(150, 49);
+            this.textEdit8.Location = new System.Drawing.Point(148, 90);
             this.textEdit8.MenuManager = this.barManager1;
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -6861,36 +6940,26 @@
             // 
             this.labelControl70.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl70.Appearance.Options.UseFont = true;
-            this.labelControl70.Location = new System.Drawing.Point(38, 49);
+            this.labelControl70.Location = new System.Drawing.Point(61, 92);
             this.labelControl70.Name = "labelControl70";
-            this.labelControl70.Size = new System.Drawing.Size(106, 21);
+            this.labelControl70.Size = new System.Drawing.Size(73, 21);
             this.labelControl70.TabIndex = 158;
-            this.labelControl70.Text = "Sân vận động:";
+            this.labelControl70.Text = "Địa điểm:";
             // 
             // labelControl81
             // 
             this.labelControl81.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.labelControl81.Appearance.Options.UseFont = true;
-            this.labelControl81.Location = new System.Drawing.Point(68, 98);
+            this.labelControl81.Location = new System.Drawing.Point(59, 140);
             this.labelControl81.Name = "labelControl81";
-            this.labelControl81.Size = new System.Drawing.Size(68, 21);
+            this.labelControl81.Size = new System.Drawing.Size(75, 21);
             this.labelControl81.TabIndex = 162;
-            this.labelControl81.Text = "Thời tiết:";
-            // 
-            // labelControl82
-            // 
-            this.labelControl82.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl82.Appearance.Options.UseFont = true;
-            this.labelControl82.Location = new System.Drawing.Point(369, 231);
-            this.labelControl82.Name = "labelControl82";
-            this.labelControl82.Size = new System.Drawing.Size(28, 19);
-            this.labelControl82.TabIndex = 176;
-            this.labelControl82.Text = "(%)";
+            this.labelControl81.Text = "Điều kiện:";
             // 
             // textEdit9
             // 
-            this.textEdit9.EditValue = "Trời đẹp, nắng nhẹ, nhiệt độ vừa phải";
-            this.textEdit9.Location = new System.Drawing.Point(150, 98);
+            this.textEdit9.EditValue = "";
+            this.textEdit9.Location = new System.Drawing.Point(148, 139);
             this.textEdit9.MenuManager = this.barManager1;
             this.textEdit9.Name = "textEdit9";
             this.textEdit9.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
@@ -6898,146 +6967,217 @@
             this.textEdit9.Size = new System.Drawing.Size(511, 24);
             this.textEdit9.TabIndex = 163;
             // 
-            // textEdit10
-            // 
-            this.textEdit10.Location = new System.Drawing.Point(150, 231);
-            this.textEdit10.MenuManager = this.barManager1;
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.textEdit10.Properties.Appearance.Options.UseFont = true;
-            this.textEdit10.Size = new System.Drawing.Size(202, 24);
-            this.textEdit10.TabIndex = 175;
-            // 
-            // labelControl83
-            // 
-            this.labelControl83.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl83.Appearance.Options.UseFont = true;
-            this.labelControl83.Location = new System.Drawing.Point(72, 188);
-            this.labelControl83.Name = "labelControl83";
-            this.labelControl83.Size = new System.Drawing.Size(60, 21);
-            this.labelControl83.TabIndex = 168;
-            this.labelControl83.Text = "Sức gió:";
-            // 
-            // labelControl84
-            // 
-            this.labelControl84.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl84.Appearance.Options.UseFont = true;
-            this.labelControl84.Location = new System.Drawing.Point(77, 231);
-            this.labelControl84.Name = "labelControl84";
-            this.labelControl84.Size = new System.Drawing.Size(55, 21);
-            this.labelControl84.TabIndex = 174;
-            this.labelControl84.Text = "Độ ẩm:";
-            // 
-            // textEdit11
-            // 
-            this.textEdit11.Location = new System.Drawing.Point(150, 188);
-            this.textEdit11.MenuManager = this.barManager1;
-            this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.textEdit11.Properties.Appearance.Options.UseFont = true;
-            this.textEdit11.Size = new System.Drawing.Size(202, 24);
-            this.textEdit11.TabIndex = 169;
-            // 
-            // labelControl85
-            // 
-            this.labelControl85.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl85.Appearance.Options.UseFont = true;
-            this.labelControl85.Location = new System.Drawing.Point(369, 188);
-            this.labelControl85.Name = "labelControl85";
-            this.labelControl85.Size = new System.Drawing.Size(50, 19);
-            this.labelControl85.TabIndex = 173;
-            this.labelControl85.Text = "(Km/h)";
-            // 
-            // labelControl86
-            // 
-            this.labelControl86.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl86.Appearance.Options.UseFont = true;
-            this.labelControl86.Location = new System.Drawing.Point(63, 140);
-            this.labelControl86.Name = "labelControl86";
-            this.labelControl86.Size = new System.Drawing.Size(69, 21);
-            this.labelControl86.TabIndex = 170;
-            this.labelControl86.Text = "Nhiệt độ:";
-            // 
-            // labelControl87
-            // 
-            this.labelControl87.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl87.Appearance.Options.UseFont = true;
-            this.labelControl87.Location = new System.Drawing.Point(369, 140);
-            this.labelControl87.Name = "labelControl87";
-            this.labelControl87.Size = new System.Drawing.Size(30, 19);
-            this.labelControl87.TabIndex = 172;
-            this.labelControl87.Text = "(°C)";
-            // 
-            // textEdit12
-            // 
-            this.textEdit12.Location = new System.Drawing.Point(150, 140);
-            this.textEdit12.MenuManager = this.barManager1;
-            this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.textEdit12.Properties.Appearance.Options.UseFont = true;
-            this.textEdit12.Size = new System.Drawing.Size(202, 24);
-            this.textEdit12.TabIndex = 171;
-            // 
             // groupControl11
             // 
             this.groupControl11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl11.Controls.Add(this.simpleButton37);
-            this.groupControl11.Controls.Add(this.simpleButton38);
-            this.groupControl11.Controls.Add(this.textEdit13);
-            this.groupControl11.Controls.Add(this.labelControl88);
+            this.groupControl11.Controls.Add(this.btnTennisLogoBrowse);
+            this.groupControl11.Controls.Add(this.labelControl82);
+            this.groupControl11.Controls.Add(this.txtTennisLogo);
+            this.groupControl11.Controls.Add(this.btnOffBarTen);
+            this.groupControl11.Controls.Add(this.btnOnBarTen);
+            this.groupControl11.Controls.Add(this.labelControl83);
+            this.groupControl11.Controls.Add(this.txtTennisLine1);
+            this.groupControl11.Controls.Add(this.labelControl84);
+            this.groupControl11.Controls.Add(this.txtTennisLine2);
             this.groupControl11.Location = new System.Drawing.Point(722, 3);
             this.groupControl11.Name = "groupControl11";
             this.groupControl11.Size = new System.Drawing.Size(611, 756);
             this.groupControl11.TabIndex = 180;
-            this.groupControl11.Text = "Trọng tài:";
+            this.groupControl11.Text = "Bar Tên (Dùng cho Trọng tài, Huấn luyện viên...)";
             // 
-            // simpleButton37
+            // btnTennisLogoBrowse
             // 
-            this.simpleButton37.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton37.Appearance.Options.UseFont = true;
-            this.simpleButton37.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton37.Location = new System.Drawing.Point(505, 42);
-            this.simpleButton37.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton37.Name = "simpleButton37";
-            this.simpleButton37.Size = new System.Drawing.Size(53, 30);
-            this.simpleButton37.TabIndex = 202;
-            this.simpleButton37.Text = "Tắt";
-            this.simpleButton37.ToolTip = "Xuống đồ họa";
+            this.btnTennisLogoBrowse.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnTennisLogoBrowse.Appearance.Options.UseFont = true;
+            this.btnTennisLogoBrowse.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnTennisLogoBrowse.Location = new System.Drawing.Point(524, 127);
+            this.btnTennisLogoBrowse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTennisLogoBrowse.Name = "btnTennisLogoBrowse";
+            this.btnTennisLogoBrowse.Size = new System.Drawing.Size(65, 30);
+            this.btnTennisLogoBrowse.TabIndex = 212;
+            this.btnTennisLogoBrowse.Text = "Chọn...";
+            this.btnTennisLogoBrowse.ToolTip = "Lên đồ họa";
+            this.btnTennisLogoBrowse.Click += new System.EventHandler(this.btnTennisLogoBrowse_Click);
             // 
-            // simpleButton38
+            // labelControl82
             // 
-            this.simpleButton38.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton38.Appearance.Options.UseFont = true;
-            this.simpleButton38.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton38.Location = new System.Drawing.Point(434, 42);
-            this.simpleButton38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton38.Name = "simpleButton38";
-            this.simpleButton38.Size = new System.Drawing.Size(53, 30);
-            this.simpleButton38.TabIndex = 201;
-            this.simpleButton38.Text = "Bật";
-            this.simpleButton38.ToolTip = "Lên đồ họa";
+            this.labelControl82.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl82.Appearance.Options.UseFont = true;
+            this.labelControl82.Location = new System.Drawing.Point(29, 133);
+            this.labelControl82.Name = "labelControl82";
+            this.labelControl82.Size = new System.Drawing.Size(41, 19);
+            this.labelControl82.TabIndex = 210;
+            this.labelControl82.Text = "Logo:";
             // 
-            // textEdit13
+            // txtTennisLogo
             // 
-            this.textEdit13.Location = new System.Drawing.Point(156, 45);
-            this.textEdit13.MenuManager = this.barManager1;
-            this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
-            this.textEdit13.Properties.Appearance.Options.UseFont = true;
-            this.textEdit13.Size = new System.Drawing.Size(272, 24);
-            this.textEdit13.TabIndex = 151;
+            this.txtTennisLogo.Enabled = false;
+            this.txtTennisLogo.Location = new System.Drawing.Point(106, 131);
+            this.txtTennisLogo.MenuManager = this.barManager1;
+            this.txtTennisLogo.Name = "txtTennisLogo";
+            this.txtTennisLogo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtTennisLogo.Properties.Appearance.Options.UseFont = true;
+            this.txtTennisLogo.Size = new System.Drawing.Size(412, 24);
+            this.txtTennisLogo.TabIndex = 211;
             // 
-            // labelControl88
+            // btnOffBarTen
             // 
-            this.labelControl88.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.labelControl88.Appearance.Options.UseFont = true;
-            this.labelControl88.Location = new System.Drawing.Point(21, 45);
-            this.labelControl88.Name = "labelControl88";
-            this.labelControl88.Size = new System.Drawing.Size(117, 21);
-            this.labelControl88.TabIndex = 150;
-            this.labelControl88.Text = "Trọng tài chính:";
+            this.btnOffBarTen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnOffBarTen.Appearance.Options.UseFont = true;
+            this.btnOffBarTen.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnOffBarTen.Location = new System.Drawing.Point(309, 177);
+            this.btnOffBarTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOffBarTen.Name = "btnOffBarTen";
+            this.btnOffBarTen.Size = new System.Drawing.Size(68, 37);
+            this.btnOffBarTen.TabIndex = 209;
+            this.btnOffBarTen.Text = "Tắt";
+            this.btnOffBarTen.ToolTip = "Xuống đồ họa";
+            this.btnOffBarTen.Click += new System.EventHandler(this.btnOffBarTen_Click);
+            // 
+            // btnOnBarTen
+            // 
+            this.btnOnBarTen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnOnBarTen.Appearance.Options.UseFont = true;
+            this.btnOnBarTen.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnOnBarTen.Location = new System.Drawing.Point(212, 177);
+            this.btnOnBarTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOnBarTen.Name = "btnOnBarTen";
+            this.btnOnBarTen.Size = new System.Drawing.Size(65, 37);
+            this.btnOnBarTen.TabIndex = 208;
+            this.btnOnBarTen.Text = "Bật";
+            this.btnOnBarTen.ToolTip = "Lên đồ họa";
+            this.btnOnBarTen.Click += new System.EventHandler(this.btnOnBarTen_Click);
+            // 
+            // labelControl83
+            // 
+            this.labelControl83.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl83.Appearance.Options.UseFont = true;
+            this.labelControl83.Location = new System.Drawing.Point(12, 45);
+            this.labelControl83.Name = "labelControl83";
+            this.labelControl83.Size = new System.Drawing.Size(58, 19);
+            this.labelControl83.TabIndex = 204;
+            this.labelControl83.Text = "Dòng 1:";
+            // 
+            // txtTennisLine1
+            // 
+            this.txtTennisLine1.Location = new System.Drawing.Point(106, 45);
+            this.txtTennisLine1.MenuManager = this.barManager1;
+            this.txtTennisLine1.Name = "txtTennisLine1";
+            this.txtTennisLine1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtTennisLine1.Properties.Appearance.Options.UseFont = true;
+            this.txtTennisLine1.Size = new System.Drawing.Size(483, 24);
+            this.txtTennisLine1.TabIndex = 205;
+            // 
+            // labelControl84
+            // 
+            this.labelControl84.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl84.Appearance.Options.UseFont = true;
+            this.labelControl84.Location = new System.Drawing.Point(12, 86);
+            this.labelControl84.Name = "labelControl84";
+            this.labelControl84.Size = new System.Drawing.Size(58, 19);
+            this.labelControl84.TabIndex = 206;
+            this.labelControl84.Text = "Dòng 2:";
+            // 
+            // txtTennisLine2
+            // 
+            this.txtTennisLine2.Location = new System.Drawing.Point(106, 86);
+            this.txtTennisLine2.MenuManager = this.barManager1;
+            this.txtTennisLine2.Name = "txtTennisLine2";
+            this.txtTennisLine2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtTennisLine2.Properties.Appearance.Options.UseFont = true;
+            this.txtTennisLine2.Size = new System.Drawing.Size(483, 24);
+            this.txtTennisLine2.TabIndex = 207;
+            // 
+            // xtraTabPage4
+            // 
+            this.xtraTabPage4.Appearance.Header.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.xtraTabPage4.Appearance.Header.Options.UseFont = true;
+            this.xtraTabPage4.Controls.Add(this.btnUpdateEditableTemplate);
+            this.xtraTabPage4.Controls.Add(this.editPlayer);
+            this.xtraTabPage4.Controls.Add(this.comboBoxEdit1);
+            this.xtraTabPage4.Controls.Add(this.labelControl85);
+            this.xtraTabPage4.Controls.Add(this.btnOffEditableTemplate);
+            this.xtraTabPage4.Controls.Add(this.btnOnEditableTemplate);
+            this.xtraTabPage4.Name = "xtraTabPage4";
+            this.xtraTabPage4.Size = new System.Drawing.Size(1336, 762);
+            this.xtraTabPage4.Text = "Highlight/Result/World Group";
+            // 
+            // editPlayer
+            // 
+            this.editPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editPlayer.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
+            this.editPlayer.BackgroundColor = System.Drawing.Color.Empty;
+            this.editPlayer.Location = new System.Drawing.Point(28, 78);
+            this.editPlayer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.editPlayer.Name = "editPlayer";
+            this.editPlayer.ScaleMode = CGPreviewControl.FlashTemplateHostControl.ScaleModes.FullScreen;
+            this.editPlayer.Size = new System.Drawing.Size(1304, 679);
+            this.editPlayer.TabIndex = 278;
+            this.editPlayer.TemplateFolder = "";
+            this.editPlayer.TemplateHost = "";
+            this.editPlayer.Valid = false;
+            this.editPlayer.Version = CGPreviewControl.FlashTemplateHostControl.Versions.Version20;
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.EditValue = "";
+            this.comboBoxEdit1.Location = new System.Drawing.Point(142, 25);
+            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxEdit1.MenuManager = this.barManager1;
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit1.Properties.Appearance.Options.UseTextOptions = true;
+            this.comboBoxEdit1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            "News/Highlights",
+            "World Group",
+            "Fixtures/Results"});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(205, 26);
+            this.comboBoxEdit1.TabIndex = 277;
+            // 
+            // labelControl85
+            // 
+            this.labelControl85.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl85.Appearance.Options.UseFont = true;
+            this.labelControl85.Location = new System.Drawing.Point(28, 28);
+            this.labelControl85.Name = "labelControl85";
+            this.labelControl85.Size = new System.Drawing.Size(99, 21);
+            this.labelControl85.TabIndex = 276;
+            this.labelControl85.Text = "Chọn đồ họa:";
+            // 
+            // btnOffEditableTemplate
+            // 
+            this.btnOffEditableTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnOffEditableTemplate.Appearance.Options.UseFont = true;
+            this.btnOffEditableTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnOffEditableTemplate.Location = new System.Drawing.Point(557, 23);
+            this.btnOffEditableTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOffEditableTemplate.Name = "btnOffEditableTemplate";
+            this.btnOffEditableTemplate.Size = new System.Drawing.Size(77, 30);
+            this.btnOffEditableTemplate.TabIndex = 275;
+            this.btnOffEditableTemplate.Text = "Tắt";
+            this.btnOffEditableTemplate.ToolTip = "Xuống tất cả đồ họa";
+            this.btnOffEditableTemplate.Click += new System.EventHandler(this.btnOffEditableTemplate_Click);
+            // 
+            // btnOnEditableTemplate
+            // 
+            this.btnOnEditableTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnOnEditableTemplate.Appearance.Options.UseFont = true;
+            this.btnOnEditableTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnOnEditableTemplate.Location = new System.Drawing.Point(468, 23);
+            this.btnOnEditableTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOnEditableTemplate.Name = "btnOnEditableTemplate";
+            this.btnOnEditableTemplate.Size = new System.Drawing.Size(75, 30);
+            this.btnOnEditableTemplate.TabIndex = 274;
+            this.btnOnEditableTemplate.Text = "Bật";
+            this.btnOnEditableTemplate.Click += new System.EventHandler(this.btnOnEditableTemplate_Click);
             // 
             // splitContainerControl2
             // 
@@ -7302,32 +7442,18 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnOffTeamboard
+            // btnUpdateEditableTemplate
             // 
-            this.btnOffTeamboard.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnOffTeamboard.Appearance.Options.UseFont = true;
-            this.btnOffTeamboard.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOffTeamboard.Location = new System.Drawing.Point(709, 622);
-            this.btnOffTeamboard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnOffTeamboard.Name = "btnOffTeamboard";
-            this.btnOffTeamboard.Size = new System.Drawing.Size(122, 30);
-            this.btnOffTeamboard.TabIndex = 271;
-            this.btnOffTeamboard.Text = "Tắt Teamboard";
-            this.btnOffTeamboard.ToolTip = "Xuống tất cả đồ họa";
-            this.btnOffTeamboard.Click += new System.EventHandler(this.btnOffTeamboard_Click);
-            // 
-            // btnOnTeamboard
-            // 
-            this.btnOnTeamboard.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnOnTeamboard.Appearance.Options.UseFont = true;
-            this.btnOnTeamboard.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOnTeamboard.Location = new System.Drawing.Point(557, 622);
-            this.btnOnTeamboard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnOnTeamboard.Name = "btnOnTeamboard";
-            this.btnOnTeamboard.Size = new System.Drawing.Size(125, 30);
-            this.btnOnTeamboard.TabIndex = 270;
-            this.btnOnTeamboard.Text = "Bật Teamboard";
-            this.btnOnTeamboard.Click += new System.EventHandler(this.btnOnTeamboard_Click);
+            this.btnUpdateEditableTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnUpdateEditableTemplate.Appearance.Options.UseFont = true;
+            this.btnUpdateEditableTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnUpdateEditableTemplate.Location = new System.Drawing.Point(369, 23);
+            this.btnUpdateEditableTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdateEditableTemplate.Name = "btnUpdateEditableTemplate";
+            this.btnUpdateEditableTemplate.Size = new System.Drawing.Size(84, 30);
+            this.btnUpdateEditableTemplate.TabIndex = 279;
+            this.btnUpdateEditableTemplate.Text = "Update";
+            this.btnUpdateEditableTemplate.Click += new System.EventHandler(this.btnUpdateEditableTemplate_Click);
             // 
             // MainForm
             // 
@@ -7519,6 +7645,7 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage3.ResumeLayout(false);
             this.xtraTabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboDoHoaChungTennis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreviousTennisTeam1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreviousTennisTeam2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlayedTennisTeam2.Properties)).EndInit();
@@ -7601,15 +7728,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl10)).EndInit();
             this.groupControl10.ResumeLayout(false);
             this.groupControl10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl11)).EndInit();
             this.groupControl11.ResumeLayout(false);
             this.groupControl11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTennisLogo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTennisLine1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTennisLine2.Properties)).EndInit();
+            this.xtraTabPage4.ResumeLayout(false);
+            this.xtraTabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
             this.splitContainerControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -8024,26 +8154,13 @@
         private System.Windows.Forms.CheckBox ck5set;
         private System.Windows.Forms.CheckBox ck3set;
         private DevExpress.XtraEditors.GroupControl groupControl10;
-        private DevExpress.XtraEditors.SimpleButton simpleButton35;
-        private DevExpress.XtraEditors.SimpleButton simpleButton36;
+        private DevExpress.XtraEditors.SimpleButton btnOffNewHighlight;
+        private DevExpress.XtraEditors.SimpleButton btnOnNewsHighlight;
         private DevExpress.XtraEditors.TextEdit textEdit8;
         private DevExpress.XtraEditors.LabelControl labelControl70;
         private DevExpress.XtraEditors.LabelControl labelControl81;
-        private DevExpress.XtraEditors.LabelControl labelControl82;
         private DevExpress.XtraEditors.TextEdit textEdit9;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
-        private DevExpress.XtraEditors.LabelControl labelControl83;
-        private DevExpress.XtraEditors.LabelControl labelControl84;
-        private DevExpress.XtraEditors.TextEdit textEdit11;
-        private DevExpress.XtraEditors.LabelControl labelControl85;
-        private DevExpress.XtraEditors.LabelControl labelControl86;
-        private DevExpress.XtraEditors.LabelControl labelControl87;
-        private DevExpress.XtraEditors.TextEdit textEdit12;
         private DevExpress.XtraEditors.GroupControl groupControl11;
-        private DevExpress.XtraEditors.SimpleButton simpleButton37;
-        private DevExpress.XtraEditors.SimpleButton simpleButton38;
-        private DevExpress.XtraEditors.TextEdit textEdit13;
-        private DevExpress.XtraEditors.LabelControl labelControl88;
         private DevExpress.XtraEditors.ComboBoxEdit cboTennisType;
         private DevExpress.XtraEditors.LabelControl labelControl92;
         private DevExpress.XtraEditors.LabelControl labelControl93;
@@ -8158,7 +8275,25 @@
         private DevExpress.XtraEditors.TextEdit txtPositionTennisTeam2;
         private DevExpress.XtraEditors.LabelControl labelControl78;
         private DevExpress.XtraEditors.TextEdit txtPointTennisTeam2;
-        private DevExpress.XtraEditors.SimpleButton btnOffTeamboard;
-        private DevExpress.XtraEditors.SimpleButton btnOnTeamboard;
+        private DevExpress.XtraEditors.ComboBoxEdit cboDoHoaChungTennis;
+        private DevExpress.XtraEditors.LabelControl labelControl80;
+        private DevExpress.XtraEditors.LabelControl labelControl86;
+        private DevExpress.XtraEditors.TextEdit textEdit12;
+        private DevExpress.XtraEditors.SimpleButton btnTennisLogoBrowse;
+        private DevExpress.XtraEditors.LabelControl labelControl82;
+        private DevExpress.XtraEditors.TextEdit txtTennisLogo;
+        private DevExpress.XtraEditors.SimpleButton btnOffBarTen;
+        private DevExpress.XtraEditors.SimpleButton btnOnBarTen;
+        private DevExpress.XtraEditors.LabelControl labelControl83;
+        private DevExpress.XtraEditors.TextEdit txtTennisLine1;
+        private DevExpress.XtraEditors.LabelControl labelControl84;
+        private DevExpress.XtraEditors.TextEdit txtTennisLine2;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
+        public CGPreviewControl.FlashTemplateHostControl editPlayer;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl85;
+        private DevExpress.XtraEditors.SimpleButton btnOffEditableTemplate;
+        private DevExpress.XtraEditors.SimpleButton btnOnEditableTemplate;
+        private DevExpress.XtraEditors.SimpleButton btnUpdateEditableTemplate;
     }
 }
