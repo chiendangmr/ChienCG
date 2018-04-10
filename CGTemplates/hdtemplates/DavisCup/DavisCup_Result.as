@@ -26,69 +26,62 @@
 	import flash.globalization.NumberFormatter;
 	import flash.globalization.LocaleID;
 		
-	public class DavisCup_TeamBoard extends CasparTemplate{
+	public class DavisCup_Result extends CasparTemplate{
 		
 		public var viewGroup:MovieClip = new MovieClip();
 		public var icon1:MovieClip;
 		public var icon2:MovieClip;
 		
-		public var giaidau:TextField = new TextField();
-		public var vongdau:TextField = new TextField();
-		public var character1:TextField = new TextField();
-		public var team1:TextField = new TextField();
-		public var team2:TextField = new TextField();
-		public var character2:TextField = new TextField();
-		public var diadiem:TextField = new TextField();
-		public var chitietDiaDiem:TextField = new TextField();
-		public var team1Player1:TextField = new TextField();
-		public var team1Player2:TextField = new TextField();
-		public var team1Player3:TextField = new TextField();
-		public var team1Player4:TextField = new TextField();
-		public var team2Player1:TextField = new TextField();
-		public var team2Player2:TextField = new TextField();
-		public var team2Player3:TextField = new TextField();
-		public var team2Player4:TextField = new TextField();
-		public var team1Rank1:TextField = new TextField();
-		public var team1Rank2:TextField = new TextField();	
-		public var team1Rank3:TextField = new TextField();
-		public var team1Rank4:TextField = new TextField();
-		public var team2Rank4:TextField = new TextField();
-		public var team2Rank3:TextField = new TextField();	
-		public var team2Rank2:TextField = new TextField();
-		public var team2Rank1:TextField = new TextField();	
-		public var captain1:TextField = new TextField();
-		public var captain2:TextField = new TextField();	
+		public var title1:TextField = new TextField();
+		public var title2:TextField = new TextField();
+		public var title3:TextField = new TextField();
+		public var title4:TextField = new TextField();
+		public var title5:TextField = new TextField();
+		public var title6:TextField = new TextField();
+		public var title7:TextField = new TextField();
+		public var title8:TextField = new TextField();
+		public var title9:TextField = new TextField();
+		public var title10:TextField = new TextField();
+		public var title11:TextField = new TextField();
+		public var title12:TextField = new TextField();
+		public var title13:TextField = new TextField();
+		public var title14:TextField = new TextField();
+		public var title15:TextField = new TextField();
+		public var title16:TextField = new TextField();
+		public var title17:TextField = new TextField();
+		public var title18:TextField = new TextField();	
+		public var title19:TextField = new TextField();
+		public var title20:TextField = new TextField();
+		public var title21:TextField = new TextField();
+		public var title22:TextField = new TextField();			
 						
-		public function DavisCup_TeamBoard() {
+		public function DavisCup_Result() {
 			// constructor code
 			super();
 			
-			this.viewGroup.addChild(giaidau);
-			this.viewGroup.addChild(vongdau);
-			this.viewGroup.addChild(character1);
-			this.viewGroup.addChild(team1);
-			this.viewGroup.addChild(team2);
-			this.viewGroup.addChild(character2);
-			this.viewGroup.addChild(diadiem);
-			this.viewGroup.addChild(chitietDiaDiem);
-			this.viewGroup.addChild(team1Player1);
-			this.viewGroup.addChild(team1Player2);
-			this.viewGroup.addChild(team1Player3);
-			this.viewGroup.addChild(team1Player4);
-			this.viewGroup.addChild(team2Player1);
-			this.viewGroup.addChild(team2Player2);
-			this.viewGroup.addChild(team2Player3);
-			this.viewGroup.addChild(team2Player4);
-			this.viewGroup.addChild(team1Rank1);
-			this.viewGroup.addChild(team1Rank2);
-			this.viewGroup.addChild(team1Rank3);
-			this.viewGroup.addChild(team1Rank4);
-			this.viewGroup.addChild(team2Rank4);
-			this.viewGroup.addChild(team2Rank3);
-			this.viewGroup.addChild(team2Rank2);
-			this.viewGroup.addChild(team2Rank1);
-			this.viewGroup.addChild(captain1);
-			this.viewGroup.addChild(captain2);
+			this.viewGroup.addChild(title1);
+			this.viewGroup.addChild(title2);
+			this.viewGroup.addChild(title3);
+			this.viewGroup.addChild(title4);
+			this.viewGroup.addChild(title5);
+			this.viewGroup.addChild(title6);
+			this.viewGroup.addChild(title7);
+			this.viewGroup.addChild(title8);
+			this.viewGroup.addChild(title9);
+			this.viewGroup.addChild(title10);
+			this.viewGroup.addChild(title11);
+			this.viewGroup.addChild(title12);
+			this.viewGroup.addChild(title13);
+			this.viewGroup.addChild(title14);
+			this.viewGroup.addChild(title15);
+			this.viewGroup.addChild(title16);
+			this.viewGroup.addChild(title17);
+			this.viewGroup.addChild(title18);
+			this.viewGroup.addChild(title19);
+			this.viewGroup.addChild(title20);
+			this.viewGroup.addChild(title21);
+			this.viewGroup.addChild(title22);
+			
 			this.viewGroup.addChild(icon1);
 			this.viewGroup.addChild(icon2);
 			this.addChild(viewGroup);
@@ -103,26 +96,26 @@
 		function GetProperties()
 		{
 			var xmlStr:String = "<Track_Property>";
-			xmlStr +=Add(xmlStr, "giaidau", giaidau);
-			xmlStr +=Add(xmlStr, "vongdau", vongdau);
-			xmlStr +=Add(xmlStr, "character1", character1);
-			xmlStr +=Add(xmlStr, "team1", team1);
-			xmlStr +=Add(xmlStr, "team2", team2);
-			xmlStr +=Add(xmlStr, "character2", character2);	
-			xmlStr +=Add(xmlStr, "team1Player1", team1Player1);
-			xmlStr +=Add(xmlStr, "team1Player2", team1Player2);
-			xmlStr +=Add(xmlStr, "team1Player3", team1Player3);
-			xmlStr +=Add(xmlStr, "team1Player4", team1Player4);
-			xmlStr +=Add(xmlStr, "team2Player1", team2Player1);
-			xmlStr +=Add(xmlStr, "team2Player2", team2Player2);	
-			xmlStr +=Add(xmlStr, "team2Player3", team2Player3);
-			xmlStr +=Add(xmlStr, "team2Player4", team2Player4);
-			xmlStr +=Add(xmlStr, "team1Rank1", team1Rank1);
-			xmlStr +=Add(xmlStr, "team1Rank2", team1Rank2);	
-			xmlStr +=Add(xmlStr, "team1Rank3", team1Rank3);
-			xmlStr +=Add(xmlStr, "team1Rank4", team1Rank4);
-			xmlStr +=Add(xmlStr, "team2Rank4", team2Rank4);
-			xmlStr +=Add(xmlStr, "team2Rank3", team2Rank3);
+			xmlStr +=Add(xmlStr, "title1", title1);
+			xmlStr +=Add(xmlStr, "title2", title2);
+			xmlStr +=Add(xmlStr, "title3", title3);
+			xmlStr +=Add(xmlStr, "title4", title4);
+			xmlStr +=Add(xmlStr, "title5", title5);
+			xmlStr +=Add(xmlStr, "title6", title6);	
+			xmlStr +=Add(xmlStr, "title9", title9);
+			xmlStr +=Add(xmlStr, "title10", title10);
+			xmlStr +=Add(xmlStr, "title11", title11);
+			xmlStr +=Add(xmlStr, "title12", title12);
+			xmlStr +=Add(xmlStr, "title13", title13);
+			xmlStr +=Add(xmlStr, "title14", title14);	
+			xmlStr +=Add(xmlStr, "title15", title15);
+			xmlStr +=Add(xmlStr, "title16", title16);
+			xmlStr +=Add(xmlStr, "title17", title17);
+			xmlStr +=Add(xmlStr, "title18", title18);	
+			xmlStr +=Add(xmlStr, "title19", title19);
+			xmlStr +=Add(xmlStr, "title20", title20);
+			xmlStr +=Add(xmlStr, "title21", title21);
+			xmlStr +=Add(xmlStr, "title22", title22);
 			xmlStr += "</Track_Property>";
 			
 			ExternalInterface.call("Properties", xmlStr);
@@ -141,84 +134,72 @@
 				var data:String = element.data.@value;
 				switch(property.toLowerCase())
 				{						
-					case "giaidau".toLowerCase():
-						this.giaidau.text = data.toUpperCase();
+					case "title1".toLowerCase():
+						this.title1.text = data;
 						break;
-					case "vongdau".toLowerCase():
-						this.vongdau.text = data.toUpperCase();
+					case "title2".toLowerCase():
+						this.title2.text = data;
 						break;
-					case "character1".toLowerCase():
-						this.character1.text = data.toUpperCase();
+					case "title3".toLowerCase():
+						this.title3.text = data;
 						break;
-					case "team1".toLowerCase():
-						this.team1.text = data.toUpperCase();
+					case "title4".toLowerCase():
+						this.title4.text = data;
 						break;
-					case "team2".toLowerCase():
-						this.team2.text = data.toUpperCase();
+					case "title5".toLowerCase():
+						this.title5.text = data;
 						break;
-					case "character2".toLowerCase():
-						this.character2.text = data.toUpperCase();
+					case "title6".toLowerCase():
+						this.title6.text = data;
 						break;
-					case "diadiem".toLowerCase():
-						this.diadiem.text = data;
+					case "title7".toLowerCase():
+						this.title7.text = data;
 						break;
-					case "chitietDiaDiem".toLowerCase():
-						this.chitietDiaDiem.text = data;
+					case "title8".toLowerCase():
+						this.title8.text = data;
 						break;
-					case "team1Player1".toLowerCase():
-						this.team1Player1.text = data.toUpperCase();
+					case "title9".toLowerCase():
+						this.title9.text = data;
 						break;
-					case "team1Player2".toLowerCase():
-						this.team1Player2.text = data.toUpperCase();
+					case "title10".toLowerCase():
+						this.title10.text = data;
 						break;
-					case "team1Player3".toLowerCase():
-						this.team1Player3.text = data.toUpperCase();
+					case "title11".toLowerCase():
+						this.title11.text = data;
 						break;
-					case "team1Player4".toLowerCase():
-						this.team1Player4.text = data.toUpperCase();
+					case "title12".toLowerCase():
+						this.title12.text = data;
 						break;					
-					case "team2Player1".toLowerCase():
-						this.team2Player1.text = data.toUpperCase();
+					case "title13".toLowerCase():
+						this.title13.text = data;
 						break;
-					case "team2Player2".toLowerCase():
-						this.team2Player2.text = data.toUpperCase();
+					case "title14".toLowerCase():
+						this.title14.text = data;
 						break;
-					case "team2Player3".toLowerCase():
-						this.team2Player3.text = data.toUpperCase();
+					case "title15".toLowerCase():
+						this.title15.text = data;
 						break;
-					case "team2Player4".toLowerCase():
-						this.team2Player4.text = data.toUpperCase();
+					case "title16".toLowerCase():
+						this.title16.text = data;
 						break;
-					case "team1Rank1".toLowerCase():
-						this.team1Rank1.text = data.toUpperCase();
+					case "title17".toLowerCase():
+						this.title17.text = data;
 						break;
-					case "team1Rank2".toLowerCase():
-						this.team1Rank2.text = data.toUpperCase();
+					case "title18".toLowerCase():
+						this.title18.text = data;
 						break;	
-					case "team1Rank3".toLowerCase():
-						this.team1Rank3.text = data.toUpperCase();
+					case "title19".toLowerCase():
+						this.title19.text = data;
 						break;
-					case "team1Rank4".toLowerCase():
-						this.team1Rank4.text = data.toUpperCase();
+					case "title20".toLowerCase():
+						this.title20.text = data;
 						break;
-					case "team2Rank4".toLowerCase():
-						this.team2Rank4.text = data.toUpperCase();
+					case "title21".toLowerCase():
+						this.title21.text = data;
 						break;
-					case "team2Rank3".toLowerCase():
-						this.team2Rank3.text = data.toUpperCase();
-						break;	
-					case "team2Rank2".toLowerCase():
-						this.team2Rank2.text = data.toUpperCase();
-						break;
-					case "team2Rank1".toLowerCase():
-						this.team2Rank1.text = data.toUpperCase();
-						break;	
-					case "captain1".toLowerCase():
-						this.captain1.text = data.toUpperCase();
-						break;
-					case "captain2".toLowerCase():
-						this.captain2.text = data.toUpperCase();
-						break;	
+					case "title22".toLowerCase():
+						this.title22.text = data;
+						break;						
 					case "icon1".toLowerCase():						
 						var file:Loader = new Loader();
 						file.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted);

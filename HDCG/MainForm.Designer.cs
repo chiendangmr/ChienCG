@@ -533,8 +533,15 @@
             this.labelControl84 = new DevExpress.XtraEditors.LabelControl();
             this.txtTennisLine2 = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.simpleButton36 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl88 = new DevExpress.XtraEditors.LabelControl();
+            this.txtEditableLogo2 = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton35 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl87 = new DevExpress.XtraEditors.LabelControl();
+            this.txtEditableLogo1 = new DevExpress.XtraEditors.TextEdit();
+            this.btnUpdateEditableTemplate = new DevExpress.XtraEditors.SimpleButton();
             this.editPlayer = new CGPreviewControl.FlashTemplateHostControl();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cboEditableTemplates = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl85 = new DevExpress.XtraEditors.LabelControl();
             this.btnOffEditableTemplate = new DevExpress.XtraEditors.SimpleButton();
             this.btnOnEditableTemplate = new DevExpress.XtraEditors.SimpleButton();
@@ -559,7 +566,6 @@
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnUpdateEditableTemplate = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -811,7 +817,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTennisLine1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTennisLine2.Properties)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditableLogo2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditableLogo1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboEditableTemplates.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -7094,15 +7102,104 @@
             // 
             this.xtraTabPage4.Appearance.Header.Font = new System.Drawing.Font("Tahoma", 8.8F);
             this.xtraTabPage4.Appearance.Header.Options.UseFont = true;
+            this.xtraTabPage4.Controls.Add(this.simpleButton36);
+            this.xtraTabPage4.Controls.Add(this.labelControl88);
+            this.xtraTabPage4.Controls.Add(this.txtEditableLogo2);
+            this.xtraTabPage4.Controls.Add(this.simpleButton35);
+            this.xtraTabPage4.Controls.Add(this.labelControl87);
+            this.xtraTabPage4.Controls.Add(this.txtEditableLogo1);
             this.xtraTabPage4.Controls.Add(this.btnUpdateEditableTemplate);
             this.xtraTabPage4.Controls.Add(this.editPlayer);
-            this.xtraTabPage4.Controls.Add(this.comboBoxEdit1);
+            this.xtraTabPage4.Controls.Add(this.cboEditableTemplates);
             this.xtraTabPage4.Controls.Add(this.labelControl85);
             this.xtraTabPage4.Controls.Add(this.btnOffEditableTemplate);
             this.xtraTabPage4.Controls.Add(this.btnOnEditableTemplate);
             this.xtraTabPage4.Name = "xtraTabPage4";
             this.xtraTabPage4.Size = new System.Drawing.Size(1336, 762);
-            this.xtraTabPage4.Text = "Highlight/Result/World Group";
+            this.xtraTabPage4.Text = "Highlight/Result";
+            // 
+            // simpleButton36
+            // 
+            this.simpleButton36.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton36.Appearance.Options.UseFont = true;
+            this.simpleButton36.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton36.Location = new System.Drawing.Point(1193, 22);
+            this.simpleButton36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton36.Name = "simpleButton36";
+            this.simpleButton36.Size = new System.Drawing.Size(65, 30);
+            this.simpleButton36.TabIndex = 285;
+            this.simpleButton36.Text = "Chọn...";
+            this.simpleButton36.ToolTip = "Lên đồ họa";
+            this.simpleButton36.Click += new System.EventHandler(this.simpleButton36_Click);
+            // 
+            // labelControl88
+            // 
+            this.labelControl88.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl88.Appearance.Options.UseFont = true;
+            this.labelControl88.Location = new System.Drawing.Point(1023, 27);
+            this.labelControl88.Name = "labelControl88";
+            this.labelControl88.Size = new System.Drawing.Size(55, 19);
+            this.labelControl88.TabIndex = 283;
+            this.labelControl88.Text = "Logo 2:";
+            // 
+            // txtEditableLogo2
+            // 
+            this.txtEditableLogo2.Enabled = false;
+            this.txtEditableLogo2.Location = new System.Drawing.Point(1086, 25);
+            this.txtEditableLogo2.MenuManager = this.barManager1;
+            this.txtEditableLogo2.Name = "txtEditableLogo2";
+            this.txtEditableLogo2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtEditableLogo2.Properties.Appearance.Options.UseFont = true;
+            this.txtEditableLogo2.Size = new System.Drawing.Size(101, 24);
+            this.txtEditableLogo2.TabIndex = 284;
+            // 
+            // simpleButton35
+            // 
+            this.simpleButton35.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.simpleButton35.Appearance.Options.UseFont = true;
+            this.simpleButton35.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton35.Location = new System.Drawing.Point(935, 24);
+            this.simpleButton35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton35.Name = "simpleButton35";
+            this.simpleButton35.Size = new System.Drawing.Size(65, 30);
+            this.simpleButton35.TabIndex = 282;
+            this.simpleButton35.Text = "Chọn...";
+            this.simpleButton35.ToolTip = "Lên đồ họa";
+            this.simpleButton35.Click += new System.EventHandler(this.simpleButton35_Click);
+            // 
+            // labelControl87
+            // 
+            this.labelControl87.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.labelControl87.Appearance.Options.UseFont = true;
+            this.labelControl87.Location = new System.Drawing.Point(765, 29);
+            this.labelControl87.Name = "labelControl87";
+            this.labelControl87.Size = new System.Drawing.Size(55, 19);
+            this.labelControl87.TabIndex = 280;
+            this.labelControl87.Text = "Logo 1:";
+            // 
+            // txtEditableLogo1
+            // 
+            this.txtEditableLogo1.Enabled = false;
+            this.txtEditableLogo1.Location = new System.Drawing.Point(828, 27);
+            this.txtEditableLogo1.MenuManager = this.barManager1;
+            this.txtEditableLogo1.Name = "txtEditableLogo1";
+            this.txtEditableLogo1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.8F);
+            this.txtEditableLogo1.Properties.Appearance.Options.UseFont = true;
+            this.txtEditableLogo1.Size = new System.Drawing.Size(101, 24);
+            this.txtEditableLogo1.TabIndex = 281;
+            // 
+            // btnUpdateEditableTemplate
+            // 
+            this.btnUpdateEditableTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnUpdateEditableTemplate.Appearance.Options.UseFont = true;
+            this.btnUpdateEditableTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnUpdateEditableTemplate.Location = new System.Drawing.Point(369, 23);
+            this.btnUpdateEditableTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdateEditableTemplate.Name = "btnUpdateEditableTemplate";
+            this.btnUpdateEditableTemplate.Size = new System.Drawing.Size(84, 30);
+            this.btnUpdateEditableTemplate.TabIndex = 279;
+            this.btnUpdateEditableTemplate.Text = "Update";
+            this.btnUpdateEditableTemplate.Click += new System.EventHandler(this.btnUpdateEditableTemplate_Click);
             // 
             // editPlayer
             // 
@@ -7122,25 +7219,26 @@
             this.editPlayer.Valid = false;
             this.editPlayer.Version = CGPreviewControl.FlashTemplateHostControl.Versions.Version20;
             // 
-            // comboBoxEdit1
+            // cboEditableTemplates
             // 
-            this.comboBoxEdit1.EditValue = "";
-            this.comboBoxEdit1.Location = new System.Drawing.Point(142, 25);
-            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxEdit1.MenuManager = this.barManager1;
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.Appearance.Options.UseTextOptions = true;
-            this.comboBoxEdit1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cboEditableTemplates.EditValue = "";
+            this.cboEditableTemplates.Location = new System.Drawing.Point(142, 25);
+            this.cboEditableTemplates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboEditableTemplates.MenuManager = this.barManager1;
+            this.cboEditableTemplates.Name = "cboEditableTemplates";
+            this.cboEditableTemplates.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F, System.Drawing.FontStyle.Bold);
+            this.cboEditableTemplates.Properties.Appearance.Options.UseFont = true;
+            this.cboEditableTemplates.Properties.Appearance.Options.UseTextOptions = true;
+            this.cboEditableTemplates.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cboEditableTemplates.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            this.cboEditableTemplates.Properties.Items.AddRange(new object[] {
             "News/Highlights",
-            "World Group",
             "Fixtures/Results"});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(205, 26);
-            this.comboBoxEdit1.TabIndex = 277;
+            this.cboEditableTemplates.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cboEditableTemplates.Size = new System.Drawing.Size(205, 26);
+            this.cboEditableTemplates.TabIndex = 277;
+            this.cboEditableTemplates.SelectedIndexChanged += new System.EventHandler(this.cboEditableTemplates_SelectedIndexChanged);
             // 
             // labelControl85
             // 
@@ -7442,19 +7540,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnUpdateEditableTemplate
-            // 
-            this.btnUpdateEditableTemplate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnUpdateEditableTemplate.Appearance.Options.UseFont = true;
-            this.btnUpdateEditableTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnUpdateEditableTemplate.Location = new System.Drawing.Point(369, 23);
-            this.btnUpdateEditableTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUpdateEditableTemplate.Name = "btnUpdateEditableTemplate";
-            this.btnUpdateEditableTemplate.Size = new System.Drawing.Size(84, 30);
-            this.btnUpdateEditableTemplate.TabIndex = 279;
-            this.btnUpdateEditableTemplate.Text = "Update";
-            this.btnUpdateEditableTemplate.Click += new System.EventHandler(this.btnUpdateEditableTemplate_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -7739,7 +7824,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTennisLine2.Properties)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
             this.xtraTabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditableLogo2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditableLogo1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboEditableTemplates.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
             this.splitContainerControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -8290,10 +8377,16 @@
         private DevExpress.XtraEditors.TextEdit txtTennisLine2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         public CGPreviewControl.FlashTemplateHostControl editPlayer;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cboEditableTemplates;
         private DevExpress.XtraEditors.LabelControl labelControl85;
         private DevExpress.XtraEditors.SimpleButton btnOffEditableTemplate;
         private DevExpress.XtraEditors.SimpleButton btnOnEditableTemplate;
         private DevExpress.XtraEditors.SimpleButton btnUpdateEditableTemplate;
+        private DevExpress.XtraEditors.SimpleButton simpleButton36;
+        private DevExpress.XtraEditors.LabelControl labelControl88;
+        private DevExpress.XtraEditors.TextEdit txtEditableLogo2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton35;
+        private DevExpress.XtraEditors.LabelControl labelControl87;
+        private DevExpress.XtraEditors.TextEdit txtEditableLogo1;
     }
 }

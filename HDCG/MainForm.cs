@@ -723,17 +723,40 @@ namespace HDCGStudio
             }
             else
             {
+                editPlayer.Clear();
                 player.Clear();
 
                 if (path.Contains("43"))
+                {
                     player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect43;
+                    editPlayer.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect43;
+                }
                 else
+                {
                     player.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
-
+                    editPlayer.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
+                }
                 player.TemplateHost = path;
                 player.Add(0, "HDTemplates/HDVietNam.ft", true);
+                editPlayer.TemplateHost = path;
+                editPlayer.Add(0, "HDTemplates/HDVietNam.ft", true);
 
                 _TemplateHost = path;
+            }
+        }
+        public void ClearEditPlayer()
+        {
+            if (_TemplateHost != "")
+            {
+                editPlayer.Clear();
+
+                if (_TemplateHost.Contains("43"))
+                    editPlayer.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect43;
+                else
+                    editPlayer.AspectControl = CGPreviewControl.FlashTemplateHostControl.Aspects.Aspect169;
+
+                editPlayer.TemplateHost = _TemplateHost;
+                editPlayer.Add(0, "HDTemplates/HDVietNam.ft", true);
             }
         }
         public void Clear()
@@ -2055,6 +2078,7 @@ namespace HDCGStudio
             else
                 HDMessageBox.Show("Chọn Giải đấu trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             try
@@ -2734,6 +2758,7 @@ namespace HDCGStudio
             try
             {
                 string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                //var temp = player.GetProperties();
                 player.Update(1, xmlStr.Replace("\\n", "\n"));
                 player.Refresh();
                 cgServer.UpdateTemplate(105, xmlStr.Replace("\\", "\\\\"), 0);
@@ -2933,19 +2958,141 @@ namespace HDCGStudio
             }
         }
 
+        private void BatEditableTemplate(string tempName, int layer = 105)
+        {
+            if (cboGiaiDauTennis.Text.Length > 0)
+                try
+                {
+
+                    _tempName = _TennisLeagueCode + "_" + tempName;
+                    string savePath = Path.Combine(Path.Combine(Application.StartupPath, "Data/Tennis"), _tempName + ".txt");
+                    if (!File.Exists(savePath))
+                        File.Create(savePath).Dispose();
+                    List<Object.Property> runtimeProperties = new List<Object.Property>();
+                    runtimeProperties.Add(new Object.Property()
+                    {
+                        Name = "Loops",
+                        Value = "false"
+                    });
+                    string readText = File.ReadAllText(savePath);
+
+                    OnTemplate(layer, _tempName, 1, null, runtimeProperties, readText);
+                }
+                catch { }
+            else
+                HDMessageBox.Show("Chọn Giải đấu trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        public void ViewEditableTemplate(string templateFileName, bool isEdit = false)
+        {
+            string templateFile = "HDTemplates\\" + templateFileName;
+            string savePath = Path.Combine(Path.Combine(Application.StartupPath, "Data/Tennis"), templateFileName + ".txt");
+            if (!File.Exists(savePath))
+                File.Create(savePath).Dispose();
+            try
+            {
+                if (isEdit)
+                {
+                    var xml = editPlayer.GetProperties();
+                    var fieldName = xml.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&quot;", "\"").Replace("<string>", "").Replace("</string>", "");
+                    string icon1 = Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons/Tennis"), txtEditableLogo1.Text));
+                    string icon2 = Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons/Tennis"), txtEditableLogo2.Text));
+                    string xmlStr = "<Track_Property>" + icon1 + icon2 + fieldName.Replace("<Track_Property>", "");
+
+                    File.WriteAllText(savePath, xmlStr);
+                    if (editPlayer.Add(1, templateFile))
+                    {
+                        editPlayer.Update(1, xmlStr.Replace("\\n", "\n"));
+                        editPlayer.Refresh();
+                        editPlayer.InvokeMethod(1, "fadeUp");
+                    }
+                }
+                else
+                {
+                    int nTry = 0;
+
+                    TryHere:
+                    ClearEditPlayer();
+                    string readText = File.ReadAllText(savePath);
+                    if (editPlayer.Add(1, templateFile))
+                    {
+                        if (readText.Length > 0)
+                            editPlayer.Update(1, readText.Replace("\\n", "\n"));
+                        editPlayer.Refresh();
+                        editPlayer.InvokeMethod(1, "fadeUp");
+                    }
+                    else
+                    {
+                        nTry++;
+                        if (nTry < 1)
+                        {
+                            ClearEditPlayer();
+                            goto TryHere;
+                        }
+                        throw new Exception("Can not cue graphics!");
+                    }
+                }
+            }
+            catch
+            {
+                HDMessageBox.Show("Can't edit this template!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void btnUpdateEditableTemplate_Click(object sender, EventArgs e)
         {
-
+            ViewEditableTemplate(_tempName, true);
         }
 
         private void btnOnEditableTemplate_Click(object sender, EventArgs e)
         {
-
+            switch (cboEditableTemplates.Text)
+            {
+                case "News/Highlights":
+                    BatEditableTemplate("NewsHighlight.ft");
+                    break;
+                case "Fixtures/Results":
+                    BatEditableTemplate("Result.ft");
+                    break;
+            }
         }
 
         private void btnOffEditableTemplate_Click(object sender, EventArgs e)
         {
+            OffTemplate(105);
+        }
 
+        private void cboEditableTemplates_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cboEditableTemplates.Text)
+            {
+                case "News/Highlights":
+                    _tempName = _TennisLeagueCode + "_" + "NewsHighlight.ft";
+                    ViewEditableTemplate(_tempName);
+                    break;
+                //case "World Group":
+                //    break;
+                case "Fixtures/Results":
+                    _tempName = _TennisLeagueCode + "_" + "Result.ft";
+                    ViewEditableTemplate(_tempName);
+                    break;
+            }
+        }
+
+        private void simpleButton35_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons/Tennis");
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtEditableLogo1.Text = frm.FileName;
+        }
+
+        private void simpleButton36_Click(object sender, EventArgs e)
+        {
+            OpenFileInFolderDialog frm = new OpenFileInFolderDialog();
+            frm.RootFolder = Path.Combine(AppSetting.Default.MediaFolder, "Icons/Tennis");
+            frm.FilterString = "*.tga;*.png;*.jpg";
+            if (frm.ShowDialog() == DialogResult.OK)
+                txtEditableLogo2.Text = frm.FileName;
         }
     }
 }
