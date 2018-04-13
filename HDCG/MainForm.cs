@@ -1015,6 +1015,43 @@ namespace HDCGStudio
                     xmlAdd += Add("tyso", nTysoChu.Value.ToString() + " - " + nTysoKhach.Value.ToString());
                     xmlAdd += Add("goalChu", nTysoChu.Value.ToString());
                     xmlAdd += Add("goalKhach", nTysoKhach.Value.ToString());
+                    if (_tempName == "BongDa_DanhSachCauThu.ft")
+                    {
+                        if (isChu)
+                        {
+                            var lstChinhthucChu = GetTeamChinhThuc("home");
+                            var lstDuBiChu = GetTeamDuBi("home");
+                            if (lstChinhthucChu.Count > 0)
+                                for (var i = 0; i < lstChinhthucChu.Count(); i++)
+                                {
+                                    xmlAdd += Add("chinhthucName" + (i + 1).ToString(), lstChinhthucChu[i].mObj.Name);
+                                    xmlAdd += Add("chinhthucNumber" + (i + 1).ToString(), lstChinhthucChu[i].mObj.Number.ToString());
+                                }
+                            if (lstDuBiChu.Count > 0)
+                                for (var i = 0; i < lstDuBiChu.Count(); i++)
+                                {
+                                    xmlAdd += Add("dubiName" + (i + 1).ToString(), lstDuBiChu[i].mObj.Name);
+                                    xmlAdd += Add("dubiNumber" + (i + 1).ToString(), lstDuBiChu[i].mObj.Number.ToString());
+                                }
+                        }
+                        else
+                        {
+                            var lstChinhthucKhach = GetTeamChinhThuc("away");
+                            var lstDuBiKhach = GetTeamDuBi("away");
+                            if (lstChinhthucKhach.Count > 0)
+                                for (var i = 0; i < lstChinhthucKhach.Count(); i++)
+                                {
+                                    xmlAdd += Add("chinhthucName" + (i + 1).ToString(), lstChinhthucKhach[i].mObj.Name);
+                                    xmlAdd += Add("chinhthucNumber" + (i + 1).ToString(), lstChinhthucKhach[i].mObj.Number.ToString());
+                                }
+                            if (lstDuBiKhach.Count > 0)
+                                for (var i = 0; i < lstDuBiKhach.Count(); i++)
+                                {
+                                    xmlAdd += Add("dubiName" + (i + 1).ToString(), lstDuBiKhach[i].mObj.Name);
+                                    xmlAdd += Add("dubiNumber" + (i + 1).ToString(), lstDuBiKhach[i].mObj.Number.ToString());
+                                }
+                        }
+                    }
                     if (_tempName == "BongDa_DanhSachChinhThuc.ft")
                     {
                         var lstChinhthucChu = GetTeamChinhThuc("home");
@@ -1146,7 +1183,8 @@ namespace HDCGStudio
                     }
                     xmlAdd += Add("hatgiong1", nHatgiong1.Value.ToString());
                     xmlAdd += Add("hatgiong2", nHatgiong2.Value.ToString());
-
+                    xmlAdd += Add("giaidau", cboGiaiDauTennis.Text);
+                    xmlAdd += Add("vongdau", txtVongDauTennis.Text);
                     xmlAdd += Add("thongtinphu", cboThongtinphu.Text);
                     if (cbTiebreak.Checked)
                     {
@@ -1261,6 +1299,8 @@ namespace HDCGStudio
                     }
                     xmlAdd += Add("player1", cboTeam1Player1.Text);
                     xmlAdd += Add("player2", cboTeam2Player1.Text);
+                    xmlAdd += Add("PlayerName1", cboTeam1Player1.Text);
+                    xmlAdd += Add("PlayerName2", cboTeam2Player1.Text);
                     if (rServesIn.Checked)
                     {
                         xmlAdd += Add("thongso", txtServesIn.Text);
@@ -1394,9 +1434,9 @@ namespace HDCGStudio
                         }
                     }
                 }
-                catch //(Exception ex)
+                catch (Exception ex)
                 {
-                    //HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HDMessageBox.Show("Lỗi khi lấy dữ liệu: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             return xmlAdd;
@@ -1955,6 +1995,10 @@ namespace HDCGStudio
                     var playerOut = GetPlayerOut(true);
                     bsHomePlayer.List.Remove(playerOut);
                 }
+                else if (cboNoiDungChu.Text == "Danh sách cầu thủ")
+                {
+                    BatTemplate("BongDa_DanhSachCauThu.ft");
+                }
             }
             catch (Exception ex)
             {
@@ -1995,6 +2039,10 @@ namespace HDCGStudio
                     BatTemplate("BongDa_TheDo.ft", false);
                     var playerOut = GetPlayerOut(false);
                     bsAwayPlayer.List.Remove(playerOut);
+                }
+                else if (cboNoiDungChu.Text == "Danh sách cầu thủ")
+                {
+                    BatTemplate("BongDa_DanhSachCauThu.ft", false);
                 }
             }
             catch { }
@@ -2053,30 +2101,30 @@ namespace HDCGStudio
         }
         private void BatTemplate(string tempName, bool isChu = true, int layer = 105)
         {
-            if (cboGiaiDauTennis.Text.Length > 0)
-                try
+            try
+            {
+                if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
                 {
-                    if (xTabMain.SelectedTabPage.Equals(xTabPageBongda))
-                    {
-                        _tempName = tempName;
-                    }
-                    else
-                    {
-                        _tempName = _TennisLeagueCode + "_" + tempName;
-                    }
-                    List<Object.Property> runtimeProperties = new List<Object.Property>();
-                    runtimeProperties.Add(new Object.Property()
-                    {
-                        Name = "Loops",
-                        Value = "false"
-                    });
-                    string xmlStr = "<Track_Property>" + GetAddXmlString(isChu) + "</Track_Property>";
-                    OnTemplate(layer, _tempName, 1, null, runtimeProperties, xmlStr);
-                    ViewTemplate(_tempName, 0, isChu);
+                    _tempName = tempName;
                 }
-                catch { }
-            else
-                HDMessageBox.Show("Chọn Giải đấu trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    if (cboGiaiDauTennis.Text.Length > 0)
+                        _tempName = _TennisLeagueCode + "_" + tempName;
+                    else
+                        HDMessageBox.Show("Chọn Giải đấu trước!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                List<Object.Property> runtimeProperties = new List<Object.Property>();
+                runtimeProperties.Add(new Object.Property()
+                {
+                    Name = "Loops",
+                    Value = "false"
+                });
+                string xmlStr = "<Track_Property>" + GetAddXmlString(isChu) + "</Track_Property>";
+                OnTemplate(layer, _tempName, 1, null, runtimeProperties, xmlStr);
+                ViewTemplate(_tempName, 0, isChu);
+            }
+            catch { }
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -3094,5 +3142,6 @@ namespace HDCGStudio
             if (frm.ShowDialog() == DialogResult.OK)
                 txtEditableLogo2.Text = frm.FileName;
         }
+
     }
 }

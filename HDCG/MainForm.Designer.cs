@@ -332,7 +332,7 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtVongDauTennis = new DevExpress.XtraEditors.TextEdit();
             this.labelControl69 = new DevExpress.XtraEditors.LabelControl();
             this.txtHLVTennisTeam1 = new DevExpress.XtraEditors.TextEdit();
             this.txtShortNameTeam1 = new DevExpress.XtraEditors.TextEdit();
@@ -516,8 +516,6 @@
             this.groupControl10 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl86 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
-            this.btnOffNewHighlight = new DevExpress.XtraEditors.SimpleButton();
-            this.btnOnNewsHighlight = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl70 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl81 = new DevExpress.XtraEditors.LabelControl();
@@ -715,7 +713,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDonviTennisTeam1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVongDauTennis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHLVTennisTeam1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortNameTeam1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHatgiong1)).BeginInit();
@@ -1853,7 +1851,8 @@
             "Thẻ vàng",
             "2 thẻ vàng",
             "Thẻ đỏ",
-            "Thay người"});
+            "Thay người",
+            "Danh sách cầu thủ"});
             this.cboNoiDungChu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboNoiDungChu.Size = new System.Drawing.Size(300, 30);
             this.cboNoiDungChu.TabIndex = 154;
@@ -2193,7 +2192,8 @@
             "Thẻ vàng",
             "2 thẻ vàng",
             "Thẻ đỏ",
-            "Thay người"});
+            "Thay người",
+            "Danh sách cầu thủ"});
             this.cboNoiDungKhach.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboNoiDungKhach.Size = new System.Drawing.Size(300, 30);
             this.cboNoiDungKhach.TabIndex = 155;
@@ -4435,7 +4435,7 @@
             this.splitContainerControl5.Panel1.Controls.Add(this.labelControl4);
             this.splitContainerControl5.Panel1.Controls.Add(this.numericUpDown6);
             this.splitContainerControl5.Panel1.Controls.Add(this.labelControl25);
-            this.splitContainerControl5.Panel1.Controls.Add(this.textEdit5);
+            this.splitContainerControl5.Panel1.Controls.Add(this.txtVongDauTennis);
             this.splitContainerControl5.Panel1.Controls.Add(this.labelControl69);
             this.splitContainerControl5.Panel1.Controls.Add(this.txtHLVTennisTeam1);
             this.splitContainerControl5.Panel1.Controls.Add(this.txtShortNameTeam1);
@@ -4660,14 +4660,14 @@
             this.labelControl25.TabIndex = 229;
             this.labelControl25.Text = "Hạt giống:";
             // 
-            // textEdit5
+            // txtVongDauTennis
             // 
-            this.textEdit5.Location = new System.Drawing.Point(558, 52);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Size = new System.Drawing.Size(743, 26);
-            this.textEdit5.TabIndex = 225;
+            this.txtVongDauTennis.Location = new System.Drawing.Point(558, 52);
+            this.txtVongDauTennis.Name = "txtVongDauTennis";
+            this.txtVongDauTennis.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.txtVongDauTennis.Properties.Appearance.Options.UseFont = true;
+            this.txtVongDauTennis.Size = new System.Drawing.Size(743, 26);
+            this.txtVongDauTennis.TabIndex = 225;
             // 
             // labelControl69
             // 
@@ -6868,7 +6868,7 @@
             this.xtraTabPage2.Controls.Add(this.groupControl11);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1336, 762);
-            this.xtraTabPage2.Text = "Giới thiệu/Trọng tài";
+            this.xtraTabPage2.Text = "Thời gian/Địa điểm/Bar Tên";
             // 
             // groupControl10
             // 
@@ -6876,8 +6876,6 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupControl10.Controls.Add(this.labelControl86);
             this.groupControl10.Controls.Add(this.textEdit12);
-            this.groupControl10.Controls.Add(this.btnOffNewHighlight);
-            this.groupControl10.Controls.Add(this.btnOnNewsHighlight);
             this.groupControl10.Controls.Add(this.textEdit8);
             this.groupControl10.Controls.Add(this.labelControl70);
             this.groupControl10.Controls.Add(this.labelControl81);
@@ -6907,32 +6905,6 @@
             this.textEdit12.Properties.Appearance.Options.UseFont = true;
             this.textEdit12.Size = new System.Drawing.Size(509, 24);
             this.textEdit12.TabIndex = 204;
-            // 
-            // btnOffNewHighlight
-            // 
-            this.btnOffNewHighlight.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnOffNewHighlight.Appearance.Options.UseFont = true;
-            this.btnOffNewHighlight.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOffNewHighlight.Location = new System.Drawing.Point(468, 204);
-            this.btnOffNewHighlight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnOffNewHighlight.Name = "btnOffNewHighlight";
-            this.btnOffNewHighlight.Size = new System.Drawing.Size(58, 47);
-            this.btnOffNewHighlight.TabIndex = 202;
-            this.btnOffNewHighlight.Text = "Tắt";
-            this.btnOffNewHighlight.ToolTip = "Xuống đồ họa";
-            // 
-            // btnOnNewsHighlight
-            // 
-            this.btnOnNewsHighlight.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnOnNewsHighlight.Appearance.Options.UseFont = true;
-            this.btnOnNewsHighlight.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOnNewsHighlight.Location = new System.Drawing.Point(257, 204);
-            this.btnOnNewsHighlight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnOnNewsHighlight.Name = "btnOnNewsHighlight";
-            this.btnOnNewsHighlight.Size = new System.Drawing.Size(180, 47);
-            this.btnOnNewsHighlight.TabIndex = 201;
-            this.btnOnNewsHighlight.Text = "Bật News & Highlights";
-            this.btnOnNewsHighlight.ToolTip = "Lên đồ họa";
             // 
             // textEdit8
             // 
@@ -7716,7 +7688,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDonviTennisTeam1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVongDauTennis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHLVTennisTeam1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShortNameTeam1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHatgiong1)).EndInit();
@@ -8210,7 +8182,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private System.Windows.Forms.NumericUpDown numericUpDown6;
         private DevExpress.XtraEditors.LabelControl labelControl25;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit txtVongDauTennis;
         private DevExpress.XtraEditors.GroupControl groupControl9;
         private System.Windows.Forms.RadioButton rBackhand;
         private System.Windows.Forms.RadioButton rPointWonAtnet;
@@ -8241,8 +8213,6 @@
         private System.Windows.Forms.CheckBox ck5set;
         private System.Windows.Forms.CheckBox ck3set;
         private DevExpress.XtraEditors.GroupControl groupControl10;
-        private DevExpress.XtraEditors.SimpleButton btnOffNewHighlight;
-        private DevExpress.XtraEditors.SimpleButton btnOnNewsHighlight;
         private DevExpress.XtraEditors.TextEdit textEdit8;
         private DevExpress.XtraEditors.LabelControl labelControl70;
         private DevExpress.XtraEditors.LabelControl labelControl81;
