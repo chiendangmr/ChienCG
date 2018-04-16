@@ -1837,7 +1837,7 @@
             // 
             // cboNoiDungChu
             // 
-            this.cboNoiDungChu.EditValue = "Ghi bàn";
+            this.cboNoiDungChu.EditValue = "Cầu thủ";
             this.cboNoiDungChu.Location = new System.Drawing.Point(141, 440);
             this.cboNoiDungChu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboNoiDungChu.MenuManager = this.barManager1;
@@ -1847,6 +1847,7 @@
             this.cboNoiDungChu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboNoiDungChu.Properties.Items.AddRange(new object[] {
+            "Cầu thủ",
             "Ghi bàn",
             "Thẻ vàng",
             "2 thẻ vàng",
@@ -2178,7 +2179,7 @@
             // 
             // cboNoiDungKhach
             // 
-            this.cboNoiDungKhach.EditValue = "Ghi bàn";
+            this.cboNoiDungKhach.EditValue = "Cầu thủ";
             this.cboNoiDungKhach.Location = new System.Drawing.Point(28, 440);
             this.cboNoiDungKhach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboNoiDungKhach.MenuManager = this.barManager1;
@@ -2188,6 +2189,7 @@
             this.cboNoiDungKhach.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboNoiDungKhach.Properties.Items.AddRange(new object[] {
+            "Cầu thủ",
             "Ghi bàn",
             "Thẻ vàng",
             "2 thẻ vàng",

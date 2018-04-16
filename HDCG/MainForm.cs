@@ -978,12 +978,12 @@ namespace HDCGStudio
                         xmlAdd += Add("dongho", lbThoigianHiepPhu2.Text);
                     }
 
-                    if (_tempName == "BongDa_ThongSoCuoiTran.ft" || _tempName == "BongDa_BangCho.ft")
+                    if (_tempName == "BongDa_ThongSoCuoiTran.ft" || _tempName == "BongDa_BangCho.ft" || _tempName == "BongDa_DanhSachCauThu.ft")
                     {
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
                     }
-                    else if (_tempName == "BongDa_DanhSachChinhThuc.ft" || _tempName == "BongDa_DanhSachDuBi.ft" || _tempName.Contains("BongDa_TySo"))
+                    else if (_tempName == "BongDa_DanhSachChinhThuc.ft" || _tempName == "BongDa_DanhSachDuBi.ft" || _tempName.Contains("BongDa_TySo") || _tempName.Contains("BongDa_ThongSo"))
                     {
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
@@ -1999,6 +1999,10 @@ namespace HDCGStudio
                 {
                     BatTemplate("BongDa_DanhSachCauThu.ft");
                 }
+                else if (cboNoiDungChu.Text == "Cầu thủ")
+                {
+                    BatTemplate("BongDa_CauThu.ft");
+                }
             }
             catch (Exception ex)
             {
@@ -2043,6 +2047,10 @@ namespace HDCGStudio
                 else if (cboNoiDungChu.Text == "Danh sách cầu thủ")
                 {
                     BatTemplate("BongDa_DanhSachCauThu.ft", false);
+                }
+                else if (cboNoiDungChu.Text == "Cầu thủ")
+                {
+                    BatTemplate("BongDa_CauThu.ft", false);
                 }
             }
             catch { }

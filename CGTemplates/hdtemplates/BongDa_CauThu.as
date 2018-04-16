@@ -31,13 +31,13 @@
 		private var txtGroup:MovieClip = new MovieClip();
 		public var icon1:MovieClip;				
 		public var playerStr:TextField = new TextField();
-		public var thongsocauthu:TextField = new TextField();
+		public var doibong:TextField = new TextField();
 		
 		public function BongDa_CauThu() {
 			// constructor code
 			super();							
 			this.txtGroup.addChild(playerStr);	
-			this.txtGroup.addChild(thongsocauthu);
+			this.txtGroup.addChild(doibong);
 			this.txtGroup.addChild(icon1);
 			this.addChild(txtGroup);
 			ExternalInterface.addCallback("UpdateData", UpdateData);
@@ -52,7 +52,7 @@
 		{
 			var xmlStr:String = "<Track_Property>";
 			xmlStr +=Add(xmlStr, "playerStr", playerStr);
-			xmlStr +=Add(xmlStr, "thongsocauthu", thongsocauthu);
+			xmlStr +=Add(xmlStr, "doibong", doibong);
 				
 			xmlStr += "</Track_Property>";
 			
@@ -75,8 +75,8 @@
 					case "playerStr".toLowerCase():
 						this.playerStr.text = data.toUpperCase();
 						break;
-					case "thongsocauthu".toLowerCase():
-						this.thongsocauthu.text = data.toUpperCase();
+					case "doibong".toLowerCase():
+						this.doibong.text = data.toUpperCase();
 						break;		
 					case "icon1".toLowerCase():						
 						var file:Loader = new Loader();
