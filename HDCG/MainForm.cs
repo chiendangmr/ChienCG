@@ -1222,10 +1222,7 @@ namespace HDCGStudio
                     xmlAdd += Add("tyso2", nTySo2.Text);
 
                     if (rSet1.Checked)
-                    {
-                        xmlAdd += Add("setpoint1", nDiemSet1Player1.Text);
-                        xmlAdd += Add("setpoint2", nDiemSet1Player2.Text);
-
+                    {                       
                         xmlAdd += Add("set1point1", nDiemSet1Player1.Value.ToString());
                         xmlAdd += Add("set1point2", nDiemSet1Player2.Value.ToString());
                         xmlAdd += Add("set2point1", "");
@@ -2797,17 +2794,56 @@ namespace HDCGStudio
 
         private void simpleButton39_Click(object sender, EventArgs e)
         {
-            if (ckWithThongTinPhu.Checked)
+            if (rSet1.Checked)
             {
-                BatTemplate("TySoNho.ft");
-                BatTemplate("TySoNho_GiaoBong.ft", true, 106);
-                BatTemplate("ThongTinPhu.ft", true, 107);
+                if (ckWithThongTinPhu.Checked)
+                {
+                    BatTemplate("TySoNhoSet1.ft");
+                    BatTemplate("TySoNho_GiaoBong1.ft", true, 106);
+                    BatTemplate("ThongTinPhu.ft", true, 107);
+                }
+                else
+                {
+                    BatTemplate("TySoNhoSet1.ft");
+                    BatTemplate("TySoNho_GiaoBong1.ft", true, 106);
+                }
             }
-            else
+            else if (rSet2.Checked)
             {
-                BatTemplate("TySoNho.ft");
-                BatTemplate("TySoNho_GiaoBong.ft", true, 106);
+                if (ckWithThongTinPhu.Checked)
+                {
+                    BatTemplate("TySoNhoSet2.ft");
+                    BatTemplate("TySoNho_GiaoBong2.ft", true, 106);
+                    BatTemplate("ThongTinPhu.ft", true, 107);
+                }
+                else
+                {
+                    BatTemplate("TySoNhoSet2.ft");
+                    BatTemplate("TySoNho_GiaoBong2.ft", true, 106);
+                }
             }
+            else if (rSet3.Checked)
+            {
+                if (ckWithThongTinPhu.Checked)
+                {
+                    BatTemplate("TySoNhoSet3.ft");
+                    BatTemplate("TySoNho_GiaoBong3.ft", true, 106);
+                    BatTemplate("ThongTinPhu.ft", true, 107);
+                }
+                else
+                {
+                    BatTemplate("TySoNhoSet3.ft");
+                    BatTemplate("TySoNho_GiaoBong3.ft", true, 106);
+                }
+            }
+            else if (rSet4.Checked)
+            {
+                //nDiemSet4Player2.Value++; AddTySoChungCuoc2((int)nDiemSet4Player2.Value, (int)nDiemSet4Player1.Value);
+            }
+            else if (rSet5.Checked)
+            {
+                //nDiemSet5Player2.Value++; AddTySoChungCuoc2((int)nDiemSet5Player2.Value, (int)nDiemSet5Player1.Value);
+            }            
         }
         private void btnLiveUpdateTennis_Click(object sender, EventArgs e)
         {
