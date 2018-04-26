@@ -980,7 +980,12 @@ namespace HDCGStudio
 
                     if (_tempName == "BongDa_ThongSoCuoiTran.ft" || _tempName == "BongDa_BangCho.ft" || _tempName == "BongDa_DanhSachCauThu.ft")
                     {
-                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
+                        if (isChu)
+                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
+                        else
+                        {
+                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
+                        }
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
                     }
                     else if (_tempName == "BongDa_DanhSachChinhThuc.ft" || _tempName == "BongDa_DanhSachDuBi.ft" || _tempName.Contains("BongDa_TySo") || _tempName.Contains("BongDa_ThongSo"))
@@ -1222,7 +1227,7 @@ namespace HDCGStudio
                     xmlAdd += Add("tyso2", nTySo2.Text);
 
                     if (rSet1.Checked)
-                    {                       
+                    {
                         xmlAdd += Add("set1point1", nDiemSet1Player1.Value.ToString());
                         xmlAdd += Add("set1point2", nDiemSet1Player2.Value.ToString());
                         xmlAdd += Add("set2point1", "");
@@ -2843,7 +2848,7 @@ namespace HDCGStudio
             else if (rSet5.Checked)
             {
                 //nDiemSet5Player2.Value++; AddTySoChungCuoc2((int)nDiemSet5Player2.Value, (int)nDiemSet5Player1.Value);
-            }            
+            }
         }
         private void btnLiveUpdateTennis_Click(object sender, EventArgs e)
         {
