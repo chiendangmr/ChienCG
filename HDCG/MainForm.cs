@@ -930,7 +930,7 @@ namespace HDCGStudio
                     xmlAdd += Add("hiepdau", txtHiep.Text);
                     xmlAdd += Add("player1", GetPlayingPlayer(isChu).mObj.ShortName);
                     xmlAdd += Add("playerNumber1", GetPlayingPlayer(isChu).mObj.Number.ToString());
-                    if (_tempName == "BongDa_CauThu.ft")
+                    if (_tempName == "BongDa_CauThu.ft" || _tempName == "BongDa_GhiBan.ft")
                     {
                         xmlAdd += Add("playerStr", GetPlayingPlayer(isChu).mObj.Number.ToString() + ". " + GetPlayingPlayer(isChu).mObj.ShortName);
                     }
@@ -985,18 +985,18 @@ namespace HDCGStudio
                     }
                     else if (_tempName == "BongDa_DanhSachChinhThuc.ft" || _tempName == "BongDa_DanhSachDuBi.ft" || _tempName.Contains("BongDa_TySo") || _tempName.Contains("BongDa_ThongSo"))
                     {
-                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
-                        xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
+                        xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
+                        xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
                     }
                     else
                     {
                         if (isChu)
                         {
-                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text)));
+                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
                         }
                         else
                         {
-                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text)));
+                            xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
                         }
                     }
                     if (isChu)
@@ -1974,7 +1974,7 @@ namespace HDCGStudio
                 }
                 else if (cboNoiDungChu.Text == "Ghi bàn")
                 {
-                    BatTemplate("BongDa_CauThu.ft");
+                    BatTemplate("BongDa_GhiBan.ft");
                 }
                 else if (cboNoiDungChu.Text == "Thẻ vàng")
                 {
@@ -2023,7 +2023,7 @@ namespace HDCGStudio
                 }
                 else if (cboNoiDungKhach.Text == "Ghi bàn")
                 {
-                    BatTemplate("BongDa_CauThu.ft", false);
+                    BatTemplate("BongDa_GhiBan.ft", false);
                 }
                 else if (cboNoiDungKhach.Text == "Thẻ vàng")
                 {
@@ -2041,11 +2041,11 @@ namespace HDCGStudio
                     var playerOut = GetPlayerOut(false);
                     bsAwayPlayer.List.Remove(playerOut);
                 }
-                else if (cboNoiDungChu.Text == "Danh sách cầu thủ")
+                else if (cboNoiDungKhach.Text == "Danh sách cầu thủ")
                 {
                     BatTemplate("BongDa_DanhSachCauThu.ft", false);
                 }
-                else if (cboNoiDungChu.Text == "Cầu thủ")
+                else if (cboNoiDungKhach.Text == "Cầu thủ")
                 {
                     BatTemplate("BongDa_CauThu.ft", false);
                 }
