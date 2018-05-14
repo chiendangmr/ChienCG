@@ -1036,7 +1036,7 @@ namespace HDCGStudio
                                 for (var i = 0; i < lstDuBiChu.Count(); i++)
                                 {
                                     xmlAdd += Add("dubiName" + (i + 1).ToString(), lstDuBiChu[i].mObj.Name);
-                                    xmlAdd += Add("dubiNumber" + (i + 1).ToString(), lstDuBiChu[i].mObj.Number.ToString());
+                                    xmlAdd += Add("dubiNumber" + (i + 1).ToString(), lstDuBiChu[i].mObj.Number.ToString() == "0" ? "" : lstDuBiChu[i].mObj.Number.ToString());
                                 }
                         }
                         else

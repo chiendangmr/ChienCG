@@ -2847,7 +2847,6 @@
             this.cboGhiBanKhach.Properties.Appearance.Options.UseFont = true;
             this.cboGhiBanKhach.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboGhiBanKhach.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboGhiBanKhach.Size = new System.Drawing.Size(203, 24);
             this.cboGhiBanKhach.TabIndex = 223;
             // 
@@ -2882,7 +2881,6 @@
             this.cboGhibanChu.Properties.Appearance.Options.UseFont = true;
             this.cboGhibanChu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboGhibanChu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cboGhibanChu.Size = new System.Drawing.Size(203, 24);
             this.cboGhibanChu.TabIndex = 220;
             // 
