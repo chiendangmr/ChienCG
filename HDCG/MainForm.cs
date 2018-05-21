@@ -307,9 +307,9 @@ namespace HDCGStudio
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
-                HDMessageBox.Show("Can't edit this template!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                HDMessageBox.Show("Can't view this template: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return templateFile;
         }
@@ -928,8 +928,33 @@ namespace HDCGStudio
                     xmlAdd += Add("mauaoChu", String.Format("{0:X}", colorChu.Color.ToArgb()));
                     xmlAdd += Add("mauaoKhach", String.Format("{0:X}", colorKhach.Color.ToArgb()));
                     xmlAdd += Add("hiepdau", txtHiep.Text);
-                    xmlAdd += Add("player1", GetPlayingPlayer(isChu).mObj.ShortName);
-                    xmlAdd += Add("playerNumber1", GetPlayingPlayer(isChu).mObj.Number.ToString());
+
+                    if (_tempName.Contains("The"))
+                    {
+                        if (ckTheHLV.Checked)
+                        {
+                            if (isChu)
+                            {
+                                xmlAdd += Add("player1", txtHomeCoach.Text);
+                            }
+                            else
+                            {
+                                xmlAdd += Add("player1", txtAwayCoach.Text);
+                            }
+                            xmlAdd += Add("playerNumber1", "HLV");
+                        }
+                        else if (ckTheDuBi.Checked)
+                        {
+                            xmlAdd += Add("player1", GetPlayerIn(isChu).mObj.ShortName);
+                            xmlAdd += Add("playerNumber1", GetPlayerIn(isChu).mObj.Number.ToString());
+                        }
+                        else
+                        {
+                            xmlAdd += Add("player1", GetPlayingPlayer(isChu).mObj.ShortName);
+                            xmlAdd += Add("playerNumber1", GetPlayingPlayer(isChu).mObj.Number.ToString());
+                        }
+                    }
+
                     if (_tempName == "BongDa_CauThu.ft" || _tempName == "BongDa_GhiBan.ft")
                     {
                         xmlAdd += Add("playerStr", GetPlayingPlayer(isChu).mObj.Number.ToString() + ". " + GetPlayingPlayer(isChu).mObj.ShortName);
@@ -1988,14 +2013,30 @@ namespace HDCGStudio
                 else if (cboNoiDungChu.Text == "2 thẻ vàng")
                 {
                     BatTemplate("BongDa_2TheVang.ft");
-                    var playerOut = GetPlayerOut(true);
-                    bsHomePlayer.List.Remove(playerOut);
+                    if (ckTheChinhThuc.Checked)
+                    {
+                        var playerOut = GetPlayerOut(true);
+                        bsHomePlayer.List.Remove(playerOut);
+                    }
+                    else if (ckTheDuBi.Checked)
+                    {
+                        var playerOut = GetPlayerIn(true);
+                        bsHomePlayerDuBi.List.Remove(playerOut);
+                    }
                 }
                 else if (cboNoiDungChu.Text == "Thẻ đỏ")
                 {
                     BatTemplate("BongDa_TheDo.ft");
-                    var playerOut = GetPlayerOut(true);
-                    bsHomePlayer.List.Remove(playerOut);
+                    if (ckTheChinhThuc.Checked)
+                    {
+                        var playerOut = GetPlayerOut(true);
+                        bsHomePlayer.List.Remove(playerOut);
+                    }
+                    else if (ckTheDuBi.Checked)
+                    {
+                        var playerOut = GetPlayerIn(true);
+                        bsHomePlayerDuBi.List.Remove(playerOut);
+                    }
                 }
                 else if (cboNoiDungChu.Text == "Danh sách cầu thủ")
                 {
@@ -2037,14 +2078,30 @@ namespace HDCGStudio
                 else if (cboNoiDungKhach.Text == "2 thẻ vàng")
                 {
                     BatTemplate("BongDa_2TheVang.ft", false);
-                    var playerOut = GetPlayerOut(false);
-                    bsAwayPlayer.List.Remove(playerOut);
+                    if (ckTheChinhThuc.Checked)
+                    {
+                        var playerOut = GetPlayerOut(false);
+                        bsAwayPlayer.List.Remove(playerOut);
+                    }
+                    else if (ckTheDuBi.Checked)
+                    {
+                        var playerOut = GetPlayerIn(false);
+                        bsAwayPlayerDuBi.List.Remove(playerOut);
+                    }
                 }
                 else if (cboNoiDungKhach.Text == "Thẻ đỏ")
                 {
                     BatTemplate("BongDa_TheDo.ft", false);
-                    var playerOut = GetPlayerOut(false);
-                    bsAwayPlayer.List.Remove(playerOut);
+                    if (ckTheChinhThuc.Checked)
+                    {
+                        var playerOut = GetPlayerOut(false);
+                        bsAwayPlayer.List.Remove(playerOut);
+                    }
+                    else if (ckTheDuBi.Checked)
+                    {
+                        var playerOut = GetPlayerIn(false);
+                        bsAwayPlayerDuBi.List.Remove(playerOut);
+                    }
                 }
                 else if (cboNoiDungKhach.Text == "Danh sách cầu thủ")
                 {
@@ -3036,12 +3093,6 @@ namespace HDCGStudio
         {
             OffTemplate(105);
         }
-        #endregion
-
-        private void btnLamMoiBongDa_Click(object sender, EventArgs e)
-        {
-            LamMoiBongDa();
-        }
 
         private void xTabMain_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
@@ -3054,7 +3105,7 @@ namespace HDCGStudio
                 cboTemplateType.SelectedIndex = 1;
             }
         }
-
+        #region Editable templates
         private void BatEditableTemplate(string tempName, int layer = 105)
         {
             if (cboGiaiDauTennis.Text.Length > 0)
@@ -3191,6 +3242,68 @@ namespace HDCGStudio
             if (frm.ShowDialog() == DialogResult.OK)
                 txtEditableLogo2.Text = frm.FileName;
         }
+        #endregion
+        #endregion
 
+        private void btnLamMoiBongDa_Click(object sender, EventArgs e)
+        {
+            LamMoiBongDa();
+        }
+
+        private void btnLiveUpdatePen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                player.Update(1, xmlStr.Replace("\\n", "\n"));
+                player.Refresh();
+                cgServer.UpdateTemplate(120, xmlStr.Replace("\\", "\\\\"), 0);
+
+                cgServer.UpdateTemplate(_layer, xmlStr.Replace("\\", "\\\\"), 0);
+
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #region CheckBox thẻ
+        private void ckTheChinhThuc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckTheChinhThuc.Checked)
+            {
+                ckTheHLV.Checked = false;
+                ckTheDuBi.Checked = false;
+            }
+        }
+
+        private void ckTheHLV_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckTheHLV.Checked)
+            {
+                ckTheChinhThuc.Checked = false;
+                ckTheDuBi.Checked = false;
+            }
+        }
+
+        private void ckTheDuBi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckTheDuBi.Checked)
+            {
+                ckTheChinhThuc.Checked = false;
+                ckTheHLV.Checked = false;
+            }
+        }
+        #endregion
+
+        private void btnOnPen_Click(object sender, EventArgs e)
+        {
+            BatTemplate("BongDa_Penalty.ft");
+        }
+
+        private void btnOffPen_Click(object sender, EventArgs e)
+        {
+            OffTemplate(105);
+        }
     }
 }
