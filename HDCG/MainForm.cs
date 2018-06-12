@@ -915,6 +915,60 @@ namespace HDCGStudio
             return player;
         }
         #endregion
+        private string StrPenalty(string field, bool case1, bool case2)
+        {
+            if (case1)
+            {
+                return Add(field, "True");
+            }
+            else if (case2)
+            {
+                return Add(field, "False");
+            }
+            else return Add(field, "None");
+        }
+        private string GetPenString()
+        {
+            var penStr = "";
+            if (ckStartPen1.Checked)
+            {
+                penStr += Add("tysoPen", nTySoPenChu.Text + " - " + nTySoPenKhach.Text);
+                penStr += StrPenalty("kqPenChu1", ckPenO1Chu.Checked, ckPenX1Chu.Checked);
+                penStr += StrPenalty("kqPenKhach1", ckPenO1Khach.Checked, ckPenX1Khach.Checked);
+
+                penStr += StrPenalty("kqPenChu2", ckPenO2Chu.Checked, ckPenX2Chu.Checked);
+                penStr += StrPenalty("kqPenKhach2", ckPenO2Khach.Checked, ckPenX2Khach.Checked);
+
+                penStr += StrPenalty("kqPenChu3", ckPenO3Chu.Checked, ckPenX3Chu.Checked);
+                penStr += StrPenalty("kqPenKhach3", ckPenO3Khach.Checked, ckPenX3Khach.Checked);
+
+                penStr += StrPenalty("kqPenChu4", ckPenO4Chu.Checked, ckPenX4Chu.Checked);
+                penStr += StrPenalty("kqPenKhach4", ckPenO4Khach.Checked, ckPenX4Khach.Checked);
+
+                penStr += StrPenalty("kqPenChu5", ckPenO5Chu.Checked, ckPenX5Chu.Checked);
+                penStr += StrPenalty("kqPenKhach5", ckPenO5Khach.Checked, ckPenX5Khach.Checked);
+            }
+            else if (ckStartPen2.Checked)
+            {
+                penStr += Add("tysoPen", nTySoPenChu.Text + " - " + nTySoPenKhach.Text);
+                penStr += StrPenalty("kqPenChu1", ckPenO6Chu.Checked, ckPenX6Chu.Checked);
+                penStr += StrPenalty("kqPenKhach1", ckPenO6Khach.Checked, ckPenX6Khach.Checked);
+
+                penStr += StrPenalty("kqPenChu2", ckPenO7Chu.Checked, ckPenX7Chu.Checked);
+                penStr += StrPenalty("kqPenKhach2", ckPenO7Khach.Checked, ckPenX7Khach.Checked);
+
+                penStr += StrPenalty("kqPenChu3", ckPenO8Chu.Checked, ckPenX8Chu.Checked);
+                penStr += StrPenalty("kqPenKhach3", ckPenO8Khach.Checked, ckPenX8Khach.Checked);
+
+                penStr += StrPenalty("kqPenChu4", ckPenO9Chu.Checked, ckPenX9Chu.Checked);
+                penStr += StrPenalty("kqPenKhach4", ckPenO9Khach.Checked, ckPenX9Khach.Checked);
+
+                penStr += StrPenalty("kqPenChu5", ckPenO10Chu.Checked, ckPenX10Chu.Checked);
+                penStr += StrPenalty("kqPenKhach5", ckPenO10Khach.Checked, ckPenX10Khach.Checked);
+            }
+
+            return penStr;
+        }
         public string GetAddXmlString(bool isChu = true)
         {
             var xmlAdd = "";
@@ -928,7 +982,10 @@ namespace HDCGStudio
                     xmlAdd += Add("mauaoChu", String.Format("{0:X}", colorChu.Color.ToArgb()));
                     xmlAdd += Add("mauaoKhach", String.Format("{0:X}", colorKhach.Color.ToArgb()));
                     xmlAdd += Add("hiepdau", txtHiep.Text);
-
+                    if (_tempName == "BongDa_Penalty.ft")
+                    {
+                        xmlAdd += GetPenString();
+                    }
                     if (_tempName.Contains("The"))
                     {
                         if (ckTheHLV.Checked)
@@ -1013,7 +1070,7 @@ namespace HDCGStudio
                         }
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
                     }
-                    else if (_tempName == "BongDa_DanhSachChinhThuc.ft" || _tempName == "BongDa_DanhSachDuBi.ft" || _tempName.Contains("BongDa_TySo") || _tempName.Contains("BongDa_ThongSo"))
+                    else if (_tempName == "BongDa_DanhSachChinhThuc.ft" || _tempName == "BongDa_DanhSachDuBi.ft" || _tempName.Contains("BongDa_TySo") || _tempName.Contains("BongDa_ThongSo") || _tempName == "BongDa_Penalty.ft")
                     {
                         xmlAdd += Add("icon1", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiChuNha.Text, false)));
                         xmlAdd += Add("icon2", Path.Combine(Path.Combine(AppSetting.Default.MediaFolder, "Icons"), GetTeamLogo(cboDoiKhach.Text, false)));
@@ -3250,23 +3307,6 @@ namespace HDCGStudio
             LamMoiBongDa();
         }
 
-        private void btnLiveUpdatePen_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
-                player.Update(1, xmlStr.Replace("\\n", "\n"));
-                player.Refresh();
-                cgServer.UpdateTemplate(120, xmlStr.Replace("\\", "\\\\"), 0);
-
-                cgServer.UpdateTemplate(_layer, xmlStr.Replace("\\", "\\\\"), 0);
-
-            }
-            catch (Exception ex)
-            {
-                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         #region CheckBox thẻ
         private void ckTheChinhThuc_CheckedChanged(object sender, EventArgs e)
         {
@@ -3296,6 +3336,26 @@ namespace HDCGStudio
         }
         #endregion
 
+        #region Penalty
+
+        private void btnLiveUpdatePen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string xmlStr = "<Track_Property>" + GetAddXmlString() + "</Track_Property>";
+                player.Update(1, xmlStr.Replace("\\n", "\n"));
+                player.Refresh();
+                cgServer.UpdateTemplate(120, xmlStr.Replace("\\", "\\\\"), 0);
+
+                cgServer.UpdateTemplate(_layer, xmlStr.Replace("\\", "\\\\"), 0);
+
+            }
+            catch (Exception ex)
+            {
+                HDMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnOnPen_Click(object sender, EventArgs e)
         {
             BatTemplate("BongDa_Penalty.ft");
@@ -3305,5 +3365,15 @@ namespace HDCGStudio
         {
             OffTemplate(105);
         }
+        private void ckStartPen2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckStartPen2.Checked)
+            {
+                ckStartPen1.Checked = false;
+            }
+        }
+        #endregion
+
+
     }
 }

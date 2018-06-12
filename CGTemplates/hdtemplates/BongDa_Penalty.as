@@ -18,6 +18,9 @@
 	import flash.external.ExternalInterface;
 	import flash.utils.Timer;
 	import flash.events.TimerEvent;
+	import flash.display.Loader;
+	import flash.events.IOErrorEvent;
+	import flash.display.DisplayObject;
 	import fl.containers.UILoader;
 	import flash.net.URLRequest;
 	import flash.sampler.Sample;
@@ -31,6 +34,30 @@
 		private var txtGroup:MovieClip = new MovieClip();
 		public var icon1:MovieClip;
 		public var icon2:MovieClip;
+		
+		public var iconPenXChu1:MovieClip;
+		public var iconPenXChu2:MovieClip;
+		public var iconPenXChu3:MovieClip;
+		public var iconPenXChu4:MovieClip;
+		public var iconPenXChu5:MovieClip;
+		
+		public var iconPenOChu1:MovieClip;
+		public var iconPenOChu2:MovieClip;
+		public var iconPenOChu3:MovieClip;
+		public var iconPenOChu4:MovieClip;
+		public var iconPenOChu5:MovieClip;
+		
+		public var iconPenXKhach1:MovieClip;
+		public var iconPenXKhach2:MovieClip;
+		public var iconPenXKhach3:MovieClip;
+		public var iconPenXKhach4:MovieClip;
+		public var iconPenXKhach5:MovieClip;
+		
+		public var iconPenOKhach1:MovieClip;
+		public var iconPenOKhach2:MovieClip;
+		public var iconPenOKhach3:MovieClip;
+		public var iconPenOKhach4:MovieClip;
+		public var iconPenOKhach5:MovieClip;	
 					
 		public var doiChu:TextField = new TextField();
 		public var doiKhach:TextField = new TextField();
@@ -56,13 +83,62 @@
 			this.addChild(doiKhach);					
 			this.addChild(tyso);
 			this.addChild(tysoPen);			
-						
+					
+			this.addChild(iconPenXChu1);	
+			this.addChild(iconPenXChu2);
+			this.addChild(iconPenXChu3);
+			this.addChild(iconPenXChu4);
+			this.addChild(iconPenXChu5);
+			
+			this.addChild(iconPenOChu1);	
+			this.addChild(iconPenOChu2);
+			this.addChild(iconPenOChu3);
+			this.addChild(iconPenOChu4);
+			this.addChild(iconPenOChu5);
+			
+			this.addChild(iconPenXKhach1);	
+			this.addChild(iconPenXKhach2);
+			this.addChild(iconPenXKhach3);
+			this.addChild(iconPenXKhach4);
+			this.addChild(iconPenXKhach5);
+			
+			this.addChild(iconPenOKhach1);	
+			this.addChild(iconPenOKhach2);
+			this.addChild(iconPenOKhach3);
+			this.addChild(iconPenOKhach4);
+			this.addChild(iconPenOKhach5);
+			
+			this.txtGroup.addChild(iconPenXChu1);	
+			this.txtGroup.addChild(iconPenXChu2);
+			this.txtGroup.addChild(iconPenXChu3);
+			this.txtGroup.addChild(iconPenXChu4);
+			this.txtGroup.addChild(iconPenXChu5);
+			
+			this.txtGroup.addChild(iconPenOChu1);	
+			this.txtGroup.addChild(iconPenOChu2);	
+			this.txtGroup.addChild(iconPenOChu3);
+			this.txtGroup.addChild(iconPenOChu4);
+			this.txtGroup.addChild(iconPenOChu5);
+			
+			this.txtGroup.addChild(iconPenXKhach1);	
+			this.txtGroup.addChild(iconPenXKhach2);
+			this.txtGroup.addChild(iconPenXKhach3);
+			this.txtGroup.addChild(iconPenXKhach4);
+			this.txtGroup.addChild(iconPenXKhach5);
+			
+			this.txtGroup.addChild(iconPenOKhach1);	
+			this.txtGroup.addChild(iconPenOKhach2);
+			this.txtGroup.addChild(iconPenOKhach3);
+			this.txtGroup.addChild(iconPenOKhach4);
+			this.txtGroup.addChild(iconPenOKhach5);
+			
 			this.txtGroup.addChild(doiChu);
 			this.txtGroup.addChild(doiKhach);
 			this.txtGroup.addChild(tyso);
 			this.txtGroup.addChild(tysoPen);	
 			this.txtGroup.addChild(icon1);
 			this.txtGroup.addChild(icon2);
+			this.addChild(txtGroup);
 			this.addChild(txtGroup);
 			
 			this.addChild(maskBar);
@@ -76,8 +152,32 @@
 			this.drawShapes(maskBar, alphas, ratios, rcolor, toRad(-90, -95), rectWidth, rectHeight);
 			
 			this.myBar.mask = this.maskBar;
-			this.txtGroup.visible = false;
-			this.myBar.visible = false;			
+			this.txtGroup.visible = false;			
+			this.myBar.visible = false;		
+			
+			this.iconPenXChu1.visible=false;	
+			this.iconPenXChu2.visible=false;
+			this.iconPenXChu3.visible=false;
+			this.iconPenXChu4.visible=false;
+			this.iconPenXChu5.visible=false;
+			
+			this.iconPenOChu1.visible=false;	
+			this.iconPenOChu2.visible=false;
+			this.iconPenOChu3.visible=false;
+			this.iconPenOChu4.visible=false;
+			this.iconPenOChu5.visible=false;
+			
+			this.iconPenXKhach1.visible=false;
+			this.iconPenXKhach2.visible=false;
+			this.iconPenXKhach3.visible=false;
+			this.iconPenXKhach4.visible=false;
+			this.iconPenXKhach5.visible=false;
+			
+			this.iconPenOKhach1.visible=false;
+			this.iconPenOKhach2.visible=false;
+			this.iconPenOKhach3.visible=false;
+			this.iconPenOKhach4.visible=false;
+			this.iconPenOKhach5.visible=false;
 			
 			ExternalInterface.addCallback("UpdateData", UpdateData);
 			ExternalInterface.addCallback("GetProperties", GetProperties);			
@@ -123,7 +223,150 @@
 						break;
 					case "tysoPen".toLowerCase():
 						this.tysoPen.text = data.toUpperCase();
-						break;			
+						break;	
+					
+					case "kqPenChu1".toLowerCase():
+						if(data=="True")
+						{
+							this.iconPenOChu1.visible = true;
+							this.iconPenXChu1.visible = false;
+						}
+						else if(data=="False"){
+							this.iconPenOChu1.visible = false;
+							this.iconPenXChu1.visible = true;
+						}else{
+							this.iconPenOChu1.visible = false;
+							this.iconPenXChu1.visible = false;
+						}
+						break;
+					case "kqPenChu2".toLowerCase():
+						if(data=="True")
+						{
+							this.iconPenOChu2.visible = true;
+							this.iconPenXChu2.visible = false;
+						}
+						else if(data=="False"){
+							this.iconPenOChu2.visible = false;
+							this.iconPenXChu2.visible = true;
+						}else{
+							this.iconPenOChu2.visible = false;
+							this.iconPenXChu2.visible = false;
+						}
+						break;		
+					case "kqPenChu3".toLowerCase():
+						if(data=="True")
+						{
+							this.iconPenOChu3.visible = true;
+							this.iconPenXChu3.visible = false;
+						}
+						else if(data=="False"){
+							this.iconPenOChu3.visible = false;
+							this.iconPenXChu3.visible = true;
+						}else{
+							this.iconPenOChu3.visible = false;
+							this.iconPenXChu3.visible = false;
+						}
+						break;
+					case "kqPenChu4".toLowerCase():
+						if(data=="True")
+						{
+							this.iconPenOChu4.visible = true;
+							this.iconPenXChu4.visible = false;
+						}
+						else if(data=="False"){
+							this.iconPenOChu4.visible = false;
+							this.iconPenXChu4.visible = true;
+						}else{
+							this.iconPenOChu4.visible = false;
+							this.iconPenXChu4.visible = false;
+						}
+						break;
+					case "kqPenChu5".toLowerCase():
+						if(data=="True")
+						{
+							this.iconPenOChu5.visible = true;
+							this.iconPenXChu5.visible = false;
+						}
+						else if(data=="False"){
+							this.iconPenOChu5.visible = false;
+							this.iconPenXChu5.visible = true;
+						}else{
+							this.iconPenOChu5.visible = false;
+							this.iconPenXChu5.visible = false;
+						}
+						break;
+							
+					case "kqPenKhach1".toLowerCase():
+						if(data=="True")
+						{
+							this.iconPenOKhach1.visible = true;
+							this.iconPenXKhach1.visible = false;
+						}
+						else if(data=="False"){
+							this.iconPenOKhach1.visible = false;
+							this.iconPenXKhach1.visible = true;
+						}else{
+							this.iconPenOKhach1.visible = false;
+							this.iconPenXKhach1.visible = false;
+						}
+						break;
+					case "kqPenKhach2".toLowerCase():
+						if(data=="True")
+						{
+							this.iconPenOKhach2.visible = true;
+							this.iconPenXKhach2.visible = false;
+						}
+						else if(data=="False"){
+							this.iconPenOKhach2.visible = false;
+							this.iconPenXKhach2.visible = true;
+						}else{
+							this.iconPenOKhach2.visible = false;
+							this.iconPenXKhach2.visible = false;
+						}
+						break;		
+					case "kqPenKhach3".toLowerCase():
+						if(data=="True")
+						{
+							this.iconPenOKhach3.visible = true;
+							this.iconPenXKhach3.visible = false;
+						}
+						else if(data=="False"){
+							this.iconPenOKhach3.visible = false;
+							this.iconPenXKhach3.visible = true;
+						}else{
+							this.iconPenOKhach3.visible = false;
+							this.iconPenXKhach3.visible = false;
+						}
+						break;
+					case "kqPenKhach4".toLowerCase():
+						if(data=="True")
+						{
+							this.iconPenOKhach4.visible = true;
+							this.iconPenXKhach4.visible = false;
+						}
+						else if(data=="False"){
+							this.iconPenOKhach4.visible = false;
+							this.iconPenXKhach4.visible = true;
+						}else{
+							this.iconPenOKhach4.visible = false;
+							this.iconPenXKhach4.visible = false;
+						}
+						break;
+					case "kqPenKhach5".toLowerCase():
+						if(data=="True")
+						{
+							this.iconPenOKhach5.visible = true;
+							this.iconPenXKhach5.visible = false;
+						}
+						else if(data=="False"){
+							this.iconPenOKhach5.visible = false;
+							this.iconPenXKhach5.visible = true;
+						}else{
+							this.iconPenOKhach5.visible = false;
+							this.iconPenXKhach5.visible = false;
+						}
+						break;
+							
 					case "icon1".toLowerCase():						
 						var file:Loader = new Loader();
 						file.contentLoaderInfo.addEventListener(Event.COMPLETE, onOpenImageCompleted);
@@ -183,8 +426,8 @@
 		private function onOpenImageCompleted(e:Event)
 		{
 			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;	
-			bmp.width=63;
-			bmp.height=60;
+			bmp.width=116;
+			bmp.height=118;
 			this.icon1.addChild(bmp);
 		}
 		private function onOpenImageError2(e:IOErrorEvent)
@@ -196,8 +439,8 @@
 		private function onOpenImageCompleted2(e:Event)
 		{
 			var bmp:DisplayObject = e.currentTarget.content as DisplayObject;	
-			bmp.width=63;
-			bmp.height=60;
+			bmp.width=116;
+			bmp.height=118;
 			this.icon2.addChild(bmp);
 		}
 			

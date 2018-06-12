@@ -319,6 +319,45 @@
             this.btnDungthoigiantran = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl47 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
+            this.btnOffPen = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOnPen = new DevExpress.XtraEditors.SimpleButton();
+            this.ckPenO10Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO5Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO9Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO4Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO8Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO3Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO7Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO2Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO6Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO1Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.nTySoPenKhach = new System.Windows.Forms.NumericUpDown();
+            this.ckStartPen1 = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl99 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl100 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl101 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl102 = new DevExpress.XtraEditors.LabelControl();
+            this.ckPenO10Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO9Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO8Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO7Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl103 = new DevExpress.XtraEditors.LabelControl();
+            this.ckPenO6Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl104 = new DevExpress.XtraEditors.LabelControl();
+            this.btnLiveUpdatePen = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl98 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl97 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl96 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl95 = new DevExpress.XtraEditors.LabelControl();
+            this.nTySoPenChu = new System.Windows.Forms.NumericUpDown();
+            this.ckPenO5Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO4Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO3Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenO2Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl91 = new DevExpress.XtraEditors.LabelControl();
+            this.ckPenO1Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl90 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl89 = new DevExpress.XtraEditors.LabelControl();
             this.xTabPageTennis = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl5 = new DevExpress.XtraEditors.SplitContainerControl();
             this.cboTeam2Player2 = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -569,46 +608,31 @@
             this.xTabTemplate = new DevExpress.XtraTab.XtraTabPage();
             this.xTabVideo = new DevExpress.XtraTab.XtraTabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ckPen10Khach = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen5Khach = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen9Khach = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen4Khach = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen8Khach = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen3Khach = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen7Khach = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen2Khach = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen6Khach = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen1Khach = new DevExpress.XtraEditors.CheckEdit();
-            this.nTySoPenKhach = new System.Windows.Forms.NumericUpDown();
+            this.labelControl106 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl107 = new DevExpress.XtraEditors.LabelControl();
+            this.ckPenX5Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX4Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX3Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX2Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX1Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX10Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX9Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX8Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX7Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX6Chu = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX10Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX9Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX8Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX7Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX6Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX5Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX4Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX3Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX2Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.ckPenX1Khach = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl108 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl109 = new DevExpress.XtraEditors.LabelControl();
             this.ckStartPen2 = new DevExpress.XtraEditors.CheckEdit();
-            this.ckStartPen1 = new DevExpress.XtraEditors.CheckEdit();
-            this.labelControl99 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl100 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl101 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl102 = new DevExpress.XtraEditors.LabelControl();
-            this.ckPen10Chu = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen9Chu = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen8Chu = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen7Chu = new DevExpress.XtraEditors.CheckEdit();
-            this.labelControl103 = new DevExpress.XtraEditors.LabelControl();
-            this.ckPen6Chu = new DevExpress.XtraEditors.CheckEdit();
-            this.labelControl104 = new DevExpress.XtraEditors.LabelControl();
-            this.btnLiveUpdatePen = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl98 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl97 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl96 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl95 = new DevExpress.XtraEditors.LabelControl();
-            this.nTySoPenChu = new System.Windows.Forms.NumericUpDown();
-            this.ckPen5Chu = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen4Chu = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen3Chu = new DevExpress.XtraEditors.CheckEdit();
-            this.ckPen2Chu = new DevExpress.XtraEditors.CheckEdit();
-            this.labelControl91 = new DevExpress.XtraEditors.LabelControl();
-            this.ckPen1Chu = new DevExpress.XtraEditors.CheckEdit();
-            this.labelControl90 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl89 = new DevExpress.XtraEditors.LabelControl();
-            this.btnOnPen = new DevExpress.XtraEditors.SimpleButton();
-            this.btnOffPen = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -750,6 +774,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.nGiay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPhut)).BeginInit();
             this.xtraTabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO10Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO5Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO9Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO4Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO8Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO3Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO7Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO2Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO6Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO1Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTySoPenKhach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckStartPen1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO10Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO9Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO8Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO7Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO6Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTySoPenChu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO5Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO4Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO3Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO2Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO1Chu.Properties)).BeginInit();
             this.xTabPageTennis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5)).BeginInit();
             this.splitContainerControl5.SuspendLayout();
@@ -884,30 +931,27 @@
             this.xTab.SuspendLayout();
             this.xTabTemplate.SuspendLayout();
             this.xTabVideo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen10Khach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen5Khach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen9Khach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen4Khach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen8Khach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen3Khach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen7Khach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen2Khach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen6Khach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen1Khach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nTySoPenKhach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX5Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX4Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX3Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX2Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX1Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX10Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX9Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX8Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX7Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX6Chu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX10Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX9Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX8Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX7Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX6Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX5Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX4Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX3Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX2Khach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX1Khach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckStartPen2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckStartPen1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen10Chu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen9Chu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen8Chu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen7Chu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen6Chu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nTySoPenChu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen5Chu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen4Chu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen3Chu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen2Chu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen1Chu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -4533,31 +4577,55 @@
             // 
             // xtraTabPage5
             // 
+            this.xtraTabPage5.Controls.Add(this.ckStartPen2);
+            this.xtraTabPage5.Controls.Add(this.labelControl108);
+            this.xtraTabPage5.Controls.Add(this.labelControl109);
+            this.xtraTabPage5.Controls.Add(this.ckPenX10Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenX9Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenX8Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenX7Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenX6Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenX5Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenX4Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenX3Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenX2Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenX1Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenX10Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenX9Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenX8Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenX7Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenX6Chu);
+            this.xtraTabPage5.Controls.Add(this.labelControl107);
+            this.xtraTabPage5.Controls.Add(this.ckPenX5Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenX4Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenX3Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenX2Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenX1Chu);
+            this.xtraTabPage5.Controls.Add(this.labelControl106);
             this.xtraTabPage5.Controls.Add(this.btnOffPen);
             this.xtraTabPage5.Controls.Add(this.btnOnPen);
-            this.xtraTabPage5.Controls.Add(this.ckPen10Khach);
-            this.xtraTabPage5.Controls.Add(this.ckPen5Khach);
-            this.xtraTabPage5.Controls.Add(this.ckPen9Khach);
-            this.xtraTabPage5.Controls.Add(this.ckPen4Khach);
-            this.xtraTabPage5.Controls.Add(this.ckPen8Khach);
-            this.xtraTabPage5.Controls.Add(this.ckPen3Khach);
-            this.xtraTabPage5.Controls.Add(this.ckPen7Khach);
-            this.xtraTabPage5.Controls.Add(this.ckPen2Khach);
-            this.xtraTabPage5.Controls.Add(this.ckPen6Khach);
-            this.xtraTabPage5.Controls.Add(this.ckPen1Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenO10Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenO5Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenO9Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenO4Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenO8Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenO3Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenO7Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenO2Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenO6Khach);
+            this.xtraTabPage5.Controls.Add(this.ckPenO1Khach);
             this.xtraTabPage5.Controls.Add(this.nTySoPenKhach);
-            this.xtraTabPage5.Controls.Add(this.ckStartPen2);
             this.xtraTabPage5.Controls.Add(this.ckStartPen1);
             this.xtraTabPage5.Controls.Add(this.labelControl99);
             this.xtraTabPage5.Controls.Add(this.labelControl100);
             this.xtraTabPage5.Controls.Add(this.labelControl101);
             this.xtraTabPage5.Controls.Add(this.labelControl102);
-            this.xtraTabPage5.Controls.Add(this.ckPen10Chu);
-            this.xtraTabPage5.Controls.Add(this.ckPen9Chu);
-            this.xtraTabPage5.Controls.Add(this.ckPen8Chu);
-            this.xtraTabPage5.Controls.Add(this.ckPen7Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenO10Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenO9Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenO8Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenO7Chu);
             this.xtraTabPage5.Controls.Add(this.labelControl103);
-            this.xtraTabPage5.Controls.Add(this.ckPen6Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenO6Chu);
             this.xtraTabPage5.Controls.Add(this.labelControl104);
             this.xtraTabPage5.Controls.Add(this.btnLiveUpdatePen);
             this.xtraTabPage5.Controls.Add(this.labelControl98);
@@ -4565,17 +4633,396 @@
             this.xtraTabPage5.Controls.Add(this.labelControl96);
             this.xtraTabPage5.Controls.Add(this.labelControl95);
             this.xtraTabPage5.Controls.Add(this.nTySoPenChu);
-            this.xtraTabPage5.Controls.Add(this.ckPen5Chu);
-            this.xtraTabPage5.Controls.Add(this.ckPen4Chu);
-            this.xtraTabPage5.Controls.Add(this.ckPen3Chu);
-            this.xtraTabPage5.Controls.Add(this.ckPen2Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenO5Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenO4Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenO3Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenO2Chu);
             this.xtraTabPage5.Controls.Add(this.labelControl91);
-            this.xtraTabPage5.Controls.Add(this.ckPen1Chu);
+            this.xtraTabPage5.Controls.Add(this.ckPenO1Chu);
             this.xtraTabPage5.Controls.Add(this.labelControl90);
             this.xtraTabPage5.Controls.Add(this.labelControl89);
             this.xtraTabPage5.Name = "xtraTabPage5";
             this.xtraTabPage5.Size = new System.Drawing.Size(1336, 872);
             this.xtraTabPage5.Text = "Phạt đền";
+            // 
+            // btnOffPen
+            // 
+            this.btnOffPen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnOffPen.Appearance.Options.UseFont = true;
+            this.btnOffPen.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnOffPen.Location = new System.Drawing.Point(694, 805);
+            this.btnOffPen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOffPen.Name = "btnOffPen";
+            this.btnOffPen.Size = new System.Drawing.Size(129, 47);
+            this.btnOffPen.TabIndex = 262;
+            this.btnOffPen.Text = "Xuống đồ họa";
+            this.btnOffPen.ToolTip = "Update real-time data for template";
+            this.btnOffPen.Click += new System.EventHandler(this.btnOffPen_Click);
+            // 
+            // btnOnPen
+            // 
+            this.btnOnPen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnOnPen.Appearance.Options.UseFont = true;
+            this.btnOnPen.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnOnPen.Location = new System.Drawing.Point(501, 805);
+            this.btnOnPen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOnPen.Name = "btnOnPen";
+            this.btnOnPen.Size = new System.Drawing.Size(129, 47);
+            this.btnOnPen.TabIndex = 261;
+            this.btnOnPen.Text = "Lên đồ họa";
+            this.btnOnPen.ToolTip = "Update real-time data for template";
+            this.btnOnPen.Click += new System.EventHandler(this.btnOnPen_Click);
+            // 
+            // ckPenO10Khach
+            // 
+            this.ckPenO10Khach.Location = new System.Drawing.Point(919, 794);
+            this.ckPenO10Khach.MenuManager = this.barManager1;
+            this.ckPenO10Khach.Name = "ckPenO10Khach";
+            this.ckPenO10Khach.Properties.Caption = "";
+            this.ckPenO10Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO10Khach.TabIndex = 260;
+            // 
+            // ckPenO5Khach
+            // 
+            this.ckPenO5Khach.Location = new System.Drawing.Point(919, 412);
+            this.ckPenO5Khach.MenuManager = this.barManager1;
+            this.ckPenO5Khach.Name = "ckPenO5Khach";
+            this.ckPenO5Khach.Properties.Caption = "";
+            this.ckPenO5Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO5Khach.TabIndex = 255;
+            // 
+            // ckPenO9Khach
+            // 
+            this.ckPenO9Khach.Location = new System.Drawing.Point(919, 732);
+            this.ckPenO9Khach.MenuManager = this.barManager1;
+            this.ckPenO9Khach.Name = "ckPenO9Khach";
+            this.ckPenO9Khach.Properties.Caption = "";
+            this.ckPenO9Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO9Khach.TabIndex = 259;
+            // 
+            // ckPenO4Khach
+            // 
+            this.ckPenO4Khach.Location = new System.Drawing.Point(919, 357);
+            this.ckPenO4Khach.MenuManager = this.barManager1;
+            this.ckPenO4Khach.Name = "ckPenO4Khach";
+            this.ckPenO4Khach.Properties.Caption = "";
+            this.ckPenO4Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO4Khach.TabIndex = 254;
+            // 
+            // ckPenO8Khach
+            // 
+            this.ckPenO8Khach.Location = new System.Drawing.Point(919, 672);
+            this.ckPenO8Khach.MenuManager = this.barManager1;
+            this.ckPenO8Khach.Name = "ckPenO8Khach";
+            this.ckPenO8Khach.Properties.Caption = "";
+            this.ckPenO8Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO8Khach.TabIndex = 258;
+            // 
+            // ckPenO3Khach
+            // 
+            this.ckPenO3Khach.Location = new System.Drawing.Point(919, 297);
+            this.ckPenO3Khach.MenuManager = this.barManager1;
+            this.ckPenO3Khach.Name = "ckPenO3Khach";
+            this.ckPenO3Khach.Properties.Caption = "";
+            this.ckPenO3Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO3Khach.TabIndex = 253;
+            // 
+            // ckPenO7Khach
+            // 
+            this.ckPenO7Khach.Location = new System.Drawing.Point(919, 610);
+            this.ckPenO7Khach.MenuManager = this.barManager1;
+            this.ckPenO7Khach.Name = "ckPenO7Khach";
+            this.ckPenO7Khach.Properties.Caption = "";
+            this.ckPenO7Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO7Khach.TabIndex = 257;
+            // 
+            // ckPenO2Khach
+            // 
+            this.ckPenO2Khach.Location = new System.Drawing.Point(919, 228);
+            this.ckPenO2Khach.MenuManager = this.barManager1;
+            this.ckPenO2Khach.Name = "ckPenO2Khach";
+            this.ckPenO2Khach.Properties.Caption = "";
+            this.ckPenO2Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO2Khach.TabIndex = 252;
+            // 
+            // ckPenO6Khach
+            // 
+            this.ckPenO6Khach.Location = new System.Drawing.Point(919, 552);
+            this.ckPenO6Khach.MenuManager = this.barManager1;
+            this.ckPenO6Khach.Name = "ckPenO6Khach";
+            this.ckPenO6Khach.Properties.Caption = "";
+            this.ckPenO6Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO6Khach.TabIndex = 256;
+            // 
+            // ckPenO1Khach
+            // 
+            this.ckPenO1Khach.Location = new System.Drawing.Point(919, 170);
+            this.ckPenO1Khach.MenuManager = this.barManager1;
+            this.ckPenO1Khach.Name = "ckPenO1Khach";
+            this.ckPenO1Khach.Properties.Caption = "";
+            this.ckPenO1Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO1Khach.TabIndex = 251;
+            // 
+            // nTySoPenKhach
+            // 
+            this.nTySoPenKhach.Font = new System.Drawing.Font("Tahoma", 19.8F);
+            this.nTySoPenKhach.Location = new System.Drawing.Point(915, 30);
+            this.nTySoPenKhach.Name = "nTySoPenKhach";
+            this.nTySoPenKhach.Size = new System.Drawing.Size(64, 47);
+            this.nTySoPenKhach.TabIndex = 250;
+            // 
+            // ckStartPen1
+            // 
+            this.ckStartPen1.Location = new System.Drawing.Point(599, 91);
+            this.ckStartPen1.MenuManager = this.barManager1;
+            this.ckStartPen1.Name = "ckStartPen1";
+            this.ckStartPen1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
+            this.ckStartPen1.Properties.Appearance.Options.UseFont = true;
+            this.ckStartPen1.Properties.Caption = "Bắt đầu";
+            this.ckStartPen1.Size = new System.Drawing.Size(103, 25);
+            this.ckStartPen1.TabIndex = 248;
+            // 
+            // labelControl99
+            // 
+            this.labelControl99.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl99.Appearance.Options.UseFont = true;
+            this.labelControl99.Location = new System.Drawing.Point(111, 605);
+            this.labelControl99.Name = "labelControl99";
+            this.labelControl99.Size = new System.Drawing.Size(13, 24);
+            this.labelControl99.TabIndex = 247;
+            this.labelControl99.Text = "2";
+            // 
+            // labelControl100
+            // 
+            this.labelControl100.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl100.Appearance.Options.UseFont = true;
+            this.labelControl100.Location = new System.Drawing.Point(111, 673);
+            this.labelControl100.Name = "labelControl100";
+            this.labelControl100.Size = new System.Drawing.Size(13, 24);
+            this.labelControl100.TabIndex = 246;
+            this.labelControl100.Text = "3";
+            // 
+            // labelControl101
+            // 
+            this.labelControl101.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl101.Appearance.Options.UseFont = true;
+            this.labelControl101.Location = new System.Drawing.Point(111, 733);
+            this.labelControl101.Name = "labelControl101";
+            this.labelControl101.Size = new System.Drawing.Size(13, 24);
+            this.labelControl101.TabIndex = 245;
+            this.labelControl101.Text = "4";
+            // 
+            // labelControl102
+            // 
+            this.labelControl102.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl102.Appearance.Options.UseFont = true;
+            this.labelControl102.Location = new System.Drawing.Point(111, 788);
+            this.labelControl102.Name = "labelControl102";
+            this.labelControl102.Size = new System.Drawing.Size(13, 24);
+            this.labelControl102.TabIndex = 244;
+            this.labelControl102.Text = "5";
+            // 
+            // ckPenO10Chu
+            // 
+            this.ckPenO10Chu.Location = new System.Drawing.Point(305, 793);
+            this.ckPenO10Chu.MenuManager = this.barManager1;
+            this.ckPenO10Chu.Name = "ckPenO10Chu";
+            this.ckPenO10Chu.Properties.Caption = "";
+            this.ckPenO10Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO10Chu.TabIndex = 243;
+            // 
+            // ckPenO9Chu
+            // 
+            this.ckPenO9Chu.Location = new System.Drawing.Point(305, 731);
+            this.ckPenO9Chu.MenuManager = this.barManager1;
+            this.ckPenO9Chu.Name = "ckPenO9Chu";
+            this.ckPenO9Chu.Properties.Caption = "";
+            this.ckPenO9Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO9Chu.TabIndex = 242;
+            // 
+            // ckPenO8Chu
+            // 
+            this.ckPenO8Chu.Location = new System.Drawing.Point(305, 671);
+            this.ckPenO8Chu.MenuManager = this.barManager1;
+            this.ckPenO8Chu.Name = "ckPenO8Chu";
+            this.ckPenO8Chu.Properties.Caption = "";
+            this.ckPenO8Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO8Chu.TabIndex = 241;
+            // 
+            // ckPenO7Chu
+            // 
+            this.ckPenO7Chu.Location = new System.Drawing.Point(305, 609);
+            this.ckPenO7Chu.MenuManager = this.barManager1;
+            this.ckPenO7Chu.Name = "ckPenO7Chu";
+            this.ckPenO7Chu.Properties.Caption = "";
+            this.ckPenO7Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO7Chu.TabIndex = 240;
+            // 
+            // labelControl103
+            // 
+            this.labelControl103.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl103.Appearance.Options.UseFont = true;
+            this.labelControl103.Location = new System.Drawing.Point(111, 547);
+            this.labelControl103.Name = "labelControl103";
+            this.labelControl103.Size = new System.Drawing.Size(13, 24);
+            this.labelControl103.TabIndex = 239;
+            this.labelControl103.Text = "1";
+            // 
+            // ckPenO6Chu
+            // 
+            this.ckPenO6Chu.Location = new System.Drawing.Point(305, 551);
+            this.ckPenO6Chu.MenuManager = this.barManager1;
+            this.ckPenO6Chu.Name = "ckPenO6Chu";
+            this.ckPenO6Chu.Properties.Caption = "";
+            this.ckPenO6Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO6Chu.TabIndex = 238;
+            // 
+            // labelControl104
+            // 
+            this.labelControl104.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl104.Appearance.Options.UseFont = true;
+            this.labelControl104.Location = new System.Drawing.Point(11, 485);
+            this.labelControl104.Name = "labelControl104";
+            this.labelControl104.Size = new System.Drawing.Size(211, 24);
+            this.labelControl104.TabIndex = 237;
+            this.labelControl104.Text = "CÁC LOẠT TIẾP THEO";
+            // 
+            // btnLiveUpdatePen
+            // 
+            this.btnLiveUpdatePen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnLiveUpdatePen.Appearance.Options.UseFont = true;
+            this.btnLiveUpdatePen.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnLiveUpdatePen.Location = new System.Drawing.Point(599, 30);
+            this.btnLiveUpdatePen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLiveUpdatePen.Name = "btnLiveUpdatePen";
+            this.btnLiveUpdatePen.Size = new System.Drawing.Size(103, 47);
+            this.btnLiveUpdatePen.TabIndex = 236;
+            this.btnLiveUpdatePen.Text = "Live Update";
+            this.btnLiveUpdatePen.ToolTip = "Update real-time data for template";
+            this.btnLiveUpdatePen.Click += new System.EventHandler(this.btnLiveUpdatePen_Click);
+            // 
+            // labelControl98
+            // 
+            this.labelControl98.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl98.Appearance.Options.UseFont = true;
+            this.labelControl98.Location = new System.Drawing.Point(111, 223);
+            this.labelControl98.Name = "labelControl98";
+            this.labelControl98.Size = new System.Drawing.Size(13, 24);
+            this.labelControl98.TabIndex = 235;
+            this.labelControl98.Text = "2";
+            // 
+            // labelControl97
+            // 
+            this.labelControl97.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl97.Appearance.Options.UseFont = true;
+            this.labelControl97.Location = new System.Drawing.Point(111, 291);
+            this.labelControl97.Name = "labelControl97";
+            this.labelControl97.Size = new System.Drawing.Size(13, 24);
+            this.labelControl97.TabIndex = 234;
+            this.labelControl97.Text = "3";
+            // 
+            // labelControl96
+            // 
+            this.labelControl96.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl96.Appearance.Options.UseFont = true;
+            this.labelControl96.Location = new System.Drawing.Point(111, 351);
+            this.labelControl96.Name = "labelControl96";
+            this.labelControl96.Size = new System.Drawing.Size(13, 24);
+            this.labelControl96.TabIndex = 233;
+            this.labelControl96.Text = "4";
+            // 
+            // labelControl95
+            // 
+            this.labelControl95.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl95.Appearance.Options.UseFont = true;
+            this.labelControl95.Location = new System.Drawing.Point(111, 406);
+            this.labelControl95.Name = "labelControl95";
+            this.labelControl95.Size = new System.Drawing.Size(13, 24);
+            this.labelControl95.TabIndex = 232;
+            this.labelControl95.Text = "5";
+            // 
+            // nTySoPenChu
+            // 
+            this.nTySoPenChu.Font = new System.Drawing.Font("Tahoma", 19.8F);
+            this.nTySoPenChu.Location = new System.Drawing.Point(341, 30);
+            this.nTySoPenChu.Name = "nTySoPenChu";
+            this.nTySoPenChu.Size = new System.Drawing.Size(64, 47);
+            this.nTySoPenChu.TabIndex = 231;
+            // 
+            // ckPenO5Chu
+            // 
+            this.ckPenO5Chu.Location = new System.Drawing.Point(305, 405);
+            this.ckPenO5Chu.MenuManager = this.barManager1;
+            this.ckPenO5Chu.Name = "ckPenO5Chu";
+            this.ckPenO5Chu.Properties.Caption = "";
+            this.ckPenO5Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO5Chu.TabIndex = 230;
+            // 
+            // ckPenO4Chu
+            // 
+            this.ckPenO4Chu.Location = new System.Drawing.Point(305, 350);
+            this.ckPenO4Chu.MenuManager = this.barManager1;
+            this.ckPenO4Chu.Name = "ckPenO4Chu";
+            this.ckPenO4Chu.Properties.Caption = "";
+            this.ckPenO4Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO4Chu.TabIndex = 229;
+            // 
+            // ckPenO3Chu
+            // 
+            this.ckPenO3Chu.Location = new System.Drawing.Point(305, 290);
+            this.ckPenO3Chu.MenuManager = this.barManager1;
+            this.ckPenO3Chu.Name = "ckPenO3Chu";
+            this.ckPenO3Chu.Properties.Caption = "";
+            this.ckPenO3Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO3Chu.TabIndex = 228;
+            // 
+            // ckPenO2Chu
+            // 
+            this.ckPenO2Chu.Location = new System.Drawing.Point(305, 228);
+            this.ckPenO2Chu.MenuManager = this.barManager1;
+            this.ckPenO2Chu.Name = "ckPenO2Chu";
+            this.ckPenO2Chu.Properties.Caption = "";
+            this.ckPenO2Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO2Chu.TabIndex = 227;
+            // 
+            // labelControl91
+            // 
+            this.labelControl91.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl91.Appearance.Options.UseFont = true;
+            this.labelControl91.Location = new System.Drawing.Point(111, 165);
+            this.labelControl91.Name = "labelControl91";
+            this.labelControl91.Size = new System.Drawing.Size(13, 24);
+            this.labelControl91.TabIndex = 226;
+            this.labelControl91.Text = "1";
+            // 
+            // ckPenO1Chu
+            // 
+            this.ckPenO1Chu.Location = new System.Drawing.Point(305, 170);
+            this.ckPenO1Chu.MenuManager = this.barManager1;
+            this.ckPenO1Chu.Name = "ckPenO1Chu";
+            this.ckPenO1Chu.Properties.Caption = "";
+            this.ckPenO1Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenO1Chu.TabIndex = 225;
+            // 
+            // labelControl90
+            // 
+            this.labelControl90.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl90.Appearance.Options.UseFont = true;
+            this.labelControl90.Location = new System.Drawing.Point(71, 92);
+            this.labelControl90.Name = "labelControl90";
+            this.labelControl90.Size = new System.Drawing.Size(102, 24);
+            this.labelControl90.TabIndex = 224;
+            this.labelControl90.Text = "LOẠT ĐẦU";
+            // 
+            // labelControl89
+            // 
+            this.labelControl89.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.labelControl89.Appearance.Options.UseFont = true;
+            this.labelControl89.Location = new System.Drawing.Point(36, 36);
+            this.labelControl89.Name = "labelControl89";
+            this.labelControl89.Size = new System.Drawing.Size(137, 29);
+            this.labelControl89.TabIndex = 223;
+            this.labelControl89.Text = "TỶ SỐ PEN:";
             // 
             // xTabPageTennis
             // 
@@ -7685,394 +8132,241 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // ckPen10Khach
+            // labelControl106
             // 
-            this.ckPen10Khach.Location = new System.Drawing.Point(928, 794);
-            this.ckPen10Khach.MenuManager = this.barManager1;
-            this.ckPen10Khach.Name = "ckPen10Khach";
-            this.ckPen10Khach.Properties.Caption = "";
-            this.ckPen10Khach.Size = new System.Drawing.Size(28, 19);
-            this.ckPen10Khach.TabIndex = 260;
+            this.labelControl106.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl106.Appearance.Options.UseFont = true;
+            this.labelControl106.Location = new System.Drawing.Point(289, 93);
+            this.labelControl106.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl106.Name = "labelControl106";
+            this.labelControl106.Size = new System.Drawing.Size(56, 23);
+            this.labelControl106.TabIndex = 273;
+            this.labelControl106.Text = "Trúng";
             // 
-            // ckPen5Khach
+            // labelControl107
             // 
-            this.ckPen5Khach.Location = new System.Drawing.Point(928, 412);
-            this.ckPen5Khach.MenuManager = this.barManager1;
-            this.ckPen5Khach.Name = "ckPen5Khach";
-            this.ckPen5Khach.Properties.Caption = "";
-            this.ckPen5Khach.Size = new System.Drawing.Size(28, 19);
-            this.ckPen5Khach.TabIndex = 255;
+            this.labelControl107.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl107.Appearance.Options.UseFont = true;
+            this.labelControl107.Location = new System.Drawing.Point(364, 93);
+            this.labelControl107.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl107.Name = "labelControl107";
+            this.labelControl107.Size = new System.Drawing.Size(53, 23);
+            this.labelControl107.TabIndex = 279;
+            this.labelControl107.Text = "Trượt";
             // 
-            // ckPen9Khach
+            // ckPenX5Chu
             // 
-            this.ckPen9Khach.Location = new System.Drawing.Point(928, 732);
-            this.ckPen9Khach.MenuManager = this.barManager1;
-            this.ckPen9Khach.Name = "ckPen9Khach";
-            this.ckPen9Khach.Properties.Caption = "";
-            this.ckPen9Khach.Size = new System.Drawing.Size(28, 19);
-            this.ckPen9Khach.TabIndex = 259;
+            this.ckPenX5Chu.Location = new System.Drawing.Point(380, 405);
+            this.ckPenX5Chu.MenuManager = this.barManager1;
+            this.ckPenX5Chu.Name = "ckPenX5Chu";
+            this.ckPenX5Chu.Properties.Caption = "";
+            this.ckPenX5Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX5Chu.TabIndex = 278;
             // 
-            // ckPen4Khach
+            // ckPenX4Chu
             // 
-            this.ckPen4Khach.Location = new System.Drawing.Point(928, 357);
-            this.ckPen4Khach.MenuManager = this.barManager1;
-            this.ckPen4Khach.Name = "ckPen4Khach";
-            this.ckPen4Khach.Properties.Caption = "";
-            this.ckPen4Khach.Size = new System.Drawing.Size(28, 19);
-            this.ckPen4Khach.TabIndex = 254;
+            this.ckPenX4Chu.Location = new System.Drawing.Point(380, 350);
+            this.ckPenX4Chu.MenuManager = this.barManager1;
+            this.ckPenX4Chu.Name = "ckPenX4Chu";
+            this.ckPenX4Chu.Properties.Caption = "";
+            this.ckPenX4Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX4Chu.TabIndex = 277;
             // 
-            // ckPen8Khach
+            // ckPenX3Chu
             // 
-            this.ckPen8Khach.Location = new System.Drawing.Point(928, 672);
-            this.ckPen8Khach.MenuManager = this.barManager1;
-            this.ckPen8Khach.Name = "ckPen8Khach";
-            this.ckPen8Khach.Properties.Caption = "";
-            this.ckPen8Khach.Size = new System.Drawing.Size(28, 19);
-            this.ckPen8Khach.TabIndex = 258;
+            this.ckPenX3Chu.Location = new System.Drawing.Point(380, 290);
+            this.ckPenX3Chu.MenuManager = this.barManager1;
+            this.ckPenX3Chu.Name = "ckPenX3Chu";
+            this.ckPenX3Chu.Properties.Caption = "";
+            this.ckPenX3Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX3Chu.TabIndex = 276;
             // 
-            // ckPen3Khach
+            // ckPenX2Chu
             // 
-            this.ckPen3Khach.Location = new System.Drawing.Point(928, 297);
-            this.ckPen3Khach.MenuManager = this.barManager1;
-            this.ckPen3Khach.Name = "ckPen3Khach";
-            this.ckPen3Khach.Properties.Caption = "";
-            this.ckPen3Khach.Size = new System.Drawing.Size(28, 19);
-            this.ckPen3Khach.TabIndex = 253;
+            this.ckPenX2Chu.Location = new System.Drawing.Point(380, 228);
+            this.ckPenX2Chu.MenuManager = this.barManager1;
+            this.ckPenX2Chu.Name = "ckPenX2Chu";
+            this.ckPenX2Chu.Properties.Caption = "";
+            this.ckPenX2Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX2Chu.TabIndex = 275;
             // 
-            // ckPen7Khach
+            // ckPenX1Chu
             // 
-            this.ckPen7Khach.Location = new System.Drawing.Point(928, 610);
-            this.ckPen7Khach.MenuManager = this.barManager1;
-            this.ckPen7Khach.Name = "ckPen7Khach";
-            this.ckPen7Khach.Properties.Caption = "";
-            this.ckPen7Khach.Size = new System.Drawing.Size(28, 19);
-            this.ckPen7Khach.TabIndex = 257;
+            this.ckPenX1Chu.Location = new System.Drawing.Point(380, 170);
+            this.ckPenX1Chu.MenuManager = this.barManager1;
+            this.ckPenX1Chu.Name = "ckPenX1Chu";
+            this.ckPenX1Chu.Properties.Caption = "";
+            this.ckPenX1Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX1Chu.TabIndex = 274;
             // 
-            // ckPen2Khach
+            // ckPenX10Chu
             // 
-            this.ckPen2Khach.Location = new System.Drawing.Point(928, 228);
-            this.ckPen2Khach.MenuManager = this.barManager1;
-            this.ckPen2Khach.Name = "ckPen2Khach";
-            this.ckPen2Khach.Properties.Caption = "";
-            this.ckPen2Khach.Size = new System.Drawing.Size(28, 19);
-            this.ckPen2Khach.TabIndex = 252;
+            this.ckPenX10Chu.Location = new System.Drawing.Point(377, 792);
+            this.ckPenX10Chu.MenuManager = this.barManager1;
+            this.ckPenX10Chu.Name = "ckPenX10Chu";
+            this.ckPenX10Chu.Properties.Caption = "";
+            this.ckPenX10Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX10Chu.TabIndex = 284;
             // 
-            // ckPen6Khach
+            // ckPenX9Chu
             // 
-            this.ckPen6Khach.Location = new System.Drawing.Point(928, 552);
-            this.ckPen6Khach.MenuManager = this.barManager1;
-            this.ckPen6Khach.Name = "ckPen6Khach";
-            this.ckPen6Khach.Properties.Caption = "";
-            this.ckPen6Khach.Size = new System.Drawing.Size(28, 19);
-            this.ckPen6Khach.TabIndex = 256;
+            this.ckPenX9Chu.Location = new System.Drawing.Point(377, 730);
+            this.ckPenX9Chu.MenuManager = this.barManager1;
+            this.ckPenX9Chu.Name = "ckPenX9Chu";
+            this.ckPenX9Chu.Properties.Caption = "";
+            this.ckPenX9Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX9Chu.TabIndex = 283;
             // 
-            // ckPen1Khach
+            // ckPenX8Chu
             // 
-            this.ckPen1Khach.Location = new System.Drawing.Point(928, 170);
-            this.ckPen1Khach.MenuManager = this.barManager1;
-            this.ckPen1Khach.Name = "ckPen1Khach";
-            this.ckPen1Khach.Properties.Caption = "";
-            this.ckPen1Khach.Size = new System.Drawing.Size(28, 19);
-            this.ckPen1Khach.TabIndex = 251;
+            this.ckPenX8Chu.Location = new System.Drawing.Point(377, 670);
+            this.ckPenX8Chu.MenuManager = this.barManager1;
+            this.ckPenX8Chu.Name = "ckPenX8Chu";
+            this.ckPenX8Chu.Properties.Caption = "";
+            this.ckPenX8Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX8Chu.TabIndex = 282;
             // 
-            // nTySoPenKhach
+            // ckPenX7Chu
             // 
-            this.nTySoPenKhach.Font = new System.Drawing.Font("Tahoma", 19.8F);
-            this.nTySoPenKhach.Location = new System.Drawing.Point(915, 30);
-            this.nTySoPenKhach.Name = "nTySoPenKhach";
-            this.nTySoPenKhach.Size = new System.Drawing.Size(64, 47);
-            this.nTySoPenKhach.TabIndex = 250;
+            this.ckPenX7Chu.Location = new System.Drawing.Point(377, 608);
+            this.ckPenX7Chu.MenuManager = this.barManager1;
+            this.ckPenX7Chu.Name = "ckPenX7Chu";
+            this.ckPenX7Chu.Properties.Caption = "";
+            this.ckPenX7Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX7Chu.TabIndex = 281;
+            // 
+            // ckPenX6Chu
+            // 
+            this.ckPenX6Chu.Location = new System.Drawing.Point(377, 550);
+            this.ckPenX6Chu.MenuManager = this.barManager1;
+            this.ckPenX6Chu.Name = "ckPenX6Chu";
+            this.ckPenX6Chu.Properties.Caption = "";
+            this.ckPenX6Chu.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX6Chu.TabIndex = 280;
+            // 
+            // ckPenX10Khach
+            // 
+            this.ckPenX10Khach.Location = new System.Drawing.Point(991, 793);
+            this.ckPenX10Khach.MenuManager = this.barManager1;
+            this.ckPenX10Khach.Name = "ckPenX10Khach";
+            this.ckPenX10Khach.Properties.Caption = "";
+            this.ckPenX10Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX10Khach.TabIndex = 294;
+            // 
+            // ckPenX9Khach
+            // 
+            this.ckPenX9Khach.Location = new System.Drawing.Point(991, 731);
+            this.ckPenX9Khach.MenuManager = this.barManager1;
+            this.ckPenX9Khach.Name = "ckPenX9Khach";
+            this.ckPenX9Khach.Properties.Caption = "";
+            this.ckPenX9Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX9Khach.TabIndex = 293;
+            // 
+            // ckPenX8Khach
+            // 
+            this.ckPenX8Khach.Location = new System.Drawing.Point(991, 671);
+            this.ckPenX8Khach.MenuManager = this.barManager1;
+            this.ckPenX8Khach.Name = "ckPenX8Khach";
+            this.ckPenX8Khach.Properties.Caption = "";
+            this.ckPenX8Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX8Khach.TabIndex = 292;
+            // 
+            // ckPenX7Khach
+            // 
+            this.ckPenX7Khach.Location = new System.Drawing.Point(991, 609);
+            this.ckPenX7Khach.MenuManager = this.barManager1;
+            this.ckPenX7Khach.Name = "ckPenX7Khach";
+            this.ckPenX7Khach.Properties.Caption = "";
+            this.ckPenX7Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX7Khach.TabIndex = 291;
+            // 
+            // ckPenX6Khach
+            // 
+            this.ckPenX6Khach.Location = new System.Drawing.Point(991, 551);
+            this.ckPenX6Khach.MenuManager = this.barManager1;
+            this.ckPenX6Khach.Name = "ckPenX6Khach";
+            this.ckPenX6Khach.Properties.Caption = "";
+            this.ckPenX6Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX6Khach.TabIndex = 290;
+            // 
+            // ckPenX5Khach
+            // 
+            this.ckPenX5Khach.Location = new System.Drawing.Point(994, 411);
+            this.ckPenX5Khach.MenuManager = this.barManager1;
+            this.ckPenX5Khach.Name = "ckPenX5Khach";
+            this.ckPenX5Khach.Properties.Caption = "";
+            this.ckPenX5Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX5Khach.TabIndex = 289;
+            // 
+            // ckPenX4Khach
+            // 
+            this.ckPenX4Khach.Location = new System.Drawing.Point(994, 357);
+            this.ckPenX4Khach.MenuManager = this.barManager1;
+            this.ckPenX4Khach.Name = "ckPenX4Khach";
+            this.ckPenX4Khach.Properties.Caption = "";
+            this.ckPenX4Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX4Khach.TabIndex = 288;
+            // 
+            // ckPenX3Khach
+            // 
+            this.ckPenX3Khach.Location = new System.Drawing.Point(994, 296);
+            this.ckPenX3Khach.MenuManager = this.barManager1;
+            this.ckPenX3Khach.Name = "ckPenX3Khach";
+            this.ckPenX3Khach.Properties.Caption = "";
+            this.ckPenX3Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX3Khach.TabIndex = 287;
+            // 
+            // ckPenX2Khach
+            // 
+            this.ckPenX2Khach.Location = new System.Drawing.Point(994, 229);
+            this.ckPenX2Khach.MenuManager = this.barManager1;
+            this.ckPenX2Khach.Name = "ckPenX2Khach";
+            this.ckPenX2Khach.Properties.Caption = "";
+            this.ckPenX2Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX2Khach.TabIndex = 286;
+            // 
+            // ckPenX1Khach
+            // 
+            this.ckPenX1Khach.Location = new System.Drawing.Point(994, 171);
+            this.ckPenX1Khach.MenuManager = this.barManager1;
+            this.ckPenX1Khach.Name = "ckPenX1Khach";
+            this.ckPenX1Khach.Properties.Caption = "";
+            this.ckPenX1Khach.Size = new System.Drawing.Size(28, 19);
+            this.ckPenX1Khach.TabIndex = 285;
+            // 
+            // labelControl108
+            // 
+            this.labelControl108.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl108.Appearance.Options.UseFont = true;
+            this.labelControl108.Location = new System.Drawing.Point(975, 93);
+            this.labelControl108.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl108.Name = "labelControl108";
+            this.labelControl108.Size = new System.Drawing.Size(53, 23);
+            this.labelControl108.TabIndex = 296;
+            this.labelControl108.Text = "Trượt";
+            // 
+            // labelControl109
+            // 
+            this.labelControl109.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl109.Appearance.Options.UseFont = true;
+            this.labelControl109.Location = new System.Drawing.Point(900, 93);
+            this.labelControl109.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl109.Name = "labelControl109";
+            this.labelControl109.Size = new System.Drawing.Size(56, 23);
+            this.labelControl109.TabIndex = 295;
+            this.labelControl109.Text = "Trúng";
             // 
             // ckStartPen2
             // 
-            this.ckStartPen2.Location = new System.Drawing.Point(599, 484);
+            this.ckStartPen2.Location = new System.Drawing.Point(599, 483);
             this.ckStartPen2.MenuManager = this.barManager1;
             this.ckStartPen2.Name = "ckStartPen2";
             this.ckStartPen2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
             this.ckStartPen2.Properties.Appearance.Options.UseFont = true;
             this.ckStartPen2.Properties.Caption = "Bắt đầu";
             this.ckStartPen2.Size = new System.Drawing.Size(103, 25);
-            this.ckStartPen2.TabIndex = 249;
-            // 
-            // ckStartPen1
-            // 
-            this.ckStartPen1.Location = new System.Drawing.Point(599, 91);
-            this.ckStartPen1.MenuManager = this.barManager1;
-            this.ckStartPen1.Name = "ckStartPen1";
-            this.ckStartPen1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.8F);
-            this.ckStartPen1.Properties.Appearance.Options.UseFont = true;
-            this.ckStartPen1.Properties.Caption = "Bắt đầu";
-            this.ckStartPen1.Size = new System.Drawing.Size(103, 25);
-            this.ckStartPen1.TabIndex = 248;
-            // 
-            // labelControl99
-            // 
-            this.labelControl99.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl99.Appearance.Options.UseFont = true;
-            this.labelControl99.Location = new System.Drawing.Point(111, 605);
-            this.labelControl99.Name = "labelControl99";
-            this.labelControl99.Size = new System.Drawing.Size(13, 24);
-            this.labelControl99.TabIndex = 247;
-            this.labelControl99.Text = "2";
-            // 
-            // labelControl100
-            // 
-            this.labelControl100.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl100.Appearance.Options.UseFont = true;
-            this.labelControl100.Location = new System.Drawing.Point(111, 673);
-            this.labelControl100.Name = "labelControl100";
-            this.labelControl100.Size = new System.Drawing.Size(13, 24);
-            this.labelControl100.TabIndex = 246;
-            this.labelControl100.Text = "3";
-            // 
-            // labelControl101
-            // 
-            this.labelControl101.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl101.Appearance.Options.UseFont = true;
-            this.labelControl101.Location = new System.Drawing.Point(111, 733);
-            this.labelControl101.Name = "labelControl101";
-            this.labelControl101.Size = new System.Drawing.Size(13, 24);
-            this.labelControl101.TabIndex = 245;
-            this.labelControl101.Text = "4";
-            // 
-            // labelControl102
-            // 
-            this.labelControl102.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl102.Appearance.Options.UseFont = true;
-            this.labelControl102.Location = new System.Drawing.Point(111, 788);
-            this.labelControl102.Name = "labelControl102";
-            this.labelControl102.Size = new System.Drawing.Size(13, 24);
-            this.labelControl102.TabIndex = 244;
-            this.labelControl102.Text = "5";
-            // 
-            // ckPen10Chu
-            // 
-            this.ckPen10Chu.Location = new System.Drawing.Point(349, 794);
-            this.ckPen10Chu.MenuManager = this.barManager1;
-            this.ckPen10Chu.Name = "ckPen10Chu";
-            this.ckPen10Chu.Properties.Caption = "";
-            this.ckPen10Chu.Size = new System.Drawing.Size(28, 19);
-            this.ckPen10Chu.TabIndex = 243;
-            // 
-            // ckPen9Chu
-            // 
-            this.ckPen9Chu.Location = new System.Drawing.Point(349, 732);
-            this.ckPen9Chu.MenuManager = this.barManager1;
-            this.ckPen9Chu.Name = "ckPen9Chu";
-            this.ckPen9Chu.Properties.Caption = "";
-            this.ckPen9Chu.Size = new System.Drawing.Size(28, 19);
-            this.ckPen9Chu.TabIndex = 242;
-            // 
-            // ckPen8Chu
-            // 
-            this.ckPen8Chu.Location = new System.Drawing.Point(349, 672);
-            this.ckPen8Chu.MenuManager = this.barManager1;
-            this.ckPen8Chu.Name = "ckPen8Chu";
-            this.ckPen8Chu.Properties.Caption = "";
-            this.ckPen8Chu.Size = new System.Drawing.Size(28, 19);
-            this.ckPen8Chu.TabIndex = 241;
-            // 
-            // ckPen7Chu
-            // 
-            this.ckPen7Chu.Location = new System.Drawing.Point(349, 610);
-            this.ckPen7Chu.MenuManager = this.barManager1;
-            this.ckPen7Chu.Name = "ckPen7Chu";
-            this.ckPen7Chu.Properties.Caption = "";
-            this.ckPen7Chu.Size = new System.Drawing.Size(28, 19);
-            this.ckPen7Chu.TabIndex = 240;
-            // 
-            // labelControl103
-            // 
-            this.labelControl103.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl103.Appearance.Options.UseFont = true;
-            this.labelControl103.Location = new System.Drawing.Point(111, 547);
-            this.labelControl103.Name = "labelControl103";
-            this.labelControl103.Size = new System.Drawing.Size(13, 24);
-            this.labelControl103.TabIndex = 239;
-            this.labelControl103.Text = "1";
-            // 
-            // ckPen6Chu
-            // 
-            this.ckPen6Chu.Location = new System.Drawing.Point(349, 552);
-            this.ckPen6Chu.MenuManager = this.barManager1;
-            this.ckPen6Chu.Name = "ckPen6Chu";
-            this.ckPen6Chu.Properties.Caption = "";
-            this.ckPen6Chu.Size = new System.Drawing.Size(28, 19);
-            this.ckPen6Chu.TabIndex = 238;
-            // 
-            // labelControl104
-            // 
-            this.labelControl104.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl104.Appearance.Options.UseFont = true;
-            this.labelControl104.Location = new System.Drawing.Point(11, 485);
-            this.labelControl104.Name = "labelControl104";
-            this.labelControl104.Size = new System.Drawing.Size(211, 24);
-            this.labelControl104.TabIndex = 237;
-            this.labelControl104.Text = "CÁC LOẠT TIẾP THEO";
-            // 
-            // btnLiveUpdatePen
-            // 
-            this.btnLiveUpdatePen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnLiveUpdatePen.Appearance.Options.UseFont = true;
-            this.btnLiveUpdatePen.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnLiveUpdatePen.Location = new System.Drawing.Point(599, 30);
-            this.btnLiveUpdatePen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLiveUpdatePen.Name = "btnLiveUpdatePen";
-            this.btnLiveUpdatePen.Size = new System.Drawing.Size(103, 47);
-            this.btnLiveUpdatePen.TabIndex = 236;
-            this.btnLiveUpdatePen.Text = "Live Update";
-            this.btnLiveUpdatePen.ToolTip = "Update real-time data for template";
-            // 
-            // labelControl98
-            // 
-            this.labelControl98.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl98.Appearance.Options.UseFont = true;
-            this.labelControl98.Location = new System.Drawing.Point(111, 223);
-            this.labelControl98.Name = "labelControl98";
-            this.labelControl98.Size = new System.Drawing.Size(13, 24);
-            this.labelControl98.TabIndex = 235;
-            this.labelControl98.Text = "2";
-            // 
-            // labelControl97
-            // 
-            this.labelControl97.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl97.Appearance.Options.UseFont = true;
-            this.labelControl97.Location = new System.Drawing.Point(111, 291);
-            this.labelControl97.Name = "labelControl97";
-            this.labelControl97.Size = new System.Drawing.Size(13, 24);
-            this.labelControl97.TabIndex = 234;
-            this.labelControl97.Text = "3";
-            // 
-            // labelControl96
-            // 
-            this.labelControl96.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl96.Appearance.Options.UseFont = true;
-            this.labelControl96.Location = new System.Drawing.Point(111, 351);
-            this.labelControl96.Name = "labelControl96";
-            this.labelControl96.Size = new System.Drawing.Size(13, 24);
-            this.labelControl96.TabIndex = 233;
-            this.labelControl96.Text = "4";
-            // 
-            // labelControl95
-            // 
-            this.labelControl95.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl95.Appearance.Options.UseFont = true;
-            this.labelControl95.Location = new System.Drawing.Point(111, 406);
-            this.labelControl95.Name = "labelControl95";
-            this.labelControl95.Size = new System.Drawing.Size(13, 24);
-            this.labelControl95.TabIndex = 232;
-            this.labelControl95.Text = "5";
-            // 
-            // nTySoPenChu
-            // 
-            this.nTySoPenChu.Font = new System.Drawing.Font("Tahoma", 19.8F);
-            this.nTySoPenChu.Location = new System.Drawing.Point(341, 30);
-            this.nTySoPenChu.Name = "nTySoPenChu";
-            this.nTySoPenChu.Size = new System.Drawing.Size(64, 47);
-            this.nTySoPenChu.TabIndex = 231;
-            // 
-            // ckPen5Chu
-            // 
-            this.ckPen5Chu.Location = new System.Drawing.Point(349, 405);
-            this.ckPen5Chu.MenuManager = this.barManager1;
-            this.ckPen5Chu.Name = "ckPen5Chu";
-            this.ckPen5Chu.Properties.Caption = "";
-            this.ckPen5Chu.Size = new System.Drawing.Size(28, 19);
-            this.ckPen5Chu.TabIndex = 230;
-            // 
-            // ckPen4Chu
-            // 
-            this.ckPen4Chu.Location = new System.Drawing.Point(349, 350);
-            this.ckPen4Chu.MenuManager = this.barManager1;
-            this.ckPen4Chu.Name = "ckPen4Chu";
-            this.ckPen4Chu.Properties.Caption = "";
-            this.ckPen4Chu.Size = new System.Drawing.Size(28, 19);
-            this.ckPen4Chu.TabIndex = 229;
-            // 
-            // ckPen3Chu
-            // 
-            this.ckPen3Chu.Location = new System.Drawing.Point(349, 290);
-            this.ckPen3Chu.MenuManager = this.barManager1;
-            this.ckPen3Chu.Name = "ckPen3Chu";
-            this.ckPen3Chu.Properties.Caption = "";
-            this.ckPen3Chu.Size = new System.Drawing.Size(28, 19);
-            this.ckPen3Chu.TabIndex = 228;
-            // 
-            // ckPen2Chu
-            // 
-            this.ckPen2Chu.Location = new System.Drawing.Point(349, 228);
-            this.ckPen2Chu.MenuManager = this.barManager1;
-            this.ckPen2Chu.Name = "ckPen2Chu";
-            this.ckPen2Chu.Properties.Caption = "";
-            this.ckPen2Chu.Size = new System.Drawing.Size(28, 19);
-            this.ckPen2Chu.TabIndex = 227;
-            // 
-            // labelControl91
-            // 
-            this.labelControl91.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl91.Appearance.Options.UseFont = true;
-            this.labelControl91.Location = new System.Drawing.Point(111, 165);
-            this.labelControl91.Name = "labelControl91";
-            this.labelControl91.Size = new System.Drawing.Size(13, 24);
-            this.labelControl91.TabIndex = 226;
-            this.labelControl91.Text = "1";
-            // 
-            // ckPen1Chu
-            // 
-            this.ckPen1Chu.Location = new System.Drawing.Point(349, 170);
-            this.ckPen1Chu.MenuManager = this.barManager1;
-            this.ckPen1Chu.Name = "ckPen1Chu";
-            this.ckPen1Chu.Properties.Caption = "";
-            this.ckPen1Chu.Size = new System.Drawing.Size(28, 19);
-            this.ckPen1Chu.TabIndex = 225;
-            // 
-            // labelControl90
-            // 
-            this.labelControl90.Appearance.Font = new System.Drawing.Font("Tahoma", 11.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl90.Appearance.Options.UseFont = true;
-            this.labelControl90.Location = new System.Drawing.Point(71, 92);
-            this.labelControl90.Name = "labelControl90";
-            this.labelControl90.Size = new System.Drawing.Size(102, 24);
-            this.labelControl90.TabIndex = 224;
-            this.labelControl90.Text = "LOẠT ĐẦU";
-            // 
-            // labelControl89
-            // 
-            this.labelControl89.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl89.Appearance.Options.UseFont = true;
-            this.labelControl89.Location = new System.Drawing.Point(36, 36);
-            this.labelControl89.Name = "labelControl89";
-            this.labelControl89.Size = new System.Drawing.Size(137, 29);
-            this.labelControl89.TabIndex = 223;
-            this.labelControl89.Text = "TỶ SỐ PEN:";
-            // 
-            // btnOnPen
-            // 
-            this.btnOnPen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnOnPen.Appearance.Options.UseFont = true;
-            this.btnOnPen.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOnPen.Location = new System.Drawing.Point(489, 806);
-            this.btnOnPen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnOnPen.Name = "btnOnPen";
-            this.btnOnPen.Size = new System.Drawing.Size(129, 47);
-            this.btnOnPen.TabIndex = 261;
-            this.btnOnPen.Text = "Lên đồ họa";
-            this.btnOnPen.ToolTip = "Update real-time data for template";
-            this.btnOnPen.Click += new System.EventHandler(this.btnOnPen_Click);
-            // 
-            // btnOffPen
-            // 
-            this.btnOffPen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnOffPen.Appearance.Options.UseFont = true;
-            this.btnOffPen.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnOffPen.Location = new System.Drawing.Point(682, 806);
-            this.btnOffPen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnOffPen.Name = "btnOffPen";
-            this.btnOffPen.Size = new System.Drawing.Size(129, 47);
-            this.btnOffPen.TabIndex = 262;
-            this.btnOffPen.Text = "Xuống đồ họa";
-            this.btnOffPen.ToolTip = "Update real-time data for template";
-            this.btnOffPen.Click += new System.EventHandler(this.btnOffPen_Click);
+            this.ckStartPen2.TabIndex = 297;
+            this.ckStartPen2.CheckedChanged += new System.EventHandler(this.ckStartPen2_CheckedChanged);
             // 
             // MainForm
             // 
@@ -8243,6 +8537,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.nPhut)).EndInit();
             this.xtraTabPage5.ResumeLayout(false);
             this.xtraTabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO10Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO5Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO9Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO4Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO8Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO3Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO7Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO2Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO6Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO1Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTySoPenKhach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckStartPen1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO10Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO9Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO8Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO7Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO6Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTySoPenChu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO5Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO4Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO3Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO2Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenO1Chu.Properties)).EndInit();
             this.xTabPageTennis.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5)).EndInit();
             this.splitContainerControl5.ResumeLayout(false);
@@ -8384,30 +8701,27 @@
             this.xTab.ResumeLayout(false);
             this.xTabTemplate.ResumeLayout(false);
             this.xTabVideo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen10Khach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen5Khach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen9Khach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen4Khach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen8Khach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen3Khach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen7Khach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen2Khach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen6Khach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen1Khach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nTySoPenKhach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX5Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX4Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX3Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX2Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX1Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX10Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX9Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX8Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX7Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX6Chu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX10Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX9Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX8Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX7Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX6Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX5Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX4Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX3Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX2Khach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckPenX1Khach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckStartPen2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckStartPen1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen10Chu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen9Chu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen8Chu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen7Chu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen6Chu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nTySoPenChu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen5Chu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen4Chu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen3Chu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen2Chu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckPen1Chu.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -8956,29 +9270,28 @@
         private DevExpress.XtraEditors.LabelControl labelControl105;
         private DevExpress.XtraEditors.SimpleButton btnOffPen;
         private DevExpress.XtraEditors.SimpleButton btnOnPen;
-        private DevExpress.XtraEditors.CheckEdit ckPen10Khach;
-        private DevExpress.XtraEditors.CheckEdit ckPen5Khach;
-        private DevExpress.XtraEditors.CheckEdit ckPen9Khach;
-        private DevExpress.XtraEditors.CheckEdit ckPen4Khach;
-        private DevExpress.XtraEditors.CheckEdit ckPen8Khach;
-        private DevExpress.XtraEditors.CheckEdit ckPen3Khach;
-        private DevExpress.XtraEditors.CheckEdit ckPen7Khach;
-        private DevExpress.XtraEditors.CheckEdit ckPen2Khach;
-        private DevExpress.XtraEditors.CheckEdit ckPen6Khach;
-        private DevExpress.XtraEditors.CheckEdit ckPen1Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenO10Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenO5Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenO9Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenO4Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenO8Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenO3Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenO7Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenO2Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenO6Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenO1Khach;
         private System.Windows.Forms.NumericUpDown nTySoPenKhach;
-        private DevExpress.XtraEditors.CheckEdit ckStartPen2;
         private DevExpress.XtraEditors.CheckEdit ckStartPen1;
         private DevExpress.XtraEditors.LabelControl labelControl99;
         private DevExpress.XtraEditors.LabelControl labelControl100;
         private DevExpress.XtraEditors.LabelControl labelControl101;
         private DevExpress.XtraEditors.LabelControl labelControl102;
-        private DevExpress.XtraEditors.CheckEdit ckPen10Chu;
-        private DevExpress.XtraEditors.CheckEdit ckPen9Chu;
-        private DevExpress.XtraEditors.CheckEdit ckPen8Chu;
-        private DevExpress.XtraEditors.CheckEdit ckPen7Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenO10Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenO9Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenO8Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenO7Chu;
         private DevExpress.XtraEditors.LabelControl labelControl103;
-        private DevExpress.XtraEditors.CheckEdit ckPen6Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenO6Chu;
         private DevExpress.XtraEditors.LabelControl labelControl104;
         private DevExpress.XtraEditors.SimpleButton btnLiveUpdatePen;
         private DevExpress.XtraEditors.LabelControl labelControl98;
@@ -8986,13 +9299,38 @@
         private DevExpress.XtraEditors.LabelControl labelControl96;
         private DevExpress.XtraEditors.LabelControl labelControl95;
         private System.Windows.Forms.NumericUpDown nTySoPenChu;
-        private DevExpress.XtraEditors.CheckEdit ckPen5Chu;
-        private DevExpress.XtraEditors.CheckEdit ckPen4Chu;
-        private DevExpress.XtraEditors.CheckEdit ckPen3Chu;
-        private DevExpress.XtraEditors.CheckEdit ckPen2Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenO5Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenO4Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenO3Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenO2Chu;
         private DevExpress.XtraEditors.LabelControl labelControl91;
-        private DevExpress.XtraEditors.CheckEdit ckPen1Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenO1Chu;
         private DevExpress.XtraEditors.LabelControl labelControl90;
         private DevExpress.XtraEditors.LabelControl labelControl89;
+        private DevExpress.XtraEditors.LabelControl labelControl108;
+        private DevExpress.XtraEditors.LabelControl labelControl109;
+        private DevExpress.XtraEditors.CheckEdit ckPenX10Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenX9Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenX8Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenX7Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenX6Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenX5Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenX4Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenX3Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenX2Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenX1Khach;
+        private DevExpress.XtraEditors.CheckEdit ckPenX10Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenX9Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenX8Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenX7Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenX6Chu;
+        private DevExpress.XtraEditors.LabelControl labelControl107;
+        private DevExpress.XtraEditors.CheckEdit ckPenX5Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenX4Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenX3Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenX2Chu;
+        private DevExpress.XtraEditors.CheckEdit ckPenX1Chu;
+        private DevExpress.XtraEditors.LabelControl labelControl106;
+        private DevExpress.XtraEditors.CheckEdit ckStartPen2;
     }
 }
